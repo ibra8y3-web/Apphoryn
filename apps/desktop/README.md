@@ -20,8 +20,8 @@ Open Settings and set the HTTPS base address of the deployed Apphoryn FastAPI se
 
 ## Supported install actions
 
-- Windows: `.exe` and `.msi` (the installer may display Windows/UAC confirmation).
+- Windows: `.exe`, `.msi`, `.msix` and `.appx` (MSIX/APPX use the native Windows AppX deployment service and retain Windows signature/UAC policy).
 - Linux: `.deb` and `.rpm` through `pkexec`; `.AppImage` is made executable and launched as a portable application.
-- macOS: `.pkg` through the native privileged installer prompt.
+- macOS: `.pkg` through the native privileged installer prompt, and `.dmg` by mounting the image, locating one unambiguous `.app` bundle, and copying it to `/Applications` through the macOS administrator prompt.
 
-A `.dmg` is a disk-image container and is not presented as a one-click install package in the current installer bridge. Platform signing/notarization certificates are not configured by this development build.
+Platform signing/notarization certificates are not configured by this development build. macOS DMGs with multiple app bundles or no app bundle are refused rather than guessed.
