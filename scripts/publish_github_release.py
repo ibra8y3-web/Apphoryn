@@ -13,12 +13,23 @@ sys.path.insert(0, str(ROOT))
 from app.github_release_mirror import GitHubMirrorError, GitHubReleaseMirror
 
 
+def has_build_outputs(directory: str | Path) -> bool:
+    root = Path(directory)
+    return root.is_dir() and any(
+        item.is_file() and not item.is_symlink()
+        for item in root.rglob("*")
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--directory", required=True)
     parser.add_argument("--repository", required=True)
     parser.add_argument("--ref", required=True)
     args = parser.parse_args()
+    if not has_build_outputs(args.directory):
+        print("No verified build outputs were produced for this request; nothing to publish.")
+        return
     token = os.getenv("GITHUB_TOKEN", "")
     target_repository = os.getenv("GITHUB_REPOSITORY", "")
     branch = os.getenv("APPHORYN_GITHUB_REF", "main")
