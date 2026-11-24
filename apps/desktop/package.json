@@ -44,9 +44,6 @@
             "x64"
           ]
         }
-      ],
-      "publisherName": [
-        "Apphoryn Community"
       ]
     },
     "nsis": {
@@ -63,7 +60,7 @@
       ],
       "category": "Network;Utility;",
       "maintainer": "Apphoryn Community <noreply@github.com>",
-      "desktopName": "Apphoryn"
+      "syncDesktopName": true
     },
     "mac": {
       "target": [
@@ -76,5 +73,6 @@
     "name": "Apphoryn Community",
     "email": "noreply@github.com"
   },
-  "homepage": "https://github.com/ibra8y3-web/Apphoryn"
+  "homepage": "https://github.com/ibra8y3-web/Apphoryn",
+  "desktopName": "com.apphoryn.store"
 }
