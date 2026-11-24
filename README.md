@@ -4,15 +4,15 @@
 
 Apphoryn is an open-source software discovery, build and distribution platform. Its purpose is to discover real public software, verify redistribution eligibility, mirror actual upstream release packages or build them on isolated native runners, validate the resulting package formats, and store downloadable copies in **Apphoryn-owned GitHub Releases**.
 
-> **Current code line: 0.2.0-alpha.** This is an actively developed platform. The storefront contains no fabricated app records or fake package files. The catalogue is populated by the first successful GitHub Actions Scout run, not by placeholder data.
+> **Current code line: 0.3.0-alpha.** Apphoryn includes a PWA, a native Android client project, and an Electron desktop client project for Windows, Linux and macOS. Development install packages are produced by the native-client workflow; the store catalogue only exposes third-party apps after a real installer has passed import and format verification.
 
 ## How the real store works
 
-1. **Scout discovers projects.** It starts with the maintained seed list in \`catalog-seed-repositories.json\`, then searches GitHub for additional repositories.
+1. **Scout enumerates public projects.** It starts with the maintained seed list in \`catalog-seed-repositories.json\`, then incrementally reads GitHub's public-repository listing endpoint using the last repository ID as a durable cursor. It does not depend on the Search API's 1,000-result window.
 2. **License gate.** Archived repositories, missing licenses and SPDX identifiers outside the built-in redistribution allowlist are rejected from automatic mirroring.
 3. **Release importer.** It downloads actual release assets from the upstream project. It does not treat source code or a repository link as an installable package.
-4. **Artifact verification.** SHA-256 is recalculated locally and compared with GitHub's release digest when supplied. The package is also inspected according to its real file format. APKs must contain an Android manifest and executable DEX/native code and must pass \`apksigner verify\`.
-5. **Apphoryn mirror.** Validated binaries are uploaded to Releases in this Apphoryn repository. The generated \`apps/web/catalog/index.json\` stores their Apphoryn-owned download URLs and metadata.
+4. **Artifact verification.** Each release file is downloaded using its real filename extension, SHA-256 is recalculated and compared with GitHub's release digest when supplied, and the package is inspected according to its real format. APKs must contain an Android manifest and executable DEX/native code and pass \`apksigner verify\`.
+5. **Apphoryn mirror.** Only projects with at least one verified installer are added to the installable storefront. Validated binaries are uploaded to Releases in this Apphoryn repository. The generated \`apps/web/catalog/index.json\` stores Apphoryn-owned download URLs, immutable GitHub repository IDs and provenance metadata. Source-only projects and notice-only releases are not advertised as installable apps.
 6. **Storefront.** The web/PWA reads the generated catalogue and downloads the file from Apphoryn's mirror. The user does not need to visit the upstream GitHub project to fetch the installer.
 7. **Build fallback.** If a licensed project has no valid release package, Scout can optionally dispatch a separate platform-native build workflow. Third-party source code runs on disposable runners without Apphoryn publishing secrets. A second, fresh publisher runner validates and stores the resulting output.
 
@@ -33,17 +33,23 @@ The importer skips non-installable sidecars and the large Google Play-specific L
 ## What is included
 
 - Responsive storefront for phones, tablets, laptops and desktop screens.
+- Native Android storefront project at \`apps/android\`; it packages the same storefront assets, serves them from a loopback origin, and uses Android DownloadManager for package downloads.
+- Electron desktop storefront project at \`apps/desktop\`; it packages the same storefront assets and targets Windows NSIS installers, Linux AppImage/DEB and macOS DMG.
+- CI build matrix for Android, Windows, Linux and macOS. Android CI output is debug-key signed for development; Windows/macOS packages remain unsigned unless proper signing certificates are configured.
+- Installed clients can optionally point to a hosted Apphoryn API endpoint from Settings; an empty endpoint uses the packaged static catalogue.
 - PWA shell, icons, dark visual identity, category cards, search, saved apps and download centre.
 - Eight interface locales: English, Arabic (RTL), French, Spanish, German, Portuguese, Turkish and Indonesian. Some strings still fall back to English until translated.
 - FastAPI backend and SQLite catalogue for self-hosted installations.
-- GitHub repository discovery using the official REST API.
+- Full public GitHub repository enumeration using the REST endpoint \`GET /repositories?since=<last_repository_id>\`; checkpointed incremental crawling, bounded batches and a retry queue.
+- Stable repository-ID deduplication across upstream renames, canonical-URL deduplication, fork suppression and round-robin refresh of existing mirrored apps.
+- Scheduled Scout runs every two hours; each run advances the saved public-repository ID cursor and records a machine-readable report.
 - SPDX license allowlist and archived-project rejection.
 - Real upstream release-asset download and local SHA-256 calculation.
 - Package format inspection for APK, EXE/PE, MSI/OLE, MSIX/APPX, AppImage/ELF, DEB/ar, RPM, DMG/UDIF, PKG/XAR, JAR and portable ELF/Mach-O outputs.
 - APK signature verification via Android \`apksigner\`; signing certificate SHA-256 fingerprint is recorded when reported by the verifier.
 - Apphoryn-owned GitHub Release storage for package binaries.
 - Static catalogue manifest so the web storefront can operate without requiring a separate catalogue database service.
-- Automatic Scout workflow on pushes to the default branches and every eight hours.
+- Automatic global Scout workflow on pushes to the default branches and every two hours.
 - Isolated build workflow for the supported Android Gradle, .NET, Go and Electron adapter patterns.
 - Separate publisher job that treats build outputs as data and never executes them.
 - Optional OpenAI-compatible AI descriptions based on repository metadata, topics and README excerpts. When AI credentials are absent, the importer uses upstream facts rather than inventing features.
@@ -52,9 +58,10 @@ The importer skips non-installable sidecars and the large Google Play-specific L
 
 1. Upload the updated Apphoryn source to the GitHub repository's \`main\` branch (or \`master\` if that is the default branch).
 2. Open **Settings → Actions → General → Workflow permissions** and allow the workflow token to have **Read and write permissions**. The workflow files also declare the minimum permissions they need: \`contents: write\` and \`actions: write\` for Scout; the publisher job receives \`contents: write\` only.
-3. Open **Actions → Apphoryn Scout — import real software releases** and check the first run. A push to the default branch also starts the workflow automatically.
-4. When the run succeeds, Apphoryn creates releases containing the actual binary files and commits the generated \`apps/web/catalog/index.json\` manifest. Open the storefront again; it reads the mirrored package list.
-5. Open the repository's **Releases** page to inspect the actual stored package files and their SHA-256 data.
+3. Open **Actions → Apphoryn Scout — global repository crawl and migration** and check the run report. The scheduled worker advances through public repository IDs in order; it does not attempt to import millions in one workflow execution. Each run handles a bounded batch and saves the exact cursor for the next run.
+4. Open **Actions → Build Apphoryn native store clients** to inspect the Android/Windows/Linux/macOS build matrix. A successful push to the default branch publishes a rolling development release tagged \`apphoryn-store-clients-dev\`.
+5. When the Scout run successfully imports real installers, Apphoryn creates releases containing the binary files and updates \`apps/web/catalog/index.json\`. Source-only repositories and unsupported release files remain unlisted.
+6. Open the repository's **Releases** page to inspect the actual stored package files and their SHA-256 data.
 
 The first run needs network access to GitHub and Android SDK build-tools because APK imports are rejected unless \`apksigner\` can validate their signatures. If \`apksigner\` is unavailable, APKs are skipped rather than marked as verified.
 
@@ -105,13 +112,14 @@ GitHub Actions runs the local validation suite. Unit tests cover package-format 
 
 ## Important limitations
 
-- This code line is a responsive web/PWA storefront, not yet separate native Android, Windows, Linux and macOS client applications.
+- The native clients are real buildable source projects, but a build is not considered delivered until the native-client workflow succeeds and the resulting assets appear in the Apphoryn development release.
+- The global scanner can enumerate public GitHub repositories as the saved cursor advances, but it does not migrate millions in a single run. GitHub rate limits, bounded Actions execution, license eligibility, available release files and verification all constrain the actual migration rate.
 - A web page cannot silently bypass platform installation permissions. Android will show the operating system's package-install flow; Windows, macOS and Linux installers follow their own security and privilege prompts.
 - Build adapters are deliberately limited. Android Gradle, selected .NET projects, Go modules and configured Electron projects are supported patterns, not universal compilers.
 - A valid container/header and a matching SHA-256 do not prove that software is benign. APK signature verification confirms the package signature, not the publisher's identity or the absence of malware. EXE Authenticode, Windows package signatures, macOS notarization, SBOM/provenance attestations and malware scanning require additional dedicated verification stages before a large public launch.
 - The built-in license allowlist is a technical policy gate, not legal advice. Each upstream license's notice, attribution, source-offer and redistribution obligations must be respected.
-- GitHub Releases are the initial Apphoryn-owned binary storage backend. A large global store will eventually need object storage/CDN, database-backed catalogue indexing, quotas, moderation, and retention policies.
-- No external GitHub workflow or real third-party binary import is claimed as executed from this editing session. The first real import happens when the updated workflow runs in the user's GitHub repository.
+- GitHub Releases are the initial Apphoryn-owned binary storage backend. A very large catalogue will eventually need object storage/CDN, database-backed indexing, quotas, moderation, and retention policies.
+- The repository code has tests for crawler checkpointing, stable repository identity, importer file-extension handling and desktop asset-path safety. Actual native package build success and real third-party asset mirroring must still be confirmed from the resulting GitHub Actions runs and Releases; source changes alone are not treated as a successful build.
 
 ## License
 
