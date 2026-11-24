@@ -68,7 +68,9 @@ jobs:
           java-version: '17'
       - name: Set up Android SDK
         if: matrix.target == 'android'
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
+        with:
+          packages: platform-tools
       - name: Build source on disposable runner (no Apphoryn ingest secrets)
         env:
           REPOSITORY_URL: ${{ inputs.repository_url }}
