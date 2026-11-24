@@ -1810,7 +1810,18 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "6348dd00d9e021ded8e3a8693219e582f9a59a99",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-24T23:44:11.704754+00:00"
+        }
+      ]
     },
     {
       "id": "saturday-company-monsters",
