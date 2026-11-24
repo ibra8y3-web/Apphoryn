@@ -99,19 +99,28 @@ def known_current(candidate: dict[str, Any], known_by_id: dict[str, dict], known
     return not upstream_updated or upstream_updated <= indexed_updated
 
 
-def should_dispatch_build_fallback(verified_artifacts: list[dict[str, Any]], auto_targets: list[str]) -> bool:
-    """Build from source whenever no verified installer was imported.
+def should_dispatch_build_fallback(
+    verified_artifacts: list[dict[str, Any]],
+    auto_targets: list[str],
+    build_recommended: bool = True,
+) -> bool:
+    """Build only likely standalone apps/tools when no verified installer exists.
 
-    A GitHub Release can exist while containing only source archives, checksums,
-    documentation, or unsupported files. The presence of a Release alone must
-    never suppress the build fallback.
+    A GitHub Release may contain only source archives or documentation. In that
+    case the AI/heuristic project classifier decides whether a native build is
+    useful; libraries and documentation remain in the source workbench.
     """
-    return bool(auto_targets) and not verified_artifacts
+    return bool(auto_targets) and not verified_artifacts and bool(build_recommended)
 
 
 def should_revisit_source_project(existing: dict[str, Any] | None, auto_targets: list[str]) -> bool:
-    """Revisit a known source-only project when automatic native builds are enabled."""
-    return bool(auto_targets) and not bool((existing or {}).get("artifacts"))
+    """Revisit a known buildable source-only project when native builds are enabled."""
+    record = existing or {}
+    return (
+        bool(auto_targets)
+        and not bool(record.get("artifacts"))
+        and bool(record.get("build_recommended", True))
+    )
 
 
 def retry_record(entry: dict[str, Any], now: float, reason: str) -> dict[str, Any]:
@@ -300,7 +309,7 @@ def main() -> None:
                         result["status"] = "source_only_scanned"
                 # If an upstream release exists but contains no usable installer, build
                 # from source rather than repeatedly waiting for a package that is absent.
-                if should_dispatch_build_fallback(verified_artifacts, auto_targets):
+                if should_dispatch_build_fallback(verified_artifacts, auto_targets, bool(app.get("build_recommended", False))):
                     git_ref = str(app.get("source_commit_sha") or app.get("default_branch") or "main")
                     if not mirror.has_recent_build_attempt(repo_url, git_ref):
                         mirror.dispatch_build(repo_url, git_ref, auto_targets, str(app.get("slug") or app.get("id")))
