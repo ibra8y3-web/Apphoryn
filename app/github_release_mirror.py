@@ -296,6 +296,62 @@ class GitHubReleaseMirror:
             "scout_checked_at": current.get("scout_checked_at"),
         }
 
+    def register_project(self, app: dict[str, Any]) -> dict[str, Any]:
+        """Persist source-project metadata without pretending it is an installable store app.
+
+        Projects with no verified package remain available to the build/workbench layer,
+        while the storefront filters them out until a real installer is published.
+        """
+        if not app.get("license_eligible") or not license_allows_redistribution(app.get("license_spdx")):
+            raise GitHubMirrorError("Refusing to register a project without an approved SPDX redistribution license.")
+        repository_url = canonical_repository_url(str(app.get("repository_url") or ""))
+        repo_id = str(app.get("github_repo_id") or "") or None
+        slug = _safe_release_component(str(app.get("slug") or app.get("name") or "project"))
+        manifest, sha = self._read_catalog()
+        projects = manifest.setdefault("apps", [])
+        current = next((
+            item for item in projects
+            if item.get("repository_url") == repository_url
+            or (repo_id and str(item.get("github_repo_id") or "") == repo_id)
+        ), None)
+        if current is None:
+            current = {"id": str(app.get("slug") or slug), "slug": str(app.get("slug") or slug), "artifacts": []}
+            projects.append(current)
+
+        current.update({
+            "id": current.get("id") or str(app.get("slug") or slug),
+            "slug": str(app.get("slug") or current.get("slug") or slug),
+            "name": app.get("name") or current.get("name") or slug,
+            "summary": app.get("summary") or current.get("summary") or "",
+            "description": app.get("description") or current.get("description") or "",
+            "translations": app.get("translations") or current.get("translations") or {},
+            "repository_url": repository_url,
+            "github_repo_id": repo_id or current.get("github_repo_id"),
+            "source_updated_at": app.get("source_updated_at") or current.get("source_updated_at"),
+            "homepage_url": app.get("homepage_url") or current.get("homepage_url"),
+            "owner": app.get("owner") or current.get("owner") or "",
+            "default_branch": app.get("default_branch") or current.get("default_branch") or "main",
+            "source_commit_sha": app.get("source_commit_sha") or current.get("source_commit_sha"),
+            "license_text": app.get("license_text") or current.get("license_text") or "",
+            "license_spdx": app.get("license_spdx"),
+            "license_eligible": True,
+            "category": app.get("category") or current.get("category") or "other",
+            "topics": app.get("topics") or current.get("topics") or [],
+            "latest_version": app.get("latest_version") or current.get("latest_version"),
+            "release_url": app.get("release_url") or current.get("release_url"),
+            "project_status": "source_available",
+            "scout_checked_at": datetime.now(timezone.utc).isoformat(),
+        })
+        current.setdefault("artifacts", [])
+        current["platforms"] = sorted({
+            str(item.get("platform")) for item in current["artifacts"] if item.get("platform")
+        })
+        manifest["schema_version"] = 1
+        manifest["generated_at"] = current["scout_checked_at"]
+        manifest["apps"] = sorted(projects, key=lambda item: str(item.get("name", "")).casefold())
+        self._write_catalog(manifest, sha, f"Register Apphoryn source project: {current.get('name') or slug}")
+        return {"id": current["id"], "slug": current["slug"], "project_status": current["project_status"]}
+
     def mark_app_checked(self, repository_url: str, github_repo_id: str | None = None) -> bool:
         manifest, sha = self._read_catalog()
         current = next((
