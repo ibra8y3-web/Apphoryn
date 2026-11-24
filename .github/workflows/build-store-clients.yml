@@ -56,7 +56,7 @@ jobs:
 
       - name: Install Android SDK platform and build tools
         if: matrix.target == 'android'
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
 
       - name: Install Gradle
         if: matrix.target == 'android'
