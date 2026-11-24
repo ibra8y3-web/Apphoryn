@@ -190,6 +190,81 @@ class GitHubReleaseMirror:
             raise GitHubMirrorError("Existing Apphoryn catalog manifest has an unsupported schema.")
         return manifest, result.get("sha")
 
+    @staticmethod
+    def _deduplicate_catalog_apps(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        """Merge legacy duplicate rows by immutable GitHub identity, preserving all package history."""
+        merged: list[dict[str, Any]] = []
+        positions: dict[str, int] = {}
+
+        for raw in items:
+            if not isinstance(raw, dict):
+                continue
+            repo_id = str(raw.get("github_repo_id") or "").strip()
+            repository_url = str(raw.get("repository_url") or "").strip()
+            identity = (
+                f"github:{repo_id}" if repo_id
+                else f"url:{repository_url.casefold().rstrip('/')}" if repository_url
+                else f"app:{raw.get('id') or raw.get('slug') or len(merged)}"
+            )
+            position = positions.get(identity)
+            if position is None:
+                item = dict(raw)
+                item["artifacts"] = list(item.get("artifacts") or [])
+                item["build_refs"] = list(item.get("build_refs") or [])
+                item["build_attempts"] = list(item.get("build_attempts") or [])
+                positions[identity] = len(merged)
+                merged.append(item)
+                continue
+
+            previous = merged[position]
+            artifacts = list(previous.get("artifacts") or [])
+            known_artifacts = {
+                str(row.get("sha256") or row.get("id") or row.get("filename") or "")
+                for row in artifacts
+            }
+            for artifact in raw.get("artifacts") or []:
+                if not isinstance(artifact, dict):
+                    continue
+                artifact_key = str(
+                    artifact.get("sha256") or artifact.get("id") or artifact.get("filename") or ""
+                )
+                if artifact_key and artifact_key not in known_artifacts:
+                    artifacts.append(artifact)
+                    known_artifacts.add(artifact_key)
+
+            build_refs = list(previous.get("build_refs") or [])
+            for ref in raw.get("build_refs") or []:
+                if ref and ref not in build_refs:
+                    build_refs.append(ref)
+
+            build_attempts = list(previous.get("build_attempts") or [])
+            known_attempts = {
+                (str(row.get("git_ref") or ""), str(row.get("requested_at") or ""))
+                for row in build_attempts if isinstance(row, dict)
+            }
+            for attempt in raw.get("build_attempts") or []:
+                if not isinstance(attempt, dict):
+                    continue
+                attempt_key = (str(attempt.get("git_ref") or ""), str(attempt.get("requested_at") or ""))
+                if attempt_key not in known_attempts:
+                    build_attempts.append(attempt)
+                    known_attempts.add(attempt_key)
+
+            merged_item = {**previous, **raw}
+            merged_item["artifacts"] = artifacts
+            merged_item["build_refs"] = build_refs
+            merged_item["build_attempts"] = build_attempts
+            merged_item["github_repo_id"] = repo_id or previous.get("github_repo_id")
+            merged_item["platforms"] = sorted({
+                str(row.get("platform")) for row in artifacts if row.get("platform")
+            })
+            merged_item["project_status"] = "installable" if artifacts else (
+                raw.get("project_status") or previous.get("project_status") or "source_available"
+            )
+            merged[position] = merged_item
+
+        return sorted(merged, key=lambda item: str(item.get("name", "")).casefold())
+
     def _write_catalog(self, manifest: dict[str, Any], sha: str | None, message: str) -> None:
         payload = {
             "message": message,
@@ -289,7 +364,7 @@ class GitHubReleaseMirror:
         current["project_status"] = "installable" if all_artifacts else "source_available"
         manifest["schema_version"] = 1
         manifest["generated_at"] = datetime.now(timezone.utc).isoformat()
-        manifest["apps"] = sorted(apps, key=lambda item: str(item.get("name", "")).casefold())
+        manifest["apps"] = self._deduplicate_catalog_apps(apps)
         self._write_catalog(manifest, sha, f"Update Apphoryn catalog: {app.get('name') or slug} {version}")
         return {
             "release_url": release.get("html_url"),
@@ -351,7 +426,7 @@ class GitHubReleaseMirror:
         })
         manifest["schema_version"] = 1
         manifest["generated_at"] = current["scout_checked_at"]
-        manifest["apps"] = sorted(projects, key=lambda item: str(item.get("name", "")).casefold())
+        manifest["apps"] = self._deduplicate_catalog_apps(projects)
         self._write_catalog(manifest, sha, f"Register Apphoryn source project: {current.get('name') or slug}")
         return {"id": current["id"], "slug": current["slug"], "project_status": current["project_status"]}
 
@@ -449,6 +524,7 @@ class GitHubReleaseMirror:
         app.setdefault("build_refs", [])
         if git_ref not in app["build_refs"]:
             app["build_refs"].append(git_ref)
+        manifest["apps"] = self._deduplicate_catalog_apps(manifest.get("apps", []))
         manifest["generated_at"] = datetime.now(timezone.utc).isoformat()
         self._write_catalog(manifest, sha, f"Publish built packages for {app.get('name') or slug} ({git_ref})")
         return {
