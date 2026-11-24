@@ -500,13 +500,28 @@ class GitHubReleaseMirror:
         self._write_catalog(manifest, sha, f"Publish built packages for {app.get('name') or slug} ({git_ref})")
         return {"release_url": release.get("html_url"), "published": published}
 
-    def has_recent_build_attempt(self, repository_url: str, git_ref: str, max_age_hours: int = 72) -> bool:
+    def get_available_platforms(self, repository_url: str) -> set[str]:
+        canonical = canonical_repository_url(repository_url)
+        manifest, _ = self._read_catalog()
+        app = next((item for item in manifest.get("apps", []) if item.get("repository_url") == canonical), None)
+        if not app:
+            return set()
+        return {str(item.get("platform")) for item in app.get("artifacts", []) if item.get("platform")}
+
+    def has_recent_build_attempt(
+        self, repository_url: str, git_ref: str, max_age_hours: int = 72,
+        targets: list[str] | None = None,
+    ) -> bool:
         canonical = canonical_repository_url(repository_url)
         manifest, _ = self._read_catalog()
         app = next((item for item in manifest.get("apps", []) if item.get("repository_url") == canonical), None)
         if not app:
             return False
-        if git_ref in (app.get("build_refs") or []):
+        requested = set(targets or [])
+        available = {str(item.get("platform")) for item in app.get("artifacts", []) if item.get("platform")}
+        if requested and requested.issubset(available):
+            return True
+        if not requested and git_ref in (app.get("build_refs") or []):
             return True
         now = datetime.now(timezone.utc)
         for attempt in app.get("build_attempts", []):
@@ -516,7 +531,10 @@ class GitHubReleaseMirror:
                 stamp = datetime.fromisoformat(str(attempt.get("requested_at")).replace("Z", "+00:00"))
             except (TypeError, ValueError):
                 continue
-            if (now - stamp).total_seconds() < max_age_hours * 3600:
+            if (now - stamp).total_seconds() >= max_age_hours * 3600:
+                continue
+            attempted = {str(value) for value in attempt.get("targets", [])}
+            if not requested or requested.issubset(available | attempted):
                 return True
         return False
 
