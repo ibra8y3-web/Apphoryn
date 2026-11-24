@@ -67,7 +67,7 @@ def _is_pe(path: Path) -> bool:
             return False
         stream.seek(offset)
         headers = stream.read(24)
-        if len(headers) != 24 or headers[:4] != b"PE\x00\x00":
+        if len(headers) != 24 or headers[:4] != bytes((0x50, 0x45, 0, 0)):
             return False
 
         machine = struct.unpack("<H", headers[4:6])[0]
@@ -89,26 +89,102 @@ def _is_pe(path: Path) -> bool:
         if magic not in {0x10B, 0x20B}:
             return False
         entry_point = struct.unpack("<I", optional_header[16:20])[0]
-        return entry_point != 0
+        if entry_point == 0:
+            return False
+
+        section_table = offset + 24 + optional_size
+        section_table_end = section_table + section_count * 40
+        if section_table_end > file_size:
+            return False
+        stream.seek(section_table)
+        entry_is_in_executable_section = False
+        for _ in range(section_count):
+            section = stream.read(40)
+            if len(section) != 40:
+                return False
+            virtual_size = struct.unpack("<I", section[8:12])[0]
+            virtual_address = struct.unpack("<I", section[12:16])[0]
+            raw_size = struct.unpack("<I", section[16:20])[0]
+            raw_pointer = struct.unpack("<I", section[20:24])[0]
+            section_flags = struct.unpack("<I", section[36:40])[0]
+            if not raw_size or raw_pointer < section_table_end or raw_pointer + raw_size > file_size:
+                continue
+            if not (section_flags & 0x20000000):
+                continue
+            span = max(virtual_size, raw_size)
+            if virtual_address <= entry_point < virtual_address + span:
+                entry_is_in_executable_section = True
+        return entry_is_in_executable_section
 
 
 def _elf_header(path: Path) -> bytes:
+    file_size = path.stat().st_size
     with path.open("rb") as stream:
         header = stream.read(64)
-    if len(header) < 20 or header[:4] != b"\x7fELF":
+    if len(header) < 20 or header[:4] != bytes((0x7F, 0x45, 0x4C, 0x46)):
         raise ArtifactValidationError("File does not contain a valid ELF header.")
     if header[4] not in (1, 2) or header[5] not in (1, 2) or header[6] != 1:
         raise ArtifactValidationError("ELF class, byte order, or version is invalid.")
     byte_order = "<" if header[5] == 1 else ">"
-    minimum_size = 52 if header[4] == 1 else 64
+    is_64_bit = header[4] == 2
+    minimum_size = 64 if is_64_bit else 52
     if len(header) < minimum_size:
         raise ArtifactValidationError("ELF executable header is truncated.")
+
     file_type = struct.unpack_from(byte_order + "H", header, 16)[0]
-    entry_point = struct.unpack_from(byte_order + ("I" if header[4] == 1 else "Q"), header, 24)[0]
+    entry_point = struct.unpack_from(byte_order + ("Q" if is_64_bit else "I"), header, 24)[0]
     if file_type not in {2, 3} or entry_point == 0:
         raise ArtifactValidationError(
             "ELF is not a runnable executable; relocatable objects and shared libraries are not store apps."
         )
+
+    if is_64_bit:
+        program_offset = struct.unpack_from(byte_order + "Q", header, 32)[0]
+        entry_size = struct.unpack_from(byte_order + "H", header, 54)[0]
+        entry_count = struct.unpack_from(byte_order + "H", header, 56)[0]
+        minimum_entry_size = 56
+    else:
+        program_offset = struct.unpack_from(byte_order + "I", header, 28)[0]
+        entry_size = struct.unpack_from(byte_order + "H", header, 42)[0]
+        entry_count = struct.unpack_from(byte_order + "H", header, 44)[0]
+        minimum_entry_size = 32
+    if (
+        program_offset == 0 or not 1 <= entry_count <= 1024
+        or entry_size < minimum_entry_size
+        or program_offset + entry_size * entry_count > file_size
+    ):
+        raise ArtifactValidationError("ELF has no valid program-header table for execution.")
+
+    with path.open("rb") as stream:
+        stream.seek(program_offset)
+        table = stream.read(entry_size * entry_count)
+    executable_segment_found = False
+    for index in range(entry_count):
+        segment = table[index * entry_size:(index + 1) * entry_size]
+        if len(segment) < minimum_entry_size:
+            break
+        segment_type = struct.unpack_from(byte_order + "I", segment, 0)[0]
+        if is_64_bit:
+            flags = struct.unpack_from(byte_order + "I", segment, 4)[0]
+            file_offset = struct.unpack_from(byte_order + "Q", segment, 8)[0]
+            virtual_address = struct.unpack_from(byte_order + "Q", segment, 16)[0]
+            file_bytes = struct.unpack_from(byte_order + "Q", segment, 32)[0]
+            memory_bytes = struct.unpack_from(byte_order + "Q", segment, 40)[0]
+        else:
+            file_offset = struct.unpack_from(byte_order + "I", segment, 4)[0]
+            virtual_address = struct.unpack_from(byte_order + "I", segment, 8)[0]
+            file_bytes = struct.unpack_from(byte_order + "I", segment, 16)[0]
+            memory_bytes = struct.unpack_from(byte_order + "I", segment, 20)[0]
+            flags = struct.unpack_from(byte_order + "I", segment, 24)[0]
+        if (
+            segment_type == 1 and (flags & 1) and file_bytes > 0 and memory_bytes > 0
+            and file_offset + file_bytes <= file_size
+            and virtual_address <= entry_point < virtual_address + memory_bytes
+        ):
+            executable_segment_found = True
+            break
+    if not executable_segment_found:
+        raise ArtifactValidationError("ELF has no executable load segment containing its entry point.")
     return header
 
 
