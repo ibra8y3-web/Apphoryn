@@ -121,3 +121,6 @@ The Apphoryn platform source in this repository is released under the MIT Licens
 ## Autonomous store updates
 
 The Apphoryn Scout GitHub Actions workflow runs hourly to search application-focused open-source categories, refresh release metadata, mirror verified installer files, and dispatch bounded isolated builds for supported applications without available packages. The public catalogue only lists applications after Apphoryn has a verified installable artifact. Native Android and desktop clients can install Apphoryn-owned release assets from within the application after SHA-256 verification.
+
+
+Android clients install signed APKs and supported XAPK split bundles; XAPK files carrying OBB expansion data are currently rejected. Windows clients include EXE/MSI/MSIX/APPX install adapters, and macOS clients include PKG/DMG adapters.
