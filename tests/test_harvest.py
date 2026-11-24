@@ -17,6 +17,7 @@ class HarvestTests(unittest.TestCase):
             [{"platform": "android", "validation_status": "validated"}],
             ["android", "windows"],
         ))
+        self.assertFalse(should_dispatch_build_fallback([], ["android"], build_recommended=False))
 
     def test_known_source_project_is_revisited_when_auto_build_is_enabled(self):
         source_only = {"repository_url": "https://github.com/owner/project", "artifacts": []}
@@ -24,6 +25,10 @@ class HarvestTests(unittest.TestCase):
         self.assertTrue(should_revisit_source_project(source_only, ["android"]))
         self.assertFalse(should_revisit_source_project(source_only, []))
         self.assertFalse(should_revisit_source_project(installable, ["android", "windows"]))
+        self.assertFalse(should_revisit_source_project(
+            {"repository_url": "https://github.com/owner/library", "artifacts": [], "build_recommended": False},
+            ["android"],
+        ))
 
     def test_initial_seed_list_contains_real_github_repositories(self):
         seeds = load_seed_repositories(Path(__file__).resolve().parents[1] / "catalog-seed-repositories.json")
