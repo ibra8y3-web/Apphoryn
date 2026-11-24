@@ -19,6 +19,30 @@ def minimal_pe(path: Path) -> str:
 
 
 class GitHubReleaseMirrorTests(unittest.TestCase):
+    def test_source_only_import_does_not_create_license_notice_release(self):
+        mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn")
+        mirror._read_catalog = Mock(return_value=({"schema_version": 1, "apps": []}, None))
+        mirror._ensure_release = Mock()
+        mirror._upload_notice = Mock()
+        mirror.request = Mock(return_value={})
+
+        result = mirror.publish_app({
+            "id": "source-project",
+            "slug": "owner-source-project",
+            "name": "Source Project",
+            "repository_url": "https://github.com/owner/source-project",
+            "owner": "owner",
+            "license_spdx": "MIT",
+            "license_eligible": True,
+        }, [])
+
+        self.assertIsNone(result["release_url"])
+        self.assertEqual(result["mirrored_artifacts"], [])
+        self.assertTrue(result["source_project_registered"])
+        mirror._ensure_release.assert_not_called()
+        mirror._upload_notice.assert_not_called()
+        mirror.request.assert_not_called()
+
     def test_publish_app_uses_apphoryn_release_asset_and_writes_catalog(self):
         with tempfile.TemporaryDirectory() as folder:
             file_path = Path(folder) / "tool.exe"
