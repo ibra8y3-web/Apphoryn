@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T23:40:24.818766+00:00",
+  "generated_at": "2026-11-24T23:40:31.487798+00:00",
   "apps": [
     {
       "id": "706972745-assetmanager",
@@ -1632,17 +1632,19 @@
       "slug": "openaltfinder-openaltfinder",
       "artifacts": [],
       "name": "openaltfinder",
-      "summary": "OpenAltFinder is an auto-generated, categorized list of open-source alternatives to popular software, covering infrastructure, productivity, media, security, development, and more.",
-      "description": "OpenAltFinder is a repository of auto-generated lists that identify open-source alternatives to popular software. The contents are generated daily from data provided by OpenAltFinder and are intended to stay current with tracked alternatives. The list is organized into broad categories such as Infrastructure & Operations Tools, Media Players, Productivity & Utilities, AI & Machine Learning, Security & Privacy Tools, Developer Tools, Games, and Business Software, with many subcategories. Entries link to alternative tools and include brief descriptions. This repository is an awesome-list style documentation resource rather than an executable application.",
+      "summary": "Find the Best Open Source Alternatives to Popular Software",
+      "description": "Find the Best Open Source Alternatives to Popular Software",
       "translations": {
-        "en": "OpenAltFinder is an auto-generated, categorized list of open-source alternatives to popular software, covering infrastructure, productivity, media, security, development, and more.",
-        "ar": "OpenAltFinder هو قائمة مُنشأة تلقائيًا ومصنفة لبدائل مفتوحة المصدر للبرامج الشائعة، تغطي البنية التحتية والإنتاجية والوسائط والأمان والتطوير وغيرها."
+        "en": {
+          "summary": "Find the Best Open Source Alternatives to Popular Software",
+          "description": "Find the Best Open Source Alternatives to Popular Software"
+        }
       },
       "description_translations": {
         "en": "OpenAltFinder is a repository of auto-generated lists that identify open-source alternatives to popular software. The contents are generated daily from data provided by OpenAltFinder and are intended to stay current with tracked alternatives. The list is organized into broad categories such as Infrastructure & Operations Tools, Media Players, Productivity & Utilities, AI & Machine Learning, Security & Privacy Tools, Developer Tools, Games, and Business Software, with many subcategories. Entries link to alternative tools and include brief descriptions. This repository is an awesome-list style documentation resource rather than an executable application.",
         "ar": "OpenAltFinder هو مستودع لقوائم تُنشأ تلقائيًا لتحديد بدائل مفتوحة المصدر للبرامج الشائعة. تُنشأ المحتويات يوميًا من البيانات المقدمة من OpenAltFinder، بهدف إبقاء القائمة محدثة بآخر البدائل المتابعة. تُنظم القائمة في فئات واسعة مثل أدوات البنية التحتية والعمليات، ومشغلات الوسائط، وأدوات الإنتاجية والمرافق، والذكاء الاصطناعي وتعلم الآلة، وأدوات الأمان والخصوصية، وأدوات المطورين، والألعاب، وبرامج الأعمال، مع العديد من الفئات الفرعية. تتضمن المدخلات روابط إلى الأدوات البديلة مع أوصاف موجزة. هذا المستودع هو مورد توثيقي على طراز قوائم Awesome وليس تطبيقًا تنفيذيًا."
       },
-      "translation_status": "complete",
+      "translation_status": "english_only",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://avatars.githubusercontent.com/u/284575146?v=4",
@@ -1656,10 +1658,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 OpenAltFinder\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "documentation",
+      "project_kind": "library",
       "build_recommended": false,
-      "classification_source": "ai",
-      "classification_reason": "The repository is an auto-generated awesome-list of open-source software alternatives, with no evidence of an application, executable developer tool, library, framework, service, or supported build path.",
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
       "category": "other",
       "topics": [
         "awesome",
