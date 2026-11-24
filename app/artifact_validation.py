@@ -163,8 +163,21 @@ def validate_artifact(path: str | Path, *, require_apk_signature: bool = True) -
             raise ArtifactValidationError("MSIX/APPX package lacks its manifest, block map, or signature.")
     elif suffix == ".jar":
         members = _zip_members(candidate)
-        if "META-INF/MANIFEST.MF" not in members or not any(name.endswith(".class") for name in members):
+        manifest_name = next((name for name in members if name.upper() == "META-INF/MANIFEST.MF"), None)
+        if manifest_name is None or not any(name.endswith(".class") for name in members):
             raise ArtifactValidationError("JAR lacks a manifest or compiled Java classes.")
+        try:
+            with zipfile.ZipFile(candidate) as archive:
+                manifest_bytes = archive.read(manifest_name)
+        except (OSError, KeyError, zipfile.BadZipFile) as exc:
+            raise ArtifactValidationError("JAR manifest cannot be read.") from exc
+        # Java manifest continuation lines start with one space; join them before
+        # parsing so a wrapped Main-Class value is handled correctly.
+        unfolded_manifest = re.sub(rb"\\r?\\n ", b"", manifest_bytes)
+        if not re.search(rb"(?im)^Main-Class:\\s*[^\\s]+", unfolded_manifest):
+            raise ArtifactValidationError(
+                "JAR is not an executable application: its manifest has no Main-Class entry."
+            )
     elif suffix == ".exe":
         if not _is_pe(candidate):
             raise ArtifactValidationError("EXE does not contain a valid Windows PE header.")
