@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T23:40:50.262077+00:00",
+  "generated_at": "2026-11-24T23:41:14.961181+00:00",
   "apps": [
     {
       "id": "706972745-assetmanager",
@@ -1530,6 +1530,88 @@
           ],
           "requested_at": "2026-11-24T23:22:09.377080+00:00"
         }
+      ]
+    },
+    {
+      "id": "marusame00-neonplayer",
+      "slug": "marusame00-neonplayer",
+      "name": "NeonPlayer",
+      "summary": "Landscape-first synthwave music player for Android. Stage Mode presentation view, mic-free visualizers, neon glass UI, video backdrops. Kotlin + Jetpack Compose + Media3.",
+      "description": "Landscape-first synthwave music player for Android. Stage Mode presentation view, mic-free visualizers, neon glass UI, video backdrops. Kotlin + Jetpack Compose + Media3.",
+      "translations": {
+        "en": {
+          "summary": "Landscape-first synthwave music player for Android. Stage Mode presentation view, mic-free visualizers, neon glass UI, video backdrops. Kotlin + Jetpack Compose + Media3.",
+          "description": "Landscape-first synthwave music player for Android. Stage Mode presentation view, mic-free visualizers, neon glass UI, video backdrops. Kotlin + Jetpack Compose + Media3."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/95696115?v=4",
+      "repository_url": "https://github.com/Marusame00/NeonPlayer",
+      "github_repo_id": "1468254107",
+      "source_updated_at": "2026-11-24T20:48:07Z",
+      "homepage_url": "https://github.com/Marusame00/NeonPlayer/releases/latest",
+      "owner": "Marusame00",
+      "default_branch": "main",
+      "source_commit_sha": "3190632d543501d59ef7a8aacaaf4f94736cc8aa",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Marusame\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "abacus-ai",
+        "ai-generated",
+        "android",
+        "android-app",
+        "audio-visualizer",
+        "equalizer",
+        "exoplayer",
+        "flac",
+        "jetpack-compose",
+        "kotlin",
+        "landscape",
+        "material3",
+        "media3",
+        "music-player",
+        "neon",
+        "now-playing",
+        "offline-music-player",
+        "retrowave",
+        "room-database",
+        "synthwave"
+      ],
+      "latest_version": "v1.0.0-build7",
+      "release_url": "https://github.com/Marusame00/NeonPlayer/releases/tag/v1.0.0-build7",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-marusame00-neonplayer-v1.0.0-build7",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-marusame00-neonplayer-v1.0.0-build7/THIRD-PARTY-NOTICE-marusame00-neonplayer.txt",
+      "artifacts": [
+        {
+          "id": "2a82a20d41fea3f83f64ba19ce70cdbeb099ecc08a43e1b2687e6bad7e2f5d93",
+          "filename": "NeonPlayer-v1.0.0-build7.apk",
+          "original_filename": "NeonPlayer-v1.0.0-build7.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.0-build7",
+          "size_bytes": 6787991,
+          "sha256": "2a82a20d41fea3f83f64ba19ce70cdbeb099ecc08a43e1b2687e6bad7e2f5d93",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "98b53f3dbf3a7192aa44ccbd6eee6c34ab2ac9ee02680623152fa49849ae8cd4",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-marusame00-neonplayer-v1.0.0-build7/NeonPlayer-v1.0.0-build7.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-marusame00-neonplayer-v1.0.0-build7"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
