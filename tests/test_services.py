@@ -3,7 +3,7 @@ import hashlib
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
 
 from app.database import Database, utc_now
 from app.services import BuildService, CatalogService, store_uploaded_artifact
