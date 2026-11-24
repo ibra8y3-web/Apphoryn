@@ -8,26 +8,13 @@ This removes the Search API's per-query 1,000-result cap. It also means the scan
 
 ## Batches and scheduling
 
-The scheduled workflow runs every two hours. Default run limits are:
+The scheduled workflow runs every two hours. The forward discovery cursor processes up to 200 repositories per run and at most 25 pages. Every API page is consumed in full (100 records maximum) before its cursor advances; a batch can exceed its requested record limit by at most 99 records. The next run resumes from the saved immutable repository ID.
 
-- Up to 200 repository records per run.
-- Up to 25 public-listing pages per run.
-- 100 repositories per fully consumed API page.
-- The crawler saves the greatest processed repository ID and resumes from that ID on the next run.
+When the forward cursor reaches GitHub's current tail, Scout starts a second independent cursor from the beginning. This refresh pass walks older repositories again and looks for new releases, so a project scanned before its first installer appears can become installable later. The refresh cursor advances independently from the forward discovery cursor and is reset after a complete pass. Newly created repositories continue to be picked up by the forward cursor.
 
-The page is always consumed in full before the cursor advances. Therefore a batch can exceed its requested record limit by at most 99 records, but a remainder of a page is never silently skipped. If GitHub returns an empty page at the current end, the cursor is left unchanged so repositories created later are visible on the next run.
+When the public listing returns an empty page, the corresponding cursor remains unchanged. This means repositories created later are visible in the next run; it also avoids falsely advancing beyond the current tail.
 
-A full crawl is a long-running process, not a one-minute import. At the default cap, the theoretical upper bound is about 2,400 repository records per day before rate limits, filtering and run-time constraints. It can take many months to traverse a multi-million repository population. The workflow does not claim those repositories have already been crawled.
-
-## Duplicate control
-
-- The numeric GitHub repository ID is the primary immutable identity.
-- Canonical HTTPS repository URL is a secondary identity.
-- Database upserts and the static manifest merge by repository ID or canonical URL.
-- A repository rename updates the existing record instead of making a second app.
-- Public forks are scanned but skipped as separate store listings by default.
-- Existing installable apps are rechecked in a round-robin queue for newer upstream release assets.
-- Temporary network/import errors and release records with unsupported packages are stored in `data/scout-retry.json` with backoff.
+A full crawl is a long-running process, not a one-minute import. At the default cap, one 25-page pass can read up to 2,500 records per run. The theoretical upper bound is about 30,000 repository records per day before rate limits, filtering and run-time constraints. The total public-repository population is not claimed to have been scanned or migrated in advance.
 
 ## Migration and publication gate
 
