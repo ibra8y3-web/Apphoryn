@@ -272,6 +272,7 @@ class GitHubReleaseMirror:
             "source_commit_sha": app.get("source_commit_sha") or current.get("source_commit_sha"),
             "license_text": app.get("license_text") or current.get("license_text") or "",
             "license_spdx": app.get("license_spdx"), "license_eligible": bool(app.get("license_eligible")),
+            "project_status": "installable",
             "category": app.get("category") or "other", "topics": app.get("topics") or [],
             "latest_version": app.get("latest_version"), "release_url": app.get("release_url"),
             "mirror_release_url": release.get("html_url"),
@@ -343,6 +344,7 @@ class GitHubReleaseMirror:
             "scout_checked_at": datetime.now(timezone.utc).isoformat(),
         })
         current.setdefault("artifacts", [])
+        current["project_status"] = "installable" if current["artifacts"] else "source_available"
         current["platforms"] = sorted({
             str(item.get("platform")) for item in current["artifacts"] if item.get("platform")
         })
@@ -375,7 +377,8 @@ class GitHubReleaseMirror:
             raise GitHubMirrorError("Build result has no pre-existing catalog record with an approved SPDX license.")
         if not valid_git_ref(git_ref):
             raise GitHubMirrorError("Invalid Git ref supplied for build publication.")
-        candidates = []
+
+        candidates: list[Path] = []
         for path in root.rglob("*"):
             if path.is_symlink() or not path.is_file() or not classify_artifact(path.name):
                 continue
@@ -388,50 +391,70 @@ class GitHubReleaseMirror:
         if not candidates:
             raise GitHubMirrorError("No recognized build outputs were supplied for publication.")
 
-        slug = _safe_release_component(str(app.get("slug") or app.get("name") or "app"))
-        tag = f"apphoryn-{slug}-build-{_safe_release_component(git_ref)}"
-        release = self._ensure_release(
-            tag, f"{app.get('name') or slug} build {git_ref} — Apphoryn",
-            f"Built by Apphoryn on disposable native runners.\nUpstream: {canonical}\nRef: {git_ref}\nLicense: {app.get('license_spdx')}\n"
-            "Format checks are not a malware scan or safety certification.",
-        )
-        license_notice_url = self._upload_notice(release, app, slug)
-        published = []
+        # Validate and hash before creating a Release. If every output is already
+        # present in the Apphoryn catalogue, record the successful build ref without
+        # creating an empty Release or uploading duplicate binaries.
         known = {str(item.get("sha256")) for item in app.setdefault("artifacts", [])}
+        new_candidates: list[tuple[Path, str, str, str, dict[str, Any]]] = []
+        already_present = 0
         for path in candidates:
             validation = validate_artifact(path, require_apk_signature=True)
-            platform, package_type = classify_artifact(path.name) or ("", "")
+            classification = classify_artifact(path.name)
+            if not classification:
+                continue
+            platform, package_type = classification
             digest = self._file_sha256(path)
             if digest in known:
+                already_present += 1
                 continue
-            target_name = safe_filename(f"{platform}-{path.name}")
-            uploaded = self._upload_asset(release, path, target_name)
-            name = uploaded.get("name") or target_name
-            row = {
-                "id": digest, "filename": name, "original_filename": path.name,
-                "platform": platform, "package_type": package_type,
-                "architecture": architecture_from_filename(path.name), "version": git_ref,
-                "size_bytes": path.stat().st_size, "sha256": digest,
-                "upstream_digest_verified": False, "validation_status": "validated",
-                "signature_status": validation.get("signature_status", "not_checked"),
-                "signer_certificate_sha256": validation.get("signer_certificate_sha256"),
-                "download_url": uploaded.get("browser_download_url") or f"https://github.com/{self.full_name}/releases/download/{tag}/{urllib.parse.quote(name)}",
-                "mirror_release_url": release.get("html_url"), "build_ref": git_ref,
-            }
-            app["artifacts"].append(row)
             known.add(digest)
-            published.append(row)
-        if not published:
-            raise GitHubMirrorError("All build outputs were already present or produced no new package files.")
+            new_candidates.append((path, platform, package_type, digest, validation))
+
+        slug = _safe_release_component(str(app.get("slug") or app.get("name") or "app"))
+        published: list[dict[str, Any]] = []
+        release: dict[str, Any] | None = None
+
+        if new_candidates:
+            tag = f"apphoryn-{slug}-build-{_safe_release_component(git_ref)}"
+            release = self._ensure_release(
+                tag, f"{app.get('name') or slug} build {git_ref} — Apphoryn",
+                f"Built by Apphoryn on disposable native runners.\nUpstream: {canonical}\nRef: {git_ref}\nLicense: {app.get('license_spdx')}\n"
+                "Format checks are not a malware scan or safety certification.",
+            )
+            license_notice_url = self._upload_notice(release, app, slug)
+            for path, platform, package_type, digest, validation in new_candidates:
+                target_name = safe_filename(f"{platform}-{path.name}")
+                uploaded = self._upload_asset(release, path, target_name)
+                name = uploaded.get("name") or target_name
+                row = {
+                    "id": digest, "filename": name, "original_filename": path.name,
+                    "platform": platform, "package_type": package_type,
+                    "architecture": architecture_from_filename(path.name), "version": git_ref,
+                    "size_bytes": path.stat().st_size, "sha256": digest,
+                    "upstream_digest_verified": False, "validation_status": "validated",
+                    "signature_status": validation.get("signature_status", "not_checked"),
+                    "signer_certificate_sha256": validation.get("signer_certificate_sha256"),
+                    "download_url": uploaded.get("browser_download_url") or f"https://github.com/{self.full_name}/releases/download/{tag}/{urllib.parse.quote(name)}",
+                    "mirror_release_url": release.get("html_url"), "build_ref": git_ref,
+                }
+                app["artifacts"].append(row)
+                published.append(row)
+            if license_notice_url:
+                app["license_notice_url"] = license_notice_url
+            app["mirror_release_url"] = release.get("html_url") or app.get("mirror_release_url")
+
         app["platforms"] = sorted({str(item.get("platform")) for item in app["artifacts"] if item.get("platform")})
-        if license_notice_url:
-            app["license_notice_url"] = license_notice_url
+        app["project_status"] = "installable" if app["artifacts"] else "source_available"
         app.setdefault("build_refs", [])
         if git_ref not in app["build_refs"]:
             app["build_refs"].append(git_ref)
         manifest["generated_at"] = datetime.now(timezone.utc).isoformat()
         self._write_catalog(manifest, sha, f"Publish built packages for {app.get('name') or slug} ({git_ref})")
-        return {"release_url": release.get("html_url"), "published": published}
+        return {
+            "release_url": (release or {}).get("html_url") or app.get("mirror_release_url"),
+            "published": published,
+            "already_present": already_present,
+        }
 
     def has_recent_build_attempt(self, repository_url: str, git_ref: str, max_age_hours: int = 72) -> bool:
         canonical = canonical_repository_url(repository_url)
