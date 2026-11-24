@@ -26,7 +26,7 @@ def pe_fixture(*, dll: bool = False) -> bytes:
 
 def elf_fixture(*, shared_library: bool = False, entry_point: int = 0x401000) -> bytes:
     data = bytearray(64)
-    data[:4] = b"\\x7fELF"
+    data[:4] = b"\x7fELF"
     data[4] = 2
     data[5] = 1
     data[6] = 1
