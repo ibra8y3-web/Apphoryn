@@ -178,25 +178,38 @@ class CatalogService:
         rejected_assets = []
         if release and mirror_release_assets:
             for asset in release.get("assets", []):
-                filename = safe_filename(asset.get("name") or "")
+                upstream_name = str(asset.get("name") or "")
+                try:
+                    filename = safe_filename(upstream_name)
+                except ValueError as exc:
+                    rejected_assets.append({"filename": upstream_name[:180], "reason": str(exc)})
+                    continue
                 if "google-play" in filename.lower() or "symbols" in filename.lower():
                     continue
                 classification = classify_artifact(filename)
                 if not classification:
                     continue
                 download_url = asset.get("browser_download_url") or ""
+                upstream_digest = str(asset.get("digest") or "")
+                if upstream_digest.lower().startswith("sha256:"):
+                    expected_upstream = upstream_digest.split(":", 1)[1].lower()
+                    if re.fullmatch(r"[0-9a-f]{64}", expected_upstream):
+                        existing = self.database.get_artifact_by_sha256(app["id"], expected_upstream)
+                        if existing is not None:
+                            imported.append(existing)
+                            continue
                 destination_dir = settings.storage_path / ".incoming"
                 destination_dir.mkdir(parents=True, exist_ok=True)
                 temporary = destination_dir / f".{uuid.uuid4().hex}.part{Path(filename).suffix.lower()}"
                 try:
                     size, digest = _download_asset(download_url, temporary, settings.max_import_bytes)
-                    upstream_digest = asset.get("digest") or ""
                     upstream_verified = False
-                    if upstream_digest.startswith("sha256:"):
+                    if upstream_digest.lower().startswith("sha256:"):
                         expected = upstream_digest.split(":", 1)[1].lower()
-                        if expected != digest:
-                            raise ArtifactValidationError(f"SHA-256 mismatch for upstream asset {filename}.")
-                        upstream_verified = True
+                        if re.fullmatch(r"[0-9a-f]{64}", expected):
+                            if expected != digest:
+                                raise ArtifactValidationError(f"SHA-256 mismatch for upstream asset {filename}.")
+                            upstream_verified = True
                     verification = validate_artifact(temporary, require_apk_signature=True)
                     stored_path = ArtifactStore(settings.storage_path).put(
                         temporary, expected_sha256=digest, max_bytes=settings.max_import_bytes,
