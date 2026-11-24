@@ -15,12 +15,17 @@ class DatabaseTests(unittest.TestCase):
                 "summary": "Real project", "description": "A sample project", 
                 "repository_url": "https://github.com/sample/sample", "owner": "sample",
                 "license_spdx": "MIT", "license_eligible": True, "category": "developer",
+                "project_kind": "library", "build_recommended": False,
+                "classification_source": "ai", "classification_reason": "Reusable SDK.",
                 "topics": ["editor"], "created_at": now, "updated_at": now,
             }
             first = database.upsert_app(record)
             second = database.upsert_app({**record, "id": "another-id", "summary": "Updated"})
             self.assertEqual(first["id"], second["id"])
             self.assertEqual(second["summary"], "Updated")
+            self.assertEqual(second["project_kind"], "library")
+            self.assertFalse(second["build_recommended"])
+            self.assertEqual(second["classification_source"], "ai")
             self.assertEqual(database.list_apps("developer")[0]["topics"], ["editor"])
 
     def test_stable_github_repository_id_prevents_duplicates_after_rename(self):
