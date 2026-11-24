@@ -51,4 +51,16 @@ test("checks the package platform and allowed installer extension", () => {
     platform: "linux", filename: "package.deb",
     downloadUrl: "https://github.com/ibra8y3-web/Apphoryn/releases/download/v1/package.deb"
   }), "linux"));
+  assert.doesNotThrow(() => validateInstallRequest(request({
+    platform: "windows", filename: "package.msix",
+    downloadUrl: "https://github.com/ibra8y3-web/Apphoryn/releases/download/v1/package.msix"
+  }), "win32"));
+  assert.doesNotThrow(() => validateInstallRequest(request({
+    platform: "windows", filename: "package.appx",
+    downloadUrl: "https://github.com/ibra8y3-web/Apphoryn/releases/download/v1/package.appx"
+  }), "win32"));
+  assert.doesNotThrow(() => validateInstallRequest(request({
+    platform: "macos", filename: "Example.dmg",
+    downloadUrl: "https://github.com/ibra8y3-web/Apphoryn/releases/download/v1/Example.dmg"
+  }), "darwin"));
 });
