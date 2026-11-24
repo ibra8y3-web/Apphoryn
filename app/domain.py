@@ -16,6 +16,7 @@ REDISTRIBUTION_LICENSES = {
 
 ARTIFACT_TYPES = {
     ".apk": ("android", "Android package"),
+    ".xapk": ("android", "Android split package bundle"),
     ".exe": ("windows", "Windows executable"),
     ".msi": ("windows", "Windows installer"),
     ".msix": ("windows", "Windows package"),
