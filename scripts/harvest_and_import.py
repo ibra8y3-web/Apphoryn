@@ -102,7 +102,7 @@ def known_current(candidate: dict[str, Any], known_by_id: dict[str, dict], known
 def should_dispatch_build_fallback(
     verified_artifacts: list[dict[str, Any]],
     auto_targets: list[str],
-    build_recommended: bool = True,
+    build_recommended: bool = False,
 ) -> bool:
     """Build only likely standalone apps/tools when no verified installer exists.
 
@@ -119,7 +119,7 @@ def should_revisit_source_project(existing: dict[str, Any] | None, auto_targets:
     return (
         bool(auto_targets)
         and not bool(record.get("artifacts"))
-        and bool(record.get("build_recommended", True))
+        and bool(record.get("build_recommended", False))
     )
 
 
