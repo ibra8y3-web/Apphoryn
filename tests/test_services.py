@@ -6,7 +6,7 @@ from pathlib import Path
 from unittest.mock import Mock
 
 from app.database import Database, utc_now
-from app.services import CatalogService, store_uploaded_artifact
+from app.services import BuildService, CatalogService, store_uploaded_artifact
 from app.github_client import GitHubError
 import app.services as services_module
 
@@ -183,6 +183,45 @@ class CatalogServiceTests(unittest.TestCase):
                 self.assertEqual(database.list_artifacts("app-1"), [])
             finally:
                 object.__setattr__(services_module.settings, "storage_path", old_storage)
+
+
+    def test_manual_build_registers_source_project_before_dispatch(self):
+        with tempfile.TemporaryDirectory() as folder:
+            database = Database(Path(folder) / "build.sqlite3")
+            app_record = {
+                "id": "source-project", "slug": "owner-source", "name": "Source Project",
+                "summary": "Buildable source", "description": "Source project description",
+                "repository_url": "https://github.com/owner/source", "owner": "owner",
+                "github_repo_id": "123", "license_spdx": "MIT", "license_eligible": True,
+                "category": "developer", "topics": [], "created_at": utc_now(), "updated_at": utc_now(),
+            }
+            catalog = Mock()
+            catalog.import_repository.return_value = {"app": app_record, "artifacts": []}
+            old_values = {
+                "github_owner": services_module.settings.github_owner,
+                "github_repository": services_module.settings.github_repository,
+                "github_token": services_module.settings.github_token,
+                "github_ref": services_module.settings.github_ref,
+            }
+            try:
+                object.__setattr__(services_module.settings, "github_owner", "owner")
+                object.__setattr__(services_module.settings, "github_repository", "Apphoryn")
+                object.__setattr__(services_module.settings, "github_token", "test-token")
+                object.__setattr__(services_module.settings, "github_ref", "main")
+                with patch("app.services.GitHubReleaseMirror") as mirror_class:
+                    mirror = mirror_class.return_value
+                    service = BuildService(catalog=catalog, github=Mock(), database=database)
+                    job = service.dispatch("https://github.com/owner/source", "main", ["linux"])
+                    self.assertEqual(job["status"], "queued")
+                    mirror.register_project.assert_called_once_with(app_record)
+                    mirror.publish_app.assert_not_called()
+                    mirror.dispatch_build.assert_called_once_with(
+                        "https://github.com/owner/source", "main", ["linux"], "owner-source"
+                    )
+                    self.assertEqual(database.list_jobs()[0]["app_id"], "source-project")
+            finally:
+                for key, value in old_values.items():
+                    object.__setattr__(services_module.settings, key, value)
 
 
 if __name__ == "__main__":
