@@ -173,8 +173,8 @@ def validate_artifact(path: str | Path, *, require_apk_signature: bool = True) -
             raise ArtifactValidationError("JAR manifest cannot be read.") from exc
         # Java manifest continuation lines start with one space; join them before
         # parsing so a wrapped Main-Class value is handled correctly.
-        unfolded_manifest = re.sub(rb"\\r?\\n ", b"", manifest_bytes)
-        if not re.search(rb"(?im)^Main-Class:\\s*[^\\s]+", unfolded_manifest):
+        unfolded_manifest = re.sub(rb"\r?\n ", b"", manifest_bytes)
+        if not re.search(rb"(?im)^Main-Class:\s*[^\s]+", unfolded_manifest):
             raise ArtifactValidationError(
                 "JAR is not an executable application: its manifest has no Main-Class entry."
             )
