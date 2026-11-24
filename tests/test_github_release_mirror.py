@@ -10,11 +10,11 @@ from app.github_release_mirror import GitHubReleaseMirror
 
 
 def minimal_pe(path: Path) -> str:
-    data = bytearray(512)
+    data = bytearray(1024)
     pe_offset = 128
     data[:2] = b"MZ"
     data[0x3C:0x40] = pe_offset.to_bytes(4, "little")
-    data[pe_offset:pe_offset + 4] = b"PE\0\0"
+    data[pe_offset:pe_offset + 4] = bytes((0x50, 0x45, 0, 0))
     data[pe_offset + 4:pe_offset + 6] = (0x8664).to_bytes(2, "little")
     data[pe_offset + 6:pe_offset + 8] = (1).to_bytes(2, "little")
     data[pe_offset + 20:pe_offset + 22] = (0xF0).to_bytes(2, "little")
@@ -22,6 +22,14 @@ def minimal_pe(path: Path) -> str:
     optional = pe_offset + 24
     data[optional:optional + 2] = (0x20B).to_bytes(2, "little")
     data[optional + 16:optional + 20] = (0x1000).to_bytes(4, "little")
+    section = optional + 0xF0
+    data[section:section + 5] = b".text"
+    data[section + 8:section + 12] = (0x1000).to_bytes(4, "little")
+    data[section + 12:section + 16] = (0x1000).to_bytes(4, "little")
+    data[section + 16:section + 20] = (128).to_bytes(4, "little")
+    data[section + 20:section + 24] = (512).to_bytes(4, "little")
+    data[section + 36:section + 40] = (0x60000020).to_bytes(4, "little")
+    data[512:640] = bytes((0xC3,)) * 128
     path.write_bytes(data)
     return hashlib.sha256(data).hexdigest()
 
