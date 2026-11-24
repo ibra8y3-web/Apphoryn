@@ -119,7 +119,7 @@ class RepositoryCrawler:
                 records.append(candidate)
 
             cursor = max(repository_id for repository_id, _ in valid_rows)
-            self.state["last_repository_id"] = cursor
+            self.state[cursor_key] = cursor
             self.state["totals"]["repository_pages"] = int(
                 self.state["totals"].get("repository_pages", 0)
             ) + 1
