@@ -67,7 +67,7 @@ def _is_pe(path: Path) -> bool:
             return False
         stream.seek(offset)
         headers = stream.read(24)
-        if len(headers) != 24 or headers[:4] != b"PE\\x00\\x00":
+        if len(headers) != 24 or headers[:4] != b"PE\x00\x00":
             return False
 
         machine = struct.unpack("<H", headers[4:6])[0]
