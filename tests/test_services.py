@@ -195,6 +195,7 @@ class CatalogServiceTests(unittest.TestCase):
                 "github_repo_id": "123", "license_spdx": "MIT", "license_eligible": True,
                 "category": "developer", "topics": [], "created_at": utc_now(), "updated_at": utc_now(),
             }
+            database.upsert_app(app_record)
             catalog = Mock()
             catalog.import_repository.return_value = {"app": app_record, "artifacts": []}
             old_values = {
