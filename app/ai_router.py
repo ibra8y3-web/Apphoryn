@@ -64,7 +64,7 @@ def _status(provider: str, configured: bool, enabled: bool, note: str, count: in
 
 def _priority() -> list[str]:
     return [x.strip().lower() for x in os.getenv(
-        "APPHORYN_AI_PROVIDER_PRIORITY", "gemini,groq,openrouter").split(",") if x.strip()]
+        "APPHORYN_AI_PROVIDER_PRIORITY", "gemini,groq,openrouter,cloudflare,comet").split(",") if x.strip()]
 
 def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str, Any]]]:
     global _cache
@@ -158,25 +158,67 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
     else:
         providers.append(_status("openrouter", False, False, "OPENROUTER_API_KEY is not configured."))
 
-    # CometAPI grants trial credits, not a guaranteed recurring free tier.
+    # CometAPI exposes its catalog at /api/models. Free-only mode admits only
+    # entries whose catalog pricing is explicitly zero, or an owner allowlist
+    # combined with the explicit credit-spend opt-in.
     key = os.getenv("COMET_API_KEY", "").strip()
     allowlist = {x.strip() for x in os.getenv("APPHORYN_COMET_FREE_MODEL_IDS", "").split(",") if x.strip()}
-    if key and (not _FREE_ONLY or (_ALLOW_CREDIT and allowlist)):
+
+    def comet_is_zero_priced(item: dict[str, Any]) -> bool:
+        if item.get("free") is True or item.get("is_free") is True:
+            return True
+        pricing = item.get("pricing") or item.get("price") or {}
+        if not isinstance(pricing, dict) or not pricing:
+            return False
+        price_values = [
+            pricing.get("prompt"), pricing.get("completion"),
+            pricing.get("input"), pricing.get("output"),
+            pricing.get("input_price"), pricing.get("output_price"),
+        ]
+        present = [value for value in price_values if value is not None]
+        if not present:
+            return False
+        def zero(value: Any) -> bool:
+            try:
+                return float(str(value).replace("$", "").strip()) == 0.0
+            except (TypeError, ValueError):
+                return False
+        return all(zero(value) for value in present)
+
+    if key:
         try:
-            data = _request("https://api.cometapi.com/v1/models", {"Authorization": f"Bearer {key}"})
-            for item in data.get("data", []):
-                model = str(item.get("id") or "")
-                if model and (not _FREE_ONLY or model in allowlist):
-                    models.append(Candidate("comet", model, "openai", "https://api.cometapi.com/v1",
-                                             key, int(item.get("context_length") or 0), "explicit_allowlist"))
-            providers.append(_status("comet", True, True,
-                "Credit-based service enabled by explicit allowlist/configuration.",
-                sum(m.provider == "comet" for m in models)))
+            data = _request("https://api.cometapi.com/api/models", {"Authorization": f"Bearer {key}"})
+            rows = data if isinstance(data, list) else (
+                data.get("data") or data.get("models") or data.get("items") or data.get("result") or []
+            )
+            discovered = 0
+            for item in rows if isinstance(rows, list) else []:
+                if not isinstance(item, dict):
+                    continue
+                model = str(item.get("id") or item.get("model") or item.get("name") or "").strip()
+                if not model:
+                    continue
+                explicitly_allowed = model in allowlist and _ALLOW_CREDIT
+                if _FREE_ONLY and not (comet_is_zero_priced(item) or explicitly_allowed):
+                    continue
+                context = int(item.get("context_length") or item.get("context_window") or 0)
+                models.append(Candidate(
+                    "comet", model, "openai", "https://api.cometapi.com/v1", key, context,
+                    "zero_priced_catalog" if comet_is_zero_priced(item) else "explicit_credit_allowlist"
+                ))
+                discovered += 1
+            note = (
+                "Only catalog-confirmed zero-priced models are enabled."
+                if _FREE_ONLY and discovered else
+                "No verified zero-priced Comet models were returned; credit-based models remain disabled."
+                if _FREE_ONLY else
+                "Comet catalog loaded; account billing applies."
+            )
+            providers.append(_status("comet", True, discovered > 0, note, discovered))
         except ProviderError as exc:
-            providers.append(_status("comet", True, True, str(exc)))
+            providers.append(_status("comet", True, False, str(exc)))
     else:
-        note = "Disabled in free-only mode; trial credits are not treated as recurring free usage." if key else "COMET_API_KEY is not configured."
-        providers.append(_status("comet", bool(key), False, note))
+        providers.append(_status("comet", False, False, "COMET_API_KEY is not configured."))
 
     # Cloudflare requires an account ID as well as a token, and explicit opt-in.
     key = os.getenv("CLOUDFLARE_API_TOKEN", "").strip()
