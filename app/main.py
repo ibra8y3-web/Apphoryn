@@ -75,6 +75,8 @@ def catalog_items(category: str | None = None, query: str | None = None, limit: 
                 known.add(digest)
         by_repo[key] = {**previous, **item, "artifacts": merged}
     rows = list(by_repo.values())
+    # The public store lists only applications that have at least one verified installable file.
+    rows = [item for item in rows if item.get("artifacts")]
     if category and category != "all":
         rows = [item for item in rows if item.get("category") == category]
     if query:
