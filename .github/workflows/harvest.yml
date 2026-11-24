@@ -48,24 +48,32 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - uses: android-actions/setup-android@v3
-      - name: Install Android build-tools signature verifier
+      - name: Install Android SDK build-tools for APK verification
         shell: bash
         run: |
-          yes | sdkmanager --licenses >/dev/null
-          sdkmanager --install "platform-tools" "build-tools;35.0.0"
+          export ANDROID_HOME="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}}"
+          SDKMANAGER="$(command -v sdkmanager || true)"
+          if [ -z "$SDKMANAGER" ]; then
+            SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager -perm -111 2>/dev/null | sort -V | tail -n 1)"
+          fi
+          if [ -z "$SDKMANAGER" ]; then
+            echo "Android sdkmanager was not found on this runner." >&2
+            exit 1
+          fi
+          yes | "$SDKMANAGER" --licenses >/dev/null
+          "$SDKMANAGER" --install "platform-tools" "build-tools;35.0.0"
           echo "$ANDROID_HOME/build-tools/35.0.0" >> "$GITHUB_PATH"
       - name: Discover, verify, import and mirror actual release files
         env:
-          GITHUB_TOKEN: \${{ github.token }}
-          GITHUB_REPOSITORY: \${{ github.repository }}
-          APPHORYN_GITHUB_REF: \${{ github.ref_name }}
-          APPHORYN_QUERY: \${{ inputs.query || 'topic:opensource stars:>100' }}
-          APPHORYN_LIMIT: \${{ inputs.limit || '5' }}
-          APPHORYN_AUTO_BUILD_TARGETS: \${{ vars.APPHORYN_AUTO_BUILD_TARGETS || 'android,windows,linux,macos' }}
-          APPHORYN_AI_API_KEY: \${{ secrets.APPHORYN_AI_API_KEY }}
-          APPHORYN_AI_MODEL: \${{ vars.APPHORYN_AI_MODEL }}
-          SKIP_SEEDS: \${{ inputs.skip_seeds || 'false' }}
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          APPHORYN_GITHUB_REF: ${{ github.ref_name }}
+          APPHORYN_QUERY: ${{ inputs.query || 'topic:opensource stars:>100' }}
+          APPHORYN_LIMIT: ${{ inputs.limit || '5' }}
+          APPHORYN_AUTO_BUILD_TARGETS: ${{ vars.APPHORYN_AUTO_BUILD_TARGETS || 'android,windows,linux,macos' }}
+          APPHORYN_AI_API_KEY: ${{ secrets.APPHORYN_AI_API_KEY }}
+          APPHORYN_AI_MODEL: ${{ vars.APPHORYN_AI_MODEL }}
+          SKIP_SEEDS: ${{ inputs.skip_seeds || 'false' }}
         run: |
           ARGS=(--query "$APPHORYN_QUERY" --limit "$APPHORYN_LIMIT")
           if [ "$SKIP_SEEDS" = "true" ]; then ARGS+=(--skip-seeds); fi
