@@ -106,6 +106,28 @@ def list_apps(category: str | None = None, q: str | None = None, limit: int = Qu
     return {"items": items, "count": len(items)}
 
 
+@app.get("/api/v1/catalog/projects")
+def list_projects(q: str | None = None, limit: int = Query(80, ge=1, le=200)):
+    """List imported source projects for the build/workbench layer.
+
+    A source repository is not an installable store app until verified artifacts exist.
+    """
+    rows = [
+        item for item in read_mirror_catalog()
+        if item.get("repository_url") and item.get("license_eligible")
+    ]
+    if q:
+        term = q.casefold()
+        rows = [
+            item for item in rows
+            if term in " ".join(str(item.get(field) or "") for field in (
+                "name", "summary", "description", "owner", "category", "repository_url"
+            )).casefold()
+        ]
+    rows.sort(key=lambda item: str(item.get("name", "")).casefold())
+    return {"items": rows[:max(1, min(limit, 200))], "count": len(rows)}
+
+
 @app.get("/api/v1/catalog/apps/{slug}")
 def app_detail(slug: str):
     match = next((item for item in catalog_items(limit=200) if item.get("slug") == slug or item.get("id") == slug), None)
