@@ -10,3 +10,7 @@ html[dir="rtl"] body{font-family:'DM Sans',Tahoma,sans-serif}html[dir="rtl"] .na
 
 .api-setting-row input{width:min(460px,100%);display:block;margin-top:9px;padding:10px 12px;border:1px solid #3a4b5a;border-radius:8px;background:#111c27;color:#e8f0f6;font:inherit;font-size:10px}.api-setting-copy{flex:1;min-width:0}.api-setting-actions{display:flex;flex-direction:column;align-items:flex-end;gap:9px}.api-setting-actions .button{white-space:nowrap}.api-setting-row .status-tag{white-space:nowrap}@media(max-width:620px){.api-setting-row{flex-direction:column;align-items:stretch}.api-setting-actions{align-items:stretch}.api-setting-row input{width:100%}}
 body.light .api-setting-row input{background:#fff;color:#172331;border-color:#d6e0e6}
+
+.app-logo{position:relative}.app-logo span{position:absolute;inset:0;display:grid;place-items:center}.app-logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit;background:#1b2a36}.discovery-logo{position:relative;overflow:hidden}.discovery-logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit;background:#1b2a36}.api-setting-row{display:none!important}
+
+.install-platform-label{display:inline-flex;align-items:center;justify-content:center;border:1px solid #344656;background:#172430;border-radius:7px;color:#8fa1b2;font-size:8px;font-weight:700;letter-spacing:.5px;padding:7px 10px;white-space:nowrap}

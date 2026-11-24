@@ -224,11 +224,66 @@ class GitHubReleaseMirror:
             raise GitHubMirrorError("Refusing to mirror a project without an approved SPDX redistribution license.")
 
         if not artifacts:
+            # Register source metadata even before a binary exists. The public
+            # storefront filters source-only rows, while the isolated build
+            # workflow needs this stable record before it can publish outputs.
+            manifest, sha = self._read_catalog()
+            apps = manifest.setdefault("apps", [])
+            repository_url = str(app.get("repository_url") or "")
+            repository_id = str(app.get("github_repo_id") or "") or None
+            current = next((
+                item for item in apps
+                if item.get("repository_url") == repository_url
+                or (repository_id and str(item.get("github_repo_id") or "") == repository_id)
+            ), None)
+            slug = _safe_release_component(str(app.get("slug") or app.get("name") or "app"))
+            if current is None:
+                current = {"id": str(app.get("slug") or slug), "slug": str(app.get("slug") or slug), "artifacts": []}
+                apps.append(current)
+            current.update({
+                "name": app.get("name") or slug,
+                "summary": app.get("summary") or current.get("summary") or "",
+                "description": app.get("description") or current.get("description") or "",
+                "translations": app.get("translations") or current.get("translations") or {},
+                "description_translations": app.get("description_translations") or current.get("description_translations") or {},
+                "translation_status": app.get("translation_status") or current.get("translation_status") or "missing",
+                "ai_provider": app.get("ai_provider") or current.get("ai_provider"),
+                "ai_model": app.get("ai_model") or current.get("ai_model"),
+                "icon_url": app.get("icon_url") or current.get("icon_url"),
+                "repository_url": repository_url,
+                "github_repo_id": repository_id or current.get("github_repo_id"),
+                "source_updated_at": app.get("source_updated_at") or current.get("source_updated_at"),
+                "homepage_url": app.get("homepage_url") or current.get("homepage_url"),
+                "owner": app.get("owner") or current.get("owner") or "",
+                "default_branch": app.get("default_branch") or "main",
+                "source_commit_sha": app.get("source_commit_sha") or current.get("source_commit_sha"),
+                "license_text": app.get("license_text") or current.get("license_text") or "",
+                "license_spdx": app.get("license_spdx"),
+                "license_eligible": bool(app.get("license_eligible")),
+                "project_kind": app.get("project_kind") or "unknown",
+                "build_recommended": bool(app.get("build_recommended", False)),
+                "classification_source": app.get("classification_source") or "heuristic",
+                "classification_reason": app.get("classification_reason") or "",
+                "category": app.get("category") or "other",
+                "topics": app.get("topics") or [],
+                "latest_version": app.get("latest_version"),
+                "release_url": app.get("release_url"),
+                "artifacts": list(current.get("artifacts") or []),
+            })
+            current["platforms"] = sorted({
+                str(item.get("platform")) for item in current["artifacts"] if item.get("platform")
+            })
+            current["project_status"] = "installable" if current["artifacts"] else "source_available"
+            manifest["schema_version"] = 1
+            manifest["generated_at"] = datetime.now(timezone.utc).isoformat()
+            manifest["apps"] = sorted(apps, key=lambda item: str(item.get("name", "")).casefold())
+            self._write_catalog(manifest, sha, f"Register Apphoryn source project: {app.get('name') or slug}")
             return {
-                "release_url": None,
+                "release_url": current.get("mirror_release_url"),
                 "manifest_path": self.catalog_path,
                 "mirrored_artifacts": [],
                 "source_project_registered": True,
+                "project_status": current["project_status"],
             }
 
         slug = _safe_release_component(str(app.get("slug") or app.get("name") or "app"))
@@ -273,12 +328,46 @@ class GitHubReleaseMirror:
             known_hashes.add(digest)
 
         if not prepared:
+            # Even when this release contains only already-mirrored bytes, refresh
+            # the app's metadata (including corrected bilingual text and artwork).
+            current = existing
+            if current is not None:
+                current.update({
+                    "name": app.get("name") or current.get("name") or slug,
+                    "summary": app.get("summary") or current.get("summary") or "",
+                    "description": app.get("description") or current.get("description") or "",
+                    "translations": app.get("translations") or current.get("translations") or {},
+                    "description_translations": app.get("description_translations") or current.get("description_translations") or {},
+                    "translation_status": app.get("translation_status") or current.get("translation_status") or "missing",
+                    "ai_provider": app.get("ai_provider") or current.get("ai_provider"),
+                    "ai_model": app.get("ai_model") or current.get("ai_model"),
+                    "icon_url": app.get("icon_url") or current.get("icon_url"),
+                    "source_updated_at": app.get("source_updated_at") or current.get("source_updated_at"),
+                    "homepage_url": app.get("homepage_url") or current.get("homepage_url"),
+                    "owner": app.get("owner") or current.get("owner") or "",
+                    "default_branch": app.get("default_branch") or current.get("default_branch") or "main",
+                    "source_commit_sha": app.get("source_commit_sha") or current.get("source_commit_sha"),
+                    "license_text": app.get("license_text") or current.get("license_text") or "",
+                    "license_spdx": app.get("license_spdx") or current.get("license_spdx"),
+                    "license_eligible": bool(app.get("license_eligible")),
+                    "project_kind": app.get("project_kind") or current.get("project_kind") or "unknown",
+                    "build_recommended": bool(app.get("build_recommended", current.get("build_recommended", False))),
+                    "classification_source": app.get("classification_source") or current.get("classification_source") or "heuristic",
+                    "classification_reason": app.get("classification_reason") or current.get("classification_reason") or "",
+                    "category": app.get("category") or current.get("category") or "other",
+                    "topics": app.get("topics") or current.get("topics") or [],
+                    "latest_version": app.get("latest_version") or current.get("latest_version"),
+                    "release_url": app.get("release_url") or current.get("release_url"),
+                })
+                manifest["generated_at"] = datetime.now(timezone.utc).isoformat()
+                manifest["apps"] = sorted(manifest.get("apps", []), key=lambda item: str(item.get("name", "")).casefold())
+                self._write_catalog(manifest, sha, f"Refresh Apphoryn metadata: {app.get('name') or slug}")
             return {
                 "release_url": (existing or {}).get("mirror_release_url"),
                 "manifest_path": self.catalog_path,
                 "mirrored_artifacts": [],
                 "already_present": already_present,
-                "source_project_registered": False,
+                "source_project_registered": current is not None,
             }
 
         tag = f"apphoryn-{slug}-{version}"
@@ -329,7 +418,12 @@ class GitHubReleaseMirror:
             "name": app.get("name") or slug,
             "summary": app.get("summary") or "",
             "description": app.get("description") or "",
-            "translations": app.get("translations") or {},
+            "translations": app.get("translations") or current.get("translations") or {},
+            "description_translations": app.get("description_translations") or current.get("description_translations") or {},
+            "translation_status": app.get("translation_status") or current.get("translation_status") or "missing",
+            "ai_provider": app.get("ai_provider") or current.get("ai_provider"),
+            "ai_model": app.get("ai_model") or current.get("ai_model"),
+            "icon_url": app.get("icon_url") or current.get("icon_url"),
             "repository_url": repository_url,
             "github_repo_id": repository_id or current.get("github_repo_id"),
             "source_updated_at": app.get("source_updated_at") or current.get("source_updated_at"),
@@ -440,13 +534,28 @@ class GitHubReleaseMirror:
         self._write_catalog(manifest, sha, f"Publish built packages for {app.get('name') or slug} ({git_ref})")
         return {"release_url": release.get("html_url"), "published": published}
 
-    def has_recent_build_attempt(self, repository_url: str, git_ref: str, max_age_hours: int = 72) -> bool:
+    def get_available_platforms(self, repository_url: str) -> set[str]:
+        canonical = canonical_repository_url(repository_url)
+        manifest, _ = self._read_catalog()
+        app = next((item for item in manifest.get("apps", []) if item.get("repository_url") == canonical), None)
+        if not app:
+            return set()
+        return {str(item.get("platform")) for item in app.get("artifacts", []) if item.get("platform")}
+
+    def has_recent_build_attempt(
+        self, repository_url: str, git_ref: str, max_age_hours: int = 72,
+        targets: list[str] | None = None,
+    ) -> bool:
         canonical = canonical_repository_url(repository_url)
         manifest, _ = self._read_catalog()
         app = next((item for item in manifest.get("apps", []) if item.get("repository_url") == canonical), None)
         if not app:
             return False
-        if git_ref in (app.get("build_refs") or []):
+        requested = set(targets or [])
+        available = {str(item.get("platform")) for item in app.get("artifacts", []) if item.get("platform")}
+        if requested and requested.issubset(available):
+            return True
+        if not requested and git_ref in (app.get("build_refs") or []):
             return True
         now = datetime.now(timezone.utc)
         for attempt in app.get("build_attempts", []):
@@ -456,7 +565,10 @@ class GitHubReleaseMirror:
                 stamp = datetime.fromisoformat(str(attempt.get("requested_at")).replace("Z", "+00:00"))
             except (TypeError, ValueError):
                 continue
-            if (now - stamp).total_seconds() < max_age_hours * 3600:
+            if (now - stamp).total_seconds() >= max_age_hours * 3600:
+                continue
+            attempted = {str(value) for value in attempt.get("targets", [])}
+            if not requested or requested.issubset(available | attempted):
                 return True
         return False
 

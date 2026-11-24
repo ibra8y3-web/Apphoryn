@@ -46,6 +46,34 @@ class ArtifactValidationTests(unittest.TestCase):
             self.assertEqual(result["signature_status"], "verified")
             self.assertEqual(result["signer_certificate_sha256"], "aa" * 32)
 
+    def test_xapk_validates_base_and_split_apk_signatures(self):
+        with tempfile.TemporaryDirectory() as folder:
+            folder_path = Path(folder)
+            base = folder_path / "base.apk"
+            split = folder_path / "split_config.arm64_v8a.apk"
+            for path in (base, split):
+                with zipfile.ZipFile(path, "w") as archive:
+                    archive.writestr("AndroidManifest.xml", b"manifest")
+                    archive.writestr("classes.dex", b"dex\\n035\\0" + b"0" * 64)
+            xapk = folder_path / "bundle.xapk"
+            with zipfile.ZipFile(xapk, "w") as archive:
+                archive.write(base, "base.apk")
+                archive.write(split, "split_config.arm64_v8a.apk")
+            with patch("app.artifact_validation._verify_apk_signature", return_value=("verified", "ab" * 32)):
+                result = validate_artifact(xapk, require_apk_signature=True)
+            self.assertEqual(result["format"], "xapk")
+            self.assertEqual(result["signature_status"], "verified")
+            self.assertEqual(result["signer_certificate_sha256"], "ab" * 32)
+
+    def test_xapk_rejects_obb_payloads_and_missing_base_apk(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "invalid.xapk"
+            with zipfile.ZipFile(path, "w") as archive:
+                archive.writestr("split_config.apk", b"not-used")
+                archive.writestr("main.obb", b"unsupported expansion")
+            with self.assertRaisesRegex(ArtifactValidationError, "OBB"):
+                validate_artifact(path, require_apk_signature=False)
+
     def test_pkg_checks_xar_header_length_fields(self):
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / "installer.pkg"

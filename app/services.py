@@ -79,6 +79,56 @@ class CatalogService:
         self.github = github or GitHubClient()
         self.database = database
 
+    def _resolve_project_icon(self, owner: str, repository: str, branch: str, fallback: str | None) -> str | None:
+        """Prefer a small, clearly named application artwork file from the source repository."""
+        try:
+            ref = urllib.parse.quote(branch or "main", safe="")
+            payload = self.github.request(f"/repos/{owner}/{repository}/git/trees/{ref}?recursive=1")
+            tree = payload.get("tree", []) if isinstance(payload, dict) else []
+            candidates: list[tuple[int, str]] = []
+            image_suffixes = {".png", ".webp", ".jpg", ".jpeg", ".svg"}
+            for item in tree:
+                if not isinstance(item, dict) or item.get("type") != "blob":
+                    continue
+                path = str(item.get("path") or "")
+                lower = path.lower()
+                suffix = Path(lower).suffix
+                if suffix not in image_suffixes:
+                    continue
+                size = int(item.get("size") or 0)
+                if size <= 0 or size > 1024 * 1024:
+                    continue
+                name = Path(lower).name
+                parts = set(Path(lower).parts)
+                if any(term in lower for term in ("screenshot", "banner", "cover", "social-preview", "og-image", "readme")):
+                    continue
+                score = 0
+                if name in {"app-icon.png", "app_icon.png", "appicon.png", "icon.png", "icon.svg", "logo.png", "logo.svg"}:
+                    score += 100
+                elif "icon" in name:
+                    score += 80
+                elif "logo" in name:
+                    score += 60
+                else:
+                    continue
+                if parts.intersection({"assets", "icons", "icon", "res", "resources"}):
+                    score += 15
+                if parts.intersection({"docs", "examples", "screenshots", "website"}):
+                    score -= 40
+                if size > 512 * 1024:
+                    score -= 10
+                candidates.append((score, path))
+            if candidates:
+                candidates.sort(key=lambda item: (-item[0], len(item[1]), item[1].casefold()))
+                selected = candidates[0][1]
+                encoded_path = "/".join(urllib.parse.quote(part, safe="") for part in selected.split("/"))
+                raw_ref = urllib.parse.quote(branch or "main", safe="/")
+                return f"https://raw.githubusercontent.com/{owner}/{repository}/{raw_ref}/{encoded_path}"
+        except Exception:
+            # Project artwork is optional; source-owner avatar remains the safe fallback.
+            pass
+        return fallback
+
     def discover(self, query: str, limit: int = 20) -> list[dict[str, Any]]:
         search = self.github.search_repositories(query=query, per_page=limit)
         candidates = []
@@ -91,6 +141,7 @@ class CatalogService:
                 "full_name": repo.get("full_name", ""),
                 "description": repo.get("description") or "",
                 "repository_url": repo.get("html_url", ""),
+                "icon_url": (repo.get("owner") or {}).get("avatar_url") or None,
                 "homepage_url": repo.get("homepage") or None,
                 "license_spdx": spdx,
                 "license_eligible": license_allows_redistribution(spdx),
@@ -154,6 +205,10 @@ class CatalogService:
             "github_repo_id": str(repo.get("id") or "") or None,
             "source_updated_at": repo.get("updated_at"),
             "homepage_url": repo.get("homepage") or None,
+            "icon_url": self._resolve_project_icon(
+                owner, repo_name, repo.get("default_branch") or "main",
+                (repo.get("owner") or {}).get("avatar_url") or None,
+            ),
             "owner": owner,
             "default_branch": repo.get("default_branch") or "main",
             "source_commit_sha": source_commit_sha,
@@ -163,6 +218,10 @@ class CatalogService:
             "category": category,
             "topics": repo.get("topics") or [],
             "translations": generated.get("translations", {}),
+            "description_translations": generated.get("description_translations", {}),
+            "translation_status": generated.get("translation_status", "missing"),
+            "ai_provider": generated.get("ai_provider"),
+            "ai_model": generated.get("ai_model"),
             "project_kind": generated.get("project_kind", "unknown"),
             "build_recommended": bool(generated.get("build_recommended", False)),
             "classification_source": generated.get("classification_source", "heuristic"),

@@ -21,7 +21,7 @@ The Scout workflow passes these values only to its trusted discovery job. They a
 - `APPHORYN_AI_FREE_ONLY=true` is the default.
 - OpenRouter discovery accepts explicit `:free` model IDs and the `openrouter/free` router only.
 - Gemini and Groq model-list endpoints do not expose an enforceable account billing tier. In free-only mode these providers remain paused until the owner sets the repository variable `APPHORYN_AI_CONFIRM_GEMINI_GROQ_FREE_TIER=true` after checking the provider consoles. This is an owner attestation, not a technical guarantee; keep provider billing caps/alerts at zero or use non-billable free-tier projects.
-- CometAPI trial credits are not recurring free usage. It remains disabled unless credit-based use is explicitly enabled with `APPHORYN_AI_ALLOW_CREDIT_BASED_PROVIDERS=true` and a model allowlist.
+- CometAPI is queried through `/api/models`. In free-only mode, the router admits only models whose returned catalog metadata explicitly reports zero prompt and completion prices (or an explicit `free` flag). Trial/credit-priced models remain excluded unless credit-based use is explicitly enabled with `APPHORYN_AI_ALLOW_CREDIT_BASED_PROVIDERS=true` and a model allowlist.
 - Cloudflare requires `CLOUDFLARE_ACCOUNT_ID` and remains disabled unless `APPHORYN_AI_ENABLE_CLOUDFLARE=true`. Cloudflare account usage and plan limits must be checked independently.
 
 Do not set `APPHORYN_AI_FREE_ONLY=false` unless paid model use is explicitly authorized.
@@ -42,3 +42,19 @@ The router tries available models in configured provider priority order and fail
 The current integration uses AI during catalog metadata generation. It is not a general-purpose autonomous agent or a continuously running 24/7 worker by itself. The existing Scout workflow runs on its configured schedule; a continuously running hosted worker and durable quota telemetry are separate deployment work.
 
 The legacy single-provider OpenAI-compatible fallback is disabled by default. Set `APPHORYN_AI_ALLOW_LEGACY_PROVIDER=true` only when you explicitly authorize that endpoint and its billing; it is not used as an automatic paid fallback.
+
+
+## Automated catalog worker
+
+The trusted Scout workflow runs hourly and also on relevant pushes/manual dispatch. It searches broad application topic families without a minimum star count, refreshes source metadata, and records only verified installable artifacts in the public catalog. Source-only projects remain internal until an isolated build produces a verified package.
+
+Automatic builds are limited to AI/source-evidence-classified standalone applications and executable developer tools. Existing installable platforms are skipped; only missing targets are dispatched. A per-run build budget prevents unbounded workflow fan-out. Third-party source code runs only on disposable native build runners with no Apphoryn provider or ingest secrets.
+
+Descriptions are generated in English and Arabic. When the primary model omits Arabic text, the same provider router is called for a dedicated Arabic translation. If no eligible model is available, the record is marked `english_only` and AI is not represented as having succeeded.
+
+The store UI fetches the current public catalogue JSON from Apphoryn's GitHub raw mirror on each launch when the optional FastAPI service is not configured. The bundled catalogue is retained as an offline fallback. Native installers fetch only assets in Apphoryn-owned GitHub Releases, follow allowlisted GitHub asset redirects, verify SHA-256, and then hand the file to the operating-system installer.
+
+
+## Project-aware source-build dispatch
+
+Before a build is dispatched, Scout reads the repository tree and package manifests without executing project code. It only selects targets supported by an existing Apphoryn adapter: Android requires a Gradle wrapper; desktop targets require a .NET project, Go module, or Electron package with a packaging script. Projects with no matching adapter remain source-only/internal and are not published as installable applications. The disposable build workflow still performs the actual build and validation before publishing.

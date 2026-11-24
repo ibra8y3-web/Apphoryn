@@ -4,6 +4,7 @@ import os
 import re
 import shutil
 import struct
+import tempfile
 import subprocess
 import zipfile
 from pathlib import Path
@@ -150,6 +151,60 @@ def validate_artifact(path: str | Path, *, require_apk_signature: bool = True) -
         if "AndroidManifest.xml" not in members or not (has_dex or has_native):
             raise ArtifactValidationError("APK lacks AndroidManifest.xml or executable DEX/native code.")
         signature_status, signer_certificate_sha256 = _verify_apk_signature(candidate, required=require_apk_signature)
+    elif suffix == ".xapk":
+        members = _zip_members(candidate)
+        apk_entries = []
+        base_found = False
+        if any(name.lower().endswith(".obb") for name in members):
+            raise ArtifactValidationError("XAPK includes OBB expansion data; this installer supports APK splits only.")
+        try:
+            with zipfile.ZipFile(candidate) as archive:
+                for info in archive.infolist():
+                    if info.is_dir() or not info.filename.lower().endswith(".apk"):
+                        continue
+                    normalized = info.filename.replace("\\", "/")
+                    if normalized.startswith("/") or ".." in normalized.split("/"):
+                        raise ArtifactValidationError("XAPK contains an unsafe APK member path.")
+                    name = Path(normalized).name
+                    if not name.lower().endswith(".apk") or not name[:-4] or any(not (char.isalnum() or char in "._-") for char in name[:-4]):
+                        raise ArtifactValidationError("XAPK contains an unsafe APK member name.")
+                    apk_entries.append((info, name))
+                    if name.lower() == "base.apk":
+                        base_found = True
+                if not base_found or not apk_entries:
+                    raise ArtifactValidationError("XAPK must contain base.apk and at least one installable APK.")
+                if len(apk_entries) > 16:
+                    raise ArtifactValidationError("XAPK has too many APK split files.")
+                names = [name.casefold() for _, name in apk_entries]
+                if len(names) != len(set(names)):
+                    raise ArtifactValidationError("XAPK contains duplicate APK split filenames.")
+                signer_fingerprints: set[str] = set()
+                with tempfile.TemporaryDirectory(prefix="apphoryn-xapk-") as temporary:
+                    for index, (info, name) in enumerate(apk_entries):
+                        nested_path = Path(temporary) / f"{index}-{name}"
+                        total = 0
+                        with archive.open(info) as source, nested_path.open("wb") as target:
+                            while True:
+                                chunk = source.read(1024 * 1024)
+                                if not chunk:
+                                    break
+                                total += len(chunk)
+                                if total > 512 * 1024 * 1024:
+                                    raise ArtifactValidationError("An XAPK split exceeds the 512 MiB validation limit.")
+                                target.write(chunk)
+                        nested = validate_artifact(nested_path, require_apk_signature=require_apk_signature)
+                        fingerprint = nested.get("signer_certificate_sha256")
+                        if nested.get("signature_status") != "verified" or not fingerprint:
+                            raise ArtifactValidationError(f"XAPK split {name} has no verified APK signer certificate.")
+                        signer_fingerprints.add(str(fingerprint))
+                if len(signer_fingerprints) != 1:
+                    raise ArtifactValidationError("XAPK APK splits do not share the same signing certificate.")
+                signature_status = "verified"
+                signer_certificate_sha256 = next(iter(signer_fingerprints))
+        except ArtifactValidationError:
+            raise
+        except (OSError, zipfile.BadZipFile, RuntimeError) as exc:
+            raise ArtifactValidationError("XAPK is not a readable split APK bundle.") from exc
     elif suffix == ".aab":
         members = _zip_members(candidate)
         if "BundleConfig.pb" not in members or "base/manifest/AndroidManifest.xml" not in members:

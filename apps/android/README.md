@@ -18,7 +18,7 @@ Open Settings and enter the HTTPS base address of the deployed Apphoryn FastAPI 
 
 ## Install flow
 
-The Android client currently installs verified `.apk` packages only. It downloads into its private cache, checks the SHA-256 digest supplied by the catalogue, and opens Android's system package installer with a FileProvider URI. Android's install permission and confirmation screens remain under the user's control. XAPK/split-APK bundles are not yet enabled.
+The Android client installs verified `.apk` packages and signed `.xapk` split bundles. APK files are downloaded into the private cache, SHA-256 checked and passed to Android's system package installer. XAPK bundles are checked on the server for a signed `base.apk` and matching signer certificate across all APK splits; on device, the outer SHA-256 is checked, split APKs are extracted with path/size limits, and one Android PackageInstaller session is created. XAPK bundles containing OBB expansion files are refused for now. Android's install permission and confirmation screens remain under the user's control.
 
 
 ## Backend CORS

@@ -96,7 +96,8 @@
       "build_recommended": false,
       "classification_source": "heuristic",
       "classification_reason": "The repository describes reusable code, a package, SDK, or framework rather than a standalone installer.",
-      "project_status": "installable"
+      "project_status": "installable",
+      "icon_url": "https://avatars.githubusercontent.com/u/22522604?v=4"
     },
     {
       "id": "localsend-localsend",
@@ -337,7 +338,8 @@
       "build_recommended": false,
       "classification_source": "heuristic",
       "classification_reason": "The repository describes reusable code, a package, SDK, or framework rather than a standalone installer.",
-      "project_status": "installable"
+      "project_status": "installable",
+      "icon_url": "https://avatars.githubusercontent.com/u/120677616?v=4"
     },
     {
       "id": "mapmapteam-mapmap",
@@ -381,7 +383,8 @@
           ],
           "requested_at": "2026-11-24T20:22:06.047190+00:00"
         }
-      ]
+      ],
+      "icon_url": "https://avatars.githubusercontent.com/u/5913666?v=4"
     },
     {
       "id": "synthetic-sciences-openscience",
@@ -435,7 +438,8 @@
           ],
           "requested_at": "2026-11-24T19:12:12.895868+00:00"
         }
-      ]
+      ],
+      "icon_url": "https://avatars.githubusercontent.com/u/220546587?v=4"
     },
     {
       "id": "cognipilot-rumoca",
@@ -529,7 +533,8 @@
       ],
       "platforms": [
         "windows"
-      ]
+      ],
+      "icon_url": "https://avatars.githubusercontent.com/u/74689547?v=4"
     },
     {
       "id": "nextcloud-server",
@@ -586,7 +591,8 @@
           ],
           "requested_at": "2026-11-24T19:11:44.174175+00:00"
         }
-      ]
+      ],
+      "icon_url": "https://avatars.githubusercontent.com/u/19211038?v=4"
     },
     {
       "id": "rikkaapps-shizuku",
@@ -649,7 +655,8 @@
       "build_recommended": false,
       "classification_source": "heuristic",
       "classification_reason": "The repository describes reusable code, a package, SDK, or framework rather than a standalone installer.",
-      "project_status": "installable"
+      "project_status": "installable",
+      "icon_url": "https://avatars.githubusercontent.com/u/31959043?v=4"
     },
     {
       "id": "shoelace-style-webawesome",
@@ -699,7 +706,8 @@
           ],
           "requested_at": "2026-11-24T22:38:21.296268+00:00"
         }
-      ]
+      ],
+      "icon_url": "https://avatars.githubusercontent.com/u/68111783?v=4"
     },
     {
       "id": "koala73-worldmonitor",
@@ -749,7 +757,8 @@
           ],
           "requested_at": "2026-11-24T19:11:31.338470+00:00"
         }
-      ]
+      ],
+      "icon_url": "https://avatars.githubusercontent.com/u/996596?v=4"
     }
   ]
 }
