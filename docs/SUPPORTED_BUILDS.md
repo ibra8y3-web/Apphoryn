@@ -24,6 +24,6 @@ This is a list of supported project patterns, not a promise that every project u
 | RPM | RPM lead/header magic and minimum header size | RPM signature not independently verified |
 | DMG | UDIF \`koly\` trailer | Developer ID/notarization not yet verified |
 | PKG | XAR header and length bounds | Installer signature/notarization not yet verified |
-| JAR | ZIP integrity, manifest and compiled class file | JAR signer trust not yet verified |
+| JAR | ZIP integrity, manifest with a valid `Main-Class` entry and compiled class file; plain Java libraries are rejected | JAR signer trust not yet verified |
 
 Format verification is not malware scanning, does not test application behaviour, and is not a guarantee that a package will install on every device. Unsupported or invalid outputs are rejected rather than relabelled as installable software.
