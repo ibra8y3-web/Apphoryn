@@ -31,6 +31,8 @@ if target := github_target_parts(os.environ.get("GITHUB_REPOSITORY", "")):
     os.environ.setdefault("APPHORYN_GITHUB_REPOSITORY", target[1])
 
 from app.config import settings
+from app.build_support import detect_supported_build_targets
+from app.github_client import GitHubClient
 from app.github_release_mirror import GitHubMirrorError, GitHubReleaseMirror
 from app.services import CatalogService
 
@@ -170,15 +172,25 @@ def main() -> None:
                     result["build_targets"] = missing_targets
                 else:
                     git_ref = str(app.get("source_commit_sha") or app.get("default_branch") or "main")
-                    if mirror.has_recent_build_attempt(repo_url, git_ref, targets=missing_targets):
+                    parts = github_target_parts(repo_url.removeprefix("https://github.com/"))
+                    supported: dict[str, str] = {}
+                    if parts:
+                        supported = detect_supported_build_targets(parts[0], parts[1], git_ref, GitHubClient(token))
+                    build_targets = sorted(set(missing_targets) & set(supported))
+                    result["unsupported_build_targets"] = sorted(set(missing_targets) - set(build_targets))
+                    if not build_targets:
+                        result["build_status"] = "no_supported_build_adapter"
+                        result["build_reason"] = "No matching Gradle, .NET, Go, or Electron packaging adapter was detected in the repository."
+                    elif mirror.has_recent_build_attempt(repo_url, git_ref, targets=build_targets):
                         result["build_status"] = "already_dispatched_for_targets"
                         result["build_ref"] = git_ref
-                        result["build_targets"] = missing_targets
+                        result["build_targets"] = build_targets
                     else:
-                        mirror.dispatch_build(repo_url, git_ref, missing_targets, str(app.get("slug") or app.get("id")))
+                        mirror.dispatch_build(repo_url, git_ref, build_targets, str(app.get("slug") or app.get("id")))
                         build_budget -= 1
                         result["build_ref"] = git_ref
-                        result["build_targets"] = missing_targets
+                        result["build_targets"] = build_targets
+                        result["build_adapters"] = {target: supported[target] for target in build_targets}
                         result["build_status"] = "workflow_dispatched"
             else:
                 result["build_status"] = "automatic_build_disabled"
