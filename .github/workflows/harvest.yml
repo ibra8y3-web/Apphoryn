@@ -12,11 +12,11 @@ on:
   workflow_dispatch:
     inputs:
       max_repositories:
-        description: Maximum repository records processed in this run (whole GitHub search pages are consumed)
+        description: Maximum repositories read from GitHub's public repository listing (whole 100-item pages are consumed)
         required: true
         default: '200'
-      max_search_requests:
-        description: GitHub repository search calls for this run (1–100)
+      max_pages:
+        description: GitHub public listing pages for this run (1–100)
         required: true
         default: '25'
       skip_seeds:
@@ -79,14 +79,14 @@ jobs:
           APPHORYN_AI_API_KEY: ${{ secrets.APPHORYN_AI_API_KEY }}
           APPHORYN_AI_MODEL: ${{ vars.APPHORYN_AI_MODEL }}
           MAX_REPOSITORIES: ${{ inputs.max_repositories || '200' }}
-          MAX_SEARCH_REQUESTS: ${{ inputs.max_search_requests || '25' }}
+          MAX_PAGES: ${{ inputs.max_pages || '25' }}
           SKIP_SEEDS: ${{ inputs.skip_seeds || 'false' }}
         shell: bash
         run: |
           if [ "$SKIP_SEEDS" = "true" ]; then
-            python scripts/harvest_and_import.py --global-scan --max-repositories "$MAX_REPOSITORIES" --max-search-requests "$MAX_SEARCH_REQUESTS" --skip-seeds
+            python scripts/harvest_and_import.py --global-scan --max-repositories "$MAX_REPOSITORIES" --max-pages "$MAX_PAGES" --skip-seeds
           else
-            python scripts/harvest_and_import.py --global-scan --max-repositories "$MAX_REPOSITORIES" --max-search-requests "$MAX_SEARCH_REQUESTS"
+            python scripts/harvest_and_import.py --global-scan --max-repositories "$MAX_REPOSITORIES" --max-pages "$MAX_PAGES"
           fi
 
       - name: Persist the global Scout cursor and retry queue
