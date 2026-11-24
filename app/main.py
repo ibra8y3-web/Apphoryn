@@ -172,7 +172,8 @@ async def upload_built_artifact(
     required = [x_apphoryn_app_id, x_apphoryn_filename, x_apphoryn_platform, x_apphoryn_source_repo, x_apphoryn_sha256]
     if not all(required):
         raise HTTPException(400, "Missing artifact metadata headers.")
-    temp_path = Path(tempfile.gettempdir()) / f"apphoryn-{uuid.uuid4().hex}.upload"
+    temp_suffix = Path(x_apphoryn_filename or "artifact.bin").suffix.lower()
+    temp_path = Path(tempfile.gettempdir()) / f"apphoryn-{uuid.uuid4().hex}{temp_suffix}"
     size = 0
     try:
         with temp_path.open("wb") as output:
