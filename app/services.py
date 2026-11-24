@@ -122,7 +122,8 @@ class CatalogService:
                 candidates.sort(key=lambda item: (-item[0], len(item[1]), item[1].casefold()))
                 selected = candidates[0][1]
                 encoded_path = "/".join(urllib.parse.quote(part, safe="") for part in selected.split("/"))
-                return f"https://raw.githubusercontent.com/{owner}/{repository}/{ref}/{encoded_path}"
+                raw_ref = urllib.parse.quote(branch or "main", safe="/")
+                return f"https://raw.githubusercontent.com/{owner}/{repository}/{raw_ref}/{encoded_path}"
         except Exception:
             # Project artwork is optional; source-owner avatar remains the safe fallback.
             pass
