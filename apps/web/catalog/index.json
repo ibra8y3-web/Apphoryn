@@ -943,7 +943,16 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "0ceb2845abd8d9f5f3574cc933d93da9afba8830",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-24T23:22:09.377080+00:00"
+        }
+      ]
     },
     {
       "id": "openaltfinder-openaltfinder",
