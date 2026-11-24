@@ -71,6 +71,7 @@ jobs:
         with:
           packages: platform-tools
       - name: Build source on disposable runner (no Apphoryn ingest secrets)
+        shell: bash
         if: contains(format(',{0},', inputs.targets), format(',{0},', matrix.target))
         env:
           REPOSITORY_URL: ${{ inputs.repository_url }}
