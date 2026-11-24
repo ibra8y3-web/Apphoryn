@@ -15,13 +15,14 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from app.artifact_validation import ArtifactValidationError, validate_artifact
+from app.domain import classify_artifact
 from app.github_release_mirror import GitHubMirrorError, GitHubReleaseMirror
 
 
 def has_build_outputs(directory: str | Path) -> bool:
     root = Path(directory)
     return root.is_dir() and any(
-        item.is_file() and not item.is_symlink()
+        item.is_file() and not item.is_symlink() and classify_artifact(item.name) is not None
         for item in root.rglob("*")
     )
 
