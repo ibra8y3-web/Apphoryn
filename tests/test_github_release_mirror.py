@@ -10,10 +10,18 @@ from app.github_release_mirror import GitHubReleaseMirror
 
 
 def minimal_pe(path: Path) -> str:
-    data = bytearray(256)
+    data = bytearray(512)
+    pe_offset = 128
     data[:2] = b"MZ"
-    data[0x3C:0x40] = (128).to_bytes(4, "little")
-    data[128:132] = b"PE\0\0"
+    data[0x3C:0x40] = pe_offset.to_bytes(4, "little")
+    data[pe_offset:pe_offset + 4] = b"PE\\0\\0"
+    data[pe_offset + 4:pe_offset + 6] = (0x8664).to_bytes(2, "little")
+    data[pe_offset + 6:pe_offset + 8] = (1).to_bytes(2, "little")
+    data[pe_offset + 20:pe_offset + 22] = (0xF0).to_bytes(2, "little")
+    data[pe_offset + 22:pe_offset + 24] = (0x0002).to_bytes(2, "little")
+    optional = pe_offset + 24
+    data[optional:optional + 2] = (0x20B).to_bytes(2, "little")
+    data[optional + 16:optional + 20] = (0x1000).to_bytes(4, "little")
     path.write_bytes(data)
     return hashlib.sha256(data).hexdigest()
 
