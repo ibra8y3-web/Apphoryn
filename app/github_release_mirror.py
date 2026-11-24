@@ -257,14 +257,17 @@ class GitHubReleaseMirror:
         manifest, sha = self._read_catalog()
         apps = manifest.setdefault("apps", [])
         repo_url = str(app.get("repository_url") or "")
-        current = next((item for item in apps if item.get("repository_url") == repo_url), None)
+        repo_id = str(app.get("github_repo_id") or "") or None
+        current = next((item for item in apps if item.get("repository_url") == repo_url or (repo_id and str(item.get("github_repo_id") or "") == repo_id)), None)
         if current is None:
             current = {"id": str(app.get("slug") or slug), "slug": str(app.get("slug") or slug)}
             apps.append(current)
         current.update({
             "name": app.get("name") or slug, "summary": app.get("summary") or "",
             "description": app.get("description") or "", "translations": app.get("translations") or {},
-            "repository_url": repo_url, "homepage_url": app.get("homepage_url"), "owner": app.get("owner") or "",
+            "repository_url": repo_url, "github_repo_id": repo_id or current.get("github_repo_id"),
+            "source_updated_at": app.get("source_updated_at") or current.get("source_updated_at"),
+            "homepage_url": app.get("homepage_url"), "owner": app.get("owner") or "",
             "default_branch": app.get("default_branch") or "main",
             "source_commit_sha": app.get("source_commit_sha") or current.get("source_commit_sha"),
             "license_text": app.get("license_text") or current.get("license_text") or "",
