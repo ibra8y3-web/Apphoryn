@@ -44,12 +44,22 @@ class GitHubClient:
             raise GitHubError(f"GitHub request failed: {exc}") from exc
 
     def search_repositories(self, query: str, page: int = 1, per_page: int = 20, sort: str = "updated", order: str = "desc") -> dict[str, Any]:
-        if sort not in {"updated", "created", "stars", "forks"} or order not in {"asc", "desc"}:
+        if sort not in {"updated", "stars", "forks"} or order not in {"asc", "desc"}:
             raise ValueError("Unsupported GitHub repository search ordering.")
         return self.request("/search/repositories", {
             "q": query, "sort": sort, "order": order,
             "page": str(max(1, page)), "per_page": str(min(max(per_page, 1), 100)),
         })
+
+    def list_public_repositories(self, since: int = 0, per_page: int = 100) -> list[dict[str, Any]]:
+        """Return the next public repositories with IDs greater than since."""
+        response = self.request("/repositories", {
+            "since": str(max(0, int(since))),
+            "per_page": str(min(max(int(per_page), 1), 100)),
+        })
+        if not isinstance(response, list):
+            raise GitHubError("GitHub public repository listing returned an unexpected response.")
+        return response
 
     def get_repository(self, owner: str, repo: str) -> dict[str, Any]:
         return self.request(f"/repos/{owner}/{repo}")
