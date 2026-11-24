@@ -134,4 +134,9 @@ jobs:
           APPHORYN_GITHUB_REF: ${{ github.ref_name }}
           REPOSITORY_URL: ${{ inputs.repository_url }}
           GIT_REF: ${{ inputs.git_ref }}
+          # These secrets are available only after source builds finish, in the trusted publisher.
+          APPHORYN_ANDROID_KEYSTORE_BASE64: ${{ secrets.APPHORYN_ANDROID_KEYSTORE_BASE64 }}
+          APPHORYN_ANDROID_KEYSTORE_PASSWORD: ${{ secrets.APPHORYN_ANDROID_KEYSTORE_PASSWORD }}
+          APPHORYN_ANDROID_KEY_ALIAS: ${{ secrets.APPHORYN_ANDROID_KEY_ALIAS }}
+          APPHORYN_ANDROID_KEY_PASSWORD: ${{ secrets.APPHORYN_ANDROID_KEY_PASSWORD }}
         run: python scripts/publish_github_release.py --directory artifacts --repository "$REPOSITORY_URL" --ref "$GIT_REF"

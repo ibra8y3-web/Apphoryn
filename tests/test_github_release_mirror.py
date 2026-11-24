@@ -57,6 +57,32 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
         self.assertEqual(source_record["ai_provider"], "openrouter")
         self.assertEqual(source_record["project_status"], "source_available")
 
+    def test_publish_ai_status_persists_only_sanitized_provider_health(self):
+        mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn")
+        mirror._read_catalog = Mock(return_value=({
+            "schema_version": 1,
+            "generated_at": None,
+            "apps": [{"id": "existing-app"}],
+        }, "manifest-sha"))
+        mirror._write_catalog = Mock()
+        mirror.publish_ai_status({
+            "checked_at": "2026-11-25T00:00:00+00:00",
+            "free_only": True,
+            "available_model_count": 2,
+            "providers": [
+                {"provider": "openrouter", "state": "available", "models_discovered": 2, "models": [{"model": "vendor/model:free", "free_class": "free_variant"}], "api_key": "must-not-persist"},
+                {"provider": "gemini", "state": "paused", "models_discovered": 0},
+            ],
+        })
+        written = mirror._write_catalog.call_args.args[0]
+        health = written["ai_status"]
+        self.assertEqual(health["available_model_count"], 2)
+        self.assertEqual(health["available_provider_count"], 1)
+        self.assertEqual([item["state"] for item in health["providers"]], ["available", "paused"])
+        self.assertEqual(health["providers"][0]["models"][0]["model"], "vendor/model:free")
+        self.assertNotIn("api_key", json.dumps(health))
+        self.assertEqual(written["apps"], [{"id": "existing-app"}])
+
     def test_publish_app_uses_apphoryn_release_asset_and_writes_catalog(self):
         with tempfile.TemporaryDirectory() as folder:
             file_path = Path(folder) / "tool.exe"

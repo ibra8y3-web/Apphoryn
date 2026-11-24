@@ -11,6 +11,7 @@ import argparse
 import json
 import os
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,10 +32,66 @@ if target := github_target_parts(os.environ.get("GITHUB_REPOSITORY", "")):
     os.environ.setdefault("APPHORYN_GITHUB_REPOSITORY", target[1])
 
 from app.config import settings
+from app import ai_router
 from app.build_support import detect_supported_build_targets
 from app.github_client import GitHubClient
 from app.github_release_mirror import GitHubMirrorError, GitHubReleaseMirror
 from app.services import CatalogService
+
+
+def publish_ai_provider_status(mirror: GitHubReleaseMirror) -> dict[str, object]:
+    """Discover configured models once per Scout run and publish a credential-free status."""
+    payload = ai_router.public_model_catalog(force=True)
+    providers = []
+    discovered_models = payload.get("models") or []
+    for item in payload.get("providers", []):
+        if not isinstance(item, dict):
+            continue
+        provider_name = str(item.get("provider") or "")
+        configured = bool(item.get("configured"))
+        enabled = bool(item.get("enabled"))
+        provider_models = [
+            {
+                "model": str(model.get("model") or "")[:180],
+                "free_class": str(model.get("free_class") or "")[:80],
+            }
+            for model in discovered_models
+            if isinstance(model, dict) and model.get("provider") == provider_name and model.get("model")
+        ][:20]
+        count = max(0, int(item.get("models_discovered") or len(provider_models)))
+        state = "available" if enabled and count else (
+            "paused" if configured and not enabled else
+            "unavailable" if configured else
+            "not_configured"
+        )
+        providers.append({
+            "provider": provider_name,
+            "state": state,
+            "models_discovered": count,
+            "models": provider_models,
+        })
+    status: dict[str, object] = {
+        "checked_at": datetime.now(timezone.utc).isoformat(),
+        "free_only": bool(payload.get("free_only", True)),
+        "available_model_count": len(payload.get("models") or []),
+        "providers": providers,
+    }
+    try:
+        mirror.publish_ai_status(status)
+    except Exception as exc:
+        # A health-report write must not abort real application discovery/import.
+        print(json.dumps({
+            "event": "ai_provider_status_publish_failed",
+            "error_type": type(exc).__name__,
+        }), flush=True)
+    print(json.dumps({
+        "event": "ai_provider_status",
+        "checked_at": status["checked_at"],
+        "free_only": status["free_only"],
+        "available_model_count": status["available_model_count"],
+        "providers": providers,
+    }, ensure_ascii=False), flush=True)
+    return status
 
 
 def load_seed_repositories(path: Path) -> list[dict[str, str]]:
@@ -99,6 +156,7 @@ def main() -> None:
             "No app was advertised or marked imported. Enable Actions Contents: write."
         )
     mirror = GitHubReleaseMirror(token, target_repo, os.getenv("APPHORYN_GITHUB_REF", "main"))
+    publish_ai_provider_status(mirror)
 
     queue: list[dict[str, str]] = []
     if not args.skip_seeds:

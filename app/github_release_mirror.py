@@ -200,6 +200,47 @@ class GitHubReleaseMirror:
             payload["sha"] = sha
         self.request("PUT", f"/repos/{self.full_name}/contents/{self.catalog_path}", payload)
 
+    def publish_ai_status(self, status: dict[str, Any]) -> None:
+        """Publish a sanitized model-provider health snapshot; never persist credentials."""
+        manifest, sha = self._read_catalog()
+        safe_providers = []
+        for item in status.get("providers", []):
+            if not isinstance(item, dict):
+                continue
+            provider = str(item.get("provider") or "").strip().lower()
+            if not provider:
+                continue
+            state = str(item.get("state") or "unknown")
+            if state not in {"available", "paused", "not_configured", "unavailable"}:
+                state = "unknown"
+            models = item.get("models") if isinstance(item.get("models"), list) else []
+            safe_models = []
+            for model in models[:20]:
+                if not isinstance(model, dict):
+                    continue
+                model_name = str(model.get("model") or "").strip()[:180]
+                if not model_name or "\r" in model_name or "\n" in model_name:
+                    continue
+                safe_models.append({
+                    "model": model_name,
+                    "free_class": str(model.get("free_class") or "")[:80],
+                })
+            safe_providers.append({
+                "provider": provider,
+                "state": state,
+                "models_discovered": max(0, int(item.get("models_discovered") or len(safe_models))),
+                "models": safe_models,
+            })
+        manifest["ai_status"] = {
+            "checked_at": str(status.get("checked_at") or datetime.now(timezone.utc).isoformat()),
+            "free_only": bool(status.get("free_only", True)),
+            "available_provider_count": sum(item["state"] == "available" for item in safe_providers),
+            "available_model_count": max(0, int(status.get("available_model_count") or 0)),
+            "providers": safe_providers,
+        }
+        manifest["generated_at"] = datetime.now(timezone.utc).isoformat()
+        self._write_catalog(manifest, sha, "Update Apphoryn AI provider health status")
+
     def _upload_notice(self, release: dict[str, Any], app: dict[str, Any], slug: str) -> str | None:
         license_text = str(app.get("license_text") or "")
         if not license_text.strip():

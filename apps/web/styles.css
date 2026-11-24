@@ -14,3 +14,41 @@ body.light .api-setting-row input{background:#fff;color:#172331;border-color:#d6
 .app-logo{position:relative}.app-logo span{position:absolute;inset:0;display:grid;place-items:center}.app-logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit;background:#1b2a36}.discovery-logo{position:relative;overflow:hidden}.discovery-logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit;background:#1b2a36}.api-setting-row{display:none!important}
 
 .install-platform-label{display:inline-flex;align-items:center;justify-content:center;border:1px solid #344656;background:#172430;border-radius:7px;color:#8fa1b2;font-size:8px;font-weight:700;letter-spacing:.5px;padding:7px 10px;white-space:nowrap}
+
+/* Autonomous worker and model router status */
+.automation-overview{margin:18px 0;padding:18px}
+.automation-overview-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px}
+.automation-overview-head h2,.ai-engine-panel h2{font-size:18px;margin:4px 0 0}
+.automation-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.automation-metrics .metric-card{min-width:0;border:1px solid #2c4050;background:#101923;border-radius:12px;padding:13px}
+.automation-metrics .metric-card b{display:block;font-family:'Space Grotesk','Segoe UI',sans-serif;font-size:25px;color:var(--lime);line-height:1.2}
+.automation-metrics .metric-card small{display:block;color:#97aaba;font-size:10px;line-height:1.5;margin-top:7px}
+.automation-last-run{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #2c4050;margin-top:14px;padding-top:13px;color:#97aaba;font-size:11px}
+.automation-last-run b{color:#d9e5ed;font-size:11px;text-align:right}
+.ai-engine-panel{margin:16px 0;padding:18px}
+.ai-engine-headline{font-size:13px;margin:18px 0 10px;color:var(--lime)}
+.provider-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.provider-row{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0;border:1px solid #2b3f4e;border-radius:9px;background:#111c27;padding:11px}
+.provider-row b{font-size:11px;text-transform:capitalize;overflow-wrap:anywhere}
+.provider-state{font-size:9px;text-align:right;color:#91a5b5}
+.provider-state.available{color:#8ee0c4}
+.provider-state.paused{color:#e9c57b}
+.provider-state.unavailable{color:#e6a39b}
+.provider-state.not_configured{color:#91a5b5}
+.job-row .job-open{color:var(--lime);text-decoration:none;font-size:16px;padding:2px 5px}
+.job-state.running{background:var(--lime);box-shadow:0 0 0 4px rgba(197,243,106,.12);animation:apphoryn-pulse 1.4s infinite}
+.job-state.failure{background:#e78b8b}
+@keyframes apphoryn-pulse{50%{opacity:.35;box-shadow:0 0 0 7px rgba(197,243,106,0)}}
+.app-logo span{z-index:1}
+.app-logo img,.discovery-logo img{z-index:2}
+.discovery-logo span{position:relative;z-index:1}
+body.light .automation-metrics .metric-card,body.light .provider-row{background:#f6f9fb;border-color:#dbe4e9}
+body.light .automation-last-run{border-color:#dbe4e9;color:#667a8c}
+body.light .automation-last-run b{color:#182734}
+@media(max-width:560px){.automation-metrics{gap:7px}.automation-metrics .metric-card{padding:10px}.automation-metrics .metric-card b{font-size:21px}.automation-metrics .metric-card small{font-size:9px}.provider-list{grid-template-columns:1fr}.automation-overview,.ai-engine-panel{padding:14px}}
+
+.provider-main{min-width:0;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;width:100%}
+.provider-models{display:flex;flex-wrap:wrap;gap:5px;width:100%;margin-top:5px}
+.provider-model{display:inline-flex;gap:5px;align-items:center;max-width:100%;overflow-wrap:anywhere;border:1px solid #304656;background:#0e1822;color:#b9c9d5;border-radius:6px;padding:4px 6px;font-size:9px}
+.provider-model small{color:#90d8bf;font-size:8px}
+body.light .provider-model{background:#edf3f7;color:#4c6273;border-color:#dbe4e9}
