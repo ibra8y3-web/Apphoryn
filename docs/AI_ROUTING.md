@@ -53,3 +53,8 @@ Automatic builds are limited to AI/source-evidence-classified standalone applica
 Descriptions are generated in English and Arabic. When the primary model omits Arabic text, the same provider router is called for a dedicated Arabic translation. If no eligible model is available, the record is marked `english_only` and AI is not represented as having succeeded.
 
 The store UI fetches the current public catalogue JSON from Apphoryn's GitHub raw mirror on each launch when the optional FastAPI service is not configured. The bundled catalogue is retained as an offline fallback. Native installers fetch only assets in Apphoryn-owned GitHub Releases, follow allowlisted GitHub asset redirects, verify SHA-256, and then hand the file to the operating-system installer.
+
+
+## Project-aware source-build dispatch
+
+Before a build is dispatched, Scout reads the repository tree and package manifests without executing project code. It only selects targets supported by an existing Apphoryn adapter: Android requires a Gradle wrapper; desktop targets require a .NET project, Go module, or Electron package with a packaging script. Projects with no matching adapter remain source-only/internal and are not published as installable applications. The disposable build workflow still performs the actual build and validation before publishing.
