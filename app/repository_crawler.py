@@ -1,10 +1,9 @@
 from __future__ import annotations
 
-import json
-import os
-from datetime import date, timedelta
 from pathlib import Path
 from typing import Any
+import json
+import os
 
 
 class RepositoryCrawlError(RuntimeError):
@@ -12,43 +11,41 @@ class RepositoryCrawlError(RuntimeError):
 
 
 class RepositoryCrawler:
-    """Incremental, resumable GitHub repository crawler.
+    """Incremental cursor over GitHub's public-repository listing endpoint.
 
-    Search API result windows are capped at 1,000 records. Dense windows are
-    split into non-overlapping date, star, fork and size ranges before paging.
-    The state file is the durable cursor; failed runs can safely replay a page
-    because catalogue writes and artifact mirrors are idempotent.
+    GitHub's GET /repositories endpoint enumerates public repositories by
+    monotonically increasing repository ID. The since cursor has no
+    search-result 1,000-item ceiling, includes public forks, and can resume
+    from the last completely consumed page.
     """
 
     PAGE_SIZE = 100
-    SEARCH_WINDOW_LIMIT = 1000
-    STAR_BUCKETS = ("0", "1..10", "11..100", "101..1000", "1001..10000", ">10000")
-    FORK_BUCKETS = ("0", "1..10", "11..100", "101..1000", ">1000")
-    SIZE_BUCKETS = ("0..100", "101..1000", "1001..10000", "10001..100000", ">100000")
 
-    def __init__(self, github: Any, state_path: str | Path, start_date: str = "2008-01-01"):
+    def __init__(self, github: Any, state_path: str | Path):
         self.github = github
         self.state_path = Path(state_path)
-        self.start_date = date.fromisoformat(start_date)
         self.state = self._load_state()
 
     def _load_state(self) -> dict[str, Any]:
         if not self.state_path.exists():
             return {
-                "schema_version": 1,
-                "next_created_date": self.start_date.isoformat(),
-                "active_window": None,
-                "pending": [],
-                "totals": {"search_requests": 0, "repositories_seen": 0, "completed_windows": 0},
+                "schema_version": 2,
+                "last_repository_id": 0,
+                "totals": {
+                    "repository_pages": 0,
+                    "repositories_seen": 0,
+                    "empty_tail_checks": 0,
+                },
             }
         try:
             state = json.loads(self.state_path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError) as exc:
             raise RepositoryCrawlError(f"Could not read Scout checkpoint: {exc}") from exc
-        if not isinstance(state, dict) or state.get("schema_version") != 1:
+        if not isinstance(state, dict) or state.get("schema_version") != 2:
             raise RepositoryCrawlError("Scout checkpoint has an unsupported schema version.")
-        state.setdefault("pending", [])
-        state.setdefault("active_window", None)
+        cursor = state.get("last_repository_id")
+        if not isinstance(cursor, int) or cursor < 0:
+            raise RepositoryCrawlError("Scout checkpoint repository ID is invalid.")
         state.setdefault("totals", {})
         return state
 
@@ -58,150 +55,79 @@ class RepositoryCrawler:
         temporary.write_text(json.dumps(self.state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         os.replace(temporary, self.state_path)
 
-    def _ensure_partition(self, today: date) -> bool:
-        if self.state["pending"]:
-            return True
-        active = self.state.get("active_window")
-        if active:
-            self.state["next_created_date"] = (date.fromisoformat(active["end"]) + timedelta(days=1)).isoformat()
-            self.state["active_window"] = None
-            self.state["totals"]["completed_windows"] = int(self.state["totals"].get("completed_windows", 0)) + 1
-
-        start = date.fromisoformat(self.state["next_created_date"])
-        if start > today:
-            return False
-        end = min(start + timedelta(days=29), today)
-        self.state["active_window"] = {"start": start.isoformat(), "end": end.isoformat()}
-        self.state["pending"] = [{
-            "created_from": start.isoformat(),
-            "created_to": end.isoformat(),
-            "stars": None,
-            "forks": None,
-            "size": None,
-            "page": 1,
-            "total_count": None,
-        }]
-        return True
-
-    @staticmethod
-    def _qualifier(value: str | None, name: str) -> str:
-        return f"{name}:{value}" if value is not None else ""
-
-    def _query(self, partition: dict[str, Any]) -> str:
-        clauses = [
-            "is:public",
-            "fork:true",
-            f"created:{partition['created_from']}..{partition['created_to']}",
-            self._qualifier(partition.get("stars"), "stars"),
-            self._qualifier(partition.get("forks"), "forks"),
-            self._qualifier(partition.get("size"), "size"),
-        ]
-        return " ".join(item for item in clauses if item)
-
-    def _split_dense_partition(self, partition: dict[str, Any], total_count: int) -> list[dict[str, Any]]:
-        start = date.fromisoformat(partition["created_from"])
-        end = date.fromisoformat(partition["created_to"])
-        days = (end - start).days
-        if days > 0:
-            midpoint = start + timedelta(days=days // 2)
-            ranges = [(start, midpoint), (midpoint + timedelta(days=1), end)]
-            return [{
-                **partition,
-                "created_from": left.isoformat(),
-                "created_to": right.isoformat(),
-                "page": 1,
-                "total_count": None,
-            } for left, right in ranges]
-
-        if partition.get("stars") is None:
-            values = self.STAR_BUCKETS
-            field = "stars"
-        elif partition.get("forks") is None:
-            values = self.FORK_BUCKETS
-            field = "forks"
-        elif partition.get("size") is None:
-            values = self.SIZE_BUCKETS
-            field = "size"
-        else:
-            query = self._query(partition)
-            raise RepositoryCrawlError(
-                f"GitHub still reports {total_count} repositories for a one-day leaf partition "
-                f"that cannot be safely split further: {query}. The crawler stopped instead of "
-                "silently skipping results."
-            )
-        return [{**partition, field: value, "page": 1, "total_count": None} for value in values]
-
     def scan(
         self,
         max_repositories: int = 200,
-        max_search_requests: int = 25,
-        today: date | None = None,
+        max_pages: int = 25,
     ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
-        today = today or date.today()
-        max_repositories = max(1, min(int(max_repositories), 5000))
-        max_search_requests = max(1, min(int(max_search_requests), 100))
+        max_repositories = max(1, min(int(max_repositories), 10000))
+        max_pages = max(1, min(int(max_pages), 100))
         records: list[dict[str, Any]] = []
-        seen_ids: set[str] = set()
-        seen_names: set[str] = set()
-        requests = 0
-        split_count = 0
+        seen_ids: set[int] = set()
+        pages = 0
+        cursor = int(self.state["last_repository_id"])
+        reached_current_end = False
 
-        while len(records) < max_repositories and requests < max_search_requests:
-            if not self._ensure_partition(today):
+        while len(records) < max_repositories and pages < max_pages:
+            page = self.github.list_public_repositories(since=cursor, per_page=self.PAGE_SIZE)
+            pages += 1
+            if not isinstance(page, list):
+                raise RepositoryCrawlError("GitHub public repository endpoint returned a non-list response.")
+            if not page:
+                reached_current_end = True
+                self.state["totals"]["empty_tail_checks"] = int(
+                    self.state["totals"].get("empty_tail_checks", 0)
+                ) + 1
                 break
 
-            partition = self.state["pending"][0]
-            query = self._query(partition)
-            result = self.github.search_repositories(
-                query=query,
-                page=int(partition.get("page") or 1),
-                per_page=self.PAGE_SIZE,
-                sort="created",
-                order="asc",
-            )
-            requests += 1
-            total_count = int(result.get("total_count") or 0)
-            self.state["totals"]["search_requests"] = int(self.state["totals"].get("search_requests", 0)) + 1
-
-            if total_count >= self.SEARCH_WINDOW_LIMIT:
-                children = self._split_dense_partition(partition, total_count)
-                self.state["pending"][:1] = children
-                split_count += 1
-                continue
-
-            partition["total_count"] = total_count
-            for item in result.get("items") or []:
+            valid_rows: list[tuple[int, dict[str, Any]]] = []
+            for item in page:
                 if not isinstance(item, dict):
                     continue
-                repo_id = str(item.get("id") or "")
-                full_name = str(item.get("full_name") or "").casefold()
-                key = repo_id or full_name
-                if not key or key in seen_ids or (full_name and full_name in seen_names):
+                try:
+                    repository_id = int(item.get("id"))
+                except (TypeError, ValueError):
                     continue
-                seen_ids.add(key)
-                if full_name:
-                    seen_names.add(full_name)
-                item = dict(item)
-                item["scout_query"] = query
-                records.append(item)
+                if repository_id > cursor:
+                    valid_rows.append((repository_id, item))
 
-            # Advance only after consuming the entire page; cutting a page at
-            # the requested batch size would permanently skip its remainder.
-            page = int(partition.get("page") or 1)
-            partition["page"] = page + 1
-            if page * self.PAGE_SIZE >= total_count or page >= 10 or not result.get("items"):
-                self.state["pending"].pop(0)
-            if len(records) >= max_repositories:
+            valid_rows.sort(key=lambda pair: pair[0])
+            if not valid_rows:
+                raise RepositoryCrawlError(
+                    f"GitHub returned no repository ID greater than since={cursor}; "
+                    "the cursor was not advanced to avoid silently skipping repositories."
+                )
+
+            # Consume the complete API page before advancing the since cursor.
+            # Batch limits can be exceeded by at most PAGE_SIZE - 1 results;
+            # truncating a page would permanently discard the remaining IDs.
+            for repository_id, item in valid_rows:
+                if repository_id in seen_ids:
+                    continue
+                seen_ids.add(repository_id)
+                candidate = dict(item)
+                candidate["scout_repository_id"] = repository_id
+                candidate["scout_query"] = f"GET /repositories?since={cursor}"
+                records.append(candidate)
+
+            cursor = max(repository_id for repository_id, _ in valid_rows)
+            self.state["last_repository_id"] = cursor
+            self.state["totals"]["repository_pages"] = int(
+                self.state["totals"].get("repository_pages", 0)
+            ) + 1
+            if len(page) < self.PAGE_SIZE:
+                reached_current_end = True
                 break
 
-        self.state["totals"]["repositories_seen"] = int(self.state["totals"].get("repositories_seen", 0)) + len(records)
+        self.state["last_repository_id"] = cursor
+        self.state["totals"]["repositories_seen"] = int(
+            self.state["totals"].get("repositories_seen", 0)
+        ) + len(records)
         report = {
             "repositories": len(records),
-            "search_requests": requests,
-            "dense_partitions_split": split_count,
-            "next_created_date": self.state["next_created_date"],
-            "pending_partitions": len(self.state["pending"]),
-            "active_window": self.state.get("active_window"),
+            "repository_pages": pages,
+            "last_repository_id": cursor,
+            "reached_current_end": reached_current_end,
             "totals": dict(self.state["totals"]),
         }
         return records, report
