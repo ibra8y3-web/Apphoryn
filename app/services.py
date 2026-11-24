@@ -262,7 +262,7 @@ class BuildService:
         self.database.add_job(job)
         try:
             mirror = GitHubReleaseMirror(settings.github_token, f"{settings.github_owner}/{settings.github_repository}", settings.github_ref)
-            mirror.publish_app(app, [])
+            mirror.register_project(app)
             mirror.dispatch_build(canonical, git_ref, normalized_targets, app.get("slug") or app["id"])
         except Exception as exc:
             self.database.update_job(job_id, "dispatch_failed", str(exc))
@@ -292,7 +292,7 @@ def store_uploaded_artifact(app_id: str, filename: str, platform: str, version: 
         verification = validate_artifact(data_path, require_apk_signature=True)
     except ArtifactValidationError as exc:
         raise ValueError(f"Artifact validation failed: {exc}") from exc
-    existing = next((item for item in database.list_artifacts(app_id) if item.get("sha256") == digest), None)
+    existing = database.get_artifact_by_sha256(app_id, digest)
     if existing:
         return existing
     artifact_id = str(uuid.uuid4())
