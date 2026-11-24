@@ -180,8 +180,18 @@ public final class MainActivity extends Activity {
     private File downloadAndVerify(String downloadUrl, String expectedSha256) throws Exception {
         HttpURLConnection connection = openApprovedReleaseConnection(downloadUrl);
         try {
-            long declared = connection.getContentLengthLong();
-            if (declared > MAX_INSTALL_BYTES) throw new IllegalStateException("APK exceeds the Android client size limit.");
+            String declaredHeader = connection.getHeaderField("Content-Length");
+            if (declaredHeader != null && !declaredHeader.isEmpty()) {
+                long declared;
+                try {
+                    declared = Long.parseLong(declaredHeader);
+                } catch (NumberFormatException error) {
+                    throw new IllegalStateException("Apphoryn release returned an invalid content length.");
+                }
+                if (declared > MAX_INSTALL_BYTES) {
+                    throw new IllegalStateException("APK exceeds the Android client size limit.");
+                }
+            }
 
             File directory = new File(getCacheDir(), "installers");
             if (!directory.exists() && !directory.mkdirs()) {
