@@ -40,7 +40,19 @@
       "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kunzisoft-keepassdx-4.5.9",
       "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kunzisoft-keepassdx-4.5.9/THIRD-PARTY-NOTICE-kunzisoft-keepassdx.txt",
       "artifacts": [],
-      "platforms": []
+      "platforms": [],
+      "build_attempts": [
+        {
+          "git_ref": "a4b10536566ed8d75948971073be20e730e25e33",
+          "targets": [
+            "android",
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-24T19:10:14.296998+00:00"
+        }
+      ]
     },
     {
       "id": "localsend-localsend",
