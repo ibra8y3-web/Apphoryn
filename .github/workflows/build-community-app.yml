@@ -78,6 +78,7 @@ jobs:
           "$SDKMANAGER" --install "platform-tools" "build-tools;35.0.0"
           echo "$ANDROID_HOME/build-tools/35.0.0" >> "$GITHUB_PATH"
       - name: Build untrusted source without Apphoryn secrets
+        shell: bash
         if: contains(format(',{0},', inputs.targets), format(',{0},', matrix.target))
         env:
           REPOSITORY_URL: ${{ inputs.repository_url }}
