@@ -60,5 +60,36 @@ class ApiSmokeTests(unittest.TestCase):
         discover.assert_called_once()
 
 
+    @patch("app.main.read_mirror_catalog", return_value=[
+        {
+            "id": "source-only", "slug": "source-only", "name": "Source Only Project",
+            "repository_url": "https://github.com/owner/source-only",
+            "license_eligible": True, "project_status": "source_available", "artifacts": [],
+        },
+        {
+            "id": "ready-app", "slug": "ready-app", "name": "Ready App",
+            "repository_url": "https://github.com/owner/ready-app",
+            "license_eligible": True, "artifacts": [{"filename": "ready.exe"}],
+        },
+        {
+            "id": "blocked", "slug": "blocked", "name": "Blocked",
+            "repository_url": "https://github.com/owner/blocked",
+            "license_eligible": False, "artifacts": [],
+        },
+    ])
+    def test_projects_endpoint_includes_source_only_projects_without_making_them_store_apps(self, read_catalog):
+        projects = self.client.get("/api/v1/catalog/projects")
+        self.assertEqual(projects.status_code, 200)
+        rows = projects.json()["items"]
+        self.assertEqual({row["id"] for row in rows}, {"source-only", "ready-app"})
+        self.assertEqual(next(row for row in rows if row["id"] == "source-only")["artifacts"], [])
+
+        # The installable app catalogue must still require at least one package.
+        with patch("app.main.db.list_apps", return_value=[]):
+            apps = self.client.get("/api/v1/catalog/apps")
+        self.assertEqual(apps.status_code, 200)
+        self.assertEqual(apps.json()["items"], [])
+
+
 if __name__ == "__main__":
     unittest.main()
