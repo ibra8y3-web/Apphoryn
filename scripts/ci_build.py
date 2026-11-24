@@ -65,10 +65,13 @@ def build_android(source: Path, output: Path) -> None:
         run([str(wrapper), "--no-daemon", "--stacktrace", "assembleRelease"], cwd=project, timeout=2400)
         release_apks = list(project.glob("**/build/outputs/apk/**/*.apk"))
         for candidate in release_apks:
-            if candidate.is_file() and apk_is_signed(candidate, apksigner):
+            if candidate.is_file():
+                # Preserve upstream release signatures when supplied by the project.
+                # Unsigned release APKs are passed only as data to the trusted publisher,
+                # which may sign them with Apphoryn's persistent release keystore.
                 shutil.copy2(candidate, output / candidate.name)
     if not any(p.suffix.lower() == ".apk" for p in output.iterdir() if p.is_file()):
-        raise RuntimeError("No cryptographically signed release APK was produced. Debug APKs and AAB-only builds are not published as installable apps.")
+        raise RuntimeError("Gradle produced no release APK. Debug APKs and AAB-only builds are not installable APK outputs.")
 
 
 def build_dotnet(source: Path, output: Path, target: str) -> None:
