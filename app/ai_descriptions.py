@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import urllib.error
 import urllib.request
 from typing import Any
@@ -74,7 +75,8 @@ class DescriptionGenerator:
                 return _normalise(result, route["provider"], route["model"])
             except Exception as exc:
                 errors = str(exc)[:200]
-        if settings.ai_api_key and settings.ai_model:
+        legacy_opt_in = os.getenv("APPHORYN_AI_ALLOW_LEGACY_PROVIDER", "false").lower() in {"1", "true", "yes", "on"}
+        if legacy_opt_in and settings.ai_api_key and settings.ai_model:
             body = {"model": settings.ai_model, "temperature": 0.2, "response_format": {"type": "json_object"}, "messages": messages}
             request = urllib.request.Request(settings.ai_base_url.rstrip("/") + "/chat/completions",
                 data=json.dumps(body).encode("utf-8"),
