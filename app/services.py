@@ -4,23 +4,23 @@ import hashlib
 import os
 import re
 import shutil
-import tempfile
 import uuid
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 from .config import settings
 from .ai_descriptions import DescriptionGenerator
+from .artifact_validation import ArtifactValidationError, validate_artifact
+from .github_release_mirror import GitHubMirrorError, GitHubReleaseMirror
 from .database import Database, db, utc_now
 from .domain import (
     canonical_repository_url, classify_artifact, infer_category, license_allows_redistribution,
-    repository_slug, safe_filename, sha256_file,
+    repository_slug, safe_filename, sha256_file, valid_git_ref,
 )
-from .github_client import GitHubClient, GitHubError
+from .github_client import GitHubClient
 
 ALLOWED_DOWNLOAD_HOSTS = {
     "github.com", "objects.githubusercontent.com", "release-assets.githubusercontent.com",
@@ -117,12 +117,31 @@ class CatalogService:
         release = self.github.get_latest_release(owner, repo_name)
         version = (release or {}).get("tag_name")
         readme_excerpt = ""
+        license_text = ""
+        try:
+            license_response = self.github.request(f"/repos/{owner}/{repo_name}/license")
+            encoded_license = license_response.get("content") or ""
+            if encoded_license:
+                import base64
+                license_text = base64.b64decode(encoded_license).decode("utf-8", errors="replace")[:100000]
+        except Exception:
+            pass
         try:
             readme = self.github.request(f"/repos/{owner}/{repo_name}/readme")
             import base64
             readme_excerpt = base64.b64decode(readme.get("content", "")).decode("utf-8", errors="replace")[:12000]
         except Exception:
             pass
+        source_commit_sha = None
+        try:
+            commit = self.github.request(f"/repos/{owner}/{repo_name}/commits/{repo.get('default_branch') or 'main'}")
+            candidate_sha = str(commit.get("sha") or "")
+            if re.fullmatch(r"[0-9a-fA-F]{40,64}", candidate_sha):
+                source_commit_sha = candidate_sha.lower()
+        except Exception:
+            pass
+        if not license_text.strip():
+            raise ValueError("The SPDX license is recognized, but its upstream license text could not be retrieved; automatic redistribution is blocked to preserve license notices.")
         category = infer_category(repo.get("topics") or [], repo.get("description"))
         generated = DescriptionGenerator().generate(name=repo.get("name") or repo_name, owner=owner, description=repo.get("description") or "", topics=repo.get("topics") or [], readme_excerpt=readme_excerpt, category=category)
         record = {
@@ -134,6 +153,9 @@ class CatalogService:
             "repository_url": canonical,
             "homepage_url": repo.get("homepage") or None,
             "owner": owner,
+            "default_branch": repo.get("default_branch") or "main",
+            "source_commit_sha": source_commit_sha,
+            "license_text": license_text,
             "license_spdx": spdx,
             "license_eligible": True,
             "category": category,
@@ -146,9 +168,12 @@ class CatalogService:
         }
         app = self.database.upsert_app(record)
         imported = []
+        rejected_assets = []
         if release and mirror_release_assets:
             for asset in release.get("assets", []):
                 filename = safe_filename(asset.get("name") or "")
+                if "google-play" in filename.lower() or "symbols" in filename.lower():
+                    continue
                 classification = classify_artifact(filename)
                 if not classification:
                     continue
@@ -156,26 +181,36 @@ class CatalogService:
                 destination_dir = settings.storage_path / app["id"]
                 destination_dir.mkdir(parents=True, exist_ok=True)
                 temporary = destination_dir / f".{uuid.uuid4().hex}.part"
-                target = destination_dir / filename
-                size, digest = _download_asset(download_url, temporary, settings.max_import_bytes)
-                upstream_digest = asset.get("digest") or ""
-                upstream_verified = False
-                if upstream_digest.startswith("sha256:"):
-                    expected = upstream_digest.split(":", 1)[1].lower()
-                    if expected != digest:
-                        temporary.unlink(missing_ok=True)
-                        raise ValueError(f"SHA-256 mismatch for upstream asset {filename}.")
-                    upstream_verified = True
+                version_dir = re.sub(r"[^A-Za-z0-9._+-]+", "_", str(version or "unknown"))[:100] or "unknown"
+                target_dir = destination_dir / version_dir
+                target_dir.mkdir(parents=True, exist_ok=True)
+                target = target_dir / f"{uuid.uuid4().hex[:8]}-{filename}"
+                try:
+                    size, digest = _download_asset(download_url, temporary, settings.max_import_bytes)
+                    upstream_digest = asset.get("digest") or ""
+                    upstream_verified = False
+                    if upstream_digest.startswith("sha256:"):
+                        expected = upstream_digest.split(":", 1)[1].lower()
+                        if expected != digest:
+                            raise ArtifactValidationError(f"SHA-256 mismatch for upstream asset {filename}.")
+                        upstream_verified = True
+                    verification = validate_artifact(temporary, require_apk_signature=True)
+                except (ValueError, RuntimeError, OSError) as exc:
+                    temporary.unlink(missing_ok=True)
+                    rejected_assets.append({"filename": filename, "reason": str(exc)[:300]})
+                    continue
                 os.replace(temporary, target)
                 platform, package_type = classification
                 artifact = self.database.add_artifact({
                     "id": str(uuid.uuid4()), "app_id": app["id"], "filename": filename,
                     "platform": platform, "package_type": package_type, "version": version,
                     "size_bytes": size, "sha256": digest, "upstream_digest_verified": upstream_verified,
+                    "validation_status": "validated", "signature_status": str(verification["signature_status"]),
+                    "signer_certificate_sha256": verification.get("signer_certificate_sha256"),
                     "source_url": download_url, "storage_path": str(target), "created_at": utc_now(),
                 })
                 imported.append(artifact)
-        return {"app": app, "artifacts": imported, "release_found": bool(release)}
+        return {"app": app, "artifacts": imported, "rejected_assets": rejected_assets, "release_found": bool(release)}
 
 
 class BuildService:
@@ -188,27 +223,27 @@ class BuildService:
 
     def dispatch(self, repository_url: str, git_ref: str, targets: list[str]) -> dict[str, Any]:
         canonical = canonical_repository_url(repository_url)
-        if not re.fullmatch(r"[A-Za-z0-9._/-]{1,120}", git_ref) or ".." in git_ref:
+        if not valid_git_ref(git_ref):
             raise ValueError("Invalid Git ref.")
         normalized_targets = sorted(set(targets))
         if not normalized_targets or not set(normalized_targets).issubset(self.ALLOWED_TARGETS):
             raise ValueError("Choose one or more supported build targets.")
         imported = self.catalog.import_repository(canonical, mirror_release_assets=False)
         app = imported["app"]
-        if not settings.github_owner or not settings.github_repository:
-            raise RuntimeError("Configure APPHORYN_GITHUB_OWNER and APPHORYN_GITHUB_REPOSITORY to enable remote builds.")
+        if not settings.github_owner or not settings.github_repository or not settings.github_token:
+            raise RuntimeError("Configure APPHORYN_GITHUB_OWNER, APPHORYN_GITHUB_REPOSITORY and APPHORYN_GITHUB_TOKEN (Actions + Contents write) to enable remote builds.")
         job_id = str(uuid.uuid4())
         timestamp = utc_now()
         job = {
             "id": job_id, "app_id": app["id"], "repository_url": canonical,
             "git_ref": git_ref, "targets": normalized_targets, "status": "queued",
-            "message": "Build workflow dispatch requested.", "created_at": timestamp, "updated_at": timestamp,
+            "message": "Build workflow dispatch requested; build code runs on isolated native GitHub runners.", "created_at": timestamp, "updated_at": timestamp,
         }
         self.database.add_job(job)
         try:
-            self.github.dispatch_workflow(settings.github_owner, settings.github_repository, settings.build_workflow,
-                settings.github_ref, {"repository_url": canonical, "git_ref": git_ref,
-                "targets": ",".join(normalized_targets), "job_id": job_id, "app_id": app["id"]})
+            mirror = GitHubReleaseMirror(settings.github_token, f"{settings.github_owner}/{settings.github_repository}", settings.github_ref)
+            mirror.publish_app(app, [])
+            mirror.dispatch_build(canonical, git_ref, normalized_targets, app.get("slug") or app["id"])
         except Exception as exc:
             self.database.update_job(job_id, "dispatch_failed", str(exc))
             raise
@@ -233,6 +268,13 @@ def store_uploaded_artifact(app_id: str, filename: str, platform: str, version: 
     digest = sha256_file(str(data_path))
     if digest.lower() != expected_sha256.lower():
         raise ValueError("Uploaded artifact SHA-256 does not match the supplied digest.")
+    try:
+        verification = validate_artifact(data_path, require_apk_signature=True)
+    except ArtifactValidationError as exc:
+        raise ValueError(f"Artifact validation failed: {exc}") from exc
+    existing = next((item for item in database.list_artifacts(app_id) if item.get("sha256") == digest), None)
+    if existing:
+        return existing
     destination_dir = settings.storage_path / app_id
     destination_dir.mkdir(parents=True, exist_ok=True)
     artifact_id = str(uuid.uuid4())
@@ -242,6 +284,8 @@ def store_uploaded_artifact(app_id: str, filename: str, platform: str, version: 
         "id": artifact_id, "app_id": app_id, "filename": filename,
         "platform": platform, "package_type": classification[1], "version": version,
         "size_bytes": size, "sha256": digest, "upstream_digest_verified": False,
+        "validation_status": "validated", "signature_status": str(verification["signature_status"]),
+        "signer_certificate_sha256": verification.get("signer_certificate_sha256"),
         "source_url": f"{app['repository_url']}@{git_ref}", "storage_path": str(target), "created_at": utc_now(),
     })
     return result
