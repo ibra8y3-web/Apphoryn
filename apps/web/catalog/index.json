@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T23:18:35.090598+00:00",
+  "generated_at": "2026-11-24T23:20:47.496800+00:00",
   "apps": [
     {
       "id": "arise1881-cloudtune",
@@ -1060,6 +1060,78 @@
       "classification_reason": "The repository describes reusable code, a package, SDK, or framework rather than a standalone installer.",
       "project_status": "installable",
       "icon_url": "https://avatars.githubusercontent.com/u/31959043?v=4"
+    },
+    {
+      "id": "hostu404-trillionairetracker",
+      "slug": "hostu404-trillionairetracker",
+      "name": "TrillionaireTracker",
+      "summary": "Android app in Kotlin and Jetpack Compose tracking net worth, aircraft and yacht movements, news and backgrounds of eight people, including Elon Musk and Sam Altman, from a static snapshot.",
+      "description": "TrillionaireTracker is an Android app in Kotlin and Jetpack Compose that tracks eight people — Elon Musk, Jeff Bezos, Mark Zuckerberg, Peter Thiel, Dario Amodei, Donald Trump, Palmer Luckey and Sam Altman.\n\n- Net worth: shares at live prices, private stakes at last funding-round valuation, cash minus liabilities; share counts from SEC filings, each figure dated.\n- Aircraft: departure, arrival and airports visited in the last 7 days from free ADS-B feeds; live position shown only while airborne and never stored.\n- Yachts: the same from AIS data, at port level.\n- News: Google News headlines per person, optionally sorted by a Gemini call into seven themes with all-time counts.\n- Connections: a circular diagram of shared background facts (upbringing, schooling, family origins, formative influences).\n- Biography and family history: birth date, Wikipedia summary with a freely licensed photo.\n\nA GitHub Actions worker polls public sources every 5 minutes, writes snapshot.json and publishes it via GitHub Pages; the app only reads that file, ships with a seed snapshot and runs without a backend. Vessel tracking and news themes need API keys. MIT licensed.",
+      "translations": {
+        "en": "Android app in Kotlin and Jetpack Compose tracking net worth, aircraft and yacht movements, news and backgrounds of eight people, including Elon Musk and Sam Altman, from a static snapshot.",
+        "ar": "تطبيق أندرويد مكتوب بـ Kotlin و Jetpack Compose يتتبع الثروة الصافية وحركة الطائرات واليخوت والأخبار وخلفيات ثمانية أشخاص، من بينهم إيلون ماسك وسام ألتمان، بالاعتماد على لقطة بيانات ثابتة."
+      },
+      "description_translations": {
+        "en": "TrillionaireTracker is an Android app in Kotlin and Jetpack Compose that tracks eight people — Elon Musk, Jeff Bezos, Mark Zuckerberg, Peter Thiel, Dario Amodei, Donald Trump, Palmer Luckey and Sam Altman.\n\n- Net worth: shares at live prices, private stakes at last funding-round valuation, cash minus liabilities; share counts from SEC filings, each figure dated.\n- Aircraft: departure, arrival and airports visited in the last 7 days from free ADS-B feeds; live position shown only while airborne and never stored.\n- Yachts: the same from AIS data, at port level.\n- News: Google News headlines per person, optionally sorted by a Gemini call into seven themes with all-time counts.\n- Connections: a circular diagram of shared background facts (upbringing, schooling, family origins, formative influences).\n- Biography and family history: birth date, Wikipedia summary with a freely licensed photo.\n\nA GitHub Actions worker polls public sources every 5 minutes, writes snapshot.json and publishes it via GitHub Pages; the app only reads that file, ships with a seed snapshot and runs without a backend. Vessel tracking and news themes need API keys. MIT licensed.",
+        "ar": "TrillionaireTracker هو تطبيق أندرويد مكتوب بـ Kotlin و Jetpack Compose، يتتبع ثمانية أشخاص هم إيلون ماسك وجيف بيزوس ومارك زوكربيرغ وبيتر ثيل وداريو أمودي ودونالد ترامب وبالمر لوكي وسام ألتمان.\n\n- الثروة الصافية: الأسهم بأسعار السوق المباشرة، والحصص الخاصة بآخر تقييم من جولة تمويل، والنقد بعد خصم الالتزامات؛ ويأتي عدد الأسهم من ملفات هيئة الأوراق المالية الأمريكية (SEC)، وكل رقم مرفق بتاريخه.\n- الطائرات: المغادرة والوصول والمطارات التي زارتها خلال آخر 7 أيام من مصادر ADS-B المجانية؛ ولا يُعرض الموقع الحي إلا أثناء الطيران ولا يُخزَّن أبدًا.\n- اليخوت: الأمر نفسه بالنسبة للسفن، من بيانات AIS، وعلى مستوى الموانئ.\n- الأخبار: عناوين Google News لكل شخص، مع إمكانية فرزها عبر استدعاء Gemini إلى سبعة موضوعات مع إحصاء تراكمي.\n- الروابط: مخطط دائري للحقائق المشتركة في خلفياتهم (النشأة، التعليم، الأصول العائلية، المؤثرات التكوينية).\n- السيرة الذاتية وتاريخ العائلة: تاريخ الميلاد، وملخص ويكيبيديا مع صورة حرة الترخيص.\n\nيجمع عامل يعمل على GitHub Actions البيانات من مصادر عامة كل 5 دقائق، ويكتب snapshot.json وينشره عبر GitHub Pages؛ ويقرأ التطبيق هذا الملف فقط، ويأتي مع بيانات أولية ويعمل دون خادم. تتطلب متابعة اليخوت والأخبار مفاتيح API. الترخيص MIT."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://avatars.githubusercontent.com/u/320134896?v=4",
+      "repository_url": "https://github.com/Hostu404/TrillionaireTracker",
+      "github_repo_id": "1378760104",
+      "source_updated_at": "2026-11-12T16:45:54Z",
+      "homepage_url": null,
+      "owner": "Hostu404",
+      "default_branch": "main",
+      "source_commit_sha": "02a0ae613b27b8e3747733b1cc66e37abbfc132e",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Hostu404\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "The README describes a standalone Android end-user application (Kotlin, Jetpack Compose, minSdk 26) distributed as an APK, with a companion Python worker that only prepares data; the app itself is the primary artifact, so project_kind is application. build_recommended is true because the README documents a supported build and run path (open the project in Android Studio and run it on a device or e",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "elon",
+        "musk",
+        "tracker",
+        "tracker-application",
+        "trackers",
+        "trillionaire"
+      ],
+      "latest_version": "v1.4.0",
+      "release_url": "https://github.com/Hostu404/TrillionaireTracker/releases/tag/v1.4.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hostu404-trillionairetracker-v1.4.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hostu404-trillionairetracker-v1.4.0/THIRD-PARTY-NOTICE-hostu404-trillionairetracker.txt",
+      "artifacts": [
+        {
+          "id": "56899235c3561b8c765efe6ac2130301e174993c22e3554b0b0b68d570c07e16",
+          "filename": "app-release.apk",
+          "original_filename": "app-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.4.0",
+          "size_bytes": 1420399,
+          "sha256": "56899235c3561b8c765efe6ac2130301e174993c22e3554b0b0b68d570c07e16",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "62564b49d877d9e0353709f1bf704e99d0e602cbcb1cf0107868640112698fcc",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hostu404-trillionairetracker-v1.4.0/app-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hostu404-trillionairetracker-v1.4.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
     },
     {
       "id": "vkohaupt-vokoscreenng",
