@@ -10,6 +10,9 @@ import tempfile
 import urllib.error
 import urllib.parse
 import urllib.request
+import urllib.error
+import urllib.parse
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -96,6 +99,25 @@ class GitHubReleaseMirror:
                 digest.update(chunk)
         return digest.hexdigest()
 
+    @staticmethod
+    def _hash_remote_asset(url: str) -> str:
+        parsed = urllib.parse.urlparse(url)
+        allowed = {"github.com", "objects.githubusercontent.com", "release-assets.githubusercontent.com", "github-releases.githubusercontent.com"}
+        if parsed.scheme != "https" or parsed.hostname not in allowed:
+            raise GitHubMirrorError("Existing release asset has an untrusted download URL; it will not be reused.")
+        request = urllib.request.Request(url, headers={"User-Agent": "Apphoryn-Release-Mirror/1.0"})
+        digest = hashlib.sha256()
+        try:
+            with urllib.request.urlopen(request, timeout=120) as response:
+                final = urllib.parse.urlparse(response.geturl())
+                if final.scheme != "https" or final.hostname not in allowed:
+                    raise GitHubMirrorError("Existing release asset redirected to an untrusted host.")
+                for chunk in iter(lambda: response.read(1024 * 1024), b""):
+                    digest.update(chunk)
+        except (urllib.error.URLError, TimeoutError, OSError) as exc:
+            raise GitHubMirrorError(f"Could not verify the existing Apphoryn release asset: {exc}") from exc
+        return digest.hexdigest()
+
     def _upload_asset(self, release: dict[str, Any], path: Path, asset_name: str) -> dict[str, Any]:
         digest = self._file_sha256(path)
         assets = self.request("GET", f"/repos/{self.full_name}/releases/{release['id']}/assets")
@@ -105,13 +127,19 @@ class GitHubReleaseMirror:
             prior_digest = str(prior.get("digest") or "").removeprefix("sha256:").lower()
             if prior_digest == digest:
                 return prior
+            if not prior_digest and prior.get("browser_download_url"):
+                if self._hash_remote_asset(str(prior["browser_download_url"])) == digest:
+                    return prior
             asset_name = f"{path.stem}-{digest[:12]}{path.suffix}"
             prior = by_name.get(asset_name)
             if prior:
                 prior_digest = str(prior.get("digest") or "").removeprefix("sha256:").lower()
                 if prior_digest == digest:
                     return prior
-                raise GitHubMirrorError(f"An asset named {asset_name} already exists with a different digest.")
+                if not prior_digest and prior.get("browser_download_url"):
+                    if self._hash_remote_asset(str(prior["browser_download_url"])) == digest:
+                        return prior
+                raise GitHubMirrorError(f"An asset named {asset_name} already exists and could not be verified as identical.")
 
         template = str(release.get("upload_url") or "")
         if not template.startswith("https://uploads.github.com/"):
