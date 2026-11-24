@@ -1,7 +1,78 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T23:20:59.832596+00:00",
+  "generated_at": "2026-11-24T23:21:26.048218+00:00",
   "apps": [
+    {
+      "id": "sysadmindoc-callshield",
+      "slug": "sysadmindoc-callshield",
+      "name": "CallShield",
+      "summary": "CallShield is an open-source Android spam call and text blocker with on-device detection, caller ID, and a GitHub-hosted spam database.",
+      "description": "CallShield is an open-source Android application that blocks spam calls and flags spam texts. It uses more than 30 on-device detection layers, including a gradient-boosted tree ML scorer, heuristics, campaign and churn evidence, SMS content and burst analysis, an RCS filter, and real-time caller ID. It includes a 51,519-number spam database hosted on GitHub, trending-number feeds checked every 30 minutes, signed database updates, and a strict offline mode. The app requires no API keys or subscriptions and has no accounts or tracking. It supports Android 10+, offers protection levels, anonymous community reporting, call screening, and optional notification access and overlay permissions. APKs are available from GitHub releases.",
+      "translations": {
+        "en": "CallShield is an open-source Android spam call and text blocker with on-device detection, caller ID, and a GitHub-hosted spam database.",
+        "ar": "CallShield هو تطبيق Android مفتوح المصدر لحظر المكالمات والرسائل النصية المزعجة، مع كشف على الجهاز ومعرف المتصل وقاعدة بيانات مستضافة على GitHub."
+      },
+      "description_translations": {
+        "en": "CallShield is an open-source Android application that blocks spam calls and flags spam texts. It uses more than 30 on-device detection layers, including a gradient-boosted tree ML scorer, heuristics, campaign and churn evidence, SMS content and burst analysis, an RCS filter, and real-time caller ID. It includes a 51,519-number spam database hosted on GitHub, trending-number feeds checked every 30 minutes, signed database updates, and a strict offline mode. The app requires no API keys or subscriptions and has no accounts or tracking. It supports Android 10+, offers protection levels, anonymous community reporting, call screening, and optional notification access and overlay permissions. APKs are available from GitHub releases.",
+        "ar": "CallShield تطبيق Android مفتوح المصدر يحظر المكالمات المزعجة ويضع علامات على الرسائل النصية المزعجة. يستخدم أكثر من 30 طبقة كشف على الجهاز، بما في ذلك مُقيّم تعلم آلي لشجرة معززة بالتدرج، وقرائن حملات وانقطاع محدودة، وتحليل محتوى الرسائل النصية والدفعات، ومرشح RCS، ومعرف المتصل الفوري. يتضمن قاعدة بيانات تضم 51,519 رقمًا مزعجًا مستضافة على GitHub، وخلاصات أرقام رائجة تُفحص كل 30 دقيقة، وتحديثات موقعة، ووضع عدم اتصال صارم. لا يتطلب مفاتيح API أو اشتراكات، ولا توجد حسابات أو تتبع. يدعم Android 10+، ويوفر مستويات حماية، والإبلاغ المجهول، وفحص المكالمات، وأذونات اختيارية للوصول إلى الإشعارات والتراكب. تتوفر ملفات APK من إصدارات GitHub."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://raw.githubusercontent.com/SysAdminDoc/CallShield/master/fastlane/metadata/android/en-US/images/icon.png",
+      "repository_url": "https://github.com/SysAdminDoc/CallShield",
+      "github_repo_id": "1188992469",
+      "source_updated_at": "2026-11-23T12:30:26Z",
+      "homepage_url": "https://github.com/SysAdminDoc/CallShield/releases",
+      "owner": "SysAdminDoc",
+      "default_branch": "master",
+      "source_commit_sha": "07c99a54a39d07e870cf0d44a8e65adff90c8fda",
+      "license_text": "MIT License\n\nCopyright (c) 2026 SysAdminDoc\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": false,
+      "classification_source": "ai",
+      "classification_reason": "The evidence describes a standalone Android end-user application distributed as APK releases. build_recommended is false because the supplied evidence does not include a supported source-build path.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "call-blocker",
+        "call-screening",
+        "caller-id",
+        "kotlin",
+        "sms-spam",
+        "spam-blocker"
+      ],
+      "latest_version": "v1.14.0",
+      "release_url": "https://github.com/SysAdminDoc/CallShield/releases/tag/v1.14.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sysadmindoc-callshield-v1.14.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sysadmindoc-callshield-v1.14.0/THIRD-PARTY-NOTICE-sysadmindoc-callshield.txt",
+      "artifacts": [
+        {
+          "id": "37e3809915b06591466d270c20d00213bde43e33d59330ed9631abf952412a4e",
+          "filename": "CallShield-v1.14.0.apk",
+          "original_filename": "CallShield-v1.14.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.14.0",
+          "size_bytes": 11788597,
+          "sha256": "37e3809915b06591466d270c20d00213bde43e33d59330ed9631abf952412a4e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "920e583ae6ce9f3863a6b3b8847e927d53a66c38a245e12e30ce124c9f4a75f5",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sysadmindoc-callshield-v1.14.0/CallShield-v1.14.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sysadmindoc-callshield-v1.14.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
     {
       "id": "arise1881-cloudtune",
       "slug": "arise1881-cloudtune",
