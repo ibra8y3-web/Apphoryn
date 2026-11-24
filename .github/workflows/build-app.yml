@@ -70,6 +70,7 @@ jobs:
         if: matrix.target == 'android'
         uses: android-actions/setup-android@v3
       - name: Build source on disposable runner (no Apphoryn ingest secrets)
+        shell: bash
         env:
           REPOSITORY_URL: ${{ inputs.repository_url }}
           GIT_REF: ${{ inputs.git_ref }}
