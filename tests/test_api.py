@@ -92,5 +92,33 @@ class ApiSmokeTests(unittest.TestCase):
         self.assertEqual(apps.json()["items"], [])
 
 
+    def test_manual_source_only_import_registers_project_without_empty_release(self):
+        project = {
+            "id": "project-id", "slug": "owner-source", "name": "Source Project",
+            "repository_url": "https://github.com/owner/source",
+            "license_spdx": "MIT", "license_eligible": True, "artifacts": [],
+        }
+        with patch("app.main.require_admin"), \\
+             patch("app.main.settings") as settings_mock, \\
+             patch("app.main.catalog.import_repository", return_value={"app": project, "artifacts": []}), \\
+             patch("app.main.GitHubReleaseMirror") as mirror_class:
+            settings_mock.github_token = "test-token"
+            settings_mock.github_owner = "owner"
+            settings_mock.github_repository = "Apphoryn"
+            settings_mock.github_ref = "main"
+            mirror_class.return_value.register_project.return_value = {
+                "id": "project-id", "slug": "owner-source", "project_status": "source_available",
+            }
+            response = self.client.post(
+                "/api/v1/admin/import",
+                headers={"X-Apphoryn-Admin": "admin-token"},
+                json={"repository_url": project["repository_url"], "mirror_release_assets": True},
+            )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json()["status"], "source_project_registered")
+        mirror_class.return_value.register_project.assert_called_once_with(project)
+        mirror_class.return_value.publish_app.assert_not_called()
+
+
 if __name__ == "__main__":
     unittest.main()
