@@ -1,0 +1,80 @@
+import json
+import unittest
+from unittest.mock import patch
+
+from app.ai_descriptions import DescriptionGenerator, fallback_project_classification
+
+
+class AiDescriptionTests(unittest.TestCase):
+    def test_fallback_marks_reusable_sdk_as_library_and_never_builds_it(self):
+        result = fallback_project_classification(
+            name="Widget SDK",
+            description="A reusable Python library and SDK for the Widget API.",
+            topics=["sdk", "python"],
+            readme_excerpt="Install the package and import the library into your application.",
+        )
+        self.assertEqual(result["project_kind"], "library")
+        self.assertFalse(result["build_recommended"])
+        self.assertEqual(result["classification_source"], "heuristic")
+
+    def test_fallback_recognizes_standalone_desktop_application(self):
+        result = fallback_project_classification(
+            name="Example Desktop App",
+            description="A cross-platform desktop application for managing personal notes.",
+            topics=["desktop", "notes"],
+            readme_excerpt="Download the installer and launch the application.",
+        )
+        self.assertEqual(result["project_kind"], "application")
+        self.assertTrue(result["build_recommended"])
+
+    def test_ai_cannot_recommend_building_a_library_as_an_installable_app(self):
+        class FakeResponse:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, exc_type, exc, traceback):
+                return False
+
+            def read(self):
+                response = {
+                    "choices": [{
+                        "message": {
+                            "content": json.dumps({
+                                "summary": "A reusable widget SDK.",
+                                "description": "A library for embedding widget features in other programs.",
+                                "translations": {"en": "A reusable widget SDK."},
+                                "project_kind": "library",
+                                "build_recommended": True,
+                                "classification_reason": "The README describes a reusable SDK.",
+                            })
+                        }
+                    }]
+                }
+                return json.dumps(response).encode("utf-8")
+
+        settings_mock = type("Settings", (), {
+            "ai_api_key": "test-key",
+            "ai_model": "test-model",
+            "ai_base_url": "https://ai.example/v1",
+        })()
+        with (
+            patch("app.ai_descriptions.settings", settings_mock),
+            patch("app.ai_descriptions.urllib.request.urlopen", return_value=FakeResponse()),
+        ):
+            result = DescriptionGenerator().generate(
+                name="Widget SDK",
+                owner="example",
+                description="A reusable SDK.",
+                topics=["sdk"],
+                readme_excerpt="This is a library for application developers.",
+                category="developer",
+            )
+
+        self.assertEqual(result["project_kind"], "library")
+        self.assertFalse(result["build_recommended"])
+        self.assertEqual(result["classification_source"], "ai")
+        self.assertEqual(result["generated_by_ai"], "true")
+
+
+if __name__ == "__main__":
+    unittest.main()
