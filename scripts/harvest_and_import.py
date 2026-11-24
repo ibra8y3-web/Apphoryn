@@ -78,7 +78,7 @@ def main() -> None:
         try:
             found = catalog.discover(query, limit)
         except Exception as exc:
-            print(json.dumps({"query": query, "status": "search_failed", "reason": str(exc)[:300}), flush=True)
+            print(json.dumps({"query": query, "status": "search_failed", "reason": str(exc)[:300]}, ensure_ascii=False), flush=True)
             continue
         for item in found:
             repository = str(item.get("repository_url") or "").rstrip("/").lower()
