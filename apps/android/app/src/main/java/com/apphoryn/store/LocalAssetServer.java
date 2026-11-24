@@ -9,6 +9,7 @@ import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 final class LocalAssetServer implements Closeable {
+    static final int PORT = 8765;
     private final AssetManager assets;
     private final AtomicBoolean running = new AtomicBoolean(false);
     private final ExecutorService workers = Executors.newCachedThreadPool();
@@ -17,7 +18,7 @@ final class LocalAssetServer implements Closeable {
     LocalAssetServer(AssetManager assets) { this.assets = assets; }
 
     String start() throws IOException {
-        server = new ServerSocket(0, 24, InetAddress.getByName("127.0.0.1"));
+        server = new ServerSocket(PORT, 24, InetAddress.getByName("127.0.0.1"));
         running.set(true);
         Thread acceptThread = new Thread(() -> {
             while (running.get()) {
