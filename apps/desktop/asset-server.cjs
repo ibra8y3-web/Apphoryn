@@ -4,7 +4,7 @@ function resolveAssetPath(rootDirectory, requestPath) {
   let decoded;
   try { decoded = decodeURIComponent(String(requestPath || "/")); }
   catch { return null; }
-  decoded = decoded.replace(/\\\\/g, "/").replace(/^\\/+/, "");
+  decoded = decoded.split(String.fromCharCode(92)).join("/").replace(new RegExp("^/+"), "");
   if (!decoded || decoded === ".") decoded = "index.html";
   if (decoded.split("/").some((part) => part === ".." || part === ".")) return null;
   const root = path.resolve(rootDirectory);
