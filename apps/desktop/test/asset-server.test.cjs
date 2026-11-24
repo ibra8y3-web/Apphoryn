@@ -16,7 +16,7 @@ test("blocks traversal and malformed encoded asset paths", () => {
 });
 
 test("serves correct content types for the web app assets", () => {
-  assert.match(contentType("index.html"), /^text\\/html/);
-  assert.match(contentType("app.js"), /^text\\/javascript/);
-  assert.match(contentType("catalog/index.json"), /^application\\/json/);
+  assert.equal(contentType("index.html").startsWith("text/html"), true);
+  assert.equal(contentType("app.js").startsWith("text/javascript"), true);
+  assert.equal(contentType("catalog/index.json").startsWith("application/json"), true);
 });
