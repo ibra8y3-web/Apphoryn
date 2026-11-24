@@ -96,13 +96,17 @@ jobs:
       - name: Package Windows installer
         if: matrix.target == 'windows'
         working-directory: apps/desktop
-        shell: bash
+        shell: pwsh
         run: |
-          set -euo pipefail
+          $ErrorActionPreference = 'Stop'
           npx electron-builder --win nsis --x64
-          mkdir -p client-artifacts
-          find dist -maxdepth 1 -type f -iname '*.exe' -exec cp {} client-artifacts/ \;
-          test -n "$(find client-artifacts -type f -iname '*.exe' -print -quit)"
+          New-Item -ItemType Directory -Force -Path client-artifacts | Out-Null
+          $installers = Get-ChildItem -Path dist -File -Filter '*.exe'
+          if (-not $installers) { throw 'electron-builder completed but no Windows .exe installer was found in dist.' }
+          $installers | Copy-Item -Destination client-artifacts
+          $copied = Get-ChildItem -Path client-artifacts -File -Filter '*.exe'
+          if (-not $copied) { throw 'Windows installer copy failed.' }
+          $copied | ForEach-Object { Write-Host "Prepared installer: $($_.FullName) ($($_.Length) bytes)" }
 
       - name: Package Linux AppImage and DEB
         if: matrix.target == 'linux'
