@@ -173,7 +173,16 @@
       "latest_version": "v2.0.6",
       "release_url": "https://github.com/cybruGhost/Cubic-Music/releases/tag/v2.0.6",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "8d1b4d1c3ad21968fc8fc767b7fc3f22942a4857",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-24T23:22:27.790444+00:00"
+        }
+      ]
     },
     {
       "id": "ccch1mneyyy-dsh-go",
