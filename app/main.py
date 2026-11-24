@@ -224,10 +224,10 @@ class _ApphorynReleaseRedirects(urllib.request.HTTPRedirectHandler):
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
-def _is_apphoryn_release_url(url: str) -> bool:
+def _is_apphoryn_release_url(url: str, owner: str | None = None, repository: str | None = None) -> bool:
     parsed = urllib.parse.urlparse(url)
-    owner = settings.github_owner.strip()
-    repository = settings.github_repository.strip()
+    owner = (settings.github_owner if owner is None else owner).strip()
+    repository = (settings.github_repository if repository is None else repository).strip()
     expected_path = f"/{owner}/{repository}/releases/download/"
     return (
         bool(owner and repository)
