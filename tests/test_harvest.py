@@ -1,7 +1,7 @@
 import unittest
 from pathlib import Path
 
-from scripts.harvest_and_import import github_target_parts, load_seed_repositories, should_dispatch_build_fallback
+from scripts.harvest_and_import import github_target_parts, load_seed_repositories, should_dispatch_build_fallback, should_revisit_source_project
 
 
 class HarvestTests(unittest.TestCase):
@@ -17,6 +17,13 @@ class HarvestTests(unittest.TestCase):
             [{"platform": "android", "validation_status": "validated"}],
             ["android", "windows"],
         ))
+
+    def test_known_source_project_is_revisited_when_auto_build_is_enabled(self):
+        source_only = {"repository_url": "https://github.com/owner/project", "artifacts": []}
+        installable = {"repository_url": "https://github.com/owner/app", "artifacts": [{"sha256": "abc"}]}
+        self.assertTrue(should_revisit_source_project(source_only, ["android"]))
+        self.assertFalse(should_revisit_source_project(source_only, []))
+        self.assertFalse(should_revisit_source_project(installable, ["android", "windows"]))
 
     def test_initial_seed_list_contains_real_github_repositories(self):
         seeds = load_seed_repositories(Path(__file__).resolve().parents[1] / "catalog-seed-repositories.json")
