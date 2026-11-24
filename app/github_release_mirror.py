@@ -297,46 +297,110 @@ class GitHubReleaseMirror:
             notice_path.unlink(missing_ok=True)
 
     def publish_app(self, app: dict[str, Any], artifacts: list[dict[str, Any]]) -> dict[str, Any]:
+        """Mirror verified installer binaries; source-only imports stay in the project workbench."""
         if not app.get("license_eligible") or not license_allows_redistribution(app.get("license_spdx")):
             raise GitHubMirrorError("Refusing to mirror a project without an approved SPDX redistribution license.")
+
+        if not artifacts:
+            project = self.register_project(app)
+            return {
+                "release_url": None,
+                "manifest_path": self.catalog_path,
+                "mirrored_artifacts": [],
+                "source_project_registered": True,
+                "project": project,
+            }
+
         slug = _safe_release_component(str(app.get("slug") or app.get("name") or "app"))
-        version = _safe_release_component(str(app.get("latest_version") or "source"))
-        tag = f"apphoryn-{slug}-{version}"
-        release = self._ensure_release(
-            tag, f"{app.get('name') or slug} {app.get('latest_version') or 'source'} — Apphoryn mirror",
-            "Apphoryn-owned mirror of validated package files.\n\n"
-            f"Upstream project: {app.get('repository_url', '')}\nLicense: {app.get('license_spdx') or 'unknown'}\n\n"
-            "Format/hash checks are not a malware or safety certification.",
-        )
-        license_notice_url = self._upload_notice(release, app, slug)
-        mirrored = []
+        version = _safe_release_component(str(app.get("latest_version") or "unknown"))
+        manifest, _ = self._read_catalog()
+        existing = next((
+            item for item in manifest.get("apps", [])
+            if item.get("repository_url") == str(app.get("repository_url") or "")
+            or (
+                app.get("github_repo_id")
+                and str(item.get("github_repo_id") or "") == str(app.get("github_repo_id"))
+            )
+        ), None)
+        known_hashes = {
+            str(item.get("sha256") or "").lower()
+            for item in (existing or {}).get("artifacts", [])
+            if item.get("sha256")
+        }
+
+        # Preflight every candidate before creating the Release or uploading
+        # license notices. Invalid/missing installers must leave no public shell.
+        prepared: list[tuple[dict[str, Any], Path, str, str, dict[str, Any]]] = []
+        already_present = 0
         for artifact in artifacts:
             source_path = Path(str(artifact.get("storage_path") or ""))
-            if not source_path.is_file() or source_path.is_symlink():
-                raise GitHubMirrorError(f"Validated artifact file is missing: {source_path}")
+            if source_path.is_symlink() or not source_path.is_file():
+                raise GitHubMirrorError(f"Validated artifact file is missing or unsafe: {source_path}")
+            filename = str(artifact.get("filename") or source_path.name)
+            classification = classify_artifact(filename)
+            if not classification:
+                raise GitHubMirrorError(f"Artifact is not a supported installable package: {filename}")
             digest = self._file_sha256(source_path)
-            if digest != str(artifact.get("sha256") or "").lower():
+            expected_digest = str(artifact.get("sha256") or "").lower()
+            if not expected_digest or digest != expected_digest:
                 raise GitHubMirrorError(f"Stored artifact SHA-256 changed before publishing: {source_path.name}")
+            if digest in known_hashes:
+                already_present += 1
+                continue
             validation = validate_artifact(source_path, require_apk_signature=True)
-            uploaded = self._upload_asset(release, source_path, str(artifact["filename"]))
+            platform, package_type = classification
+            prepared.append((artifact, source_path, platform, package_type, validation))
+            known_hashes.add(digest)
+
+        if not prepared:
+            project = self.register_project(app)
+            return {
+                "release_url": (existing or {}).get("mirror_release_url"),
+                "manifest_path": self.catalog_path,
+                "mirrored_artifacts": [],
+                "already_present": already_present,
+                "source_project_registered": False,
+                "project": project,
+            }
+
+        tag = f"apphoryn-{slug}-{version}"
+        release = self._ensure_release(
+            tag, f"{app.get('name') or slug} {app.get('latest_version') or version} — Apphoryn mirror",
+            "Apphoryn-owned mirror of validated package files.\\n\\n"
+            f"Upstream project: {app.get('repository_url', '')}\\nLicense: {app.get('license_spdx') or 'unknown'}\\n\\n"
+            "Format/hash checks are not a malware or safety certification.",
+        )
+        mirrored = []
+        for artifact, source_path, platform, package_type, validation in prepared:
+            digest = self._file_sha256(source_path)
+            uploaded = self._upload_asset(release, source_path, str(artifact.get("filename") or source_path.name))
             name = uploaded.get("name") or source_path.name
             mirrored.append({
-                "id": digest, "filename": name, "original_filename": str(artifact["filename"]),
-                "platform": artifact.get("platform"), "package_type": artifact.get("package_type"),
-                "architecture": architecture_from_filename(str(artifact["filename"])),
-                "version": artifact.get("version"), "size_bytes": int(artifact.get("size_bytes") or source_path.stat().st_size),
+                "id": digest, "filename": name, "original_filename": str(artifact.get("filename") or source_path.name),
+                "platform": platform, "package_type": package_type,
+                "architecture": architecture_from_filename(str(artifact.get("filename") or source_path.name)),
+                "version": artifact.get("version") or app.get("latest_version"),
+                "size_bytes": int(artifact.get("size_bytes") or source_path.stat().st_size),
                 "sha256": digest, "upstream_digest_verified": bool(artifact.get("upstream_digest_verified")),
-                "validation_status": "validated", "signature_status": artifact.get("signature_status") or validation.get("signature_status"),
+                "validation_status": "validated",
+                "signature_status": artifact.get("signature_status") or validation.get("signature_status", "not_checked"),
                 "signer_certificate_sha256": artifact.get("signer_certificate_sha256") or validation.get("signer_certificate_sha256"),
                 "download_url": uploaded.get("browser_download_url") or f"https://github.com/{self.full_name}/releases/download/{tag}/{urllib.parse.quote(name)}",
                 "mirror_release_url": release.get("html_url"),
             })
 
+        # Attach the notice only after at least one binary has been uploaded.
+        license_notice_url = self._upload_notice(release, app, slug)
+
         manifest, sha = self._read_catalog()
         apps = manifest.setdefault("apps", [])
         repo_url = str(app.get("repository_url") or "")
         repo_id = str(app.get("github_repo_id") or "") or None
-        current = next((item for item in apps if item.get("repository_url") == repo_url or (repo_id and str(item.get("github_repo_id") or "") == repo_id)), None)
+        current = next((
+            item for item in apps
+            if item.get("repository_url") == repo_url
+            or (repo_id and str(item.get("github_repo_id") or "") == repo_id)
+        ), None)
         if current is None:
             current = {"id": str(app.get("slug") or slug), "slug": str(app.get("slug") or slug)}
             apps.append(current)
@@ -345,7 +409,7 @@ class GitHubReleaseMirror:
             "description": app.get("description") or "", "translations": app.get("translations") or {},
             "repository_url": repo_url, "github_repo_id": repo_id or current.get("github_repo_id"),
             "source_updated_at": app.get("source_updated_at") or current.get("source_updated_at"),
-            "homepage_url": app.get("homepage_url"), "owner": app.get("owner") or "",
+            "homepage_url": app.get("homepage_url") or current.get("homepage_url"), "owner": app.get("owner") or "",
             "default_branch": app.get("default_branch") or "main",
             "source_commit_sha": app.get("source_commit_sha") or current.get("source_commit_sha"),
             "license_text": app.get("license_text") or current.get("license_text") or "",
@@ -358,12 +422,14 @@ class GitHubReleaseMirror:
             "scout_checked_at": datetime.now(timezone.utc).isoformat(),
         })
         all_artifacts = current.setdefault("artifacts", [])
-        known = {str(item.get("sha256")) for item in all_artifacts}
+        known = {str(item.get("sha256") or "").lower() for item in all_artifacts}
         for item in mirrored:
-            if item["sha256"] not in known:
+            if item["sha256"].lower() not in known:
                 all_artifacts.append(item)
-                known.add(item["sha256"])
-        current["platforms"] = sorted({str(item.get("platform")) for item in all_artifacts if item.get("platform")})
+                known.add(item["sha256"].lower())
+        current["platforms"] = sorted({
+            str(item.get("platform")) for item in all_artifacts if item.get("platform")
+        })
         current["project_status"] = "installable" if all_artifacts else "source_available"
         manifest["schema_version"] = 1
         manifest["generated_at"] = datetime.now(timezone.utc).isoformat()
@@ -373,6 +439,7 @@ class GitHubReleaseMirror:
             "release_url": release.get("html_url"),
             "manifest_path": self.catalog_path,
             "mirrored_artifacts": mirrored,
+            "already_present": already_present,
             "scout_checked_at": current.get("scout_checked_at"),
         }
 
