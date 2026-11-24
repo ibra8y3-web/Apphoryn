@@ -65,7 +65,12 @@ def read_mirror_catalog() -> list[dict]:
 def catalog_items(category: str | None = None, query: str | None = None, limit: int = 100) -> list[dict]:
     by_repo: dict[str, dict] = {}
     for item in db.list_apps(limit=200) + read_mirror_catalog():
-        key = str(item.get("repository_url") or item.get("slug") or item.get("id") or "")
+        github_repo_id = str(item.get("github_repo_id") or "").strip()
+        repository_url = str(item.get("repository_url") or "").strip()
+        key = f"github:{github_repo_id}" if github_repo_id else (
+            f"url:{repository_url.casefold().rstrip('/')}" if repository_url
+            else str(item.get("slug") or item.get("id") or "")
+        )
         if not key:
             continue
         previous = by_repo.get(key)
