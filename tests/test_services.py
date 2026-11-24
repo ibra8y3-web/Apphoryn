@@ -7,6 +7,7 @@ from unittest.mock import Mock
 
 from app.database import Database, utc_now
 from app.services import CatalogService, store_uploaded_artifact
+from app.github_client import GitHubError
 import app.services as services_module
 
 
@@ -48,6 +49,18 @@ class CatalogServiceTests(unittest.TestCase):
             self.assertEqual(result["app"]["source_commit_sha"], "ab" * 20)
             self.assertEqual(result["artifacts"], [])
             self.assertEqual(len(database.list_apps()), 1)
+
+    def test_transient_license_api_failure_is_not_misclassified_as_missing_license(self):
+        github = Mock()
+        github.get_repository.return_value = {
+            "id": 123, "name": "Tool", "html_url": "https://github.com/owner/tool",
+            "license": {"spdx_id": "MIT"}, "archived": False, "default_branch": "main",
+        }
+        github.get_latest_release.return_value = None
+        github.request.side_effect = GitHubError("GitHub API returned HTTP 502: upstream unavailable")
+        service = CatalogService(github=github, database=Mock())
+        with self.assertRaisesRegex(GitHubError, "HTTP 502"):
+            service.import_repository("https://github.com/owner/tool", mirror_release_assets=False)
 
     def test_real_release_download_keeps_installer_extension_for_validation(self):
         with tempfile.TemporaryDirectory() as folder:
