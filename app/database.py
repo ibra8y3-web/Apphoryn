@@ -61,6 +61,11 @@ class Database:
                     category TEXT NOT NULL DEFAULT 'other',
                     topics_json TEXT NOT NULL DEFAULT '[]',
                     translations_json TEXT NOT NULL DEFAULT '{}',
+                    description_translations_json TEXT NOT NULL DEFAULT '{}',
+                    icon_url TEXT,
+                    ai_provider TEXT,
+                    ai_model TEXT,
+                    translation_status TEXT NOT NULL DEFAULT 'missing',
                     latest_version TEXT,
                     release_url TEXT,
                     created_at TEXT NOT NULL,
@@ -104,6 +109,11 @@ class Database:
             app_columns = {row[1] for row in con.execute("PRAGMA table_info(apps)").fetchall()}
             for column, statement in {
                 "translations_json": "ALTER TABLE apps ADD COLUMN translations_json TEXT NOT NULL DEFAULT '{}'",
+                "description_translations_json": "ALTER TABLE apps ADD COLUMN description_translations_json TEXT NOT NULL DEFAULT '{}'",
+                "icon_url": "ALTER TABLE apps ADD COLUMN icon_url TEXT",
+                "ai_provider": "ALTER TABLE apps ADD COLUMN ai_provider TEXT",
+                "ai_model": "ALTER TABLE apps ADD COLUMN ai_model TEXT",
+                "translation_status": "ALTER TABLE apps ADD COLUMN translation_status TEXT NOT NULL DEFAULT 'missing'",
                 "default_branch": "ALTER TABLE apps ADD COLUMN default_branch TEXT NOT NULL DEFAULT 'main'",
                 "license_text": "ALTER TABLE apps ADD COLUMN license_text TEXT NOT NULL DEFAULT ''",
                 "source_commit_sha": "ALTER TABLE apps ADD COLUMN source_commit_sha TEXT",
@@ -147,9 +157,9 @@ class Database:
         if row is None:
             return None
         result = dict(row)
-        for key in ("topics_json", "translations_json", "targets_json"):
+        for key in ("topics_json", "translations_json", "description_translations_json", "targets_json"):
             if key in result:
-                result[key.removesuffix("_json")] = json.loads(result.pop(key) or ("{}" if key == "translations_json" else "[]"))
+                result[key.removesuffix("_json")] = json.loads(result.pop(key) or ("{}" if key in {"translations_json", "description_translations_json"} else "[]"))
         for key in ("license_eligible", "build_recommended", "upstream_digest_verified"):
             if key in result:
                 result[key] = bool(result[key])
@@ -177,6 +187,9 @@ class Database:
                 int(record["license_eligible"]), record["category"],
                 json.dumps(record.get("topics", [])),
                 json.dumps(record.get("translations", {}), ensure_ascii=False),
+                json.dumps(record.get("description_translations", {}), ensure_ascii=False),
+                record.get("icon_url"), record.get("ai_provider"), record.get("ai_model"),
+                record.get("translation_status", "missing"),
                 record.get("latest_version"), record.get("release_url"), record["updated_at"],
             )
             if existing:
@@ -186,7 +199,8 @@ class Database:
                        default_branch=?,source_commit_sha=?,github_repo_id=COALESCE(?,github_repo_id),
                        source_updated_at=COALESCE(?,source_updated_at),project_kind=?,build_recommended=?,
                        classification_source=?,classification_reason=?,license_text=?,license_spdx=?,
-                       license_eligible=?,category=?,topics_json=?,translations_json=?,latest_version=?,
+                       license_eligible=?,category=?,topics_json=?,translations_json=?,description_translations_json=?,
+                       icon_url=?,ai_provider=?,ai_model=?,translation_status=?,latest_version=?,
                        release_url=?,updated_at=?
                        WHERE id=?""",
                     (*values, app_id),
@@ -197,9 +211,10 @@ class Database:
                        (id,slug,name,summary,description,repository_url,homepage_url,owner,default_branch,
                         source_commit_sha,github_repo_id,source_updated_at,project_kind,build_recommended,
                         classification_source,classification_reason,license_text,license_spdx,license_eligible,
-                        category,topics_json,translations_json,latest_version,release_url,
+                        category,topics_json,translations_json,description_translations_json,icon_url,
+                        ai_provider,ai_model,translation_status,latest_version,release_url,
                         created_at,updated_at)
-                       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
                     (app_id, record["slug"], record["name"], record["summary"], record["description"],
                      record["repository_url"], record.get("homepage_url"), record["owner"],
                      record.get("default_branch", "main"), record.get("source_commit_sha"), repo_id,
@@ -209,6 +224,9 @@ class Database:
                      record.get("license_spdx"), int(record["license_eligible"]), record["category"],
                      json.dumps(record.get("topics", [])),
                      json.dumps(record.get("translations", {}), ensure_ascii=False),
+                     json.dumps(record.get("description_translations", {}), ensure_ascii=False),
+                     record.get("icon_url"), record.get("ai_provider"), record.get("ai_model"),
+                     record.get("translation_status", "missing"),
                      record.get("latest_version"), record.get("release_url"), created_at, record["updated_at"]),
                 )
             row = con.execute("SELECT * FROM apps WHERE id=?", (app_id,)).fetchone()
