@@ -1182,7 +1182,16 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "ad5625c3158eea79986b3d2308cc4c38d0d527e1",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-24T23:21:01.393996+00:00"
+        }
+      ]
     },
     {
       "id": "vkohaupt-vokoscreenng",
