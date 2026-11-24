@@ -157,7 +157,16 @@ def import_repository(payload: ImportRequest, x_apphoryn_admin: str | None = Hea
         result = catalog.import_repository(payload.repository_url, payload.mirror_release_assets)
         if settings.github_token and settings.github_owner and settings.github_repository:
             mirror = GitHubReleaseMirror(settings.github_token, f"{settings.github_owner}/{settings.github_repository}", settings.github_ref)
-            result["mirror"] = mirror.publish_app(result["app"], result["artifacts"])
+            if result["artifacts"]:
+                result["mirror"] = mirror.publish_app(result["app"], result["artifacts"])
+                result["status"] = "app_published"
+            else:
+                result["project"] = mirror.register_project(result["app"])
+                result["status"] = "source_project_registered"
+        elif not result["artifacts"]:
+            result["status"] = "source_project_registered_locally"
+        else:
+            result["status"] = "verified_packages_stored_locally"
         return result
     except ValueError as exc:
         raise HTTPException(422, str(exc)) from exc
