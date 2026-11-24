@@ -117,17 +117,10 @@ jobs:
           distribution: temurin
           java-version: '17'
       - name: Install Android SDK for publisher verification
-        shell: bash
-        run: |
-          export ANDROID_HOME="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}}"
-          SDKMANAGER="$(command -v sdkmanager || true)"
-          if [ -z "$SDKMANAGER" ]; then
-            SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager -perm -111 2>/dev/null | sort -V | tail -n 1)"
-          fi
-          if [ -z "$SDKMANAGER" ]; then echo "Android sdkmanager not found." >&2; exit 1; fi
-          yes | "$SDKMANAGER" --licenses >/dev/null
-          "$SDKMANAGER" --install "platform-tools" "build-tools;35.0.0"
-          echo "$ANDROID_HOME/build-tools/35.0.0" >> "$GITHUB_PATH"
+        if: contains(format(',{0},', inputs.targets), ',android,')
+        uses: android-actions/setup-android@v4
+        with:
+          packages: platform-tools build-tools;35.0.0
       - name: Download available build outputs as data
         uses: actions/download-artifact@v4
         continue-on-error: true
