@@ -86,7 +86,8 @@ class ApiSmokeTests(unittest.TestCase):
         self.assertEqual(next(row for row in rows if row["id"] == "source-only")["artifacts"], [])
 
         # The installable app catalogue must still require at least one package.
-        apps = self.client.get("/api/v1/catalog/apps")
+        with patch("app.main.read_mirror_catalog", return_value=[]):
+            apps = self.client.get("/api/v1/catalog/apps")
         self.assertEqual(apps.status_code, 200)
         self.assertEqual(apps.json()["items"], [])
 
