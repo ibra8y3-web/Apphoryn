@@ -166,7 +166,7 @@ def validate_artifact(path: str | Path, *, require_apk_signature: bool = True) -
                     if normalized.startswith("/") or ".." in normalized.split("/"):
                         raise ArtifactValidationError("XAPK contains an unsafe APK member path.")
                     name = Path(normalized).name
-                    if not re.fullmatch(r"[A-Za-z0-9._-]+\\.apk", name, flags=re.IGNORECASE):
+                    if not re.fullmatch(r"[A-Za-z0-9._-]+\.apk", name, flags=re.IGNORECASE):
                         raise ArtifactValidationError("XAPK contains an unsafe APK member name.")
                     apk_entries.append((info, name))
                     if name.lower() == "base.apk":
