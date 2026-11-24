@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T23:24:44.656738+00:00",
+  "generated_at": "2026-11-24T23:25:07.197153+00:00",
   "apps": [
     {
       "id": "706972745-assetmanager",
@@ -1756,6 +1756,56 @@
       "classification_reason": "The repository describes reusable code, a package, SDK, or framework rather than a standalone installer.",
       "project_status": "installable",
       "icon_url": "https://avatars.githubusercontent.com/u/31959043?v=4"
+    },
+    {
+      "id": "openskye-labs-skyelab",
+      "slug": "openskye-labs-skyelab",
+      "artifacts": [],
+      "name": "skyelab",
+      "summary": "SkyeLab is a native Rust/GPUI desktop app for running Claude Code and Codex coding agents, with folders bound to specific accounts.",
+      "description": "SkyeLab is an early pre-release native desktop agentic development environment written in Rust with GPUI. It runs Claude Code and Codex agents in project threads, reviews changes, and keeps terminals, browser previews, and simulators nearby. Each folder is bound to one Claude or Codex account, and the deepest binding determines the account and agent. The app includes onboarding, account and folder bindings, a unified thread list, multiple windows, update checks, rebindable keyboard actions, usage views, scheduled tasks, per-account GitHub integration, pull request and issue workflows, a composer with attachments and commands, scratch threads, session import, worktrees with diff review, a command palette, file search and preview, branch checkpoints, scripts, an embedded terminal, and a browser preview. macOS is the main platform.",
+      "translations": {
+        "en": "SkyeLab is a native Rust/GPUI desktop app for running Claude Code and Codex coding agents, with folders bound to specific accounts.",
+        "ar": "SkyeLab هو تطبيق سطح مكتب أصلي مكتوب بـRust وGPUI لتشغيل وكلاء البرمجة Claude Code وCodex، مع ربط كل مجلد بحساب محدد."
+      },
+      "description_translations": {
+        "en": "SkyeLab is an early pre-release native desktop agentic development environment written in Rust with GPUI. It runs Claude Code and Codex agents in project threads, reviews changes, and keeps terminals, browser previews, and simulators nearby. Each folder is bound to one Claude or Codex account, and the deepest binding determines the account and agent. The app includes onboarding, account and folder bindings, a unified thread list, multiple windows, update checks, rebindable keyboard actions, usage views, scheduled tasks, per-account GitHub integration, pull request and issue workflows, a composer with attachments and commands, scratch threads, session import, worktrees with diff review, a command palette, file search and preview, branch checkpoints, scripts, an embedded terminal, and a browser preview. macOS is the main platform.",
+        "ar": "SkyeLab هو بيئة تطوير وكيلية أصلية للحاسوب، مكتوبة بلغة Rust وبواجهة GPUI، في مرحلة إصدار مبكر. يشغّل وكلاء Claude Code وCodex في سلاسل محادثات مرتبطة بالمشاريع، ويتيح مراجعة التغييرات مع إبقاء الطرفيات ومعاينات المتصفح والمحاكيات قريبة. كل مجلد مرتبط بحساب Claude أو Codex واحد، ويحدد الارتباط الأعمق الحساب والوكيل. يتضمن التطبيق التهيئة الأولية، وربط الحسابات والمجلدات، وقائمة موحدة للسلاسل، ونوافذ متعددة، وفحص التحديثات، وإجراءات لوحة مفاتيح قابلة لإعادة الربط، وعروض الاستخدام، والمهام المجدولة، وتكامل GitHub لكل حساب، وسير عمل طلبات السحب والمشكلات، ومحرر رسائل مع المرفقات والأوامر، وسلاسل مؤقتة، واستيراد الجلسات، وأشجار عمل مع مراجعة الفروق، ولوحة أوامر، والبحث عن الملفات ومعاينتها، ونقاط تفتيش للفروع، ونصوص برمجية، وطرفية مدمجة، ومعاينة متصفح. نظام macOS هو المنصة الرئيسية."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://raw.githubusercontent.com/OpenSkye-Labs/skyelab/main/crates/skyelab-app/icons/icon.svg",
+      "repository_url": "https://github.com/OpenSkye-Labs/skyelab",
+      "github_repo_id": "1467859255",
+      "source_updated_at": "2026-11-24T14:52:29Z",
+      "homepage_url": null,
+      "owner": "OpenSkye-Labs",
+      "default_branch": "main",
+      "source_commit_sha": "caf6dd64c31c22d1a64d851cb9c551882de1ad75",
+      "license_text": "MIT License\n\nCopyright (c) 2026 OpenSkye Labs\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Repository evidence describes a standalone native desktop application for developers, with CI, releases, and install documentation; despite being early pre-release, it has a supported build/release path.",
+      "category": "developer",
+      "topics": [
+        "agentic-coding",
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "desktop-app",
+        "developer-tools",
+        "gpui",
+        "rust",
+        "tailscale"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "hostu404-trillionairetracker",
