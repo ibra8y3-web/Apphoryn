@@ -182,13 +182,15 @@ class RepositoryCrawler:
                 item = dict(item)
                 item["scout_query"] = query
                 records.append(item)
-                if len(records) >= max_repositories:
-                    break
 
+            # Advance only after consuming the entire page; cutting a page at
+            # the requested batch size would permanently skip its remainder.
             page = int(partition.get("page") or 1)
             partition["page"] = page + 1
             if page * self.PAGE_SIZE >= total_count or page >= 10 or not result.get("items"):
                 self.state["pending"].pop(0)
+            if len(records) >= max_repositories:
+                break
 
         self.state["totals"]["repositories_seen"] = int(self.state["totals"].get("repositories_seen", 0)) + len(records)
         report = {
