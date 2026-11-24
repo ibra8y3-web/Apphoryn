@@ -75,9 +75,11 @@ jobs:
           APPHORYN_AI_MODEL: ${{ vars.APPHORYN_AI_MODEL }}
           SKIP_SEEDS: ${{ inputs.skip_seeds || 'false' }}
         run: |
-          ARGS=(--query "$APPHORYN_QUERY" --limit "$APPHORYN_LIMIT")
-          if [ "$SKIP_SEEDS" = "true" ]; then ARGS+=(--skip-seeds); fi
-          python scripts/harvest_and_import.py "\${ARGS[@]}"
+          if [ "$SKIP_SEEDS" = "true" ]; then
+            python scripts/harvest_and_import.py --query "$APPHORYN_QUERY" --limit "$APPHORYN_LIMIT" --skip-seeds
+          else
+            python scripts/harvest_and_import.py --query "$APPHORYN_QUERY" --limit "$APPHORYN_LIMIT"
+          fi
       - name: Save discovery and mirror report
         if: always()
         uses: actions/upload-artifact@v4
