@@ -226,12 +226,24 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
         self.assertEqual(stored["github_repo_id"], "123456789")
 
     def test_register_project_updates_same_record_after_upstream_rename(self):
-        manifest = {"schema_version": 1, "apps": [{
-            "id": "stable-id", "slug": "old-project", "name": "Old Project",
-            "repository_url": "https://github.com/old/project",
-            "github_repo_id": "7654321", "license_spdx": "MIT",
-            "license_eligible": True, "artifacts": [],
-        }]}
+        manifest = {"schema_version": 1, "apps": [
+            {
+                "id": "stable-id", "slug": "old-project", "name": "Old Project",
+                "repository_url": "https://github.com/old/project",
+                "github_repo_id": "7654321", "license_spdx": "MIT",
+                "license_eligible": True, "artifacts": [],
+            },
+            {
+                "id": "legacy-duplicate", "slug": "legacy-project-copy", "name": "Legacy Duplicate",
+                "repository_url": "https://github.com/legacy/project-copy",
+                "github_repo_id": "7654321", "license_spdx": "MIT",
+                "license_eligible": True,
+                "artifacts": [{
+                    "id": "existing-package", "sha256": "c" * 64, "filename": "existing.exe",
+                    "platform": "windows", "download_url": "https://github.com/owner/Apphoryn/releases/download/old/existing.exe",
+                }],
+            },
+        ]}
         mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn")
         mirror._read_catalog = Mock(return_value=(manifest, "old-sha"))
         mirror.request = Mock(return_value={})
@@ -248,6 +260,7 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
         self.assertEqual(len(written["apps"]), 1)
         self.assertEqual(written["apps"][0]["repository_url"], "https://github.com/new-owner/project")
         self.assertEqual(written["apps"][0]["id"], "stable-id")
+        self.assertEqual([item["sha256"] for item in written["apps"][0]["artifacts"]], ["c" * 64])
 
 
 if __name__ == "__main__":
