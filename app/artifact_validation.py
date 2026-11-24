@@ -53,6 +53,8 @@ def _zip_members(path: Path) -> set[str]:
 
 
 def _is_pe(path: Path) -> bool:
+    """Accept runnable PE application images, not DLLs or header-only lookalikes."""
+    file_size = path.stat().st_size
     with path.open("rb") as stream:
         if stream.read(2) != b"MZ":
             return False
@@ -61,19 +63,52 @@ def _is_pe(path: Path) -> bool:
         if len(pointer) != 4:
             return False
         offset = struct.unpack("<I", pointer)[0]
-        if offset < 64 or offset > path.stat().st_size - 24:
+        if offset < 64 or offset > file_size - 24:
             return False
         stream.seek(offset)
-        return stream.read(4) == b"PE\x00\x00"
+        headers = stream.read(24)
+        if len(headers) != 24 or headers[:4] != b"PE\\x00\\x00":
+            return False
+
+        machine = struct.unpack("<H", headers[4:6])[0]
+        section_count = struct.unpack("<H", headers[6:8])[0]
+        optional_size = struct.unpack("<H", headers[20:22])[0]
+        characteristics = struct.unpack("<H", headers[22:24])[0]
+        known_machines = {0x014C, 0x8664, 0x01C0, 0x01C2, 0x01C4, 0xAA64}
+        if machine not in known_machines or not 1 <= section_count <= 96:
+            return False
+        if not (characteristics & 0x0002) or (characteristics & 0x2000):
+            return False
+        if optional_size < 96 or offset + 24 + optional_size > file_size:
+            return False
+
+        optional_header = stream.read(optional_size)
+        if len(optional_header) != optional_size:
+            return False
+        magic = struct.unpack("<H", optional_header[:2])[0]
+        if magic not in {0x10B, 0x20B}:
+            return False
+        entry_point = struct.unpack("<I", optional_header[16:20])[0]
+        return entry_point != 0
 
 
 def _elf_header(path: Path) -> bytes:
     with path.open("rb") as stream:
         header = stream.read(64)
-    if len(header) < 20 or header[:4] != b"\x7fELF":
+    if len(header) < 20 or header[:4] != b"\\x7fELF":
         raise ArtifactValidationError("File does not contain a valid ELF header.")
     if header[4] not in (1, 2) or header[5] not in (1, 2) or header[6] != 1:
         raise ArtifactValidationError("ELF class, byte order, or version is invalid.")
+    byte_order = "<" if header[5] == 1 else ">"
+    minimum_size = 52 if header[4] == 1 else 64
+    if len(header) < minimum_size:
+        raise ArtifactValidationError("ELF executable header is truncated.")
+    file_type = struct.unpack_from(byte_order + "H", header, 16)[0]
+    entry_point = struct.unpack_from(byte_order + ("I" if header[4] == 1 else "Q"), header, 24)[0]
+    if file_type not in {2, 3} or entry_point == 0:
+        raise ArtifactValidationError(
+            "ELF is not a runnable executable; relocatable objects and shared libraries are not store apps."
+        )
     return header
 
 
