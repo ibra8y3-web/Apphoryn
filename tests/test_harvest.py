@@ -11,7 +11,10 @@ class HarvestTests(unittest.TestCase):
 
     def test_source_build_fallback_runs_when_release_has_no_verified_installer(self):
         # A Release can exist but contain only source archives and checksums.
-        self.assertTrue(should_dispatch_build_fallback([], ["android", "windows"]))
+        self.assertTrue(should_dispatch_build_fallback(
+            [], ["android", "windows"], build_recommended=True
+        ))
+        self.assertFalse(should_dispatch_build_fallback([], ["android", "windows"]))
         self.assertFalse(should_dispatch_build_fallback([], []))
         self.assertFalse(should_dispatch_build_fallback(
             [{"platform": "android", "validation_status": "validated"}],
@@ -20,11 +23,19 @@ class HarvestTests(unittest.TestCase):
         self.assertFalse(should_dispatch_build_fallback([], ["android"], build_recommended=False))
 
     def test_known_source_project_is_revisited_when_auto_build_is_enabled(self):
-        source_only = {"repository_url": "https://github.com/owner/project", "artifacts": []}
+        source_only = {
+            "repository_url": "https://github.com/owner/project",
+            "artifacts": [],
+            "build_recommended": True,
+        }
         installable = {"repository_url": "https://github.com/owner/app", "artifacts": [{"sha256": "abc"}]}
         self.assertTrue(should_revisit_source_project(source_only, ["android"]))
         self.assertFalse(should_revisit_source_project(source_only, []))
         self.assertFalse(should_revisit_source_project(installable, ["android", "windows"]))
+        self.assertFalse(should_revisit_source_project(
+            {"repository_url": "https://github.com/owner/unknown", "artifacts": []},
+            ["android"],
+        ))
         self.assertFalse(should_revisit_source_project(
             {"repository_url": "https://github.com/owner/library", "artifacts": [], "build_recommended": False},
             ["android"],
