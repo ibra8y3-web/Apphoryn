@@ -268,7 +268,19 @@
       "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shoelace-style-webawesome-v3.15.0",
       "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shoelace-style-webawesome-v3.15.0/THIRD-PARTY-NOTICE-shoelace-style-webawesome.txt",
       "artifacts": [],
-      "platforms": []
+      "platforms": [],
+      "build_attempts": [
+        {
+          "git_ref": "77ae17d6804f1f1b447ddbef0fa44ee6329fd0dc",
+          "targets": [
+            "android",
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-24T20:21:55.921006+00:00"
+        }
+      ]
     },
     {
       "id": "koala73-worldmonitor",
