@@ -117,7 +117,6 @@ def main() -> None:
     parser.add_argument("--query", default="", help="Optional additional GitHub search query.")
     parser.add_argument("--max-repositories", type=int, default=200)
     parser.add_argument("--max-pages", type=int, default=25)
-    parser.add_argument("--refresh-existing", type=int, default=20, help="Recheck this many existing installable apps for new releases.")
     parser.add_argument("--state-file", default=str(ROOT / "data" / "scout-state.json"))
     parser.add_argument("--retry-file", default=str(ROOT / "data" / "scout-retry.json"))
     parser.add_argument("--seed-file", default=str(ROOT / "catalog-seed-repositories.json"))
@@ -155,11 +154,18 @@ def main() -> None:
     for seed in seeds:
         enqueue({"repository": seed["repository"], "reason": seed.get("reason", "Maintained seed")})
 
-    crawl_report: dict[str, Any] = {"repositories": 0, "repository_pages": 0, "last_repository_id": 0}
+    crawl_report: dict[str, Any] = {
+        "repositories": 0, "repository_pages": 0, "last_repository_id": 0,
+        "last_refresh_repository_id": 0, "scan_phase": "new",
+    }
     crawler = None
     if args.global_scan:
         crawler = RepositoryCrawler(github, args.state_file)
-        discovered, crawl_report = crawler.scan(args.max_repositories, args.max_pages)
+        discovered, new_report = crawler.scan(
+            args.max_repositories, args.max_pages, cursor_key="last_repository_id"
+        )
+        crawl_report.update(new_report)
+        crawl_report["scan_phase"] = "new"
         for candidate in discovered:
             url = str(candidate.get("html_url") or "")
             enqueue({
@@ -167,31 +173,34 @@ def main() -> None:
                 "reason": "Incremental GitHub public-repository listing",
                 "candidate": candidate,
             })
+
+        # Once the forward scan reaches the current tail, run a second
+        # independent cursor from the beginning. It revisits old repositories
+        # to discover new releases without storing every source-only project
+        # in the public catalogue or generating empty releases.
+        if new_report.get("reached_current_end"):
+            refresh_rows, refresh_report = crawler.scan(
+                args.max_repositories, args.max_pages, cursor_key="last_refresh_repository_id"
+            )
+            crawl_report["refresh"] = refresh_report
+            crawl_report["scan_phase"] = "refresh"
+            for candidate in refresh_rows:
+                url = str(candidate.get("html_url") or "")
+                enqueue({
+                    "repository": url,
+                    "reason": "Scheduled full-catalogue upstream release recheck",
+                    "candidate": candidate,
+                    "force_refresh": True,
+                })
+            if refresh_report.get("reached_current_end"):
+                crawler.state["last_refresh_repository_id"] = 0
+                crawler.state["totals"]["refresh_passes_completed"] = int(
+                    crawler.state["totals"].get("refresh_passes_completed", 0)
+                ) + 1
     elif args.query:
         for candidate in catalog.discover(args.query, max(1, min(args.max_repositories, 100))):
             url = str(candidate.get("repository_url") or "")
             enqueue({"repository": url, "reason": "Explicit GitHub repository search", "candidate": candidate})
-
-    # Existing installable apps are rechecked in a round-robin order so new
-    # upstream releases are discovered even though the public listing cursor
-    # only moves forward through newly created repository IDs.
-    refresh_limit = max(0, min(int(args.refresh_existing), 100))
-    refresh_candidates = sorted(
-        known,
-        key=lambda item: str(item.get("scout_checked_at") or ""),
-    )[:refresh_limit]
-    for item in refresh_candidates:
-        url = str(item.get("repository_url") or "")
-        enqueue({
-            "repository": url,
-            "reason": "Scheduled upstream release refresh",
-            "candidate": {
-                "id": item.get("github_repo_id"),
-                "html_url": url,
-                "updated_at": item.get("source_updated_at"),
-            },
-            "force_refresh": True,
-        })
 
     Path(args.output).write_text(json.dumps([{
         "repository": row["repository"], "reason": row.get("reason", "")
@@ -258,23 +267,11 @@ def main() -> None:
                     mirror.mark_app_checked(str(app.get("repository_url") or repo_url), app.get("github_repo_id"))
                     result["status"] = "checked_no_new_installer"
                 else:
-                    mirror.register_source_app(app)
-                    source_key = _repo_key(str(app.get("repository_url") or repo_url))
-                    source_record = {
-                        "repository_url": app.get("repository_url") or repo_url,
-                        "github_repo_id": app.get("github_repo_id"),
-                        "source_updated_at": app.get("source_updated_at"),
-                        "scout_checked_at": now,
-                        "artifacts": [],
-                    }
-                    known_by_url[source_key] = source_record
-                    if app.get("github_repo_id"):
-                        known_by_id[str(app["github_repo_id"])] = source_record
                     if imported.get("release_found"):
                         scheduled_retries.append(retry_record(entry, now, "Release exists but no supported verified installer was accepted."))
                         result["status"] = "awaiting_verified_installer"
                     else:
-                        result["status"] = "source_only_tracked"
+                        result["status"] = "source_only_scanned"
                 if auto_targets and not imported.get("release_found"):
                     git_ref = str(app.get("source_commit_sha") or app.get("default_branch") or "main")
                     if not mirror.has_recent_build_attempt(repo_url, git_ref):
@@ -312,7 +309,7 @@ def main() -> None:
     failed_count = sum(item.get("status") == "failed" for item in results)
     print(
         "Scout run finished: "
-        f"{crawl_report.get('repositories', 0)} public repositories scanned; "
+        f"{crawl_report.get('repositories', 0)} public repositories scanned in the {crawl_report.get('scan_phase', 'discovery')} phase; "
         f"{len(results)} migration tasks processed; {mirrored_count} apps with verified installers mirrored; "
         f"{current_count} current; {rejected_count} skipped by policy/deduplication; "
         f"{failed_count} failed; {len(retry_deduplicated)} retry records retained; "
