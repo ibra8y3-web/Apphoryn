@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T23:24:26.465694+00:00",
+  "generated_at": "2026-11-24T23:24:44.656738+00:00",
   "apps": [
     {
       "id": "706972745-assetmanager",
@@ -263,6 +263,76 @@
           ],
           "requested_at": "2026-11-24T23:22:27.790444+00:00"
         }
+      ]
+    },
+    {
+      "id": "wangmingkun148-dropshelf",
+      "slug": "wangmingkun148-dropshelf",
+      "name": "DropShelf",
+      "summary": "A temporary file shelf for Windows 11. Shake the mouse or pause at a screen edge while dragging to summon it, then move files, folders, images, text, and links between apps.",
+      "description": "DropShelf is a temporary file shelf for Windows 11 (64-bit). While dragging a file, shake the mouse or pause at a screen edge to summon the shelf, drop items onto it, switch to your target window, then drag them into Explorer, chat apps, or a browser. It supports files, folders, images, text, links, and attachments from browsers, email, and chat apps. Built-in quick actions include compress/extract, copy path, move to, properties, and reveal in Explorer, plus custom actions like send-to-folder, image compression, image conversion, and open-with. It offers multiple shelves with merge/split, undo removal, recently-closed recovery, an optional watched folder, a tray icon, and optional launch at startup. Two themes (Simple and Card), light/dark/system appearance, and Simplified Chinese and English interfaces (extra languages via JSON packs). No admin rights required; it records only paths, not file contents, and does not network except when you manually check for updates. Written with generative AI. MIT licensed. Build from source with Visual Studio 2022 C++ tools via native\\build.ps1.",
+      "translations": {
+        "en": "A temporary file shelf for Windows 11. Shake the mouse or pause at a screen edge while dragging to summon it, then move files, folders, images, text, and links between apps.",
+        "ar": "DropShelf هو رفّ مؤقت للملفات على نظام Windows 11. حرّك الفأرة أثناء سحب ملف أو توقّف عند حافة الشاشة لاستدعائه، ثم انقل الملفات والمجلدات والصور والنصوص والروابط بين التطبيقات."
+      },
+      "description_translations": {
+        "en": "DropShelf is a temporary file shelf for Windows 11 (64-bit). While dragging a file, shake the mouse or pause at a screen edge to summon the shelf, drop items onto it, switch to your target window, then drag them into Explorer, chat apps, or a browser. It supports files, folders, images, text, links, and attachments from browsers, email, and chat apps. Built-in quick actions include compress/extract, copy path, move to, properties, and reveal in Explorer, plus custom actions like send-to-folder, image compression, image conversion, and open-with. It offers multiple shelves with merge/split, undo removal, recently-closed recovery, an optional watched folder, a tray icon, and optional launch at startup. Two themes (Simple and Card), light/dark/system appearance, and Simplified Chinese and English interfaces (extra languages via JSON packs). No admin rights required; it records only paths, not file contents, and does not network except when you manually check for updates. Written with generative AI. MIT licensed. Build from source with Visual Studio 2022 C++ tools via native\\build.ps1.",
+        "ar": "DropShelf هو رفّ مؤقت للملفات مخصّص لنظام Windows 11 (64 بت). أثناء سحب ملف، حرّك الفأرة أو توقّف عند حافة الشاشة لاستدعاء الرفّ، ثم ضع العناصر عليه، وبدّل إلى النافذة المستهدفة، ثم اسحبها إلى مستكشف الملفات أو تطبيقات الدردشة أو المتصفح. يدعم الملفات والمجلدات والصور والنصوص والروابط والمرفقات من المتصفحات والبريد وتطبيقات الدردشة. تتضمّن الإجراءات السريعة المدمجة الضغط وفك الضغط ونسخ المسار والنقل إلى مجلد والخصائص والإظهار في المستكشف، إضافةً إلى إجراءات مخصّصة مثل الإرسال إلى مجلد وضغط الصور وتحويل الصور والفتح باستخدام برنامج. ويوفّر أرففاً متعددة مع الدمج والتقسيم والتراجع عن الإزالة واستعادة ما أُغلق مؤخراً ومجلداً مراقباً اختيارياً وأيقونة في منطقة الإعلام وبدء التشغيل عند الإقلاع اختيارياً. كما يوفّر مظهرين (بسيط وبطاقات) ومظهراً فاتحاً أو داكناً أو حسب النظام، وواجهة بالصينية المبسطة والإنجليزية (مع لغات إضافية عبر حزم JSON). لا يتطلب صلاحيات المسؤول، ويسجّل المسارات فقط دون محتوى الملفات، ولا يتصل بالشبكة إلا عند التحقق اليدوي من التحديثات. كُتب باستخدام الذكاء الاصطناعي التوليدي، ومرخّص بموجب MIT. يمكن البناء من المصدر باستخدام أدوات Visual Studio 2022 الخاصة بـ C++ عبر native\\build.ps1."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://avatars.githubusercontent.com/u/328319038?v=4",
+      "repository_url": "https://github.com/wangmingkun148/DropShelf",
+      "github_repo_id": "1423464166",
+      "source_updated_at": "2026-11-24T22:50:42Z",
+      "homepage_url": null,
+      "owner": "wangmingkun148",
+      "default_branch": "main",
+      "source_commit_sha": "369b082c019dbbcf6763c40bc4f5916f6b2b915f",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Wang Mingkun\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "DropShelf is a standalone end-user desktop productivity application for Windows 11 (64-bit), distributed as an installer and portable build. The README documents a supported source-build path using Visual Studio 2022 C++ tools that runs native\\build.ps1 to produce native\\build\\Release\\DropShelf.exe, so an automatic source-build attempt is appropriate.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "desktop-app",
+        "drag-and-drop",
+        "dropover-alternative",
+        "file-shelf",
+        "productivity",
+        "windows",
+        "windows-11"
+      ],
+      "latest_version": "v3.0.4",
+      "release_url": "https://github.com/wangmingkun148/DropShelf/releases/tag/v3.0.4",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wangmingkun148-dropshelf-v3.0.4",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wangmingkun148-dropshelf-v3.0.4/THIRD-PARTY-NOTICE-wangmingkun148-dropshelf.txt",
+      "artifacts": [
+        {
+          "id": "06361580892182dffdba6976f177200a73f3fa092bb4f6f0db846aa8b8ee31d4",
+          "filename": "DropShelf-Setup-3.0.4.exe",
+          "original_filename": "DropShelf-Setup-3.0.4.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v3.0.4",
+          "size_bytes": 3868426,
+          "sha256": "06361580892182dffdba6976f177200a73f3fa092bb4f6f0db846aa8b8ee31d4",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wangmingkun148-dropshelf-v3.0.4/DropShelf-Setup-3.0.4.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wangmingkun148-dropshelf-v3.0.4"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
