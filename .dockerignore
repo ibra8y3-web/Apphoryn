@@ -1,0 +1,10 @@
+.git
+.github
+.venv
+__pycache__
+*.pyc
+.env
+storage/*.sqlite3*
+storage/artifacts/*
+!storage/artifacts/.gitkeep
+artifacts

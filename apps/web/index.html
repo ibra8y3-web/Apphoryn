@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b1018">
+  <meta name="description" content="Apphoryn — discover, build and install real open-source software.">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Apphoryn — Open software, built for everyone</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" aria-label="Apphoryn home">
+        <img src="/icon.svg" alt="" class="brand-mark">
+        <span class="brand-name">apphoryn<span class="brand-dot">.</span><small>OPEN SOFTWARE ECOSYSTEM</small></span>
+      </a>
+      <div class="workspace-label" data-i18n="workspace">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <a class="nav-link active" href="#home" data-view="home"><span class="nav-icon">⌂</span><span data-i18n="overview">Overview</span></a>
+        <a class="nav-link" href="#explore" data-view="explore"><span class="nav-icon">◈</span><span data-i18n="explore">Explore apps</span><span class="nav-count" id="appCount">0</span></a>
+        <a class="nav-link" href="#categories" data-view="categories"><span class="nav-icon">▦</span><span data-i18n="categories">Categories</span></a>
+        <a class="nav-link" href="#discovery" data-view="discovery"><span class="nav-icon">⌕</span><span data-i18n="discovery">AI discovery</span><span class="nav-new">AI</span></a>
+        <a class="nav-link" href="#builds" data-view="builds"><span class="nav-icon">⚒</span><span data-i18n="buildLab">Build lab</span></a>
+      </nav>
+      <div class="nav-divider"></div>
+      <div class="workspace-label" data-i18n="library">YOUR LIBRARY</div>
+      <nav class="nav-list">
+        <a class="nav-link" href="#saved" data-view="saved"><span class="nav-icon">♡</span><span data-i18n="saved">Saved apps</span></a>
+        <a class="nav-link" href="#downloads" data-view="downloads"><span class="nav-icon">⇩</span><span data-i18n="downloads">Downloads</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="status-card"><span class="status-pulse"></span><div><b data-i18n="systemOnline">System online</b><small data-i18n="apiConnection">Store API connection</small></div><span id="apiStatus" class="status-tag">…</span></div>
+        <a class="profile-link" href="#settings" data-view="settings"><span class="avatar">A</span><span><b>Apphoryn</b><small data-i18n="adminWorkspace">Admin workspace</small></span><span class="more">···</span></a>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="icon-button menu-button" id="menuToggle" aria-label="Open navigation">☰</button>
+        <div class="breadcrumbs"><span>Apphoryn</span><i>/</i><b id="pageCrumb" data-i18n="overview">Overview</b></div>
+        <div class="top-actions">
+          <label class="language-control" aria-label="Language"><span>文</span><select id="languageSelect"><option value="en">English</option><option value="ar">العربية</option><option value="fr">Français</option><option value="es">Español</option><option value="de">Deutsch</option><option value="pt">Português</option><option value="tr">Türkçe</option><option value="id">Bahasa Indonesia</option></select></label>
+          <button class="icon-button" id="themeToggle" aria-label="Toggle color theme">◐</button>
+          <div class="top-avatar" title="Apphoryn workspace">A</div>
+        </div>
+      </header>
+
+      <section class="view active" id="view-home">
+        <div class="hero-panel">
+          <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="openSoftwareNetwork">THE OPEN SOFTWARE NETWORK</span></div>
+            <h1 data-i18n="heroTitle">Discover better.<br><em>Build freely.</em></h1>
+            <p data-i18n="heroSubtitle">A growing home for real open-source apps. Discover projects, build installable releases and get them from one trusted library.</p>
+            <div class="hero-actions"><button class="button button-primary" data-go="explore"><span>Explore the store</span><span>↗</span></button><button class="button button-quiet" data-go="discovery"><span class="sparkle">✳</span><span data-i18n="meetScout">Meet Apphoryn Scout</span></button></div>
+          </div>
+          <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="core-logo"><img src="/icon.svg" alt=""></div><div class="float-chip chip-one">⌘ <span>BUILD</span></div><div class="float-chip chip-two">◈ <span>DISCOVER</span></div><div class="float-chip chip-three">⇩ <span>INSTALL</span></div><div class="art-caption">OPEN SOURCE <b>×</b> BUILT TOGETHER</div></div>
+        </div>
+        <div class="section-heading"><div><div class="eyebrow muted" data-i18n="livePlatform">LIVE PLATFORM</div><h2 data-i18n="platformSnapshot">Platform snapshot</h2></div><span class="updated-label" id="lastUpdated">—</span></div>
+        <div class="metrics-grid">
+          <article class="metric-card"><div class="metric-icon violet">◈</div><div class="metric-label" data-i18n="cataloguedApps">Catalogued apps</div><div class="metric-value" id="metricApps">0</div><div class="metric-foot" data-i18n="realRecordsOnly">Real records only</div></article>
+          <article class="metric-card"><div class="metric-icon mint">⇩</div><div class="metric-label" data-i18n="builtPackages">Built packages</div><div class="metric-value" id="metricPackages">0</div><div class="metric-foot" data-i18n="storedInLibrary">Stored in your library</div></article>
+          <article class="metric-card"><div class="metric-icon amber">⚒</div><div class="metric-label" data-i18n="buildJobs">Build jobs</div><div class="metric-value" id="metricJobs">—</div><div class="metric-foot" data-i18n="fromGithubActions">From GitHub Actions</div></article>
+          <article class="metric-card"><div class="metric-icon blue">✓</div><div class="metric-label" data-i18n="verifiedHashes">Verified hashes</div><div class="metric-value" id="metricVerified">0</div><div class="metric-foot" data-i18n="sha256Tracked">SHA-256 tracked</div></article>
+        </div>
+        <div class="section-heading section-heading-tight"><div><div class="eyebrow muted" data-i18n="curatedForYou">CURATED FOR YOU</div><h2 data-i18n="recentlyAdded">Recently added</h2></div><button class="text-button" data-go="explore"><span data-i18n="viewAllApps">View all apps</span> ↗</button></div>
+        <div class="app-grid" id="featuredGrid"><div class="empty-state"><div class="empty-symbol">◈</div><b data-i18n="noAppsYet">Your library is ready for its first app.</b><p data-i18n="noAppsHint">Discover a real GitHub project and import a licensed release to begin.</p><button class="button button-outline" data-go="discovery" data-i18n="startDiscovering">Start discovering</button></div></div>
+        <div class="bottom-banner"><div class="banner-icon">✳</div><div><b data-i18n="buildYourFirst">Build your first app release</b><p data-i18n="buildYourFirstDesc">Connect your GitHub Actions workflow and turn a source project into a real installable package.</p></div><button class="button button-dark" data-go="builds" data-i18n="openBuildLab">Open build lab ↗</button></div>
+      </section>
+
+      <section class="view" id="view-explore"><div class="page-intro"><div class="eyebrow muted" data-i18n="theLibrary">THE LIBRARY</div><h1 data-i18n="exploreTitle">Explore software<span class="title-period">.</span></h1><p data-i18n="exploreDesc">Real projects and installable artifacts stored by Apphoryn.</p></div><div class="toolbar"><label class="search-box"><span>⌕</span><input id="catalogSearch" type="search" placeholder="Search apps, tools, creators..." data-i18n-placeholder="searchPlaceholder"><kbd>⌘ K</kbd></label><select class="filter-select" id="categoryFilter"><option value="all" data-i18n="allCategories">All categories</option><option value="developer">Developer tools</option><option value="system">System tools</option><option value="security">Security</option><option value="multimedia">Multimedia</option><option value="network">Network</option><option value="productivity">Productivity</option><option value="ai">AI & machine learning</option><option value="games">Games</option><option value="other">Other</option></select></div><div class="app-grid" id="catalogGrid"><div class="empty-state"><div class="empty-symbol">◈</div><b data-i18n="emptyCatalog">No apps in the catalog yet.</b><p data-i18n="emptyCatalogDesc">Import a real, correctly licensed project to publish its releases here.</p></div></div></section>
+
+      <section class="view" id="view-categories"><div class="page-intro"><div class="eyebrow muted" data-i18n="browseByPurpose">BROWSE BY PURPOSE</div><h1 data-i18n="categoryTitle">Find your workflow<span class="title-period">.</span></h1><p data-i18n="categoryDesc">Focused collections for the tools you use every day.</p></div><div class="category-grid" id="categoryGrid"></div></section>
+
+      <section class="view" id="view-discovery"><div class="page-intro"><div class="eyebrow muted"><span class="sparkle">✳</span> APPhoryn SCOUT</div><h1 data-i18n="discoveryTitle">Find the next great app<span class="title-period">.</span></h1><p data-i18n="discoveryDesc">Search GitHub for real software projects. Apphoryn checks repository metadata and license eligibility before import.</p></div><div class="scout-panel"><div class="scout-head"><div class="scout-avatar">✳</div><div><b>Scout discovery engine</b><small data-i18n="scoutHint">Powered by GitHub repository search · No fabricated results</small></div><span class="live-pill"><span></span> LIVE</span></div><form id="discoveryForm" class="scout-form"><input id="discoveryQuery" value="topic:opensource stars:>50" aria-label="GitHub search query"><button type="submit" class="button button-primary" id="discoveryButton"><span data-i18n="searchGithub">Search GitHub</span> ↗</button></form><div class="query-chips"><button data-query="topic:opensource stars:>100">Open source</button><button data-query="topic:android stars:>50">Android</button><button data-query="topic:desktop-application stars:>50">Desktop apps</button><button data-query="topic:developer-tools stars:>50">Developer tools</button></div></div><div class="results-heading"><h2 data-i18n="discoveryResults">Discovery results</h2><span id="discoveryCount">—</span></div><div id="discoveryResults" class="discovery-list"><div class="empty-state compact"><div class="empty-symbol">⌕</div><b data-i18n="searchToDiscover">Search GitHub to discover real projects.</b><p data-i18n="discoveryDisclaimer">Discovery does not mean a project is approved or ready to redistribute.</p></div></div></section>
+
+      <section class="view" id="view-builds"><div class="page-intro"><div class="eyebrow muted" data-i18n="automationStudio">AUTOMATION STUDIO</div><h1 data-i18n="buildTitle">Build real releases<span class="title-period">.</span></h1><p data-i18n="buildDesc">Dispatch isolated GitHub Actions runners to compile installable artifacts from eligible source repositories.</p></div><div class="build-layout"><div class="panel build-form-panel"><div class="panel-title"><div class="panel-icon">⚒</div><div><h2 data-i18n="newBuild">New build request</h2><p data-i18n="buildWorkflow">Remote build workflow</p></div></div><form id="buildForm" class="stack-form"><label><span data-i18n="repositoryUrl">GitHub repository URL</span><input id="buildRepo" type="url" placeholder="https://github.com/owner/repository" required></label><label><span data-i18n="gitRef">Branch, tag or commit</span><input id="buildRef" value="main" required></label><fieldset><legend data-i18n="targetPlatforms">Target platforms</legend><div class="target-options"><label><input type="checkbox" name="target" value="android"><span>Android <small>APK</small></span></label><label><input type="checkbox" name="target" value="windows"><span>Windows <small>EXE / MSI*</small></span></label><label><input type="checkbox" name="target" value="linux" checked><span>Linux <small>AppImage / DEB*</small></span></label><label><input type="checkbox" name="target" value="macos"><span>macOS <small>PKG / DMG*</small></span></label></div></fieldset><label><span data-i18n="adminToken">Apphoryn admin token</span><input id="adminToken" type="password" autocomplete="off" placeholder="Stored only for this browser session" required></label><button class="button button-primary full-button" type="submit"><span data-i18n="queueBuild">Queue build</span> <span>↗</span></button><p class="form-note" data-i18n="buildSecurityNote">Third-party build scripts are untrusted code. Use isolated ephemeral runners and never expose signing keys or production secrets to source builds.</p></form></div><div class="build-side"><div class="panel pipeline-panel"><div class="panel-title"><div><h2 data-i18n="buildPipeline">Build pipeline</h2><p data-i18n="sourceToStore">Source to stored artifact</p></div><span class="pipeline-badge">4 STEPS</span></div><div class="pipeline-steps"><div class="pipeline-step"><span>01</span><div><b data-i18n="validateSource">Validate source</b><small data-i18n="validateSourceDesc">Repository, license and pinned ref</small></div><i>✓</i></div><div class="pipeline-step"><span>02</span><div><b data-i18n="isolatedBuild">Isolated build</b><small data-i18n="isolatedBuildDesc">Platform-native GitHub runner</small></div><i>↗</i></div><div class="pipeline-step"><span>03</span><div><b data-i18n="verifyArtifact">Verify artifact</b><small data-i18n="verifyArtifactDesc">Filename, size and SHA-256</small></div><i>✓</i></div><div class="pipeline-step"><span>04</span><div><b data-i18n="publishArtifact">Publish artifact</b><small data-i18n="publishArtifactDesc">Store inside Apphoryn</small></div><i>⇩</i></div></div></div><div class="notice-card"><span>ⓘ</span><p data-i18n="adapterNotice">Build adapters are intentionally limited. Unsupported projects fail visibly; Apphoryn never labels an unbuilt source repository as an installable app. Platform package labels marked * depend on the source project's build system.</p></div></div></div><div class="section-heading job-heading"><div><div class="eyebrow muted" data-i18n="activity">ACTIVITY</div><h2 data-i18n="recentBuildJobs">Recent build jobs</h2></div><button class="text-button" id="refreshJobs">↻ <span data-i18n="refresh">Refresh</span></button></div><div id="jobsList" class="jobs-list"><div class="empty-state compact"><b data-i18n="noBuildJobs">No build jobs yet.</b><p data-i18n="jobsAppear">Submitted jobs will appear here.</p></div></div></section>
+
+      <section class="view" id="view-saved"><div class="page-intro"><div class="eyebrow muted" data-i18n="personalCollection">PERSONAL COLLECTION</div><h1 data-i18n="savedTitle">Saved apps<span class="title-period">.</span></h1><p data-i18n="savedDesc">Your bookmarked software, kept in this browser.</p></div><div id="savedGrid" class="app-grid"><div class="empty-state"><div class="empty-symbol">♡</div><b data-i18n="nothingSaved">Nothing saved yet.</b><p data-i18n="saveAppsHint">Save apps from the catalog to keep them close.</p></div></div></section>
+
+      <section class="view" id="view-downloads"><div class="page-intro"><div class="eyebrow muted" data-i18n="yourArtifacts">YOUR ARTIFACTS</div><h1 data-i18n="downloadsTitle">Downloads<span class="title-period">.</span></h1><p data-i18n="downloadsDesc">Packages that have actually been imported or built and stored by this Apphoryn instance.</p></div><div id="downloadsList" class="artifact-list"><div class="empty-state compact"><div class="empty-symbol">⇩</div><b data-i18n="noPackages">No packages stored yet.</b></div></div></section>
+
+      <section class="view" id="view-settings"><div class="page-intro"><div class="eyebrow muted" data-i18n="preferences">PREFERENCES</div><h1 data-i18n="settingsTitle">Settings<span class="title-period">.</span></h1><p data-i18n="settingsDesc">Configure your Apphoryn workspace and language.</p></div><div class="panel settings-panel"><div class="setting-row"><div><b data-i18n="interfaceLanguage">Interface language</b><p data-i18n="languageDesc">Choose the language for the storefront.</p></div><select id="settingsLanguage"><option value="en">English</option><option value="ar">العربية</option><option value="fr">Français</option><option value="es">Español</option><option value="de">Deutsch</option><option value="pt">Português</option><option value="tr">Türkçe</option><option value="id">Bahasa Indonesia</option></select></div><div class="setting-row"><div><b data-i18n="aboutStore">About Apphoryn</b><p data-i18n="aboutDesc">An open-source software discovery and build platform. No seeded demo apps.</p></div><span class="version-tag">v0.1.0</span></div><div class="setting-row"><div><b data-i18n="apiEndpoint">API endpoint</b><p id="apiEndpoint">/api/v1</p></div><span class="status-tag" id="settingsApiStatus">Checking</span></div></div></section>
+
+      <footer class="footer"><span>© 2026 Apphoryn</span><span data-i18n="footerTagline">Open software. Built together.</span><a href="https://github.com" target="_blank" rel="noreferrer">GitHub API ↗</a></footer>
+    </main>
+  </div>
+  <div class="sidebar-scrim" id="sidebarScrim"></div>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop"><div class="app-modal" id="appModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close">×</button><div id="modalContent"></div></div></div>
+  <script src="/app.js" defer></script>
+  <script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}));}</script>
+</body>
+</html>

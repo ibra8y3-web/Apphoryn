@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+storage/*.sqlite3
+storage/*.sqlite3-shm
+storage/*.sqlite3-wal
+storage/artifacts/**
+!storage/artifacts/.gitkeep
+artifacts/
+build/
+dist/

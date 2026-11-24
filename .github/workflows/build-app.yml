@@ -1,0 +1,129 @@
+name: Build third-party app releases
+on:
+  workflow_dispatch:
+    inputs:
+      repository_url:
+        description: Public GitHub repository URL
+        required: true
+        type: string
+      git_ref:
+        description: Branch, tag or commit to build
+        required: true
+        default: main
+        type: string
+      targets:
+        description: Comma-separated targets (android,windows,linux,macos)
+        required: true
+        default: linux
+        type: string
+      app_id:
+        description: Apphoryn catalog application ID
+        required: true
+        type: string
+      job_id:
+        description: Apphoryn build job ID
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: android
+            runner: ubuntu-latest
+          - target: windows
+            runner: windows-latest
+          - target: linux
+            runner: ubuntu-latest
+          - target: macos
+            runner: macos-latest
+    if: contains(format(',{0},', inputs.targets), format(',{0},', matrix.target))
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 75
+    steps:
+      - name: Checkout Apphoryn build adapters
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.23.x'
+      - name: Set up Java for Android
+        if: matrix.target == 'android'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Set up Android SDK
+        if: matrix.target == 'android'
+        uses: android-actions/setup-android@v3
+      - name: Build source on disposable runner (no Apphoryn ingest secrets)
+        env:
+          REPOSITORY_URL: ${{ inputs.repository_url }}
+          GIT_REF: ${{ inputs.git_ref }}
+          TARGET: ${{ matrix.target }}
+        run: python scripts/ci_build.py --repository "$REPOSITORY_URL" --ref "$GIT_REF" --target "$TARGET" --output "artifacts/${{ matrix.target }}"
+      - name: Upload result to workflow artifact storage
+        uses: actions/upload-artifact@v4
+        with:
+          name: apphoryn-${{ matrix.target }}-${{ inputs.app_id }}
+          path: artifacts/${{ matrix.target }}/
+          if-no-files-found: error
+          retention-days: 30
+
+  publish:
+    needs: build
+    if: always() && needs.build.result != 'cancelled' && contains(format(',{0},', inputs.targets), format(',{0},', matrix.target))
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: android
+          - target: windows
+          - target: linux
+          - target: macos
+    runs-on: ubuntu-latest
+    steps:
+      # This is a fresh runner. Third-party build code from the previous job never ran here.
+      - name: Checkout trusted Apphoryn publisher
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download built output as data
+        id: download
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: apphoryn-${{ matrix.target }}-${{ inputs.app_id }}
+          path: artifacts/${{ matrix.target }}
+      # The only job receiving the ingest secret does not execute downloaded binaries or source scripts.
+      - name: Publish artifact to Apphoryn repository
+        if: steps.download.outcome == 'success'
+        env:
+          APPHORYN_INGEST_URL: ${{ secrets.APPHORYN_INGEST_URL }}
+          APPHORYN_INGEST_TOKEN: ${{ secrets.APPHORYN_INGEST_TOKEN }}
+          APP_ID: ${{ inputs.app_id }}
+          REPOSITORY_URL: ${{ inputs.repository_url }}
+          GIT_REF: ${{ inputs.git_ref }}
+          JOB_ID: ${{ inputs.job_id }}
+        run: |
+          if [ -n "$APPHORYN_INGEST_URL" ] && [ -n "$APPHORYN_INGEST_TOKEN" ]; then
+            python scripts/publish_artifacts.py --directory "artifacts/${{ matrix.target }}" --app-id "$APP_ID" --repository "$REPOSITORY_URL" --ref "$GIT_REF" --job-id "$JOB_ID" --version "$GIT_REF"
+          else
+            echo "Apphoryn ingest is not configured; artifacts remain in GitHub Actions workflow storage."
+          fi
