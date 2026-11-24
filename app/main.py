@@ -14,6 +14,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from .config import ROOT, settings
+from . import ai_router
 from .database import db
 from .services import BuildService, CatalogService, store_uploaded_artifact
 from .github_release_mirror import GitHubReleaseMirror
@@ -219,6 +220,20 @@ def download_artifact(artifact_id: str):
         if parsed.scheme == "https" and parsed.hostname == "github.com" and "/releases/download/" in parsed.path:
             return RedirectResponse(url, status_code=302)
     raise HTTPException(404, "Artifact file is unavailable.")
+
+
+@app.get("/api/v1/admin/ai/models")
+def ai_models(x_apphoryn_admin: str | None = Header(default=None)):
+    """Return model/provider status without ever returning credentials."""
+    require_admin(x_apphoryn_admin)
+    return ai_router.public_model_catalog()
+
+
+@app.post("/api/v1/admin/ai/models/refresh")
+def refresh_ai_models(x_apphoryn_admin: str | None = Header(default=None)):
+    """Force a fresh model discovery against configured providers."""
+    require_admin(x_apphoryn_admin)
+    return ai_router.public_model_catalog(force=True)
 
 
 web_dir = ROOT / "apps" / "web"
