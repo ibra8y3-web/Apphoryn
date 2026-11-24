@@ -109,6 +109,11 @@ def should_dispatch_build_fallback(verified_artifacts: list[dict[str, Any]], aut
     return bool(auto_targets) and not verified_artifacts
 
 
+def should_revisit_source_project(existing: dict[str, Any] | None, auto_targets: list[str]) -> bool:
+    """Revisit a known source-only project when automatic native builds are enabled."""
+    return bool(auto_targets) and not bool((existing or {}).get("artifacts"))
+
+
 def retry_record(entry: dict[str, Any], now: float, reason: str) -> dict[str, Any]:
     attempts = int(entry.get("attempts") or 0) + 1
     delay = RETRY_DELAYS_SECONDS[min(attempts - 1, len(RETRY_DELAYS_SECONDS) - 1)]
@@ -239,7 +244,15 @@ def main() -> None:
                 result.update({"status": "inactive_repository_skipped", "reason": "Archived or disabled upstream repositories are not imported."})
                 results.append(result)
                 continue
-            if not entry.get("force_refresh") and known_current(candidate, known_by_id, known_by_url):
+            existing_record = (
+                known_by_id.get(str(candidate.get("id") or ""))
+                or known_by_url.get(_repo_key(repo_url))
+            )
+            if (
+                not entry.get("force_refresh")
+                and known_current(candidate, known_by_id, known_by_url)
+                and not should_revisit_source_project(existing_record, auto_targets)
+            ):
                 result["status"] = "already_current"
                 results.append(result)
                 continue
