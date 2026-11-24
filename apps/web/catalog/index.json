@@ -1,7 +1,55 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T23:16:24.633897+00:00",
+  "generated_at": "2026-11-24T23:16:45.732567+00:00",
   "apps": [
+    {
+      "id": "arise1881-cloudtune",
+      "slug": "arise1881-cloudtune",
+      "artifacts": [],
+      "name": "cloudtune",
+      "summary": "CloudTune is an open-source, ad-free YouTube-powered music player for Android, Linux, Windows, and iOS, with local history, playlists, downloads, radio, and voice search.",
+      "description": "CloudTune is a Flutter-based, open-source, ad-free music player that searches and plays songs directly from YouTube on the device, without an intermediary server, account, or subscription. It targets Android 7.0+ and Linux x86_64, with current Android APK variants and Linux .deb/.tar.gz packages; Windows and iOS packages are listed as older because CI jobs did not run due to billing/spending limits. Features include infinite radio, Turkish radio stations, local Whisper voice search, playlists, downloads, background playback, lock-screen controls, equalizer, themes, and in-app updates. The README states MIT licensing and includes a release.sh build/release script, Flutter analyze/test checks, and source layout.",
+      "translations": {
+        "en": "CloudTune is an open-source, ad-free YouTube-powered music player for Android, Linux, Windows, and iOS, with local history, playlists, downloads, radio, and voice search.",
+        "ar": "CloudTune هو مشغّل موسيقى مفتوح المصدر وخالٍ من الإعلانات، مدعوم بـ YouTube، يعمل على Android وLinux وWindows وiOS، مع سجل محلي وقوائم تشغيل وتنزيلات وراديو وبحث صوتي."
+      },
+      "description_translations": {
+        "en": "CloudTune is a Flutter-based, open-source, ad-free music player that searches and plays songs directly from YouTube on the device, without an intermediary server, account, or subscription. It targets Android 7.0+ and Linux x86_64, with current Android APK variants and Linux .deb/.tar.gz packages; Windows and iOS packages are listed as older because CI jobs did not run due to billing/spending limits. Features include infinite radio, Turkish radio stations, local Whisper voice search, playlists, downloads, background playback, lock-screen controls, equalizer, themes, and in-app updates. The README states MIT licensing and includes a release.sh build/release script, Flutter analyze/test checks, and source layout.",
+        "ar": "CloudTune هو تطبيق Flutter مفتوح المصدر وخالٍ من الإعلانات، يبحث في الأغاني ويشغّلها مباشرة من YouTube على الجهاز، دون خادم وسيط أو حساب أو اشتراك. يستهدف Android 7.0+ وLinux x86_64، وتتوفر له حزم Android APK وLinux .deb/.tar.gz حالية؛ أما حزم Windows وiOS فمذكورة كقديمة لأن مهام CI لم تبدأ بسبب قيود الدفع/الإنفاق. تشمل الميزات الراديو اللانهائي، محطات راديو تركية، بحث صوتي محلي عبر Whisper، قوائم التشغيل، التنزيلات، التشغيل في الخلفية، التحكم من شاشة القفل، المعادل، السمات، والتحديثات داخل التطبيق. يذكر README ترخيص MIT، و release.sh لبناء/إصدار، وفحوصات Flutter analyze/test، وتخطيط المصدر."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://raw.githubusercontent.com/Arise1881/cloudtune/main/web/icons/Icon-192.png",
+      "repository_url": "https://github.com/Arise1881/cloudtune",
+      "github_repo_id": "1342338592",
+      "source_updated_at": "2026-11-23T12:04:22Z",
+      "homepage_url": "https://arise1881.github.io/cloudtune-dist/",
+      "owner": "Arise1881",
+      "default_branch": "main",
+      "source_commit_sha": "2e4d73dcadec48007ecc73e92e6686e03b7f4600",
+      "license_text": "MIT License\n\nCopyright (c) 2026 CloudTune contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Standalone Flutter end-user music player with source code, build/release script, and current Android/Linux packages; Windows/iOS packages are stale due to CI billing, but a supported build path is evidenced.",
+      "category": "other",
+      "topics": [
+        "android",
+        "cloudtune",
+        "flutter",
+        "linux",
+        "music-player",
+        "opensource",
+        "youtube"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
     {
       "id": "tradytics-eiten",
       "slug": "tradytics-eiten",
