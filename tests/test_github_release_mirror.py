@@ -14,7 +14,7 @@ def minimal_pe(path: Path) -> str:
     pe_offset = 128
     data[:2] = b"MZ"
     data[0x3C:0x40] = pe_offset.to_bytes(4, "little")
-    data[pe_offset:pe_offset + 4] = b"PE\\0\\0"
+    data[pe_offset:pe_offset + 4] = b"PE\0\0"
     data[pe_offset + 4:pe_offset + 6] = (0x8664).to_bytes(2, "little")
     data[pe_offset + 6:pe_offset + 8] = (1).to_bytes(2, "little")
     data[pe_offset + 20:pe_offset + 22] = (0xF0).to_bytes(2, "little")
