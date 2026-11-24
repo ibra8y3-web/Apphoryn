@@ -87,7 +87,7 @@ jobs:
 
   publish:
     needs: build
-    if: always() && needs.build.result != 'cancelled' && contains(format(',{0},', inputs.targets), format(',{0},', matrix.target))
+    if: always() && needs.build.result != 'cancelled'
     strategy:
       fail-fast: false
       matrix:
