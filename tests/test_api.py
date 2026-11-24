@@ -60,6 +60,7 @@ class ApiSmokeTests(unittest.TestCase):
         discover.assert_called_once()
 
 
+    @patch("app.main.db.list_apps", return_value=[])
     @patch("app.main.read_mirror_catalog", return_value=[
         {
             "id": "source-only", "slug": "source-only", "name": "Source Only Project",
