@@ -1,9 +1,11 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "last_repository_id": 0,
+  "last_refresh_repository_id": 0,
   "totals": {
     "repository_pages": 0,
     "repositories_seen": 0,
-    "empty_tail_checks": 0
+    "empty_tail_checks": 0,
+    "refresh_passes_completed": 0
   }
 }
