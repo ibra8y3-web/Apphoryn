@@ -58,6 +58,7 @@ class AiDescriptionTests(unittest.TestCase):
             "ai_base_url": "https://ai.example/v1",
         })()
         with (
+            patch.dict("os.environ", {"APPHORYN_AI_ALLOW_LEGACY_PROVIDER": "true"}),
             patch("app.ai_descriptions.settings", settings_mock),
             patch("app.ai_descriptions.urllib.request.urlopen", return_value=FakeResponse()),
         ):
