@@ -73,5 +73,28 @@ class ArtifactValidationTests(unittest.TestCase):
             self.assertEqual(result["format"], "exe")
 
 
+    def test_library_jar_without_main_class_is_not_installable(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "library.jar"
+            with zipfile.ZipFile(path, "w") as archive:
+                archive.writestr("META-INF/MANIFEST.MF", "Manifest-Version: 1.0\\n\\n")
+                archive.writestr("org/example/Library.class", b"compiled class")
+            with self.assertRaisesRegex(ArtifactValidationError, "no Main-Class"):
+                validate_artifact(path)
+
+    def test_executable_jar_with_main_class_is_accepted(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "application.jar"
+            with zipfile.ZipFile(path, "w") as archive:
+                archive.writestr(
+                    "META-INF/MANIFEST.MF",
+                    "Manifest-Version: 1.0\\nMain-Class: org.example.Main\\n\\n",
+                )
+                archive.writestr("org/example/Main.class", b"compiled class")
+            result = validate_artifact(path)
+            self.assertTrue(result["valid"])
+            self.assertEqual(result["format"], "jar")
+
+
 if __name__ == "__main__":
     unittest.main()
