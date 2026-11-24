@@ -25,6 +25,7 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
         mirror._ensure_release = Mock()
         mirror._upload_notice = Mock()
         mirror.request = Mock(return_value={})
+        mirror._write_catalog = Mock()
 
         result = mirror.publish_app({
             "id": "source-project",
@@ -34,6 +35,12 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
             "owner": "owner",
             "license_spdx": "MIT",
             "license_eligible": True,
+            "icon_url": "https://avatars.githubusercontent.com/u/12345?v=4",
+            "translations": {"en": "English", "ar": "العربية"},
+            "description_translations": {"en": "Description", "ar": "الوصف"},
+            "translation_status": "complete",
+            "ai_provider": "openrouter",
+            "ai_model": "example:free",
         }, [])
 
         self.assertIsNone(result["release_url"])
@@ -42,6 +49,13 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
         mirror._ensure_release.assert_not_called()
         mirror._upload_notice.assert_not_called()
         mirror.request.assert_not_called()
+        written_manifest = mirror._write_catalog.call_args.args[0]
+        source_record = written_manifest["apps"][0]
+        self.assertEqual(source_record["icon_url"], "https://avatars.githubusercontent.com/u/12345?v=4")
+        self.assertEqual(source_record["description_translations"]["ar"], "الوصف")
+        self.assertEqual(source_record["translation_status"], "complete")
+        self.assertEqual(source_record["ai_provider"], "openrouter")
+        self.assertEqual(source_record["project_status"], "source_available")
 
     def test_publish_app_uses_apphoryn_release_asset_and_writes_catalog(self):
         with tempfile.TemporaryDirectory() as folder:
