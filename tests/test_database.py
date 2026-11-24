@@ -23,6 +23,28 @@ class DatabaseTests(unittest.TestCase):
             self.assertEqual(second["summary"], "Updated")
             self.assertEqual(database.list_apps("developer")[0]["topics"], ["editor"])
 
+    def test_stable_github_repository_id_prevents_duplicates_after_rename(self):
+        with tempfile.TemporaryDirectory() as folder:
+            database = Database(Path(folder) / "rename.sqlite3")
+            now = utc_now()
+            base = {
+                "id": "stable-app", "slug": "old-owner-old-name", "name": "Old Name",
+                "summary": "", "description": "", "repository_url": "https://github.com/old-owner/old-name",
+                "github_repo_id": "987654321", "source_updated_at": "2026-11-01T00:00:00Z",
+                "owner": "old-owner", "license_spdx": "MIT", "license_eligible": True,
+                "category": "developer", "topics": [], "created_at": now, "updated_at": now,
+            }
+            first = database.upsert_app(base)
+            renamed = database.upsert_app({
+                **base, "id": "new-generated-id", "slug": "new-owner-new-name",
+                "name": "New Name", "repository_url": "https://github.com/new-owner/new-name",
+                "owner": "new-owner", "source_updated_at": "2026-11-24T00:00:00Z",
+            })
+            self.assertEqual(first["id"], renamed["id"])
+            self.assertEqual(renamed["repository_url"], "https://github.com/new-owner/new-name")
+            self.assertEqual(renamed["github_repo_id"], "987654321")
+            self.assertEqual(len(database.list_apps(limit=20)), 1)
+
     def test_artifact_and_build_job_storage(self):
         with tempfile.TemporaryDirectory() as folder:
             database = Database(Path(folder) / "test.sqlite3")
