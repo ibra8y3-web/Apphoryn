@@ -56,7 +56,49 @@ async function installArtifact(artifactId){
 function renderDownloads(){const host=$('downloadsList');if(!host)return;const items=state.apps.flatMap(app=>(app.artifacts||[]).map(artifact=>({...artifact,appName:app.name})));host.innerHTML=items.length?items.map(item=>`<article class="artifact-row"><div class="artifact-icon">⇩</div><div class="artifact-info"><b>${esc(item.filename)}</b><small>${esc(item.appName)} · ${esc(item.platform)} · ${formatBytes(item.size_bytes)}</small></div><span class="artifact-hash" title="SHA-256 ${esc(item.sha256)}">${esc((item.sha256||'').slice(0,12))}…</span>${installButton(item)}</article>`).join(''):`<div class="empty-state compact"><div class="empty-symbol">⇩</div><b>${t('noPackages')}</b></div>`;}
 
 function formatBytes(bytes){const n=Number(bytes||0);if(n<1024)return `${n} B`;const units=['KB','MB','GB','TB'];let value=n/1024,index=0;while(value>=1024&&index<units.length-1){value/=1024;index++}return `${value.toFixed(value>=10?0:1)} ${units[index]}`;}
-async function loadCatalog(){try{const result=await api('/api/v1/catalog/apps?limit=200');state.apps=result.items||[];$('apiStatus').textContent=t('apiOnline');$('apiStatus').className='status-tag';$('settingsApiStatus').textContent=t('apiOnline');$('settingsApiStatus').className='status-tag';$('lastUpdated').textContent=new Date().toLocaleString(state.language,{dateStyle:'medium',timeStyle:'short'});renderApps();renderCategories();renderSaved();}catch(apiError){try{const response=await fetch(new URL('catalog/index.json',document.baseURI),{cache:'no-store'});if(!response.ok)throw new Error(`Static catalogue returned HTTP ${response.status}`);const manifest=await response.json();const records=Array.isArray(manifest.apps)?manifest.apps:[];state.apps=records.filter(app=>Array.isArray(app.artifacts)&&app.artifacts.length>0).map(app=>({...app,id:app.id||app.slug,artifacts:app.artifacts.map(artifact=>({...artifact,id:artifact.id||artifact.sha256}))}));$('apiStatus').textContent='STATIC MIRROR';$('apiStatus').className='status-tag';$('settingsApiStatus').textContent='STATIC MIRROR';$('settingsApiStatus').className='status-tag';$('lastUpdated').textContent=manifest.generated_at?new Date(manifest.generated_at).toLocaleString(state.language,{dateStyle:'medium',timeStyle:'short'}):'—';renderApps();renderCategories();renderSaved();}catch(staticError){$('apiStatus').textContent=t('apiOffline');$('apiStatus').style.color='var(--amber)';$('settingsApiStatus').textContent=t('apiOffline');toast(t('networkError'),true);}}}
+async function loadCatalog(){
+ const applyManifest=(manifest,status)=>{
+  const records=Array.isArray(manifest.apps)?manifest.apps:[];
+  state.apps=records.filter(app=>Array.isArray(app.artifacts)&&app.artifacts.length>0).map(app=>({...app,id:app.id||app.slug,artifacts:app.artifacts.map(artifact=>({...artifact,id:artifact.id||artifact.sha256}))}));
+  $('apiStatus').textContent=status;
+  $('apiStatus').className='status-tag';
+  $('settingsApiStatus').textContent=status;
+  $('settingsApiStatus').className='status-tag';
+  $('lastUpdated').textContent=manifest.generated_at?new Date(manifest.generated_at).toLocaleString(state.language,{dateStyle:'medium',timeStyle:'short'}):'—';
+  renderApps();renderCategories();renderSaved();
+ };
+ try{
+  const result=await api('/api/v1/catalog/apps?limit=200');
+  state.apps=result.items||[];
+  $('apiStatus').textContent=t('apiOnline');$('apiStatus').className='status-tag';
+  $('settingsApiStatus').textContent=t('apiOnline');$('settingsApiStatus').className='status-tag';
+  $('lastUpdated').textContent=new Date().toLocaleString(state.language,{dateStyle:'medium',timeStyle:'short'});
+  renderApps();renderCategories();renderSaved();
+  return;
+ }catch(apiError){
+  // The GitHub Release mirror is the authoritative live catalogue when a hosted
+  // FastAPI service is not configured. Fetch it on every app open, then fall back
+  // to the bundled snapshot only when the live mirror cannot be reached.
+  try{
+   const liveUrl=`https://raw.githubusercontent.com/ibra8y3-web/Apphoryn/main/apps/web/catalog/index.json?refresh=${Date.now()}`;
+   const response=await fetch(liveUrl,{cache:'no-store',mode:'cors'});
+   if(!response.ok)throw new Error(`Live Apphoryn catalogue returned HTTP ${response.status}`);
+   const manifest=await response.json();
+   applyManifest(manifest,'LIVE MIRROR');
+   return;
+  }catch(liveError){
+   try{
+    const response=await fetch(new URL('catalog/index.json',document.baseURI),{cache:'no-store'});
+    if(!response.ok)throw new Error(`Bundled catalogue returned HTTP ${response.status}`);
+    const manifest=await response.json();
+    applyManifest(manifest,'BUNDLED FALLBACK');
+   }catch(staticError){
+    $('apiStatus').textContent=t('apiOffline');$('apiStatus').style.color='var(--amber)';
+    $('settingsApiStatus').textContent=t('apiOffline');toast(t('networkError'),true);
+   }
+  }
+ }
+}
 async function loadJobs(){if(!state.adminToken){$('jobsList').innerHTML=`<div class="empty-state compact"><b>${t('noBuildJobs')}</b><p>${t('jobsAppear')}</p></div>`;return}try{const result=await api('/api/v1/admin/jobs',{headers:{'X-Apphoryn-Admin':state.adminToken}});state.jobs=result.items||[];$('metricJobs').textContent=state.jobs.length;$('jobsList').innerHTML=state.jobs.length?state.jobs.map(job=>`<article class="job-row"><span class="job-state ${job.status.includes('published')?'success':''}"></span><div class="job-info"><b>${esc(job.repository_url)}</b><small>${esc(job.git_ref)} · ${(job.targets||[]).map(esc).join(', ')} · ${new Date(job.created_at).toLocaleString()}</small></div><span class="job-status">${esc(job.status)}</span></article>`).join(''):`<div class="empty-state compact"><b>${t('noBuildJobs')}</b><p>${t('jobsAppear')}</p></div>`}catch(error){$('jobsList').innerHTML=`<div class="empty-state compact"><b>${esc(error.message)}</b></div>`}}
 function openApp(id){
  const app=state.apps.find(item=>item.id===id);if(!app)return;
