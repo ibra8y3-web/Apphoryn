@@ -28,6 +28,26 @@ class DatabaseTests(unittest.TestCase):
             self.assertEqual(second["classification_source"], "ai")
             self.assertEqual(database.list_apps("developer")[0]["topics"], ["editor"])
 
+    def test_project_classification_is_persisted_for_safe_build_decisions(self):
+        with tempfile.TemporaryDirectory() as folder:
+            database = Database(Path(folder) / "classification.sqlite3")
+            now = utc_now()
+            record = {
+                "id": "classified-app", "slug": "owner-editor", "name": "Editor",
+                "summary": "Desktop editor", "description": "A desktop application.",
+                "repository_url": "https://github.com/owner/editor", "github_repo_id": "7654321",
+                "owner": "owner", "license_spdx": "MIT", "license_eligible": True,
+                "category": "developer", "topics": ["editor"], "project_kind": "application",
+                "build_recommended": True, "classification_source": "ai",
+                "classification_reason": "README describes an installable desktop app.",
+                "created_at": now, "updated_at": now,
+            }
+            stored = database.upsert_app(record)
+            self.assertEqual(stored["project_kind"], "application")
+            self.assertTrue(stored["build_recommended"])
+            self.assertEqual(stored["classification_source"], "ai")
+            self.assertIn("installable desktop app", stored["classification_reason"])
+
     def test_stable_github_repository_id_prevents_duplicates_after_rename(self):
         with tempfile.TemporaryDirectory() as folder:
             database = Database(Path(folder) / "rename.sqlite3")
