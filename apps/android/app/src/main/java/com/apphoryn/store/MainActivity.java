@@ -133,7 +133,6 @@ public final class MainActivity extends Activity {
             throw new IllegalArgumentException("Invalid artifact identifier.");
         }
         if (!"android".equalsIgnoreCase(platform)
-                || !"apk".equalsIgnoreCase(packageType)
                 || !filename.toLowerCase(Locale.ROOT).endsWith(".apk")) {
             throw new IllegalArgumentException("This Android client currently installs verified APK files only.");
         }
