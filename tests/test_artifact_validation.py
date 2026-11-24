@@ -7,6 +7,36 @@ import unittest
 from app.artifact_validation import ArtifactValidationError, validate_artifact
 
 
+def pe_fixture(*, dll: bool = False) -> bytes:
+    data = bytearray(512)
+    pe_offset = 128
+    data[:2] = b"MZ"
+    data[0x3C:0x40] = pe_offset.to_bytes(4, "little")
+    data[pe_offset:pe_offset + 4] = b"PE\\0\\0"
+    data[pe_offset + 4:pe_offset + 6] = (0x8664).to_bytes(2, "little")
+    data[pe_offset + 6:pe_offset + 8] = (1).to_bytes(2, "little")
+    data[pe_offset + 20:pe_offset + 22] = (0xF0).to_bytes(2, "little")
+    characteristics = 0x0002 | (0x2000 if dll else 0)
+    data[pe_offset + 22:pe_offset + 24] = characteristics.to_bytes(2, "little")
+    optional = pe_offset + 24
+    data[optional:optional + 2] = (0x20B).to_bytes(2, "little")
+    data[optional + 16:optional + 20] = (0x1000).to_bytes(4, "little")
+    return bytes(data)
+
+
+def elf_fixture(*, shared_library: bool = False, entry_point: int = 0x401000) -> bytes:
+    data = bytearray(64)
+    data[:4] = b"\\x7fELF"
+    data[4] = 2
+    data[5] = 1
+    data[6] = 1
+    data[16:18] = (3 if shared_library else 2).to_bytes(2, "little")
+    data[18:20] = (62).to_bytes(2, "little")
+    data[20:24] = (1).to_bytes(4, "little")
+    data[24:32] = entry_point.to_bytes(8, "little")
+    return bytes(data)
+
+
 class ArtifactValidationTests(unittest.TestCase):
     def test_rejects_random_bytes_with_apk_extension(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -60,18 +90,31 @@ class ArtifactValidationTests(unittest.TestCase):
             result = validate_artifact(path)
             self.assertEqual(result["format"], "pkg")
 
-    def test_pe_header_is_checked_not_only_file_extension(self):
+    def test_pe_application_is_accepted_but_dll_is_rejected(self):
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / "app.exe"
-            content = bytearray(256)
-            content[:2] = b"MZ"
-            content[0x3C:0x40] = (128).to_bytes(4, "little")
-            content[128:132] = b"PE\0\0"
-            path.write_bytes(content)
+            path.write_bytes(pe_fixture())
             result = validate_artifact(path)
             self.assertTrue(result["valid"])
             self.assertEqual(result["format"], "exe")
 
+            dll = Path(folder) / "library.exe"
+            dll.write_bytes(pe_fixture(dll=True))
+            with self.assertRaisesRegex(ArtifactValidationError, "PE header"):
+                validate_artifact(dll)
+
+    def test_linux_pie_executable_is_accepted_but_shared_library_is_rejected(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "app.bin"
+            path.write_bytes(elf_fixture())
+            result = validate_artifact(path)
+            self.assertTrue(result["valid"])
+            self.assertEqual(result["format"], "bin")
+
+            library = Path(folder) / "libexample.bin"
+            library.write_bytes(elf_fixture(shared_library=True, entry_point=0))
+            with self.assertRaisesRegex(ArtifactValidationError, "shared libraries"):
+                validate_artifact(library)
 
     def test_library_jar_without_main_class_is_not_installable(self):
         with tempfile.TemporaryDirectory() as folder:
