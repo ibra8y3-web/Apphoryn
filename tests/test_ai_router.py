@@ -75,6 +75,33 @@ class AIRouterTests(unittest.TestCase):
         self.assertEqual({model.provider for model in models}, {"gemini", "groq"})
         self.assertEqual(len(models), 2)
 
+    def test_comet_free_only_accepts_only_catalog_confirmed_zero_price_models(self):
+        env = {
+            "GEMINI_API_KEY": "",
+            "GROQ_API_KEY": "",
+            "OPENROUTER_API_KEY": "",
+            "COMET_API_KEY": "comet-test-key",
+            "CLOUDFLARE_API_TOKEN": "",
+            "CLOUDFLARE_ACCOUNT_ID": "",
+            "APPHORYN_COMET_FREE_MODEL_IDS": "",
+        }
+        payload = {"data": [
+            {"id": "vendor/free", "pricing": {"prompt": "0", "completion": "0"}, "context_length": 8192},
+            {"id": "vendor/paid", "pricing": {"prompt": "0.10", "completion": "0.20"}, "context_length": 8192},
+            {"id": "vendor/unknown-price", "context_length": 8192},
+        ]}
+        with patch.dict(os.environ, env, clear=False), \
+             patch.object(ai_router, "_FREE_ONLY", True), \
+             patch.object(ai_router, "_ALLOW_CREDIT", False), \
+             patch.object(ai_router, "_request", return_value=payload) as request:
+            models, providers = ai_router.discover_models(force=True)
+        self.assertEqual([model.model for model in models], ["vendor/free"])
+        request.assert_called_once()
+        self.assertIn("/api/models", request.call_args.args[0])
+        provider = next(item for item in providers if item["provider"] == "comet")
+        self.assertTrue(provider["enabled"])
+        self.assertEqual(provider["models_discovered"], 1)
+
     def test_generation_fails_over_after_rate_limit(self):
         candidates = [
             ai_router.Candidate("openrouter", "first:free", "openai", "https://example.test/v1", "k1"),
