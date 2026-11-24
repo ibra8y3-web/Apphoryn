@@ -153,5 +153,85 @@ class ApiSmokeTests(unittest.TestCase):
         self.assertEqual({row["sha256"] for row in items[0]["artifacts"]}, {"sha-old", "sha-new"})
 
 
+    def test_download_streams_apphoryn_release_file_without_redirect(self):
+        package_bytes = b"APPHORYN-PACKAGE"
+
+        class FakeResponse:
+            status = 200
+            headers = {
+                "Content-Length": str(len(package_bytes)),
+                "Accept-Ranges": "bytes",
+                "ETag": '"package-etag"',
+            }
+
+            def __init__(self):
+                self.sent = False
+                self.closed = False
+
+            def read(self, size):
+                if self.sent:
+                    return b""
+                self.sent = True
+                return package_bytes
+
+            def close(self):
+                self.closed = True
+
+        class FakeOpener:
+            def __init__(self):
+                self.response = FakeResponse()
+                self.request = None
+
+            def open(self, request, timeout):
+                self.request = request
+                return self.response
+
+        opener = FakeOpener()
+        settings_mock = type("Settings", (), {
+            "github_owner": "ibra8y3-web",
+            "github_repository": "Apphoryn",
+            "max_artifact_bytes": 1024 * 1024,
+        })()
+        mirrored = {
+            "id": "a" * 64, "filename": "Example-Setup.exe",
+            "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/v1/Example-Setup.exe",
+        }
+        with (
+            patch("app.main.db.get_artifact", return_value=None),
+            patch("app.main.find_mirrored_artifact", return_value=mirrored),
+            patch("app.main.settings", settings_mock),
+            patch("app.main.urllib.request.build_opener", return_value=opener),
+        ):
+            response = self.client.get("/api/v1/downloads/" + "a" * 64)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.content, package_bytes)
+        self.assertIn("Example-Setup.exe", response.headers["content-disposition"])
+        self.assertEqual(opener.request.full_url, mirrored["download_url"])
+        self.assertTrue(opener.response.closed)
+
+    def test_download_rejects_upstream_project_release_urls(self):
+        opener = object()
+        settings_mock = type("Settings", (), {
+            "github_owner": "ibra8y3-web",
+            "github_repository": "Apphoryn",
+            "max_artifact_bytes": 1024 * 1024,
+        })()
+        mirrored = {
+            "id": "b" * 64, "filename": "external.exe",
+            "download_url": "https://github.com/original-owner/original-project/releases/download/v1/external.exe",
+        }
+        with (
+            patch("app.main.db.get_artifact", return_value=None),
+            patch("app.main.find_mirrored_artifact", return_value=mirrored),
+            patch("app.main.settings", settings_mock),
+            patch("app.main.urllib.request.build_opener", return_value=opener) as build_opener,
+        ):
+            response = self.client.get("/api/v1/downloads/" + "b" * 64)
+
+        self.assertEqual(response.status_code, 404)
+        build_opener.assert_not_called()
+
+
 if __name__ == "__main__":
     unittest.main()
