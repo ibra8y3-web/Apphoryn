@@ -103,7 +103,9 @@ class CatalogService:
                 if any(term in lower for term in ("screenshot", "banner", "cover", "social-preview", "og-image", "readme")):
                     continue
                 score = 0
-                if name in {"app-icon.png", "app_icon.png", "appicon.png", "icon.png", "icon.svg", "logo.png", "logo.svg"}:
+                if name in {"app-icon.png", "app_icon.png", "appicon.png", "icon.png", "icon.svg", "logo.png", "logo.svg", "ic_launcher.png", "ic_launcher.webp", "launcher.png"}:
+                    score += 110
+                elif "ic_launcher" in name or "launcher" in name:
                     score += 100
                 elif "icon" in name:
                     score += 80
