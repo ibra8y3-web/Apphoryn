@@ -47,6 +47,10 @@ class Database:
                     repository_url TEXT NOT NULL UNIQUE,
                     github_repo_id TEXT,
                     source_updated_at TEXT,
+                    project_kind TEXT NOT NULL DEFAULT 'unknown',
+                    build_recommended INTEGER NOT NULL DEFAULT 0,
+                    classification_source TEXT NOT NULL DEFAULT 'heuristic',
+                    classification_reason TEXT NOT NULL DEFAULT '',
                     homepage_url TEXT,
                     owner TEXT NOT NULL,
                     default_branch TEXT NOT NULL DEFAULT 'main',
@@ -105,6 +109,10 @@ class Database:
                 "source_commit_sha": "ALTER TABLE apps ADD COLUMN source_commit_sha TEXT",
                 "github_repo_id": "ALTER TABLE apps ADD COLUMN github_repo_id TEXT",
                 "source_updated_at": "ALTER TABLE apps ADD COLUMN source_updated_at TEXT",
+                "project_kind": "ALTER TABLE apps ADD COLUMN project_kind TEXT NOT NULL DEFAULT 'unknown'",
+                "build_recommended": "ALTER TABLE apps ADD COLUMN build_recommended INTEGER NOT NULL DEFAULT 0",
+                "classification_source": "ALTER TABLE apps ADD COLUMN classification_source TEXT NOT NULL DEFAULT 'heuristic'",
+                "classification_reason": "ALTER TABLE apps ADD COLUMN classification_reason TEXT NOT NULL DEFAULT ''",
             }.items():
                 if column not in app_columns:
                     con.execute(statement)
@@ -142,7 +150,7 @@ class Database:
         for key in ("topics_json", "translations_json", "targets_json"):
             if key in result:
                 result[key.removesuffix("_json")] = json.loads(result.pop(key) or ("{}" if key == "translations_json" else "[]"))
-        for key in ("license_eligible", "upstream_digest_verified"):
+        for key in ("license_eligible", "build_recommended", "upstream_digest_verified"):
             if key in result:
                 result[key] = bool(result[key])
         return result
@@ -163,6 +171,8 @@ class Database:
                 record["repository_url"], record.get("homepage_url"), record["owner"],
                 record.get("default_branch", "main"), record.get("source_commit_sha"),
                 repo_id, record.get("source_updated_at"),
+                record.get("project_kind", "unknown"), int(record.get("build_recommended", False)),
+                record.get("classification_source", "heuristic"), record.get("classification_reason", ""),
                 record.get("license_text", ""), record.get("license_spdx"),
                 int(record["license_eligible"]), record["category"],
                 json.dumps(record.get("topics", [])),
@@ -174,7 +184,8 @@ class Database:
                     """UPDATE apps SET
                        slug=?,name=?,summary=?,description=?,repository_url=?,homepage_url=?,owner=?,
                        default_branch=?,source_commit_sha=?,github_repo_id=COALESCE(?,github_repo_id),
-                       source_updated_at=COALESCE(?,source_updated_at),license_text=?,license_spdx=?,
+                       source_updated_at=COALESCE(?,source_updated_at),project_kind=?,build_recommended=?,
+                       classification_source=?,classification_reason=?,license_text=?,license_spdx=?,
                        license_eligible=?,category=?,topics_json=?,translations_json=?,latest_version=?,
                        release_url=?,updated_at=?
                        WHERE id=?""",
@@ -184,14 +195,17 @@ class Database:
                 con.execute(
                     """INSERT INTO apps
                        (id,slug,name,summary,description,repository_url,homepage_url,owner,default_branch,
-                        source_commit_sha,github_repo_id,source_updated_at,license_text,license_spdx,
-                        license_eligible,category,topics_json,translations_json,latest_version,release_url,
+                        source_commit_sha,github_repo_id,source_updated_at,project_kind,build_recommended,
+                        classification_source,classification_reason,license_text,license_spdx,license_eligible,
+                        category,topics_json,translations_json,latest_version,release_url,
                         created_at,updated_at)
-                       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
                     (app_id, record["slug"], record["name"], record["summary"], record["description"],
                      record["repository_url"], record.get("homepage_url"), record["owner"],
                      record.get("default_branch", "main"), record.get("source_commit_sha"), repo_id,
-                     record.get("source_updated_at"), record.get("license_text", ""),
+                     record.get("source_updated_at"), record.get("project_kind", "unknown"),
+                     int(record.get("build_recommended", False)), record.get("classification_source", "heuristic"),
+                     record.get("classification_reason", ""), record.get("license_text", ""),
                      record.get("license_spdx"), int(record["license_eligible"]), record["category"],
                      json.dumps(record.get("topics", [])),
                      json.dumps(record.get("translations", {}), ensure_ascii=False),
