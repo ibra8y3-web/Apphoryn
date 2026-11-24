@@ -49,6 +49,23 @@ class CatalogServiceTests(unittest.TestCase):
             self.assertEqual(result["artifacts"], [])
             self.assertEqual(len(database.list_apps()), 1)
 
+    def test_project_icon_prefers_a_real_source_icon_over_owner_avatar(self):
+        github = Mock()
+        github.request.return_value = {"tree": [
+            {"path": "README.md", "type": "blob", "size": 2000},
+            {"path": "docs/screenshots/icon.png", "type": "blob", "size": 40000},
+            {"path": "assets/app-icon.png", "type": "blob", "size": 12000},
+            {"path": "assets/banner.png", "type": "blob", "size": 90000},
+        ]}
+        service = CatalogService(github=github, database=Mock())
+        icon = service._resolve_project_icon(
+            "owner", "app", "main", "https://avatars.githubusercontent.com/u/12345?v=4"
+        )
+        self.assertEqual(
+            icon,
+            "https://raw.githubusercontent.com/owner/app/main/assets/app-icon.png",
+        )
+
     def test_missing_license_blocks_import(self):
         github = Mock()
         github.get_repository.return_value = {"name": "NoLicense", "license": None, "archived": False}
