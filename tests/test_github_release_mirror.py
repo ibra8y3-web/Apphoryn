@@ -58,6 +58,19 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
             self.assertEqual(manifest["apps"][0]["artifacts"][0]["sha256"], digest)
             self.assertIn("owner/Apphoryn/releases/download", manifest["apps"][0]["artifacts"][0]["download_url"])
 
+    def test_mark_app_checked_persists_round_robin_release_check_timestamp(self):
+        manifest = {"schema_version": 1, "apps": [{
+            "id": "tool", "repository_url": "https://github.com/owner/tool", "artifacts": [],
+        }]}
+        mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn")
+        mirror._read_catalog = Mock(return_value=(manifest, "old-sha"))
+        mirror.request = Mock(return_value={})
+        self.assertTrue(mirror.mark_app_checked("https://github.com/owner/tool"))
+        _, _, payload = mirror.request.call_args.args
+        written = json.loads(base64.b64decode(payload["content"]).decode("utf-8"))
+        self.assertTrue(written["apps"][0]["scout_checked_at"])
+        self.assertEqual(written["apps"][0]["repository_url"], "https://github.com/owner/tool")
+
     def test_publish_build_outputs_updates_existing_app_record(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder) / "artifacts"
