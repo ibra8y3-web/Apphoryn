@@ -15,9 +15,12 @@ from pydantic import BaseModel, Field
 from .config import ROOT, settings
 from .database import db
 from .services import BuildService, CatalogService, store_uploaded_artifact
+from .github_release_mirror import GitHubReleaseMirror
 
-app = FastAPI(title="Apphoryn API", version="0.1.0", description="Discover, build, verify and distribute open-source software.")
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["GET", "POST"], allow_headers=["*"])
+app = FastAPI(title="Apphoryn API", version="0.2.0-alpha", description="Discover, build, verify and distribute open-source software.")
+cors_origins = [origin.strip() for origin in os.getenv("APPHORYN_CORS_ORIGINS", "").split(",") if origin.strip()]
+if cors_origins:
+    app.add_middleware(CORSMiddleware, allow_origins=cors_origins, allow_methods=["GET", "POST"], allow_headers=["*"])
 catalog = CatalogService()
 builder = BuildService(catalog=catalog)
 
@@ -42,7 +45,7 @@ def require_admin(token: str | None) -> None:
 
 @app.get("/api/v1/health")
 def health():
-    return {"status": "ok", "name": settings.app_name, "version": "0.1.0", "catalog_count": len(db.list_apps(limit=200))}
+    return {"status": "ok", "name": settings.app_name, "version": "0.2.0-alpha", "catalog_count": len(db.list_apps(limit=200))}
 
 
 @app.get("/api/v1/catalog/apps")
@@ -74,7 +77,11 @@ def discovery_search(q: str = Query(..., min_length=2, max_length=120), limit: i
 def import_repository(payload: ImportRequest, x_apphoryn_admin: str | None = Header(default=None)):
     require_admin(x_apphoryn_admin)
     try:
-        return catalog.import_repository(payload.repository_url, payload.mirror_release_assets)
+        result = catalog.import_repository(payload.repository_url, payload.mirror_release_assets)
+        if settings.github_token and settings.github_owner and settings.github_repository:
+            mirror = GitHubReleaseMirror(settings.github_token, f"{settings.github_owner}/{settings.github_repository}", settings.github_ref)
+            result["mirror"] = mirror.publish_app(result["app"], result["artifacts"])
+        return result
     except ValueError as exc:
         raise HTTPException(422, str(exc)) from exc
     except Exception as exc:
@@ -160,6 +167,5 @@ def download_artifact(artifact_id: str):
     return FileResponse(path, filename=artifact["filename"], media_type="application/octet-stream")
 
 
-# Mount the responsive storefront after API routes so it cannot shadow them.
 web_dir = ROOT / "apps" / "web"
 app.mount("/", StaticFiles(directory=str(web_dir), html=True), name="storefront")
