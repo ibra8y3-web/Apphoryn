@@ -29,24 +29,29 @@ class RepositoryCrawler:
     def _load_state(self) -> dict[str, Any]:
         if not self.state_path.exists():
             return {
-                "schema_version": 2,
+                "schema_version": 3,
                 "last_repository_id": 0,
+                "last_refresh_repository_id": 0,
                 "totals": {
                     "repository_pages": 0,
                     "repositories_seen": 0,
                     "empty_tail_checks": 0,
+                    "refresh_passes_completed": 0,
                 },
             }
         try:
             state = json.loads(self.state_path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError) as exc:
             raise RepositoryCrawlError(f"Could not read Scout checkpoint: {exc}") from exc
-        if not isinstance(state, dict) or state.get("schema_version") != 2:
+        if not isinstance(state, dict) or state.get("schema_version") not in {2, 3}:
             raise RepositoryCrawlError("Scout checkpoint has an unsupported schema version.")
         cursor = state.get("last_repository_id")
         if not isinstance(cursor, int) or cursor < 0:
             raise RepositoryCrawlError("Scout checkpoint repository ID is invalid.")
+        state["schema_version"] = 3
+        state.setdefault("last_refresh_repository_id", 0)
         state.setdefault("totals", {})
+        state["totals"].setdefault("refresh_passes_completed", 0)
         return state
 
     def save(self) -> None:
@@ -59,13 +64,16 @@ class RepositoryCrawler:
         self,
         max_repositories: int = 200,
         max_pages: int = 25,
+        cursor_key: str = "last_repository_id",
     ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+        if cursor_key not in {"last_repository_id", "last_refresh_repository_id"}:
+            raise RepositoryCrawlError("Unsupported Scout cursor key.")
         max_repositories = max(1, min(int(max_repositories), 10000))
         max_pages = max(1, min(int(max_pages), 100))
         records: list[dict[str, Any]] = []
         seen_ids: set[int] = set()
         pages = 0
-        cursor = int(self.state["last_repository_id"])
+        cursor = int(self.state[cursor_key])
         reached_current_end = False
 
         while len(records) < max_repositories and pages < max_pages:
@@ -119,14 +127,16 @@ class RepositoryCrawler:
                 reached_current_end = True
                 break
 
-        self.state["last_repository_id"] = cursor
+        self.state[cursor_key] = cursor
         self.state["totals"]["repositories_seen"] = int(
             self.state["totals"].get("repositories_seen", 0)
         ) + len(records)
         report = {
             "repositories": len(records),
             "repository_pages": pages,
-            "last_repository_id": cursor,
+            "cursor_key": cursor_key,
+            "last_repository_id": self.state["last_repository_id"],
+            "last_refresh_repository_id": self.state["last_refresh_repository_id"],
             "reached_current_end": reached_current_end,
             "totals": dict(self.state["totals"]),
         }
