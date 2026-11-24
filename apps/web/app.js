@@ -24,7 +24,15 @@ function navigate(view){const target=$('view-'+view);if(!target)return;document.
 function closeSidebar(){$('sidebar').classList.remove('open');$('sidebarScrim').classList.remove('open');}
 function localizedSummary(app){const value=app.translations&&app.translations[state.language];return typeof value==='string'&&!value.trim().startsWith('{')?value:(app.summary||app.description||'');}
 function localizedDescription(app){const value=app.description_translations&&app.description_translations[state.language];return typeof value==='string'&&!value.trim().startsWith('{')?value:(app.description||app.summary||'');}
-function appIconMarkup(app,className='app-logo'){const initial=esc((app.name||'?').trim().slice(0,1).toUpperCase());const url=String(app.icon_url||'');const safe=/^https:\/\/avatars\.githubusercontent\.com\/\d+(?:\?[^#]*)?$/i.test(url);return `<div class="${className}"><span>${initial}</span>${safe?`<img src="${esc(url)}" alt="" loading="lazy" decoding="async" onerror="this.remove()">`:''}</div>`;}
+function appIconMarkup(app,className='app-logo'){
+ const initial=esc((app.name||'?').trim().slice(0,1).toUpperCase());
+ const url=String(app.icon_url||'');
+ const avatar=/^https:\/\/avatars\.githubusercontent\.com\/\d+(?:\?[^#]*)?$/i.test(url);
+ const repository=String(app.repository_url||'').match(/^https:\/\/github\.com\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)$/i);
+ const raw=repository&&url.startsWith(`https://raw.githubusercontent.com/${repository[1]}/${repository[2]}/`)&&!/[?#]/.test(url);
+ const safe=avatar||raw;
+ return `<div class="${className}"><span>${initial}</span>${safe?`<img src="${esc(url)}" alt="" loading="lazy" decoding="async" onerror="this.remove()">`:''}</div>`;
+}
 function isApphorynReleaseAsset(url){try{const parsed=new URL(String(url||''));return parsed.protocol==='https:'&&parsed.hostname==='github.com'&&!parsed.username&&!parsed.password&&!parsed.search&&!parsed.hash&&parsed.pathname.startsWith('/ibra8y3-web/Apphoryn/releases/download/');}catch{return false;}}
 function artifactDownloadUrl(artifact){return apiUrl(`/api/v1/downloads/${encodeURIComponent(artifact.id||artifact.sha256||'')}`);}
 function appCard(app){const saved=state.saved.includes(app.id);const artifacts=app.artifacts||[];const platforms=[...new Set(artifacts.map(a=>a.platform))];return `<article class="app-card" data-app-id="${esc(app.id)}"><div class="app-card-top">${appIconMarkup(app)}<div class="app-card-main"><h3>${esc(app.name)}</h3><div class="app-owner">${esc(app.owner||'')} · ${esc(app.latest_version||'Source project')}</div></div><button class="save-button ${saved?'saved':''}" data-save="${esc(app.id)}" aria-label="Save app">${saved?'♥':'♡'}</button></div><p class="app-summary">${esc(localizedSummary(app))}</p><div class="tag-row"><span class="tag">${esc(app.category||'other')}</span>${platforms.map(p=>`<span class="tag platform">${esc(p)}</span>`).join('')}</div><div class="app-card-bottom"><span class="license-label">${esc(app.license_spdx||'License not identified')}</span><span class="artifact-count"><strong>${artifacts.length}</strong> ${t('packages')}</span></div></article>`;}
