@@ -43,21 +43,32 @@ def publish_ai_provider_status(mirror: GitHubReleaseMirror) -> dict[str, object]
     """Discover configured models once per Scout run and publish a credential-free status."""
     payload = ai_router.public_model_catalog(force=True)
     providers = []
+    discovered_models = payload.get("models") or []
     for item in payload.get("providers", []):
         if not isinstance(item, dict):
             continue
+        provider_name = str(item.get("provider") or "")
         configured = bool(item.get("configured"))
         enabled = bool(item.get("enabled"))
-        count = max(0, int(item.get("models_discovered") or 0))
+        provider_models = [
+            {
+                "model": str(model.get("model") or "")[:180],
+                "free_class": str(model.get("free_class") or "")[:80],
+            }
+            for model in discovered_models
+            if isinstance(model, dict) and model.get("provider") == provider_name and model.get("model")
+        ][:20]
+        count = max(0, int(item.get("models_discovered") or len(provider_models)))
         state = "available" if enabled and count else (
             "paused" if configured and not enabled else
             "unavailable" if configured else
             "not_configured"
         )
         providers.append({
-            "provider": str(item.get("provider") or ""),
+            "provider": provider_name,
             "state": state,
             "models_discovered": count,
+            "models": provider_models,
         })
     status: dict[str, object] = {
         "checked_at": datetime.now(timezone.utc).isoformat(),
