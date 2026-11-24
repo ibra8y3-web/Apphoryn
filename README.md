@@ -116,3 +116,8 @@ GitHub Actions runs the local validation suite. Unit tests cover package-format 
 ## License
 
 The Apphoryn platform source in this repository is released under the MIT License. Imported applications and their binaries remain subject to their upstream licenses and notices.
+
+
+## Autonomous store updates
+
+The Apphoryn Scout GitHub Actions workflow runs hourly to search application-focused open-source categories, refresh release metadata, mirror verified installer files, and dispatch bounded isolated builds for supported applications without available packages. The public catalogue only lists applications after Apphoryn has a verified installable artifact. Native Android and desktop clients can install Apphoryn-owned release assets from within the application after SHA-256 verification.
