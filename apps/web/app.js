@@ -52,7 +52,7 @@ function nativeStorePlatform(){
 function artifactCanInstallHere(artifact){
  const platform=nativeStorePlatform();
  const extension=String(artifact.filename||'').split('.').pop().toLowerCase();
- const allowed={android:['apk'],windows:['exe','msi','msix','appx'],linux:['deb','rpm','appimage'],macos:['pkg','dmg']};
+ const allowed={android:['apk','xapk'],windows:['exe','msi','msix','appx'],linux:['deb','rpm','appimage'],macos:['pkg','dmg']};
  return Boolean(platform&&artifact.platform===platform&&(allowed[platform]||[]).includes(extension));
 }
 function installButton(artifact){
