@@ -96,7 +96,7 @@ class CatalogServiceTests(unittest.TestCase):
             pe_offset = 128
             payload[:2] = b"MZ"
             payload[0x3C:0x40] = pe_offset.to_bytes(4, "little")
-            payload[pe_offset:pe_offset + 4] = b"PE\\0\\0"
+            payload[pe_offset:pe_offset + 4] = b"PE\0\0"
             payload[pe_offset + 4:pe_offset + 6] = (0x8664).to_bytes(2, "little")
             payload[pe_offset + 6:pe_offset + 8] = (1).to_bytes(2, "little")
             payload[pe_offset + 20:pe_offset + 22] = (0xF0).to_bytes(2, "little")
@@ -151,7 +151,7 @@ class CatalogServiceTests(unittest.TestCase):
             pe_offset = 128
             pe[:2] = b"MZ"
             pe[0x3C:0x40] = pe_offset.to_bytes(4, "little")
-            pe[pe_offset:pe_offset + 4] = b"PE\\0\\0"
+            pe[pe_offset:pe_offset + 4] = b"PE\0\0"
             pe[pe_offset + 4:pe_offset + 6] = (0x8664).to_bytes(2, "little")
             pe[pe_offset + 6:pe_offset + 8] = (1).to_bytes(2, "little")
             pe[pe_offset + 20:pe_offset + 22] = (0xF0).to_bytes(2, "little")
