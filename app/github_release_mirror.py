@@ -250,7 +250,10 @@ class GitHubReleaseMirror:
                     build_attempts.append(attempt)
                     known_attempts.add(attempt_key)
 
-            merged_item = {**previous, **raw}
+            previous_stamp = max(str(previous.get(field) or "") for field in ("scout_checked_at", "updated_at", "source_updated_at", "created_at"))
+            raw_stamp = max(str(raw.get(field) or "") for field in ("scout_checked_at", "updated_at", "source_updated_at", "created_at"))
+            preferred, fallback = (previous, raw) if previous_stamp > raw_stamp else (raw, previous)
+            merged_item = {**fallback, **preferred}
             merged_item["artifacts"] = artifacts
             merged_item["build_refs"] = build_refs
             merged_item["build_attempts"] = build_attempts
@@ -521,6 +524,7 @@ class GitHubReleaseMirror:
 
         app["platforms"] = sorted({str(item.get("platform")) for item in app["artifacts"] if item.get("platform")})
         app["project_status"] = "installable" if app["artifacts"] else "source_available"
+        app["scout_checked_at"] = datetime.now(timezone.utc).isoformat()
         app.setdefault("build_refs", [])
         if git_ref not in app["build_refs"]:
             app["build_refs"].append(git_ref)
