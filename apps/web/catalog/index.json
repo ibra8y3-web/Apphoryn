@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T20:30:21.309532+00:00",
+  "generated_at": "2026-11-24T20:30:31.974641+00:00",
   "apps": [
     {
       "id": "kunzisoft-keepassdx",
@@ -39,8 +39,45 @@
       "release_url": "https://github.com/Kunzisoft/KeePassDX/releases/tag/4.5.9",
       "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kunzisoft-keepassdx-4.5.9",
       "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kunzisoft-keepassdx-4.5.9/THIRD-PARTY-NOTICE-kunzisoft-keepassdx.txt",
-      "artifacts": [],
-      "platforms": [],
+      "artifacts": [
+        {
+          "id": "5dd79941ab75e15e7b30d7b7b11068e97d51f60727794adcdc3b8dd4c85c8875",
+          "filename": "KeePassDX-4.5.9-free.apk",
+          "original_filename": "KeePassDX-4.5.9-free.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "4.5.9",
+          "size_bytes": 16837345,
+          "sha256": "5dd79941ab75e15e7b30d7b7b11068e97d51f60727794adcdc3b8dd4c85c8875",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "7d55b8af210381aabf960f07e17cf7857b6d2a642ca2da6bf0bdf1b200362f04",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kunzisoft-keepassdx-4.5.9/KeePassDX-4.5.9-free.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kunzisoft-keepassdx-4.5.9"
+        },
+        {
+          "id": "7f99ce824be52c070b43e7e29075a0460847598fcffbe251a71a7a03e0bd173d",
+          "filename": "KeePassDX-4.5.9-libre.apk",
+          "original_filename": "KeePassDX-4.5.9-libre.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "4.5.9",
+          "size_bytes": 16831506,
+          "sha256": "7f99ce824be52c070b43e7e29075a0460847598fcffbe251a71a7a03e0bd173d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "7d55b8af210381aabf960f07e17cf7857b6d2a642ca2da6bf0bdf1b200362f04",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kunzisoft-keepassdx-4.5.9/KeePassDX-4.5.9-libre.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kunzisoft-keepassdx-4.5.9"
+        }
+      ],
+      "platforms": [
+        "android"
+      ],
       "build_attempts": [
         {
           "git_ref": "a4b10536566ed8d75948971073be20e730e25e33",
@@ -52,7 +89,14 @@
           ],
           "requested_at": "2026-11-24T19:10:14.296998+00:00"
         }
-      ]
+      ],
+      "github_repo_id": "107244490",
+      "source_updated_at": "2026-11-24T18:43:05Z",
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "The repository describes reusable code, a package, SDK, or framework rather than a standalone installer.",
+      "project_status": "installable"
     },
     {
       "id": "localsend-localsend",
