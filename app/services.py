@@ -87,6 +87,7 @@ class CatalogService:
             spdx = license_info.get("spdx_id")
             topics = repo.get("topics") or []
             candidates.append({
+                "id": str(repo.get("id") or ""),
                 "name": repo.get("name", ""),
                 "full_name": repo.get("full_name", ""),
                 "description": repo.get("description") or "",
@@ -97,6 +98,7 @@ class CatalogService:
                 "archived": bool(repo.get("archived")),
                 "stars": int(repo.get("stargazers_count") or 0),
                 "updated_at": repo.get("updated_at"),
+                "source_updated_at": repo.get("updated_at"),
                 "default_branch": repo.get("default_branch") or "main",
                 "topics": topics,
             })
@@ -106,6 +108,8 @@ class CatalogService:
         canonical = canonical_repository_url(repository_url)
         owner, repo_name = _repository_parts(canonical)
         repo = self.github.get_repository(owner, repo_name)
+        canonical = canonical_repository_url(str(repo.get("html_url") or canonical))
+        owner, repo_name = _repository_parts(canonical)
         license_info = repo.get("license") or {}
         spdx = license_info.get("spdx_id")
         eligible = license_allows_redistribution(spdx)
@@ -151,6 +155,8 @@ class CatalogService:
             "summary": generated["summary"],
             "description": generated["description"],
             "repository_url": canonical,
+            "github_repo_id": str(repo.get("id") or "") or None,
+            "source_updated_at": repo.get("updated_at"),
             "homepage_url": repo.get("homepage") or None,
             "owner": owner,
             "default_branch": repo.get("default_branch") or "main",
