@@ -83,6 +83,12 @@ jobs:
         env:
           REPOSITORY_URL: ${{ inputs.repository_url }}
           GIT_REF: ${{ inputs.git_ref }}
+          # Release signing credentials are used only by this trusted publisher,
+          # never by the third-party source-build runners above.
+          APPHORYN_ANDROID_KEYSTORE_BASE64: ${{ secrets.APPHORYN_ANDROID_KEYSTORE_BASE64 }}
+          APPHORYN_ANDROID_KEYSTORE_PASSWORD: ${{ secrets.APPHORYN_ANDROID_KEYSTORE_PASSWORD }}
+          APPHORYN_ANDROID_KEY_ALIAS: ${{ secrets.APPHORYN_ANDROID_KEY_ALIAS }}
+          APPHORYN_ANDROID_KEY_PASSWORD: ${{ secrets.APPHORYN_ANDROID_KEY_PASSWORD }}
           TARGET: ${{ matrix.target }}
         run: python scripts/ci_build.py --repository "$REPOSITORY_URL" --ref "$GIT_REF" --target "$TARGET" --output "artifacts/${{ matrix.target }}"
       - name: Upload platform build output
