@@ -69,9 +69,9 @@ function validateInstallRequest(payload, actualPlatform = process.platform) {
   }
   const extension = extensionOf(filename);
   const allowed = {
-    windows: new Set([".exe", ".msi"]),
+    windows: new Set([".exe", ".msi", ".msix", ".appx"]),
     linux: new Set([".deb", ".rpm", ".appimage"]),
-    macos: new Set([".pkg"])
+    macos: new Set([".pkg", ".dmg"])
   };
   if (!allowed[platform] || !allowed[platform].has(extension)) {
     throw new TypeError(`The ${platform} client cannot install this package format yet.`);
@@ -170,11 +170,91 @@ function spawnDetached(command, args) {
   });
 }
 
+function runCommand(command, args, timeoutMs = 120000) {
+  return new Promise((resolve, reject) => {
+    const child = spawn(command, args, { stdio: ["ignore", "pipe", "pipe"], windowsHide: true });
+    let stdout = "";
+    let stderr = "";
+    const collect = (current, chunk) => (current + chunk.toString("utf8")).slice(-12000);
+    child.stdout.on("data", (chunk) => { stdout = collect(stdout, chunk); });
+    child.stderr.on("data", (chunk) => { stderr = collect(stderr, chunk); });
+    const timer = setTimeout(() => {
+      child.kill();
+      reject(new Error(`${command} timed out while processing the installer.`));
+    }, timeoutMs);
+    child.once("error", (error) => {
+      clearTimeout(timer);
+      reject(error);
+    });
+    child.once("close", (code) => {
+      clearTimeout(timer);
+      if (code === 0) resolve({ stdout, stderr });
+      else reject(new Error(`${command} failed with exit code ${code}: ${(stderr || stdout).trim().slice(-1200)}`));
+    });
+  });
+}
+
+async function findAppBundles(root, depth = 4) {
+  if (depth < 0) return [];
+  const results = [];
+  const entries = await fsp.readdir(root, { withFileTypes: true });
+  for (const entry of entries) {
+    const candidate = path.join(root, entry.name);
+    if (entry.isSymbolicLink()) continue;
+    if (entry.isDirectory() && entry.name.toLowerCase().endsWith(".app")) {
+      results.push(candidate);
+      continue;
+    }
+    if (entry.isDirectory() && depth > 0 && !entry.name.startsWith(".")) {
+      results.push(...await findAppBundles(candidate, depth - 1));
+    }
+  }
+  return results;
+}
+
+async function installWindowsAppx(filePath) {
+  // PowerShell single-quoted string escaping is applied to a generated private-cache path.
+  const literalPath = String(filePath).replace(/'/g, "''");
+  const command = `Add-AppxPackage -LiteralPath '${literalPath}' -ErrorAction Stop`;
+  const result = await runCommand("powershell.exe", ["-NoProfile", "-NonInteractive", "-Command", command], 300000);
+  return { started: true, message: "Windows App Installer completed the MSIX/APPX package operation.", output: result.stdout.trim().slice(-1200) };
+}
+
+async function installMacDmg(filePath) {
+  const tempRoot = await fsp.mkdtemp(path.join(os.tmpdir(), "apphoryn-dmg-"));
+  const mountPoint = path.join(tempRoot, "mount");
+  await fsp.mkdir(mountPoint);
+  let mounted = false;
+  try {
+    await runCommand("hdiutil", ["attach", "-nobrowse", "-readonly", "-mountpoint", mountPoint, filePath], 180000);
+    mounted = true;
+    const bundles = await findAppBundles(mountPoint);
+    if (bundles.length !== 1) {
+      throw new Error(bundles.length
+        ? "The DMG contains multiple app bundles; automatic selection was refused."
+        : "The DMG contains no application bundle that Apphoryn can install.");
+    }
+    const sourceApp = bundles[0];
+    const destinationApp = path.join("/Applications", path.basename(sourceApp));
+    const quote = (value) => "'" + String(value).replace(/'/g, "'\\''") + "'";
+    const shellCommand = `/usr/bin/ditto ${quote(sourceApp)} ${quote(destinationApp)}`;
+    const appleScript = `do shell script ${JSON.stringify(shellCommand)} with administrator privileges`;
+    await runCommand("osascript", ["-e", appleScript], 600000);
+    return { started: true, message: `Installed ${path.basename(sourceApp)} into /Applications.` };
+  } finally {
+    if (mounted) {
+      await runCommand("hdiutil", ["detach", "-force", mountPoint], 60000).catch(() => {});
+    }
+    await fsp.rm(tempRoot, { recursive: true, force: true }).catch(() => {});
+  }
+}
+
 async function startNativeInstaller(filePath, extension, platform = process.platform) {
   const target = normalizedPlatform(platform);
   if (target === "windows") {
     if (extension === ".msi") return spawnDetached("msiexec.exe", ["/i", filePath]);
     if (extension === ".exe") return spawnDetached(filePath, []);
+    if (extension === ".msix" || extension === ".appx") return installWindowsAppx(filePath);
   }
   if (target === "linux") {
     if (extension === ".deb") return spawnDetached("pkexec", ["dpkg", "-i", filePath]);
@@ -190,6 +270,7 @@ async function startNativeInstaller(filePath, extension, platform = process.plat
     const script = `do shell script ${JSON.stringify(command)} with administrator privileges`;
     return spawnDetached("osascript", ["-e", script]);
   }
+  if (target === "macos" && extension === ".dmg") return installMacDmg(filePath);
   throw new Error(`No native installer adapter is available for ${target} ${extension} packages.`);
 }
 
