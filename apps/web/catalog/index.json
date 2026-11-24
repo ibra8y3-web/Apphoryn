@@ -135,7 +135,19 @@
       "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-synthetic-sciences-openscience-v2.0.153",
       "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-synthetic-sciences-openscience-v2.0.153/THIRD-PARTY-NOTICE-synthetic-sciences-openscience.txt",
       "artifacts": [],
-      "platforms": []
+      "platforms": [],
+      "build_attempts": [
+        {
+          "git_ref": "fea7c5e8c5b710069a765cb07fbfea844440fb6b",
+          "targets": [
+            "android",
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-24T19:12:12.895868+00:00"
+        }
+      ]
     },
     {
       "id": "nextcloud-server",
