@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T23:17:37.991576+00:00",
+  "generated_at": "2026-11-24T23:17:57.146857+00:00",
   "apps": [
     {
       "id": "arise1881-cloudtune",
@@ -720,6 +720,55 @@
         }
       ],
       "icon_url": "https://avatars.githubusercontent.com/u/220546587?v=4"
+    },
+    {
+      "id": "recodehive-recode-website",
+      "slug": "recodehive-recode-website",
+      "artifacts": [],
+      "name": "recode-website",
+      "summary": "Open-source RecodeHive website for learning GitHub skills, collaborating, contributing to open source, and accessing tutorials, documentation, and community opportunities.",
+      "description": "RecodeHive is an open-source project and website where developers learn by collaborating, get paid for technical writing, and gain access to real-world projects and sponsorship opportunities. The repository contains the public site, documentation, blog, learning content, community guidelines, and custom Docusaurus plugins. It is built with Docusaurus 3, React, TypeScript, Tailwind CSS 4, Radix UI, and Framer Motion. Local development uses Node.js 20.9–22 with npm install and npm run start; Docker and Docker Compose are optional. A GitHub personal access token can be supplied as GITHUB_TOKEN and DOCUSAURUS_GIT_TOKEN to avoid GitHub API rate limits and populate discussions, releases, and sponsors pages. Production build requires network access and can be run with npm run build and npm run serve.",
+      "translations": {
+        "en": "Open-source RecodeHive website for learning GitHub skills, collaborating, contributing to open source, and accessing tutorials, documentation, and community opportunities.",
+        "ar": "موقع RecodeHive مفتوح المصدر يساعد المطورين على تعلّم مهارات GitHub والتعاون والمساهمة في مشاريع مفتوحة المصدر والوصول إلى الدروس والوثائق وفرص المجتمع."
+      },
+      "description_translations": {
+        "en": "RecodeHive is an open-source project and website where developers learn by collaborating, get paid for technical writing, and gain access to real-world projects and sponsorship opportunities. The repository contains the public site, documentation, blog, learning content, community guidelines, and custom Docusaurus plugins. It is built with Docusaurus 3, React, TypeScript, Tailwind CSS 4, Radix UI, and Framer Motion. Local development uses Node.js 20.9–22 with npm install and npm run start; Docker and Docker Compose are optional. A GitHub personal access token can be supplied as GITHUB_TOKEN and DOCUSAURUS_GIT_TOKEN to avoid GitHub API rate limits and populate discussions, releases, and sponsors pages. Production build requires network access and can be run with npm run build and npm run serve.",
+        "ar": "RecodeHive مشروع وموقع مفتوح المصدر يتعلّم فيه المطورون عبر التعاون، ويحصلون على أجر مقابل الكتابة التقنية، ويصلون إلى مشاريع واقعية وفرص رعاية. يحتوي المستودع على الموقع العام والوثائق والمدونة والمحتوى التعليمي وإرشادات المجتمع وإضافات Docusaurus مخصصة. يعتمد البناء على Docusaurus 3 وReact وTypeScript وTailwind CSS 4 وRadix UI وFramer Motion. يستخدم التطوير المحلي Node.js 20.9–22 مع npm install وnpm run start، بينما Docker وDocker Compose اختياريان. يمكن إدخال رمز GitHub personal access token باسم GITHUB_TOKEN وDOCUSAURUS_GIT_TOKEN لتجنّب قيود معدل GitHub API وتعبئة صفحات Discussions وReleases وSponsors. يتطلب بناء الإنتاج الوصول إلى الشبكة، ويمكن تشغيله باستخدام npm run build وnpm run serve."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://raw.githubusercontent.com/recodehive/recode-website/main/static/img/logo.png",
+      "repository_url": "https://github.com/recodehive/recode-website",
+      "github_repo_id": "973180666",
+      "source_updated_at": "2026-11-24T22:43:55Z",
+      "homepage_url": "https://www.recodehive.com",
+      "owner": "recodehive",
+      "default_branch": "main",
+      "source_commit_sha": "f6a08fde65a0e6ad0882553e5f94c9fc162e504e",
+      "license_text": "MIT License\n\nCopyright (c) 2025 recode hive\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "The repository is the source code for RecodeHive's public website, an end-user web application built with Docusaurus, React, and TypeScript. It includes documented npm and Docker build/run paths, so automatic source build is recommended.",
+      "category": "other",
+      "topics": [
+        "data",
+        "github",
+        "hacktoberfest",
+        "hacktoberfest2026",
+        "hf26challenge",
+        "opensource",
+        "tutorials",
+        "website"
+      ],
+      "latest_version": "v1.0.6-recode",
+      "release_url": "https://github.com/recodehive/recode-website/releases/tag/v1.0.6-recode",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "cognipilot-rumoca",
