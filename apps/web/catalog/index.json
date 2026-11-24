@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T23:46:17.505427+00:00",
+  "generated_at": "2026-11-24T23:46:29.079050+00:00",
   "apps": [
     {
       "id": "706972745-assetmanager",
@@ -2875,6 +2875,52 @@
         "gpui",
         "rust",
         "tailscale"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "ashishagrawal101-tok2tube",
+      "slug": "ashishagrawal101-tok2tube",
+      "artifacts": [],
+      "name": "tok2tube",
+      "summary": "Post your TikTok videos to YouTube Shorts without the watermark: a free desktop app that runs on your PC with your own YouTube sign-in.",
+      "description": "Post your TikTok videos to YouTube Shorts without the watermark: a free desktop app that runs on your PC with your own YouTube sign-in.",
+      "translations": {
+        "en": {
+          "summary": "Post your TikTok videos to YouTube Shorts without the watermark: a free desktop app that runs on your PC with your own YouTube sign-in.",
+          "description": "Post your TikTok videos to YouTube Shorts without the watermark: a free desktop app that runs on your PC with your own YouTube sign-in."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/AshishAgrawal101/tok2tube/main/icon.png",
+      "repository_url": "https://github.com/AshishAgrawal101/tok2tube",
+      "github_repo_id": "1470795328",
+      "source_updated_at": "2026-11-24T20:40:54Z",
+      "homepage_url": null,
+      "owner": "AshishAgrawal101",
+      "default_branch": "main",
+      "source_commit_sha": "1e6e09eeaf03b0883d33043d7979cd4e26aab236",
+      "license_text": "MIT License\n\nCopyright (c) 2026 AshishAgrawal101\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "content-creator",
+        "desktop-app",
+        "tiktok",
+        "youtube",
+        "youtube-shorts",
+        "yt-dlp"
       ],
       "latest_version": null,
       "release_url": null,
