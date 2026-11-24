@@ -82,6 +82,17 @@ The importer skips non-installable sidecars and the large Google Play-specific L
 
 The first run needs network access to GitHub and Android SDK build-tools because APK imports are rejected unless \`apksigner\` can validate their signatures. If \`apksigner\` is unavailable, APKs are skipped rather than marked as verified.
 
+### AI classification and safe build routing
+
+The discovery worker records a project type before suggesting an automatic source build:
+
+- `application` and `developer_tool`: eligible for automatic native-build fallback when `APPHORYN_AUTO_BUILD_TARGETS` is explicitly enabled and no verified installer exists.
+- `library`, `framework`, `service`, `documentation`, and `unknown`: retained in the source workbench, but not automatically sent to installer build adapters.
+- When `APPHORYN_AI_API_KEY` and `APPHORYN_AI_MODEL` are configured, the OpenAI-compatible description engine creates bounded factual descriptions and classifies the repository using its metadata and README excerpt. Without those credentials, a conservative evidence-based fallback is used.
+- Previously heuristic source records are revisited when AI credentials become available so their classification can be upgraded without deleting or re-importing the project.
+
+AI output is treated as metadata, not proof that a project can compile, that a binary is safe, or that redistribution is permitted. License checks, adapter detection, package validation, SHA-256 checks and Apphoryn-owned publication remain separate gates.
+
 ### Optional automatic source builds
 
 In **Settings → Secrets and variables → Actions → Variables**, add:
