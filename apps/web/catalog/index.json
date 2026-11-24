@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T20:30:16.749348+00:00",
+  "generated_at": "2026-11-24T20:30:21.309532+00:00",
   "apps": [
     {
       "id": "kunzisoft-keepassdx",
@@ -471,8 +471,28 @@
       "release_url": "https://github.com/RikkaApps/Shizuku/releases/tag/v13.6.0",
       "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rikkaapps-shizuku-v13.6.0",
       "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rikkaapps-shizuku-v13.6.0/THIRD-PARTY-NOTICE-rikkaapps-shizuku.txt",
-      "artifacts": [],
-      "platforms": [],
+      "artifacts": [
+        {
+          "id": "6e273ab0e991c4e79bc8b1bbb9b9dd739ccac1a8712a541a214078886b7b790f",
+          "filename": "shizuku-v13.6.0.r1086.2650830c-release.apk",
+          "original_filename": "shizuku-v13.6.0.r1086.2650830c-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v13.6.0",
+          "size_bytes": 2571773,
+          "sha256": "6e273ab0e991c4e79bc8b1bbb9b9dd739ccac1a8712a541a214078886b7b790f",
+          "upstream_digest_verified": false,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "268b5590e868fb08bae7e0ac413564cd1ff88f5ccff74af9dbd0dc918e30db30",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rikkaapps-shizuku-v13.6.0/shizuku-v13.6.0.r1086.2650830c-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rikkaapps-shizuku-v13.6.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ],
       "build_attempts": [
         {
           "git_ref": "b844bc491f1790c72328e1a8e5b2349f8978f0ea",
@@ -484,7 +504,14 @@
           ],
           "requested_at": "2026-11-24T19:10:05.023843+00:00"
         }
-      ]
+      ],
+      "github_repo_id": "92297825",
+      "source_updated_at": "2026-11-24T19:42:57Z",
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "The repository describes reusable code, a package, SDK, or framework rather than a standalone installer.",
+      "project_status": "installable"
     },
     {
       "id": "shoelace-style-webawesome",
