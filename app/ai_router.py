@@ -74,9 +74,20 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
     models: list[Candidate] = []
     providers: list[dict[str, Any]] = []
 
-    # Gemini model discovery and native generateContent calls.
+    # Gemini and Groq list models but do not expose an enforceable account billing tier.
+    # In free-only mode, require an explicit owner confirmation before sending billable API traffic.
+    confirm_provider_free_tier = os.getenv(
+        "APPHORYN_AI_CONFIRM_GEMINI_GROQ_FREE_TIER", "false"
+    ).lower() in {"1", "true", "yes", "on"}
+
     key = os.getenv("GEMINI_API_KEY", "").strip()
-    if key:
+    if key and _FREE_ONLY and not confirm_provider_free_tier:
+        providers.append(_status(
+            "gemini", True, False,
+            "Configured but paused: the API cannot verify the project's billing tier. Set "
+            "APPHORYN_AI_CONFIRM_GEMINI_GROQ_FREE_TIER=true only after confirming a free-tier project."
+        ))
+    elif key:
         try:
             data = _request("https://generativelanguage.googleapis.com/v1beta/models?pageSize=1000",
                             {"x-goog-api-key": key})
@@ -84,29 +95,41 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
                 methods = item.get("supportedGenerationMethods", [])
                 model = str(item.get("name") or "").removeprefix("models/")
                 if model and (not methods or "generateContent" in methods):
-                    models.append(Candidate("gemini", model, "gemini",
+                    models.append(Candidate(
+                        "gemini", model, "gemini",
                         "https://generativelanguage.googleapis.com/v1beta", key,
-                        int(item.get("inputTokenLimit") or 0)))
+                        int(item.get("inputTokenLimit") or 0),
+                        "provider_free_tier_confirmed" if _FREE_ONLY else "account_billing_plan"
+                    ))
             providers.append(_status("gemini", True, True,
-                "Model list loaded. Free quota depends on the Google project billing tier.",
+                "Model list loaded. The provider account must remain on its free tier; quota is not exposed by this endpoint.",
                 sum(m.provider == "gemini" for m in models)))
         except ProviderError as exc:
             providers.append(_status("gemini", True, True, str(exc)))
     else:
         providers.append(_status("gemini", False, False, "GEMINI_API_KEY is not configured."))
 
-    # Groq provides an OpenAI-compatible models endpoint.
     key = os.getenv("GROQ_API_KEY", "").strip()
-    if key:
+    if key and _FREE_ONLY and not confirm_provider_free_tier:
+        providers.append(_status(
+            "groq", True, False,
+            "Configured but paused: the API cannot verify the account's free billing tier. "
+            "Confirm the free plan before enabling this provider."
+        ))
+    elif key:
         try:
-            data = _request("https://api.groq.com/openai/v1/models", {"Authorization": f"Bearer {key}"})
+            data = _request("https://api.groq.com/openai/v1/models",
+                            {"Authorization": f"Bearer {key}"})
             for item in data.get("data", []):
                 model = str(item.get("id") or "")
                 if model:
-                    models.append(Candidate("groq", model, "openai",
-                        "https://api.groq.com/openai/v1", key, int(item.get("context_window") or 0)))
+                    models.append(Candidate(
+                        "groq", model, "openai", "https://api.groq.com/openai/v1", key,
+                        int(item.get("context_window") or 0),
+                        "provider_free_tier_confirmed" if _FREE_ONLY else "account_billing_plan"
+                    ))
             providers.append(_status("groq", True, True,
-                "Model list loaded. Quotas and billing depend on the Groq account plan.",
+                "Model list loaded. The provider account must remain on its free tier; quota is not exposed by this endpoint.",
                 sum(m.provider == "groq" for m in models)))
         except ProviderError as exc:
             providers.append(_status("groq", True, True, str(exc)))
