@@ -73,7 +73,7 @@ jobs:
       - name: Build source on disposable runner (no Apphoryn ingest secrets)
         shell: bash
         if: contains(format(',{0},', inputs.targets), format(',{0},', matrix.target))
-        env:
+            env:
           REPOSITORY_URL: ${{ inputs.repository_url }}
           GIT_REF: ${{ inputs.git_ref }}
           TARGET: ${{ matrix.target }}
