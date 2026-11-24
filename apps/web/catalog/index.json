@@ -125,7 +125,19 @@
       "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mapmapteam-mapmap-source",
       "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mapmapteam-mapmap-source/THIRD-PARTY-NOTICE-mapmapteam-mapmap.txt",
       "artifacts": [],
-      "platforms": []
+      "platforms": [],
+      "build_attempts": [
+        {
+          "git_ref": "8913326eb69ad25c5f5ccd78c90c5e38c1f2c0e5",
+          "targets": [
+            "android",
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-24T20:22:06.047190+00:00"
+        }
+      ]
     },
     {
       "id": "synthetic-sciences-openscience",
