@@ -130,7 +130,9 @@ function renderAiStatus(){
     ? (status==="available"?"متاح":status==="paused"?"مضبوط ومتوقف":status==="not_configured"?"غير مربوط":"غير متاح")
     : (status==="available"?"Available":status==="paused"?"Configured · paused":status==="not_configured"?"Not configured":"Unavailable");
    const count=Number(item.models_discovered||0);
-   return '<div class="provider-row"><b>'+esc(item.provider)+'</b><span class="provider-state '+esc(status)+'">'+label+(count?" · "+count:"")+'</span></div>';
+   const models=Array.isArray(item.models)?item.models:[];
+   const modelHtml=models.map(model=>'<span class="provider-model">'+esc(model.model)+(model.free_class?'<small>'+esc(model.free_class)+'</small>':'')+'</span>').join('');
+   return '<div class="provider-row"><div class="provider-main"><b>'+esc(item.provider)+'</b><span class="provider-state '+esc(status)+'">'+label+(count?" · "+count:"")+'</span>'+(modelHtml?'<div class="provider-models">'+modelHtml+'</div>':'')+'</div></div>';
   }).join("");
   if(note)note.textContent=(report.free_only
     ? (state.language==="ar"?"وضع المجاني مفعّل؛ لا يتم اختيار نماذج مدفوعة تلقائيًا. ":"Free-only routing is enabled; paid models are not selected automatically. ")
