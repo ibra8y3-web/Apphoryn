@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T23:44:00.317337+00:00",
+  "generated_at": "2026-11-24T23:44:06.300494+00:00",
   "apps": [
     {
       "id": "706972745-assetmanager",
@@ -1759,6 +1759,58 @@
         }
       ],
       "icon_url": "https://avatars.githubusercontent.com/u/5913666?v=4"
+    },
+    {
+      "id": "novexari-midea-air-control-desktop",
+      "slug": "novexari-midea-air-control-desktop",
+      "artifacts": [],
+      "name": "midea-air-control-desktop",
+      "summary": "Unofficial Windows desktop client for Midea air conditioners built with Electron and React. Control temperature, modes, fan speed, swing, and presets through the Midea cloud API with encrypted local session storage and full keyboard accessi",
+      "description": "Unofficial Windows desktop client for Midea air conditioners built with Electron and React. Control temperature, modes, fan speed, swing, and presets through the Midea cloud API with encrypted local session storage and full keyboard accessibility.",
+      "translations": {
+        "en": {
+          "summary": "Unofficial Windows desktop client for Midea air conditioners built with Electron and React. Control temperature, modes, fan speed, swing, and presets through the Midea cloud API with encrypted local session storage and full keyboard accessi",
+          "description": "Unofficial Windows desktop client for Midea air conditioners built with Electron and React. Control temperature, modes, fan speed, swing, and presets through the Midea cloud API with encrypted local session storage and full keyboard accessibility."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Novexari/midea-air-control-desktop/main/resources/icon.png",
+      "repository_url": "https://github.com/Novexari/midea-air-control-desktop",
+      "github_repo_id": "1470987097",
+      "source_updated_at": "2026-11-24T23:35:16Z",
+      "homepage_url": null,
+      "owner": "Novexari",
+      "default_branch": "main",
+      "source_commit_sha": "6348dd00d9e021ded8e3a8693219e582f9a59a99",
+      "license_text": "MIT License\n\nCopyright (c) 2026 auYeCode\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "air-conditioner",
+        "desktop-app",
+        "electron",
+        "home-automation",
+        "hvac-control",
+        "iot-control",
+        "midea",
+        "react",
+        "shadcn-ui",
+        "smart-home",
+        "tailwindcss",
+        "typescript"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "saturday-company-monsters",
