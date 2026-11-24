@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T23:40:44.244261+00:00",
+  "generated_at": "2026-11-24T23:40:50.262077+00:00",
   "apps": [
     {
       "id": "706972745-assetmanager",
@@ -2547,17 +2547,19 @@
       "slug": "zerodrop-dev-zerodrop-worker",
       "artifacts": [],
       "name": "zerodrop-worker",
-      "summary": "Self-hostable Cloudflare Worker backend for ZeroDrop that receives inbound email, applies abuse controls, and auto-extracts OTPs and magic links into Upstash Redis.",
-      "description": "zerodrop-worker is the open-source edge backend that powers zerodrop.dev. It runs entirely on Cloudflare's edge (no server or SMTP to maintain) and processes inbound email routed through Cloudflare Email Routing. For each message it validates the recipient, rejects blocked senders, and enforces a keyless allowance and per-account daily limits before extracting one-time passwords (OTPs) and magic links. Extracted data, along with message text, links, attachment metadata, and SPF/DKIM/DMARC auth results, is stored in Upstash Redis with a TTL (30 minutes by default, up to 7 days for a Workspace). Optional AES-256-GCM inbox encryption, a full MIME parser, and per-domain sender tallies are configurable via environment variables and Cloudflare Worker secrets. Deploy your own instance with npm install and npx wrangler deploy. MIT licensed.",
+      "summary": "Open-source edge infrastructure for email verification — spam filtering via Llama 3.1, OTP and magic link auto-extraction. Self-hostable backend for ZeroDrop.",
+      "description": "Open-source edge infrastructure for email verification — spam filtering via Llama 3.1, OTP and magic link auto-extraction. Self-hostable backend for ZeroDrop.",
       "translations": {
-        "en": "Self-hostable Cloudflare Worker backend for ZeroDrop that receives inbound email, applies abuse controls, and auto-extracts OTPs and magic links into Upstash Redis.",
-        "ar": "خدمة خلفية مستضافة ذاتياً تعمل على Cloudflare Worker، تستقبل البريد الوارد وتطبّق ضوابط مكافحة الإساءة وتستخرج تلقائياً رموز التحقق (OTP) وروابط الدخول السحرية إلى Upstash Redis."
+        "en": {
+          "summary": "Open-source edge infrastructure for email verification — spam filtering via Llama 3.1, OTP and magic link auto-extraction. Self-hostable backend for ZeroDrop.",
+          "description": "Open-source edge infrastructure for email verification — spam filtering via Llama 3.1, OTP and magic link auto-extraction. Self-hostable backend for ZeroDrop."
+        }
       },
       "description_translations": {
         "en": "zerodrop-worker is the open-source edge backend that powers zerodrop.dev. It runs entirely on Cloudflare's edge (no server or SMTP to maintain) and processes inbound email routed through Cloudflare Email Routing. For each message it validates the recipient, rejects blocked senders, and enforces a keyless allowance and per-account daily limits before extracting one-time passwords (OTPs) and magic links. Extracted data, along with message text, links, attachment metadata, and SPF/DKIM/DMARC auth results, is stored in Upstash Redis with a TTL (30 minutes by default, up to 7 days for a Workspace). Optional AES-256-GCM inbox encryption, a full MIME parser, and per-domain sender tallies are configurable via environment variables and Cloudflare Worker secrets. Deploy your own instance with npm install and npx wrangler deploy. MIT licensed.",
         "ar": "zerodrop-worker هو الواجهة الخلفية مفتوحة المصدر العاملة على الحوسبة الطرفية (edge) والتي تشغّل موقع zerodrop.dev. يعمل بالكامل على حوسبة Cloudflare الطرفية (دون خادم أو SMTP)، ويعالج البريد الوارد الموجّه عبر Cloudflare Email Routing. لكل رسالة يتحقق من المستلم ويرفض المرسلين المحظورين ويطبّق حدّاً مجانياً وحدّاً يومياً لكل حساب قبل استخراج كلمات المرور لمرة واحدة (OTP) وروابط الدخول السحرية. تُخزَّن البيانات المستخرجة، إلى جانب نص الرسالة والروابط وبيانات المرفقات ونتائج التحقق SPF/DKIM/DMARC، في Upstash Redis مع مدة صلاحية (30 دقيقة افتراضياً، وحتى 7 أيام لمساحة العمل). يمكن تهيئة تشفير صندوق الوارد بـ AES-256-GCM ومحلّل MIME الكامل وإحصاءات المرسلين لكل نطاق عبر متغيرات البيئة وأسرار Cloudflare Worker. انشر نسختك الخاصة باستخدام npm install ثم npx wrangler deploy. الترخيص MIT."
       },
-      "translation_status": "complete",
+      "translation_status": "english_only",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://avatars.githubusercontent.com/u/305726466?v=4",
@@ -2571,10 +2573,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 ZeroDrop\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "service",
+      "project_kind": "library",
       "build_recommended": false,
-      "classification_source": "ai",
-      "classification_reason": "This is a self-hostable Cloudflare Worker backend that runs continuously on the edge to receive, filter, and process inbound email, so it is classified as a service. build_recommended is false because it is not a standalone end-user application or a locally executable developer tool; it deploys to Cloudflare's edge via wrangler rather than building into a runnable local binary. Note: the repositor",
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
       "category": "developer",
       "topics": [
         "ci-cd",
