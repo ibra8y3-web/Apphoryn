@@ -328,12 +328,46 @@ class GitHubReleaseMirror:
             known_hashes.add(digest)
 
         if not prepared:
+            # Even when this release contains only already-mirrored bytes, refresh
+            # the app's metadata (including corrected bilingual text and artwork).
+            current = existing
+            if current is not None:
+                current.update({
+                    "name": app.get("name") or current.get("name") or slug,
+                    "summary": app.get("summary") or current.get("summary") or "",
+                    "description": app.get("description") or current.get("description") or "",
+                    "translations": app.get("translations") or current.get("translations") or {},
+                    "description_translations": app.get("description_translations") or current.get("description_translations") or {},
+                    "translation_status": app.get("translation_status") or current.get("translation_status") or "missing",
+                    "ai_provider": app.get("ai_provider") or current.get("ai_provider"),
+                    "ai_model": app.get("ai_model") or current.get("ai_model"),
+                    "icon_url": app.get("icon_url") or current.get("icon_url"),
+                    "source_updated_at": app.get("source_updated_at") or current.get("source_updated_at"),
+                    "homepage_url": app.get("homepage_url") or current.get("homepage_url"),
+                    "owner": app.get("owner") or current.get("owner") or "",
+                    "default_branch": app.get("default_branch") or current.get("default_branch") or "main",
+                    "source_commit_sha": app.get("source_commit_sha") or current.get("source_commit_sha"),
+                    "license_text": app.get("license_text") or current.get("license_text") or "",
+                    "license_spdx": app.get("license_spdx") or current.get("license_spdx"),
+                    "license_eligible": bool(app.get("license_eligible")),
+                    "project_kind": app.get("project_kind") or current.get("project_kind") or "unknown",
+                    "build_recommended": bool(app.get("build_recommended", current.get("build_recommended", False))),
+                    "classification_source": app.get("classification_source") or current.get("classification_source") or "heuristic",
+                    "classification_reason": app.get("classification_reason") or current.get("classification_reason") or "",
+                    "category": app.get("category") or current.get("category") or "other",
+                    "topics": app.get("topics") or current.get("topics") or [],
+                    "latest_version": app.get("latest_version") or current.get("latest_version"),
+                    "release_url": app.get("release_url") or current.get("release_url"),
+                })
+                manifest["generated_at"] = datetime.now(timezone.utc).isoformat()
+                manifest["apps"] = sorted(manifest.get("apps", []), key=lambda item: str(item.get("name", "")).casefold())
+                self._write_catalog(manifest, sha, f"Refresh Apphoryn metadata: {app.get('name') or slug}")
             return {
                 "release_url": (existing or {}).get("mirror_release_url"),
                 "manifest_path": self.catalog_path,
                 "mirrored_artifacts": [],
                 "already_present": already_present,
-                "source_project_registered": False,
+                "source_project_registered": current is not None,
             }
 
         tag = f"apphoryn-{slug}-{version}"
