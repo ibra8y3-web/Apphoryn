@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T23:25:49.878732+00:00",
+  "generated_at": "2026-11-24T23:38:31.627714+00:00",
   "apps": [
     {
       "id": "706972745-assetmanager",
@@ -2491,5 +2491,97 @@
       "platforms": [],
       "project_status": "source_available"
     }
-  ]
+  ],
+  "ai_status": {
+    "checked_at": "2026-11-24T23:38:30.924949+00:00",
+    "free_only": true,
+    "available_provider_count": 2,
+    "available_model_count": 13,
+    "providers": [
+      {
+        "provider": "gemini",
+        "state": "paused",
+        "models_discovered": 0,
+        "models": []
+      },
+      {
+        "provider": "groq",
+        "state": "paused",
+        "models_discovered": 0,
+        "models": []
+      },
+      {
+        "provider": "openrouter",
+        "state": "available",
+        "models_discovered": 12,
+        "models": [
+          {
+            "model": "inclusionai/ling-3.2-flash:free",
+            "free_class": "free_variant"
+          },
+          {
+            "model": "particle-ai/particle-1:free",
+            "free_class": "free_variant"
+          },
+          {
+            "model": "baidu/ernie-5.5-flash-preview:free",
+            "free_class": "free_variant"
+          },
+          {
+            "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "free_class": "free_variant"
+          },
+          {
+            "model": "nvidia/nemotron-3.5-lightning:free",
+            "free_class": "free_variant"
+          },
+          {
+            "model": "nvidia/nemotron-3.5-super-vl:free",
+            "free_class": "free_variant"
+          },
+          {
+            "model": "google/gemma-4-26b-a4b-it:free",
+            "free_class": "free_variant"
+          },
+          {
+            "model": "google/gemma-4-31b-it:free",
+            "free_class": "free_variant"
+          },
+          {
+            "model": "liquid/lfm-3-1.7b:free",
+            "free_class": "free_variant"
+          },
+          {
+            "model": "recursive/flint-v1.0:free",
+            "free_class": "free_variant"
+          },
+          {
+            "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "free_class": "free_variant"
+          },
+          {
+            "model": "openrouter/free",
+            "free_class": "free_router"
+          }
+        ]
+      },
+      {
+        "provider": "comet",
+        "state": "available",
+        "models_discovered": 1,
+        "models": [
+          {
+            "model": "gpt-oss-20b-free",
+            "free_class": "zero_priced_catalog"
+          }
+        ]
+      },
+      {
+        "provider": "cloudflare",
+        "state": "paused",
+        "models_discovered": 0,
+        "models": []
+      }
+    ]
+  }
 }
