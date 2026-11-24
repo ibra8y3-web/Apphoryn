@@ -1,11 +1,9 @@
 {
-  "schema_version": 1,
-  "next_created_date": "2008-01-01",
-  "active_window": null,
-  "pending": [],
+  "schema_version": 2,
+  "last_repository_id": 0,
   "totals": {
-    "search_requests": 0,
+    "repository_pages": 0,
     "repositories_seen": 0,
-    "completed_windows": 0
+    "empty_tail_checks": 0
   }
 }
