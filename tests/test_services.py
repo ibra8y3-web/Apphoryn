@@ -49,6 +49,62 @@ class CatalogServiceTests(unittest.TestCase):
             self.assertEqual(result["artifacts"], [])
             self.assertEqual(len(database.list_apps()), 1)
 
+    def test_real_release_download_keeps_installer_extension_for_validation(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            database = Database(root / "catalog.sqlite3")
+            github = Mock()
+            github.get_repository.return_value = {
+                "id": 987654321, "name": "Tool", "description": "A desktop tool",
+                "html_url": "https://github.com/owner/tool", "homepage": None,
+                "license": {"spdx_id": "MIT"}, "topics": ["utility"],
+                "archived": False, "disabled": False, "default_branch": "main",
+                "updated_at": "2026-11-24T00:00:00Z",
+            }
+            github.get_latest_release.return_value = {
+                "tag_name": "v1.0.0",
+                "html_url": "https://github.com/owner/tool/releases/tag/v1.0.0",
+                "assets": [{
+                    "name": "Tool-Setup.exe",
+                    "browser_download_url": "https://github.com/owner/tool/releases/download/v1.0.0/Tool-Setup.exe",
+                    "digest": None,
+                }],
+            }
+
+            def github_request(path):
+                if path.endswith("/license"):
+                    return {"content": base64.b64encode(b"MIT License\nPermission is hereby granted.").decode()}
+                if path.endswith("/commits/main"):
+                    return {"sha": "cd" * 20}
+                return {"content": base64.b64encode(b"# Tool\nA useful desktop tool.").decode()}
+
+            github.request.side_effect = github_request
+            payload = bytearray(256)
+            payload[:2] = b"MZ"
+            payload[0x3C:0x40] = (128).to_bytes(4, "little")
+            payload[128:132] = b"PE\0\0"
+            expected = hashlib.sha256(payload).hexdigest()
+            original_download = services_module._download_asset
+            old_storage = services_module.settings.storage_path
+            object.__setattr__(services_module.settings, "storage_path", root / "artifacts")
+
+            def fake_download(url, destination, max_bytes):
+                self.assertEqual(destination.suffix.lower(), ".exe")
+                destination.write_bytes(payload)
+                return len(payload), expected
+
+            services_module._download_asset = fake_download
+            try:
+                service = CatalogService(github=github, database=database)
+                result = service.import_repository("https://github.com/owner/tool", mirror_release_assets=True)
+                self.assertEqual(len(result["artifacts"]), 1)
+                self.assertEqual(result["artifacts"][0]["sha256"], expected)
+                self.assertEqual(result["artifacts"][0]["filename"], "Tool-Setup.exe")
+                self.assertTrue(Path(result["artifacts"][0]["storage_path"]).is_file())
+            finally:
+                services_module._download_asset = original_download
+                object.__setattr__(services_module.settings, "storage_path", old_storage)
+
     def test_missing_license_blocks_import(self):
         github = Mock()
         github.get_repository.return_value = {"name": "NoLicense", "license": None, "archived": False}
