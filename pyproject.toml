@@ -1,7 +1,7 @@
 [project]
 name = "apphoryn"
-version = "0.1.0"
-description = "Open-source software discovery, build and distribution platform"
+version = "0.2.0a0"
+description = "Open-source software discovery, package verification and distribution platform"
 requires-python = ">=3.11"
 license = {file = "LICENSE"}
 authors = [{name = "Apphoryn Community"}]

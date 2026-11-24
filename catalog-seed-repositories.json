@@ -1,0 +1,14 @@
+[
+  {
+    "repository": "https://github.com/localsend/localsend",
+    "reason": "Cross-platform local network file sharing app; Apache-2.0 license and official release packages for Android, Windows, Linux and macOS."
+  },
+  {
+    "repository": "https://github.com/RikkaApps/Shizuku",
+    "reason": "Android system service bridge utility; Apache-2.0 license and official signed APK release."
+  },
+  {
+    "repository": "https://github.com/Kunzisoft/KeePassDX",
+    "reason": "Android password manager compatible with KeePass files; GPL-3.0 license and official APK release packages."
+  }
+]

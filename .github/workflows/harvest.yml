@@ -1,5 +1,10 @@
-name: Apphoryn Scout — scheduled discovery and import
+name: Apphoryn Scout — import real software releases
+
 on:
+  push:
+    branches: [main, master]
+    paths-ignore:
+      - 'apps/web/catalog/index.json'
   schedule:
     - cron: '23 */8 * * *'
   workflow_dispatch:
@@ -9,36 +14,69 @@ on:
         required: true
         default: 'topic:opensource stars:>100'
       limit:
-        description: Maximum candidates (1-10)
+        description: Maximum search candidates (1-10), plus the seed catalogue
         required: true
         default: '5'
+      skip_seeds:
+        description: Skip the maintained seed repositories
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: apphoryn-catalog-writes
+  cancel-in-progress: false
+
 permissions:
-  contents: read
+  contents: write
+  actions: write
+
 jobs:
   scout:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Apphoryn trusted automation
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install -r requirements.txt
-      - name: Discover candidates and optionally import approved licenses
+      - name: Set up Java for Android package signature checks
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - name: Install Android build-tools signature verifier
+        shell: bash
+        run: |
+          yes | sdkmanager --licenses >/dev/null
+          sdkmanager --install "platform-tools" "build-tools;35.0.0"
+          echo "$ANDROID_HOME/build-tools/35.0.0" >> "$GITHUB_PATH"
+      - name: Discover, verify, import and mirror actual release files
         env:
-          APPHORYN_GITHUB_TOKEN: ${{ github.token }}
-          APPHORYN_QUERY: ${{ inputs.query || 'topic:opensource stars:>100' }}
-          APPHORYN_LIMIT: ${{ inputs.limit || '5' }}
-          APPHORYN_API_BASE_URL: ${{ secrets.APPHORYN_API_BASE_URL }}
-          APPHORYN_ADMIN_TOKEN: ${{ secrets.APPHORYN_ADMIN_TOKEN }}
-          APPHORYN_AUTO_BUILD_TARGETS: ${{ vars.APPHORYN_AUTO_BUILD_TARGETS }}
-        run: python scripts/harvest_and_import.py --query "$APPHORYN_QUERY" --limit "$APPHORYN_LIMIT"
-      - uses: actions/upload-artifact@v4
+          GITHUB_TOKEN: \${{ github.token }}
+          GITHUB_REPOSITORY: \${{ github.repository }}
+          APPHORYN_GITHUB_REF: \${{ github.ref_name }}
+          APPHORYN_QUERY: \${{ inputs.query || 'topic:opensource stars:>100' }}
+          APPHORYN_LIMIT: \${{ inputs.limit || '5' }}
+          APPHORYN_AUTO_BUILD_TARGETS: \${{ vars.APPHORYN_AUTO_BUILD_TARGETS || 'android,windows,linux,macos' }}
+          APPHORYN_AI_API_KEY: \${{ secrets.APPHORYN_AI_API_KEY }}
+          APPHORYN_AI_MODEL: \${{ vars.APPHORYN_AI_MODEL }}
+          SKIP_SEEDS: \${{ inputs.skip_seeds || 'false' }}
+        run: |
+          ARGS=(--query "$APPHORYN_QUERY" --limit "$APPHORYN_LIMIT")
+          if [ "$SKIP_SEEDS" = "true" ]; then ARGS+=(--skip-seeds); fi
+          python scripts/harvest_and_import.py "\${ARGS[@]}"
+      - name: Save discovery and mirror report
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: apphoryn-scout-report
           path: |
             discovery-candidates.json
             harvest-results.json
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 30

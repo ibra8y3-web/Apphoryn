@@ -1,42 +1,30 @@
-# Apphoryn 0.1.0 — local verification report
+# Apphoryn 0.2.0-alpha — local verification report
 
-Run in the project workspace before packaging.
+This report records checks run against the local updated source tree during development.
 
 ## Automated checks
 
 | Check | Result |
 |---|---|
-| Python `compileall` (`app`, `scripts`, `tests`) | PASS |
-| Python unit/API tests | PASS — 16 tests |
-| JavaScript syntax (`node --check apps/web/app.js`) | PASS |
-| CLI argument parser smoke checks (`ci_build.py`, `publish_artifacts.py`, `harvest_and_import.py`) | PASS |
-| YAML syntax for all 3 GitHub Actions workflows | PASS |
-| FastAPI `TestClient` health endpoint | PASS — HTTP 200 |
-| FastAPI storefront route | PASS — HTTP 200 |
-| FastAPI catalog endpoint | PASS — HTTP 200 |
-| FastAPI discovery route (mocked GitHub service) | PASS — HTTP 200 |
-| Artifact storage/hash unit test | PASS |
-| Missing-license import block | PASS |
+| Python \`compileall\` (\`app\`, \`scripts\`, \`tests\`) | PASS |
+| Python unit/API tests | PASS — 31 tests |
+| JavaScript syntax (\`node --check apps/web/app.js\`, \`apps/web/sw.js\`) | PASS |
+| CLI entrypoints (\`ci_build\`, \`harvest_and_import\`, both publishers) | PASS — all \`--help\` commands start successfully |
+| Static JSON manifests | PASS — seed list and catalogue are valid JSON |
+| FastAPI TestClient health, storefront, catalogue and discovery endpoints | PASS |
+| Artifact rejection tests | PASS — fake APK bytes are rejected even with a matching local SHA-256 |
+| APK signature fail-closed test | PASS — APK is rejected if \`apksigner\` is unavailable |
+| Release mirror manifest tests | PASS — generated catalogue URLs point to Apphoryn-owned releases |
 
-## Responsive layout measurements
-
-Chromium layout checks confirmed that the document and body do not exceed the viewport width at these sizes:
-
-| Viewport | Width | Document scroll width | Result |
-|---|---:|---:|---|
-| Desktop | 1365 px | 1365 px | PASS |
-| Laptop | 1024 px | 1024 px | PASS |
-| Tablet | 820 px | 820 px | PASS |
-| Phone | 390 px | 390 px | PASS |
-| Small phone | 320 px | 320 px | PASS |
-| Phone RTL | 390 px | 390 px | PASS |
+Test fixtures construct minimal file headers to exercise validators. They are test fixtures only; they are not stored in the catalogue or advertised as downloadable applications.
 
 ## Not executed in this local verification
 
-- No external GitHub workflow was dispatched from this workspace.
-- No third-party repository was cloned or built as part of the test suite.
-- No release package was downloaded from GitHub or published to a deployed server.
-- The optional external AI provider was not called because no model credentials are included.
-- Production deployment, malware scanning, code signing, macOS notarization and native mobile/desktop clients are not certified by these tests.
+- No third-party binary package was downloaded into the local editing workspace.
+- No external GitHub Actions build or Scout workflow was dispatched from this development run.
+- No external project was cloned or compiled as part of the 31-test local suite.
+- No real installer was launched on Android, Windows, Linux or macOS.
+- No external AI provider was called because no credentials were supplied.
+- Production malware scanning, Windows Authenticode verification, macOS notarization and native mobile/desktop clients are not certified by these tests.
 
-The automated tests validate Apphoryn's local logic and API boundaries; they do not certify imported third-party software as safe.
+The GitHub repository branch \`apphoryn/real-artifact-pipeline\` contains the updated source and automated workflows. Actual application binaries become part of the Apphoryn store only after the Scout workflow runs successfully with repository Actions write permissions. The workflow downloads official release files, validates them and mirrors acceptable packages into Apphoryn Releases; it does not pre-fill the catalogue with simulated binaries.

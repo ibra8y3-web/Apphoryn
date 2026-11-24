@@ -47,6 +47,9 @@ class Database:
                     repository_url TEXT NOT NULL UNIQUE,
                     homepage_url TEXT,
                     owner TEXT NOT NULL,
+                    default_branch TEXT NOT NULL DEFAULT 'main',
+                    source_commit_sha TEXT,
+                    license_text TEXT NOT NULL DEFAULT '',
                     license_spdx TEXT,
                     license_eligible INTEGER NOT NULL DEFAULT 0,
                     category TEXT NOT NULL DEFAULT 'other',
@@ -67,6 +70,9 @@ class Database:
                     size_bytes INTEGER NOT NULL,
                     sha256 TEXT NOT NULL,
                     upstream_digest_verified INTEGER NOT NULL DEFAULT 0,
+                    validation_status TEXT NOT NULL DEFAULT 'validated',
+                    signature_status TEXT NOT NULL DEFAULT 'not_checked',
+                    signer_certificate_sha256 TEXT,
                     source_url TEXT,
                     storage_path TEXT NOT NULL,
                     created_at TEXT NOT NULL,
@@ -88,9 +94,23 @@ class Database:
                 CREATE INDEX IF NOT EXISTS idx_artifacts_app ON artifacts(app_id);
                 CREATE INDEX IF NOT EXISTS idx_jobs_created ON build_jobs(created_at DESC);
             """)
-            columns = {row[1] for row in con.execute("PRAGMA table_info(apps)").fetchall()}
-            if "translations_json" not in columns:
-                con.execute("ALTER TABLE apps ADD COLUMN translations_json TEXT NOT NULL DEFAULT '{}' ")
+            app_columns = {row[1] for row in con.execute("PRAGMA table_info(apps)").fetchall()}
+            for column, statement in {
+                "translations_json": "ALTER TABLE apps ADD COLUMN translations_json TEXT NOT NULL DEFAULT '{}'",
+                "default_branch": "ALTER TABLE apps ADD COLUMN default_branch TEXT NOT NULL DEFAULT 'main'",
+                "license_text": "ALTER TABLE apps ADD COLUMN license_text TEXT NOT NULL DEFAULT ''",
+                "source_commit_sha": "ALTER TABLE apps ADD COLUMN source_commit_sha TEXT",
+            }.items():
+                if column not in app_columns:
+                    con.execute(statement)
+            artifact_columns = {row[1] for row in con.execute("PRAGMA table_info(artifacts)").fetchall()}
+            for column, statement in {
+                "validation_status": "ALTER TABLE artifacts ADD COLUMN validation_status TEXT NOT NULL DEFAULT 'validated'",
+                "signature_status": "ALTER TABLE artifacts ADD COLUMN signature_status TEXT NOT NULL DEFAULT 'not_checked'",
+                "signer_certificate_sha256": "ALTER TABLE artifacts ADD COLUMN signer_certificate_sha256 TEXT",
+            }.items():
+                if column not in artifact_columns:
+                    con.execute(statement)
 
     @staticmethod
     def _dict(row: sqlite3.Row | None) -> dict[str, Any] | None:
@@ -111,14 +131,20 @@ class Database:
             app_id = existing["id"] if existing else record["id"]
             created_at = existing["created_at"] if existing else record["created_at"]
             con.execute("""INSERT INTO apps
-                (id,slug,name,summary,description,repository_url,homepage_url,owner,license_spdx,license_eligible,category,topics_json,translations_json,latest_version,release_url,created_at,updated_at)
-                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+                (id,slug,name,summary,description,repository_url,homepage_url,owner,default_branch,source_commit_sha,license_text,license_spdx,license_eligible,category,topics_json,translations_json,latest_version,release_url,created_at,updated_at)
+                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
                 ON CONFLICT(repository_url) DO UPDATE SET
                     slug=excluded.slug,name=excluded.name,summary=excluded.summary,description=excluded.description,
-                    homepage_url=excluded.homepage_url,owner=excluded.owner,license_spdx=excluded.license_spdx,
+                    homepage_url=excluded.homepage_url,owner=excluded.owner,default_branch=excluded.default_branch,
+                    source_commit_sha=excluded.source_commit_sha,license_text=excluded.license_text,license_spdx=excluded.license_spdx,
                     license_eligible=excluded.license_eligible,category=excluded.category,topics_json=excluded.topics_json,
-                    translations_json=excluded.translations_json,latest_version=excluded.latest_version,release_url=excluded.release_url,updated_at=excluded.updated_at""",
-                (app_id,record["slug"],record["name"],record["summary"],record["description"],record["repository_url"],record.get("homepage_url"),record["owner"],record.get("license_spdx"),int(record["license_eligible"]),record["category"],json.dumps(record.get("topics", [])),json.dumps(record.get("translations", {}), ensure_ascii=False),record.get("latest_version"),record.get("release_url"),created_at,record["updated_at"]))
+                    translations_json=excluded.translations_json,latest_version=excluded.latest_version,
+                    release_url=excluded.release_url,updated_at=excluded.updated_at""",
+                (app_id,record["slug"],record["name"],record["summary"],record["description"],record["repository_url"],
+                 record.get("homepage_url"),record["owner"],record.get("default_branch","main"),record.get("source_commit_sha"),
+                 record.get("license_text",""),record.get("license_spdx"),int(record["license_eligible"]),record["category"],
+                 json.dumps(record.get("topics",[])),json.dumps(record.get("translations",{}),ensure_ascii=False),
+                 record.get("latest_version"),record.get("release_url"),created_at,record["updated_at"]))
             row = con.execute("SELECT * FROM apps WHERE repository_url=?", (record["repository_url"],)).fetchone()
             return self._dict(row) or {}
 
@@ -145,11 +171,16 @@ class Database:
     def add_artifact(self, item: dict[str, Any]) -> dict[str, Any]:
         with self.connect() as con:
             con.execute("""INSERT OR IGNORE INTO artifacts
-                (id,app_id,filename,platform,package_type,version,size_bytes,sha256,upstream_digest_verified,source_url,storage_path,created_at)
-                VALUES (?,?,?,?,?,?,?,?,?,?,?,?)""", (item["id"],item["app_id"],item["filename"],item["platform"],item["package_type"],item.get("version"),item["size_bytes"],item["sha256"],int(item.get("upstream_digest_verified",False)),item.get("source_url"),item["storage_path"],item["created_at"]))
+                (id,app_id,filename,platform,package_type,version,size_bytes,sha256,upstream_digest_verified,validation_status,signature_status,signer_certificate_sha256,source_url,storage_path,created_at)
+                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                (item["id"],item["app_id"],item["filename"],item["platform"],item["package_type"],item.get("version"),
+                 item["size_bytes"],item["sha256"],int(item.get("upstream_digest_verified",False)),
+                 item.get("validation_status","validated"),item.get("signature_status","not_checked"),
+                 item.get("signer_certificate_sha256"),item.get("source_url"),item["storage_path"],item["created_at"]))
             row = con.execute("SELECT * FROM artifacts WHERE id=?", (item["id"],)).fetchone()
             if row is None:
-                row = con.execute("SELECT * FROM artifacts WHERE app_id=? AND filename=? AND version IS ? AND sha256=?", (item["app_id"],item["filename"],item.get("version"),item["sha256"])).fetchone()
+                row = con.execute("SELECT * FROM artifacts WHERE app_id=? AND filename=? AND version IS ? AND sha256=?",
+                                  (item["app_id"],item["filename"],item.get("version"),item["sha256"])).fetchone()
             return self._dict(row) or {}
 
     def list_artifacts(self, app_id: str) -> list[dict[str, Any]]:
@@ -163,11 +194,14 @@ class Database:
     def add_job(self, job: dict[str, Any]) -> None:
         with self.connect() as con:
             con.execute("""INSERT INTO build_jobs (id,app_id,repository_url,git_ref,targets_json,status,workflow_url,message,created_at,updated_at)
-                VALUES (?,?,?,?,?,?,?,?,?,?)""", (job["id"],job["app_id"],job["repository_url"],job["git_ref"],json.dumps(job["targets"]),job["status"],job.get("workflow_url"),job.get("message"),job["created_at"],job["updated_at"]))
+                VALUES (?,?,?,?,?,?,?,?,?,?)""",
+                (job["id"],job["app_id"],job["repository_url"],job["git_ref"],json.dumps(job["targets"]),
+                 job["status"],job.get("workflow_url"),job.get("message"),job["created_at"],job["updated_at"]))
 
     def update_job(self, job_id: str, status: str, message: str | None = None, workflow_url: str | None = None) -> None:
         with self.connect() as con:
-            con.execute("UPDATE build_jobs SET status=?,message=?,workflow_url=COALESCE(?,workflow_url),updated_at=? WHERE id=?", (status,message,workflow_url,utc_now(),job_id))
+            con.execute("UPDATE build_jobs SET status=?,message=?,workflow_url=COALESCE(?,workflow_url),updated_at=? WHERE id=?",
+                        (status,message,workflow_url,utc_now(),job_id))
 
     def list_jobs(self, limit: int = 30) -> list[dict[str, Any]]:
         with self.connect() as con:
