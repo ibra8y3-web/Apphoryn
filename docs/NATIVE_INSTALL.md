@@ -20,11 +20,11 @@ The operating system remains responsible for the final install prompt, signature
 
 Current direct install adapters:
 - Android APK only.
-- Windows EXE/MSI.
+- Windows EXE/MSI/MSIX/APPX (MSIX/APPX are handed to Windows AppX deployment and retain OS signature policy).
 - Linux DEB/RPM/AppImage (AppImage runs portably; it is not registered as a system package).
-- macOS PKG.
+- macOS PKG/DMG (DMG mounting requires exactly one `.app` bundle, which is copied into `/Applications` with the macOS administrator prompt).
 
-XAPK/split APK and DMG one-click installation are not currently implemented. The Android development APK is debug-signed. Windows/macOS package code signing and macOS notarization require owner-managed certificates and are not configured.
+XAPK/split-APK installation is not currently implemented; Android currently accepts APK only. The Android development APK is debug-signed. Windows/macOS package code signing and macOS notarization require owner-managed certificates and are not configured.
 
 ## Automated builds
 
