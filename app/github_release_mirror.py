@@ -286,6 +286,7 @@ class GitHubReleaseMirror:
                 all_artifacts.append(item)
                 known.add(item["sha256"])
         current["platforms"] = sorted({str(item.get("platform")) for item in all_artifacts if item.get("platform")})
+        current["project_status"] = "installable" if all_artifacts else "source_available"
         manifest["schema_version"] = 1
         manifest["generated_at"] = datetime.now(timezone.utc).isoformat()
         manifest["apps"] = sorted(apps, key=lambda item: str(item.get("name", "")).casefold())
