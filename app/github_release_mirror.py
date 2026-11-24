@@ -453,6 +453,21 @@ class GitHubReleaseMirror:
                 return True
         return False
 
+    def dispatch_scout(self, max_repositories: int = 200, max_pages: int = 25, skip_seeds: bool = False) -> None:
+        """Queue the trusted global Scout workflow on the Apphoryn repository."""
+        if not 1 <= int(max_repositories) <= 10000:
+            raise GitHubMirrorError("Scout max_repositories must be between 1 and 10000.")
+        if not 1 <= int(max_pages) <= 100:
+            raise GitHubMirrorError("Scout max_pages must be between 1 and 100.")
+        self.request("POST", f"/repos/{self.full_name}/actions/workflows/harvest.yml/dispatches", {
+            "ref": self.branch,
+            "inputs": {
+                "max_repositories": str(int(max_repositories)),
+                "max_pages": str(int(max_pages)),
+                "skip_seeds": bool(skip_seeds),
+            },
+        })
+
     def dispatch_build(self, repository_url: str, git_ref: str, targets: list[str], app_id: str = "") -> None:
         canonical = canonical_repository_url(repository_url)
         allowed = {"android", "windows", "linux", "macos"}
