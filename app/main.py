@@ -16,7 +16,7 @@ from pydantic import BaseModel, Field
 from .config import ROOT, settings
 from .database import db
 from .services import BuildService, CatalogService, store_uploaded_artifact
-from .github_release_mirror import GitHubReleaseMirror
+from .github_release_mirror import GitHubReleaseMirror, GitHubMirrorError
 
 app = FastAPI(title="Apphoryn API", version="0.2.0-alpha", description="Discover, build, verify and distribute open-source software.")
 cors_origins = [origin.strip() for origin in os.getenv("APPHORYN_CORS_ORIGINS", "").split(",") if origin.strip()]
@@ -36,6 +36,12 @@ class BuildRequest(BaseModel):
     repository_url: str
     git_ref: str = "main"
     targets: list[str] = Field(default_factory=lambda: ["linux"])
+
+
+class ScoutRequest(BaseModel):
+    max_repositories: int = Field(default=200, ge=1, le=10000)
+    max_pages: int = Field(default=25, ge=1, le=100)
+    skip_seeds: bool = False
 
 
 def require_admin(token: str | None) -> None:
@@ -174,6 +180,57 @@ def request_build(payload: BuildRequest, x_apphoryn_admin: str | None = Header(d
 def jobs(x_apphoryn_admin: str | None = Header(default=None)):
     require_admin(x_apphoryn_admin)
     return {"items": db.list_jobs()}
+
+
+@app.get("/api/v1/admin/scout/status")
+def scout_status(x_apphoryn_admin: str | None = Header(default=None)):
+    require_admin(x_apphoryn_admin)
+    state_path = ROOT / "data" / "scout-state.json"
+    retry_path = ROOT / "data" / "scout-retry.json"
+    try:
+        state = json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {}
+    except (OSError, json.JSONDecodeError):
+        state = {}
+    try:
+        retries = json.loads(retry_path.read_text(encoding="utf-8")) if retry_path.exists() else []
+    except (OSError, json.JSONDecodeError):
+        retries = []
+    totals = state.get("totals") if isinstance(state.get("totals"), dict) else {}
+    return {
+        "configured": bool(settings.github_token and settings.github_owner and settings.github_repository),
+        "workflow": "harvest.yml",
+        "last_repository_id": int(state.get("last_repository_id") or 0),
+        "last_refresh_repository_id": int(state.get("last_refresh_repository_id") or 0),
+        "totals": totals,
+        "pending_retries": len(retries) if isinstance(retries, list) else 0,
+        "catalog_apps": sum(1 for item in read_mirror_catalog() if item.get("artifacts")),
+    }
+
+
+@app.post("/api/v1/admin/scout/dispatch")
+def dispatch_scout(payload: ScoutRequest, x_apphoryn_admin: str | None = Header(default=None)):
+    require_admin(x_apphoryn_admin)
+    if not settings.github_token or not settings.github_owner or not settings.github_repository:
+        raise HTTPException(
+            503,
+            "Configure APPHORYN_GITHUB_TOKEN, APPHORYN_GITHUB_OWNER and APPHORYN_GITHUB_REPOSITORY to control global Scout.",
+        )
+    try:
+        mirror = GitHubReleaseMirror(
+            settings.github_token,
+            f"{settings.github_owner}/{settings.github_repository}",
+            settings.github_ref,
+        )
+        mirror.dispatch_scout(payload.max_repositories, payload.max_pages, payload.skip_seeds)
+        return {
+            "status": "dispatched",
+            "workflow": "harvest.yml",
+            "max_repositories": payload.max_repositories,
+            "max_pages": payload.max_pages,
+            "skip_seeds": payload.skip_seeds,
+        }
+    except GitHubMirrorError as exc:
+        raise HTTPException(502, f"Could not queue global Scout: {exc}") from exc
 
 
 @app.post("/api/v1/admin/artifacts/upload")
