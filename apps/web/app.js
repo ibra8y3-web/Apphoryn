@@ -9,7 +9,7 @@ const translations = {
  id:{overview:'Ringkasan',explore:'Jelajahi aplikasi',categories:'Kategori',discovery:'Penemuan AI',buildLab:'Lab build',saved:'Aplikasi tersimpan',downloads:'Unduhan',heroTitle:'Temukan lebih baik.<br><em>Bangun dengan bebas.</em>',heroSubtitle:'Rumah bagi aplikasi open-source nyata. Temukan proyek, bangun rilis yang dapat dipasang, dan ambil dari satu pustaka.',platformSnapshot:'Ringkasan platform',cataloguedApps:'Aplikasi dalam katalog',builtPackages:'Paket yang dibangun',recentlyAdded:'Baru ditambahkan',noAppsYet:'Pustaka Anda menunggu aplikasi pertama.',startDiscovering:'Mulai temukan',exploreTitle:'Jelajahi perangkat lunak',emptyCatalog:'Belum ada aplikasi.',discoveryTitle:'Temukan aplikasi hebat berikutnya',searchGithub:'Cari GitHub',buildTitle:'Bangun rilis nyata',queueBuild:'Antrekan build',downloadsTitle:'Unduhan',settingsTitle:'Pengaturan',languageChanged:'Bahasa diperbarui.'}
 };
 const categoryMeta=[['developer','categoryDeveloper','⌘'],['system','categorySystem','⚙'],['security','categorySecurity','◇'],['multimedia','categoryMultimedia','▧'],['network','categoryNetwork','⌁'],['productivity','categoryProductivity','▤'],['ai','categoryAi','✳'],['games','categoryGames','▷'],['other','categoryOther','◈']];
-const state={apps:[],discovery:[],saved:readSaved(),language:localStorage.getItem('apphoryn-language')||'en',adminToken:'',jobs:[],apiBase:localStorage.getItem('apphoryn-api-base')||''};
+const state={apps:[],sourceApps:[],aiStatus:null,discovery:[],saved:readSaved(),language:localStorage.getItem('apphoryn-language')||'en',jobs:[],jobsFetchedAt:0};
 const $=id=>document.getElementById(id);
 function t(key){return (translations[state.language]&&translations[state.language][key])||translations.en[key]||key;}
 function readSaved(){try{return JSON.parse(localStorage.getItem('apphoryn-saved')||'[]')}catch{return []}}
@@ -19,7 +19,7 @@ function toast(message,error=false){const node=document.createElement('div');nod
 function apiRoot(){if(state.apiBase)return state.apiBase.replace(new RegExp("/+$"),'');if(window.ApphorynNative)return '';if((location.protocol==='https:'||location.protocol==='http:')&&!['localhost','127.0.0.1'].includes(location.hostname))return location.origin;return '';}
 function apiUrl(path){const base=apiRoot();if(!base)throw new Error(t('apiBaseRequired'));return `${base}${path.startsWith('/')?path:`/${path}`}`;}
 async function api(path,options={}){const response=await fetch(apiUrl(path),{...options,headers:{...(options.headers||{})}});if(!response.ok){let message=`HTTP ${response.status}`;try{const body=await response.json();message=body.detail||message}catch{}throw new Error(message)}const type=response.headers.get('content-type')||'';return type.includes('application/json')?response.json():response;}
-function applyLanguage(language){state.language=translations[language]?language:'en';localStorage.setItem('apphoryn-language',state.language);document.documentElement.lang=state.language;document.documentElement.dir=state.language==='ar'?'rtl':'ltr';$('languageSelect').value=state.language;$('settingsLanguage').value=state.language;if($('apiBaseInput'))$('apiBaseInput').value=state.apiBase;document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;const value=t(key);if(value.includes('<br>')||value.includes('<em>'))el.innerHTML=value;else el.textContent=value});document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>el.placeholder=t(el.dataset.i18nPlaceholder));document.title='Apphoryn — '+t('heroTitle').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();renderCategories();renderApps();renderDiscovery();renderSaved();renderDownloads();$('pageCrumb').textContent=document.querySelector('.nav-link.active [data-i18n]')?.textContent||t('overview');}
+function applyLanguage(language){state.language=translations[language]?language:'en';localStorage.setItem('apphoryn-language',state.language);document.documentElement.lang=state.language;document.documentElement.dir=state.language==='ar'?'rtl':'ltr';$('languageSelect').value=state.language;$('settingsLanguage').value=state.language;document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;const value=t(key);if(value.includes('<br>')||value.includes('<em>'))el.innerHTML=value;else el.textContent=value});document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>el.placeholder=t(el.dataset.i18nPlaceholder));document.title='Apphoryn — '+t('heroTitle').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();renderCategories();renderApps();renderDiscovery();renderSaved();renderDownloads();$('pageCrumb').textContent=document.querySelector('.nav-link.active [data-i18n]')?.textContent||t('overview');}
 function navigate(view){const target=$('view-'+view);if(!target)return;document.querySelectorAll('.view').forEach(el=>el.classList.toggle('active',el===target));document.querySelectorAll('.nav-link[data-view]').forEach(el=>el.classList.toggle('active',el.dataset.view===view));const active=document.querySelector('.nav-link.active [data-i18n]');$('pageCrumb').textContent=active?.textContent||view;history.replaceState(null,'','#'+view);closeSidebar();if(view==='builds')loadJobs();if(view==='downloads')renderDownloads();}
 function closeSidebar(){$('sidebar').classList.remove('open');$('sidebarScrim').classList.remove('open');}
 function localizedSummary(app){const value=app.translations&&app.translations[state.language];return typeof value==='string'&&!value.trim().startsWith('{')?value:(app.summary||app.description||'');}
@@ -31,7 +31,7 @@ function appIconMarkup(app,className='app-logo'){
  const repository=String(app.repository_url||'').match(/^https:\/\/github\.com\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)$/i);
  const raw=repository&&url.startsWith(`https://raw.githubusercontent.com/${repository[1]}/${repository[2]}/`)&&!/[?#]/.test(url);
  const safe=avatar||raw;
- return `<div class="${className}"><span>${initial}</span>${safe?`<img src="${esc(url)}" alt="" loading="lazy" decoding="async" onerror="this.remove()">`:''}</div>`;
+ return `<div class="${className}"><span>${initial}</span>${safe?`<img src="${esc(url)}" alt="" loading="eager" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">`:''}</div>`;
 }
 function isApphorynReleaseAsset(url){try{const parsed=new URL(String(url||''));return parsed.protocol==='https:'&&parsed.hostname==='github.com'&&!parsed.username&&!parsed.password&&!parsed.search&&!parsed.hash&&parsed.pathname.startsWith('/ibra8y3-web/Apphoryn/releases/download/');}catch{return false;}}
 function artifactDownloadUrl(artifact){return apiUrl(`/api/v1/downloads/${encodeURIComponent(artifact.id||artifact.sha256||'')}`);}
@@ -85,50 +85,163 @@ async function installArtifact(artifactId){
 function renderDownloads(){const host=$('downloadsList');if(!host)return;const items=state.apps.flatMap(app=>(app.artifacts||[]).map(artifact=>({...artifact,appName:app.name})));host.innerHTML=items.length?items.map(item=>`<article class="artifact-row"><div class="artifact-icon">⇩</div><div class="artifact-info"><b>${esc(item.filename)}</b><small>${esc(item.appName)} · ${esc(item.platform)} · ${formatBytes(item.size_bytes)}</small></div><span class="artifact-hash" title="SHA-256 ${esc(item.sha256)}">${esc((item.sha256||'').slice(0,12))}…</span>${installButton(item)}</article>`).join(''):`<div class="empty-state compact"><div class="empty-symbol">⇩</div><b>${t('noPackages')}</b></div>`;}
 
 function formatBytes(bytes){const n=Number(bytes||0);if(n<1024)return `${n} B`;const units=['KB','MB','GB','TB'];let value=n/1024,index=0;while(value>=1024&&index<units.length-1){value/=1024;index++}return `${value.toFixed(value>=10?0:1)} ${units[index]}`;}
+const GITHUB_REPOSITORY = "ibra8y3-web/Apphoryn";
+const GITHUB_API_ROOT = "https://api.github.com";
+const REDISTRIBUTION_LICENSES = new Set([
+ "MIT","Apache-2.0","BSD-2-Clause","BSD-3-Clause","ISC","MPL-2.0",
+ "GPL-2.0","GPL-2.0-only","GPL-2.0-or-later","GPL-3.0","GPL-3.0-only",
+ "GPL-3.0-or-later","LGPL-2.1","LGPL-2.1-only","LGPL-2.1-or-later",
+ "LGPL-3.0","LGPL-3.0-only","LGPL-3.0-or-later","AGPL-3.0",
+ "AGPL-3.0-only","AGPL-3.0-or-later","0BSD","Zlib","Unlicense","BSL-1.0"
+]);
+async function githubJson(url){
+ const response=await fetch(url,{headers:{Accept:"application/vnd.github+json"},cache:"no-store",mode:"cors"});
+ let payload={};
+ try{payload=await response.json()}catch{}
+ if(!response.ok){
+  if(response.status===403||response.status===429)throw new Error("GitHub search limit reached. Try again later; Apphoryn Scout keeps running automatically.");
+  throw new Error(payload.message||("GitHub returned HTTP "+response.status));
+ }
+ return payload;
+}
+function renderAiStatus(){
+ const host=$("aiProvidersList");
+ const headline=$("aiEngineHeadline");
+ const note=$("aiStatusNote");
+ if(!host)return;
+ const report=state.aiStatus;
+ if(report&&Array.isArray(report.providers)&&report.providers.length){
+  const available=Number(report.available_provider_count||0);
+  const models=Number(report.available_model_count||0);
+  if(headline)headline.textContent=available
+   ? (state.language==="ar"?"محرك النماذج متصل":"Model router online")
+   : (state.language==="ar"?"لا يوجد نموذج متاح حاليًا":"No model provider is currently available");
+  host.innerHTML=report.providers.map(item=>{
+   const status=String(item.state||"unknown");
+   const label=state.language==="ar"
+    ? (status==="available"?"متاح":status==="paused"?"مضبوط ومتوقف":status==="not_configured"?"غير مربوط":"غير متاح")
+    : (status==="available"?"Available":status==="paused"?"Configured · paused":status==="not_configured"?"Not configured":"Unavailable");
+   const count=Number(item.models_discovered||0);
+   return '<div class="provider-row"><b>'+esc(item.provider)+'</b><span class="provider-state '+esc(status)+'">'+label+(count?" · "+count:"")+'</span></div>';
+  }).join("");
+  if(note)note.textContent=(report.free_only
+    ? (state.language==="ar"?"وضع المجاني مفعّل؛ لا يتم اختيار نماذج مدفوعة تلقائيًا. ":"Free-only routing is enabled; paid models are not selected automatically. ")
+    : (state.language==="ar"?"وضع المجاني غير مفعّل. ":"Free-only routing is disabled. "))
+    + (state.language==="ar"?"آخر فحص: ":"Last checked: ")+(report.checked_at?new Date(report.checked_at).toLocaleString(state.language):"—")
+    +" · "+models+" "+(state.language==="ar"?"نموذج متاح":"available models");
+  return;
+ }
+ const usage={};
+ for(const app of state.sourceApps||[]){
+  const provider=String(app.ai_provider||"");
+  if(provider)usage[provider]=(usage[provider]||0)+1;
+ }
+ const rows=Object.entries(usage);
+ if(headline)headline.textContent=rows.length
+  ? (state.language==="ar"?"الذكاء الاصطناعي أنشأ بيانات تطبيقات بالفعل":"AI has generated catalog metadata")
+  : (state.language==="ar"?"تقرير حالة النماذج لم يصل بعد":"Waiting for the first provider health report");
+ host.innerHTML=rows.length?rows.map(([provider,count])=>'<div class="provider-row"><b>'+esc(provider)+'</b><span class="provider-state available">'+count+(state.language==="ar"?" وصفًا تم إنشاؤه":" generated records")+'</span></div>').join("")
+  : '<div class="empty-state compact">'+(state.language==="ar"?"لم ينشر Scout حالة النماذج بعد.":"Scout has not published a model status report yet.")+'</div>';
+ if(note)note.textContent=state.language==="ar"
+  ?"الأعداد هنا من بيانات التطبيقات التي أنشأها الذكاء الاصطناعي سابقًا، وليست فحصًا حيًا للمفاتيح."
+  :"This fallback reflects providers recorded on AI-generated app metadata; it is not a live credential check.";
+}
+function updateAutomationCounters(){
+ const source=state.sourceApps||[];
+ const installable=(state.apps||[]).length;
+ const sourceOnly=source.filter(item=>!Array.isArray(item.artifacts)||!item.artifacts.length).length;
+ if($("scoutCatalogCount"))$("scoutCatalogCount").textContent=source.length;
+ if($("scoutInstallableCount"))$("scoutInstallableCount").textContent=installable;
+ if($("scoutSourceCount"))$("scoutSourceCount").textContent=sourceOnly;
+ renderAiStatus();
+}
 async function loadCatalog(){
  const applyManifest=(manifest,status)=>{
   const records=Array.isArray(manifest.apps)?manifest.apps:[];
+  state.sourceApps=records;
+  state.aiStatus=manifest.ai_status||null;
   state.apps=records.filter(app=>Array.isArray(app.artifacts)&&app.artifacts.length>0).map(app=>({...app,id:app.id||app.slug,artifacts:app.artifacts.map(artifact=>({...artifact,id:artifact.id||artifact.sha256}))}));
-  $('apiStatus').textContent=status;
-  $('apiStatus').className='status-tag';
-  $('settingsApiStatus').textContent=status;
-  $('settingsApiStatus').className='status-tag';
-  $('lastUpdated').textContent=manifest.generated_at?new Date(manifest.generated_at).toLocaleString(state.language,{dateStyle:'medium',timeStyle:'short'}):'—';
-  renderApps();renderCategories();renderSaved();
+  $("apiStatus").textContent=status;
+  $("apiStatus").className="status-tag";
+  $("lastUpdated").textContent=manifest.generated_at?new Date(manifest.generated_at).toLocaleString(state.language,{dateStyle:"medium",timeStyle:"short"}):"—";
+  renderApps();renderCategories();renderSaved();updateAutomationCounters();
  };
  try{
-  const result=await api('/api/v1/catalog/apps?limit=200');
-  state.apps=result.items||[];
-  $('apiStatus').textContent=t('apiOnline');$('apiStatus').className='status-tag';
-  $('settingsApiStatus').textContent=t('apiOnline');$('settingsApiStatus').className='status-tag';
-  $('lastUpdated').textContent=new Date().toLocaleString(state.language,{dateStyle:'medium',timeStyle:'short'});
-  renderApps();renderCategories();renderSaved();
+  const liveUrl="https://raw.githubusercontent.com/"+GITHUB_REPOSITORY+"/main/apps/web/catalog/index.json?refresh="+Date.now();
+  const response=await fetch(liveUrl,{cache:"no-store",mode:"cors"});
+  if(!response.ok)throw new Error("Live catalogue returned HTTP "+response.status);
+  applyManifest(await response.json(),"LIVE CATALOG");
   return;
- }catch(apiError){
-  // The GitHub Release mirror is the authoritative live catalogue when a hosted
-  // FastAPI service is not configured. Fetch it on every app open, then fall back
-  // to the bundled snapshot only when the live mirror cannot be reached.
+ }catch(liveError){
   try{
-   const liveUrl=`https://raw.githubusercontent.com/ibra8y3-web/Apphoryn/main/apps/web/catalog/index.json?refresh=${Date.now()}`;
-   const response=await fetch(liveUrl,{cache:'no-store',mode:'cors'});
-   if(!response.ok)throw new Error(`Live Apphoryn catalogue returned HTTP ${response.status}`);
-   const manifest=await response.json();
-   applyManifest(manifest,'LIVE MIRROR');
-   return;
-  }catch(liveError){
-   try{
-    const response=await fetch(new URL('catalog/index.json',document.baseURI),{cache:'no-store'});
-    if(!response.ok)throw new Error(`Bundled catalogue returned HTTP ${response.status}`);
-    const manifest=await response.json();
-    applyManifest(manifest,'BUNDLED FALLBACK');
-   }catch(staticError){
-    $('apiStatus').textContent=t('apiOffline');$('apiStatus').style.color='var(--amber)';
-    $('settingsApiStatus').textContent=t('apiOffline');toast(t('networkError'),true);
-   }
+   const response=await fetch(new URL("catalog/index.json",document.baseURI),{cache:"no-store"});
+   if(!response.ok)throw new Error("Bundled catalogue returned HTTP "+response.status);
+   applyManifest(await response.json(),"OFFLINE COPY");
+  }catch(error){
+   $("apiStatus").textContent="OFFLINE";
+   $("apiStatus").style.color="var(--amber)";
+   toast(state.language==="ar"?"تعذر تحميل كتالوج Apphoryn.":"Could not load the Apphoryn catalog.",true);
   }
  }
 }
-async function loadJobs(){if(!state.adminToken){$('jobsList').innerHTML=`<div class="empty-state compact"><b>${t('noBuildJobs')}</b><p>${t('jobsAppear')}</p></div>`;return}try{const result=await api('/api/v1/admin/jobs',{headers:{'X-Apphoryn-Admin':state.adminToken}});state.jobs=result.items||[];$('metricJobs').textContent=state.jobs.length;$('jobsList').innerHTML=state.jobs.length?state.jobs.map(job=>`<article class="job-row"><span class="job-state ${job.status.includes('published')?'success':''}"></span><div class="job-info"><b>${esc(job.repository_url)}</b><small>${esc(job.git_ref)} · ${(job.targets||[]).map(esc).join(', ')} · ${new Date(job.created_at).toLocaleString()}</small></div><span class="job-status">${esc(job.status)}</span></article>`).join(''):`<div class="empty-state compact"><b>${t('noBuildJobs')}</b><p>${t('jobsAppear')}</p></div>`}catch(error){$('jobsList').innerHTML=`<div class="empty-state compact"><b>${esc(error.message)}</b></div>`}}
+function runTitle(run){
+ const name=String(run.name||"");
+ if(name.includes("Scout"))return state.language==="ar"?"كشاف التطبيقات — بحث واستيراد":"Scout — discover and import";
+ if(name.includes("Build and publish community software"))return state.language==="ar"?"بناء تطبيق مكتشف":"Automatic application build";
+ if(name.includes("Build Apphoryn native store clients"))return state.language==="ar"?"بناء تطبيق المتجر":"Store client build";
+ return name;
+}
+function runStatus(run){
+ if(run.status==="completed"){
+  if(run.conclusion==="success")return state.language==="ar"?"نجح":"Succeeded";
+  if(run.conclusion==="failure")return state.language==="ar"?"فشل":"Failed";
+  if(run.conclusion==="cancelled")return state.language==="ar"?"أُلغي":"Cancelled";
+  return String(run.conclusion||"completed");
+ }
+ if(run.status==="queued"||run.status==="waiting")return state.language==="ar"?"في الانتظار":"Queued";
+ return state.language==="ar"?"يعمل الآن":"Running";
+}
+function renderAutomationJobs(){
+ const host=$("jobsList");
+ if(!host)return;
+ const relevant=(state.jobs||[]).filter(run=>/Apphoryn Scout|Build and publish community software|Build Apphoryn native store clients/.test(String(run.name||""))).slice(0,12);
+ const latestScout=relevant.find(run=>String(run.name||"").includes("Scout"));
+ if($("scoutLastRun"))$("scoutLastRun").textContent=latestScout
+  ? runStatus(latestScout)+" · "+new Date(latestScout.created_at).toLocaleString(state.language)
+  : (state.language==="ar"?"لم يصل تشغيل بعد":"No run reported yet");
+ if($("metricJobs"))$("metricJobs").textContent=relevant.filter(run=>String(run.name||"").includes("Build and publish community software")).length;
+ if(!relevant.length){
+  host.innerHTML='<div class="empty-state compact"><b>'+ (state.language==="ar"?"لا توجد مهام مسجلة بعد":"No automation runs reported yet")+'</b><p>'+(state.language==="ar"?"سيظهر تشغيل Scout والبناء هنا من GitHub Actions.":"Scout and build runs will appear here from GitHub Actions.")+'</p></div>';
+  return;
+ }
+ host.innerHTML=relevant.map(run=>{
+  const success=run.status==="completed"&&run.conclusion==="success";
+  const failure=run.status==="completed"&&run.conclusion==="failure";
+  const stateClass=success?"success":failure?"failure":run.status==="in_progress"?"running":"";
+  const url=String(run.html_url||"");
+  const safeUrl=url.startsWith("https://github.com/"+GITHUB_REPOSITORY+"/actions/runs/")?url:"#";
+  const time=run.created_at?new Date(run.created_at).toLocaleString(state.language):"";
+  return '<article class="job-row"><span class="job-state '+stateClass+'"></span><div class="job-info"><b>'+esc(runTitle(run))+'</b><small>'+esc(time)+' · '+esc(String(run.event||""))+'</small></div><span class="job-status">'+esc(runStatus(run))+'</span><a class="job-open" href="'+esc(safeUrl)+'" target="_blank" rel="noopener noreferrer">↗</a></article>';
+ }).join("");
+}
+async function loadJobs(force=false){
+ if(!force&&Date.now()-state.jobsFetchedAt<60000&&state.jobs.length){renderAutomationJobs();return;}
+ const cacheKey="apphoryn-public-actions-cache";
+ try{
+  const payload=await githubJson(GITHUB_API_ROOT+"/repos/"+GITHUB_REPOSITORY+"/actions/runs?per_page=30");
+  state.jobs=Array.isArray(payload.workflow_runs)?payload.workflow_runs:[];
+  state.jobsFetchedAt=Date.now();
+  try{localStorage.setItem(cacheKey,JSON.stringify(state.jobs));}catch{}
+  renderAutomationJobs();
+ }catch(error){
+  try{
+   const cached=JSON.parse(localStorage.getItem(cacheKey)||"[]");
+   if(Array.isArray(cached)&&cached.length)state.jobs=cached;
+  }catch{}
+  renderAutomationJobs();
+  if(!state.jobs.length&&$("jobsList"))$("jobsList").innerHTML='<div class="empty-state compact"><b>'+esc(error.message)+'</b></div>';
+ }
+}
 function openApp(id){
  const app=state.apps.find(item=>item.id===id);if(!app)return;
  const artifacts=app.artifacts||[];
