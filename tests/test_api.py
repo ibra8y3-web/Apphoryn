@@ -128,5 +128,28 @@ class ApiSmokeTests(unittest.TestCase):
         mirror_class.return_value.publish_app.assert_not_called()
 
 
+    def test_store_merges_renamed_repository_by_stable_github_id(self):
+        database_record = {
+            "id": "local-old-id", "slug": "old-name", "name": "Old Name",
+            "repository_url": "https://github.com/old-owner/tool",
+            "github_repo_id": "987654321", "license_eligible": True,
+            "artifacts": [{"id": "sha-old", "sha256": "sha-old", "filename": "tool-1.exe"}],
+        }
+        mirror_record = {
+            "id": "stable-store-id", "slug": "new-name", "name": "New Name",
+            "repository_url": "https://github.com/new-owner/tool",
+            "github_repo_id": "987654321", "license_eligible": True,
+            "artifacts": [{"id": "sha-new", "sha256": "sha-new", "filename": "tool-2.exe"}],
+        }
+        with patch("app.main.db.list_apps", return_value=[database_record]), \\
+             patch("app.main.read_mirror_catalog", return_value=[mirror_record]):
+            response = self.client.get("/api/v1/catalog/apps")
+        self.assertEqual(response.status_code, 200)
+        items = response.json()["items"]
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0]["repository_url"], mirror_record["repository_url"])
+        self.assertEqual({row["sha256"] for row in items[0]["artifacts"]}, {"sha-old", "sha-new"})
+
+
 if __name__ == "__main__":
     unittest.main()
