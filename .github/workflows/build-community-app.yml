@@ -40,7 +40,7 @@ jobs:
           - target: macos
             runner: macos-latest
     if: contains(format(',{0},', inputs.targets), format(',{0},', matrix.target))
-    runs-on: \${{ matrix.runner }}
+    runs-on: ${{ matrix.runner }}
     timeout-minutes: 90
     steps:
       - name: Checkout trusted Apphoryn build adapters only
@@ -65,23 +65,29 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - name: Set up Android SDK and signature verifier
+      - name: Install Android SDK for Android target
         if: matrix.target == 'android'
         shell: bash
         run: |
-          yes | sdkmanager --licenses >/dev/null
-          sdkmanager --install "platform-tools" "build-tools;35.0.0"
+          export ANDROID_HOME="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}}"
+          SDKMANAGER="$(command -v sdkmanager || true)"
+          if [ -z "$SDKMANAGER" ]; then
+            SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager -perm -111 2>/dev/null | sort -V | tail -n 1)"
+          fi
+          if [ -z "$SDKMANAGER" ]; then echo "Android sdkmanager not found." >&2; exit 1; fi
+          yes | "$SDKMANAGER" --licenses >/dev/null
+          "$SDKMANAGER" --install "platform-tools" "build-tools;35.0.0"
           echo "$ANDROID_HOME/build-tools/35.0.0" >> "$GITHUB_PATH"
       - name: Build untrusted source without Apphoryn secrets
         env:
-          REPOSITORY_URL: \${{ inputs.repository_url }}
-          GIT_REF: \${{ inputs.git_ref }}
-          TARGET: \${{ matrix.target }}
-        run: python scripts/ci_build.py --repository "$REPOSITORY_URL" --ref "$GIT_REF" --target "$TARGET" --output "artifacts/\${{ matrix.target }}"
+          REPOSITORY_URL: ${{ inputs.repository_url }}
+          GIT_REF: ${{ inputs.git_ref }}
+          TARGET: ${{ matrix.target }}
+        run: python scripts/ci_build.py --repository "$REPOSITORY_URL" --ref "$GIT_REF" --target "$TARGET" --output "artifacts/${{ matrix.target }}"
       - uses: actions/upload-artifact@v4
         with:
-          name: apphoryn-build-\${{ matrix.target }}-\${{ inputs.app_id }}
-          path: artifacts/\${{ matrix.target }}/
+          name: apphoryn-build-${{ matrix.target }}-${{ inputs.app_id }}
+          path: artifacts/${{ matrix.target }}/
           if-no-files-found: error
           retention-days: 7
 
@@ -107,12 +113,17 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - uses: android-actions/setup-android@v3
-      - name: Install APK signature verifier for publisher re-check
+      - name: Install Android SDK for publisher verification
         shell: bash
         run: |
-          yes | sdkmanager --licenses >/dev/null
-          sdkmanager --install "platform-tools" "build-tools;35.0.0"
+          export ANDROID_HOME="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}}"
+          SDKMANAGER="$(command -v sdkmanager || true)"
+          if [ -z "$SDKMANAGER" ]; then
+            SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager -perm -111 2>/dev/null | sort -V | tail -n 1)"
+          fi
+          if [ -z "$SDKMANAGER" ]; then echo "Android sdkmanager not found." >&2; exit 1; fi
+          yes | "$SDKMANAGER" --licenses >/dev/null
+          "$SDKMANAGER" --install "platform-tools" "build-tools;35.0.0"
           echo "$ANDROID_HOME/build-tools/35.0.0" >> "$GITHUB_PATH"
       - name: Download available build outputs as data
         uses: actions/download-artifact@v4
@@ -122,9 +133,9 @@ jobs:
           path: artifacts
       - name: Verify again and publish to Apphoryn Releases
         env:
-          GITHUB_TOKEN: \${{ github.token }}
-          GITHUB_REPOSITORY: \${{ github.repository }}
-          APPHORYN_GITHUB_REF: \${{ github.ref_name }}
-          REPOSITORY_URL: \${{ inputs.repository_url }}
-          GIT_REF: \${{ inputs.git_ref }}
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          APPHORYN_GITHUB_REF: ${{ github.ref_name }}
+          REPOSITORY_URL: ${{ inputs.repository_url }}
+          GIT_REF: ${{ inputs.git_ref }}
         run: python scripts/publish_github_release.py --directory artifacts --repository "$REPOSITORY_URL" --ref "$GIT_REF"
