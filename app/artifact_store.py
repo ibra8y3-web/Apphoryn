@@ -60,13 +60,14 @@ class ArtifactStore:
         *,
         expected_sha256: str | None = None,
         max_bytes: int | None = None,
+        extension: str | None = None,
     ) -> Path:
         """Copy a regular file into the store and return its stable object path."""
         source_path = Path(source)
         if source_path.is_symlink() or not source_path.is_file():
             raise ArtifactStoreError("Only regular, non-symlink files can be stored.")
-        suffix = source_path.suffix.lower()
-        if not suffix or len(suffix) > 12 or not suffix[1:].isalnum():
+        suffix = (extension or source_path.suffix).lower()
+        if not suffix.startswith(".") or len(suffix) > 12 or not suffix[1:].isalnum():
             raise ArtifactStoreError("Artifact filename must have a simple package extension.")
 
         initial_size, initial_digest = self._hash_file(source_path, max_bytes)
