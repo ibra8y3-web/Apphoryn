@@ -46,3 +46,9 @@ body.light .automation-metrics .metric-card,body.light .provider-row{background:
 body.light .automation-last-run{border-color:#dbe4e9;color:#667a8c}
 body.light .automation-last-run b{color:#182734}
 @media(max-width:560px){.automation-metrics{gap:7px}.automation-metrics .metric-card{padding:10px}.automation-metrics .metric-card b{font-size:21px}.automation-metrics .metric-card small{font-size:9px}.provider-list{grid-template-columns:1fr}.automation-overview,.ai-engine-panel{padding:14px}}
+
+.provider-main{min-width:0;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;width:100%}
+.provider-models{display:flex;flex-wrap:wrap;gap:5px;width:100%;margin-top:5px}
+.provider-model{display:inline-flex;gap:5px;align-items:center;max-width:100%;overflow-wrap:anywhere;border:1px solid #304656;background:#0e1822;color:#b9c9d5;border-radius:6px;padding:4px 6px;font-size:9px}
+.provider-model small{color:#90d8bf;font-size:8px}
+body.light .provider-model{background:#edf3f7;color:#4c6273;border-color:#dbe4e9}
