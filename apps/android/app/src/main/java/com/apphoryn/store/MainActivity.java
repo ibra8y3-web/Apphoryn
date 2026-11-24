@@ -121,10 +121,11 @@ public final class MainActivity extends Activity {
         if (!"https".equalsIgnoreCase(uri.getScheme()) || uri.getUserInfo() != null
                 || uri.getFragment() != null) return false;
         String host = String.valueOf(uri.getHost()).toLowerCase(Locale.ROOT);
-        return host.equals("github.com")
+        return (uri.getPort() == -1 || uri.getPort() == 443)
+                && (host.equals("github.com")
                 || host.equals("objects.githubusercontent.com")
                 || host.equals("release-assets.githubusercontent.com")
-                || host.equals("github-releases.githubusercontent.com");
+                || host.equals("github-releases.githubusercontent.com"));
     }
 
     private static void validateRequest(String artifactId, String filename, String platform,
