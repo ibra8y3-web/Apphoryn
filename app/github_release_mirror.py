@@ -276,6 +276,7 @@ class GitHubReleaseMirror:
             "latest_version": app.get("latest_version"), "release_url": app.get("release_url"),
             "mirror_release_url": release.get("html_url"),
             "license_notice_url": license_notice_url or current.get("license_notice_url"),
+            "scout_checked_at": datetime.now(timezone.utc).isoformat(),
         })
         all_artifacts = current.setdefault("artifacts", [])
         known = {str(item.get("sha256")) for item in all_artifacts}
@@ -288,7 +289,26 @@ class GitHubReleaseMirror:
         manifest["generated_at"] = datetime.now(timezone.utc).isoformat()
         manifest["apps"] = sorted(apps, key=lambda item: str(item.get("name", "")).casefold())
         self._write_catalog(manifest, sha, f"Update Apphoryn catalog: {app.get('name') or slug} {version}")
-        return {"release_url": release.get("html_url"), "manifest_path": self.catalog_path, "mirrored_artifacts": mirrored}
+        return {
+            "release_url": release.get("html_url"),
+            "manifest_path": self.catalog_path,
+            "mirrored_artifacts": mirrored,
+            "scout_checked_at": current.get("scout_checked_at"),
+        }
+
+    def mark_app_checked(self, repository_url: str, github_repo_id: str | None = None) -> bool:
+        manifest, sha = self._read_catalog()
+        current = next((
+            item for item in manifest.get("apps", [])
+            if item.get("repository_url") == repository_url
+            or (github_repo_id and str(item.get("github_repo_id") or "") == str(github_repo_id))
+        ), None)
+        if current is None:
+            return False
+        current["scout_checked_at"] = datetime.now(timezone.utc).isoformat()
+        manifest["generated_at"] = current["scout_checked_at"]
+        self._write_catalog(manifest, sha, f"Scout checked upstream releases for {current.get('name') or repository_url}")
+        return True
 
     def publish_built_artifacts(self, repository_url: str, git_ref: str, directory: str | Path) -> dict[str, Any]:
         canonical = canonical_repository_url(repository_url)
