@@ -116,12 +116,31 @@ def list_apps(category: str | None = None, q: str | None = None, limit: int = Qu
 def list_projects(q: str | None = None, limit: int = Query(80, ge=1, le=200)):
     """List imported source projects for the build/workbench layer.
 
-    A source repository is not an installable store app until verified artifacts exist.
+    Local DB records and the Apphoryn-owned static manifest are merged by
+    immutable GitHub repository ID first, then canonical URL. Source-only
+    projects are retained here but never promoted to the installable store.
     """
-    rows = [
-        item for item in read_mirror_catalog()
-        if item.get("repository_url") and item.get("license_eligible")
-    ]
+    by_identity: dict[str, dict] = {}
+    for item in db.list_apps(limit=200) + read_mirror_catalog():
+        repository_url = str(item.get("repository_url") or "")
+        if not repository_url or not item.get("license_eligible"):
+            continue
+        github_id = str(item.get("github_repo_id") or "")
+        identity = f"github:{github_id}" if github_id else f"url:{repository_url.casefold().rstrip('/')}"
+        previous = by_identity.get(identity)
+        if previous is None:
+            by_identity[identity] = {**item, "artifacts": list(item.get("artifacts") or [])}
+            continue
+        merged = list(previous.get("artifacts") or [])
+        known_hashes = {str(row.get("sha256") or row.get("id") or "") for row in merged}
+        for artifact in item.get("artifacts") or []:
+            digest = str(artifact.get("sha256") or artifact.get("id") or "")
+            if digest and digest not in known_hashes:
+                merged.append(artifact)
+                known_hashes.add(digest)
+        by_identity[identity] = {**previous, **item, "artifacts": merged}
+
+    rows = list(by_identity.values())
     if q:
         term = q.casefold()
         rows = [
