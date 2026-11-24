@@ -29,3 +29,14 @@ XAPK/split APK and DMG one-click installation are not currently implemented. The
 ## Automated builds
 
 The `Build Apphoryn native store clients` workflow builds a debug Android APK and OS-native desktop installers on corresponding GitHub-hosted runners. It uploads them as workflow artifacts for review; this change does not publish an unsigned development package as a production release.
+
+
+## CORS for the embedded clients
+
+Set the server environment variable `APPHORYN_CORS_ORIGINS` to the exact embedded origins, for example:
+
+```env
+APPHORYN_CORS_ORIGINS=http://127.0.0.1:8765,apphoryn://store
+```
+
+The Android embedded asset server binds to loopback port `8765` so the origin is stable. The Electron app uses `apphoryn://store`. Keep the API itself on HTTPS; the local Android HTTP origin serves only packaged UI assets. Do not use a wildcard CORS origin for admin endpoints.
