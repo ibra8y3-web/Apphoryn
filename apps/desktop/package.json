@@ -44,6 +44,9 @@
             "x64"
           ]
         }
+      ],
+      "publisherName": [
+        "Apphoryn Community"
       ]
     },
     "nsis": {
@@ -58,7 +61,9 @@
         "AppImage",
         "deb"
       ],
-      "category": "Network;Utility;"
+      "category": "Network;Utility;",
+      "maintainer": "Apphoryn Community <noreply@github.com>",
+      "desktopName": "Apphoryn"
     },
     "mac": {
       "target": [
@@ -66,5 +71,10 @@
       ],
       "category": "public.app-category.utilities"
     }
-  }
+  },
+  "author": {
+    "name": "Apphoryn Community",
+    "email": "noreply@github.com"
+  },
+  "homepage": "https://github.com/ibra8y3-web/Apphoryn"
 }
