@@ -6,6 +6,23 @@ Apphoryn is an open-source software discovery, build and distribution platform. 
 
 > **Current code line: 0.3.0-alpha.** Apphoryn includes a PWA, a native Android client project, and an Electron desktop client project for Windows, Linux and macOS. Development install packages are produced by the native-client workflow; the store catalogue only exposes third-party apps after a real installer has passed import and format verification.
 
+## Two linked product lanes: Store and Project Workbench
+
+Apphoryn deliberately maintains two different kinds of records:
+
+- **Installable store apps** have at least one real package file that has been downloaded or built, structurally validated, hashed, and copied into Apphoryn-owned artifact storage. The public storefront filters out records with no verified installer.
+- **Source projects** retain their upstream repository, immutable GitHub repository ID, license metadata, source commit/ref, description and build history in the project workbench. A source project can be reviewed and built without appearing as a downloadable app.
+
+The Project Workbench is exposed separately at `GET /api/v1/catalog/projects`; the app store remains at `GET /api/v1/catalog/apps`. This prevents a repository URL, source archive, library, or README from being misrepresented as an installable application.
+
+When a source project has no verified package, the Scout may dispatch the isolated native build workflow when `APPHORYN_AUTO_BUILD_TARGETS` is enabled. This fallback also runs when an upstream Release exists but contains only source archives, checksums, documentation or unsupported file types. Successful build outputs are independently validated and published to Apphoryn's own release storage before the store manifest exposes them.
+
+### Apphoryn-owned downloads and duplicate handling
+
+Upstream sources are discovery and update inputs, not the store's download destination. The importer downloads an eligible package, validates its format and integrity, stores the binary in Apphoryn's content-addressed object storage, and mirrors the validated file into **this Apphoryn repository's Releases**. Store download entries resolve to those Apphoryn-owned assets (or the Apphoryn API download route); they do not send customers to the upstream project page.
+
+Each upstream project is keyed by its stable GitHub repository ID as well as its canonical repository URL, so renames update the existing record. Each binary is keyed by SHA-256 within its app record, so the same file is not re-added merely because a publisher changes its filename or release tag. A genuinely new binary/version is appended to the existing app's release history instead of creating a duplicate app listing.
+
 ## How the real store works
 
 1. **Scout enumerates public projects.** It starts with the maintained seed list in \`catalog-seed-repositories.json\`, then incrementally reads GitHub's public-repository listing endpoint using the last repository ID as a durable cursor. It does not depend on the Search API's 1,000-result window.
