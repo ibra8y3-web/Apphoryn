@@ -5,8 +5,6 @@ import re
 from pathlib import PurePosixPath
 from urllib.parse import urlparse
 
-# Conservative allowlist for automated source mirroring and redistribution.
-# This is a policy gate, not legal advice; project-specific license obligations remain.
 REDISTRIBUTION_LICENSES = {
     "MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "ISC",
     "MPL-2.0", "GPL-2.0", "GPL-2.0-only", "GPL-2.0-or-later",
@@ -18,7 +16,6 @@ REDISTRIBUTION_LICENSES = {
 
 ARTIFACT_TYPES = {
     ".apk": ("android", "Android package"),
-    ".aab": ("android", "Android App Bundle"),
     ".exe": ("windows", "Windows executable"),
     ".msi": ("windows", "Windows installer"),
     ".msix": ("windows", "Windows package"),
@@ -55,18 +52,25 @@ def repository_slug(repository_url: str) -> str:
 
 
 def normalize_license(license_spdx: str | None) -> str | None:
-    if not license_spdx:
-        return None
-    return license_spdx.strip()
+    return license_spdx.strip() if license_spdx else None
 
 
 def license_allows_redistribution(license_spdx: str | None) -> bool:
     return normalize_license(license_spdx) in REDISTRIBUTION_LICENSES
 
 
+def valid_git_ref(value: str) -> bool:
+    if not isinstance(value, str) or not 1 <= len(value) <= 120:
+        return False
+    if value.startswith("-") or value.endswith(("/", ".", ".lock")) or ".." in value or "//" in value or "@{" in value:
+        return False
+    if any(part.startswith(".") for part in value.split("/")):
+        return False
+    return bool(re.fullmatch(r"[A-Za-z0-9._/-]+", value))
+
+
 def classify_artifact(filename: str) -> tuple[str, str] | None:
-    suffix = PurePosixPath(filename.lower()).suffix
-    return ARTIFACT_TYPES.get(suffix)
+    return ARTIFACT_TYPES.get(PurePosixPath(filename.lower()).suffix)
 
 
 def safe_filename(filename: str) -> str:
