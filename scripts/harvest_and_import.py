@@ -99,6 +99,16 @@ def known_current(candidate: dict[str, Any], known_by_id: dict[str, dict], known
     return not upstream_updated or upstream_updated <= indexed_updated
 
 
+def should_dispatch_build_fallback(verified_artifacts: list[dict[str, Any]], auto_targets: list[str]) -> bool:
+    """Build from source whenever no verified installer was imported.
+
+    A GitHub Release can exist while containing only source archives, checksums,
+    documentation, or unsupported files. The presence of a Release alone must
+    never suppress the build fallback.
+    """
+    return bool(auto_targets) and not verified_artifacts
+
+
 def retry_record(entry: dict[str, Any], now: float, reason: str) -> dict[str, Any]:
     attempts = int(entry.get("attempts") or 0) + 1
     delay = RETRY_DELAYS_SECONDS[min(attempts - 1, len(RETRY_DELAYS_SECONDS) - 1)]
@@ -272,7 +282,7 @@ def main() -> None:
                         result["status"] = "awaiting_verified_installer"
                     else:
                         result["status"] = "source_only_scanned"
-                if auto_targets and not imported.get("release_found"):
+                if should_dispatch_build_fallback(verified_artifacts, auto_targets):
                     git_ref = str(app.get("source_commit_sha") or app.get("default_branch") or "main")
                     if not mirror.has_recent_build_attempt(repo_url, git_ref):
                         mirror.dispatch_build(repo_url, git_ref, auto_targets, str(app.get("slug") or app.get("id")))
