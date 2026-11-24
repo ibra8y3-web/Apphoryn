@@ -1,0 +1,138 @@
+name: Build Apphoryn native store clients
+
+on:
+  push:
+    branches: [main, master]
+    paths: ['apps/web/**', 'apps/android/**', 'apps/desktop/**', '.github/workflows/build-store-clients.yml']
+  pull_request:
+    paths: ['apps/web/**', 'apps/android/**', 'apps/desktop/**', '.github/workflows/build-store-clients.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  android:
+    name: Android APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v4
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+      - name: Install Android SDK packages
+        run: |
+          yes | sdkmanager --licenses >/dev/null || true
+          sdkmanager --install "platforms;android-35" "build-tools;35.0.0"
+      - name: Build debug APK
+        run: |
+          set -euo pipefail
+          gradle -p apps/android --no-daemon assembleDebug
+          APK="apps/android/app/build/outputs/apk/debug/app-debug.apk"
+          test -s "$APK"
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose "$APK"
+          mkdir -p native-artifacts
+          cp "$APK" native-artifacts/Apphoryn-Android-debug.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: apphoryn-android-debug
+          path: native-artifacts/*.apk
+          if-no-files-found: error
+          retention-days: 14
+
+  windows:
+    name: Windows installer
+    runs-on: windows-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install dependencies and run desktop tests
+        working-directory: apps/desktop
+        shell: bash
+        run: npm install --no-audit --no-fund && npm test
+      - name: Build Windows installer
+        working-directory: apps/desktop
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx electron-builder --win nsis --x64
+          mkdir -p ../../native-artifacts
+          find dist -maxdepth 1 -type f -iname '*.exe' -exec cp {} ../../native-artifacts/ \;
+          test -n "$(find ../../native-artifacts -type f -iname '*.exe' -print -quit)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: apphoryn-windows-installer
+          path: native-artifacts/*.exe
+          if-no-files-found: error
+          retention-days: 14
+
+  linux:
+    name: Linux packages
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install dependencies and run desktop tests
+        working-directory: apps/desktop
+        run: npm install --no-audit --no-fund && npm test
+      - name: Build Linux packages
+        working-directory: apps/desktop
+        run: |
+          set -euo pipefail
+          npx electron-builder --linux AppImage deb rpm --x64
+          mkdir -p ../../native-artifacts
+          find dist -maxdepth 1 -type f \( -iname '*.AppImage' -o -iname '*.deb' -o -iname '*.rpm' \) -exec cp {} ../../native-artifacts/ \;
+          test -n "$(find ../../native-artifacts -type f -print -quit)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: apphoryn-linux-installers
+          path: native-artifacts/*
+          if-no-files-found: error
+          retention-days: 14
+
+  macos:
+    name: macOS packages
+    runs-on: macos-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install dependencies and run desktop tests
+        working-directory: apps/desktop
+        run: npm install --no-audit --no-fund && npm test
+      - name: Build macOS packages
+        working-directory: apps/desktop
+        run: |
+          set -euo pipefail
+          npx electron-builder --mac pkg dmg --x64
+          mkdir -p ../../native-artifacts
+          find dist -maxdepth 1 -type f \( -iname '*.pkg' -o -iname '*.dmg' \) -exec cp {} ../../native-artifacts/ \;
+          test -n "$(find ../../native-artifacts -type f -print -quit)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: apphoryn-macos-installers
+          path: native-artifacts/*
+          if-no-files-found: error
+          retention-days: 14

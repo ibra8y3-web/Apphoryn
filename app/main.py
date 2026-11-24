@@ -5,11 +5,14 @@ import json
 import os
 import tempfile
 import uuid
+import urllib.error
+import urllib.parse
+import urllib.request
 from pathlib import Path
 
 from fastapi import FastAPI, Header, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, RedirectResponse
+from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
@@ -205,21 +208,107 @@ async def upload_built_artifact(
         temp_path.unlink(missing_ok=True)
 
 
+_RELEASE_ASSET_HOSTS = {
+    "github.com", "objects.githubusercontent.com",
+    "release-assets.githubusercontent.com", "github-releases.githubusercontent.com",
+}
+
+
+class _ApphorynReleaseRedirects(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        parsed = urllib.parse.urlparse(newurl)
+        if parsed.scheme != "https" or parsed.hostname not in _RELEASE_ASSET_HOSTS:
+            raise urllib.error.HTTPError(
+                newurl, code, "Release redirect target is not an approved HTTPS asset host.", headers, fp
+            )
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
+def _is_apphoryn_release_url(url: str, owner: str | None = None, repository: str | None = None) -> bool:
+    parsed = urllib.parse.urlparse(url)
+    owner = (settings.github_owner if owner is None else owner).strip()
+    repository = (settings.github_repository if repository is None else repository).strip()
+    expected_path = f"/{owner}/{repository}/releases/download/"
+    return (
+        bool(owner and repository)
+        and parsed.scheme == "https"
+        and parsed.hostname == "github.com"
+        and parsed.path.startswith(expected_path)
+        and parsed.username is None
+        and parsed.password is None
+        and not parsed.query
+        and not parsed.fragment
+    )
+
+
 @app.get("/api/v1/downloads/{artifact_id}")
 def download_artifact(artifact_id: str):
+    """Serve Apphoryn-owned package bytes; never send the client to GitHub or an upstream site."""
     artifact = db.get_artifact(artifact_id)
     if artifact:
         path = Path(artifact["storage_path"]).resolve()
         storage_root = settings.storage_path.resolve()
         if storage_root in path.parents and path.is_file():
-            return FileResponse(path, filename=artifact["filename"], media_type="application/octet-stream")
+            return FileResponse(
+                path, filename=artifact["filename"], media_type="application/octet-stream",
+                headers={"X-Content-Type-Options": "nosniff", "Cache-Control": "private, no-store"},
+            )
+
     mirrored = find_mirrored_artifact(artifact_id)
-    if mirrored:
-        url = str(mirrored.get("download_url") or "")
-        parsed = __import__("urllib.parse", fromlist=["urlparse"]).urlparse(url)
-        if parsed.scheme == "https" and parsed.hostname == "github.com" and "/releases/download/" in parsed.path:
-            return RedirectResponse(url, status_code=302)
-    raise HTTPException(404, "Artifact file is unavailable.")
+    if not mirrored:
+        raise HTTPException(404, "Artifact file is unavailable.")
+    url = str(mirrored.get("download_url") or "")
+    if not _is_apphoryn_release_url(url):
+        raise HTTPException(404, "Only Apphoryn-owned release assets can be served by this endpoint.")
+
+    filename = Path(str(mirrored.get("filename") or mirrored.get("name") or "application.bin")).name
+    request = urllib.request.Request(
+        url, headers={"User-Agent": "Apphoryn-Store/1.0", "Accept": "application/octet-stream"}
+    )
+    opener = urllib.request.build_opener(_ApphorynReleaseRedirects())
+    try:
+        response = opener.open(request, timeout=60)
+    except (urllib.error.URLError, TimeoutError, OSError) as exc:
+        raise HTTPException(502, "Apphoryn could not retrieve its stored release asset.") from exc
+
+    final_url = urllib.parse.urlparse(response.geturl())
+    if final_url.scheme != "https" or final_url.hostname not in _RELEASE_ASSET_HOSTS:
+        response.close()
+        raise HTTPException(502, "Release asset resolved to an untrusted host.")
+    declared_length = response.headers.get("Content-Length")
+    if declared_length:
+        try:
+            if int(declared_length) > settings.max_artifact_bytes:
+                response.close()
+                raise HTTPException(413, "Artifact exceeds the configured download size limit.")
+        except ValueError:
+            response.close()
+            raise HTTPException(502, "Release asset returned an invalid content length.")
+
+    encoded_name = urllib.parse.quote(filename, safe="")
+    headers = {
+        "Content-Disposition": f"attachment; filename*=UTF-8''{encoded_name}",
+        "X-Content-Type-Options": "nosniff",
+        "Cache-Control": "private, no-store",
+    }
+    if declared_length:
+        headers["Content-Length"] = declared_length
+
+    def stream_release_asset():
+        total = 0
+        try:
+            while True:
+                chunk = response.read(1024 * 1024)
+                if not chunk:
+                    break
+                total += len(chunk)
+                if total > settings.max_artifact_bytes:
+                    raise RuntimeError("Mirrored release asset exceeded the configured download limit.")
+                yield chunk
+        finally:
+            response.close()
+
+    return StreamingResponse(stream_release_asset(), media_type="application/octet-stream", headers=headers)
 
 
 @app.get("/api/v1/admin/ai/models")
