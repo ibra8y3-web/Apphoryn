@@ -120,6 +120,37 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
             mirror.dispatch_scout(max_repositories=10001)
         mirror.request.assert_not_called()
 
+    def test_duplicate_build_output_updates_build_ref_without_empty_release(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            binary = root / "tool.exe"
+            digest = minimal_pe(binary)
+            manifest = {"schema_version": 1, "apps": [{
+                "id": "tool", "slug": "owner-tool", "name": "Tool",
+                "repository_url": "https://github.com/owner/tool",
+                "license_spdx": "MIT", "license_eligible": True,
+                "project_status": "installable",
+                "artifacts": [{"sha256": digest, "filename": "windows-tool.exe", "platform": "windows"}],
+            }]}
+            mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn")
+            mirror._read_catalog = Mock(return_value=(manifest, "manifest-sha"))
+            mirror.request = Mock(return_value={})
+            mirror._ensure_release = Mock()
+            mirror._upload_asset = Mock()
+
+            result = mirror.publish_built_artifacts(
+                "https://github.com/owner/tool", "v2.0.0", root
+            )
+
+            self.assertEqual(result["published"], [])
+            self.assertEqual(result["already_present"], 1)
+            mirror._ensure_release.assert_not_called()
+            mirror._upload_asset.assert_not_called()
+            _, _, payload = mirror.request.call_args.args
+            written = json.loads(base64.b64decode(payload["content"]).decode("utf-8"))
+            self.assertIn("v2.0.0", written["apps"][0]["build_refs"])
+            self.assertEqual(written["apps"][0]["project_status"], "installable")
+
     def test_dispatch_records_attempt_and_prevents_eight_hour_rescan_duplicates(self):
         manifest = {"schema_version": 1, "apps": [{
             "id": "tool", "slug": "owner-tool", "name": "Tool",
