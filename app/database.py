@@ -94,6 +94,7 @@ class Database:
                 );
                 CREATE INDEX IF NOT EXISTS idx_apps_category ON apps(category);
                 CREATE INDEX IF NOT EXISTS idx_artifacts_app ON artifacts(app_id);
+                CREATE INDEX IF NOT EXISTS idx_artifact_app_sha ON artifacts(app_id, sha256);
                 CREATE INDEX IF NOT EXISTS idx_jobs_created ON build_jobs(created_at DESC);
             """)
             app_columns = {row[1] for row in con.execute("PRAGMA table_info(apps)").fetchall()}
@@ -204,7 +205,15 @@ class Database:
             return [self._dict(row) or {} for row in con.execute(sql, args).fetchall()]
 
     def add_artifact(self, item: dict[str, Any]) -> dict[str, Any]:
+        """Store one verified binary per app/content hash, regardless of release tag or filename."""
         with self.connect() as con:
+            existing = con.execute(
+                "SELECT * FROM artifacts WHERE app_id=? AND lower(sha256)=lower(?) ORDER BY created_at DESC LIMIT 1",
+                (item["app_id"], item["sha256"]),
+            ).fetchone()
+            if existing is not None:
+                return self._dict(existing) or {}
+
             con.execute("""INSERT OR IGNORE INTO artifacts
                 (id,app_id,filename,platform,package_type,version,size_bytes,sha256,upstream_digest_verified,validation_status,signature_status,signer_certificate_sha256,source_url,storage_path,created_at)
                 VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
@@ -217,6 +226,14 @@ class Database:
                 row = con.execute("SELECT * FROM artifacts WHERE app_id=? AND filename=? AND version IS ? AND sha256=?",
                                   (item["app_id"],item["filename"],item.get("version"),item["sha256"])).fetchone()
             return self._dict(row) or {}
+
+    def get_artifact_by_sha256(self, app_id: str, sha256: str) -> dict[str, Any] | None:
+        with self.connect() as con:
+            row = con.execute(
+                "SELECT * FROM artifacts WHERE app_id=? AND lower(sha256)=lower(?) ORDER BY created_at DESC LIMIT 1",
+                (app_id, sha256),
+            ).fetchone()
+            return self._dict(row)
 
     def list_artifacts(self, app_id: str) -> list[dict[str, Any]]:
         with self.connect() as con:
