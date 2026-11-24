@@ -11,6 +11,30 @@ from app.github_client import GitHubError
 import app.services as services_module
 
 
+def pe_fixture_bytes() -> bytes:
+    data = bytearray(1024)
+    pe_offset = 128
+    data[:2] = b"MZ"
+    data[0x3C:0x40] = pe_offset.to_bytes(4, "little")
+    data[pe_offset:pe_offset + 4] = bytes((0x50, 0x45, 0, 0))
+    data[pe_offset + 4:pe_offset + 6] = (0x8664).to_bytes(2, "little")
+    data[pe_offset + 6:pe_offset + 8] = (1).to_bytes(2, "little")
+    data[pe_offset + 20:pe_offset + 22] = (0xF0).to_bytes(2, "little")
+    data[pe_offset + 22:pe_offset + 24] = (0x0002).to_bytes(2, "little")
+    optional = pe_offset + 24
+    data[optional:optional + 2] = (0x20B).to_bytes(2, "little")
+    data[optional + 16:optional + 20] = (0x1000).to_bytes(4, "little")
+    section = optional + 0xF0
+    data[section:section + 5] = b".text"
+    data[section + 8:section + 12] = (0x1000).to_bytes(4, "little")
+    data[section + 12:section + 16] = (0x1000).to_bytes(4, "little")
+    data[section + 16:section + 20] = (128).to_bytes(4, "little")
+    data[section + 20:section + 24] = (512).to_bytes(4, "little")
+    data[section + 36:section + 40] = (0x60000020).to_bytes(4, "little")
+    data[512:640] = bytes((0xC3,)) * 128
+    return bytes(data)
+
+
 class CatalogServiceTests(unittest.TestCase):
     def test_discovery_marks_license_eligibility_without_importing(self):
         github = Mock()
@@ -92,18 +116,7 @@ class CatalogServiceTests(unittest.TestCase):
                 return {"content": base64.b64encode(b"# Tool\nA useful desktop tool.").decode()}
 
             github.request.side_effect = github_request
-            payload = bytearray(512)
-            pe_offset = 128
-            payload[:2] = b"MZ"
-            payload[0x3C:0x40] = pe_offset.to_bytes(4, "little")
-            payload[pe_offset:pe_offset + 4] = b"PE\0\0"
-            payload[pe_offset + 4:pe_offset + 6] = (0x8664).to_bytes(2, "little")
-            payload[pe_offset + 6:pe_offset + 8] = (1).to_bytes(2, "little")
-            payload[pe_offset + 20:pe_offset + 22] = (0xF0).to_bytes(2, "little")
-            payload[pe_offset + 22:pe_offset + 24] = (0x0002).to_bytes(2, "little")
-            optional = pe_offset + 24
-            payload[optional:optional + 2] = (0x20B).to_bytes(2, "little")
-            payload[optional + 16:optional + 20] = (0x1000).to_bytes(4, "little")
+            payload = pe_fixture_bytes()
             expected = hashlib.sha256(payload).hexdigest()
             original_download = services_module._download_asset
             old_storage = services_module.settings.storage_path
@@ -146,19 +159,7 @@ class CatalogServiceTests(unittest.TestCase):
                 "translations": {}, "created_at": now, "updated_at": now,
             })
             incoming = folder_path / "minimal-pe-fixture.exe"
-            # A structurally valid PE application image with a non-zero entry point.
-            pe = bytearray(512)
-            pe_offset = 128
-            pe[:2] = b"MZ"
-            pe[0x3C:0x40] = pe_offset.to_bytes(4, "little")
-            pe[pe_offset:pe_offset + 4] = b"PE\0\0"
-            pe[pe_offset + 4:pe_offset + 6] = (0x8664).to_bytes(2, "little")
-            pe[pe_offset + 6:pe_offset + 8] = (1).to_bytes(2, "little")
-            pe[pe_offset + 20:pe_offset + 22] = (0xF0).to_bytes(2, "little")
-            pe[pe_offset + 22:pe_offset + 24] = (0x0002).to_bytes(2, "little")
-            optional = pe_offset + 24
-            pe[optional:optional + 2] = (0x20B).to_bytes(2, "little")
-            pe[optional + 16:optional + 20] = (0x1000).to_bytes(4, "little")
+            pe = pe_fixture_bytes()
             incoming.write_bytes(pe)
             expected = hashlib.sha256(incoming.read_bytes()).hexdigest()
             old_storage = services_module.settings.storage_path
