@@ -77,7 +77,7 @@ class ArtifactValidationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / "library.jar"
             with zipfile.ZipFile(path, "w") as archive:
-                archive.writestr("META-INF/MANIFEST.MF", "Manifest-Version: 1.0\\n\\n")
+                archive.writestr("META-INF/MANIFEST.MF", "Manifest-Version: 1.0\n\n")
                 archive.writestr("org/example/Library.class", b"compiled class")
             with self.assertRaisesRegex(ArtifactValidationError, "no Main-Class"):
                 validate_artifact(path)
@@ -88,13 +88,12 @@ class ArtifactValidationTests(unittest.TestCase):
             with zipfile.ZipFile(path, "w") as archive:
                 archive.writestr(
                     "META-INF/MANIFEST.MF",
-                    "Manifest-Version: 1.0\\nMain-Class: org.example.Main\\n\\n",
+                    "Manifest-Version: 1.0\nMain-Class: org.example.Main\n\n",
                 )
                 archive.writestr("org/example/Main.class", b"compiled class")
             result = validate_artifact(path)
             self.assertTrue(result["valid"])
             self.assertEqual(result["format"], "jar")
-
 
 if __name__ == "__main__":
     unittest.main()
