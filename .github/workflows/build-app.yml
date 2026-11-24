@@ -40,7 +40,6 @@ jobs:
             runner: ubuntu-latest
           - target: macos
             runner: macos-latest
-    if: contains(format(',{0},', inputs.targets), format(',{0},', matrix.target))
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 75
     steps:
@@ -68,15 +67,19 @@ jobs:
           java-version: '17'
       - name: Set up Android SDK
         if: matrix.target == 'android'
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
+        with:
+          packages: platform-tools
       - name: Build source on disposable runner (no Apphoryn ingest secrets)
         shell: bash
+        if: contains(format(',{0},', inputs.targets), format(',{0},', matrix.target))
         env:
           REPOSITORY_URL: ${{ inputs.repository_url }}
           GIT_REF: ${{ inputs.git_ref }}
           TARGET: ${{ matrix.target }}
         run: python scripts/ci_build.py --repository "$REPOSITORY_URL" --ref "$GIT_REF" --target "$TARGET" --output "artifacts/${{ matrix.target }}"
       - name: Upload result to workflow artifact storage
+        if: contains(format(',{0},', inputs.targets), format(',{0},', matrix.target))
         uses: actions/upload-artifact@v4
         with:
           name: apphoryn-${{ matrix.target }}-${{ inputs.app_id }}
@@ -86,7 +89,7 @@ jobs:
 
   publish:
     needs: build
-    if: always() && needs.build.result != 'cancelled' && contains(format(',{0},', inputs.targets), format(',{0},', matrix.target))
+    if: always() && needs.build.result != 'cancelled'
     strategy:
       fail-fast: false
       matrix:
