@@ -272,6 +272,9 @@ def main() -> None:
                 if app.get("github_repo_id"):
                     known_by_id[str(app["github_repo_id"])] = known_record
             else:
+                # Keep source-only projects in the project/workbench layer without
+                # presenting them as installable apps in the public storefront.
+                result["project"] = mirror.register_project(app)
                 existing = known_by_id.get(str(app.get("github_repo_id") or "")) or known_by_url.get(_repo_key(repo_url))
                 if existing:
                     mirror.mark_app_checked(str(app.get("repository_url") or repo_url), app.get("github_repo_id"))
@@ -282,13 +285,17 @@ def main() -> None:
                         result["status"] = "awaiting_verified_installer"
                     else:
                         result["status"] = "source_only_scanned"
+                # If an upstream release exists but contains no usable installer, build
+                # from source rather than repeatedly waiting for a package that is absent.
                 if should_dispatch_build_fallback(verified_artifacts, auto_targets):
                     git_ref = str(app.get("source_commit_sha") or app.get("default_branch") or "main")
                     if not mirror.has_recent_build_attempt(repo_url, git_ref):
                         mirror.dispatch_build(repo_url, git_ref, auto_targets, str(app.get("slug") or app.get("id")))
                         result["build_status"] = "workflow_dispatched"
                         result["build_targets"] = auto_targets
-                result["reason"] = "No verified installer exists; source-only projects are not published as installable store apps."
+                    else:
+                        result["build_status"] = "already_queued_or_published"
+                result["reason"] = "Project source metadata is retained in Apphoryn; only verified installable packages appear in the store."
         except ValueError as exc:
             result.update({"status": "rejected_by_policy", "reason": str(exc)[:700]})
         except Exception as exc:
