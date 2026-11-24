@@ -17,6 +17,40 @@ class AiDescriptionTests(unittest.TestCase):
         self.assertFalse(result["build_recommended"])
         self.assertEqual(result["classification_source"], "heuristic")
 
+    def test_ai_generates_and_persists_separate_english_and_arabic_text(self):
+        english = {
+            "summary": "A cross-platform file transfer application.",
+            "description": "Transfers files between devices on a local network.",
+            "translations": {"en": {"summary": "A cross-platform file transfer application.", "description": "Transfers files between devices on a local network."}},
+            "project_kind": "application",
+            "build_recommended": True,
+            "classification_reason": "The README documents desktop and mobile installers.",
+        }
+        arabic = {
+            "summary": "تطبيق لنقل الملفات بين الأنظمة المختلفة.",
+            "description": "ينقل الملفات بين الأجهزة على الشبكة المحلية.",
+        }
+        with (
+            patch("app.ai_descriptions.ai_router.has_configured_ai", return_value=True),
+            patch("app.ai_descriptions.ai_router.generate_json", side_effect=[
+                (english, {"provider": "openrouter", "model": "example:free"}),
+                (arabic, {"provider": "openrouter", "model": "example:free"}),
+            ]),
+        ):
+            result = DescriptionGenerator().generate(
+                name="Local Transfer",
+                owner="example",
+                description="A file transfer app.",
+                topics=["file-sharing"],
+                readme_excerpt="Install the app on desktop and mobile devices.",
+                category="network",
+            )
+        self.assertEqual(result["translations"]["en"], "A cross-platform file transfer application.")
+        self.assertEqual(result["translations"]["ar"], "تطبيق لنقل الملفات بين الأنظمة المختلفة.")
+        self.assertEqual(result["description_translations"]["ar"], "ينقل الملفات بين الأجهزة على الشبكة المحلية.")
+        self.assertEqual(result["translation_status"], "complete")
+        self.assertEqual(result["ai_provider"], "openrouter")
+
     def test_fallback_recognizes_standalone_desktop_application(self):
         result = fallback_project_classification(
             name="Example Desktop App",
