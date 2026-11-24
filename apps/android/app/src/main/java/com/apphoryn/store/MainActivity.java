@@ -120,7 +120,7 @@ public final class MainActivity extends Activity {
         if (!expectedSha256.matches("(?i)[0-9a-f]{64}")) {
             throw new IllegalArgumentException("Missing or invalid SHA-256 digest.");
         }
-        if (filename.contains("/") || filename.contains("\\\\")) {
+        if (filename.contains("/") || filename.indexOf((char) 92) >= 0) {
             throw new IllegalArgumentException("Invalid package filename.");
         }
     }
