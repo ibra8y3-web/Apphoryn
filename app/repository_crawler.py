@@ -89,6 +89,8 @@ class RepositoryCrawler:
 
     def _query(self, partition: dict[str, Any]) -> str:
         clauses = [
+            "is:public",
+            "fork:true",
             f"created:{partition['created_from']}..{partition['created_to']}",
             self._qualifier(partition.get("stars"), "stars"),
             self._qualifier(partition.get("forks"), "forks"),
