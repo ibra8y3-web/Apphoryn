@@ -186,7 +186,7 @@ class CatalogService:
                 download_url = asset.get("browser_download_url") or ""
                 destination_dir = settings.storage_path / app["id"]
                 destination_dir.mkdir(parents=True, exist_ok=True)
-                temporary = destination_dir / f".{uuid.uuid4().hex}.part"
+                temporary = destination_dir / f".{uuid.uuid4().hex}.part{Path(filename).suffix.lower()}"
                 version_dir = re.sub(r"[^A-Za-z0-9._+-]+", "_", str(version or "unknown"))[:100] or "unknown"
                 target_dir = destination_dir / version_dir
                 target_dir.mkdir(parents=True, exist_ok=True)
