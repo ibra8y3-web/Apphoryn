@@ -15,3 +15,11 @@ html[dir="rtl"] body{font-family:'DM Sans',Tahoma,sans-serif}html[dir="rtl"] .na
 .api-setting-controls input:focus{border-color:#759b73}
 .api-setting-controls .button{height:40px;white-space:nowrap}
 @media(max-width:620px){.api-setting-row{flex-direction:column}.api-setting-controls{width:100%}.api-setting-controls input{width:100%}}
+
+.scout-global-control{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:14px;padding-top:14px;border-top:1px solid #2b3d4b}
+.scout-global-copy{display:grid;gap:4px;min-width:0}
+.scout-global-copy b{font-size:11px;color:#eaf3fa}
+.scout-global-copy small{font-size:9px;line-height:1.55;color:#8799a9}
+.scout-global-actions{display:flex;flex:none;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.scout-global-actions button:disabled{opacity:.55;cursor:wait}
+@media(max-width:620px){.scout-global-control{align-items:stretch;flex-direction:column}.scout-global-actions{justify-content:flex-start}}
