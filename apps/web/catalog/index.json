@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T23:22:47.754409+00:00",
+  "generated_at": "2026-11-24T23:23:49.823643+00:00",
   "apps": [
     {
       "id": "sysadmindoc-callshield",
@@ -1015,6 +1015,103 @@
           ],
           "requested_at": "2026-11-24T23:22:09.377080+00:00"
         }
+      ]
+    },
+    {
+      "id": "naxhq-nexq",
+      "slug": "naxhq-nexq",
+      "name": "NexQ",
+      "summary": "Open-source AI meeting assistant for Windows and macOS (beta). Transcribes both sides of a call live and answers from your notes, using local models or your existing AI provider. No bot joins.",
+      "description": "NexQ is a free, MIT-licensed desktop AI meeting assistant for Windows 10/11 and macOS (Apple Silicon, beta). It captures your microphone and system audio as two separate streams, transcribes each side live with its own engine, language and mute, and answers questions from your notes, slides or files. No bot joins the call.\n\nIt offers 12 speech-to-text engines (local options such as Parakeet TDT, Sherpa-ONNX and Whisper.cpp for recordings, plus cloud providers), 10 LLM providers (Ollama, LM Studio, OpenAI, Anthropic, Gemini, Groq, OpenRouter, and Claude or Codex via an existing subscription) and 5 translation providers. Local RAG indexes PDF, DOCX, TXT and MD files; personal sources can add notes folders and MCP tool servers.\n\nAlso included: an always-on-top overlay with global shortcuts, question detection with optional auto-answer, scenarios for interviews, lectures and meetings, and recording with synced, searchable transcripts.\n\nAudio is captured locally, data stays in the app data folder, secrets go to the OS credential store, and there is no telemetry. Built with Tauri, Rust, React and TypeScript, with installers on the GitHub releases page and a documented source build.",
+      "translations": {
+        "en": "Open-source AI meeting assistant for Windows and macOS (beta). Transcribes both sides of a call live and answers from your notes, using local models or your existing AI provider. No bot joins.",
+        "ar": "مساعد اجتماعات ذكي مفتوح المصدر لنظامي Windows وmacOS (نسخة بيتا). يفرّغ نص جانبي المكالمة مباشرةً ويجيب من ملاحظاتك بنماذج محلية أو خدمة الذكاء الاصطناعي التي تستخدمها، دون أن ينضم أي روبوت."
+      },
+      "description_translations": {
+        "en": "NexQ is a free, MIT-licensed desktop AI meeting assistant for Windows 10/11 and macOS (Apple Silicon, beta). It captures your microphone and system audio as two separate streams, transcribes each side live with its own engine, language and mute, and answers questions from your notes, slides or files. No bot joins the call.\n\nIt offers 12 speech-to-text engines (local options such as Parakeet TDT, Sherpa-ONNX and Whisper.cpp for recordings, plus cloud providers), 10 LLM providers (Ollama, LM Studio, OpenAI, Anthropic, Gemini, Groq, OpenRouter, and Claude or Codex via an existing subscription) and 5 translation providers. Local RAG indexes PDF, DOCX, TXT and MD files; personal sources can add notes folders and MCP tool servers.\n\nAlso included: an always-on-top overlay with global shortcuts, question detection with optional auto-answer, scenarios for interviews, lectures and meetings, and recording with synced, searchable transcripts.\n\nAudio is captured locally, data stays in the app data folder, secrets go to the OS credential store, and there is no telemetry. Built with Tauri, Rust, React and TypeScript, with installers on the GitHub releases page and a documented source build.",
+        "ar": "نيكس كيو (NexQ) مساعد اجتماعات ذكي مجاني ومفتوح المصدر (ترخيص MIT) لسطح المكتب، يعمل على Windows 10/11 وmacOS لأجهزة Apple Silicon (نسخة بيتا). يلتقط الميكروفون وصوت النظام في مسارين منفصلين، ويفرّغ كل جانب مباشرةً بمحرك ولغة وكتم مستقلين، ويجيب عن الأسئلة من ملاحظاتك وشرائحك وملفاتك. لا ينضم أي روبوت إلى المكالمة.\n\nيوفر 12 محرك تحويل الكلام إلى نص (منها خيارات محلية مثل Parakeet TDT وSherpa-ONNX وWhisper.cpp للتسجيلات، ومزودين سحابيين)، و10 مزودين للنماذج اللغوية الكبيرة (Ollama وLM Studio وOpenAI وAnthropic وGemini وGroq وOpenRouter، وClaude أو Codex عبر اشتراك قائم)، و5 مزودين للترجمة. ويفهرس البحث المحلي (RAG) ملفات PDF وDOCX وTXT وMD، ويمكن للمصادر الشخصية إضافة مجلدات ملاحظات وخوادم أدوات MCP.\n\nكما يتضمن واجهة overlay دائمة الظهور مع اختصارات عامة، وكشف الأسئلة مع إجابة تلقائية اختيارية، وسيناريوهات للمقابلات والمحاضرات والاجتماعات، وتسجيلاً مع نصوص متزامنة قابلة للبحث.\n\nيتم التقاط الصوت محلياً، وتبقى البيانات في مجلد التطبيق، وتُحفظ الأسرار في مخزن بيانات الاعتماد في نظام التشغيل، ولا توجد أي بيانات قياس أو تحليلات. بُني باستخدام Tauri وRust وReact وTypeScript، وتتوفر برامج التثبيت على صفحة الإصدارات في GitHub مع توثيق للبناء من المصدر."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://raw.githubusercontent.com/naxhq/NexQ/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/naxhq/NexQ",
+      "github_repo_id": "1193072609",
+      "source_updated_at": "2026-11-24T19:59:13Z",
+      "homepage_url": "https://getnexq.com",
+      "owner": "naxhq",
+      "default_branch": "main",
+      "source_commit_sha": "5a3e879326b3b4ac12b65d8a6691617de745318d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Vahid Alizadeh\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "The repository ships a standalone end-user desktop application (Tauri/Rust with React and TypeScript) for Windows 10/11 and macOS on Apple Silicon, distributed as an x64 .exe installer and a .dmg, with a documented Development/build-from-source path and CI. It is not a library, framework or service, so the repository's 'developer' category tag does not change the classification. build_recommended ",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ai",
+        "desktop-app",
+        "interview-assistant",
+        "llm",
+        "local-first",
+        "macos",
+        "meeting-assistant",
+        "ollama",
+        "react",
+        "rust",
+        "speech-to-text",
+        "tauri",
+        "transcription",
+        "typescript",
+        "whisper",
+        "windows"
+      ],
+      "latest_version": "v2.44.1",
+      "release_url": "https://github.com/naxhq/NexQ/releases/tag/v2.44.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-naxhq-nexq-v2.44.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-naxhq-nexq-v2.44.1/THIRD-PARTY-NOTICE-naxhq-nexq.txt",
+      "artifacts": [
+        {
+          "id": "028dea6a997ff74a15b1ba3329ed80a813335dd343cf901b1584f4d01a7c69f5",
+          "filename": "NexQ_2.44.1_aarch64.dmg",
+          "original_filename": "NexQ_2.44.1_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v2.44.1",
+          "size_bytes": 24695214,
+          "sha256": "028dea6a997ff74a15b1ba3329ed80a813335dd343cf901b1584f4d01a7c69f5",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-naxhq-nexq-v2.44.1/NexQ_2.44.1_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-naxhq-nexq-v2.44.1"
+        },
+        {
+          "id": "9ec3b7c2ff5365d61eab95740926d73ee8e9190ffe5e8508e55bc8feccc9f73e",
+          "filename": "NexQ_2.44.1_x64-setup.exe",
+          "original_filename": "NexQ_2.44.1_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v2.44.1",
+          "size_bytes": 14986358,
+          "sha256": "9ec3b7c2ff5365d61eab95740926d73ee8e9190ffe5e8508e55bc8feccc9f73e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-naxhq-nexq-v2.44.1/NexQ_2.44.1_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-naxhq-nexq-v2.44.1"
+        }
+      ],
+      "platforms": [
+        "macos",
+        "windows"
       ]
     },
     {
