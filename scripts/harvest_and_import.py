@@ -113,14 +113,20 @@ def should_dispatch_build_fallback(
     return bool(auto_targets) and not verified_artifacts and bool(build_recommended)
 
 
-def should_revisit_source_project(existing: dict[str, Any] | None, auto_targets: list[str]) -> bool:
-    """Revisit a known buildable source-only project when native builds are enabled."""
+def should_revisit_source_project(
+    existing: dict[str, Any] | None,
+    auto_targets: list[str],
+    ai_enabled: bool = False,
+) -> bool:
+    """Refresh buildable source-only records and upgrade heuristic classifications."""
     record = existing or {}
-    return (
+    source_build_needed = (
         bool(auto_targets)
         and not bool(record.get("artifacts"))
         and bool(record.get("build_recommended", False))
     )
+    ai_upgrade_needed = bool(ai_enabled and existing and record.get("classification_source") != "ai")
+    return source_build_needed or ai_upgrade_needed
 
 
 def retry_record(entry: dict[str, Any], now: float, reason: str) -> dict[str, Any]:
@@ -260,7 +266,9 @@ def main() -> None:
             if (
                 not entry.get("force_refresh")
                 and known_current(candidate, known_by_id, known_by_url)
-                and not should_revisit_source_project(existing_record, auto_targets)
+                and not should_revisit_source_project(
+                    existing_record, auto_targets, bool(settings.ai_api_key and settings.ai_model)
+                )
             ):
                 result["status"] = "already_current"
                 results.append(result)
