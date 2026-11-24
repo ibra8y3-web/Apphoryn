@@ -73,6 +73,19 @@ jobs:
           APPHORYN_AUTO_BUILD_TARGETS: ${{ vars.APPHORYN_AUTO_BUILD_TARGETS || 'android,windows,linux,macos' }}
           APPHORYN_AI_API_KEY: ${{ secrets.APPHORYN_AI_API_KEY }}
           APPHORYN_AI_MODEL: ${{ vars.APPHORYN_AI_MODEL }}
+          # Provider credentials are exposed only to the trusted Scout job, never to source-build jobs.
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          COMET_API_KEY: ${{ secrets.COMET_API_KEY }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          APPHORYN_AI_FREE_ONLY: ${{ vars.APPHORYN_AI_FREE_ONLY || 'true' }}
+          APPHORYN_AI_ALLOW_LEGACY_PROVIDER: ${{ vars.APPHORYN_AI_ALLOW_LEGACY_PROVIDER || 'false' }}
+          APPHORYN_AI_CONFIRM_GEMINI_GROQ_FREE_TIER: ${{ vars.APPHORYN_AI_CONFIRM_GEMINI_GROQ_FREE_TIER || 'false' }}
+          APPHORYN_AI_ALLOW_CREDIT_BASED_PROVIDERS: ${{ vars.APPHORYN_AI_ALLOW_CREDIT_BASED_PROVIDERS || 'false' }}
+          APPHORYN_COMET_FREE_MODEL_IDS: ${{ vars.APPHORYN_COMET_FREE_MODEL_IDS || '' }}
+          APPHORYN_AI_ENABLE_CLOUDFLARE: ${{ vars.APPHORYN_AI_ENABLE_CLOUDFLARE || 'false' }}
           SKIP_SEEDS: ${{ inputs.skip_seeds || 'false' }}
         run: |
           if [ "$SKIP_SEEDS" = "true" ]; then
