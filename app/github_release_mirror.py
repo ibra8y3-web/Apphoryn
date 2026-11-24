@@ -219,7 +219,7 @@ class GitHubReleaseMirror:
                 if not isinstance(model, dict):
                     continue
                 model_name = str(model.get("model") or "").strip()[:180]
-                if not model_name or any(char in model_name for char in "\\r\\n"):
+                if not model_name or "\r" in model_name or "\n" in model_name:
                     continue
                 safe_models.append({
                     "model": model_name,
