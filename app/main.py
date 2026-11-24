@@ -5,17 +5,20 @@ import json
 import os
 import tempfile
 import uuid
+import urllib.error
+import urllib.parse
+import urllib.request
 from pathlib import Path
 
 from fastapi import FastAPI, Header, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, RedirectResponse
+from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from .config import ROOT, settings
 from .database import db
-from .services import BuildService, CatalogService, store_uploaded_artifact
+from .services import ALLOWED_DOWNLOAD_HOSTS, BuildService, CatalogService, _SafeGitHubRedirects, store_uploaded_artifact
 from .github_release_mirror import GitHubReleaseMirror, GitHubMirrorError
 
 app = FastAPI(title="Apphoryn API", version="0.2.0-alpha", description="Discover, build, verify and distribute open-source software.")
@@ -318,20 +321,95 @@ async def upload_built_artifact(
 
 
 @app.get("/api/v1/downloads/{artifact_id}")
-def download_artifact(artifact_id: str):
+def download_artifact(artifact_id: str, request: Request):
     artifact = db.get_artifact(artifact_id)
     if artifact:
         path = Path(artifact["storage_path"]).resolve()
         storage_root = settings.storage_path.resolve()
         if storage_root in path.parents and path.is_file():
             return FileResponse(path, filename=artifact["filename"], media_type="application/octet-stream")
+
     mirrored = find_mirrored_artifact(artifact_id)
-    if mirrored:
-        url = str(mirrored.get("download_url") or "")
-        parsed = __import__("urllib.parse", fromlist=["urlparse"]).urlparse(url)
-        if parsed.scheme == "https" and parsed.hostname == "github.com" and "/releases/download/" in parsed.path:
-            return RedirectResponse(url, status_code=302)
-    raise HTTPException(404, "Artifact file is unavailable.")
+    if not mirrored:
+        raise HTTPException(404, "Artifact file is unavailable.")
+
+    url = str(mirrored.get("download_url") or "")
+    parsed = urllib.parse.urlsplit(url)
+    expected_prefix = f"/{settings.github_owner}/{settings.github_repository}/releases/download/"
+    if (
+        parsed.scheme != "https"
+        or (parsed.hostname or "").lower() != "github.com"
+        or not settings.github_owner
+        or not settings.github_repository
+        or not parsed.path.startswith(expected_prefix)
+    ):
+        raise HTTPException(404, "Only Apphoryn-owned release assets can be served by the store download route.")
+
+    headers = {
+        "User-Agent": "Apphoryn-Store/1.0",
+        "Accept": "application/octet-stream",
+    }
+    range_header = request.headers.get("range")
+    if range_header:
+        headers["Range"] = range_header
+    upstream_request = urllib.request.Request(url, headers=headers)
+    opener = urllib.request.build_opener(_SafeGitHubRedirects())
+    try:
+        upstream = opener.open(upstream_request, timeout=90)
+    except urllib.error.HTTPError as exc:
+        if exc.code in {404, 410, 416}:
+            raise HTTPException(exc.code, "Apphoryn package is not available for this request.") from exc
+        raise HTTPException(502, "Apphoryn package storage returned an upstream error.") from exc
+    except (urllib.error.URLError, TimeoutError, OSError) as exc:
+        raise HTTPException(502, "Could not connect to Apphoryn package storage.") from exc
+
+    content_length = upstream.headers.get("Content-Length")
+    if content_length:
+        try:
+            if int(content_length) > settings.max_artifact_bytes:
+                upstream.close()
+                raise HTTPException(413, "Package exceeds the configured download size limit.")
+        except ValueError:
+            upstream.close()
+            raise HTTPException(502, "Apphoryn package storage returned an invalid content length.")
+
+    filename = str(mirrored.get("filename") or "apphoryn-package")
+    response_headers = {
+        "Content-Disposition": f"attachment; filename*=UTF-8''{urllib.parse.quote(filename, safe='')}",
+        "Cache-Control": "private, no-store",
+        "X-Content-Type-Options": "nosniff",
+        "Accept-Ranges": upstream.headers.get("Accept-Ranges", "bytes"),
+    }
+    if content_length:
+        response_headers["Content-Length"] = content_length
+    content_range = upstream.headers.get("Content-Range")
+    if content_range:
+        response_headers["Content-Range"] = content_range
+    etag = upstream.headers.get("ETag")
+    if etag:
+        response_headers["ETag"] = etag
+
+    def stream_package():
+        total = 0
+        try:
+            while True:
+                chunk = upstream.read(1024 * 1024)
+                if not chunk:
+                    break
+                total += len(chunk)
+                if total > settings.max_artifact_bytes:
+                    raise RuntimeError("Apphoryn package exceeded the configured download limit while streaming.")
+                yield chunk
+        finally:
+            upstream.close()
+
+    status_code = 206 if upstream.status == 206 else 200
+    return StreamingResponse(
+        stream_package(),
+        status_code=status_code,
+        media_type="application/octet-stream",
+        headers=response_headers,
+    )
 
 
 web_dir = ROOT / "apps" / "web"
