@@ -35,6 +35,8 @@ class RepositoryCrawlerTests(unittest.TestCase):
             records, report = crawler.scan(max_repositories=10, max_search_requests=1, today=date(2008, 1, 1))
             self.assertEqual([row["id"] for row in records], [10, 11])
             self.assertEqual(report["repositories"], 2)
+            self.assertIn("is:public", fake.calls[0]["query"])
+            self.assertIn("fork:true", fake.calls[0]["query"])
             crawler.save()
             saved = json.loads(state_path.read_text(encoding="utf-8"))
             self.assertEqual(saved["next_created_date"], "2008-01-01")
@@ -59,6 +61,20 @@ class RepositoryCrawlerTests(unittest.TestCase):
             crawler.scan(max_repositories=1, max_search_requests=1, today=date(2008, 1, 1))
             self.assertEqual(len(crawler.state["pending"]), 6)
             self.assertEqual(crawler.state["pending"][0]["stars"], "0")
+
+    def test_batch_limit_never_discards_the_remainder_of_a_search_page(self):
+        page_one = [{"id": index, "full_name": f"team/repo-{index}"} for index in range(100)]
+        page_two = [{"id": 100 + index, "full_name": f"team/repo-{100 + index}"} for index in range(100)]
+        fake = FakeGitHub([
+            {"total_count": 250, "items": page_one},
+            {"total_count": 250, "items": page_two},
+        ])
+        with tempfile.TemporaryDirectory() as folder:
+            crawler = RepositoryCrawler(fake, Path(folder) / "state.json")
+            rows, report = crawler.scan(max_repositories=150, max_search_requests=2, today=date(2008, 1, 1))
+            self.assertEqual(len(rows), 200)
+            self.assertEqual(crawler.state["pending"][0]["page"], 3)
+            self.assertEqual(report["repositories"], 200)
 
     def test_unsupported_leaf_overflow_fails_closed(self):
         fake = FakeGitHub([{"total_count": 1200, "items": []}])
