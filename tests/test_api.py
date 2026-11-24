@@ -78,7 +78,7 @@ class ApiSmokeTests(unittest.TestCase):
             "license_eligible": False, "artifacts": [],
         },
     ])
-    def test_projects_endpoint_includes_source_only_projects_without_making_them_store_apps(self, read_catalog):
+    def test_projects_endpoint_includes_source_only_projects_without_making_them_store_apps(self, list_apps, read_catalog):
         projects = self.client.get("/api/v1/catalog/projects")
         self.assertEqual(projects.status_code, 200)
         rows = projects.json()["items"]
@@ -86,8 +86,7 @@ class ApiSmokeTests(unittest.TestCase):
         self.assertEqual(next(row for row in rows if row["id"] == "source-only")["artifacts"], [])
 
         # The installable app catalogue must still require at least one package.
-        with patch("app.main.db.list_apps", return_value=[]):
-            apps = self.client.get("/api/v1/catalog/apps")
+        apps = self.client.get("/api/v1/catalog/apps")
         self.assertEqual(apps.status_code, 200)
         self.assertEqual(apps.json()["items"], [])
 
@@ -98,10 +97,12 @@ class ApiSmokeTests(unittest.TestCase):
             "repository_url": "https://github.com/owner/source",
             "license_spdx": "MIT", "license_eligible": True, "artifacts": [],
         }
-        with patch("app.main.require_admin"), \\
-             patch("app.main.settings") as settings_mock, \\
-             patch("app.main.catalog.import_repository", return_value={"app": project, "artifacts": []}), \\
-             patch("app.main.GitHubReleaseMirror") as mirror_class:
+        with (
+            patch("app.main.require_admin"),
+            patch("app.main.settings") as settings_mock,
+            patch("app.main.catalog.import_repository", return_value={"app": project, "artifacts": []}),
+            patch("app.main.GitHubReleaseMirror") as mirror_class,
+        ):
             settings_mock.github_token = "test-token"
             settings_mock.github_owner = "owner"
             settings_mock.github_repository = "Apphoryn"
