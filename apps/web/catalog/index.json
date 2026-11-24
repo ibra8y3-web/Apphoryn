@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T23:44:18.621388+00:00",
+  "generated_at": "2026-11-24T23:44:26.348523+00:00",
   "apps": [
     {
       "id": "706972745-assetmanager",
@@ -82,6 +82,55 @@
       "platforms": [
         "windows"
       ]
+    },
+    {
+      "id": "alexh117-bpt-converter",
+      "slug": "alexh117-bpt-converter",
+      "artifacts": [],
+      "name": "BPT-Converter",
+      "summary": "Conversor de imagener, video y audio para Windows y macOS, con GUI, CLI y descarga desde Youtube.",
+      "description": "Conversor de imagener, video y audio para Windows y macOS, con GUI, CLI y descarga desde Youtube.",
+      "translations": {
+        "en": {
+          "summary": "Conversor de imagener, video y audio para Windows y macOS, con GUI, CLI y descarga desde Youtube.",
+          "description": "Conversor de imagener, video y audio para Windows y macOS, con GUI, CLI y descarga desde Youtube."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/AlexH117/BPT-Converter/main/logo_bpt.png",
+      "repository_url": "https://github.com/AlexH117/BPT-Converter",
+      "github_repo_id": "1470983549",
+      "source_updated_at": "2026-11-24T23:34:18Z",
+      "homepage_url": null,
+      "owner": "AlexH117",
+      "default_branch": "main",
+      "source_commit_sha": "26edc00f1ceb7e4bd5f905466382de7e755dc887",
+      "license_text": "MIT License\n\nCopyright (c) 2026 BPT Converter\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "category": "developer",
+      "topics": [
+        "desktop-app",
+        "ffmpeg",
+        "file-converter",
+        "macos",
+        "pyinstaller",
+        "python",
+        "tkinter",
+        "windows",
+        "yt-dlp"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "sysadmindoc-callshield",
