@@ -39,7 +39,6 @@ jobs:
             runner: ubuntu-latest
           - target: macos
             runner: macos-latest
-    if: contains(format(',{0},', inputs.targets), format(',{0},', matrix.target))
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 90
     steps:
@@ -75,16 +74,19 @@ jobs:
             SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager -perm -111 2>/dev/null | sort -V | tail -n 1)"
           fi
           if [ -z "$SDKMANAGER" ]; then echo "Android sdkmanager not found." >&2; exit 1; fi
-          yes | "$SDKMANAGER" --licenses >/dev/null
+          yes | "$SDKMANAGER" --licenses >/dev/null || "$SDKMANAGER" --licenses </dev/null
           "$SDKMANAGER" --install "platform-tools" "build-tools;35.0.0"
           echo "$ANDROID_HOME/build-tools/35.0.0" >> "$GITHUB_PATH"
       - name: Build untrusted source without Apphoryn secrets
+        if: contains(format(',{0},', inputs.targets), format(',{0},', matrix.target))
         env:
           REPOSITORY_URL: ${{ inputs.repository_url }}
           GIT_REF: ${{ inputs.git_ref }}
           TARGET: ${{ matrix.target }}
         run: python scripts/ci_build.py --repository "$REPOSITORY_URL" --ref "$GIT_REF" --target "$TARGET" --output "artifacts/${{ matrix.target }}"
-      - uses: actions/upload-artifact@v4
+      - name: Upload platform build output
+        if: contains(format(',{0},', inputs.targets), format(',{0},', matrix.target))
+        uses: actions/upload-artifact@v4
         with:
           name: apphoryn-build-${{ matrix.target }}-${{ inputs.app_id }}
           path: artifacts/${{ matrix.target }}/
