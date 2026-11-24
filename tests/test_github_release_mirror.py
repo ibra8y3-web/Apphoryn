@@ -75,6 +75,55 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
             self.assertEqual(manifest["apps"][0]["project_status"], "installable")
             self.assertIn("owner/Apphoryn/releases/download", manifest["apps"][0]["artifacts"][0]["download_url"])
 
+    def test_source_only_publish_registers_project_without_empty_release(self):
+        manifest = {"schema_version": 1, "apps": []}
+        mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn")
+        mirror._read_catalog = Mock(return_value=(manifest, None))
+        mirror.request = Mock(return_value={})
+        mirror._ensure_release = Mock()
+
+        result = mirror.publish_app({
+            "id": "source-project", "slug": "owner-source-project", "name": "Source Project",
+            "repository_url": "https://github.com/owner/source-project",
+            "github_repo_id": "1234567", "owner": "owner",
+            "license_spdx": "MIT", "license_eligible": True,
+        }, [])
+
+        self.assertTrue(result["source_project_registered"])
+        self.assertEqual(result["mirrored_artifacts"], [])
+        mirror._ensure_release.assert_not_called()
+        _, _, payload = mirror.request.call_args.args
+        written = json.loads(base64.b64decode(payload["content"]).decode("utf-8"))
+        self.assertEqual(len(written["apps"]), 1)
+        self.assertEqual(written["apps"][0]["project_status"], "source_available")
+        self.assertEqual(written["apps"][0]["artifacts"], [])
+
+    def test_invalid_installer_is_rejected_before_creating_release(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "fake-installer.exe"
+            path.write_bytes(b"this is not a Windows executable")
+            digest = hashlib.sha256(path.read_bytes()).hexdigest()
+            mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn")
+            mirror._read_catalog = Mock(return_value=({"schema_version": 1, "apps": []}, None))
+            mirror.request = Mock(return_value={})
+            mirror._ensure_release = Mock()
+
+            with self.assertRaises(Exception):
+                mirror.publish_app({
+                    "id": "source-project", "slug": "owner-source-project", "name": "Source Project",
+                    "repository_url": "https://github.com/owner/source-project",
+                    "github_repo_id": "1234567", "owner": "owner",
+                    "license_spdx": "MIT", "license_eligible": True,
+                }, [{
+                    "filename": "fake-installer.exe", "platform": "windows",
+                    "package_type": "Windows executable", "sha256": digest,
+                    "storage_path": str(path),
+                }])
+
+            mirror._ensure_release.assert_not_called()
+            mirror.request.assert_not_called()
+
+
     def test_mark_app_checked_persists_round_robin_release_check_timestamp(self):
         manifest = {"schema_version": 1, "apps": [{
             "id": "tool", "repository_url": "https://github.com/owner/tool", "artifacts": [],
