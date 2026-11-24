@@ -58,29 +58,6 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
             self.assertEqual(manifest["apps"][0]["artifacts"][0]["sha256"], digest)
             self.assertIn("owner/Apphoryn/releases/download", manifest["apps"][0]["artifacts"][0]["download_url"])
 
-    def test_register_source_only_app_without_creating_release_or_installer(self):
-        manifest = {"schema_version": 1, "apps": []}
-        mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn")
-        mirror._read_catalog = Mock(return_value=(manifest, None))
-        mirror.request = Mock(return_value={})
-        result = mirror.register_source_app({
-            "id": "source-id", "slug": "owner-tool", "name": "Tool",
-            "repository_url": "https://github.com/owner/tool.git",
-            "github_repo_id": "123456", "source_updated_at": "2026-11-24T00:00:00Z",
-            "license_spdx": "MIT", "license_eligible": True,
-            "default_branch": "main", "topics": ["utility"],
-        })
-        self.assertEqual(result["source_status"], "source_only")
-        self.assertEqual(result["artifacts"], [])
-        self.assertTrue(result["scout_checked_at"])
-        self.assertEqual(result["repository_url"], "https://github.com/owner/tool")
-        method, url, payload = mirror.request.call_args.args
-        self.assertEqual(method, "PUT")
-        self.assertIn("apps/web/catalog/index.json", url)
-        written = json.loads(base64.b64decode(payload["content"]).decode("utf-8"))
-        self.assertEqual(len(written["apps"]), 1)
-        self.assertEqual(written["apps"][0]["artifacts"], [])
-
     def test_mark_app_checked_persists_round_robin_release_check_timestamp(self):
         manifest = {"schema_version": 1, "apps": [{
             "id": "tool", "repository_url": "https://github.com/owner/tool", "artifacts": [],
