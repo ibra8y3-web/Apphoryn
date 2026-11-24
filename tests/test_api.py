@@ -141,8 +141,10 @@ class ApiSmokeTests(unittest.TestCase):
             "github_repo_id": "987654321", "license_eligible": True,
             "artifacts": [{"id": "sha-new", "sha256": "sha-new", "filename": "tool-2.exe"}],
         }
-        with patch("app.main.db.list_apps", return_value=[database_record]), \\
-             patch("app.main.read_mirror_catalog", return_value=[mirror_record]):
+        with (
+            patch("app.main.db.list_apps", return_value=[database_record]),
+            patch("app.main.read_mirror_catalog", return_value=[mirror_record]),
+        ):
             response = self.client.get("/api/v1/catalog/apps")
         self.assertEqual(response.status_code, 200)
         items = response.json()["items"]
