@@ -70,7 +70,7 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
             "free_only": True,
             "available_model_count": 2,
             "providers": [
-                {"provider": "openrouter", "state": "available", "models_discovered": 2, "api_key": "must-not-persist"},
+                {"provider": "openrouter", "state": "available", "models_discovered": 2, "models": [{"model": "vendor/model:free", "free_class": "free_variant"}], "api_key": "must-not-persist"},
                 {"provider": "gemini", "state": "paused", "models_discovered": 0},
             ],
         })
@@ -79,6 +79,7 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
         self.assertEqual(health["available_model_count"], 2)
         self.assertEqual(health["available_provider_count"], 1)
         self.assertEqual([item["state"] for item in health["providers"]], ["available", "paused"])
+        self.assertEqual(health["providers"][0]["models"][0]["model"], "vendor/model:free")
         self.assertNotIn("api_key", json.dumps(health))
         self.assertEqual(written["apps"], [{"id": "existing-app"}])
 
