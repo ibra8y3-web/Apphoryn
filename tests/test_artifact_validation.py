@@ -8,11 +8,11 @@ from app.artifact_validation import ArtifactValidationError, validate_artifact
 
 
 def pe_fixture(*, dll: bool = False) -> bytes:
-    data = bytearray(512)
+    data = bytearray(1024)
     pe_offset = 128
     data[:2] = b"MZ"
     data[0x3C:0x40] = pe_offset.to_bytes(4, "little")
-    data[pe_offset:pe_offset + 4] = b"PE\0\0"
+    data[pe_offset:pe_offset + 4] = bytes((0x50, 0x45, 0, 0))
     data[pe_offset + 4:pe_offset + 6] = (0x8664).to_bytes(2, "little")
     data[pe_offset + 6:pe_offset + 8] = (1).to_bytes(2, "little")
     data[pe_offset + 20:pe_offset + 22] = (0xF0).to_bytes(2, "little")
@@ -21,12 +21,20 @@ def pe_fixture(*, dll: bool = False) -> bytes:
     optional = pe_offset + 24
     data[optional:optional + 2] = (0x20B).to_bytes(2, "little")
     data[optional + 16:optional + 20] = (0x1000).to_bytes(4, "little")
+    section = optional + 0xF0
+    data[section:section + 5] = b".text"
+    data[section + 8:section + 12] = (0x1000).to_bytes(4, "little")
+    data[section + 12:section + 16] = (0x1000).to_bytes(4, "little")
+    data[section + 16:section + 20] = (128).to_bytes(4, "little")
+    data[section + 20:section + 24] = (512).to_bytes(4, "little")
+    data[section + 36:section + 40] = (0x60000020).to_bytes(4, "little")
+    data[512:640] = bytes((0xC3,)) * 128
     return bytes(data)
 
 
-def elf_fixture(*, shared_library: bool = False, entry_point: int = 0x401000) -> bytes:
-    data = bytearray(64)
-    data[:4] = b"\x7fELF"
+def elf_fixture(*, shared_library: bool = False, entry_point: int = 0x400040) -> bytes:
+    data = bytearray(128)
+    data[:4] = bytes((0x7F, 0x45, 0x4C, 0x46))
     data[4] = 2
     data[5] = 1
     data[6] = 1
@@ -34,6 +42,12 @@ def elf_fixture(*, shared_library: bool = False, entry_point: int = 0x401000) ->
     data[18:20] = (62).to_bytes(2, "little")
     data[20:24] = (1).to_bytes(4, "little")
     data[24:32] = entry_point.to_bytes(8, "little")
+    data[32:40] = (64).to_bytes(8, "little")
+    data[52:54] = (64).to_bytes(2, "little")
+    data[54:56] = (56).to_bytes(2, "little")
+    data[56:58] = (1).to_bytes(2, "little")
+    import struct
+    struct.pack_into("<IIQQQQQQ", data, 64, 1, 5, 0, 0x400000, 0x400000, len(data), 0x1000, 0x1000)
     return bytes(data)
 
 
