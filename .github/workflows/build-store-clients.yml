@@ -115,7 +115,7 @@ jobs:
         run: |
           set -euo pipefail
           npx electron-builder --linux AppImage deb --x64
-          mkdir -p client-artifacts
+          mkdir -p ../../client-artifacts
           find dist -maxdepth 1 -type f \( -iname '*.AppImage' -o -iname '*.deb' \) -exec cp {} ../../client-artifacts/ \;
           test -n "$(find ../../client-artifacts -type f -print -quit)"
 
@@ -126,7 +126,7 @@ jobs:
         run: |
           set -euo pipefail
           npx electron-builder --mac dmg --universal
-          mkdir -p client-artifacts
+          mkdir -p ../../client-artifacts
           find dist -maxdepth 1 -type f -iname '*.dmg' -exec cp {} ../../client-artifacts/ \;
           test -n "$(find ../../client-artifacts -type f -iname '*.dmg' -print -quit)"
 
