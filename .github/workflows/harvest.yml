@@ -54,6 +54,9 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      - name: Set up Android SDK command-line tools
+        uses: android-actions/setup-android@v3
+
       - name: Install Android SDK build-tools for APK verification
         shell: bash
         run: |
