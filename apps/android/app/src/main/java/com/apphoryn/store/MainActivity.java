@@ -77,9 +77,10 @@ public final class MainActivity extends Activity {
 
     @JavascriptInterface
     public void installArtifact(String apiBase, String artifactId, String filename,
-                                String platform, String packageType, String expectedSha256) {
+                                String platform, String packageType, String expectedSha256,
+                                String downloadUrl) {
         try {
-            validateRequest(apiBase, artifactId, filename, platform, expectedSha256);
+            validateRequest(artifactId, filename, platform, packageType, expectedSha256, downloadUrl);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
                     && !getPackageManager().canRequestPackageInstalls()) {
                 Intent settingsIntent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,
@@ -95,26 +96,45 @@ public final class MainActivity extends Activity {
 
         installExecutor.execute(() -> {
             try {
-                File apk = downloadAndVerify(apiBase, artifactId, expectedSha256);
+                File apk = downloadAndVerify(downloadUrl, expectedSha256);
                 mainHandler.post(() -> launchAndroidInstaller(apk));
             } catch (Exception error) {
                 showToast("Apphoryn could not prepare this APK: " + error.getMessage());
             }
         });
-        showToast("Downloading the verified APK inside Apphoryn…");
+        showToast("Downloading the verified APK from Apphoryn storage…");
     }
 
-    private static void validateRequest(String apiBase, String artifactId, String filename,
-                                        String platform, String expectedSha256) throws Exception {
-        URI base = URI.create(apiBase);
-        if (!"https".equalsIgnoreCase(base.getScheme()) || base.getHost() == null
-                || base.getUserInfo() != null || base.getQuery() != null || base.getFragment() != null) {
-            throw new IllegalArgumentException("The Apphoryn API must use a valid HTTPS address.");
+    private static URI validateApphorynReleaseUrl(String value) throws Exception {
+        URI uri = URI.create(value);
+        String expectedPath = "/ibra8y3-web/Apphoryn/releases/download/";
+        if (!"https".equalsIgnoreCase(uri.getScheme())
+                || !"github.com".equalsIgnoreCase(uri.getHost())
+                || uri.getUserInfo() != null || uri.getQuery() != null || uri.getFragment() != null
+                || uri.getPath() == null || !uri.getPath().startsWith(expectedPath)) {
+            throw new SecurityException("Only Apphoryn-owned HTTPS release packages can be installed.");
         }
+        return uri;
+    }
+
+    private static boolean isApprovedReleaseHost(URI uri) {
+        if (!"https".equalsIgnoreCase(uri.getScheme()) || uri.getUserInfo() != null
+                || uri.getFragment() != null) return false;
+        String host = String.valueOf(uri.getHost()).toLowerCase(Locale.ROOT);
+        return host.equals("github.com")
+                || host.equals("objects.githubusercontent.com")
+                || host.equals("release-assets.githubusercontent.com")
+                || host.equals("github-releases.githubusercontent.com");
+    }
+
+    private static void validateRequest(String artifactId, String filename, String platform,
+                                        String packageType, String expectedSha256, String downloadUrl) throws Exception {
         if (!artifactId.matches("[A-Za-z0-9._-]{1,128}")) {
             throw new IllegalArgumentException("Invalid artifact identifier.");
         }
-        if (!"android".equalsIgnoreCase(platform) || !filename.toLowerCase(Locale.ROOT).endsWith(".apk")) {
+        if (!"android".equalsIgnoreCase(platform)
+                || !"apk".equalsIgnoreCase(packageType)
+                || !filename.toLowerCase(Locale.ROOT).endsWith(".apk")) {
             throw new IllegalArgumentException("This Android client currently installs verified APK files only.");
         }
         if (!expectedSha256.matches("(?i)[0-9a-f]{64}")) {
@@ -123,25 +143,44 @@ public final class MainActivity extends Activity {
         if (filename.contains("/") || filename.indexOf((char) 92) >= 0) {
             throw new IllegalArgumentException("Invalid package filename.");
         }
+        validateApphorynReleaseUrl(downloadUrl);
     }
 
-    private File downloadAndVerify(String apiBase, String artifactId, String expectedSha256) throws Exception {
-        String root = apiBase.endsWith("/") ? apiBase : apiBase + "/";
-        URI base = URI.create(root);
-        URI endpoint = base.resolve("api/v1/downloads/" + Uri.encode(artifactId));
-        if (!base.getHost().equals(endpoint.getHost()) || !"https".equalsIgnoreCase(endpoint.getScheme())) {
-            throw new IllegalArgumentException("The package URL is outside the configured Apphoryn API.");
-        }
-
-        HttpURLConnection connection = (HttpURLConnection) new URL(endpoint.toString()).openConnection();
-        connection.setConnectTimeout(20000);
-        connection.setReadTimeout(60000);
-        connection.setInstanceFollowRedirects(false);
-        connection.setRequestProperty("Accept", "application/octet-stream");
-        try {
+    private HttpURLConnection openApprovedReleaseConnection(String downloadUrl) throws Exception {
+        URI current = validateApphorynReleaseUrl(downloadUrl);
+        for (int redirects = 0; redirects <= 5; redirects++) {
+            if (!isApprovedReleaseHost(current)) {
+                throw new SecurityException("Release download redirected to an unapproved host.");
+            }
+            HttpURLConnection connection = (HttpURLConnection) new URL(current.toString()).openConnection();
+            connection.setConnectTimeout(20000);
+            connection.setReadTimeout(60000);
+            connection.setInstanceFollowRedirects(false);
+            connection.setRequestProperty("Accept", "application/octet-stream");
+            connection.setRequestProperty("User-Agent", "Apphoryn-Android/1.0");
             int status = connection.getResponseCode();
-            if (status != 200) throw new IllegalStateException("Apphoryn download API returned HTTP " + status + ".");
-            int declared = connection.getContentLength();
+            if (status >= 300 && status < 400) {
+                String location = connection.getHeaderField("Location");
+                connection.disconnect();
+                if (location == null || redirects == 5) {
+                    throw new IllegalStateException("Apphoryn release download exceeded its redirect limit.");
+                }
+                current = current.resolve(location);
+                continue;
+            }
+            if (status != 200) {
+                connection.disconnect();
+                throw new IllegalStateException("Apphoryn release returned HTTP " + status + ".");
+            }
+            return connection;
+        }
+        throw new IllegalStateException("Apphoryn release download exceeded its redirect limit.");
+    }
+
+    private File downloadAndVerify(String downloadUrl, String expectedSha256) throws Exception {
+        HttpURLConnection connection = openApprovedReleaseConnection(downloadUrl);
+        try {
+            long declared = connection.getContentLengthLong();
             if (declared > MAX_INSTALL_BYTES) throw new IllegalStateException("APK exceeds the Android client size limit.");
 
             File directory = new File(getCacheDir(), "installers");
