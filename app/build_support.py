@@ -55,7 +55,9 @@ def detect_supported_build_targets(
             )
             raw = base64.b64decode(str(result.get("content") or "").replace("\n", ""))
             package = json.loads(raw.decode("utf-8"))
-        except (KeyError, TypeError, ValueError, json.JSONDecodeError):
+        except Exception:
+            # A malformed or inaccessible optional package manifest must not
+            # prevent other source adapters from being detected.
             continue
         if not isinstance(package, dict):
             continue
