@@ -26,6 +26,32 @@ class ApiSmokeTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.json()["items"], list)
 
+    @patch("app.main.require_admin")
+    @patch("app.main.settings")
+    @patch("app.main.GitHubReleaseMirror")
+    def test_admin_can_dispatch_global_scout(self, mirror_class, settings_mock, require_admin):
+        settings_mock.github_token = "test-token"
+        settings_mock.github_owner = "owner"
+        settings_mock.github_repository = "Apphoryn"
+        settings_mock.github_ref = "main"
+        mirror = mirror_class.return_value
+        response = self.client.post(
+            "/api/v1/admin/scout/dispatch",
+            headers={"X-Apphoryn-Admin": "admin-token"},
+            json={"max_repositories": 500, "max_pages": 8, "skip_seeds": True},
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json()["status"], "dispatched")
+        mirror.dispatch_scout.assert_called_once_with(500, 8, True)
+        require_admin.assert_called_once_with("admin-token")
+
+    def test_global_scout_rejects_out_of_range_scan_limits(self):
+        response = self.client.post(
+            "/api/v1/admin/scout/dispatch",
+            json={"max_repositories": 10001, "max_pages": 8},
+        )
+        self.assertEqual(response.status_code, 422)
+
     @patch("app.main.catalog.discover", return_value=[])
     def test_discovery_endpoint_uses_catalog_service(self, discover):
         response = self.client.get("/api/v1/discovery/search", params={"q": "topic:opensource"})
