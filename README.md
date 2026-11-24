@@ -124,3 +124,6 @@ The Apphoryn Scout GitHub Actions workflow runs hourly to search application-foc
 
 
 Android clients install signed APKs and supported XAPK split bundles; XAPK files carrying OBB expansion data are currently rejected. Windows clients include EXE/MSI/MSIX/APPX install adapters, and macOS clients include PKG/DMG adapters.
+
+
+Unsigned source-built Android release packages are never published as installable apps. To enable automatic publication of source-built APKs that are not already signed upstream, configure a persistent Apphoryn Android keystore in GitHub Actions secrets; those credentials are exposed only to the trusted publisher stage, never to untrusted source builds.
