@@ -101,6 +101,25 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
             self.assertEqual(written["apps"][0]["artifacts"][0]["sha256"], digest)
             self.assertTrue(written["apps"][0]["artifacts"][0]["download_url"].startswith("https://github.com/owner/Apphoryn/releases/"))
 
+    def test_dispatch_scout_queues_bounded_global_repository_scan(self):
+        mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn", "main")
+        mirror.request = Mock(return_value={})
+        mirror.dispatch_scout(max_repositories=500, max_pages=8, skip_seeds=True)
+        method, endpoint, payload = mirror.request.call_args.args
+        self.assertEqual(method, "POST")
+        self.assertTrue(endpoint.endswith("/actions/workflows/harvest.yml/dispatches"))
+        self.assertEqual(payload["ref"], "main")
+        self.assertEqual(payload["inputs"], {
+            "max_repositories": "500", "max_pages": "8", "skip_seeds": True,
+        })
+
+    def test_dispatch_scout_rejects_unbounded_limits(self):
+        mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn")
+        mirror.request = Mock(return_value={})
+        with self.assertRaisesRegex(Exception, "max_repositories"):
+            mirror.dispatch_scout(max_repositories=10001)
+        mirror.request.assert_not_called()
+
     def test_dispatch_records_attempt_and_prevents_eight_hour_rescan_duplicates(self):
         manifest = {"schema_version": 1, "apps": [{
             "id": "tool", "slug": "owner-tool", "name": "Tool",
