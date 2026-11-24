@@ -87,12 +87,15 @@ def prepare_android_build_outputs(directory: str | Path) -> dict[str, int]:
             try:
                 keystore.write_bytes(base64.b64decode(keystore_b64, validate=True))
                 os.chmod(keystore, 0o600)
+                signing_env = os.environ.copy()
+                signing_env["APPHORYN_ANDROID_KEYSTORE_PASSWORD"] = store_password
+                signing_env["APPHORYN_ANDROID_KEY_PASSWORD"] = key_password
                 subprocess.run([
                     signer, "sign", "--ks", str(keystore), "--ks-key-alias", alias,
-                    "--ks-pass", "pass:" + store_password,
-                    "--key-pass", "pass:" + key_password,
+                    "--ks-pass", "env:APPHORYN_ANDROID_KEYSTORE_PASSWORD",
+                    "--key-pass", "env:APPHORYN_ANDROID_KEY_PASSWORD",
                     "--out", str(signed), str(apk),
-                ], capture_output=True, text=True, timeout=180, check=True)
+                ], capture_output=True, text=True, timeout=180, check=True, env=signing_env)
                 validate_artifact(signed, require_apk_signature=True)
                 os.replace(signed, apk)
                 result["signed_by_apphoryn"] += 1
