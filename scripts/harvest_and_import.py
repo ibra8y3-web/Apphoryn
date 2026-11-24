@@ -261,7 +261,21 @@ def main() -> None:
                     scheduled_retries.append(retry_record(entry, now, "Release found but no supported verified installer asset was accepted."))
                     result["status"] = "awaiting_verified_installer"
                 else:
-                    result["status"] = "source_has_no_release"
+                    mirror.register_source_app(app)
+                    source_key = _repo_key(str(app.get("repository_url") or repo_url))
+                    source_record = {
+                        "repository_url": app.get("repository_url") or repo_url,
+                        "github_repo_id": app.get("github_repo_id"),
+                        "source_updated_at": app.get("source_updated_at"),
+                        "scout_checked_at": now,
+                        "artifacts": [],
+                    }
+                    known_by_url[source_key] = source_record
+                    if app.get("github_repo_id"):
+                        known_by_id[str(app["github_repo_id"])] = source_record
+                    result["status"] = "source_only_tracked" if not imported.get("release_found") else "awaiting_verified_installer"
+                    if imported.get("release_found"):
+                        scheduled_retries.append(retry_record(entry, now, "Release exists but no supported verified installer was accepted."))
                 if auto_targets and not imported.get("release_found"):
                     git_ref = str(app.get("source_commit_sha") or app.get("default_branch") or "main")
                     if not mirror.has_recent_build_attempt(repo_url, git_ref):
