@@ -31,8 +31,9 @@ function validateInstallRequest(payload, actualPlatform = process.platform) {
   }
   const artifactId = String(payload.artifactId || "");
   if (!ID_PATTERN.test(artifactId)) throw new TypeError("Invalid Apphoryn artifact identifier.");
-  const filename = path.basename(String(payload.filename || ""));
-  if (!filename || filename !== String(payload.filename) || /[\\/\\r\\n]/.test(filename)) {
+  const rawFilename = String(payload.filename || "");
+  const filename = path.basename(rawFilename);
+  if (!filename || filename !== rawFilename || filename.includes("/") || filename.includes(String.fromCharCode(92)) || /[\r\n]/.test(filename)) {
     throw new TypeError("Invalid installer filename.");
   }
   const expectedSha256 = String(payload.sha256 || "");
@@ -57,7 +58,7 @@ function validateInstallRequest(payload, actualPlatform = process.platform) {
 
 function buildDownloadUrl(apiBase, artifactId) {
   const base = new URL(apiBase);
-  const prefix = base.pathname.replace(/\\/+$/, "");
+  const prefix = base.pathname.replace(new RegExp("/+$"), "");
   const endpoint = new URL(`${prefix}/api/v1/downloads/${encodeURIComponent(artifactId)}`, base.origin);
   if (endpoint.origin !== base.origin || endpoint.protocol !== "https:") {
     throw new TypeError("Package URL is outside the configured Apphoryn server.");
