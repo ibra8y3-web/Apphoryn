@@ -120,6 +120,11 @@ def main() -> None:
     if any(signing.values()):
         print("Android release signing summary: " + ", ".join(f"{key}={value}" for key, value in signing.items()))
     if not has_build_outputs(args.directory):
+        if signing["not_published"]:
+            raise SystemExit(
+                "No installable package was published. Android APK outputs were withheld because they were unsigned or invalid; "
+                "configure a persistent Apphoryn Android release keystore in GitHub Actions secrets to publish source-built APKs."
+            )
         print("No publishable outputs remain after security checks; nothing to publish.")
         return
     token = os.getenv("GITHUB_TOKEN", "")
