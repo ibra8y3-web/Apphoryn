@@ -81,5 +81,43 @@ class DatabaseTests(unittest.TestCase):
             self.assertEqual(database.get_artifact_by_sha256("app-1", "a" * 64)["id"], first["id"])
 
 
+    def test_legacy_duplicate_artifacts_are_collapsed_before_unique_sha_index_creation(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "legacy-dedupe.sqlite3"
+            database = Database(path)
+            now = utc_now()
+            database.upsert_app({
+                "id": "app-legacy", "slug": "legacy-app", "name": "Legacy",
+                "summary": "", "description": "", "repository_url": "https://github.com/legacy/app",
+                "owner": "legacy", "license_eligible": True, "category": "other",
+                "topics": [], "created_at": now, "updated_at": now,
+            })
+            # Simulate rows created by a prior schema that only deduplicated
+            # identical app/filename/version/hash tuples.
+            with database.connect() as con:
+                con.execute("DROP INDEX idx_artifact_app_sha_unique")
+                for artifact_id, filename, version in (
+                    ("legacy-one", "legacy-1.0.exe", "1.0"),
+                    ("legacy-two", "legacy-1.1.exe", "1.1"),
+                ):
+                    con.execute(
+                        """INSERT INTO artifacts
+                           (id,app_id,filename,platform,package_type,version,size_bytes,sha256,
+                            upstream_digest_verified,validation_status,signature_status,
+                            signer_certificate_sha256,source_url,storage_path,created_at)
+                           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                        (artifact_id, "app-legacy", filename, "windows", "Windows executable",
+                         version, 512, "b" * 64, 0, "validated", "not_checked", None,
+                         "https://github.com/legacy/app", f"/store/{filename}", now),
+                    )
+
+            migrated = Database(path)
+            artifacts = migrated.list_artifacts("app-legacy")
+            self.assertEqual(len(artifacts), 1)
+            with migrated.connect() as con:
+                indexes = con.execute("PRAGMA index_list(artifacts)").fetchall()
+            self.assertTrue(any(row["name"] == "idx_artifact_app_sha_unique" and row["unique"] for row in indexes))
+
+
 if __name__ == "__main__":
     unittest.main()
