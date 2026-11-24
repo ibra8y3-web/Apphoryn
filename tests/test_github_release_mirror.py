@@ -149,5 +149,58 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
         self.assertTrue(mirror.has_recent_build_attempt("https://github.com/owner/tool", "b" * 40))
 
 
+    def test_register_project_keeps_source_only_project_out_of_installable_release_flow(self):
+        manifest = {"schema_version": 1, "apps": []}
+        mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn")
+        mirror._read_catalog = Mock(return_value=(manifest, None))
+        mirror.request = Mock(return_value={})
+        mirror._ensure_release = Mock()
+
+        project = {
+            "id": "project-id", "slug": "owner-source-project", "name": "Source Project",
+            "summary": "A buildable open-source project", "description": "Source only so far.",
+            "repository_url": "https://github.com/owner/source-project", "github_repo_id": "123456789",
+            "owner": "owner", "license_spdx": "MIT", "license_eligible": True,
+            "category": "developer", "topics": ["desktop"], "default_branch": "main",
+            "source_commit_sha": "a" * 40,
+        }
+        result = mirror.register_project(project)
+
+        self.assertEqual(result["project_status"], "source_available")
+        mirror._ensure_release.assert_not_called()
+        method, endpoint, payload = mirror.request.call_args.args
+        self.assertEqual(method, "PUT")
+        self.assertIn("apps/web/catalog/index.json", endpoint)
+        stored = json.loads(base64.b64decode(payload["content"]).decode("utf-8"))["apps"][0]
+        self.assertEqual(stored["repository_url"], project["repository_url"])
+        self.assertEqual(stored["project_status"], "source_available")
+        self.assertEqual(stored["artifacts"], [])
+        self.assertEqual(stored["github_repo_id"], "123456789")
+
+    def test_register_project_updates_same_record_after_upstream_rename(self):
+        manifest = {"schema_version": 1, "apps": [{
+            "id": "stable-id", "slug": "old-project", "name": "Old Project",
+            "repository_url": "https://github.com/old/project",
+            "github_repo_id": "7654321", "license_spdx": "MIT",
+            "license_eligible": True, "artifacts": [],
+        }]}
+        mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn")
+        mirror._read_catalog = Mock(return_value=(manifest, "old-sha"))
+        mirror.request = Mock(return_value={})
+        result = mirror.register_project({
+            "id": "new-generated-id", "slug": "new-owner-project", "name": "Renamed Project",
+            "repository_url": "https://github.com/new-owner/project",
+            "github_repo_id": "7654321", "owner": "new-owner",
+            "license_spdx": "MIT", "license_eligible": True,
+            "category": "developer", "topics": [],
+        })
+        _, _, payload = mirror.request.call_args.args
+        written = json.loads(base64.b64decode(payload["content"]).decode("utf-8"))
+        self.assertEqual(result["id"], "stable-id")
+        self.assertEqual(len(written["apps"]), 1)
+        self.assertEqual(written["apps"][0]["repository_url"], "https://github.com/new-owner/project")
+        self.assertEqual(written["apps"][0]["id"], "stable-id")
+
+
 if __name__ == "__main__":
     unittest.main()
