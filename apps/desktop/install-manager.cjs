@@ -33,6 +33,7 @@ function validateApphorynReleaseUrl(value) {
   if (
     url.protocol !== "https:" ||
     url.hostname.toLowerCase() !== "github.com" ||
+    (url.port && url.port !== "443") ||
     url.username || url.password || url.search || url.hash ||
     !url.pathname.startsWith(APPHORYN_RELEASE_PREFIX)
   ) {
@@ -43,6 +44,7 @@ function validateApphorynReleaseUrl(value) {
 
 function isApprovedReleaseRedirect(url) {
   return url.protocol === "https:" &&
+    (!url.port || url.port === "443") &&
     APPROVED_RELEASE_HOSTS.has(url.hostname.toLowerCase()) &&
     !url.username && !url.password && !url.hash;
 }
