@@ -40,7 +40,28 @@ function renderApps(){const query=($('catalogSearch')?.value||'').toLowerCase().
 function renderCategories(){const host=$('categoryGrid');if(!host)return;host.innerHTML=categoryMeta.map(([id,key,icon])=>{const count=state.apps.filter(app=>app.category===id).length;return `<article class="category-card" data-category="${id}"><div class="category-icon">${icon}</div><b>${t(key)}</b><small>${count} ${t('apps')}</small></article>`}).join('');}
 function renderDiscovery(){const host=$('discoveryResults');if(!host)return;if(!state.discovery.length){host.innerHTML=`<div class="empty-state compact"><div class="empty-symbol">⌕</div><b>${t('searchToDiscover')}</b><p>${t('discoveryDisclaimer')}</p></div>`;$('discoveryCount').textContent='—';return}$('discoveryCount').textContent=`${state.discovery.length} ${t('searchResults')}`;host.innerHTML=state.discovery.map(item=>{const eligible=item.license_eligible&&!item.archived;const license=item.license_spdx||t('noLicense');const msg=item.archived?t('archived'):(item.license_eligible?t('eligible'):t('notEligible'));return `<article class="discovery-item">${appIconMarkup(item,'discovery-logo')}<div class="discovery-info"><h3>${esc(item.full_name)}</h3><p>${esc(item.description||'')}</p><div class="discovery-meta"><span class="tag">${esc(license)}</span><span class="tag">★ ${Number(item.stars||0).toLocaleString()}</span>${(item.topics||[]).slice(0,2).map(topic=>`<span class="tag">${esc(topic)}</span>`).join('')}</div></div><div class="discovery-action"><span class="eligibility ${eligible?'':'blocked'}">${esc(msg)}</span><button class="tiny-button" data-import="${esc(item.repository_url)}" ${eligible?'':'disabled'}>${t('import')} +</button></div></article>`}).join('');}
 function renderSaved(){const host=$('savedGrid');if(!host)return;const apps=state.apps.filter(app=>state.saved.includes(app.id));host.innerHTML=apps.length?apps.map(appCard).join(''):`<div class="empty-state"><div class="empty-symbol">♡</div><b>${t('nothingSaved')}</b><p>${t('saveAppsHint')}</p></div>`;}
-function installButton(artifact){return `<button type="button" class="tiny-button" data-install-artifact="${esc(artifact.id||artifact.sha256||'')}">${t('install')} ↓</button>`;}
+function nativeStorePlatform(){
+ if(window.ApphorynNative&&typeof window.ApphorynNative.installArtifact==='function')return 'android';
+ if(!window.ApphorynInstaller||typeof window.ApphorynInstaller.installArtifact!=='function')return '';
+ const ua=navigator.userAgent||'';
+ if(/Windows NT/i.test(ua))return 'windows';
+ if(/Macintosh|Mac OS X/i.test(ua))return 'macos';
+ if(/Linux/i.test(ua))return 'linux';
+ return '';
+}
+function artifactCanInstallHere(artifact){
+ const platform=nativeStorePlatform();
+ const extension=String(artifact.filename||'').split('.').pop().toLowerCase();
+ const allowed={android:['apk'],windows:['exe','msi'],linux:['deb','rpm','appimage'],macos:['pkg']};
+ return Boolean(platform&&artifact.platform===platform&&(allowed[platform]||[]).includes(extension));
+}
+function installButton(artifact){
+ if(!artifactCanInstallHere(artifact)){
+  const platformLabel=String(artifact.platform||'other').toUpperCase();
+  return `<span class="install-platform-label">${esc(platformLabel)}</span>`;
+ }
+ return `<button type="button" class="tiny-button" data-install-artifact="${esc(artifact.id||artifact.sha256||'')}">${t('install')} ↓</button>`;
+}
 async function installArtifact(artifactId){
  const artifact=state.apps.flatMap(item=>item.artifacts||[]).find(item=>String(item.id||item.sha256||'')===String(artifactId));
  if(!artifact){toast(t('noArtifacts'),true);return}
