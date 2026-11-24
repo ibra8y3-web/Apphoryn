@@ -138,7 +138,19 @@
       "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-nextcloud-server-v35.0.3",
       "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-nextcloud-server-v35.0.3/THIRD-PARTY-NOTICE-nextcloud-server.txt",
       "artifacts": [],
-      "platforms": []
+      "platforms": [],
+      "build_attempts": [
+        {
+          "git_ref": "efddcb4c586db2abf3ab71b680115d799c9fa151",
+          "targets": [
+            "android",
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-24T19:11:44.174175+00:00"
+        }
+      ]
     },
     {
       "id": "rikkaapps-shizuku",
