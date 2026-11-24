@@ -95,7 +95,7 @@ def _is_pe(path: Path) -> bool:
 def _elf_header(path: Path) -> bytes:
     with path.open("rb") as stream:
         header = stream.read(64)
-    if len(header) < 20 or header[:4] != b"\\x7fELF":
+    if len(header) < 20 or header[:4] != b"\x7fELF":
         raise ArtifactValidationError("File does not contain a valid ELF header.")
     if header[4] not in (1, 2) or header[5] not in (1, 2) or header[6] != 1:
         raise ArtifactValidationError("ELF class, byte order, or version is invalid.")
