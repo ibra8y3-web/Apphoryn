@@ -19,12 +19,12 @@ The install bridge validates the platform and filename, downloads through `/api/
 The operating system remains responsible for the final install prompt, signature checks, UAC/Polkit authentication and platform security controls. Apphoryn does not silently bypass these controls.
 
 Current direct install adapters:
-- Android APK only.
+- Android APK and signed XAPK split bundles (XAPK with OBB expansion data is refused).
 - Windows EXE/MSI/MSIX/APPX (MSIX/APPX are handed to Windows AppX deployment and retain OS signature policy).
 - Linux DEB/RPM/AppImage (AppImage runs portably; it is not registered as a system package).
 - macOS PKG/DMG (DMG mounting requires exactly one `.app` bundle, which is copied into `/Applications` with the macOS administrator prompt).
 
-XAPK/split-APK installation is not currently implemented; Android currently accepts APK only. The Android development APK is debug-signed. Windows/macOS package code signing and macOS notarization require owner-managed certificates and are not configured.
+XAPK support handles signed `base.apk` plus split APK files in one PackageInstaller session. XAPK bundles that include OBB expansion data remain unsupported and are rejected before installation. The Android development APK is debug-signed. Windows/macOS package code signing and macOS notarization require owner-managed certificates and are not configured.
 
 ## Automated builds
 
