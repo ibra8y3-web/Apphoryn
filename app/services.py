@@ -20,7 +20,7 @@ from .domain import (
     canonical_repository_url, classify_artifact, infer_category, license_allows_redistribution,
     repository_slug, safe_filename, sha256_file, valid_git_ref,
 )
-from .github_client import GitHubClient
+from .github_client import GitHubClient, GitHubError
 
 ALLOWED_DOWNLOAD_HOSTS = {
     "github.com", "objects.githubusercontent.com", "release-assets.githubusercontent.com",
@@ -128,8 +128,9 @@ class CatalogService:
             if encoded_license:
                 import base64
                 license_text = base64.b64decode(encoded_license).decode("utf-8", errors="replace")[:100000]
-        except Exception:
-            pass
+        except GitHubError as exc:
+            if "HTTP 404" not in str(exc):
+                raise
         try:
             readme = self.github.request(f"/repos/{owner}/{repo_name}/readme")
             import base64
