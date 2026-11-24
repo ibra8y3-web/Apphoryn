@@ -118,6 +118,22 @@ class Database:
                 if column not in artifact_columns:
                     con.execute(statement)
 
+            # Older releases only prevented duplicates when filename/version also
+            # matched. Collapse legacy byte-identical rows before enforcing the
+            # invariant at the database layer, so concurrent imports cannot race.
+            con.execute("""
+                DELETE FROM artifacts
+                WHERE rowid NOT IN (
+                    SELECT MIN(rowid)
+                    FROM artifacts
+                    GROUP BY app_id, lower(sha256)
+                )
+            """)
+            con.execute("""
+                CREATE UNIQUE INDEX IF NOT EXISTS idx_artifact_app_sha_unique
+                ON artifacts(app_id, lower(sha256))
+            """)
+
     @staticmethod
     def _dict(row: sqlite3.Row | None) -> dict[str, Any] | None:
         if row is None:
@@ -223,8 +239,10 @@ class Database:
                  item.get("signer_certificate_sha256"),item.get("source_url"),item["storage_path"],item["created_at"]))
             row = con.execute("SELECT * FROM artifacts WHERE id=?", (item["id"],)).fetchone()
             if row is None:
-                row = con.execute("SELECT * FROM artifacts WHERE app_id=? AND filename=? AND version IS ? AND sha256=?",
-                                  (item["app_id"],item["filename"],item.get("version"),item["sha256"])).fetchone()
+                row = con.execute(
+                    "SELECT * FROM artifacts WHERE app_id=? AND lower(sha256)=lower(?) LIMIT 1",
+                    (item["app_id"], item["sha256"]),
+                ).fetchone()
             return self._dict(row) or {}
 
     def get_artifact_by_sha256(self, app_id: str, sha256: str) -> dict[str, Any] | None:
