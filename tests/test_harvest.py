@@ -40,6 +40,14 @@ class HarvestTests(unittest.TestCase):
             {"repository_url": "https://github.com/owner/library", "artifacts": [], "build_recommended": False},
             ["android"],
         ))
+        self.assertTrue(should_revisit_source_project(
+            {"repository_url": "https://github.com/owner/old-project", "artifacts": [], "classification_source": "heuristic"},
+            [], ai_enabled=True,
+        ))
+        self.assertFalse(should_revisit_source_project(
+            {"repository_url": "https://github.com/owner/ai-project", "artifacts": [], "classification_source": "ai"},
+            [], ai_enabled=True,
+        ))
 
     def test_initial_seed_list_contains_real_github_repositories(self):
         seeds = load_seed_repositories(Path(__file__).resolve().parents[1] / "catalog-seed-repositories.json")
