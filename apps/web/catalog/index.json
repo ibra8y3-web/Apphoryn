@@ -65,7 +65,19 @@
       "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rikkaapps-shizuku-v13.6.0",
       "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rikkaapps-shizuku-v13.6.0/THIRD-PARTY-NOTICE-rikkaapps-shizuku.txt",
       "artifacts": [],
-      "platforms": []
+      "platforms": [],
+      "build_attempts": [
+        {
+          "git_ref": "b844bc491f1790c72328e1a8e5b2349f8978f0ea",
+          "targets": [
+            "android",
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-24T19:10:05.023843+00:00"
+        }
+      ]
     }
   ]
 }
