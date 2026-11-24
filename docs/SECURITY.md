@@ -26,6 +26,13 @@ Apphoryn downloads and builds third-party code. It must be operated as a softwar
 - APKs fail closed unless \`apksigner verify\` succeeds; the signing-certificate fingerprint is stored when reported. This does not independently establish the publisher's identity.
 - Build jobs re-check license eligibility inside the runner. Ref names are validated before use.
 
+## Apphoryn-owned package storage
+
+- API-ingested binaries are stored as SHA-256 content-addressed objects under the configured artifact root. Writes are staged, re-hashed, and atomically committed; duplicate byte-identical files reuse the same object.
+- Symbolic-link sources and object paths that escape the configured storage root are rejected.
+- The static storefront catalogue references packages mirrored into Apphoryn-owned GitHub Releases. Upstream repository URLs remain provenance links, not package-download destinations.
+- Source-only projects are recorded in the project workbench without creating empty package Releases or installable app entries.
+
 ## Artifact ingest
 
 The optional self-hosted ingest endpoint requires a separate secret, checks source repository identity, recognized file extension, platform, size limit and supplied SHA-256, then writes the file beneath the configured artifact storage root. It also validates the package structure and rejects APKs when signature verification cannot run. Do not expose this endpoint without HTTPS and request-size enforcement.
