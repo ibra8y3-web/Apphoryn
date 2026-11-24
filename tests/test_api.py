@@ -89,7 +89,8 @@ class ApiSmokeTests(unittest.TestCase):
         with patch("app.main.read_mirror_catalog", return_value=[]):
             apps = self.client.get("/api/v1/catalog/apps")
         self.assertEqual(apps.status_code, 200)
-        self.assertEqual(apps.json()["items"], [])
+        self.assertEqual({row["id"] for row in apps.json()["items"]}, {"ready-app"})
+        self.assertNotIn("source-only", {row["id"] for row in apps.json()["items"]})
 
 
     def test_manual_source_only_import_registers_project_without_empty_release(self):
