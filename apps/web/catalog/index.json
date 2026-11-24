@@ -167,7 +167,19 @@
       "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-koala73-worldmonitor-v2.11.8",
       "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-koala73-worldmonitor-v2.11.8/THIRD-PARTY-NOTICE-koala73-worldmonitor.txt",
       "artifacts": [],
-      "platforms": []
+      "platforms": [],
+      "build_attempts": [
+        {
+          "git_ref": "ad1a897c8cda19235486b4b7190411c984525afc",
+          "targets": [
+            "android",
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-24T19:11:31.338470+00:00"
+        }
+      ]
     }
   ]
 }
