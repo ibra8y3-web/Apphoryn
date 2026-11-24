@@ -1,15 +1,12 @@
 #!/usr/bin/env python3
-"""Incrementally crawl public GitHub repositories and import eligible real releases.
-
-The crawl cursor is persisted after a complete batch. Repository IDs, stable
-catalogue upserts and content hashes make retries/renames idempotent.
-"""
+"""Global GitHub repository migration worker with resumable, duplicate-safe state."""
 from __future__ import annotations
 
 import argparse
 import json
 import os
 import sys
+import time
 from pathlib import Path
 from typing import Any
 
@@ -37,6 +34,9 @@ from app.repository_crawler import RepositoryCrawler
 from app.services import CatalogService
 
 
+RETRY_DELAYS_SECONDS = (6 * 3600, 24 * 3600, 3 * 86400, 7 * 86400, 30 * 86400)
+
+
 def load_seed_repositories(path: Path) -> list[dict[str, str]]:
     if not path.exists():
         return []
@@ -59,6 +59,30 @@ def load_catalog_index(path: Path) -> list[dict[str, Any]]:
     return [item for item in records if isinstance(item, dict)] if isinstance(records, list) else []
 
 
+def load_retry_queue(path: Path, now: float) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return [], []
+    except (OSError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"Scout retry queue cannot be read safely: {exc}") from exc
+    if not isinstance(payload, list):
+        raise RuntimeError("Scout retry queue must contain a JSON array.")
+    due, waiting = [], []
+    for row in payload:
+        if not isinstance(row, dict) or not row.get("repository"):
+            continue
+        (due if float(row.get("next_attempt_at") or 0) <= now else waiting).append(row)
+    return due, waiting
+
+
+def save_retry_queue(path: Path, rows: list[dict[str, Any]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    os.replace(temporary, path)
+
+
 def _repo_key(value: str) -> str:
     return value.strip().rstrip("/").casefold().removesuffix(".git")
 
@@ -72,18 +96,30 @@ def known_current(candidate: dict[str, Any], known_by_id: dict[str, dict], known
         return False
     upstream_updated = str(candidate.get("updated_at") or "")
     indexed_updated = str(existing.get("source_updated_at") or "")
-    # Seed records do not include timestamps; once indexed, the crawler remains
-    # responsible for detecting subsequent upstream changes.
     return not upstream_updated or upstream_updated <= indexed_updated
 
 
+def retry_record(entry: dict[str, Any], now: float, reason: str) -> dict[str, Any]:
+    attempts = int(entry.get("attempts") or 0) + 1
+    delay = RETRY_DELAYS_SECONDS[min(attempts - 1, len(RETRY_DELAYS_SECONDS) - 1)]
+    return {
+        "repository": entry["repository"],
+        "candidate": entry.get("candidate") or {},
+        "reason": reason[:500],
+        "attempts": attempts,
+        "next_attempt_at": now + delay,
+    }
+
+
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Apphoryn global GitHub Scout and migration worker.")
-    parser.add_argument("--global-scan", action="store_true", help="Continue the saved chronological GitHub crawl.")
+    parser = argparse.ArgumentParser(description="Apphoryn global public-repository crawler and migration worker.")
+    parser.add_argument("--global-scan", action="store_true", help="Continue the saved public repository ID cursor.")
     parser.add_argument("--query", default="", help="Optional additional GitHub search query.")
     parser.add_argument("--max-repositories", type=int, default=200)
-    parser.add_argument("--max-search-requests", type=int, default=25)
+    parser.add_argument("--max-pages", type=int, default=25)
+    parser.add_argument("--refresh-existing", type=int, default=20, help="Recheck this many existing installable apps for new releases.")
     parser.add_argument("--state-file", default=str(ROOT / "data" / "scout-state.json"))
+    parser.add_argument("--retry-file", default=str(ROOT / "data" / "scout-retry.json"))
     parser.add_argument("--seed-file", default=str(ROOT / "catalog-seed-repositories.json"))
     parser.add_argument("--catalog-file", default=str(ROOT / "apps" / "web" / "catalog" / "index.json"))
     parser.add_argument("--output", default="discovery-candidates.json")
@@ -93,49 +129,69 @@ def main() -> None:
     token = os.getenv("GITHUB_TOKEN") or os.getenv("APPHORYN_GITHUB_TOKEN") or settings.github_token
     target_repo = os.getenv("GITHUB_REPOSITORY", "")
     if not token or not target_repo:
-        raise SystemExit(
-            "Real migration requires GITHUB_TOKEN and GITHUB_REPOSITORY. "
-            "No app is advertised or marked imported without the Apphoryn mirror."
-        )
+        raise SystemExit("Real migration requires GITHUB_TOKEN and GITHUB_REPOSITORY.")
 
     github = GitHubClient(token)
     catalog = CatalogService(github=github)
     mirror = GitHubReleaseMirror(token, target_repo, os.getenv("APPHORYN_GITHUB_REF", "main"))
+    now = time.time()
     known = load_catalog_index(Path(args.catalog_file))
     known_by_id = {str(item.get("github_repo_id")): item for item in known if item.get("github_repo_id")}
     known_by_url = {_repo_key(str(item.get("repository_url") or "")): item for item in known if item.get("repository_url")}
 
+    due_retries, waiting_retries = load_retry_queue(Path(args.retry_file), now)
     seeds = [] if args.skip_seeds else load_seed_repositories(Path(args.seed_file))
     queue: list[dict[str, Any]] = []
-    seen_urls: set[str] = set()
-    for seed in seeds:
-        key = _repo_key(seed["repository"])
-        if key and key not in seen_urls:
-            queue.append({"repository": seed["repository"], "reason": seed.get("reason", "Maintained seed")})
-            seen_urls.add(key)
+    seen_keys: set[str] = set()
 
-    crawl_report: dict[str, Any] = {"repositories": 0, "search_requests": 0, "pending_partitions": 0}
+    def enqueue(entry: dict[str, Any]) -> None:
+        key = _repo_key(str(entry.get("repository") or ""))
+        if key and key not in seen_keys:
+            queue.append(entry)
+            seen_keys.add(key)
+
+    for item in due_retries:
+        enqueue({**item, "reason": item.get("reason") or "Scheduled retry", "force_refresh": True})
+    for seed in seeds:
+        enqueue({"repository": seed["repository"], "reason": seed.get("reason", "Maintained seed")})
+
+    crawl_report: dict[str, Any] = {"repositories": 0, "repository_pages": 0, "last_repository_id": 0}
     crawler = None
     if args.global_scan:
         crawler = RepositoryCrawler(github, args.state_file)
-        discovered, crawl_report = crawler.scan(args.max_repositories, args.max_search_requests)
+        discovered, crawl_report = crawler.scan(args.max_repositories, args.max_pages)
         for candidate in discovered:
             url = str(candidate.get("html_url") or "")
-            key = _repo_key(url)
-            if key and key not in seen_urls:
-                queue.append({
-                    "repository": url,
-                    "reason": "Incremental global GitHub repository crawl",
-                    "candidate": candidate,
-                })
-                seen_urls.add(key)
+            enqueue({
+                "repository": url,
+                "reason": "Incremental GitHub public-repository listing",
+                "candidate": candidate,
+            })
     elif args.query:
         for candidate in catalog.discover(args.query, max(1, min(args.max_repositories, 100))):
             url = str(candidate.get("repository_url") or "")
-            key = _repo_key(url)
-            if key and key not in seen_urls:
-                queue.append({"repository": url, "reason": "Explicit GitHub search query", "candidate": candidate})
-                seen_urls.add(key)
+            enqueue({"repository": url, "reason": "Explicit GitHub repository search", "candidate": candidate})
+
+    # Existing installable apps are rechecked in a round-robin order so new
+    # upstream releases are discovered even though the public listing cursor
+    # only moves forward through newly created repository IDs.
+    refresh_limit = max(0, min(int(args.refresh_existing), 100))
+    refresh_candidates = sorted(
+        known,
+        key=lambda item: str(item.get("scout_checked_at") or ""),
+    )[:refresh_limit]
+    for item in refresh_candidates:
+        url = str(item.get("repository_url") or "")
+        enqueue({
+            "repository": url,
+            "reason": "Scheduled upstream release refresh",
+            "candidate": {
+                "id": item.get("github_repo_id"),
+                "html_url": url,
+                "updated_at": item.get("source_updated_at"),
+            },
+            "force_refresh": True,
+        })
 
     Path(args.output).write_text(json.dumps([{
         "repository": row["repository"], "reason": row.get("reason", "")
@@ -150,15 +206,23 @@ def main() -> None:
         raise SystemExit("APPHORYN_AUTO_BUILD_TARGETS contains unsupported targets.")
 
     results: list[dict[str, Any]] = []
+    scheduled_retries = list(waiting_retries)
     for entry in queue:
         repo_url = entry["repository"]
         candidate = entry.get("candidate") or {}
         result: dict[str, Any] = {"repository": repo_url, "reason": entry.get("reason", ""), "status": "started"}
         try:
-            if known_current(candidate, known_by_id, known_by_url):
+            if candidate.get("fork") is True:
+                result.update({"status": "duplicate_fork_skipped", "reason": "Fork repositories are scanned but not imported as duplicate app listings."})
+                results.append(result)
+                continue
+            if candidate.get("archived") is True or candidate.get("disabled") is True:
+                result.update({"status": "inactive_repository_skipped", "reason": "Archived or disabled upstream repositories are not imported."})
+                results.append(result)
+                continue
+            if not entry.get("force_refresh") and known_current(candidate, known_by_id, known_by_url):
                 result["status"] = "already_current"
                 results.append(result)
-                print(json.dumps(result, ensure_ascii=False), flush=True)
                 continue
 
             imported = catalog.import_repository(repo_url, mirror_release_assets=True)
@@ -178,35 +242,51 @@ def main() -> None:
                 result["status"] = "mirrored"
                 result["apphoryn_release"] = mirror_result.get("release_url")
                 result["mirrored_files"] = [item["filename"] for item in mirror_result["mirrored_artifacts"]]
+                key = _repo_key(str(app.get("repository_url") or repo_url))
+                known_record = {
+                    "repository_url": app.get("repository_url") or repo_url,
+                    "github_repo_id": app.get("github_repo_id"),
+                    "source_updated_at": app.get("source_updated_at"),
+                    "scout_checked_at": mirror_result.get("scout_checked_at"),
+                }
+                known_by_url[key] = known_record
+                if app.get("github_repo_id"):
+                    known_by_id[str(app["github_repo_id"])] = known_record
             else:
-                mirror.publish_app(app, [])
-                result["status"] = "source_only_not_published"
-                if auto_targets:
+                existing = known_by_id.get(str(app.get("github_repo_id") or "")) or known_by_url.get(_repo_key(repo_url))
+                if existing:
+                    mirror.mark_app_checked(str(app.get("repository_url") or repo_url), app.get("github_repo_id"))
+                    result["status"] = "checked_no_new_installer"
+                elif imported.get("release_found"):
+                    scheduled_retries.append(retry_record(entry, now, "Release found but no supported verified installer asset was accepted."))
+                    result["status"] = "awaiting_verified_installer"
+                else:
+                    result["status"] = "source_has_no_release"
+                if auto_targets and not imported.get("release_found"):
                     git_ref = str(app.get("source_commit_sha") or app.get("default_branch") or "main")
-                    if mirror.has_recent_build_attempt(repo_url, git_ref):
-                        result["build_status"] = "already_dispatched_or_built"
-                    else:
+                    if not mirror.has_recent_build_attempt(repo_url, git_ref):
                         mirror.dispatch_build(repo_url, git_ref, auto_targets, str(app.get("slug") or app.get("id")))
                         result["build_status"] = "workflow_dispatched"
                         result["build_targets"] = auto_targets
-                else:
-                    result["reason"] = "No verified installer found; source-only entries remain hidden from the public store."
-            key = _repo_key(str(app.get("repository_url") or repo_url))
-            known_by_url[key] = {
-                "repository_url": app.get("repository_url") or repo_url,
-                "github_repo_id": app.get("github_repo_id"),
-                "source_updated_at": app.get("source_updated_at"),
-            }
-            if app.get("github_repo_id"):
-                known_by_id[str(app["github_repo_id"])] = known_by_url[key]
+                result["reason"] = "No verified installer exists; source-only projects are not published as installable store apps."
         except ValueError as exc:
-            # Missing/unsupported licenses, archived projects and unavailable
-            # license texts are permanent policy rejections, not retry loops.
             result.update({"status": "rejected_by_policy", "reason": str(exc)[:700]})
         except Exception as exc:
             result.update({"status": "failed", "reason": str(exc)[:700]})
+            scheduled_retries.append(retry_record(entry, now, str(exc)))
         results.append(result)
         print(json.dumps(result, ensure_ascii=False), flush=True)
+
+    # Keep one retry record per immutable upstream ID or canonical URL.
+    retry_deduplicated: dict[str, dict[str, Any]] = {}
+    for item in scheduled_retries:
+        candidate = item.get("candidate") or {}
+        key = str(candidate.get("id") or _repo_key(str(item.get("repository") or "")))
+        if key:
+            previous = retry_deduplicated.get(key)
+            if previous is None or float(item.get("next_attempt_at") or 0) < float(previous.get("next_attempt_at") or 0):
+                retry_deduplicated[key] = item
+    save_retry_queue(Path(args.retry_file), list(retry_deduplicated.values()))
 
     if crawler:
         crawler.save()
@@ -214,15 +294,16 @@ def main() -> None:
 
     Path("harvest-results.json").write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
     mirrored_count = sum(item.get("status") == "mirrored" for item in results)
-    current_count = sum(item.get("status") == "already_current" for item in results)
-    rejected_count = sum(item.get("status") == "rejected_by_policy" for item in results)
+    current_count = sum(item.get("status") in {"already_current", "checked_no_new_installer"} for item in results)
+    rejected_count = sum(item.get("status") in {"rejected_by_policy", "duplicate_fork_skipped", "inactive_repository_skipped"} for item in results)
     failed_count = sum(item.get("status") == "failed" for item in results)
     print(
-        "Scout batch finished: "
-        f"{crawl_report.get('repositories', 0)} repositories discovered; "
-        f"{len(results)} migration candidates processed; {mirrored_count} mirrored; "
-        f"{current_count} unchanged; {rejected_count} policy-rejected; {failed_count} failed; "
-        f"{crawl_report.get('pending_partitions', 0)} partitions remain."
+        "Scout run finished: "
+        f"{crawl_report.get('repositories', 0)} public repositories scanned; "
+        f"{len(results)} migration tasks processed; {mirrored_count} apps with verified installers mirrored; "
+        f"{current_count} current; {rejected_count} skipped by policy/deduplication; "
+        f"{failed_count} failed; {len(retry_deduplicated)} retry records retained; "
+        f"last repository ID={crawl_report.get('last_repository_id', 0)}."
     )
 
 
