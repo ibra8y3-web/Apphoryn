@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T23:16:09.505158+00:00",
+  "generated_at": "2026-11-24T23:16:24.633897+00:00",
   "apps": [
     {
       "id": "tradytics-eiten",
@@ -860,6 +860,53 @@
         }
       ],
       "icon_url": "https://avatars.githubusercontent.com/u/68111783?v=4"
+    },
+    {
+      "id": "wepublish-wepublish",
+      "slug": "wepublish-wepublish",
+      "artifacts": [],
+      "name": "wepublish",
+      "summary": "Open-source headless CMS and peering network for independent media, with GraphQL API, React editor, website builder, subscriptions, and content sharing.",
+      "description": "We.Publish is an open-source headless CMS and peering network for independent media. It provides a GraphQL API, React-based editor, media management, block editor, SEO and scheduling, comments, polls, crowdfunding, subscriptions, paywalls, analytics, and integrations with Stripe, Payrexx, Mollie, Bexio, Mailchimp, and Mailgun. Its peering network lets connected newsrooms share and publish articles. The Nx monorepo includes API, editor, website example, and media apps, using Node.js, TypeScript, NestJS, Next.js, React, MUI, PostgreSQL, and Prisma. Local development uses pnpm, Docker, and pnpm run dev.",
+      "translations": {
+        "en": "Open-source headless CMS and peering network for independent media, with GraphQL API, React editor, website builder, subscriptions, and content sharing.",
+        "ar": "نظام إدارة محتوى بلا واجهة مفتوح المصدر وشبكة peering لوسائل الإعلام المستقلة، مع GraphQL ومحرر React وبناء مواقع واشتراكات ومشاركة محتوى."
+      },
+      "description_translations": {
+        "en": "We.Publish is an open-source headless CMS and peering network for independent media. It provides a GraphQL API, React-based editor, media management, block editor, SEO and scheduling, comments, polls, crowdfunding, subscriptions, paywalls, analytics, and integrations with Stripe, Payrexx, Mollie, Bexio, Mailchimp, and Mailgun. Its peering network lets connected newsrooms share and publish articles. The Nx monorepo includes API, editor, website example, and media apps, using Node.js, TypeScript, NestJS, Next.js, React, MUI, PostgreSQL, and Prisma. Local development uses pnpm, Docker, and pnpm run dev.",
+        "ar": "We.Publish هو نظام إدارة محتوى بلا واجهة مفتوح المصدر وشبكة peering لوسائل الإعلام المستقلة. يوفر واجهة GraphQL، ومحررًا قائمًا على React، وإدارة وسائط، ومحرر كتل، وتحسينات SEO وجدولة، وتعليقات واستطلاعات رأي وتمويلًا جماعيًا، واشتراكات وجدران دفع وتحليلات، وتكاملات مع Stripe وPayrexx وMollie وBexio وMailchimp وMailgun. تتيح شبكة peering لغرف الأخبار المتصلة مشاركة المقالات ونشرها. يتضمن المشروع مستودع Nx monorepo يضم تطبيقات API وEditor وWebsite Example وMedia، باستخدام Node.js وTypeScript وNestJS وNext.js وReact وMUI وPostgreSQL وPrisma. يبدأ التطوير المحلي باستخدام pnpm وDocker والأمر pnpm run dev."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://raw.githubusercontent.com/wepublish/wepublish/master/libs/tenants/tsri/src/assets/logo.svg",
+      "repository_url": "https://github.com/wepublish/wepublish",
+      "github_repo_id": "195281293",
+      "source_updated_at": "2026-11-14T13:22:32Z",
+      "homepage_url": "https://wepublish.ch",
+      "owner": "wepublish",
+      "default_branch": "master",
+      "source_commit_sha": "be92f86e91cef6c4fb963fe25cf7f9b1e708aadd",
+      "license_text": "MIT License\n\nCopyright (c) 2019, We.Publish Association.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "README describes a self-hostable CMS application with editor, API, media service, and documented pnpm/Docker development build path.",
+      "category": "other",
+      "topics": [
+        "cms",
+        "graphql",
+        "opensource",
+        "peering",
+        "publishing",
+        "react"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "koala73-worldmonitor",
