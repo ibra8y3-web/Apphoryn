@@ -213,10 +213,23 @@ class GitHubReleaseMirror:
             state = str(item.get("state") or "unknown")
             if state not in {"available", "paused", "not_configured", "unavailable"}:
                 state = "unknown"
+            models = item.get("models") if isinstance(item.get("models"), list) else []
+            safe_models = []
+            for model in models[:20]:
+                if not isinstance(model, dict):
+                    continue
+                model_name = str(model.get("model") or "").strip()[:180]
+                if not model_name or any(char in model_name for char in "\\r\\n"):
+                    continue
+                safe_models.append({
+                    "model": model_name,
+                    "free_class": str(model.get("free_class") or "")[:80],
+                })
             safe_providers.append({
                 "provider": provider,
                 "state": state,
-                "models_discovered": max(0, int(item.get("models_discovered") or 0)),
+                "models_discovered": max(0, int(item.get("models_discovered") or len(safe_models))),
+                "models": safe_models,
             })
         manifest["ai_status"] = {
             "checked_at": str(status.get("checked_at") or datetime.now(timezone.utc).isoformat()),
