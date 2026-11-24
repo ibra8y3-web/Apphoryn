@@ -56,5 +56,30 @@ class DatabaseTests(unittest.TestCase):
             self.assertEqual(database.list_jobs()[0]["targets"], ["android"])
 
 
+    def test_same_content_hash_is_not_duplicated_across_versions_or_filenames(self):
+        with tempfile.TemporaryDirectory() as folder:
+            database = Database(Path(folder) / "dedupe.sqlite3")
+            now = utc_now()
+            database.upsert_app({
+                "id": "app-1", "slug": "one-two", "name": "One", "summary": "",
+                "description": "", "repository_url": "https://github.com/one/two",
+                "owner": "one", "license_eligible": True, "category": "other",
+                "topics": [], "created_at": now, "updated_at": now,
+            })
+            first = database.add_artifact({
+                "id": "file-1", "app_id": "app-1", "filename": "one-1.0.exe",
+                "platform": "windows", "package_type": "Windows installer", "version": "1.0",
+                "size_bytes": 256, "sha256": "a" * 64, "created_at": now, "storage_path": "/store/a.exe",
+            })
+            second = database.add_artifact({
+                "id": "file-2", "app_id": "app-1", "filename": "one-1.1.exe",
+                "platform": "windows", "package_type": "Windows installer", "version": "1.1",
+                "size_bytes": 256, "sha256": "A" * 64, "created_at": now, "storage_path": "/store/b.exe",
+            })
+            self.assertEqual(first["id"], second["id"])
+            self.assertEqual(len(database.list_artifacts("app-1")), 1)
+            self.assertEqual(database.get_artifact_by_sha256("app-1", "a" * 64)["id"], first["id"])
+
+
 if __name__ == "__main__":
     unittest.main()
