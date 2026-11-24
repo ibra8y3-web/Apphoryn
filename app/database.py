@@ -45,6 +45,8 @@ class Database:
                     summary TEXT NOT NULL DEFAULT '',
                     description TEXT NOT NULL DEFAULT '',
                     repository_url TEXT NOT NULL UNIQUE,
+                    github_repo_id TEXT,
+                    source_updated_at TEXT,
                     homepage_url TEXT,
                     owner TEXT NOT NULL,
                     default_branch TEXT NOT NULL DEFAULT 'main',
@@ -100,9 +102,12 @@ class Database:
                 "default_branch": "ALTER TABLE apps ADD COLUMN default_branch TEXT NOT NULL DEFAULT 'main'",
                 "license_text": "ALTER TABLE apps ADD COLUMN license_text TEXT NOT NULL DEFAULT ''",
                 "source_commit_sha": "ALTER TABLE apps ADD COLUMN source_commit_sha TEXT",
+                "github_repo_id": "ALTER TABLE apps ADD COLUMN github_repo_id TEXT",
+                "source_updated_at": "ALTER TABLE apps ADD COLUMN source_updated_at TEXT",
             }.items():
                 if column not in app_columns:
                     con.execute(statement)
+            con.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_apps_github_repo_id ON apps(github_repo_id) WHERE github_repo_id IS NOT NULL")
             artifact_columns = {row[1] for row in con.execute("PRAGMA table_info(artifacts)").fetchall()}
             for column, statement in {
                 "validation_status": "ALTER TABLE artifacts ADD COLUMN validation_status TEXT NOT NULL DEFAULT 'validated'",
@@ -126,26 +131,56 @@ class Database:
         return result
 
     def upsert_app(self, record: dict[str, Any]) -> dict[str, Any]:
+        repo_id = str(record.get("github_repo_id") or "").strip() or None
         with self.connect() as con:
-            existing = con.execute("SELECT id, created_at FROM apps WHERE repository_url=?", (record["repository_url"],)).fetchone()
+            existing = con.execute(
+                """SELECT id, created_at FROM apps
+                   WHERE repository_url=? OR (? IS NOT NULL AND github_repo_id=?)
+                   ORDER BY CASE WHEN github_repo_id=? THEN 0 ELSE 1 END LIMIT 1""",
+                (record["repository_url"], repo_id, repo_id, repo_id),
+            ).fetchone()
             app_id = existing["id"] if existing else record["id"]
             created_at = existing["created_at"] if existing else record["created_at"]
-            con.execute("""INSERT INTO apps
-                (id,slug,name,summary,description,repository_url,homepage_url,owner,default_branch,source_commit_sha,license_text,license_spdx,license_eligible,category,topics_json,translations_json,latest_version,release_url,created_at,updated_at)
-                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
-                ON CONFLICT(repository_url) DO UPDATE SET
-                    slug=excluded.slug,name=excluded.name,summary=excluded.summary,description=excluded.description,
-                    homepage_url=excluded.homepage_url,owner=excluded.owner,default_branch=excluded.default_branch,
-                    source_commit_sha=excluded.source_commit_sha,license_text=excluded.license_text,license_spdx=excluded.license_spdx,
-                    license_eligible=excluded.license_eligible,category=excluded.category,topics_json=excluded.topics_json,
-                    translations_json=excluded.translations_json,latest_version=excluded.latest_version,
-                    release_url=excluded.release_url,updated_at=excluded.updated_at""",
-                (app_id,record["slug"],record["name"],record["summary"],record["description"],record["repository_url"],
-                 record.get("homepage_url"),record["owner"],record.get("default_branch","main"),record.get("source_commit_sha"),
-                 record.get("license_text",""),record.get("license_spdx"),int(record["license_eligible"]),record["category"],
-                 json.dumps(record.get("topics",[])),json.dumps(record.get("translations",{}),ensure_ascii=False),
-                 record.get("latest_version"),record.get("release_url"),created_at,record["updated_at"]))
-            row = con.execute("SELECT * FROM apps WHERE repository_url=?", (record["repository_url"],)).fetchone()
+            values = (
+                record["slug"], record["name"], record["summary"], record["description"],
+                record["repository_url"], record.get("homepage_url"), record["owner"],
+                record.get("default_branch", "main"), record.get("source_commit_sha"),
+                repo_id, record.get("source_updated_at"),
+                record.get("license_text", ""), record.get("license_spdx"),
+                int(record["license_eligible"]), record["category"],
+                json.dumps(record.get("topics", [])),
+                json.dumps(record.get("translations", {}), ensure_ascii=False),
+                record.get("latest_version"), record.get("release_url"), record["updated_at"],
+            )
+            if existing:
+                con.execute(
+                    """UPDATE apps SET
+                       slug=?,name=?,summary=?,description=?,repository_url=?,homepage_url=?,owner=?,
+                       default_branch=?,source_commit_sha=?,github_repo_id=COALESCE(?,github_repo_id),
+                       source_updated_at=COALESCE(?,source_updated_at),license_text=?,license_spdx=?,
+                       license_eligible=?,category=?,topics_json=?,translations_json=?,latest_version=?,
+                       release_url=?,updated_at=?
+                       WHERE id=?""",
+                    (*values, app_id),
+                )
+            else:
+                con.execute(
+                    """INSERT INTO apps
+                       (id,slug,name,summary,description,repository_url,homepage_url,owner,default_branch,
+                        source_commit_sha,github_repo_id,source_updated_at,license_text,license_spdx,
+                        license_eligible,category,topics_json,translations_json,latest_version,release_url,
+                        created_at,updated_at)
+                       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                    (app_id, record["slug"], record["name"], record["summary"], record["description"],
+                     record["repository_url"], record.get("homepage_url"), record["owner"],
+                     record.get("default_branch", "main"), record.get("source_commit_sha"), repo_id,
+                     record.get("source_updated_at"), record.get("license_text", ""),
+                     record.get("license_spdx"), int(record["license_eligible"]), record["category"],
+                     json.dumps(record.get("topics", [])),
+                     json.dumps(record.get("translations", {}), ensure_ascii=False),
+                     record.get("latest_version"), record.get("release_url"), created_at, record["updated_at"]),
+                )
+            row = con.execute("SELECT * FROM apps WHERE id=?", (app_id,)).fetchone()
             return self._dict(row) or {}
 
     def get_app(self, app_id: str) -> dict[str, Any] | None:
