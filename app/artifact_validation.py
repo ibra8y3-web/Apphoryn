@@ -162,7 +162,7 @@ def validate_artifact(path: str | Path, *, require_apk_signature: bool = True) -
                 for info in archive.infolist():
                     if info.is_dir() or not info.filename.lower().endswith(".apk"):
                         continue
-                    normalized = info.filename.replace("\\\\", "/")
+                    normalized = info.filename.replace("\\", "/")
                     if normalized.startswith("/") or ".." in normalized.split("/"):
                         raise ArtifactValidationError("XAPK contains an unsafe APK member path.")
                     name = Path(normalized).name
