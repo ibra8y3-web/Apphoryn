@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T08:49:42.246497+00:00",
+  "generated_at": "2026-11-25T08:50:01.682852+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -896,6 +896,128 @@
         }
       ],
       "platforms": [
+        "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "getisolated-daftr",
+      "slug": "getisolated-daftr",
+      "name": "Daftr",
+      "summary": "Fast, keyboard-driven note-taking app built with Angular, Electron, and SQLite",
+      "description": "Fast, keyboard-driven note-taking app built with Angular, Electron, and SQLite",
+      "translations": {
+        "en": {
+          "summary": "Fast, keyboard-driven note-taking app built with Angular, Electron, and SQLite",
+          "description": "Fast, keyboard-driven note-taking app built with Angular, Electron, and SQLite"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/getisolated/Daftr/main/assets/logo.png",
+      "repository_url": "https://github.com/getisolated/Daftr",
+      "github_repo_id": "1175602423",
+      "source_updated_at": "2026-11-02T15:37:51Z",
+      "homepage_url": null,
+      "owner": "getisolated",
+      "default_branch": "main",
+      "source_commit_sha": "977c3c54e65d472ae2ee100611abc4f46341ea79",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Yassine Debbih\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "codemirror",
+        "desktop-app",
+        "electron-angular",
+        "keyboard-driven",
+        "markdown",
+        "note-taking",
+        "sqlite"
+      ],
+      "latest_version": "v1.7.0",
+      "release_url": "https://github.com/getisolated/Daftr/releases/tag/v1.7.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-getisolated-daftr-v1.7.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-getisolated-daftr-v1.7.0/THIRD-PARTY-NOTICE-getisolated-daftr.txt",
+      "artifacts": [
+        {
+          "id": "1e8d8e18293633a5416824a3c711f2771a2099b2e8778e255237795c599af241",
+          "filename": "Daftr_1.7.0_aarch64.dmg",
+          "original_filename": "Daftr_1.7.0_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v1.7.0",
+          "size_bytes": 9546165,
+          "sha256": "1e8d8e18293633a5416824a3c711f2771a2099b2e8778e255237795c599af241",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-getisolated-daftr-v1.7.0/Daftr_1.7.0_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-getisolated-daftr-v1.7.0"
+        },
+        {
+          "id": "12a41ab0186f5ea3b6c866e4d587ecadec052ce3f11217f6a4bda319601fa92b",
+          "filename": "Daftr_1.7.0_amd64.AppImage",
+          "original_filename": "Daftr_1.7.0_amd64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v1.7.0",
+          "size_bytes": 88844792,
+          "sha256": "12a41ab0186f5ea3b6c866e4d587ecadec052ce3f11217f6a4bda319601fa92b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-getisolated-daftr-v1.7.0/Daftr_1.7.0_amd64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-getisolated-daftr-v1.7.0"
+        },
+        {
+          "id": "6751b076e123f179f5e25919735948a82d9ae08df9b7bd4246d60aa37c724a1f",
+          "filename": "Daftr_1.7.0_amd64.deb",
+          "original_filename": "Daftr_1.7.0_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v1.7.0",
+          "size_bytes": 11007732,
+          "sha256": "6751b076e123f179f5e25919735948a82d9ae08df9b7bd4246d60aa37c724a1f",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-getisolated-daftr-v1.7.0/Daftr_1.7.0_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-getisolated-daftr-v1.7.0"
+        },
+        {
+          "id": "8182f2999465aeb7a5d16a98c948c1030d8c43ce62588187a792746734f67421",
+          "filename": "Daftr_1.7.0_x64-setup.exe",
+          "original_filename": "Daftr_1.7.0_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.7.0",
+          "size_bytes": 8023584,
+          "sha256": "8182f2999465aeb7a5d16a98c948c1030d8c43ce62588187a792746734f67421",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-getisolated-daftr-v1.7.0/Daftr_1.7.0_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-getisolated-daftr-v1.7.0"
+        }
+      ],
+      "platforms": [
+        "linux",
         "macos",
         "windows"
       ]
