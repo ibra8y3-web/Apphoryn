@@ -65,6 +65,37 @@ class AgentStoreTests(unittest.TestCase):
         self.assertEqual(activity[0]["latest_status"], "running")
         self.assertTrue(activity[0]["last_activity_at"])
 
+
+    def test_code_change_permission_is_separate_from_external_action_approval(self):
+        run = self.store.enqueue("Repair a broken API route safely.", allow_external_actions=True,
+                                 allow_code_changes=False)
+        self.assertTrue(run["allow_external_actions"])
+        self.assertFalse(run["allow_code_changes"])
+
+    def test_software_engineer_never_writes_without_code_change_approval(self):
+        result = _run_tool("software_engineer", {
+            "name": "apply_code_patch",
+            "arguments": {
+                "repository_url": "https://github.com/example/project",
+                "files": [{"path": "app/example.py", "content": "VALUE = 1"}],
+            },
+        }, "Repair the code.", True, None, False)
+        self.assertFalse(result["executed"])
+        self.assertIn("code-change approval", result["reason"])
+
+    def test_approved_code_change_still_requires_server_side_enablement(self):
+        from unittest.mock import patch
+        with patch.dict("os.environ", {"APPHORYN_CODE_WRITES_ENABLED": "false"}, clear=False):
+            result = _run_tool("software_engineer", {
+                "name": "apply_code_patch",
+                "arguments": {
+                    "repository_url": "https://github.com/example/project",
+                    "files": [{"path": "app/example.py", "content": "VALUE = 1"}],
+                },
+            }, "Repair the code.", True, None, True)
+        self.assertFalse(result["executed"])
+        self.assertIn("server policy", result["reason"])
+
     def test_shared_memory_agent_tool_reads_and_saves_real_records(self):
         from unittest.mock import patch
         from app.agent_system import _run_tool
