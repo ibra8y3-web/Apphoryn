@@ -9,17 +9,6 @@ on:
       - 'scripts/global_scout.py'
   schedule:
     - cron: '17 */2 * * *'
-  workflow_dispatch:
-    inputs:
-      max_repositories:
-        description: Maximum repositories to process (a complete API page is consumed)
-        required: true
-        default: '200'
-      max_pages:
-        description: Maximum GitHub listing pages for this run
-        required: true
-        default: '25'
-
 concurrency:
   group: apphoryn-catalog-writes
   cancel-in-progress: false
@@ -73,30 +62,26 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           APPHORYN_AI_SERVICE_URL: 'https://apphoryn-production.up.railway.app'
           # AI provider credentials stay only in Railway; GitHub Actions receives a short-lived OIDC identity.
-          # One source project maximum per two-hour run; only detected native adapters are built.
+          # Dispatch all eligible supported targets; there is no Apphoryn per-run build quota.
           # Third-party source runs without repository secrets; trusted publisher verifies all output again.
           APPHORYN_GLOBAL_SCOUT_BUILD_TARGETS: 'android,windows,linux,macos'
-          APPHORYN_GLOBAL_SCOUT_MAX_BUILDS_PER_RUN: '1'
-          APPHORYN_GLOBAL_SCOUT_SEARCH_LIMIT: '6'
-          APPHORYN_GLOBAL_SCOUT_MAX_DISCOVERY_PER_RUN: '60'
-          APPHORYN_GLOBAL_SCOUT_DISCOVERY_QUERIES: |
-            topic:android-app pushed:>2025-01-01
-            topic:desktop-app pushed:>2025-01-01
-            topic:linux-app pushed:>2025-01-01
-            topic:windows-app pushed:>2025-01-01
-            topic:macos-app pushed:>2025-01-01
-            topic:command-line-tool pushed:>2025-01-01
-            topic:productivity-app pushed:>2025-01-01
-            topic:utility-app pushed:>2025-01-01
-            topic:electron pushed:>2025-01-01
-            topic:flutter pushed:>2025-01-01
-          MAX_REPOSITORIES: ${{ inputs.max_repositories || '200' }}
-          MAX_PAGES: ${{ inputs.max_pages || '25' }}
+                    APPHORYN_GLOBAL_SCOUT_SEARCH_LIMIT: '100'
+                    APPHORYN_GLOBAL_SCOUT_DISCOVERY_QUERIES: |
+            topic:android-app
+            topic:desktop-app
+            topic:linux-app
+            topic:windows-app
+            topic:macos-app
+            topic:command-line-tool
+            topic:productivity-app
+            topic:utility-app
+            topic:electron
+            topic:flutter
         shell: bash
         run: |
           python scripts/global_scout.py \
-            --max-repositories "$MAX_REPOSITORIES" \
-            --max-pages "$MAX_PAGES"
+            --max-repositories 10000 \
+            --max-pages 100
 
       - name: Persist the Scout cursor and retry queue
         if: always() && hashFiles('data/scout-state.json') != ''

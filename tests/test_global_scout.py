@@ -21,7 +21,7 @@ class GlobalScoutTests(unittest.TestCase):
         with patch.dict("os.environ", {}, clear=False):
             self.assertTrue(any("topic:android-app" in query for query in configured_discovery_queries()))
             self.assertTrue(any("topic:desktop-app" in query for query in configured_discovery_queries()))
-            self.assertTrue(all("pushed:>" in query for query in configured_discovery_queries()))
+            self.assertTrue(all("pushed:>" not in query for query in configured_discovery_queries()))
 
     def test_global_queries_can_be_overridden_and_are_deduplicated(self):
         from unittest.mock import patch

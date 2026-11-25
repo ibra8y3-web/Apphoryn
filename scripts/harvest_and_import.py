@@ -37,7 +37,6 @@ from app.build_support import detect_supported_build_targets
 from app.github_client import GitHubClient
 from app.github_release_mirror import GitHubMirrorError, GitHubReleaseMirror
 from app.services import CatalogService
-from app.storefront_eligibility import has_installable_path
 from app.github_actions_client import call_apphoryn_internal_api
 
 
@@ -127,14 +126,13 @@ def configured_queries(primary: str) -> list[str]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--query", default=os.getenv("APPHORYN_QUERY", "topic:opensource"))
-    parser.add_argument("--limit", type=int, default=int(os.getenv("APPHORYN_LIMIT", "6")), help="Maximum search results per query (1-10).")
+    parser.add_argument("--limit", type=int, default=int(os.getenv("APPHORYN_LIMIT", "100")), help="GitHub search page size (1-100); results are paginated.")
     parser.add_argument("--seed-file", default=str(ROOT / "catalog-seed-repositories.json"))
     parser.add_argument("--output", default="discovery-candidates.json")
     parser.add_argument("--skip-seeds", action="store_true")
     args = parser.parse_args()
 
-    limit = max(1, min(args.limit, 10))
-    max_candidates = max(1, min(int(os.getenv("APPHORYN_MAX_DISCOVERY_PER_RUN", "60")), 100))
+    limit = max(1, min(args.limit, 100))
     catalog = CatalogService()
 
     # Search several app-focused topic families without a stars threshold. Recently
@@ -151,9 +149,7 @@ def main() -> None:
             repository = str(item.get("repository_url") or "").rstrip("/").lower()
             if repository and repository not in candidates_by_repo:
                 candidates_by_repo[repository] = {**item, "discovery_query": query}
-        if len(candidates_by_repo) >= max_candidates:
-            break
-    candidates = list(candidates_by_repo.values())[:max_candidates]
+    candidates = list(candidates_by_repo.values())
     Path(args.output).write_text(json.dumps(candidates, ensure_ascii=False, indent=2), encoding="utf-8")
 
     token = os.getenv("GITHUB_TOKEN") or os.getenv("APPHORYN_GITHUB_TOKEN") or settings.github_token
@@ -184,7 +180,6 @@ def main() -> None:
     allowed_targets = {"android", "windows", "linux", "macos"}
     if auto_targets and not set(auto_targets).issubset(allowed_targets):
         raise SystemExit("APPHORYN_AUTO_BUILD_TARGETS contains unsupported targets.")
-    build_budget = max(0, min(int(os.getenv("APPHORYN_MAX_AUTO_BUILDS_PER_RUN", "3")), 20))
 
     results: list[dict[str, object]] = []
     for entry in queue:
@@ -226,14 +221,16 @@ def main() -> None:
                     supported = detect_supported_build_targets(parts[0], parts[1], git_ref, GitHubClient(token))
                 build_targets = sorted(set(missing_targets) & set(supported))
 
-            if not has_installable_path(app, verified_artifacts, build_targets, existing_platforms):
+            is_app_record = (
+                app.get("project_kind") in {"application", "developer_tool"}
+                or bool(verified_artifacts)
+                or bool(existing_platforms)
+            )
+            if not is_app_record:
                 result.update({
-                    "status": "skipped_non_installable_source",
-                    "build_status": "no_verified_release_or_supported_build",
-                    "build_reason": (
-                        "No verified installer was found and no supported source-build adapter "
-                        "was detected for an app/developer-tool classification."
-                    ),
+                    "status": "skipped_non_app_project",
+                    "build_status": "not_app_classification",
+                    "build_reason": "The repository was not verified as an application/developer tool and has no verified installer.",
                 })
                 results.append(result)
                 print(json.dumps(result, ensure_ascii=False), flush=True)
@@ -262,12 +259,9 @@ def main() -> None:
                     result["build_status"] = "already_dispatched_for_targets"
                     result["build_ref"] = git_ref
                     result["build_targets"] = build_targets
-                elif build_budget <= 0:
-                    result["build_status"] = "deferred_by_run_budget"
-                    result["build_targets"] = build_targets
                 else:
+                    # Dispatch all supported missing target sets; no Apphoryn run quota.
                     mirror.dispatch_build(repo_url, git_ref, build_targets, str(app.get("slug") or app.get("id")))
-                    build_budget -= 1
                     result["build_ref"] = git_ref
                     result["build_targets"] = build_targets
                     result["build_adapters"] = {target: supported[target] for target in build_targets}

@@ -23,22 +23,21 @@ from app.github_client import GitHubClient
 from app.github_release_mirror import GitHubReleaseMirror
 from app.repository_crawler import RepositoryCrawler
 from app.services import CatalogService
-from app.storefront_eligibility import has_installable_path
 
 
 RETRY_DELAYS_SECONDS = (6 * 3600, 24 * 3600, 3 * 86400, 7 * 86400, 30 * 86400)
 
 DEFAULT_GLOBAL_SCOUT_QUERIES = (
-    "topic:android-app pushed:>2025-01-01",
-    "topic:desktop-app pushed:>2025-01-01",
-    "topic:linux-app pushed:>2025-01-01",
-    "topic:windows-app pushed:>2025-01-01",
-    "topic:macos-app pushed:>2025-01-01",
-    "topic:command-line-tool pushed:>2025-01-01",
-    "topic:productivity-app pushed:>2025-01-01",
-    "topic:utility-app pushed:>2025-01-01",
-    "topic:electron pushed:>2025-01-01",
-    "topic:flutter pushed:>2025-01-01",
+    "topic:android-app",
+    "topic:desktop-app",
+    "topic:linux-app",
+    "topic:windows-app",
+    "topic:macos-app",
+    "topic:command-line-tool",
+    "topic:productivity-app",
+    "topic:utility-app",
+    "topic:electron",
+    "topic:flutter",
 )
 
 
@@ -154,8 +153,8 @@ def retry_record(entry: dict[str, Any], now: float, reason: str) -> dict[str, An
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Apphoryn incremental public GitHub repository scanner.")
-    parser.add_argument("--max-repositories", type=int, default=200)
-    parser.add_argument("--max-pages", type=int, default=25)
+    parser.add_argument("--max-repositories", type=int, default=10000, help="Resumable checkpoint batch size; not a total import quota.")
+    parser.add_argument("--max-pages", type=int, default=100, help="Resumable checkpoint batch size; the next run continues from the saved cursor.")
     parser.add_argument("--state-file", default=str(ROOT / "data" / "scout-state.json"))
     parser.add_argument("--retry-file", default=str(ROOT / "data" / "scout-retry.json"))
     parser.add_argument("--catalog-file", default=str(ROOT / "apps" / "web" / "catalog" / "index.json"))
@@ -180,7 +179,6 @@ def main() -> None:
     })
     if build_targets_requested and not set(build_targets_requested).issubset(allowed_targets):
         raise SystemExit("APPHORYN_GLOBAL_SCOUT_BUILD_TARGETS contains unsupported targets.")
-    build_budget = max(0, min(int(os.getenv("APPHORYN_GLOBAL_SCOUT_MAX_BUILDS_PER_RUN", "0")), 5))
 
     catalog_rows = load_catalog_index(Path(args.catalog_file))
     known_by_id = {
@@ -206,12 +204,8 @@ def main() -> None:
 
     # Search app-focused topics first. The public /repositories endpoint is
     # ordered by repository ID and would otherwise spend many cycles on old libraries.
-    search_limit = max(1, min(int(os.getenv("APPHORYN_GLOBAL_SCOUT_SEARCH_LIMIT", "6")), 10))
-    search_budget = max(1, min(int(os.getenv("APPHORYN_GLOBAL_SCOUT_MAX_DISCOVERY_PER_RUN", "60")), 100))
-    targeted_count = 0
+    search_limit = max(1, min(int(os.getenv("APPHORYN_GLOBAL_SCOUT_SEARCH_LIMIT", "100")), 100))
     for query in configured_discovery_queries():
-        if targeted_count >= search_budget:
-            break
         try:
             candidates = catalog.discover(query, search_limit)
         except Exception as exc:
@@ -231,9 +225,6 @@ def main() -> None:
                 "candidate": candidate,
                 "reason": f"Targeted Apphoryn app discovery: {query}",
             })
-            targeted_count += 1
-            if targeted_count >= search_budget:
-                break
 
     crawler = RepositoryCrawler(github, args.state_file)
     discovered, scan_report = crawler.scan(
@@ -331,17 +322,18 @@ def main() -> None:
                 if build_targets_requested and missing and buildable and owner and repo_name else {}
             )
             selected = sorted(set(missing) & set(supported))
-            if not has_installable_path(app, artifacts, selected, available):
+            project_kind = str(app.get("project_kind") or "unknown")
+            is_app_project = (
+                project_kind in {"application", "developer_tool"}
+                or bool(artifacts)
+                or bool(available)
+            )
+            if not is_app_project:
                 result.update({
-                    "status": "source_project_skipped",
+                    "status": "non_app_project_skipped",
                     "app": app.get("name"),
-                    "project_kind": app.get("project_kind"),
-                    "verified_release_packages": 0,
-                    "build_status": "no_verified_release_or_supported_build",
-                    "reason": (
-                        "Repository metadata alone is not a store listing: no verified release "
-                        "installer or supported app build adapter was found."
-                    ),
+                    "project_kind": project_kind,
+                    "reason": "The repository was not verified as an application/developer tool and has no verified installer.",
                 })
                 results.append(result)
                 print(json.dumps(result, ensure_ascii=False), flush=True)
@@ -372,12 +364,9 @@ def main() -> None:
                 elif mirror.has_recent_build_attempt(repository_url, git_ref, targets=selected, adapter_revision=adapter_revision):
                     result["build_status"] = "already_queued_or_published"
                     result["build_targets"] = selected
-                elif build_budget <= 0:
-                    result["build_status"] = "deferred_by_zero_or_exhausted_budget"
-                    result["build_targets"] = selected
                 else:
+                    # Dispatch all supported missing targets. No Apphoryn per-run quota.
                     mirror.dispatch_build(repository_url, git_ref, selected, str(app.get("slug") or app.get("id")), adapter_revision=adapter_revision)
-                    build_budget -= 1
                     result["build_status"] = "workflow_dispatched"
                     result["build_targets"] = selected
                     result["build_adapters"] = {target: supported[target] for target in selected}

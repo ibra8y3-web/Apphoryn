@@ -22,9 +22,9 @@ on:
         required: true
         default: 'topic:opensource'
       limit:
-        description: Maximum search results per discovery query (1-10), plus the seed catalogue
+        description: GitHub search page size; results are paginated through the available result set
         required: true
-        default: '6'
+        default: '100'
       skip_seeds:
         description: Skip the maintained seed repositories
         required: false
@@ -79,7 +79,7 @@ jobs:
           APPHORYN_GITHUB_REF: ${{ github.ref_name }}
           APPHORYN_AI_SERVICE_URL: 'https://apphoryn-production.up.railway.app'
           APPHORYN_QUERY: ${{ inputs.query || 'topic:opensource' }}
-          APPHORYN_LIMIT: ${{ inputs.limit || '6' }}
+          APPHORYN_LIMIT: ${{ inputs.limit || '100' }}
           APPHORYN_AUTO_BUILD_TARGETS: ${{ vars.APPHORYN_AUTO_BUILD_TARGETS || 'android,windows,linux,macos' }}
           APPHORYN_DISCOVERY_QUERIES: |
             topic:android-app
@@ -92,8 +92,6 @@ jobs:
             topic:productivity-app
             topic:utility-app
             topic:open-source-app
-          APPHORYN_MAX_DISCOVERY_PER_RUN: ${{ vars.APPHORYN_MAX_DISCOVERY_PER_RUN || '60' }}
-          APPHORYN_MAX_AUTO_BUILDS_PER_RUN: ${{ vars.APPHORYN_MAX_AUTO_BUILDS_PER_RUN || '3' }}
           SKIP_SEEDS: ${{ inputs.skip_seeds || 'false' }}
         run: |
           if [ "$SKIP_SEEDS" = "true" ]; then

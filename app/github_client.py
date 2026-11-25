@@ -44,7 +44,7 @@ class GitHubClient:
             raise GitHubError(f"GitHub request failed: {exc}") from exc
 
     def search_repositories(self, query: str, page: int = 1, per_page: int = 20) -> dict[str, Any]:
-        return self.request("/search/repositories", {"q": query, "sort": "updated", "order": "desc", "page": str(page), "per_page": str(min(max(per_page, 1), 50))})
+        return self.request("/search/repositories", {"q": query, "sort": "updated", "order": "desc", "page": str(page), "per_page": str(min(max(per_page, 1), 100))})
 
     def list_public_repositories(self, since: int = 0, per_page: int = 100) -> list[dict[str, Any]]:
         """Return the next public repositories with IDs greater than the saved cursor."""

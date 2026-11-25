@@ -151,28 +151,49 @@ class CatalogService:
             pass
         return fallback
 
-    def discover(self, query: str, limit: int = 20) -> list[dict[str, Any]]:
-        search = self.github.search_repositories(query=query, per_page=limit)
+    def discover(self, query: str, limit: int = 100) -> list[dict[str, Any]]:
+        """Paginate GitHub Search (up to its 1,000-result API ceiling per query).
+
+        Global Scout's since-cursor crawl is the long-tail source and continues
+        across the public repository listing without relying on search topics.
+        """
+        per_page = min(max(int(limit), 1), 100)
+        first_page = self.github.search_repositories(query=query, page=1, per_page=per_page)
+        total_count = max(0, int(first_page.get("total_count") or 0))
+        page_count = min(10, max(1, (total_count + per_page - 1) // per_page))
+        pages = [first_page]
+        for page_number in range(2, page_count + 1):
+            page = self.github.search_repositories(
+                query=query, page=page_number, per_page=per_page
+            )
+            pages.append(page)
+            if len(page.get("items") or []) < per_page:
+                break
+
         candidates = []
-        for repo in search.get("items", []):
-            license_info = repo.get("license") or {}
-            spdx = license_info.get("spdx_id")
-            topics = repo.get("topics") or []
-            candidates.append({
-                "name": repo.get("name", ""),
-                "full_name": repo.get("full_name", ""),
-                "description": repo.get("description") or "",
-                "repository_url": repo.get("html_url", ""),
-                "icon_url": (repo.get("owner") or {}).get("avatar_url") or None,
-                "homepage_url": repo.get("homepage") or None,
-                "license_spdx": spdx,
-                "license_eligible": license_allows_redistribution(spdx),
-                "archived": bool(repo.get("archived")),
-                "stars": int(repo.get("stargazers_count") or 0),
-                "updated_at": repo.get("updated_at"),
-                "default_branch": repo.get("default_branch") or "main",
-                "topics": topics,
-            })
+        for search in pages:
+            for repo in search.get("items", []):
+                license_info = repo.get("license") or {}
+                spdx = license_info.get("spdx_id")
+                topics = repo.get("topics") or []
+                candidates.append({
+                    "id": repo.get("id"),
+                    "name": repo.get("name", ""),
+                    "full_name": repo.get("full_name", ""),
+                    "description": repo.get("description") or "",
+                    "repository_url": repo.get("html_url", ""),
+                    "icon_url": (repo.get("owner") or {}).get("avatar_url") or None,
+                    "homepage_url": repo.get("homepage") or None,
+                    "license_spdx": spdx,
+                    "license_eligible": license_allows_redistribution(spdx),
+                    "archived": bool(repo.get("archived")),
+                    "fork": bool(repo.get("fork")),
+                    "disabled": bool(repo.get("disabled")),
+                    "stars": int(repo.get("stargazers_count") or 0),
+                    "updated_at": repo.get("updated_at"),
+                    "default_branch": repo.get("default_branch") or "main",
+                    "topics": topics,
+                })
         return candidates
 
     def import_repository(self, repository_url: str, mirror_release_assets: bool = True) -> dict[str, Any]:
