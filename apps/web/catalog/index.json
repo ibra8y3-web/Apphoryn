@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:23:19.307620+00:00",
+  "generated_at": "2026-11-25T04:23:36.383440+00:00",
   "apps": [
     {
       "id": "lumiag5-antigravitymb",
@@ -860,6 +860,103 @@
       ],
       "platforms": [
         "linux",
+        "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "joeystdio-envy",
+      "slug": "joeystdio-envy",
+      "name": "envy",
+      "summary": "Environment variables & secrets for your terminal and AI coding agents — native macOS, 100% free & open-source.",
+      "description": "Environment variables & secrets for your terminal and AI coding agents — native macOS, 100% free & open-source.",
+      "translations": {
+        "en": {
+          "summary": "Environment variables & secrets for your terminal and AI coding agents — native macOS, 100% free & open-source.",
+          "description": "Environment variables & secrets for your terminal and AI coding agents — native macOS, 100% free & open-source."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/joeystdio/envy/main/assets/icon.png",
+      "repository_url": "https://github.com/joeystdio/envy",
+      "github_repo_id": "1442476354",
+      "source_updated_at": "2026-11-25T04:14:31Z",
+      "homepage_url": "https://joeystdio.github.io/envy/",
+      "owner": "joeystdio",
+      "default_branch": "main",
+      "source_commit_sha": "b85f84b71a3b0b5f7334d9c6cbea2507d55bf860",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Joey Stevense\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ai-agents",
+        "bash",
+        "claude-code",
+        "developer-tools",
+        "direnv",
+        "dotenv",
+        "environment-variables",
+        "homebrew",
+        "keychain",
+        "macos",
+        "macos-app",
+        "menu-bar-app",
+        "open-source",
+        "secrets-management",
+        "swift",
+        "swiftui",
+        "zsh"
+      ],
+      "latest_version": "v1.1.1",
+      "release_url": "https://github.com/joeystdio/envy/releases/tag/v1.1.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-joeystdio-envy-v1.1.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-joeystdio-envy-v1.1.1/THIRD-PARTY-NOTICE-joeystdio-envy.txt",
+      "artifacts": [
+        {
+          "id": "1da91bac747b16f2f690c53d01e85e3dd959da740181db823cfffad45e0a3d0a",
+          "filename": "Envy-Setup.exe",
+          "original_filename": "Envy-Setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.1.1",
+          "size_bytes": 66609659,
+          "sha256": "1da91bac747b16f2f690c53d01e85e3dd959da740181db823cfffad45e0a3d0a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-joeystdio-envy-v1.1.1/Envy-Setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-joeystdio-envy-v1.1.1"
+        },
+        {
+          "id": "511a41d47a179779fb0a537ade890bab25a63f0f0d51a00dbdb479e96c0b2ec2",
+          "filename": "Envy.dmg",
+          "original_filename": "Envy.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": null,
+          "version": "v1.1.1",
+          "size_bytes": 2910073,
+          "sha256": "511a41d47a179779fb0a537ade890bab25a63f0f0d51a00dbdb479e96c0b2ec2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-joeystdio-envy-v1.1.1/Envy.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-joeystdio-envy-v1.1.1"
+        }
+      ],
+      "platforms": [
         "macos",
         "windows"
       ]
