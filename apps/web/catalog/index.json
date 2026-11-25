@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T20:17:19.872123+00:00",
+  "generated_at": "2026-11-25T20:22:23.602395+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -2734,6 +2734,82 @@
           "signer_certificate_sha256": "65fc4e00b82d890cb2ba858abf19723e477b7c906d1f3715a4aad1255f66fafb",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-claudepc42-audiobookshelf-app-cloudflare-zero-trust-v13.1/audiobookshelf-CFZT-v13.1.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-claudepc42-audiobookshelf-app-cloudflare-zero-trust-v13.1"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "juanvillacortac-audiofilus",
+      "slug": "juanvillacortac-audiofilus",
+      "name": "audiofilus",
+      "summary": "Pixel-art music player for Linux handhelds. The music keeps playing while you game.",
+      "description": "Pixel-art music player for Linux handhelds. The music keeps playing while you game.",
+      "translations": {
+        "en": {
+          "summary": "Pixel-art music player for Linux handhelds. The music keeps playing while you game.",
+          "description": "Pixel-art music player for Linux handhelds. The music keeps playing while you game."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/juanvillacortac/audiofilus/main/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/juanvillacortac/audiofilus",
+      "github_repo_id": "1424894378",
+      "source_updated_at": "2026-11-25T12:30:12Z",
+      "homepage_url": "https://juanvillacortac.github.io/audiofilus/",
+      "owner": "juanvillacortac",
+      "default_branch": "main",
+      "source_commit_sha": "1e71cbfb223a1e24a86400b0d1d6be52cdbe5cff",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Juan Villacorta\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "android-app",
+        "audiobook-player",
+        "ebitengine",
+        "golang",
+        "handheld",
+        "ios-app",
+        "knulli",
+        "mp3-player",
+        "muos",
+        "music-player",
+        "pixel-art",
+        "portmaster",
+        "radio",
+        "rocknix"
+      ],
+      "latest_version": "v0.24.2",
+      "release_url": "https://github.com/juanvillacortac/audiofilus/releases/tag/v0.24.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-juanvillacortac-audiofilus-v0.24.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-juanvillacortac-audiofilus-v0.24.2/THIRD-PARTY-NOTICE-juanvillacortac-audiofilus.txt",
+      "artifacts": [
+        {
+          "id": "ea25b3053c06a57308db01522ed308c56b116a140e88f96a77b4e6fea3378f89",
+          "filename": "audiofilus.apk",
+          "original_filename": "audiofilus.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.24.2",
+          "size_bytes": 73221124,
+          "sha256": "ea25b3053c06a57308db01522ed308c56b116a140e88f96a77b4e6fea3378f89",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "166b689958f1495dd0a803bc1e8e5a9d35fbc3be7d6836cb75d051e4aed38b85",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-juanvillacortac-audiofilus-v0.24.2/audiofilus.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-juanvillacortac-audiofilus-v0.24.2"
         }
       ],
       "platforms": [
