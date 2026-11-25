@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:19:29.946166+00:00",
+  "generated_at": "2026-11-25T22:24:02.544646+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -10722,6 +10722,82 @@
           "signer_certificate_sha256": "fe387b283d579cc985bf0edbe2fb1661604895cd58cce01b486a7cbe9bff70e1",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-huanmeng692-deepseek-android-v1.0.2/DeepSeek-Android-1.0.2-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-huanmeng692-deepseek-android-v1.0.2"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "xlicz-deepseek-chat",
+      "slug": "xlicz-deepseek-chat",
+      "name": "deepseek-chat",
+      "summary": "Rosie：非官方的 DeepSeek 安卓客户端，把官方开源的 chat-demo 网页版打包成 APK（Capacitor + WebView），直连 DeepSeek API，无中转。Unofficial DeepSeek Android client.",
+      "description": "Rosie：非官方的 DeepSeek 安卓客户端，把官方开源的 chat-demo 网页版打包成 APK（Capacitor + WebView），直连 DeepSeek API，无中转。Unofficial DeepSeek Android client.",
+      "translations": {
+        "en": {
+          "summary": "Rosie：非官方的 DeepSeek 安卓客户端，把官方开源的 chat-demo 网页版打包成 APK（Capacitor + WebView），直连 DeepSeek API，无中转。Unofficial DeepSeek Android client.",
+          "description": "Rosie：非官方的 DeepSeek 安卓客户端，把官方开源的 chat-demo 网页版打包成 APK（Capacitor + WebView），直连 DeepSeek API，无中转。Unofficial DeepSeek Android client."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/xlicz/deepseek-chat/main/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/xlicz/deepseek-chat",
+      "github_repo_id": "1461212037",
+      "source_updated_at": "2026-11-23T17:56:06Z",
+      "homepage_url": "https://xlicz.github.io/deepseek-chat/",
+      "owner": "xlicz",
+      "default_branch": "main",
+      "source_commit_sha": "2cc8d672cde43ac8800da11ab0db60ae970d5261",
+      "license_text": "MIT License\n\nCopyright (c) 2026 deepseek-chat contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "ai",
+      "topics": [
+        "ai-chat",
+        "android",
+        "android-app",
+        "android-client",
+        "apk",
+        "capacitor",
+        "chatbot",
+        "deepseek",
+        "deepseek-api",
+        "deepseek-chat",
+        "java",
+        "llm",
+        "unofficial",
+        "webview"
+      ],
+      "latest_version": "v0.1.12",
+      "release_url": "https://github.com/xlicz/deepseek-chat/releases/tag/v0.1.12",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-xlicz-deepseek-chat-v0.1.12",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-xlicz-deepseek-chat-v0.1.12/THIRD-PARTY-NOTICE-xlicz-deepseek-chat.txt",
+      "artifacts": [
+        {
+          "id": "71554d0937276f682bc8fc6e4b2b3738c25841e670e13de9824ed57471d0de78",
+          "filename": "deepseek-chat-0.1.12.apk",
+          "original_filename": "deepseek-chat-0.1.12.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.1.12",
+          "size_bytes": 5585978,
+          "sha256": "71554d0937276f682bc8fc6e4b2b3738c25841e670e13de9824ed57471d0de78",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "0f275873e49f18f35d9d76e169924f12be3b00ec8e69b7ad09a6ad0d84a8ca01",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-xlicz-deepseek-chat-v0.1.12/deepseek-chat-0.1.12.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-xlicz-deepseek-chat-v0.1.12"
         }
       ],
       "platforms": [
