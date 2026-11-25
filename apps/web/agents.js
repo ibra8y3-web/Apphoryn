@@ -61,9 +61,16 @@
   function renderProviders(payload) {
     const providers = payload?.providers || [];
     $("spendingBanner").textContent = "حماية الإنفاق: "+(payload.spending_protection_enabled ? "مفعّلة — الطلبات المدفوعة ممنوعة" : "معطّلة — يجب مراجعة إعدادات الفوترة");
+    if($("benchmarkModels"))$("benchmarkModels").disabled=false;
     $("providersList").innerHTML = providers.map(item => {
       const status = item.enabled && item.models_discovered ? "available" : (!item.configured ? "not_configured" : item.enabled ? "unavailable" : "paused");
-      const names = (payload.models||[]).filter(m=>m.provider===item.provider).slice(0,12).map(m=>'<span class="model-chip">'+esc(m.model)+'</span>').join("");
+      const names = (payload.models||[]).filter(m=>m.provider===item.provider).slice(0,12).map(m=>{
+        const stats=(payload.model_metrics||[]).find(row=>row.provider===m.provider&&row.model===m.model);
+        const evaluation=(payload.model_evaluations||[]).find(row=>row.provider===m.provider&&row.model===m.model&&row.task_type==="general");
+        const quality=evaluation&&evaluation.average_score!=null?" · score "+Math.round(evaluation.average_score*100)+"%":"";
+        const latency=stats&&stats.average_latency_ms!=null?" · "+Math.round(stats.average_latency_ms)+"ms":"";
+        return '<span class="model-chip">'+esc(m.model)+esc(quality)+esc(latency)+'</span>';
+      }).join("");
       const metric = (payload.metrics||[]).find(row=>row.provider===item.provider);
       const telemetry = metric ? '<p class="tiny">طلبات مسجلة: '+Number(metric.requests||0)+' · نجاح: '+Number(metric.successes||0)+' · متوسط الاستجابة: '+(metric.average_latency_ms==null?"—":Math.round(metric.average_latency_ms)+" ms")+'</p>' : '<p class="tiny">لا توجد طلبات مسجلة بعد.</p>';
       return '<article class="provider-row"><div class="provider-head"><strong>'+esc(item.provider)+'</strong>'+stateTag(status)+'</div><p>'+esc(item.note||"")+'</p><div class="provider-models">'+names+'</div>'+telemetry+'<div class="form-row"><span class="tiny">نماذج مكتشفة: '+Number(item.models_discovered||0)+'</span><button class="secondary provider-test" data-provider="'+esc(item.provider)+'">اختبار فعلي</button></div></article>';
@@ -78,6 +85,14 @@
       finally { button.disabled=false; }
     }));
   }
+
+  function renderBenchmark(result) {
+    const rows=result?.results||[];
+    $("benchmarkResults").innerHTML = '<p class="notice">اختبار مجاني ومحلي فقط · النماذج المدفوعة التي تم اختبارها: '+Number(result?.paid_models_tested||0)+'</p>' +
+      (rows.map(row=>'<article class="provider-row"><div class="provider-head"><strong>'+esc(row.provider)+' / '+esc(row.model)+'</strong><span class="state">'+Math.round(Number(row.score||0)*100)+'%</span></div><p>متوسط الاستجابة: '+Number(row.average_latency_ms||0)+' ms · عدد الطلبات: '+Number(row.requests_sent||0)+'</p><div class="tag-list">'+Object.entries(row.checks||{}).map(([name,passed])=>'<span class="tag">'+esc(name)+': '+(passed?'نجح':'لم ينجح')+'</span>').join('')+'</div></article>').join('') || '<p class="muted">لا توجد نماذج مجانية أو محلية متاحة للاختبار.</p>')+
+      '<p class="tiny">'+esc(result?.note||'')+'</p>';
+  }
+
   function renderRuns(items) {
     $("runsList").innerHTML = (items||[]).map(run => '<article class="run-row"><div class="run-head"><b>'+esc(run.goal.slice(0,100))+'</b>'+stateTag(run.status)+'</div><p>'+esc(run.id)+' · '+esc(new Date(run.created_at).toLocaleString())+'</p><div class="run-head"><span class="tiny">الأولوية '+Number(run.priority)+'</span><button class="secondary open-run" data-id="'+esc(run.id)+'">تفاصيل</button></div>'+(run.last_error?'<p class="tiny">'+esc(run.last_error)+'</p>':'')+'</article>').join("") || '<p class="muted">لا توجد مهام مسجلة.</p>';
     $("runsList").querySelectorAll(".open-run").forEach(button => button.addEventListener("click",()=>loadRun(button.dataset.id)));
@@ -110,7 +125,7 @@
     $("runsCompleted").textContent=counts.runs_completed??0;
     $("memoryCount").textContent=counts.memory_records??0;
     renderAgents(data.agents,data.agent_activity); renderMemories(data.memories); renderWorkers(data.workers);
-    renderProviders({...data.providers,metrics:data.provider_metrics}); renderResources(data.resources);
+    renderProviders({...data.providers,metrics:data.provider_metrics,model_metrics:data.model_metrics,model_evaluations:data.model_evaluations}); renderResources(data.resources);
     renderAnalytics(data.analytics); renderRuns(data.runs); renderSchedules(data.schedules);
     $("connectionStatus").textContent="متصل بالـBackend. تم تحديث البيانات: "+new Date().toLocaleTimeString();
     $("refreshProviders").disabled=false; $("refreshAll").disabled=false;
@@ -146,6 +161,18 @@
   });
 
   $("connectButton").addEventListener("click",connect);
+
+  $("benchmarkModels").addEventListener("click",async()=>{
+    const button=$("benchmarkModels");
+    button.disabled=true;button.textContent="جارٍ تقييم النماذج...";
+    try{
+      const result=await api("/providers/benchmark","POST");
+      renderBenchmark(result);
+      await refresh();
+    }catch(error){$("benchmarkResults").textContent=error.message;}
+    finally{button.disabled=false;button.textContent="تقييم النماذج المجانية والمحلية";}
+  });
+
   $("refreshAll").addEventListener("click",()=>refresh().catch(error=>alert(error.message)));
   $("refreshProviders").addEventListener("click",async()=>{
     try{const result=await api("/providers/refresh","POST");renderProviders(result);}
