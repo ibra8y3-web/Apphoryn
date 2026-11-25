@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:39:02.894698+00:00",
+  "generated_at": "2026-11-25T09:39:22.793296+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -3039,6 +3039,80 @@
       ],
       "platforms": [
         "windows"
+      ]
+    },
+    {
+      "id": "isaaclins-freesnitch",
+      "slug": "isaaclins-freesnitch",
+      "name": "freesnitch",
+      "summary": "Native macOS application firewall with per-process filtering, connection alerts, traffic map, rules, DNS over HTTPS, and zero telemetry.",
+      "description": "Native macOS application firewall with per-process filtering, connection alerts, traffic map, rules, DNS over HTTPS, and zero telemetry.",
+      "translations": {
+        "en": {
+          "summary": "Native macOS application firewall with per-process filtering, connection alerts, traffic map, rules, DNS over HTTPS, and zero telemetry.",
+          "description": "Native macOS application firewall with per-process filtering, connection alerts, traffic map, rules, DNS over HTTPS, and zero telemetry."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/isaaclins/freesnitch/main/Resources/Assets.xcassets/AppIcon.appiconset/icon_16x16.png",
+      "repository_url": "https://github.com/isaaclins/freesnitch",
+      "github_repo_id": "1331823350",
+      "source_updated_at": "2026-11-25T04:36:46Z",
+      "homepage_url": "https://isaaclins.com/freesnitch/",
+      "owner": "isaaclins",
+      "default_branch": "main",
+      "source_commit_sha": "fd462f6b8416e8c8c3e671770169e089997479dc",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Moamen Basel\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "dns-over-https",
+        "firewall",
+        "little-snitch-alternative",
+        "macos",
+        "macos-app",
+        "network-extension",
+        "network-monitor",
+        "open-source",
+        "outbound-firewall",
+        "privacy",
+        "swift",
+        "swiftui"
+      ],
+      "latest_version": "v1.5.0",
+      "release_url": "https://github.com/isaaclins/freesnitch/releases/tag/v1.5.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-isaaclins-freesnitch-v1.5.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-isaaclins-freesnitch-v1.5.0/THIRD-PARTY-NOTICE-isaaclins-freesnitch.txt",
+      "artifacts": [
+        {
+          "id": "054001910b072e96c24fc28ec4b9ebcb3829919d77ada00e56d146018ba19e40",
+          "filename": "FreeSnitch-1.5.0.dmg",
+          "original_filename": "FreeSnitch-1.5.0.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": null,
+          "version": "v1.5.0",
+          "size_bytes": 16924924,
+          "sha256": "054001910b072e96c24fc28ec4b9ebcb3829919d77ada00e56d146018ba19e40",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-isaaclins-freesnitch-v1.5.0/FreeSnitch-1.5.0.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-isaaclins-freesnitch-v1.5.0"
+        }
+      ],
+      "platforms": [
+        "macos"
       ]
     },
     {
