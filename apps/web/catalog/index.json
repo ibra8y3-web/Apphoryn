@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:36:56.055783+00:00",
+  "generated_at": "2026-11-25T22:37:31.009881+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -26226,6 +26226,111 @@
       ],
       "platforms": [
         "macos"
+      ]
+    },
+    {
+      "id": "lexianlix-manxia",
+      "slug": "lexianlix-manxia",
+      "name": "manxia",
+      "summary": "漫匣：以实体书质感为核心的 Flutter 漫画阅读器，默认动漫屋。",
+      "description": "漫匣：以实体书质感为核心的 Flutter 漫画阅读器，默认动漫屋。",
+      "translations": {
+        "en": {
+          "summary": "漫匣：以实体书质感为核心的 Flutter 漫画阅读器，默认动漫屋。",
+          "description": "漫匣：以实体书质感为核心的 Flutter 漫画阅读器，默认动漫屋。"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/LexianLix/manxia/main/assets/branding/icon.png",
+      "repository_url": "https://github.com/LexianLix/manxia",
+      "github_repo_id": "1426552997",
+      "source_updated_at": "2026-11-24T08:39:26Z",
+      "homepage_url": null,
+      "owner": "LexianLix",
+      "default_branch": "main",
+      "source_commit_sha": "02bee0d6d911adfbb921d6dabf3ed40d691873a6",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Manxia contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "comic-reader",
+        "dart",
+        "flutter",
+        "hacktoberfest",
+        "manga",
+        "manga-reader",
+        "open-source"
+      ],
+      "latest_version": "v0.5.9",
+      "release_url": "https://github.com/LexianLix/manxia/releases/tag/v0.5.9",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lexianlix-manxia-v0.5.9",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lexianlix-manxia-v0.5.9/THIRD-PARTY-NOTICE-lexianlix-manxia.txt",
+      "artifacts": [
+        {
+          "id": "5c9a964e788a734dd9d4ac49f637d2f39bb89076b0d39d2403a0c5df08bf7413",
+          "filename": "Manxia-0.5.9-arm64-v8a.apk",
+          "original_filename": "Manxia-0.5.9-arm64-v8a.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v0.5.9",
+          "size_bytes": 39872343,
+          "sha256": "5c9a964e788a734dd9d4ac49f637d2f39bb89076b0d39d2403a0c5df08bf7413",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "9618d4bb9b8ce8045c502c79fea0b8c2eb4d14f0a6ccb380cf22ac2bccdbc091",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lexianlix-manxia-v0.5.9/Manxia-0.5.9-arm64-v8a.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lexianlix-manxia-v0.5.9"
+        },
+        {
+          "id": "12d08799a37b06ef2da5666d265bedc65669460185e024668cd3dbad19fc9373",
+          "filename": "Manxia-0.5.9-armeabi-v7a.apk",
+          "original_filename": "Manxia-0.5.9-armeabi-v7a.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.5.9",
+          "size_bytes": 37885791,
+          "sha256": "12d08799a37b06ef2da5666d265bedc65669460185e024668cd3dbad19fc9373",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "9618d4bb9b8ce8045c502c79fea0b8c2eb4d14f0a6ccb380cf22ac2bccdbc091",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lexianlix-manxia-v0.5.9/Manxia-0.5.9-armeabi-v7a.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lexianlix-manxia-v0.5.9"
+        },
+        {
+          "id": "90c07bffae22d4c03cdb115228a4f9af63a05c7107123e8d952d07d29bf532e1",
+          "filename": "Manxia-0.5.9-x86_64.apk",
+          "original_filename": "Manxia-0.5.9-x86_64.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "x86_64",
+          "version": "v0.5.9",
+          "size_bytes": 41420619,
+          "sha256": "90c07bffae22d4c03cdb115228a4f9af63a05c7107123e8d952d07d29bf532e1",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "9618d4bb9b8ce8045c502c79fea0b8c2eb4d14f0a6ccb380cf22ac2bccdbc091",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lexianlix-manxia-v0.5.9/Manxia-0.5.9-x86_64.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lexianlix-manxia-v0.5.9"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
