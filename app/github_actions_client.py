@@ -18,13 +18,20 @@ class GitHubActionsBridgeError(RuntimeError):
     """Raised when the ephemeral OIDC-to-Railway bridge cannot be used safely."""
 
 
+def _trusted_oidc_request_host(hostname: str | None) -> bool:
+    host = (hostname or "").rstrip(".").lower()
+    # GitHub regional OIDC endpoints use names such as
+    # pipelinesghubeus6.actions.githubusercontent.com.
+    return host == "actions.githubusercontent.com" or host.endswith(".actions.githubusercontent.com")
+
+
 def _request_actions_oidc_token() -> str:
     request_url = os.getenv("ACTIONS_ID_TOKEN_REQUEST_URL", "").strip()
     request_secret = os.getenv("ACTIONS_ID_TOKEN_REQUEST_TOKEN", "").strip()
     if not request_url or not request_secret:
         raise GitHubActionsBridgeError("GitHub Actions OIDC permission is unavailable.")
     parsed = urllib.parse.urlsplit(request_url)
-    if parsed.scheme != "https" or parsed.hostname != OIDC_HOST or parsed.username or parsed.password:
+    if parsed.scheme != "https" or not _trusted_oidc_request_host(parsed.hostname) or parsed.username or parsed.password:
         raise GitHubActionsBridgeError("GitHub Actions returned an untrusted OIDC URL.")
     query = [(key, value) for key, value in urllib.parse.parse_qsl(parsed.query, keep_blank_values=True)
              if key != "audience"]
