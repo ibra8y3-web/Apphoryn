@@ -127,3 +127,35 @@ Android clients install signed APKs and supported XAPK split bundles; XAPK files
 
 
 Unsigned source-built Android release packages are never published as installable apps. To enable automatic publication of source-built APKs that are not already signed upstream, configure a persistent Apphoryn Android keystore in GitHub Actions secrets; those credentials are exposed only to the trusted publisher stage, never to untrusted source builds.
+
+## Niebex AI workforce (additive backend module)
+
+The AI workforce is an additional service layer. It does not replace the store catalogue, release importer, package verifier, or existing build workflows.
+
+- **Niebex** creates a task plan and delegates work to ten named specialist agents. The Supervisor reviews the returned evidence.
+- The durable queue, run/task history, shared memory, schedules, worker heartbeats and model-request telemetry live in a separate SQLite database: `storage/agent-workforce.sqlite3`. Keep the existing `storage` volume mounted when deploying or upgrading.
+- FastAPI starts background workers at service startup. Set `APPHORYN_AGENT_WORKERS` from 1 to 4 to control local worker concurrency. These workers run while the backend process is running; GitHub Actions Scout remains a separate scheduled workflow.
+- The dashboard is available at `/agents.html`. It calls protected endpoints under `/api/v1/admin/agents` and requires the existing `APPHORYN_ADMIN_TOKEN` in the request header. The dashboard does not write the token to browser storage.
+- Current allowlisted tools perform real GitHub repository discovery, repository/latest-release inspection, safe repository-file reads, local package validation, approved imports and approved isolated build dispatches. Each tool result is stored separately from the agent's generated analysis.
+- Importing or dispatching a build requires checking **external action approval** for that task. Scheduled tasks always run with external actions disabled. The approval does not authorize paid model usage.
+- The Software Engineer agent can inspect source files and propose code changes in this release; it does not yet commit code changes to upstream repositories. Broad web research, direct F-Droid/Flathub ingestion, model-quality benchmarks, and full provider billing/quota telemetry are not claimed as implemented.
+
+### AI provider credentials and spending safeguards
+
+Add only the credentials you actually use to the backend deployment environment and, when using Scout-generated provider reports, to repository **Settings → Secrets and variables → Actions → Secrets**:
+
+- `GEMINI_API_KEY`
+- `GROQ_API_KEY`
+- `OPENROUTER_API_KEY`
+- `COMET_API_KEY`
+- `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`
+- `XAI_API_KEY` for xAI Grok (this is not the same company as Groq)
+
+Gemini and Groq are deliberately paused in free-only mode until you confirm that both provider accounts are on their free tiers. Only after checking each provider's billing console, set the Actions variable `APPHORYN_AI_CONFIRM_GEMINI_GROQ_FREE_TIER=true`. This is a safety assertion; it is not a live quota check.
+
+xAI's Grok API is usage-billed. It is disabled by default. To authorize that paid provider, set the `XAI_API_KEY` secret and the variables `APPHORYN_AI_ENABLE_XAI=true`, `APPHORYN_AI_FREE_ONLY=false`, and `APPHORYN_AI_ALLOW_PAID_REQUESTS=true`. The last two settings are an explicit global paid-traffic authorization and can enable paid requests from other configured providers too. Leave them false unless you approve that broader exposure.
+
+The provider dashboard can refresh model discovery and send a minimal real test request to one configured provider. The APIs do not consistently expose remaining free quota or account-level billing plan, so Apphoryn records observed request counts, success and response latency without inventing quota or cost figures.
+
+For a self-hosted backend, copy the same variables into `.env`. Keep provider keys server-side; never put them in `apps/web`, browser JavaScript, public catalog JSON, or the build jobs that execute third-party source code.
+
