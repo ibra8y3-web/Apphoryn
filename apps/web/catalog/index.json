@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:07:22.442627+00:00",
+  "generated_at": "2026-11-25T04:07:25.844824+00:00",
   "apps": [
     {
       "id": "defunkt-ambition",
@@ -652,6 +652,45 @@
       "default_branch": "master",
       "source_commit_sha": "48359daa1e01c47f1d7b5f37441742123d395e11",
       "license_text": "Copyright (c) 2008 James Golick\n\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the \"Software\"), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "category": "other",
+      "topics": [],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "jnicklas-rorem",
+      "slug": "jnicklas-rorem",
+      "artifacts": [],
+      "name": "rorem",
+      "summary": "Rorem is a random data generator",
+      "description": "Rorem is a random data generator",
+      "translations": {
+        "en": {
+          "summary": "Rorem is a random data generator",
+          "description": "Rorem is a random data generator"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/134?v=4",
+      "repository_url": "https://github.com/jnicklas/rorem",
+      "github_repo_id": "248",
+      "source_updated_at": "2026-06-30T12:07:33Z",
+      "homepage_url": "http://rorem.rubyforge.org/",
+      "owner": "jnicklas",
+      "default_branch": "master",
+      "source_commit_sha": "497f8f7427154aa659f0944b198be4cc3340b3f8",
+      "license_text": "Copyright (c) 2008 Jonas Nicklas\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
       "license_spdx": "MIT",
       "license_eligible": true,
       "project_kind": "unknown",
