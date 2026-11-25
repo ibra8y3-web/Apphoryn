@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:10:50.837238+00:00",
+  "generated_at": "2026-11-25T19:11:19.190464+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -24699,6 +24699,101 @@
           "signer_certificate_sha256": "e0581bab0b930b179396e13008aa08509cdcd1ee38f7ae54102fc3cf93256a9d",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-vivizzz007-vivi-music-v7.0.3/vivi.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-vivizzz007-vivi-music-v7.0.3"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "thoser666-vivid",
+      "slug": "thoser666-vivid",
+      "name": "Vivid",
+      "summary": "Android version of the open-source Moblin IRL streaming app. Vivid lets you broadcast high-quality live video to platforms like Twitch, YouTube, Facebook, Kick or your own SRT server, with advanced features like multi-network bonding, OBS W",
+      "description": "Android version of the open-source Moblin IRL streaming app. Vivid lets you broadcast high-quality live video to platforms like Twitch, YouTube, Facebook, Kick or your own SRT server, with advanced features like multi-network bonding, OBS WebSocket control, configurable overlays, and full I18n support.",
+      "translations": {
+        "en": {
+          "summary": "Android version of the open-source Moblin IRL streaming app. Vivid lets you broadcast high-quality live video to platforms like Twitch, YouTube, Facebook, Kick or your own SRT server, with advanced features like multi-network bonding, OBS W",
+          "description": "Android version of the open-source Moblin IRL streaming app. Vivid lets you broadcast high-quality live video to platforms like Twitch, YouTube, Facebook, Kick or your own SRT server, with advanced features like multi-network bonding, OBS WebSocket control, configurable overlays, and full I18n support."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/thoser666/Vivid/develop/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/thoser666/Vivid",
+      "github_repo_id": "1037200742",
+      "source_updated_at": "2026-11-23T07:35:39Z",
+      "homepage_url": "https://thoser666.github.io/Vivid/",
+      "owner": "thoser666",
+      "default_branch": "develop",
+      "source_commit_sha": "5d249d4e3824907115f0b5da5f1fbc366dff009b",
+      "license_text": "MIT License\n\nCopyright (c) 2025-2026 thoser666\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android",
+        "android-app",
+        "fdroid",
+        "hilt",
+        "irl-streaming",
+        "jetpack-compose",
+        "kotlin",
+        "livestreaming",
+        "moblin",
+        "multi-camera",
+        "obs-websocket",
+        "rtmp",
+        "srt",
+        "streaming",
+        "twitch",
+        "video-streaming"
+      ],
+      "latest_version": "v0.5.49-beta",
+      "release_url": "https://github.com/thoser666/Vivid/releases/tag/v0.5.49-beta",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-thoser666-vivid-v0.5.49-beta",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-thoser666-vivid-v0.5.49-beta/THIRD-PARTY-NOTICE-thoser666-vivid.txt",
+      "artifacts": [
+        {
+          "id": "c4583fbdc4c91bb381351b165aa4733bdf9689a59e2f58fff86af59db37fe08a",
+          "filename": "app-foss-release.apk",
+          "original_filename": "app-foss-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.5.49-beta",
+          "size_bytes": 64791072,
+          "sha256": "c4583fbdc4c91bb381351b165aa4733bdf9689a59e2f58fff86af59db37fe08a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "b31b8119bd065cdb7a51ad2ee7f71f17f1eb154e2a7c3007de644b4c14d6a85e",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-thoser666-vivid-v0.5.49-beta/app-foss-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-thoser666-vivid-v0.5.49-beta"
+        },
+        {
+          "id": "d54fff8f591f3da931b6f36f73373e661247b91bb4c92c88a99ab9c59499068c",
+          "filename": "app-standard-release.apk",
+          "original_filename": "app-standard-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.5.49-beta",
+          "size_bytes": 64791072,
+          "sha256": "d54fff8f591f3da931b6f36f73373e661247b91bb4c92c88a99ab9c59499068c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "b31b8119bd065cdb7a51ad2ee7f71f17f1eb154e2a7c3007de644b4c14d6a85e",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-thoser666-vivid-v0.5.49-beta/app-standard-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-thoser666-vivid-v0.5.49-beta"
         }
       ],
       "platforms": [
