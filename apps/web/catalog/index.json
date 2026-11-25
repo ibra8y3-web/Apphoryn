@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T20:05:48.208541+00:00",
+  "generated_at": "2026-11-25T20:06:20.567889+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -18393,6 +18393,87 @@
       ],
       "platforms": [
         "windows"
+      ]
+    },
+    {
+      "id": "1window2-medbuddy",
+      "slug": "1window2-medbuddy",
+      "name": "MedBuddy",
+      "summary": "MedBuddy is a AI-powered medication management system digitizing prescriptions via OCR and LLM for patient safety",
+      "description": "MedBuddy is a AI-powered medication management system digitizing prescriptions via OCR and LLM for patient safety",
+      "translations": {
+        "en": {
+          "summary": "MedBuddy is a AI-powered medication management system digitizing prescriptions via OCR and LLM for patient safety",
+          "description": "MedBuddy is a AI-powered medication management system digitizing prescriptions via OCR and LLM for patient safety"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/1window2/MedBuddy/main/frontend/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/1window2/MedBuddy",
+      "github_repo_id": "1185087279",
+      "source_updated_at": "2026-11-24T12:20:35Z",
+      "homepage_url": null,
+      "owner": "1window2",
+      "default_branch": "main",
+      "source_commit_sha": "96d005bcddfbd8f9b0fbdf7cd9d1d856cf531e4d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 1window2\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "system",
+      "topics": [
+        "android-app",
+        "medical-app"
+      ],
+      "latest_version": "v1.0.1",
+      "release_url": "https://github.com/1window2/MedBuddy/releases/tag/v1.0.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-1window2-medbuddy-v1.0.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-1window2-medbuddy-v1.0.1/THIRD-PARTY-NOTICE-1window2-medbuddy.txt",
+      "artifacts": [
+        {
+          "id": "28322905287e34f0c69d82f5061c51cc59f09d5c519b295df48a883d694921cf",
+          "filename": "MedBuddy-v1.0.1-arm32.apk",
+          "original_filename": "MedBuddy-v1.0.1-arm32.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm32",
+          "version": "v1.0.1",
+          "size_bytes": 55364135,
+          "sha256": "28322905287e34f0c69d82f5061c51cc59f09d5c519b295df48a883d694921cf",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "641797138357ebfb02fd637cf2409ddb7c9825785205ce66dffeef80a2bb763a",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-1window2-medbuddy-v1.0.1/MedBuddy-v1.0.1-arm32.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-1window2-medbuddy-v1.0.1"
+        },
+        {
+          "id": "ef29b3b5a40917f7a6876b75a36f55d0889562cd3571bc1c822e6ef8304cc287",
+          "filename": "MedBuddy-v1.0.1-arm64.apk",
+          "original_filename": "MedBuddy-v1.0.1-arm64.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v1.0.1",
+          "size_bytes": 67112883,
+          "sha256": "ef29b3b5a40917f7a6876b75a36f55d0889562cd3571bc1c822e6ef8304cc287",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "641797138357ebfb02fd637cf2409ddb7c9825785205ce66dffeef80a2bb763a",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-1window2-medbuddy-v1.0.1/MedBuddy-v1.0.1-arm64.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-1window2-medbuddy-v1.0.1"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
