@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:33:18.220393+00:00",
+  "generated_at": "2026-11-25T19:33:31.917111+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -28220,6 +28220,71 @@
           "signer_certificate_sha256": "af5524cd554ae6ede3ec2747c7bed159b09bc4f6a43244a68b4622e9463225c8",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wlmosv-png-wpaforge-v1.9.70/WPAForge-1.9.70-166.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wlmosv-png-wpaforge-v1.9.70"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "iamvivekkaushik-wrtpulse",
+      "slug": "iamvivekkaushik-wrtpulse",
+      "name": "WrtPulse",
+      "summary": "An Android app for managing OpenWrt routers over SSH.",
+      "description": "An Android app for managing OpenWrt routers over SSH.",
+      "translations": {
+        "en": {
+          "summary": "An Android app for managing OpenWrt routers over SSH.",
+          "description": "An Android app for managing OpenWrt routers over SSH."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/iamvivekkaushik/WrtPulse/master/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/iamvivekkaushik/WrtPulse",
+      "github_repo_id": "1350863478",
+      "source_updated_at": "2026-11-11T07:03:29Z",
+      "homepage_url": "http://wrtpulse.vivekkaushik.com/",
+      "owner": "iamvivekkaushik",
+      "default_branch": "master",
+      "source_commit_sha": "2af4e7b96732dbd7fb15cd4a905a449ff611eaea",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Vivek Kumar\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "openwrt"
+      ],
+      "latest_version": "v1.10",
+      "release_url": "https://github.com/iamvivekkaushik/WrtPulse/releases/tag/v1.10",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-iamvivekkaushik-wrtpulse-v1.10",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-iamvivekkaushik-wrtpulse-v1.10/THIRD-PARTY-NOTICE-iamvivekkaushik-wrtpulse.txt",
+      "artifacts": [
+        {
+          "id": "ee83c2c1c7dcef628e117de8f489a8927b6c33005d712959d16c249f71d56cf5",
+          "filename": "app-release.apk",
+          "original_filename": "app-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.10",
+          "size_bytes": 6608013,
+          "sha256": "ee83c2c1c7dcef628e117de8f489a8927b6c33005d712959d16c249f71d56cf5",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "6ceb19b432324278cbd399d49b24ec916c99e49994a72be43c6ee8f9dadd3bd9",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-iamvivekkaushik-wrtpulse-v1.10/app-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-iamvivekkaushik-wrtpulse-v1.10"
         }
       ],
       "platforms": [
