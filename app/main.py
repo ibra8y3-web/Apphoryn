@@ -250,7 +250,7 @@ def record_public_analytics_event(payload: PublicAnalyticsEvent, request: Reques
 
 
 @app.get("/api/v1/discovery/search")
-def discovery_search(q: str = Query(..., min_length=2, max_length=120), limit: int = Query(20, ge=1, le=50)):
+def discovery_search(q: str = Query(..., min_length=2, max_length=120), limit: int = Query(100, ge=1, le=100)):
     try:
         items = catalog.discover(q, limit)
         analytics.record_search(q, len(items), source="github")

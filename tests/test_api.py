@@ -77,7 +77,23 @@ class ApiSmokeTests(unittest.TestCase):
         response = self.client.get("/api/v1/discovery/search", params={"q": "topic:opensource"})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()["items"], [])
-        discover.assert_called_once()
+        discover.assert_called_once_with("topic:opensource", 100)
+
+    @patch("app.main.catalog.discover", return_value=[])
+    def test_discovery_endpoint_accepts_full_github_search_page(self, discover):
+        response = self.client.get(
+            "/api/v1/discovery/search",
+            params={"q": "topic:opensource", "limit": 100},
+        )
+        self.assertEqual(response.status_code, 200)
+        discover.assert_called_once_with("topic:opensource", 100)
+
+    def test_discovery_endpoint_rejects_more_than_github_page_size(self):
+        response = self.client.get(
+            "/api/v1/discovery/search",
+            params={"q": "topic:opensource", "limit": 101},
+        )
+        self.assertEqual(response.status_code, 422)
 
 
 if __name__ == "__main__":
