@@ -11879,6 +11879,14 @@
             "windows"
           ],
           "requested_at": "2026-11-25T04:24:08.790689+00:00"
+        },
+        {
+          "git_ref": "c6c8d70bbb06bce32d0bc36b947aafa416566343",
+          "targets": [
+            "linux"
+          ],
+          "requested_at": "2026-11-25T17:41:40.632105+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ]
     },
