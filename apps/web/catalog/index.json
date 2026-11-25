@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T20:53:33.869137+00:00",
+  "generated_at": "2026-11-25T20:53:57.747315+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -14783,6 +14783,106 @@
       "platforms": [
         "android",
         "linux"
+      ]
+    },
+    {
+      "id": "jaypsmall-hexrootfuzz",
+      "slug": "jaypsmall-hexrootfuzz",
+      "name": "HexRootFuzz",
+      "summary": "😈 HEX ROOT FUZZ Apk es una aplicación para Android diseñada para simplificar el reconocimiento web y las evaluaciones de seguridad a través de una interfaz gráfica intuitiva.",
+      "description": "😈 HEX ROOT FUZZ Apk es una aplicación para Android diseñada para simplificar el reconocimiento web y las evaluaciones de seguridad a través de una interfaz gráfica intuitiva.",
+      "translations": {
+        "en": {
+          "summary": "😈 HEX ROOT FUZZ Apk es una aplicación para Android diseñada para simplificar el reconocimiento web y las evaluaciones de seguridad a través de una interfaz gráfica intuitiva.",
+          "description": "😈 HEX ROOT FUZZ Apk es una aplicación para Android diseñada para simplificar el reconocimiento web y las evaluaciones de seguridad a través de una interfaz gráfica intuitiva."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Jaypsmall/HexRootFuzz/master/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/Jaypsmall/HexRootFuzz",
+      "github_repo_id": "1323354938",
+      "source_updated_at": "2026-11-11T23:43:29Z",
+      "homepage_url": "https://jaypsmall.github.io/HexRootFuzz/",
+      "owner": "Jaypsmall",
+      "default_branch": "master",
+      "source_commit_sha": "ecfb14ab1a1a0a2e0f65bb7993040bb6624583f3",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Architect_D4d\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "android-app",
+        "cibersecurity",
+        "pentesting-tools",
+        "root"
+      ],
+      "latest_version": "android-root",
+      "release_url": "https://github.com/Jaypsmall/HexRootFuzz/releases/tag/android-root",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jaypsmall-hexrootfuzz-android-root",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jaypsmall-hexrootfuzz-android-root/THIRD-PARTY-NOTICE-jaypsmall-hexrootfuzz.txt",
+      "artifacts": [
+        {
+          "id": "9590329b419409db3487a472c37d1e3fbf22b6e979462152ca7e2fa299877bef",
+          "filename": "HexRootFuzz_v1.0.1.apk",
+          "original_filename": "HexRootFuzz_v1.0.1.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "android-root",
+          "size_bytes": 12980895,
+          "sha256": "9590329b419409db3487a472c37d1e3fbf22b6e979462152ca7e2fa299877bef",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "e7bb841bafa087c948363bf1ef65ba342fdc81f8573364fc794897d808a92e01",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jaypsmall-hexrootfuzz-android-root/HexRootFuzz_v1.0.1.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jaypsmall-hexrootfuzz-android-root"
+        },
+        {
+          "id": "7ff53e3d066857f1b2a915c170a1b33f3f4c604620e514671561e58d736de1ec",
+          "filename": "HexRootFuzz_v1.0.2.apk",
+          "original_filename": "HexRootFuzz_v1.0.2.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "android-root",
+          "size_bytes": 19543305,
+          "sha256": "7ff53e3d066857f1b2a915c170a1b33f3f4c604620e514671561e58d736de1ec",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "16183930a773982f2f5d5d86461658d4c7cae8771ea92c9278fd328fca73b70f",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jaypsmall-hexrootfuzz-android-root/HexRootFuzz_v1.0.2.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jaypsmall-hexrootfuzz-android-root"
+        },
+        {
+          "id": "ddd1b9876d4091658d06e1a4bab38c438c116de72b9345f8e9145ed11f10cbb4",
+          "filename": "HexRootFuzz_v1.0.3.apk",
+          "original_filename": "HexRootFuzz_v1.0.3.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "android-root",
+          "size_bytes": 13204227,
+          "sha256": "ddd1b9876d4091658d06e1a4bab38c438c116de72b9345f8e9145ed11f10cbb4",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "e7bb841bafa087c948363bf1ef65ba342fdc81f8573364fc794897d808a92e01",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jaypsmall-hexrootfuzz-android-root/HexRootFuzz_v1.0.3.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jaypsmall-hexrootfuzz-android-root"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
