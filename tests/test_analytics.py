@@ -47,6 +47,33 @@ class AnalyticsStoreTests(unittest.TestCase):
         self.assertNotIn(phrase, row["details_json"])
         self.assertIn("query_sha256", row["details_json"])
 
+
+    def test_local_database_probe_reports_only_local_connectivity(self):
+        with patch.dict("os.environ", {
+            "APPHORYN_ANALYTICS_POSTGRES_DSN": "",
+            "CLOUDFLARE_ACCOUNT_ID": "",
+            "CLOUDFLARE_D1_DATABASE_ID": "",
+            "CLOUDFLARE_D1_API_TOKEN": "",
+        }, clear=False):
+            result = self.store.test_backend()
+        self.assertTrue(result["connected"])
+        self.assertEqual(result["status"], "local_only")
+
+    def test_d1_database_probe_executes_a_real_select_one(self):
+        with (
+            patch.dict("os.environ", {
+                "APPHORYN_ANALYTICS_POSTGRES_DSN": "",
+                "CLOUDFLARE_ACCOUNT_ID": "account",
+                "CLOUDFLARE_D1_DATABASE_ID": "database",
+                "CLOUDFLARE_D1_API_TOKEN": "test-token",
+            }, clear=False),
+            patch.object(AnalyticsStore, "_d1_request") as request,
+        ):
+            result = self.store.test_backend()
+        self.assertTrue(result["connected"])
+        self.assertEqual(result["status"], "connected")
+        self.assertEqual(request.call_args.args[3], "SELECT 1")
+
     def test_local_mode_keeps_events_without_claiming_remote_sync(self):
         self.store.record_event("app_view", app_slug="offline-app")
         with patch.dict("os.environ", {
