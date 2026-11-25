@@ -10,6 +10,8 @@ const translations = {
 };
 const categoryMeta=[['developer','categoryDeveloper','⌘'],['system','categorySystem','⚙'],['security','categorySecurity','◇'],['multimedia','categoryMultimedia','▧'],['network','categoryNetwork','⌁'],['productivity','categoryProductivity','▤'],['ai','categoryAi','✳'],['games','categoryGames','▷'],['other','categoryOther','◈']];
 const state={apps:[],sourceApps:[],aiStatus:null,discovery:[],saved:readSaved(),language:localStorage.getItem('apphoryn-language')||'en',jobs:[],jobsFetchedAt:0};
+let catalogRefreshTimer=null;
+let catalogRefreshInFlight=false;
 const $=id=>document.getElementById(id);
 function t(key){return (translations[state.language]&&translations[state.language][key])||translations.en[key]||key;}
 function readSaved(){try{return JSON.parse(localStorage.getItem('apphoryn-saved')||'[]')}catch{return []}}
@@ -219,7 +221,7 @@ function updateAutomationCounters(){
  renderAiStatus();
  renderSourceQueue();
 }
-async function loadCatalog(){
+async function loadCatalog(silent=false){
  const applyManifest=(manifest,status)=>{
   const records=Array.isArray(manifest.apps)?manifest.apps:[];
   state.sourceApps=records;
@@ -244,9 +246,20 @@ async function loadCatalog(){
   }catch(error){
    $("apiStatus").textContent="OFFLINE";
    $("apiStatus").style.color="var(--amber)";
-   toast(state.language==="ar"?"تعذر تحميل كتالوج Apphoryn.":"Could not load the Apphoryn catalog.",true);
+   if(!silent)toast(state.language==="ar"?"تعذر تحميل كتالوج Apphoryn.":"Could not load the Apphoryn catalog.",true);
   }
  }
+}
+function startCatalogAutoRefresh(){
+ if(catalogRefreshTimer)clearInterval(catalogRefreshTimer);
+ const refresh=async()=>{
+  if(document.hidden||catalogRefreshInFlight)return;
+  catalogRefreshInFlight=true;
+  try{await loadCatalog(true);}finally{catalogRefreshInFlight=false;}
+ };
+ catalogRefreshTimer=setInterval(refresh,120000);
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden)refresh();});
+ window.addEventListener('focus',refresh);
 }
 function runTitle(run){
  const name=String(run.name||"");
@@ -377,5 +390,5 @@ function attachEvents(){
   if(event.key==='Escape'){$('modalBackdrop').classList.remove('open');closeSidebar();}
  });
 }
-async function init(){if(localStorage.getItem('apphoryn-theme')==='light')document.body.classList.add('light');applyLanguage(state.language);attachEvents();await Promise.all([loadCatalog(),loadJobs(true)]);recordStoreEvent('catalog_view');const hash=location.hash.replace('#','');if(hash&&$('view-'+hash))navigate(hash);}
+async function init(){if(localStorage.getItem('apphoryn-theme')==='light')document.body.classList.add('light');applyLanguage(state.language);attachEvents();await Promise.all([loadCatalog(),loadJobs(true)]);startCatalogAutoRefresh();recordStoreEvent('catalog_view');const hash=location.hash.replace('#','');if(hash&&$('view-'+hash))navigate(hash);}
 init();
