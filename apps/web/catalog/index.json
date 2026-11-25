@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:26:24.312859+00:00",
+  "generated_at": "2026-11-25T22:26:41.335504+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -43186,6 +43186,74 @@
           "signer_certificate_sha256": "ca7521c1501d5fc287b6fba4df1745118118565d1e36a9c2232b353920fc4f1d",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-modelorona-taplock-1.18/TapLock-1.18.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-modelorona-taplock-1.18"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "ylwb1658zf-tempopulse-metronome",
+      "slug": "ylwb1658zf-tempopulse-metronome",
+      "name": "tempopulse-metronome",
+      "summary": "A precise, dependency-free Android metronome with 20-300 BPM, 15 meters, subdivisions, six synthesized sounds, presets and background playback.这个项目完全由ds生成，在只输入了一行命令的情况下，能达到这样的完成度真的非常惊人，甚至还有很多亮点。像我这样对应用开发完全不了解的人来说，只要写下指令，剩下的交给ai自动完成就可以了，真的是新",
+      "description": "A precise, dependency-free Android metronome with 20-300 BPM, 15 meters, subdivisions, six synthesized sounds, presets and background playback.这个项目完全由ds生成，在只输入了一行命令的情况下，能达到这样的完成度真的非常惊人，甚至还有很多亮点。像我这样对应用开发完全不了解的人来说，只要写下指令，剩下的交给ai自动完成就可以了，真的是新时代啊…",
+      "translations": {
+        "en": {
+          "summary": "A precise, dependency-free Android metronome with 20-300 BPM, 15 meters, subdivisions, six synthesized sounds, presets and background playback.这个项目完全由ds生成，在只输入了一行命令的情况下，能达到这样的完成度真的非常惊人，甚至还有很多亮点。像我这样对应用开发完全不了解的人来说，只要写下指令，剩下的交给ai自动完成就可以了，真的是新",
+          "description": "A precise, dependency-free Android metronome with 20-300 BPM, 15 meters, subdivisions, six synthesized sounds, presets and background playback.这个项目完全由ds生成，在只输入了一行命令的情况下，能达到这样的完成度真的非常惊人，甚至还有很多亮点。像我这样对应用开发完全不了解的人来说，只要写下指令，剩下的交给ai自动完成就可以了，真的是新时代啊…"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/339058575?v=4",
+      "repository_url": "https://github.com/ylwb1658zf/tempopulse-metronome",
+      "github_repo_id": "1443318130",
+      "source_updated_at": "2026-11-02T18:18:05Z",
+      "homepage_url": null,
+      "owner": "ylwb1658zf",
+      "default_branch": "main",
+      "source_commit_sha": "898fab8c1a7d8c6596763be3356b47e1997e6922",
+      "license_text": "MIT License\n\nCopyright (c) 2026 TempoPulse\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "android",
+        "android-app",
+        "audio",
+        "java",
+        "metronome",
+        "music"
+      ],
+      "latest_version": "v1.3.1",
+      "release_url": "https://github.com/ylwb1658zf/tempopulse-metronome/releases/tag/v1.3.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ylwb1658zf-tempopulse-metronome-v1.3.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ylwb1658zf-tempopulse-metronome-v1.3.1/THIRD-PARTY-NOTICE-ylwb1658zf-tempopulse-metronome.txt",
+      "artifacts": [
+        {
+          "id": "31222458cc2aeab82b864fc9c5b47dcf1d1736e6800d722a12d55a301f33f31e",
+          "filename": "TempoPulse-1.3.1.apk",
+          "original_filename": "TempoPulse-1.3.1.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.3.1",
+          "size_bytes": 485519,
+          "sha256": "31222458cc2aeab82b864fc9c5b47dcf1d1736e6800d722a12d55a301f33f31e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "f56b06edf38d4342281865bef3917cc859bfd75ef80137060c5328ea5087c7ce",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ylwb1658zf-tempopulse-metronome-v1.3.1/TempoPulse-1.3.1.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ylwb1658zf-tempopulse-metronome-v1.3.1"
         }
       ],
       "platforms": [
