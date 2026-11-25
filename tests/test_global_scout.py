@@ -49,6 +49,9 @@ class GlobalScoutTests(unittest.TestCase):
             "github_repo_id": "123",
             "repository_url": "https://github.com/owner/repo",
             "source_updated_at": "2026-01-01T00:00:00Z",
+            "translation_status": "complete",
+            "translations": {"ar": "وصف عربي"},
+            "description_translations": {"ar": "شرح عربي كامل"},
         }
         by_id = {"123": existing}
         by_url = {repo_key(existing["repository_url"]): existing}
@@ -57,6 +60,24 @@ class GlobalScoutTests(unittest.TestCase):
         self.assertTrue(known_current(unchanged, by_id, by_url))
         self.assertFalse(known_current(changed, by_id, by_url))
         self.assertFalse(known_current(changed, {}, {}))
+
+    def test_repository_with_missing_arabic_description_is_revisited(self):
+        existing = {
+            "github_repo_id": "321",
+            "repository_url": "https://github.com/owner/untranslated",
+            "source_updated_at": "2026-01-01T00:00:00Z",
+            "translation_status": "english_only",
+            "translations": {"en": "An English summary"},
+            "description_translations": {"en": "An English description"},
+        }
+        candidate = {
+            "id": 321,
+            "html_url": existing["repository_url"],
+            "updated_at": "2026-01-01T00:00:00Z",
+        }
+        by_id = {"321": existing}
+        by_url = {repo_key(existing["repository_url"]): existing}
+        self.assertFalse(known_current(candidate, by_id, by_url))
 
     def test_known_repository_reopens_after_build_adapter_revision_changes(self):
         existing = {
