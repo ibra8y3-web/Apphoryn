@@ -82,7 +82,18 @@
       "latest_version": "v5.0",
       "release_url": "https://github.com/rubinius/rubinius/releases/tag/v5.0",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "84368419a49767ef9549a5778812e5f54b6c6223",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-25T04:05:38.447257+00:00"
+        }
+      ]
     }
   ]
 }
