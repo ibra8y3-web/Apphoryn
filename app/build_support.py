@@ -67,12 +67,12 @@ def detect_supported_build_targets(
             result = client.request(
                 f"/repos/{owner}/{repository}/contents/{encoded_path}?ref={safe_ref}"
             )
-            raw = base64.b64decode(str(result.get("content") or "").replace("\\n", ""))
+            raw = base64.b64decode(str(result.get("content") or "").replace("\n", ""))
             source_text = raw[:128 * 1024].decode("utf-8", errors="replace")
         except Exception:
             continue
         checked_go_sources += 1
-        if re.search(r"(?m)^\\s*package\\s+main(?:\\s|$)", source_text):
+        if re.search(r"(?m)^\s*package\s+main(?:\s|$)", source_text):
             for target in DESKTOP_TARGETS:
                 supported.setdefault(target, f"Go executable package detected in {owning_root or '.'}.")
             break

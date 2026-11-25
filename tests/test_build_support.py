@@ -62,7 +62,7 @@ class BuildSupportTests(unittest.TestCase):
 
         executable = FakeGitHub(
             ["tools/go.mod", "tools/cmd/station/main.go"],
-            source_files={"tools/cmd/station/main.go": "package main\\nfunc main() {}\\n"},
+            source_files={"tools/cmd/station/main.go": "package main\nfunc main() {}\n"},
         )
         result = detect_supported_build_targets("owner", "repo", "main", executable)
         self.assertEqual(set(result), {"windows", "linux", "macos"})
