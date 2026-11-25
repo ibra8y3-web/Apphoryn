@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:07:54.020402+00:00",
+  "generated_at": "2026-11-25T23:08:21.198289+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -43683,6 +43683,92 @@
           "signer_certificate_sha256": "fe4d374a1e67e544a3d6ed98500b2c5161c852098b783cc4bcf60db0c9ede237",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-secure-phone-apps-secure-dialer-v1.9.0/secure-dialer-v1.9.0-x86_64.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-secure-phone-apps-secure-dialer-v1.9.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "estrin217-secure-notes",
+      "slug": "estrin217-secure-notes",
+      "name": "secure-notes",
+      "summary": "Un bloc de notas basado en la seguridad",
+      "description": "Un bloc de notas basado en la seguridad",
+      "translations": {
+        "en": {
+          "summary": "Un bloc de notas basado en la seguridad",
+          "description": "Un bloc de notas basado en la seguridad"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ESTRIN217/secure-notes/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/ESTRIN217/secure-notes",
+      "github_repo_id": "1282502502",
+      "source_updated_at": "2026-11-23T01:50:48Z",
+      "homepage_url": "https://notes-502213.web.app",
+      "owner": "ESTRIN217",
+      "default_branch": "main",
+      "source_commit_sha": "4a8ca2d405a6b1c084bff03bbf77cb0926cf1d33",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Jhon\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android-app",
+        "local-ai",
+        "local-ai-assistant",
+        "local-ai-llm",
+        "local-ai-models",
+        "notes-app",
+        "wysiwyg-editor"
+      ],
+      "latest_version": "v4.1.0",
+      "release_url": "https://github.com/ESTRIN217/secure-notes/releases/tag/v4.1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-estrin217-secure-notes-v4.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-estrin217-secure-notes-v4.1.0/THIRD-PARTY-NOTICE-estrin217-secure-notes.txt",
+      "artifacts": [
+        {
+          "id": "e2710ca9db7cd389b8873b9d2eeb0a6b42d25dd3f390d47ca9145aec38143063",
+          "filename": "Secure-Notes-full-release-arm64-v8a.apk",
+          "original_filename": "Secure-Notes-full-release-arm64-v8a.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v4.1.0",
+          "size_bytes": 63402338,
+          "sha256": "e2710ca9db7cd389b8873b9d2eeb0a6b42d25dd3f390d47ca9145aec38143063",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "fede0c164a6dd62c8b0752f77be8722ddd0bc74715b7b17f3aa4b9ba0e2a105f",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-estrin217-secure-notes-v4.1.0/Secure-Notes-full-release-arm64-v8a.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-estrin217-secure-notes-v4.1.0"
+        },
+        {
+          "id": "9c74bb1b8a593b02da5a1769ec2df7c0d2879942b28b7e7f803aadee447a456e",
+          "filename": "Secure-Notes-independent-release-arm64-v8a.apk",
+          "original_filename": "Secure-Notes-independent-release-arm64-v8a.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v4.1.0",
+          "size_bytes": 13886774,
+          "sha256": "9c74bb1b8a593b02da5a1769ec2df7c0d2879942b28b7e7f803aadee447a456e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "fede0c164a6dd62c8b0752f77be8722ddd0bc74715b7b17f3aa4b9ba0e2a105f",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-estrin217-secure-notes-v4.1.0/Secure-Notes-independent-release-arm64-v8a.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-estrin217-secure-notes-v4.1.0"
         }
       ],
       "platforms": [
