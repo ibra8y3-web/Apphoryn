@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:38:09.075406+00:00",
+  "generated_at": "2026-11-25T21:38:35.652702+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -41383,6 +41383,113 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "bit-hero-333-waddlefree",
+      "slug": "bit-hero-333-waddlefree",
+      "name": "WaddleFree",
+      "summary": "Wake up and put your gaming/media PC to sleep from bed using your Android phone.",
+      "description": "Wake up and put your gaming/media PC to sleep from bed using your Android phone.",
+      "translations": {
+        "en": {
+          "summary": "Wake up and put your gaming/media PC to sleep from bed using your Android phone.",
+          "description": "Wake up and put your gaming/media PC to sleep from bed using your Android phone."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/bit-hero-333/WaddleFree/main/tv/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/bit-hero-333/WaddleFree",
+      "github_repo_id": "1454294137",
+      "source_updated_at": "2026-11-15T12:12:16Z",
+      "homepage_url": null,
+      "owner": "bit-hero-333",
+      "default_branch": "main",
+      "source_commit_sha": "bad06a7e05d1395ac71c6c109940de4ee7b09ba0",
+      "license_text": "MIT License\n\nCopyright (c) 2026 bit-hero-333\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "android",
+        "android-app",
+        "local-network",
+        "pc-control",
+        "pc-control-via-phone",
+        "quick-settings-tile",
+        "remote-control",
+        "remote-sleep",
+        "wake-on-lan",
+        "wol"
+      ],
+      "latest_version": "v1.1.1",
+      "release_url": "https://github.com/bit-hero-333/WaddleFree/releases/tag/v1.1.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bit-hero-333-waddlefree-v1.1.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bit-hero-333-waddlefree-v1.1.1/THIRD-PARTY-NOTICE-bit-hero-333-waddlefree.txt",
+      "artifacts": [
+        {
+          "id": "a3bf42b05df3e798796327313d8c6dc042afa76a56cb7378ca0e10f30e182f02",
+          "filename": "WaddleFree-TV.apk",
+          "original_filename": "WaddleFree-TV.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.1.1",
+          "size_bytes": 6614482,
+          "sha256": "a3bf42b05df3e798796327313d8c6dc042afa76a56cb7378ca0e10f30e182f02",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "ccce6891cc04541e6d722181f2be78adbe9685176288f5d7584c092b851421b4",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bit-hero-333-waddlefree-v1.1.1/WaddleFree-TV.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bit-hero-333-waddlefree-v1.1.1"
+        },
+        {
+          "id": "ea022fc2786b3cd38afdfd87c29f1cb2127aa0023e881efede00b50dd16b56ba",
+          "filename": "WaddleFree.apk",
+          "original_filename": "WaddleFree.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.1.1",
+          "size_bytes": 6639436,
+          "sha256": "ea022fc2786b3cd38afdfd87c29f1cb2127aa0023e881efede00b50dd16b56ba",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "ccce6891cc04541e6d722181f2be78adbe9685176288f5d7584c092b851421b4",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bit-hero-333-waddlefree-v1.1.1/WaddleFree.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bit-hero-333-waddlefree-v1.1.1"
+        },
+        {
+          "id": "214d67a105d84ac401f4431836f156dc1f6d9961bff2d69865c9ded94f0a98c2",
+          "filename": "WaddleFree.exe",
+          "original_filename": "WaddleFree.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.1.1",
+          "size_bytes": 74490470,
+          "sha256": "214d67a105d84ac401f4431836f156dc1f6d9961bff2d69865c9ded94f0a98c2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bit-hero-333-waddlefree-v1.1.1/WaddleFree.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bit-hero-333-waddlefree-v1.1.1"
+        }
+      ],
+      "platforms": [
+        "android",
+        "windows"
       ]
     },
     {
