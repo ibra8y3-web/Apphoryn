@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:24:07.038293+00:00",
+  "generated_at": "2026-11-25T04:24:14.959341+00:00",
   "apps": [
     {
       "id": "lumiag5-antigravitymb",
@@ -1905,6 +1905,61 @@
         "macos",
         "windows"
       ]
+    },
+    {
+      "id": "dat-nnguyen-pulse",
+      "slug": "dat-nnguyen-pulse",
+      "artifacts": [],
+      "name": "pulse",
+      "summary": "Free, ad-free lossless music & podcast player for Mac, iPhone, Android, and Web. Zero ads, zero subscriptions",
+      "description": "Free, ad-free lossless music & podcast player for Mac, iPhone, Android, and Web. Zero ads, zero subscriptions",
+      "translations": {
+        "en": {
+          "summary": "Free, ad-free lossless music & podcast player for Mac, iPhone, Android, and Web. Zero ads, zero subscriptions",
+          "description": "Free, ad-free lossless music & podcast player for Mac, iPhone, Android, and Web. Zero ads, zero subscriptions"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/dat-nnguyen/pulse/main/build/icon.png",
+      "repository_url": "https://github.com/dat-nnguyen/pulse",
+      "github_repo_id": "1395461669",
+      "source_updated_at": "2026-11-09T15:38:45Z",
+      "homepage_url": "https://real-free-music-player.vercel.app",
+      "owner": "dat-nnguyen",
+      "default_branch": "main",
+      "source_commit_sha": "7a80814896b788f8b6d03feba80032af9bcc72cb",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Dat Nguyen\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "other",
+      "topics": [
+        "css",
+        "docker",
+        "docker-compose",
+        "free",
+        "ios",
+        "ios-app",
+        "ios-swift",
+        "javascript",
+        "macos",
+        "macos-app",
+        "macos-package",
+        "music",
+        "music-player",
+        "react",
+        "supabase"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "roger364-ramscope",
