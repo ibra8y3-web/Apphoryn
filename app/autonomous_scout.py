@@ -16,6 +16,7 @@ from .services import CatalogService
 
 DEFAULT_QUERIES = (
     "topic:android-app",
+    "topic:android",
     "topic:desktop-app",
     "topic:windows-app",
     "topic:linux-app",
@@ -25,6 +26,35 @@ DEFAULT_QUERIES = (
     "topic:electron",
     "topic:flutter",
     "topic:command-line-tool",
+    "topic:cli",
+    "topic:file-manager",
+    "topic:terminal",
+    "topic:text-editor",
+    "topic:code-editor",
+    "topic:web-browser",
+    "topic:password-manager",
+    "topic:media-player",
+    "topic:image-editor",
+    "topic:video-editor",
+    "topic:music-player",
+    "topic:note-taking",
+    "topic:calendar",
+    "topic:email-client",
+    "topic:chat-client",
+    "topic:backup",
+    "topic:sync",
+    "topic:network-tool",
+    "topic:security-tool",
+    "topic:system-utility",
+    "topic:accessibility",
+    "topic:education",
+    "topic:ebook-reader",
+    "topic:document-viewer",
+    "topic:database-client",
+    "topic:developer-tools",
+    "topic:game",
+    "topic:game-launcher",
+    "topic:open-source-app",
 )
 
 
@@ -167,7 +197,6 @@ class AutonomousScout:
                 rows[index] = {**old, **candidate}
                 return
         rows.insert(0, candidate)
-        del rows[100:]
 
     def _scan_once(self, reason: str) -> None:
         queries = self._queries()
@@ -181,7 +210,7 @@ class AutonomousScout:
         self.state["last_error"] = None
         self._save()
 
-        result = self.github.search_repositories(query=query, page=1, per_page=50)
+        result = self.github.search_repositories(query=query, page=1, per_page=100)
         repositories = result.get("items") if isinstance(result, dict) else []
         repositories = repositories if isinstance(repositories, list) else []
         known_manifest = self._known_manifest_repositories()
