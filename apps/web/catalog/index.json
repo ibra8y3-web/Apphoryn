@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T08:48:22.499506+00:00",
+  "generated_at": "2026-11-25T08:49:42.246497+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -3844,6 +3844,146 @@
         }
       ],
       "platforms": [
+        "windows"
+      ]
+    },
+    {
+      "id": "libraos-next",
+      "slug": "libraos-next",
+      "name": "next",
+      "summary": "LibraOS Next: a BYOK IDE for coding agents. Bring your own agents and keys (Claude Code, Codex, opencode), chat, work on a project, and hand tasks to LibraOS Engine workers on your machine, a team node or in the cloud. macOS, Linux and Wind",
+      "description": "LibraOS Next: a BYOK IDE for coding agents. Bring your own agents and keys (Claude Code, Codex, opencode), chat, work on a project, and hand tasks to LibraOS Engine workers on your machine, a team node or in the cloud. macOS, Linux and Windows.",
+      "translations": {
+        "en": {
+          "summary": "LibraOS Next: a BYOK IDE for coding agents. Bring your own agents and keys (Claude Code, Codex, opencode), chat, work on a project, and hand tasks to LibraOS Engine workers on your machine, a team node or in the cloud. macOS, Linux and Wind",
+          "description": "LibraOS Next: a BYOK IDE for coding agents. Bring your own agents and keys (Claude Code, Codex, opencode), chat, work on a project, and hand tasks to LibraOS Engine workers on your machine, a team node or in the cloud. macOS, Linux and Windows."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/libraos/next/main/.repos/alchemy-effect/packages/integration-tests/test/Cloudflare/Access/fixtures/branding/public/logo.svg",
+      "repository_url": "https://github.com/libraos/next",
+      "github_repo_id": "1462510888",
+      "source_updated_at": "2026-11-25T08:03:38Z",
+      "homepage_url": "https://github.com/libraos/next/releases",
+      "owner": "libraos",
+      "default_branch": "main",
+      "source_commit_sha": "2364b73eee1a3c5e80734393f93838c066725a1f",
+      "license_text": "MIT License\n\nCopyright (c) 2026 T3 Tools Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "claude-code",
+        "codex",
+        "coding-agents",
+        "desktop-app",
+        "electron",
+        "ide",
+        "libraos",
+        "opencode"
+      ],
+      "latest_version": "v0.3.1",
+      "release_url": "https://github.com/libraos/next/releases/tag/v0.3.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-libraos-next-v0.3.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-libraos-next-v0.3.1/THIRD-PARTY-NOTICE-libraos-next.txt",
+      "artifacts": [
+        {
+          "id": "ba9e729654e9848caed428ec1baef05671f5e06524361ba2b70cec8a88a82322",
+          "filename": "LibraOS-Next-0.3.1-amd64.deb",
+          "original_filename": "LibraOS-Next-0.3.1-amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.3.1",
+          "size_bytes": 230489080,
+          "sha256": "ba9e729654e9848caed428ec1baef05671f5e06524361ba2b70cec8a88a82322",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-libraos-next-v0.3.1/LibraOS-Next-0.3.1-amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-libraos-next-v0.3.1"
+        },
+        {
+          "id": "0e11f3c2fce2c3442c1582bde4b530211b6d75882acf9e7bd09624778271af36",
+          "filename": "LibraOS-Next-0.3.1-arm64.dmg",
+          "original_filename": "LibraOS-Next-0.3.1-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.3.1",
+          "size_bytes": 261746674,
+          "sha256": "0e11f3c2fce2c3442c1582bde4b530211b6d75882acf9e7bd09624778271af36",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-libraos-next-v0.3.1/LibraOS-Next-0.3.1-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-libraos-next-v0.3.1"
+        },
+        {
+          "id": "3a281b39413d50d5d8c1eb96b4d39fb5c1c7f573d1d31abbcf97fc5cb6703cc8",
+          "filename": "LibraOS-Next-0.3.1-x64.dmg",
+          "original_filename": "LibraOS-Next-0.3.1-x64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "x86_64",
+          "version": "v0.3.1",
+          "size_bytes": 271290497,
+          "sha256": "3a281b39413d50d5d8c1eb96b4d39fb5c1c7f573d1d31abbcf97fc5cb6703cc8",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-libraos-next-v0.3.1/LibraOS-Next-0.3.1-x64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-libraos-next-v0.3.1"
+        },
+        {
+          "id": "abc90a9d3c05b5fc7c9a294b536a0c1043c27cb6ad23bf5ddb00d3df658073d3",
+          "filename": "LibraOS-Next-0.3.1-x64.exe",
+          "original_filename": "LibraOS-Next-0.3.1-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.3.1",
+          "size_bytes": 238907418,
+          "sha256": "abc90a9d3c05b5fc7c9a294b536a0c1043c27cb6ad23bf5ddb00d3df658073d3",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-libraos-next-v0.3.1/LibraOS-Next-0.3.1-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-libraos-next-v0.3.1"
+        },
+        {
+          "id": "94632016f131ae0b44e2222829826fe5c6ffc21a48910c62f522cf65c30ff101",
+          "filename": "LibraOS-Next-x86_64.AppImage",
+          "original_filename": "LibraOS-Next-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.3.1",
+          "size_bytes": 281265306,
+          "sha256": "94632016f131ae0b44e2222829826fe5c6ffc21a48910c62f522cf65c30ff101",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-libraos-next-v0.3.1/LibraOS-Next-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-libraos-next-v0.3.1"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
         "windows"
       ]
     },
