@@ -7,6 +7,8 @@ on:
       - '.github/workflows/global-scout.yml'
       - 'app/github_release_mirror.py'
       - 'scripts/global_scout.py'
+      - 'scripts/ci_build.py'
+      - 'app/build_support.py'
   schedule:
     - cron: '17 */2 * * *'
   workflow_dispatch:
