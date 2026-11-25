@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T05:29:54.825799+00:00",
+  "generated_at": "2026-11-25T05:30:21.390573+00:00",
   "apps": [
     {
       "id": "home-assistant-android",
@@ -1917,6 +1917,85 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "dineshsoudagar-local-llms-on-android",
+      "slug": "dineshsoudagar-local-llms-on-android",
+      "name": "local-llms-on-android",
+      "summary": "Run local LLMs like Gemma, Qwen, and LLaMA on Android for offline, private, real-time chat and question answering with LiteRT and ONNX Runtime.",
+      "description": "Run local LLMs like Gemma, Qwen, and LLaMA on Android for offline, private, real-time chat and question answering with LiteRT and ONNX Runtime.",
+      "translations": {
+        "en": {
+          "summary": "Run local LLMs like Gemma, Qwen, and LLaMA on Android for offline, private, real-time chat and question answering with LiteRT and ONNX Runtime.",
+          "description": "Run local LLMs like Gemma, Qwen, and LLaMA on Android for offline, private, real-time chat and question answering with LiteRT and ONNX Runtime."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/dineshsoudagar/local-llms-on-android/main/pocket_llm_src/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/dineshsoudagar/local-llms-on-android",
+      "github_repo_id": "977593093",
+      "source_updated_at": "2026-11-25T01:19:17Z",
+      "homepage_url": null,
+      "owner": "dineshsoudagar",
+      "default_branch": "main",
+      "source_commit_sha": "7c84f95aeace760ee392fcfcde77182d554d05fa",
+      "license_text": "MIT License\n\nCopyright (c) 2025 dinesh_s\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "ai",
+      "topics": [
+        "android",
+        "android-app",
+        "chatbot",
+        "gemma4",
+        "gemma4-2b",
+        "gemma4-e4b",
+        "huggingface-tokenizers",
+        "litert",
+        "litert-lm",
+        "llama3",
+        "local-llm",
+        "local-llm-integration",
+        "mobile-ai",
+        "offline-inference",
+        "on-device-ai",
+        "onnx-runtime",
+        "qwen"
+      ],
+      "latest_version": "v1.7.0",
+      "release_url": "https://github.com/dineshsoudagar/local-llms-on-android/releases/tag/v1.7.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-dineshsoudagar-local-llms-on-android-v1.7.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-dineshsoudagar-local-llms-on-android-v1.7.0/THIRD-PARTY-NOTICE-dineshsoudagar-local-llms-on-android.txt",
+      "artifacts": [
+        {
+          "id": "9883676d77154a9bbbda295310983e66608b30b8950330e7ef7cb10c763c2883",
+          "filename": "pocket_llm_v1.7.0.apk",
+          "original_filename": "pocket_llm_v1.7.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.7.0",
+          "size_bytes": 306936865,
+          "sha256": "9883676d77154a9bbbda295310983e66608b30b8950330e7ef7cb10c763c2883",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "43d7da6c8a52a09b4dbf89ccb22389c88638582ec5578767b1c6969499ca5769",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-dineshsoudagar-local-llms-on-android-v1.7.0/pocket_llm_v1.7.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-dineshsoudagar-local-llms-on-android-v1.7.0"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
