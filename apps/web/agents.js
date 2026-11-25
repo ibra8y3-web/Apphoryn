@@ -55,8 +55,8 @@
   function renderAnalytics(payload) {
     if (!payload) { $("analyticsSummary").innerHTML='<p class="muted">لم يتم استلام ملخص التحليلات.</p>'; return; }
     const backend=payload.backend||{};
-    let rows=(payload.per_app||[]).map(row=>'<article class="run-row"><div class="run-head"><b>'+esc(row.app_slug)+'</b><span class="tiny">مشاهدات '+Number(row.views||0)+'</span></div><p>طلبات التنزيل: '+Number(row.downloads||0)+' · تنزيلات مكتملة: '+Number(row.completed_downloads||0)+'</p></article>').join("");
-    $("analyticsSummary").innerHTML='<article class="metric"><span>مشاهدات التطبيقات</span><b>'+Number(payload.views||0)+'</b></article><article class="metric"><span>طلبات التنزيل</span><b>'+Number(payload.download_requests||0)+'</b></article><article class="metric"><span>تنزيلات مكتملة</span><b>'+Number(payload.completed_downloads||0)+'</b></article><article class="notice">قاعدة البيانات: '+esc(backend.provider||"local_sqlite")+' · سجلات تنتظر المزامنة: '+Number(payload.pending_replication||0)+' · '+esc(backend.note||"")+'</article>'+ (rows || '<p class="muted">لا توجد مشاهدات أو تنزيلات مسجلة بعد.</p>');
+    let rows=(payload.per_app||[]).map(row=>'<article class="run-row"><div class="run-head"><b>'+esc(row.app_slug)+'</b><span class="tiny">مشاهدات '+Number(row.views||0)+'</span></div><p>طلبات التنزيل: '+Number(row.downloads||0)+' · تنزيلات مكتملة عبر الخادم: '+Number(row.completed_downloads||0)+'</p></article>').join("");
+    $("analyticsSummary").innerHTML='<article class="metric"><span>مشاهدات التطبيقات</span><b>'+Number(payload.views||0)+'</b></article><article class="metric"><span>طلبات التنزيل</span><b>'+Number(payload.download_requests||0)+'</b></article><article class="metric"><span>تنزيلات اكتملت عبر خادم Apphoryn</span><b>'+Number(payload.completed_downloads||0)+'</b></article><article class="notice">قاعدة البيانات: '+esc(backend.provider||"local_sqlite")+' · سجلات تنتظر المزامنة: '+Number(payload.pending_replication||0)+' · '+esc(backend.note||"")+'</article>'+ (rows || '<p class="muted">لا توجد مشاهدات أو تنزيلات مسجلة بعد.</p>');
   }
   function renderProviders(payload) {
     const providers = payload?.providers || [];
