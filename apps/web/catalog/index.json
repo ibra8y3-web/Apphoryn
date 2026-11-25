@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:56:56.923263+00:00",
+  "generated_at": "2026-11-25T21:57:20.375954+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -40591,6 +40591,110 @@
           "signer_certificate_sha256": "6b7e992f93bd0bfd8c9395ddf92d0e3684d236b0f29cdf637dfca80e20b60195",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-derigava-tg-ws-proxy-android-v1.2.3/tgwsproxy-1.2.3-arm64.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-derigava-tg-ws-proxy-android-v1.2.3"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "the-blue-alliance-the-blue-alliance-android",
+      "slug": "the-blue-alliance-the-blue-alliance-android",
+      "name": "the-blue-alliance-android",
+      "summary": "An Android app for accessing information about the FIRST Robotics Competition.",
+      "description": "An Android app for accessing information about the FIRST Robotics Competition.",
+      "translations": {
+        "en": {
+          "summary": "An Android app for accessing information about the FIRST Robotics Competition.",
+          "description": "An Android app for accessing information about the FIRST Robotics Competition."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/the-blue-alliance/the-blue-alliance-android/main/tv/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/the-blue-alliance/the-blue-alliance-android",
+      "github_repo_id": "18974940",
+      "source_updated_at": "2026-11-11T07:54:35Z",
+      "homepage_url": null,
+      "owner": "the-blue-alliance",
+      "default_branch": "main",
+      "source_commit_sha": "0b547959c4cae8f49b7582e5fce1bbb34cfafa87",
+      "license_text": "The MIT License (MIT)\n\nCopyright (c) 2014 The Blue Alliance\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "first-frc",
+        "first-robotics-competition",
+        "firstrobotics",
+        "frc",
+        "robotics-competition",
+        "the-blue-alliance"
+      ],
+      "latest_version": "v11.12.0",
+      "release_url": "https://github.com/the-blue-alliance/the-blue-alliance-android/releases/tag/v11.12.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-the-blue-alliance-the-blue-alliance-android-v11.12.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-the-blue-alliance-the-blue-alliance-android-v11.12.0/THIRD-PARTY-NOTICE-the-blue-alliance-the-blue-alliance-android.txt",
+      "artifacts": [
+        {
+          "id": "bebcc5842ea6a608a3475fcd0288f5f5bde521b9ba06c7e94fec718993e06d82",
+          "filename": "app-release.apk",
+          "original_filename": "app-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v11.12.0",
+          "size_bytes": 5021898,
+          "sha256": "bebcc5842ea6a608a3475fcd0288f5f5bde521b9ba06c7e94fec718993e06d82",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "c23fa12aab16db65a24114f7169ae685c69065316643e4a6fb85ed82c7ffaaa4",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-the-blue-alliance-the-blue-alliance-android-v11.12.0/app-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-the-blue-alliance-the-blue-alliance-android-v11.12.0"
+        },
+        {
+          "id": "ca2caa04a4512c3d15c84f64ab6b48a55c0d9721ee6b4fc81520f85fc87645d5",
+          "filename": "tv-release.apk",
+          "original_filename": "tv-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v11.12.0",
+          "size_bytes": 2755718,
+          "sha256": "ca2caa04a4512c3d15c84f64ab6b48a55c0d9721ee6b4fc81520f85fc87645d5",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "c23fa12aab16db65a24114f7169ae685c69065316643e4a6fb85ed82c7ffaaa4",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-the-blue-alliance-the-blue-alliance-android-v11.12.0/tv-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-the-blue-alliance-the-blue-alliance-android-v11.12.0"
+        },
+        {
+          "id": "d6cc128bca130ef0bcf0300f6aded0f09c7f8e4286270a17634356e981f8ce47",
+          "filename": "wear-release.apk",
+          "original_filename": "wear-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v11.12.0",
+          "size_bytes": 4977265,
+          "sha256": "d6cc128bca130ef0bcf0300f6aded0f09c7f8e4286270a17634356e981f8ce47",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "c23fa12aab16db65a24114f7169ae685c69065316643e4a6fb85ed82c7ffaaa4",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-the-blue-alliance-the-blue-alliance-android-v11.12.0/wear-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-the-blue-alliance-the-blue-alliance-android-v11.12.0"
         }
       ],
       "platforms": [
