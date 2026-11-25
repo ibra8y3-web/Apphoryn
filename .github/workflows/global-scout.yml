@@ -7,10 +7,16 @@ on:
       - '.github/workflows/global-scout.yml'
       - 'app/github_release_mirror.py'
       - 'scripts/global_scout.py'
+      - 'scripts/harvest_and_import.py'
+      - 'app/ai_descriptions.py'
+      - 'app/import_pacing.py'
+      - 'app/services.py'
       - 'scripts/ci_build.py'
       - 'app/build_support.py'
+  # GitHub scheduled workflows have a five-minute minimum. The worker itself
+  # enforces a 60-second gap between each import while this long run is active.
   schedule:
-    - cron: '17 */2 * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 concurrency:
   group: apphoryn-catalog-writes
@@ -64,6 +70,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           APPHORYN_AI_SERVICE_URL: 'https://apphoryn-production.up.railway.app'
+          APPHORYN_IMPORT_INTERVAL_SECONDS: '60'
           # AI provider credentials stay only in Railway; GitHub Actions receives a short-lived OIDC identity.
           # Dispatch all eligible supported targets; there is no Apphoryn per-run build quota.
           # Third-party source runs without repository secrets; trusted publisher verifies all output again.
@@ -85,7 +92,8 @@ jobs:
           python scripts/global_scout.py \
             --max-repositories 10000 \
             --max-pages 100 \
-            --run-budget-seconds 20400
+            --run-budget-seconds 20400 \
+            --import-interval-seconds "$APPHORYN_IMPORT_INTERVAL_SECONDS"
 
       - name: Persist the Scout cursor and retry queue
         if: always() && hashFiles('data/scout-state.json') != ''
