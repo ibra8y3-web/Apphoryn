@@ -359,7 +359,7 @@ def _safe_repo_parts(url: str) -> tuple[str, str]:
     return parts[0], parts[1].removesuffix(".git")
 
 
-def _run_tool(agent_id: str, request: dict[str, Any] | None, goal: str, allow_external_actions: bool) -> dict[str, Any] | None:
+def _run_tool(agent_id: str, request: dict[str, Any] | None, goal: str, allow_external_actions: bool, context: list[dict[str, Any]] | None = None) -> dict[str, Any] | None:
     allowed = set(AGENT_BY_ID.get(agent_id, {}).get("tools", []))
     if request is None and agent_id == "discovery":
         request = {"name": "github_discover", "arguments": {"query": goal, "limit": 10}}
@@ -370,6 +370,36 @@ def _run_tool(agent_id: str, request: dict[str, Any] | None, goal: str, allow_ex
     if tool_name not in allowed:
         return {"tool": tool_name or "unknown", "executed": False, "reason": "This tool is not allowed for this employee."}
     try:
+        if tool_name == "shared_memory":
+            operation = str(args.get("operation") or "read").lower()
+            if operation == "read":
+                return {"tool": tool_name, "executed": True, "memories": STORE.read_memories(max(1, min(int(args.get("limit") or 8), 12)))}
+            if operation == "save":
+                content = args.get("content")
+                if content is None:
+                    raise ValueError("Memory content is required.")
+                STORE.save_memory(str(args.get("scope") or "agent")[:60], content,
+                                  str(args.get("source_run_id") or "") or None,
+                                  str(args.get("project_key") or "") or None)
+                return {"tool": tool_name, "executed": True, "saved": True}
+            raise ValueError("Shared-memory operation must be read or save.")
+
+        if tool_name == "quality_review":
+            rows = context or []
+            completed = [row for row in rows if isinstance(row, dict) and isinstance(row.get("result"), dict)]
+            claims_without_tool_evidence = []
+            unresolved = []
+            for row in completed:
+                result = row["result"]
+                tool_evidence = result.get("verified_tool_result")
+                if tool_evidence and not tool_evidence.get("executed"):
+                    claims_without_tool_evidence.append(row.get("agent_id"))
+                unresolved.extend(result.get("missing_evidence") or [])
+            return {"tool": tool_name, "executed": True, "agents_reviewed": len(completed),
+                    "agents_without_tool_evidence": claims_without_tool_evidence,
+                    "unresolved_evidence": unresolved[:50],
+                    "reviewed_agent_ids": [row.get("agent_id") for row in completed]}
+
         if tool_name == "github_discover":
             from .services import CatalogService
             query = str(args.get("query") or goal).strip()[:180]
@@ -428,7 +458,17 @@ def _run_tool(agent_id: str, request: dict[str, Any] | None, goal: str, allow_ex
             _safe_repo_parts(repo_url)
             imported = CatalogService().import_repository(repo_url, mirror_release_assets=True)
             record, artifacts = imported.get("app") or {}, imported.get("artifacts") or []
+            mirror_result = None
+            if settings.github_token and settings.github_owner and settings.github_repository:
+                from .github_release_mirror import GitHubReleaseMirror
+                mirror = GitHubReleaseMirror(
+                    settings.github_token,
+                    f"{settings.github_owner}/{settings.github_repository}",
+                    settings.github_ref,
+                )
+                mirror_result = mirror.publish_app(record, artifacts)
             return {"tool": tool_name, "executed": True,
+                    "mirror": mirror_result,
                     "app": {"name": record.get("name"), "repository_url": record.get("repository_url"),
                             "latest_version": record.get("latest_version"), "license_spdx": record.get("license_spdx")},
                     "artifact_count": len(artifacts),
@@ -479,7 +519,7 @@ def _agent_call(agent_id: str, goal: str, instructions: str, context: list[dict[
         {"role": "system", "content": system}, {"role": "user", "content": _json(payload)}
     ])
     request = draft.get("tool_request") if isinstance(draft.get("tool_request"), dict) else None
-    tool_result = _run_tool(agent_id, request, goal, allow_external_actions)
+    tool_result = _run_tool(agent_id, request, goal, allow_external_actions, context)
     if tool_result is not None:
         evidence = {"initial_analysis": draft, "tool_execution_result": tool_result,
                     "instruction": "Produce the final JSON analysis. The tool output is the only proof the operation occurred."}
