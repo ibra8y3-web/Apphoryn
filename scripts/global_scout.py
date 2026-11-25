@@ -147,10 +147,18 @@ def has_arabic_translation(app: dict[str, Any]) -> bool:
         app.get("description_translations")
         if isinstance(app.get("description_translations"), dict) else {}
     )
+    arabic_value = translations.get("ar")
+    arabic_summary = (
+        str(arabic_value.get("summary") or "").strip()
+        if isinstance(arabic_value, dict) else str(arabic_value or "").strip()
+    )
+    arabic_description = str(descriptions.get("ar") or "").strip()
+    if not arabic_description and isinstance(arabic_value, dict):
+        arabic_description = str(arabic_value.get("description") or "").strip()
     return bool(
         str(app.get("translation_status") or "").lower() == "complete"
-        and translations.get("ar")
-        and descriptions.get("ar")
+        and arabic_summary
+        and arabic_description
     )
 
 
