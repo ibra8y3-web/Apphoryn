@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:43:25.350842+00:00",
+  "generated_at": "2026-11-25T19:43:38.198176+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -1301,6 +1301,86 @@
           "signer_certificate_sha256": "fb009522f65e25802261b67b10a45fd70e610031976f40b28a649e152ded0373",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-nextcloud-android-35.1.0/nextcloud-files-huawei-350010090.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-nextcloud-android-35.1.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "parryqiu-android-imessage-relay",
+      "slug": "parryqiu-android-imessage-relay",
+      "name": "android-imessage-relay",
+      "summary": "Secure, self-hosted Android SMS relay to Apple Messages through Cloudflare Tunnel and Zero Trust Access.",
+      "description": "Secure, self-hosted Android SMS relay to Apple Messages through Cloudflare Tunnel and Zero Trust Access.",
+      "translations": {
+        "en": {
+          "summary": "Secure, self-hosted Android SMS relay to Apple Messages through Cloudflare Tunnel and Zero Trust Access.",
+          "description": "Secure, self-hosted Android SMS relay to Apple Messages through Cloudflare Tunnel and Zero Trust Access."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/11624840?v=4",
+      "repository_url": "https://github.com/ParryQiu/android-imessage-relay",
+      "github_repo_id": "1341366463",
+      "source_updated_at": "2026-10-31T23:07:49Z",
+      "homepage_url": null,
+      "owner": "ParryQiu",
+      "default_branch": "main",
+      "source_commit_sha": "4e86a55b3d0eac5d446b0b085bbb164f23252fb8",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Parry Qiu\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "android",
+        "android-app",
+        "apple-messages",
+        "cloudflare-tunnel",
+        "cloudflare-zero-trust",
+        "end-to-end-encryption",
+        "imessage",
+        "kotlin",
+        "macos",
+        "message-relay",
+        "open-source",
+        "privacy",
+        "python",
+        "self-hosted",
+        "sms",
+        "sms-forwarder",
+        "terraform",
+        "zero-trust"
+      ],
+      "latest_version": "v0.1.1",
+      "release_url": "https://github.com/ParryQiu/android-imessage-relay/releases/tag/v0.1.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-parryqiu-android-imessage-relay-v0.1.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-parryqiu-android-imessage-relay-v0.1.1/THIRD-PARTY-NOTICE-parryqiu-android-imessage-relay.txt",
+      "artifacts": [
+        {
+          "id": "95e58ef1f3a0688e19514624534543d34b3a8cb6812ba9fc6ebb8395eddf0f61",
+          "filename": "android-imessage-relay-v0.1.1.apk",
+          "original_filename": "android-imessage-relay-v0.1.1.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.1.1",
+          "size_bytes": 50661,
+          "sha256": "95e58ef1f3a0688e19514624534543d34b3a8cb6812ba9fc6ebb8395eddf0f61",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "1c89020ad7f8af08fa4c1a98fe5f7af1ce8ec8093d7a8ef58cf3422bddfe5a30",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-parryqiu-android-imessage-relay-v0.1.1/android-imessage-relay-v0.1.1.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-parryqiu-android-imessage-relay-v0.1.1"
         }
       ],
       "platforms": [
