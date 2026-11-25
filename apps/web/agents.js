@@ -30,7 +30,9 @@
     $("providersList").innerHTML = providers.map(item => {
       const status = item.enabled && item.models_discovered ? "available" : (!item.configured ? "not_configured" : item.enabled ? "unavailable" : "paused");
       const names = (payload.models||[]).filter(m=>m.provider===item.provider).slice(0,12).map(m=>'<span class="model-chip">'+esc(m.model)+'</span>').join("");
-      return '<article class="provider-row"><div class="provider-head"><strong>'+esc(item.provider)+'</strong>'+stateTag(status)+'</div><p>'+esc(item.note||"")+'</p><div class="provider-models">'+names+'</div><div class="form-row"><span class="tiny">نماذج مكتشفة: '+Number(item.models_discovered||0)+'</span><button class="secondary provider-test" data-provider="'+esc(item.provider)+'">اختبار فعلي</button></div></article>';
+      const metric = (payload.metrics||[]).find(row=>row.provider===item.provider);
+      const telemetry = metric ? '<p class="tiny">طلبات مسجلة: '+Number(metric.requests||0)+' · نجاح: '+Number(metric.successes||0)+' · متوسط الاستجابة: '+(metric.average_latency_ms==null?"—":Math.round(metric.average_latency_ms)+" ms")+'</p>' : '<p class="tiny">لا توجد طلبات مسجلة بعد.</p>';
+      return '<article class="provider-row"><div class="provider-head"><strong>'+esc(item.provider)+'</strong>'+stateTag(status)+'</div><p>'+esc(item.note||"")+'</p><div class="provider-models">'+names+'</div>'+telemetry+'<div class="form-row"><span class="tiny">نماذج مكتشفة: '+Number(item.models_discovered||0)+'</span><button class="secondary provider-test" data-provider="'+esc(item.provider)+'">اختبار فعلي</button></div></article>';
     }).join("") || '<p class="muted">لا توجد مزودات في التقرير.</p>';
     $("providersList").querySelectorAll(".provider-test").forEach(button => button.addEventListener("click", async () => {
       button.disabled=true; button.textContent="جارٍ الاختبار...";
@@ -73,7 +75,7 @@
     $("runsActive").textContent=Number(counts.runs_queued||0)+Number(counts.runs_running||0)+Number(counts.runs_retry||0);
     $("runsCompleted").textContent=counts.runs_completed??0;
     $("memoryCount").textContent=counts.memory_records??0;
-    renderAgents(data.agents); renderWorkers(data.workers); renderProviders(data.providers); renderRuns(data.runs); renderSchedules(data.schedules);
+    renderAgents(data.agents); renderWorkers(data.workers); renderProviders({...data.providers,metrics:data.provider_metrics}); renderRuns(data.runs); renderSchedules(data.schedules);
     $("connectionStatus").textContent="متصل بالـBackend. تم تحديث البيانات: "+new Date().toLocaleTimeString();
     $("refreshProviders").disabled=false; $("refreshAll").disabled=false;
   }
