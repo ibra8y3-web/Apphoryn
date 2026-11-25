@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:20:03.927661+00:00",
+  "generated_at": "2026-11-25T23:20:22.735279+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -3164,6 +3164,91 @@
           "signer_certificate_sha256": "64462e2f71a05f16f19a55f594c6f02c293dcd9bfa579d5e9061e4014fd1ceb7",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lumiag5-antigravitymb-v2.5.2/app-debug.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lumiag5-antigravitymb-v2.5.2"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "shamrat05-anything",
+      "slug": "shamrat05-anything",
+      "name": "anything",
+      "summary": "On-device filename search and file management for Android by CallCraft Studio.",
+      "description": "On-device filename search and file management for Android by CallCraft Studio.",
+      "translations": {
+        "en": {
+          "summary": "On-device filename search and file management for Android by CallCraft Studio.",
+          "description": "On-device filename search and file management for Android by CallCraft Studio."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/shamrat05/anything/main/store/source/icon.svg",
+      "repository_url": "https://github.com/shamrat05/anything",
+      "github_repo_id": "1466525950",
+      "source_updated_at": "2026-11-22T10:29:17Z",
+      "homepage_url": null,
+      "owner": "shamrat05",
+      "default_branch": "main",
+      "source_commit_sha": "278913c9e650efad9b9a9a30bc142f09ed897a3c",
+      "license_text": "MIT License\n\nCopyright (c) 2026 CallCraft Studio\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "arkstore",
+        "arkstore-tools",
+        "file-manager",
+        "file-search"
+      ],
+      "latest_version": "v1.0.1-build.3",
+      "release_url": "https://github.com/shamrat05/anything/releases/tag/v1.0.1-build.3",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shamrat05-anything-v1.0.1-build.3",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shamrat05-anything-v1.0.1-build.3/THIRD-PARTY-NOTICE-shamrat05-anything.txt",
+      "artifacts": [
+        {
+          "id": "38f0ab3a90f64e73a6fdca7b7f600c3e2dcd32d674cc46f7b68ededf1639ac26",
+          "filename": "anything-play.apk",
+          "original_filename": "anything-play.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.1-build.3",
+          "size_bytes": 705065,
+          "sha256": "38f0ab3a90f64e73a6fdca7b7f600c3e2dcd32d674cc46f7b68ededf1639ac26",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "55625f2224949490490db32296559058abd4e28e1b812b6e4d194d304400e612",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shamrat05-anything-v1.0.1-build.3/anything-play.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shamrat05-anything-v1.0.1-build.3"
+        },
+        {
+          "id": "5e962b5cad335a05e31e56838d207754d2ed0702826afbd27ae39d47120eb44c",
+          "filename": "anything-with-sms.apk",
+          "original_filename": "anything-with-sms.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.1-build.3",
+          "size_bytes": 705173,
+          "sha256": "5e962b5cad335a05e31e56838d207754d2ed0702826afbd27ae39d47120eb44c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "55625f2224949490490db32296559058abd4e28e1b812b6e4d194d304400e612",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shamrat05-anything-v1.0.1-build.3/anything-with-sms.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shamrat05-anything-v1.0.1-build.3"
         }
       ],
       "platforms": [
