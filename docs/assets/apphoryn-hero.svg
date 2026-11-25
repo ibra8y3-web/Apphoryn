@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="512" viewBox="0 0 1280 512" role="img" aria-labelledby="title desc">
+  <title id="title">Apphoryn — Open software. Built together.</title>
+  <desc id="desc">A dark blue technology illustration representing open-source software discovery, verification, and distribution.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08111f"/>
+      <stop offset=".55" stop-color="#101f3b"/>
+      <stop offset="1" stop-color="#142b4c"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#69dcff"/>
+      <stop offset="1" stop-color="#5277ff"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ad86ff"/>
+      <stop offset="1" stop-color="#5a79ff"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#477dff" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#477dff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#8fb8ff" stroke-opacity=".075" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#020817" flood-opacity=".5"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="512" rx="28" fill="url(#bg)"/>
+  <rect width="1280" height="512" rx="28" fill="url(#grid)"/>
+  <circle cx="1010" cy="230" r="340" fill="url(#glow)"/>
+  <circle cx="1180" cy="35" r="170" fill="#6b7eff" opacity=".08"/>
+  <path d="M0 420C240 350 365 535 640 450S1030 330 1280 415V512H0Z" fill="#0b1730" opacity=".55"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="82" y="190" fill="#f4f8ff" font-size="68" font-weight="800" letter-spacing="3">APPHORYN</text>
+    <rect x="84" y="220" width="72" height="5" rx="2.5" fill="url(#blue)"/>
+    <text x="82" y="278" fill="#d8e6ff" font-size="30" font-weight="600">Open software. Built together.</text>
+    <text x="84" y="326" fill="#9fb4d5" font-size="19">Discover real apps. Verify real packages. Share with confidence.</text>
+    <g transform="translate(84 378)">
+      <rect width="355" height="48" rx="24" fill="#ffffff" fill-opacity=".07" stroke="#8abaff" stroke-opacity=".35"/>
+      <circle cx="24" cy="24" r="5" fill="#75d6ff"/>
+      <text x="43" y="31" font-size="15" font-weight="700" letter-spacing="2.2" fill="#cfe3ff">DISCOVER  •  VERIFY  •  DISTRIBUTE</text>
+    </g>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M770 157C832 157 851 117 909 117" fill="none" stroke="#71cfff" stroke-opacity=".65" stroke-width="3" stroke-dasharray="7 9"/>
+    <path d="M770 338C831 338 852 385 914 385" fill="none" stroke="#9b8cff" stroke-opacity=".65" stroke-width="3" stroke-dasharray="7 9"/>
+    <path d="M1020 248H1103" fill="none" stroke="#8ebaff" stroke-opacity=".7" stroke-width="3"/>
+    <rect x="778" y="171" width="180" height="136" rx="22" fill="#142945" stroke="#6fbfff" stroke-opacity=".7" stroke-width="2"/>
+    <rect x="794" y="187" width="62" height="62" rx="16" fill="#254c78"/>
+    <path d="M813 201h24v7h-24zM813 214h24v7h-24zM813 227h16v7h-16z" fill="#aee8ff"/>
+    <text x="872" y="211" fill="#f2f7ff" font-size="17" font-weight="700">DISCOVER</text>
+    <text x="872" y="235" fill="#9fb6d6" font-size="12">Open-source apps</text>
+    <rect x="794" y="266" width="146" height="24" rx="12" fill="#244b70"/>
+    <circle cx="809" cy="278" r="4" fill="#75d6ff"/>
+    <text x="821" y="282" font-family="Inter,Segoe UI,Arial,sans-serif" fill="#d5eaff" font-size="10" font-weight="700" letter-spacing="1.2">SOURCE VERIFIED</text>
+
+    <rect x="936" y="82" width="172" height="125" rx="20" fill="#172945" stroke="#9c8aff" stroke-opacity=".75" stroke-width="2"/>
+    <rect x="953" y="99" width="48" height="48" rx="13" fill="url(#violet)"/>
+    <path d="M977 109l13 5v10c0 9-6 15-13 19-7-4-13-10-13-19v-10z" fill="none" stroke="#fff" stroke-width="2.4"/>
+    <path d="M970 124l5 5 10-11" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1011" y="119" fill="#f4f1ff" font-size="15" font-weight="700">VERIFY</text>
+    <text x="1011" y="141" fill="#b6aedf" font-size="11">Hash · format · license</text>
+    <path d="M956 172h130" stroke="#8d82c8" stroke-opacity=".45" stroke-width="1"/>
+    <circle cx="964" cy="188" r="4" fill="#9d8bff"/>
+    <text x="976" y="192" fill="#d9d2ff" font-size="10">Artifact checks</text>
+
+    <rect x="1100" y="190" width="126" height="122" rx="20" fill="#17334b" stroke="#6fd9ce" stroke-opacity=".8" stroke-width="2"/>
+    <rect x="1135" y="208" width="56" height="56" rx="15" fill="#205d67"/>
+    <path d="M1147 236h32M1163 220v32M1151 228l-4 8 4 8M1175 228l4 8-4 8" stroke="#b6fff1" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1163" y="286" text-anchor="middle" fill="#e5fffb" font-size="13" font-weight="700">DISTRIBUTE</text>
+    <text x="1163" y="302" text-anchor="middle" fill="#9cd4d1" font-size="9">Verified packages</text>
+
+    <rect x="918" y="333" width="201" height="106" rx="20" fill="#182b48" stroke="#7b9fff" stroke-opacity=".65" stroke-width="2"/>
+    <circle cx="956" cy="371" r="19" fill="#334d91"/>
+    <path d="M947 371h18M956 362v18M949 364l-2 7 2 7M963 364l2 7-2 7" stroke="#dce8ff" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <text x="986" y="369" fill="#f0f5ff" font-size="15" font-weight="700">NIEBEX</text>
+    <text x="986" y="389" fill="#a9bddf" font-size="11">AI coordination layer</text>
+    <rect x="940" y="411" width="155" height="15" rx="7.5" fill="#2c4267"/>
+    <rect x="940" y="411" width="105" height="15" rx="7.5" fill="url(#blue)" opacity=".85"/>
+  </g>
+  <g fill="#a6c7ff" opacity=".7">
+    <circle cx="738" cy="95" r="3"/><circle cx="736" cy="432" r="4"/><circle cx="1210" cy="102" r="3"/>
+    <circle cx="1077" cy="465" r="3"/><circle cx="882" cy="465" r="2"/>
+  </g>
+</svg>
