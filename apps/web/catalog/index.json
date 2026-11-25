@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T20:23:35.422259+00:00",
+  "generated_at": "2026-11-25T20:23:55.475946+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -14894,6 +14894,81 @@
           "requested_at": "2026-11-25T10:07:02.371493+00:00",
           "adapter_revision": "ee84e73f7c3f876a8ded"
         }
+      ]
+    },
+    {
+      "id": "radiumcn-inkwell",
+      "slug": "radiumcn-inkwell",
+      "name": "inkwell",
+      "summary": "克制、专注的 Android 小说阅读器：本地 txt/EPUB/MOBI 阅读 + 自定义/Legado 书源在线追更 + WebDAV 同步，Jetpack Compose 全自绘。",
+      "description": "克制、专注的 Android 小说阅读器：本地 txt/EPUB/MOBI 阅读 + 自定义/Legado 书源在线追更 + WebDAV 同步，Jetpack Compose 全自绘。",
+      "translations": {
+        "en": {
+          "summary": "克制、专注的 Android 小说阅读器：本地 txt/EPUB/MOBI 阅读 + 自定义/Legado 书源在线追更 + WebDAV 同步，Jetpack Compose 全自绘。",
+          "description": "克制、专注的 Android 小说阅读器：本地 txt/EPUB/MOBI 阅读 + 自定义/Legado 书源在线追更 + WebDAV 同步，Jetpack Compose 全自绘。"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/41409118?v=4",
+      "repository_url": "https://github.com/radiumCN/inkwell",
+      "github_repo_id": "1298750764",
+      "source_updated_at": "2026-11-25T18:37:42Z",
+      "homepage_url": "https://github.com/radiumCN/inkwell/releases",
+      "owner": "radiumCN",
+      "default_branch": "main",
+      "source_commit_sha": "fd83d1d1c152da2d4b953386427dcd612733d924",
+      "license_text": "MIT License\n\nCopyright (c) 2026 radiumCN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "ebook-reader",
+        "epub",
+        "jetpack-compose",
+        "kotlin",
+        "legado",
+        "material3",
+        "mobi",
+        "novel-reader",
+        "reading-app",
+        "txt",
+        "webdav"
+      ],
+      "latest_version": "v0.6.2",
+      "release_url": "https://github.com/radiumCN/inkwell/releases/tag/v0.6.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-radiumcn-inkwell-v0.6.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-radiumcn-inkwell-v0.6.2/THIRD-PARTY-NOTICE-radiumcn-inkwell.txt",
+      "artifacts": [
+        {
+          "id": "dda90686e5df780ee38def108507f67b8bb038bee3992cac99c8bdddc3df79c1",
+          "filename": "inkwell-v0.6.2.apk",
+          "original_filename": "inkwell-v0.6.2.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.6.2",
+          "size_bytes": 9658707,
+          "sha256": "dda90686e5df780ee38def108507f67b8bb038bee3992cac99c8bdddc3df79c1",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "1da1fbf0f0142d4c5ddea1ec0783a8994d9fd906132e0491b3a440a5fdbf2738",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-radiumcn-inkwell-v0.6.2/inkwell-v0.6.2.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-radiumcn-inkwell-v0.6.2"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
