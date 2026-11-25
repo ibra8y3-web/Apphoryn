@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:17:34.114302+00:00",
+  "generated_at": "2026-11-25T04:17:44.037172+00:00",
   "apps": [
     {
       "id": "lumiag5-antigravitymb",
@@ -677,6 +677,75 @@
       "platforms": [
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "roger364-ramscope",
+      "slug": "roger364-ramscope",
+      "name": "ramscope",
+      "summary": "RamScope — inventaire mémoire et démarrage Windows",
+      "description": "RamScope — inventaire mémoire et démarrage Windows",
+      "translations": {
+        "en": {
+          "summary": "RamScope — inventaire mémoire et démarrage Windows",
+          "description": "RamScope — inventaire mémoire et démarrage Windows"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/273890383?v=4",
+      "repository_url": "https://github.com/Roger364/ramscope",
+      "github_repo_id": "1457198566",
+      "source_updated_at": "2026-11-25T03:52:07Z",
+      "homepage_url": null,
+      "owner": "Roger364",
+      "default_branch": "main",
+      "source_commit_sha": "833c54da1851526133ecfa5ee61d5a5be5c2b705",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Bisse Studio\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "desktop-app",
+        "memory",
+        "privacy",
+        "rust",
+        "system-monitor",
+        "system-utility",
+        "windows"
+      ],
+      "latest_version": "v1.0.0",
+      "release_url": "https://github.com/Roger364/ramscope/releases/tag/v1.0.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-roger364-ramscope-v1.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-roger364-ramscope-v1.0.0/THIRD-PARTY-NOTICE-roger364-ramscope.txt",
+      "artifacts": [
+        {
+          "id": "9d5bd6b817fcfd47c19e75a33e50a75c37a7592cb32ad34a51afd1454019cf47",
+          "filename": "ramscope-1.0.0.exe",
+          "original_filename": "ramscope-1.0.0.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.0.0",
+          "size_bytes": 1020928,
+          "sha256": "9d5bd6b817fcfd47c19e75a33e50a75c37a7592cb32ad34a51afd1454019cf47",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-roger364-ramscope-v1.0.0/ramscope-1.0.0.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-roger364-ramscope-v1.0.0"
+        }
+      ],
+      "platforms": [
         "windows"
       ]
     },
