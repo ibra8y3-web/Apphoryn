@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:56:17.882196+00:00",
+  "generated_at": "2026-11-25T23:56:48.964186+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -40688,6 +40688,88 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "ivorisnoob-openstream",
+      "slug": "ivorisnoob-openstream",
+      "name": "OpenStream",
+      "summary": "Movies, series and anime in one native Android app. TMDB metadata, extension-based sources, quality switching, subtitles, dubs, downloads and picture-in-picture. Built with Kotlin, Jetpack Compose and Material 3 Expressive.",
+      "description": "Movies, series and anime in one native Android app. TMDB metadata, extension-based sources, quality switching, subtitles, dubs, downloads and picture-in-picture. Built with Kotlin, Jetpack Compose and Material 3 Expressive.",
+      "translations": {
+        "en": {
+          "summary": "Movies, series and anime in one native Android app. TMDB metadata, extension-based sources, quality switching, subtitles, dubs, downloads and picture-in-picture. Built with Kotlin, Jetpack Compose and Material 3 Expressive.",
+          "description": "Movies, series and anime in one native Android app. TMDB metadata, extension-based sources, quality switching, subtitles, dubs, downloads and picture-in-picture. Built with Kotlin, Jetpack Compose and Material 3 Expressive."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Ivorisnoob/OpenStream/beta/app/src/main/ic_launcher-playstore.png",
+      "repository_url": "https://github.com/Ivorisnoob/OpenStream",
+      "github_repo_id": "1153554283",
+      "source_updated_at": "2026-11-24T22:39:14Z",
+      "homepage_url": "https://github.com/Ivorisnoob/OpenStream/releases/latest",
+      "owner": "Ivorisnoob",
+      "default_branch": "beta",
+      "source_commit_sha": "47ca815f4b314b6ace99411174993c5008cfab4b",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Ivor\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android",
+        "android-app",
+        "anime",
+        "exoplayer",
+        "hilt",
+        "jetpack-compose",
+        "kotlin",
+        "material-3-expressive",
+        "material-you",
+        "material3",
+        "media3",
+        "movies",
+        "offline-downloads",
+        "picture-in-picture",
+        "room",
+        "streaming",
+        "subtitles",
+        "tmdb",
+        "tv-series",
+        "video-player"
+      ],
+      "latest_version": "v2.3",
+      "release_url": "https://github.com/Ivorisnoob/OpenStream/releases/tag/v2.3",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ivorisnoob-openstream-v2.3",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ivorisnoob-openstream-v2.3/THIRD-PARTY-NOTICE-ivorisnoob-openstream.txt",
+      "artifacts": [
+        {
+          "id": "214a671e38c7e61653a61cf63829d49ee7e362a6400115086180461b03566dab",
+          "filename": "OpenStream-2.3.apk",
+          "original_filename": "OpenStream-2.3.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v2.3",
+          "size_bytes": 6134516,
+          "sha256": "214a671e38c7e61653a61cf63829d49ee7e362a6400115086180461b03566dab",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "2f3a033979f3649a971f85609829f0de2193c88ada5538cbf68f9d47e160ec38",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ivorisnoob-openstream-v2.3/OpenStream-2.3.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ivorisnoob-openstream-v2.3"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
