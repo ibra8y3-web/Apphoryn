@@ -1,5 +1,5 @@
-const CACHE_NAME = 'apphoryn-shell-v8';
-const SHELL = ['/', '/styles.css', '/app.js', '/icon.svg', '/icon-192.png', '/icon-512.png', '/apple-touch-icon.png', '/manifest.json', '/agents.html', '/agents.css', '/agents.js'];
+const CACHE_NAME = 'apphoryn-shell-v9';
+const SHELL = ['/', '/styles.css', '/app.js', '/icon.svg', '/icon-192.png', '/icon-512.png', '/apple-touch-icon.png', '/manifest.json', '/release.json', '/agents.html', '/agents.css', '/agents.js'];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(SHELL))));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))))));
 self.addEventListener('fetch', event => {
