@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:26:37.815677+00:00",
+  "generated_at": "2026-11-25T23:27:20.409085+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -48490,6 +48490,144 @@
       ],
       "platforms": [
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "wulflo-storeinventory",
+      "slug": "wulflo-storeinventory",
+      "name": "StoreInventory",
+      "summary": "Aplicación local de gestión de inventario, pedidos y producción para marcas de indumentaria, con almacenamiento cifrado y sin conexión.",
+      "description": "Aplicación local de gestión de inventario, pedidos y producción para marcas de indumentaria, con almacenamiento cifrado y sin conexión.",
+      "translations": {
+        "en": {
+          "summary": "Aplicación local de gestión de inventario, pedidos y producción para marcas de indumentaria, con almacenamiento cifrado y sin conexión.",
+          "description": "Aplicación local de gestión de inventario, pedidos y producción para marcas de indumentaria, con almacenamiento cifrado y sin conexión."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/wulflo/StoreInventory/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/wulflo/StoreInventory",
+      "github_repo_id": "1435045484",
+      "source_updated_at": "2026-11-22T09:27:46Z",
+      "homepage_url": null,
+      "owner": "wulflo",
+      "default_branch": "main",
+      "source_commit_sha": "26db7cd89b371f03075dfe60d14ffb0eb76dba31",
+      "license_text": "MIT License\n\nCopyright (c) <AÑO> <TU NOMBRE O USUARIO>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android-app",
+        "inventory-management",
+        "linux-app",
+        "rust",
+        "store",
+        "windows-app"
+      ],
+      "latest_version": "v0.4.0",
+      "release_url": "https://github.com/wulflo/StoreInventory/releases/tag/v0.4.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wulflo-storeinventory-v0.4.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wulflo-storeinventory-v0.4.0/THIRD-PARTY-NOTICE-wulflo-storeinventory.txt",
+      "artifacts": [
+        {
+          "id": "e75475200d13f4a3385551abb7bdb4ebe242228cebf19166fed8e609f54079fe",
+          "filename": "app-universal-release.apk",
+          "original_filename": "app-universal-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "universal",
+          "version": "v0.4.0",
+          "size_bytes": 73771154,
+          "sha256": "e75475200d13f4a3385551abb7bdb4ebe242228cebf19166fed8e609f54079fe",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "9fccd9d11d340537817f8d9876c21c60d4b6b4f6aae7828178df11f7dcfd492a",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wulflo-storeinventory-v0.4.0/app-universal-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wulflo-storeinventory-v0.4.0"
+        },
+        {
+          "id": "6f01009a45ddf255c64862b273c671191b7b38ed336850ecc62b6c8d0602c05a",
+          "filename": "Inventario.Tienda_0.4.0_amd64.AppImage",
+          "original_filename": "Inventario.Tienda_0.4.0_amd64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.4.0",
+          "size_bytes": 86084088,
+          "sha256": "6f01009a45ddf255c64862b273c671191b7b38ed336850ecc62b6c8d0602c05a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wulflo-storeinventory-v0.4.0/Inventario.Tienda_0.4.0_amd64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wulflo-storeinventory-v0.4.0"
+        },
+        {
+          "id": "03335039bb703824912d3f4464c0a84c590df7c6b079c32100630329e1000d6d",
+          "filename": "Inventario.Tienda_0.4.0_amd64.deb",
+          "original_filename": "Inventario.Tienda_0.4.0_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.4.0",
+          "size_bytes": 8008284,
+          "sha256": "03335039bb703824912d3f4464c0a84c590df7c6b079c32100630329e1000d6d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wulflo-storeinventory-v0.4.0/Inventario.Tienda_0.4.0_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wulflo-storeinventory-v0.4.0"
+        },
+        {
+          "id": "d5cf8a0e9a717b41cf5a1c1854131fcfc2d5794826f91a0c718093b32b371dbe",
+          "filename": "Inventario.Tienda_0.4.0_x64-setup.exe",
+          "original_filename": "Inventario.Tienda_0.4.0_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.4.0",
+          "size_bytes": 4348340,
+          "sha256": "d5cf8a0e9a717b41cf5a1c1854131fcfc2d5794826f91a0c718093b32b371dbe",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wulflo-storeinventory-v0.4.0/Inventario.Tienda_0.4.0_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wulflo-storeinventory-v0.4.0"
+        },
+        {
+          "id": "244aef374873703c5c97f26a53dae67523f7281e1e2e7e0781d14ee7b0980181",
+          "filename": "Inventario.Tienda_0.4.0_x64_en-US.msi",
+          "original_filename": "Inventario.Tienda_0.4.0_x64_en-US.msi",
+          "platform": "windows",
+          "package_type": "Windows installer",
+          "architecture": "x86_64",
+          "version": "v0.4.0",
+          "size_bytes": 6295552,
+          "sha256": "244aef374873703c5c97f26a53dae67523f7281e1e2e7e0781d14ee7b0980181",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wulflo-storeinventory-v0.4.0/Inventario.Tienda_0.4.0_x64_en-US.msi",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wulflo-storeinventory-v0.4.0"
+        }
+      ],
+      "platforms": [
+        "android",
+        "linux",
         "windows"
       ]
     },
