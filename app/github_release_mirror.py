@@ -351,7 +351,7 @@ class GitHubReleaseMirror:
 
         slug = _safe_release_component(str(app.get("slug") or app.get("name") or "app"))
         version = _safe_release_component(str(app.get("latest_version") or "unknown"))
-        manifest, _ = self._read_catalog()
+        manifest, sha = self._read_catalog()
         existing = next((
             item for item in manifest.get("apps", [])
             if item.get("repository_url") == str(app.get("repository_url") or "")

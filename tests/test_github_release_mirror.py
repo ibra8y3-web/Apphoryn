@@ -230,6 +230,42 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
         self.assertTrue(mirror.has_recent_build_attempt("https://github.com/owner/tool", ref, adapter_revision="rev-2"))
         self.assertFalse(mirror.has_recent_build_attempt("https://github.com/owner/tool", ref, adapter_revision="rev-3"))
 
+    def test_duplicate_only_release_refresh_keeps_catalog_sha(self):
+        with tempfile.TemporaryDirectory() as folder:
+            artifact_path = Path(folder) / "tool.exe"
+            artifact_path.write_bytes(b"duplicate bytes already mirrored")
+            digest = hashlib.sha256(artifact_path.read_bytes()).hexdigest()
+            manifest = {"schema_version": 1, "apps": [{
+                "id": "owner-tool",
+                "slug": "owner-tool",
+                "name": "Tool",
+                "repository_url": "https://github.com/owner/tool",
+                "license_spdx": "MIT",
+                "license_eligible": True,
+                "artifacts": [{"sha256": digest, "platform": "windows"}],
+            }]}
+            mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn")
+            mirror._read_catalog = Mock(return_value=(manifest, "catalog-blob-sha"))
+            mirror._write_catalog = Mock()
+
+            result = mirror.publish_app({
+                "id": "owner-tool",
+                "slug": "owner-tool",
+                "name": "Tool",
+                "repository_url": "https://github.com/owner/tool",
+                "license_spdx": "MIT",
+                "license_eligible": True,
+            }, [{
+                "filename": "tool.exe",
+                "storage_path": str(artifact_path),
+                "sha256": digest,
+                "size_bytes": artifact_path.stat().st_size,
+            }])
+
+            self.assertEqual(result["already_present"], 1)
+            mirror._write_catalog.assert_called_once()
+            self.assertEqual(mirror._write_catalog.call_args.args[1], "catalog-blob-sha")
+
     def test_published_build_ref_is_never_requeued(self):
         manifest = {"schema_version": 1, "apps": [{
             "repository_url": "https://github.com/owner/tool", "license_spdx": "MIT",
