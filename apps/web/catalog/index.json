@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:32:01.171983+00:00",
+  "generated_at": "2026-11-25T19:32:11.435099+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -27237,6 +27237,65 @@
       ],
       "latest_version": "4.11.0",
       "release_url": "https://github.com/vkohaupt/vokoscreenNG/releases/tag/4.11.0",
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "tia8910-walletlens",
+      "slug": "tia8910-walletlens",
+      "artifacts": [],
+      "name": "Walletlens",
+      "summary": "Free crypto & stock portfolio tracker — live P&L, AI analysis, Magic Indicator, price alerts. No account. Privacy-first PWA.",
+      "description": "Free crypto & stock portfolio tracker — live P&L, AI analysis, Magic Indicator, price alerts. No account. Privacy-first PWA.",
+      "translations": {
+        "en": {
+          "summary": "Free crypto & stock portfolio tracker — live P&L, AI analysis, Magic Indicator, price alerts. No account. Privacy-first PWA.",
+          "description": "Free crypto & stock portfolio tracker — live P&L, AI analysis, Magic Indicator, price alerts. No account. Privacy-first PWA."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/tia8910/Walletlens/main/walletlens_source/release_package/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/tia8910/Walletlens",
+      "github_repo_id": "1213664171",
+      "source_updated_at": "2026-11-12T16:05:34Z",
+      "homepage_url": "https://walletlens.live/",
+      "owner": "tia8910",
+      "default_branch": "main",
+      "source_commit_sha": "0e1d02692ae62349cd1b91203ecb88bb489ccff7",
+      "license_text": "MIT License\n\nCopyright (c) 2024-2026 WalletLens Contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "security",
+      "topics": [
+        "ai-assistant",
+        "ai-finance",
+        "android-app",
+        "coins",
+        "crypto-tracker",
+        "fintech",
+        "gold",
+        "investment-tracker",
+        "local-first",
+        "net-worth",
+        "no-account",
+        "open-source",
+        "portfolio-tracker",
+        "privacy-first",
+        "pwa",
+        "react",
+        "silver",
+        "stock-tracker",
+        "zakat"
+      ],
+      "latest_version": "v7.0.0",
+      "release_url": "https://github.com/tia8910/Walletlens/releases/tag/v7.0.0",
       "platforms": [],
       "project_status": "source_available"
     },
