@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:05:59.342783+00:00",
+  "generated_at": "2026-11-25T19:06:13.526388+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -20815,6 +20815,88 @@
       "platforms": [
         "linux",
         "windows"
+      ]
+    },
+    {
+      "id": "ismael6499-remote-pocket",
+      "slug": "ismael6499-remote-pocket",
+      "name": "remote-pocket",
+      "summary": "Low-latency Android-to-Windows remote control with live screen streaming, trackpad, desktop keyboard, multi-monitor support, and automatic LAN discovery.",
+      "description": "Low-latency Android-to-Windows remote control with live screen streaming, trackpad, desktop keyboard, multi-monitor support, and automatic LAN discovery.",
+      "translations": {
+        "en": {
+          "summary": "Low-latency Android-to-Windows remote control with live screen streaming, trackpad, desktop keyboard, multi-monitor support, and automatic LAN discovery.",
+          "description": "Low-latency Android-to-Windows remote control with live screen streaming, trackpad, desktop keyboard, multi-monitor support, and automatic LAN discovery."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/28690814?v=4",
+      "repository_url": "https://github.com/ismael6499/remote-pocket",
+      "github_repo_id": "1413820917",
+      "source_updated_at": "2026-10-30T04:27:19Z",
+      "homepage_url": null,
+      "owner": "ismael6499",
+      "default_branch": "master",
+      "source_commit_sha": "6875870d07dfe2a08eaca72dcc3aca76781360c9",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Agustín Ismael Acosta\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "csharp",
+        "keyboard",
+        "lan",
+        "lan-discovery",
+        "low-latency",
+        "mouse",
+        "multi-monitor",
+        "nodejs",
+        "remote-control",
+        "remote-desktop",
+        "remote-input",
+        "remote-pc",
+        "screen-streaming",
+        "trackpad",
+        "udp-discovery",
+        "websocket",
+        "windows",
+        "windows-automation"
+      ],
+      "latest_version": "v1.0.6",
+      "release_url": "https://github.com/ismael6499/remote-pocket/releases/tag/v1.0.6",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ismael6499-remote-pocket-v1.0.6",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ismael6499-remote-pocket-v1.0.6/THIRD-PARTY-NOTICE-ismael6499-remote-pocket.txt",
+      "artifacts": [
+        {
+          "id": "f19925c796c761a98075d57543278566b1e9c1faad492ed0e0d0c4ef0b7b87f7",
+          "filename": "RemotePocket-v1.0.6.apk",
+          "original_filename": "RemotePocket-v1.0.6.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.6",
+          "size_bytes": 6434072,
+          "sha256": "f19925c796c761a98075d57543278566b1e9c1faad492ed0e0d0c4ef0b7b87f7",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "92288c0908d0c050140634315fd9cc1b7b20026241eb5f9b7d11faf57b480135",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ismael6499-remote-pocket-v1.0.6/RemotePocket-v1.0.6.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ismael6499-remote-pocket-v1.0.6"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
