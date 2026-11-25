@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:24:04.656420+00:00",
+  "generated_at": "2026-11-25T09:24:20.972735+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -2080,6 +2080,76 @@
           ],
           "requested_at": "2026-11-25T04:23:38.309026+00:00"
         }
+      ]
+    },
+    {
+      "id": "melodious-nub-fundflow",
+      "slug": "melodious-nub-fundflow",
+      "name": "FundFlow",
+      "summary": "A modern, privacy-focused, offline-first personal finance manager and budget planner app for Android.",
+      "description": "A modern, privacy-focused, offline-first personal finance manager and budget planner app for Android.",
+      "translations": {
+        "en": {
+          "summary": "A modern, privacy-focused, offline-first personal finance manager and budget planner app for Android.",
+          "description": "A modern, privacy-focused, offline-first personal finance manager and budget planner app for Android."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Melodious-nub/FundFlow/main/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/Melodious-nub/FundFlow",
+      "github_repo_id": "1315718007",
+      "source_updated_at": "2026-11-03T09:18:41Z",
+      "homepage_url": "https://melodious-nub.github.io/FundFlow/",
+      "owner": "Melodious-nub",
+      "default_branch": "main",
+      "source_commit_sha": "5b9d248e37b60a127c1470fd56190431903eb185",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Md. Shawon Talukder\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "android-app",
+        "budget-app",
+        "expense-tracker",
+        "fundflow",
+        "jetpack-compose",
+        "kotlin",
+        "offline-first",
+        "personal-finance"
+      ],
+      "latest_version": "v1.1.1",
+      "release_url": "https://github.com/Melodious-nub/FundFlow/releases/tag/v1.1.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-melodious-nub-fundflow-v1.1.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-melodious-nub-fundflow-v1.1.1/THIRD-PARTY-NOTICE-melodious-nub-fundflow.txt",
+      "artifacts": [
+        {
+          "id": "aec129fabe60127016d1c3cdea47c9ab5833890359d9c7637cb854de2166bb52",
+          "filename": "Fundflow_v1.1.1.apk",
+          "original_filename": "Fundflow_v1.1.1.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.1.1",
+          "size_bytes": 7717423,
+          "sha256": "aec129fabe60127016d1c3cdea47c9ab5833890359d9c7637cb854de2166bb52",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "669b8eef55eca28129e5ab9d29804ec7352ea5e3b84a1d6f8de379ec26625c28",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-melodious-nub-fundflow-v1.1.1/Fundflow_v1.1.1.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-melodious-nub-fundflow-v1.1.1"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
