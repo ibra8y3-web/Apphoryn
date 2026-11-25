@@ -5,6 +5,7 @@ import hashlib
 import json
 import re
 import urllib.parse
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Any
 
@@ -29,6 +30,56 @@ def electron_build_script(scripts: dict[str, Any], target: str) -> str | None:
         if isinstance(value, str) and value.strip():
             return name
     return None
+
+
+def dotnet_project_targets(project_path: str, project_xml: str) -> set[str]:
+    """Return desktop targets supported by an executable .NET project file."""
+    try:
+        root = ET.fromstring(project_xml)
+    except ET.ParseError:
+        return set()
+
+    properties: dict[str, list[str]] = {}
+    for element in root.iter():
+        tag = element.tag.rsplit("}", 1)[-1].casefold()
+        if tag in {"targetframework", "targetframeworks", "outputtype", "istestproject",
+                   "usewpf", "usewindowsforms", "usewinui"}:
+            properties.setdefault(tag, []).append((element.text or "").strip())
+
+    if any(value.casefold() in {"true", "1"} for value in properties.get("istestproject", [])):
+        return set()
+    output_types = {value.casefold() for value in properties.get("outputtype", []) if value}
+    if not output_types.intersection({"exe", "winexe"}):
+        return set()
+
+    frameworks = []
+    for key in ("targetframework", "targetframeworks"):
+        for value in properties.get(key, []):
+            frameworks.extend(part.strip().casefold() for part in value.split(";") if part.strip())
+    if not frameworks:
+        return set()
+
+    windows_only = (
+        "winexe" in output_types
+        or any(
+            value.casefold() in {"true", "1"}
+            for key in ("usewpf", "usewindowsforms", "usewinui")
+            for value in properties.get(key, [])
+        )
+    )
+    targets: set[str] = set()
+    for framework in frameworks:
+        if "-windows" in framework:
+            targets.add("windows")
+        elif "-linux" in framework:
+            targets.add("linux")
+        elif any(token in framework for token in ("-macos", "-osx")):
+            targets.add("macos")
+        elif windows_only:
+            targets.add("windows")
+        elif framework.startswith("net"):
+            targets.update(DESKTOP_TARGETS)
+    return targets
 
 
 def build_adapter_revision() -> str:
@@ -71,9 +122,19 @@ def detect_supported_build_targets(
     if has_gradle_wrapper and has_android_project:
         supported["android"] = "Gradle wrapper, Android manifest and Gradle project detected."
 
-    if any(path.lower().endswith(".csproj") for path in paths):
-        for target in DESKTOP_TARGETS:
-            supported[target] = ".NET project detected."
+    dotnet_projects = [path for path in paths if path.lower().endswith(".csproj")][:24]
+    for project_path in dotnet_projects:
+        encoded_path = urllib.parse.quote(project_path, safe="/")
+        try:
+            result = client.request(
+                f"/repos/{owner}/{repository}/contents/{encoded_path}?ref={safe_ref}"
+            )
+            raw = base64.b64decode(str(result.get("content") or "").replace("\\n", ""))
+            project_xml = raw.decode("utf-8", errors="replace")
+        except Exception:
+            continue
+        for target in dotnet_project_targets(project_path, project_xml):
+            supported.setdefault(target, f"Executable .NET target detected in {project_path}.")
 
     # A go.mod file alone does not make a repository an executable app.
     # Require a real package main file inside that exact module before scheduling builds.

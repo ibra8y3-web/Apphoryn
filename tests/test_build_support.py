@@ -2,7 +2,7 @@ import base64
 import json
 import unittest
 
-from app.build_support import detect_supported_build_targets
+from app.build_support import detect_supported_build_targets, dotnet_project_targets
 
 
 class FakeGitHub:
@@ -30,20 +30,45 @@ class FakeGitHub:
 
 
 class BuildSupportTests(unittest.TestCase):
-    def test_detects_android_dotnet_and_go_targets_from_real_build_files(self):
+    def test_detects_android_windows_only_dotnet_and_go_targets_from_real_build_files(self):
         github = FakeGitHub([
             "android/gradlew",
             "android/build.gradle.kts",
             "android/app/src/main/AndroidManifest.xml",
             "desktop/App.csproj",
             "tools/go.mod",
-        ])
+        ], source_files={
+            "desktop/App.csproj": (
+                "<Project Sdk='Microsoft.NET.Sdk'><PropertyGroup>"
+                "<OutputType>WinExe</OutputType><TargetFramework>net10.0-windows</TargetFramework>"
+                "</PropertyGroup></Project>"
+            )
+        })
         result = detect_supported_build_targets("owner", "repo", "main", github)
         self.assertEqual(result["android"], "Gradle wrapper, Android manifest and Gradle project detected.")
-        self.assertEqual(result["windows"], ".NET project detected.")
-        self.assertEqual(result["linux"], ".NET project detected.")
-        self.assertEqual(result["macos"], ".NET project detected.")
+        self.assertEqual(result["windows"], "Executable .NET target detected in desktop/App.csproj.")
+        self.assertNotIn("linux", result)
+        self.assertNotIn("macos", result)
         self.assertFalse(any("electron" in value.lower() for value in result.values()))
+
+    def test_dotnet_detector_skips_libraries_and_test_projects(self):
+        self.assertEqual(dotnet_project_targets(
+            "src/Library.csproj",
+            "<Project><PropertyGroup><TargetFramework>net10.0</TargetFramework>"
+            "<OutputType>Library</OutputType></PropertyGroup></Project>",
+        ), set())
+        self.assertEqual(dotnet_project_targets(
+            "tests/App.Tests.csproj",
+            "<Project><PropertyGroup><TargetFramework>net10.0</TargetFramework>"
+            "<OutputType>Exe</OutputType><IsTestProject>true</IsTestProject></PropertyGroup></Project>",
+        ), set())
+
+    def test_dotnet_detector_accepts_portable_executable_for_all_desktop_targets(self):
+        self.assertEqual(dotnet_project_targets(
+            "src/PortableTool.csproj",
+            "<Project><PropertyGroup><TargetFramework>net10.0</TargetFramework>"
+            "<OutputType>Exe</OutputType></PropertyGroup></Project>",
+        ), {"windows", "linux", "macos"})
 
     def test_detects_electron_only_when_a_packaging_script_exists(self):
         github = FakeGitHub(

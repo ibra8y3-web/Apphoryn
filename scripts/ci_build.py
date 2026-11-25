@@ -20,7 +20,7 @@ sys.path.insert(0, str(ROOT))
 from app.artifact_validation import ArtifactValidationError, validate_artifact
 from app.domain import canonical_repository_url, license_allows_redistribution, valid_git_ref
 from app.github_client import GitHubClient
-from app.build_support import electron_build_script
+from app.build_support import dotnet_project_targets, electron_build_script
 
 KNOWN_SUFFIXES = {".apk", ".exe", ".msi", ".msix", ".appx", ".appimage", ".deb", ".rpm", ".dmg", ".pkg", ".jar", ".bin", ".macosbin"}
 
@@ -129,22 +129,39 @@ def build_android(source: Path, output: Path) -> None:
 
 
 def build_dotnet(source: Path, output: Path, target: str) -> None:
-    projects = list(source.glob("**/*.csproj"))[:10]
+    projects = sorted(source.glob("**/*.csproj"), key=lambda path: (len(path.parts), str(path)))[:24]
     if not projects:
         raise RuntimeError("No .NET project found.")
     runtimes = {"windows": "win-x64", "linux": "linux-x64", "macos": "osx-x64"}
+    if target not in runtimes:
+        raise RuntimeError(f"Unsupported .NET target: {target}")
     rid = runtimes[target]
+    selected = []
     for project in projects:
+        try:
+            project_xml = project.read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            continue
+        relative_path = project.relative_to(source).as_posix()
+        if target in dotnet_project_targets(relative_path, project_xml):
+            selected.append(project)
+    if not selected:
+        raise RuntimeError(f"No executable .NET project supports the {target} target.")
+
+    for project in selected:
         published = output / project.stem
-        run(["dotnet", "publish", str(project), "-c", "Release", "-r", rid, "--self-contained", "true", "-p:UseAppHost=true", "-o", str(published)], cwd=source, timeout=2400)
-        if target == "linux":
+        run([
+            "dotnet", "publish", str(project), "-c", "Release", "-r", rid,
+            "--self-contained", "true", "-p:UseAppHost=true", "-o", str(published),
+        ], cwd=source, timeout=2400)
+        suffix = ".exe" if target == "windows" else (".macosbin" if target == "macos" else ".bin")
+        apphost = published / f"{project.stem}{suffix if suffix == '.exe' else ''}"
+        if target == "windows":
+            apphost = published / f"{project.stem}.exe"
+        elif target in {"linux", "macos"}:
             apphost = published / project.stem
-            if apphost.is_file():
-                shutil.copy2(apphost, output / f"{project.stem}.bin")
-        elif target == "macos":
-            apphost = published / project.stem
-            if apphost.is_file():
-                shutil.copy2(apphost, output / f"{project.stem}.macosbin")
+        if apphost.is_file():
+            shutil.copy2(apphost, output / f"{project.stem}{suffix}")
 
 
 def build_go(source: Path, output: Path, target: str) -> None:
