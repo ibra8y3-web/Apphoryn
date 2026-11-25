@@ -6,6 +6,34 @@ from app.ai_descriptions import DescriptionGenerator, fallback_project_classific
 
 
 class AiDescriptionTests(unittest.TestCase):
+    def test_github_actions_uses_railway_ai_bridge_without_repository_secrets(self):
+        generated = {
+            "summary": "A verified desktop utility.",
+            "description": "A description from Apphoryn's Railway AI service.",
+            "generated_by_ai": "true",
+            "ai_provider": "openrouter",
+            "ai_model": "openrouter/free",
+            "project_kind": "application",
+            "build_recommended": True,
+        }
+        with (
+            patch.dict("os.environ", {"APPHORYN_AI_SERVICE_URL": "https://apphoryn-production.up.railway.app"}),
+            patch("app.ai_descriptions.call_apphoryn_internal_api", return_value=generated) as remote,
+            patch("app.ai_descriptions.ai_router.has_configured_ai", return_value=False),
+        ):
+            result = DescriptionGenerator().generate(
+                name="Example Utility",
+                owner="example",
+                description="A desktop utility.",
+                topics=["desktop-app"],
+                readme_excerpt="Install the desktop application.",
+                category="utility",
+            )
+        self.assertEqual(result["ai_provider"], "openrouter")
+        self.assertEqual(result["generated_by_ai"], "true")
+        remote.assert_called_once()
+        self.assertEqual(remote.call_args.args[0], "/api/v1/internal/github-actions/catalog-description")
+
     def test_fallback_marks_reusable_sdk_as_library_and_never_builds_it(self):
         result = fallback_project_classification(
             name="Widget SDK",
