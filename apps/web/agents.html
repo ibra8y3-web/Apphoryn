@@ -45,7 +45,8 @@
           <label>الأولوية
             <select id="priority"><option value="5">عادية</option><option value="8">مرتفعة</option><option value="10">عاجلة</option><option value="2">منخفضة</option></select>
           </label>
-          <label class="check"><input id="externalApproval" type="checkbox"><span>أوافق على الاستيراد الحقيقي أو إرسال مهمة بناء إلى GitHub Actions عند الحاجة</span></label>
+          <label class="check"><input id="externalApproval" type="checkbox"><span>أوافق على استيراد الملفات أو تشغيل فحص/بناء GitHub Actions عند الحاجة</span></label>
+          <label class="check"><input id="codeApproval" type="checkbox"><span>أوافق على تعديل الكود وإنشاء Pull Request للمراجعة (لا تعديل مباشر على main)</span></label>
           <button type="submit" class="primary" id="submitTask">إرسال المهمة</button>
         </div>
         <p class="muted">من دون تحديد الموافقة، لن ينفذ النظام استيرادًا أو تشغيل بناء خارجيًا. ولا يسمح هذا الخيار باستخدام نموذج مدفوع.</p>
@@ -76,6 +77,25 @@
         <div class="panel-head"><div><span class="eyebrow">SHARED MEMORY</span><h2>سجل الذاكرة المشتركة</h2><p>آخر القرارات والسياقات المحفوظة في قاعدة البيانات الدائمة.</p></div></div>
         <div id="memoryList" class="stack"><p class="muted">لا توجد ذاكرة بعد.</p></div>
       </section>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><span class="eyebrow">RESOURCE ORCHESTRATOR</span><h2>أجهزة وخوادم التشغيل</h2><p>المحلي وGitHub Actions وخوادم النماذج وقواعد البيانات الخارجية.</p></div></div>
+      <div id="resourcesList" class="provider-list"><p class="muted">اتصل لعرض موارد التشغيل.</p></div>
+      <div class="divider"></div>
+      <div class="panel-head"><div><span class="eyebrow">ISOLATED OPEN-SOURCE SCAN</span><h2>تشغيل أدوات الفحص على GitHub</h2><p>Semgrep وTrivy وOSV-Scanner وSyft وGitleaks داخل جهاز مؤقت. لا يتم تشغيل أكواد المشروع المستهدف.</p></div></div>
+      <form id="scanForm">
+        <label for="scanRepository">رابط مستودع عام</label>
+        <input id="scanRepository" type="url" placeholder="https://github.com/owner/repository" required>
+        <label for="scanRef">الفرع أو الوسم أو Commit</label>
+        <input id="scanRef" value="HEAD" maxlength="180" required>
+        <label class="check"><input id="scanApproval" type="checkbox"><span>أوافق على تشغيل كمبيوتر GitHub Actions مؤقتًا للمستودع العام المذكور</span></label>
+        <button type="submit" class="secondary">إرسال فحص أمني</button>
+        <p id="scanMessage" class="notice"></p>
+      </form>
+      <div class="divider"></div>
+      <div class="panel-head"><div><span class="eyebrow">USAGE ANALYTICS</span><h2>مشاهدات وتنزيلات التطبيقات</h2><p>سجل محلي دائم مع مزامنة تلقائية إلى PostgreSQL أو Cloudflare D1 عند ضبط الاتصال.</p></div><button id="syncAnalytics" class="secondary">مزامنة الآن</button></div>
+      <div id="analyticsSummary" class="stack"><p class="muted">لا توجد بيانات تحليلات بعد.</p></div>
     </section>
 
     <section class="panel">
