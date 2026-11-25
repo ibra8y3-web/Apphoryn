@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T18:43:09.464802+00:00",
+  "generated_at": "2026-11-25T18:43:25.033688+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -22400,6 +22400,89 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "pletch-wrustty",
+      "slug": "pletch-wrustty",
+      "name": "wRusTTY",
+      "summary": "Lightweight SSH/Telnet/Serial client for Windows 11 and Android (Tauri + Rust + React + Ghostty wasm)",
+      "description": "Lightweight SSH/Telnet/Serial client for Windows 11 and Android (Tauri + Rust + React + Ghostty wasm)",
+      "translations": {
+        "en": {
+          "summary": "Lightweight SSH/Telnet/Serial client for Windows 11 and Android (Tauri + Rust + React + Ghostty wasm)",
+          "description": "Lightweight SSH/Telnet/Serial client for Windows 11 and Android (Tauri + Rust + React + Ghostty wasm)"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/pletch/wRusTTY/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/pletch/wRusTTY",
+      "github_repo_id": "1301976605",
+      "source_updated_at": "2026-11-10T01:15:17Z",
+      "homepage_url": null,
+      "owner": "pletch",
+      "default_branch": "main",
+      "source_commit_sha": "95acfb11480387edaf3d624f79bb02fa93241f6c",
+      "license_text": "MIT License\n\nCopyright (c) 2026 pletch\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android-app",
+        "ghostty",
+        "putty-alternative",
+        "ssh-client"
+      ],
+      "latest_version": "v0.7.2",
+      "release_url": "https://github.com/pletch/wRusTTY/releases/tag/v0.7.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pletch-wrustty-v0.7.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pletch-wrustty-v0.7.2/THIRD-PARTY-NOTICE-pletch-wrustty.txt",
+      "artifacts": [
+        {
+          "id": "ae5cc9de978d565c2108ade78567a21555815f5b750b57f9c12fd8f5bd441c5e",
+          "filename": "wRusTTY_0.7.2_x64-setup.exe",
+          "original_filename": "wRusTTY_0.7.2_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.7.2",
+          "size_bytes": 5997439,
+          "sha256": "ae5cc9de978d565c2108ade78567a21555815f5b750b57f9c12fd8f5bd441c5e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pletch-wrustty-v0.7.2/wRusTTY_0.7.2_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pletch-wrustty-v0.7.2"
+        },
+        {
+          "id": "6cb5db31ac66be8c036334e5d18bdde3aa13273b1e3f010af8e7318ae7c82bb6",
+          "filename": "wRusTTY_0.7.2_x64_en-US.msi",
+          "original_filename": "wRusTTY_0.7.2_x64_en-US.msi",
+          "platform": "windows",
+          "package_type": "Windows installer",
+          "architecture": "x86_64",
+          "version": "v0.7.2",
+          "size_bytes": 7856128,
+          "sha256": "6cb5db31ac66be8c036334e5d18bdde3aa13273b1e3f010af8e7318ae7c82bb6",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pletch-wrustty-v0.7.2/wRusTTY_0.7.2_x64_en-US.msi",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pletch-wrustty-v0.7.2"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
