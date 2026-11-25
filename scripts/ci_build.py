@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -94,18 +95,59 @@ def build_dotnet(source: Path, output: Path, target: str) -> None:
 
 
 def build_go(source: Path, output: Path, target: str) -> None:
-    projects = list(source.glob("**/go.mod"))[:10]
+    projects = [
+        path for path in source.glob("**/go.mod")
+        if not any(part in {"vendor", ".git", "node_modules", "build"} for part in path.parts)
+    ][:10]
     if not projects:
         raise RuntimeError("No Go module found.")
     env = os.environ.copy()
     env["CGO_ENABLED"] = "0"
     env["GOOS"] = {"windows": "windows", "linux": "linux", "macos": "darwin"}[target]
     env["GOARCH"] = "amd64"
+    built = 0
+
     for module in projects:
-        dest = output / (module.parent.name + (".exe" if target == "windows" else (".macosbin" if target == "macos" else ".bin")))
-        command = ["go", "build", "-trimpath", "-ldflags=-s -w", "-o", str(dest), "."]
-        print("+", " ".join(command), flush=True)
-        subprocess.run(command, cwd=module.parent, env=env, check=True, timeout=1800)
+        module_root = module.parent
+        nested_roots = {
+            other.parent.resolve()
+            for other in projects
+            if other.parent != module_root and module_root in other.parent.parents
+        }
+        main_packages: set[Path] = set()
+        for source_file in module_root.rglob("*.go"):
+            if source_file.name.endswith("_test.go"):
+                continue
+            relative_parts = source_file.relative_to(module_root).parts
+            if any(part in {"vendor", ".git", "node_modules", "build"} for part in relative_parts):
+                continue
+            if any(root in source_file.resolve().parents for root in nested_roots):
+                continue
+            try:
+                source_text = source_file.read_text(encoding="utf-8", errors="replace")[:128 * 1024]
+            except OSError:
+                continue
+            if re.search(r"(?m)^\\s*package\\s+main(?:\\s|$)", source_text):
+                main_packages.add(source_file.parent)
+
+        for package_dir in sorted(main_packages):
+            relative = package_dir.relative_to(module_root)
+            package_arg = "." if relative == Path(".") else "./" + relative.as_posix()
+            base_name = module_root.name or "app"
+            if relative != Path("."):
+                base_name += "-" + "-".join(relative.parts)
+            suffix = ".exe" if target == "windows" else (".macosbin" if target == "macos" else ".bin")
+            dest = output / f"{base_name}{suffix}"
+            command = ["go", "build", "-trimpath", "-ldflags=-s -w", "-o", str(dest), package_arg]
+            print("+", " ".join(command), flush=True)
+            subprocess.run(command, cwd=module_root, env=env, check=True, timeout=1800)
+            built += 1
+
+    if not built:
+        raise RuntimeError(
+            "Go modules were found, but no executable package (package main) exists. "
+            "A library or empty module is not built as a standalone application."
+        )
 
 
 def build_electron(source: Path, output: Path) -> None:

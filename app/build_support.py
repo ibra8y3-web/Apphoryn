@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import base64
 import json
+import re
 import urllib.parse
 from typing import Any
 
@@ -39,9 +40,44 @@ def detect_supported_build_targets(
         for target in DESKTOP_TARGETS:
             supported[target] = ".NET project detected."
 
-    if any(path.rsplit("/", 1)[-1] == "go.mod" for path in paths):
-        for target in DESKTOP_TARGETS:
-            supported.setdefault(target, "Go module detected.")
+    # A go.mod file alone does not make a repository an executable app.
+    # Require a real package main file inside that exact module before scheduling builds.
+    go_module_roots = {
+        path.rsplit("/", 1)[0] if "/" in path else ""
+        for path in paths if path.rsplit("/", 1)[-1] == "go.mod"
+    }
+    go_sources = [
+        path for path in paths
+        if path.lower().endswith(".go")
+        and not path.lower().endswith("_test.go")
+        and not any(part in {"vendor", ".git", "node_modules", "build"} for part in path.split("/"))
+    ]
+    checked_go_sources = 0
+    for source_path in sorted(go_sources, key=lambda p: ("/cmd/" not in f"/{p}", "main.go" not in p.lower(), len(p))):
+        source_dir = source_path.rsplit("/", 1)[0] if "/" in source_path else ""
+        matching_roots = [
+            root for root in go_module_roots
+            if source_dir == root or (root and source_dir.startswith(root + "/")) or not root
+        ]
+        if not matching_roots:
+            continue
+        owning_root = max(matching_roots, key=len)
+        encoded_path = urllib.parse.quote(source_path, safe="/")
+        try:
+            result = client.request(
+                f"/repos/{owner}/{repository}/contents/{encoded_path}?ref={safe_ref}"
+            )
+            raw = base64.b64decode(str(result.get("content") or "").replace("\\n", ""))
+            source_text = raw[:128 * 1024].decode("utf-8", errors="replace")
+        except Exception:
+            continue
+        checked_go_sources += 1
+        if re.search(r"(?m)^\\s*package\\s+main(?:\\s|$)", source_text):
+            for target in DESKTOP_TARGETS:
+                supported.setdefault(target, f"Go executable package detected in {owning_root or '.'}.")
+            break
+        if checked_go_sources >= 12:
+            break
 
     package_files = [
         path for path in paths
