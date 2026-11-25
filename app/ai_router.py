@@ -512,6 +512,97 @@ def test_provider(provider: str) -> dict[str, Any]:
                 "latency_ms": latency, "reason": f"{type(exc).__name__}: {str(exc)[:500]}"}
 
 
+def _candidate_json(candidate: Candidate, messages: list[dict[str, str]]) -> dict[str, Any]:
+    if candidate.kind == "gemini":
+        return _gemini(candidate, messages)
+    if candidate.kind == "cloudflare":
+        return _cloudflare(candidate, messages)
+    return _openai(candidate, messages)
+
+
+def benchmark_models(max_models: int = 3) -> dict[str, Any]:
+    """Run a small deterministic quality/latency benchmark on local or catalog-confirmed-free models only."""
+    from .agent_system import STORE
+
+    safe_classes = {
+        "local_open_source", "provider_free_tier_confirmed",
+        "free_variant", "free_router", "zero_priced_catalog",
+    }
+    candidates, providers = discover_models(force=True)
+    candidates = [candidate for candidate in candidates if candidate.free_class in safe_classes]
+    candidates = _rank_candidates(candidates, "niebex")[:max(1, min(int(max_models), 5))]
+    cases = [
+        {
+            "id": "arithmetic",
+            "messages": [
+                {"role": "system", "content": "Return exactly one JSON object with integer key answer. No markdown."},
+                {"role": "user", "content": "Calculate 19 + 23. Return {\"answer\":42}."},
+            ],
+        },
+        {
+            "id": "arabic",
+            "messages": [
+                {"role": "system", "content": "Return exactly one JSON object with string key text. No markdown."},
+                {"role": "user", "content": "Write the exact Arabic greeting phrase مرحبا بالعالم in the text value."},
+            ],
+        },
+        {
+            "id": "coding",
+            "messages": [
+                {"role": "system", "content": "Return exactly one JSON object with string key code. No markdown."},
+                {"role": "user", "content": "Write a Python function named add with parameters a and b that returns a + b."},
+            ],
+        },
+    ]
+    results = []
+    for candidate in candidates:
+        checks: dict[str, bool] = {}
+        latencies = []
+        for case in cases:
+            started = time.monotonic()
+            try:
+                answer = _candidate_json(candidate, case["messages"])
+                latency = int((time.monotonic() - started) * 1000)
+                latencies.append(latency)
+                if case["id"] == "arithmetic":
+                    passed = answer.get("answer") == 42
+                elif case["id"] == "arabic":
+                    value = str(answer.get("text") or "").replace(" ", "")
+                    passed = "مرحبا" in value and "العالم" in value
+                else:
+                    value = str(answer.get("code") or "").casefold().replace(" ", "")
+                    passed = "defadd(" in value and "returna+b" in value
+                checks[case["id"]] = bool(passed)
+                _record_provider_event(candidate.provider, candidate.model, True, latency)
+            except Exception as exc:
+                latency = int((time.monotonic() - started) * 1000)
+                latencies.append(latency)
+                checks[case["id"]] = False
+                status = exc.status if isinstance(exc, ProviderError) else None
+                _record_provider_event(candidate.provider, candidate.model, False, latency, status, str(exc))
+        score = sum(1 for passed in checks.values() if passed) / len(cases)
+        average_latency = int(sum(latencies) / len(latencies)) if latencies else 0
+        STORE.record_model_evaluation(candidate.provider, candidate.model, "general",
+                                       score, average_latency, checks)
+        results.append({
+            "provider": candidate.provider,
+            "model": candidate.model,
+            "free_class": candidate.free_class,
+            "score": round(score, 3),
+            "average_latency_ms": average_latency,
+            "checks": checks,
+            "requests_sent": len(cases),
+        })
+    return {
+        "free_only_benchmark": True,
+        "paid_models_tested": 0,
+        "models_tested": len(results),
+        "results": results,
+        "note": "Three deterministic JSON tasks were executed per selected model. This measures these small test cases, not broad model intelligence.",
+        "providers": providers,
+    }
+
+
 def public_model_catalog(force: bool = False) -> dict[str, Any]:
     models, providers = discover_models(force)
     return {
@@ -520,5 +611,6 @@ def public_model_catalog(force: bool = False) -> dict[str, Any]:
         "spending_protection_enabled": not _ALLOW_PAID,
         "models": [m.public() for m in models],
         "providers": providers,
+        "local_model_preference": _PREFER_LOCAL,
         "warning": "Model APIs do not reveal every account's billing tier or remaining free quota. Usage and quota values are never fabricated; paid traffic remains blocked unless explicitly authorized.",
     }
