@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:55:15.473891+00:00",
+  "generated_at": "2026-11-25T21:55:32.682451+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -41210,6 +41210,79 @@
           "signer_certificate_sha256": "8c9056c949c378af6501c984d2c39fe078be57d9cef9e84ffd2f8ac32e26e1ec",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gigashalgham-turnypt-v1.6.0-beta.8/Turnypt-v1.6.0-beta.8-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gigashalgham-turnypt-v1.6.0-beta.8"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "darknamatv-tv",
+      "slug": "darknamatv-tv",
+      "name": "Tv",
+      "summary": "Dark TV تلویزیون آنلاین",
+      "description": "Dark TV تلویزیون آنلاین",
+      "translations": {
+        "en": {
+          "summary": "Dark TV تلویزیون آنلاین",
+          "description": "Dark TV تلویزیون آنلاین"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/DarkNamaTv/Tv/main/app/src/main/res/drawable/app_icon.png",
+      "repository_url": "https://github.com/DarkNamaTv/Tv",
+      "github_repo_id": "1451562411",
+      "source_updated_at": "2026-11-19T17:09:24Z",
+      "homepage_url": "https://github.com/DarkNamaTv/Tv/releases",
+      "owner": "DarkNamaTv",
+      "default_branch": "main",
+      "source_commit_sha": "01403551438101e0987b01cf0ffbda57c4ec131d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 DarkNamaTv\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "android-tv",
+        "app",
+        "application",
+        "farsi",
+        "farsi-language",
+        "iptv",
+        "iran",
+        "persian"
+      ],
+      "latest_version": "1.0.0",
+      "release_url": "https://github.com/DarkNamaTv/Tv/releases/tag/1.0.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-darknamatv-tv-1.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-darknamatv-tv-1.0.0/THIRD-PARTY-NOTICE-darknamatv-tv.txt",
+      "artifacts": [
+        {
+          "id": "dea1951c7b592b0d9ee933e21ace473e65123f08889d3588d4e8c614dcd0123d",
+          "filename": "DarkTV-1.0.0.apk",
+          "original_filename": "DarkTV-1.0.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "1.0.0",
+          "size_bytes": 3458304,
+          "sha256": "dea1951c7b592b0d9ee933e21ace473e65123f08889d3588d4e8c614dcd0123d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "09509923d3a61bcdbff303b4fd94f39e01196872fe17a13bf0a5098b4f507a41",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-darknamatv-tv-1.0.0/DarkTV-1.0.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-darknamatv-tv-1.0.0"
         }
       ],
       "platforms": [
