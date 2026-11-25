@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T11:12:45.490066+00:00",
+  "generated_at": "2026-11-25T11:13:05.784447+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -15243,6 +15243,76 @@
       ],
       "platforms": [
         "macos"
+      ]
+    },
+    {
+      "id": "muhammadhaseebiqbal-dev-screen-recorder",
+      "slug": "muhammadhaseebiqbal-dev-screen-recorder",
+      "name": "Screen-Recorder",
+      "summary": "A pristine material-you screen recorder with mic and internal audio toggles.",
+      "description": "A pristine material-you screen recorder with mic and internal audio toggles.",
+      "translations": {
+        "en": {
+          "summary": "A pristine material-you screen recorder with mic and internal audio toggles.",
+          "description": "A pristine material-you screen recorder with mic and internal audio toggles."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/muhammadhaseebiqbal-dev/Screen-Recorder/master/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/muhammadhaseebiqbal-dev/Screen-Recorder",
+      "github_repo_id": "1189442267",
+      "source_updated_at": "2026-11-25T03:19:15Z",
+      "homepage_url": null,
+      "owner": "muhammadhaseebiqbal-dev",
+      "default_branch": "master",
+      "source_commit_sha": "58df1f0bd336cc2ad416fdcac49e6739a4557020",
+      "license_text": "MIT License\n\nCopyright (c) 2024 Muhammad Haseeb\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "opensource",
+        "opensourcescreenrecorder",
+        "quickaccess",
+        "recorder",
+        "samsung",
+        "screen",
+        "screenrecorder",
+        "utility-application"
+      ],
+      "latest_version": "v5.1",
+      "release_url": "https://github.com/muhammadhaseebiqbal-dev/Screen-Recorder/releases/tag/v5.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-muhammadhaseebiqbal-dev-screen-recorder-v5.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-muhammadhaseebiqbal-dev-screen-recorder-v5.1/THIRD-PARTY-NOTICE-muhammadhaseebiqbal-dev-screen-recorder.txt",
+      "artifacts": [
+        {
+          "id": "c05ce33e20b4356441a26185327aabbbe2d0f68d79e4e3cb8ce74db4727e420a",
+          "filename": "app-release.apk",
+          "original_filename": "app-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v5.1",
+          "size_bytes": 6483495,
+          "sha256": "c05ce33e20b4356441a26185327aabbbe2d0f68d79e4e3cb8ce74db4727e420a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "1dfe42c1b2f04ac3ca57ed395c182edc59c4b13950fda28371d9a5dca302d0e2",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-muhammadhaseebiqbal-dev-screen-recorder-v5.1/app-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-muhammadhaseebiqbal-dev-screen-recorder-v5.1"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
