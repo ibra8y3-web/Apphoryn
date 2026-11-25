@@ -61,7 +61,7 @@ class GlobalScoutTests(unittest.TestCase):
         self.assertFalse(known_current(changed, by_id, by_url))
         self.assertFalse(known_current(changed, {}, {}))
 
-    def test_repository_with_missing_arabic_description_is_revisited(self):
+    def test_missing_arabic_translation_does_not_force_source_reimport(self):
         existing = {
             "github_repo_id": "321",
             "repository_url": "https://github.com/owner/untranslated",
@@ -77,7 +77,9 @@ class GlobalScoutTests(unittest.TestCase):
         }
         by_id = {"321": existing}
         by_url = {repo_key(existing["repository_url"]): existing}
-        self.assertFalse(known_current(candidate, by_id, by_url))
+        # Translation is handled by the translation-only queue; source freshness
+        # must not re-download/re-import the app or replace its published wording.
+        self.assertTrue(known_current(candidate, by_id, by_url))
 
     def test_known_repository_reopens_after_build_adapter_revision_changes(self):
         existing = {
