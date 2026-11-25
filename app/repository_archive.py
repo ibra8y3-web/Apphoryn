@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import base64
+import hashlib
 import json
 import os
 import re
@@ -50,22 +51,27 @@ def classify_application(
     def has(*names: str) -> bool:
         return any(name.lower() in lower_paths for name in names)
 
+    def has_filename(*names: str) -> bool:
+        endings = tuple("/" + name.lower().lstrip("/") for name in names)
+        exact = {name.lower().lstrip("/") for name in names}
+        return any(path.endswith(endings) or path in exact for path in lower_paths)
+
     def prefix(*names: str) -> bool:
         return any(any(path.startswith(name.lower().rstrip("/") + "/") for path in lower_paths) for name in names)
 
     manifests = {
-        "android": has("androidmanifest.xml") and any(path.endswith(("build.gradle", "build.gradle.kts")) for path in lower_paths),
+        "android": has_filename("AndroidManifest.xml") and any(path.endswith(("build.gradle", "build.gradle.kts")) for path in lower_paths),
         "flutter": has("pubspec.yaml") and has("lib/main.dart"),
         "react_native": has("package.json") and (has("app.json") or prefix("android", "ios")) and any("react-native" in text for _ in (0,)),
         "electron": has("package.json") and (has("electron-builder.yml", "electron-builder.yaml") or any(path.endswith(("main.cjs", "main.js", "electron.js")) for path in lower_paths) or "electron" in text),
         "tauri": (has("src-tauri/tauri.conf.json", "src-tauri/tauri.conf.json5") or (has("tauri.conf.json") and prefix("src-tauri"))) and has("src-tauri/cargo.toml", "cargo.toml"),
         "godot": has("project.godot"),
         "unity": prefix("assets", "projectsettings") and has("projectsettings/projectversion.txt"),
-        "dotnet": any(path.endswith(".sln") or path.endswith(".csproj") for path in lower_paths) and has("program.cs"),
+        "dotnet": any(path.endswith(".sln") or path.endswith(".csproj") for path in lower_paths) and has_filename("Program.cs"),
         "rust_cli": has("cargo.toml") and (has("src/main.rs") or prefix("src/bin")),
         "go_cli": has("go.mod") and (has("main.go") or prefix("cmd")),
         "python_app": (has("pyproject.toml") or has("setup.py")) and (
-            has("__main__.py", "main.py") or prefix("src")
+            has_filename("__main__.py", "main.py") or prefix("src")
         ) and any(term in text for term in ("application", "desktop app", "command line", "command-line", "cli tool", "gui", "terminal app")),
         "web_app": has("package.json") and (
             has("index.html") or has("src/main.ts", "src/main.tsx", "src/main.js", "src/main.jsx", "src/app.tsx")
@@ -202,7 +208,7 @@ class RepositoryArchive:
         raw_id = candidate.get("id") or candidate.get("github_repo_id")
         if raw_id is not None and str(raw_id).isdigit():
             return str(raw_id), str(raw_id)
-        return repository_url.rstrip("/").lower(), None
+        return hashlib.sha256(repository_url.rstrip("/").lower().encode("utf-8")).hexdigest(), None
 
     def enqueue_batch(self, candidates: list[dict[str, Any]]) -> dict[str, int]:
         inserted = 0
