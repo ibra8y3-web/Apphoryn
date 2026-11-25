@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:54:45.002254+00:00",
+  "generated_at": "2026-11-25T21:55:15.473891+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -7055,6 +7055,78 @@
       "platforms": [
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "nivedv1-chargescope",
+      "slug": "nivedv1-chargescope",
+      "name": "ChargeScope",
+      "summary": "Android USB-C charging and USB Power Delivery telemetry",
+      "description": "Android USB-C charging and USB Power Delivery telemetry",
+      "translations": {
+        "en": {
+          "summary": "Android USB-C charging and USB Power Delivery telemetry",
+          "description": "Android USB-C charging and USB Power Delivery telemetry"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/182140860?v=4",
+      "repository_url": "https://github.com/NivedV1/ChargeScope",
+      "github_repo_id": "1469102380",
+      "source_updated_at": "2026-11-24T04:55:44Z",
+      "homepage_url": null,
+      "owner": "NivedV1",
+      "default_branch": "main",
+      "source_commit_sha": "8a0e11b6ba55d65dcd9dbc10bb4a0c3b7bc66ac8",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Nived Chandran\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-root",
+        "battery-monitor",
+        "charging",
+        "mit-license",
+        "qualcomm",
+        "telemetry",
+        "usb-c",
+        "usb-pd"
+      ],
+      "latest_version": "v1.3.0",
+      "release_url": "https://github.com/NivedV1/ChargeScope/releases/tag/v1.3.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-nivedv1-chargescope-v1.3.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-nivedv1-chargescope-v1.3.0/THIRD-PARTY-NOTICE-nivedv1-chargescope.txt",
+      "artifacts": [
+        {
+          "id": "5ab572b7f62f1e709d56a2f4a1e5a45564b5f50c7ba3e02be4a93a313d37555b",
+          "filename": "ChargeScope.apk",
+          "original_filename": "ChargeScope.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.3.0",
+          "size_bytes": 41960,
+          "sha256": "5ab572b7f62f1e709d56a2f4a1e5a45564b5f50c7ba3e02be4a93a313d37555b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "8b9807c6a98bc03c62cc00e2ead2b3064fbc04d5d97c257591f4311aaa3a6ec7",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-nivedv1-chargescope-v1.3.0/ChargeScope.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-nivedv1-chargescope-v1.3.0"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
