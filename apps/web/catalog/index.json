@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T17:42:07.733174+00:00",
+  "generated_at": "2026-11-25T17:42:24.127906+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -8036,7 +8036,7 @@
         }
       },
       "description_translations": {},
-      "translation_status": "english_only",
+      "translation_status": "pending",
       "ai_provider": null,
       "ai_model": null,
       "icon_url": "https://raw.githubusercontent.com/yogeshpaliyal/Halo/main/fastlane/metadata/android/en-US/images/icon.png",
