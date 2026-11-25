@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:15:38.006359+00:00",
+  "generated_at": "2026-11-25T19:16:13.496599+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -1450,6 +1450,87 @@
           "signer_certificate_sha256": "b974d0e68e03d943e6909d465a81a2fe41de76e312e702929dc898ea3475d5c1",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-celestiamobile-androidcelestia-26.11.0/celestia-26.11.0.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-celestiamobile-androidcelestia-26.11.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "sanuu7-androidharness",
+      "slug": "sanuu7-androidharness",
+      "name": "AndroidHarness",
+      "summary": "Android Harness AI Coding Agent Native app for mobile, No Root No PC",
+      "description": "Android Harness AI Coding Agent Native app for mobile, No Root No PC",
+      "translations": {
+        "en": {
+          "summary": "Android Harness AI Coding Agent Native app for mobile, No Root No PC",
+          "description": "Android Harness AI Coding Agent Native app for mobile, No Root No PC"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Sanuu7/AndroidHarness/main/.github/assets/icon.png",
+      "repository_url": "https://github.com/Sanuu7/AndroidHarness",
+      "github_repo_id": "1344324855",
+      "source_updated_at": "2026-11-25T17:39:47Z",
+      "homepage_url": "https://androidharness.pages.dev/",
+      "owner": "Sanuu7",
+      "default_branch": "main",
+      "source_commit_sha": "ccf421f73518642acc8f2d454b7e8e53805c8a86",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Sanuu7\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "agentic-ai",
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "ai-coding",
+        "ai-tools",
+        "android",
+        "android-app",
+        "android-application",
+        "android-development",
+        "app",
+        "coding",
+        "coding-agent",
+        "coding-agents",
+        "harness",
+        "harness-ai",
+        "shizuku",
+        "shizuku-android",
+        "shizuku-app"
+      ],
+      "latest_version": "v4.1-release",
+      "release_url": "https://github.com/Sanuu7/AndroidHarness/releases/tag/v4.1-release",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sanuu7-androidharness-v4.1-release",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sanuu7-androidharness-v4.1-release/THIRD-PARTY-NOTICE-sanuu7-androidharness.txt",
+      "artifacts": [
+        {
+          "id": "425078c8011958ba82e7cb850e5d716a4ee7eb38f3ceda0cde91d9bbd79629dc",
+          "filename": "app-release.apk",
+          "original_filename": "app-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v4.1-release",
+          "size_bytes": 113042486,
+          "sha256": "425078c8011958ba82e7cb850e5d716a4ee7eb38f3ceda0cde91d9bbd79629dc",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "e0f24b49c00ff7a02542bae0149c944062b96f307bb595530e951714c82e1cba",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sanuu7-androidharness-v4.1-release/app-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sanuu7-androidharness-v4.1-release"
         }
       ],
       "platforms": [
