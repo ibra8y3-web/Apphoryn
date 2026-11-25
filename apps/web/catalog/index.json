@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:38:32.881611+00:00",
+  "generated_at": "2026-11-25T09:38:54.661735+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -2869,6 +2869,83 @@
           ],
           "requested_at": "2026-11-25T04:23:38.309026+00:00"
         }
+      ]
+    },
+    {
+      "id": "matthewsaintbull-freenapse",
+      "slug": "matthewsaintbull-freenapse",
+      "name": "freenapse",
+      "summary": "Configure a Razer mouse on Windows without Synapse",
+      "description": "Configure a Razer mouse on Windows without Synapse",
+      "translations": {
+        "en": {
+          "summary": "Configure a Razer mouse on Windows without Synapse",
+          "description": "Configure a Razer mouse on Windows without Synapse"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/MatthewSaintBull/freenapse/main/assets/logo.svg",
+      "repository_url": "https://github.com/MatthewSaintBull/freenapse",
+      "github_repo_id": "1437663216",
+      "source_updated_at": "2026-11-24T13:53:19Z",
+      "homepage_url": "https://freenapse.app",
+      "owner": "MatthewSaintBull",
+      "default_branch": "main",
+      "source_commit_sha": "e52a9e98722d894c50b8122e35c3039be623b350",
+      "license_text": "MIT License\n\nCopyright (c) 2026 MatthewSaintbull (https://github.com/MatthewSaintBull/freenapse)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "games",
+      "topics": [
+        "freenapse",
+        "gaming-tools",
+        "hid",
+        "mouse",
+        "mouse-control",
+        "open-source",
+        "razer",
+        "razer-devices",
+        "razer-drivers",
+        "razer-synapse",
+        "rust",
+        "windows",
+        "windows-11",
+        "windows-app",
+        "windows-desktop"
+      ],
+      "latest_version": "v0.5.4",
+      "release_url": "https://github.com/MatthewSaintBull/freenapse/releases/tag/v0.5.4",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-matthewsaintbull-freenapse-v0.5.4",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-matthewsaintbull-freenapse-v0.5.4/THIRD-PARTY-NOTICE-matthewsaintbull-freenapse.txt",
+      "artifacts": [
+        {
+          "id": "e4d028b47c6d26d4beb3b5b63f18d79c6e414dc2ee1feff5cfcf7929e4865117",
+          "filename": "freenapse.exe",
+          "original_filename": "freenapse.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.5.4",
+          "size_bytes": 1209856,
+          "sha256": "e4d028b47c6d26d4beb3b5b63f18d79c6e414dc2ee1feff5cfcf7929e4865117",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-matthewsaintbull-freenapse-v0.5.4/freenapse.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-matthewsaintbull-freenapse-v0.5.4"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
