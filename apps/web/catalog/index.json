@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:58:31.080325+00:00",
+  "generated_at": "2026-11-25T22:58:48.820590+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -51788,6 +51788,76 @@
           "signer_certificate_sha256": "af5524cd554ae6ede3ec2747c7bed159b09bc4f6a43244a68b4622e9463225c8",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wlmosv-png-wpaforge-v1.9.70/WPAForge-1.9.70-166.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wlmosv-png-wpaforge-v1.9.70"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "ong-ki-write-image",
+      "slug": "ong-ki-write-image",
+      "name": "Write-Image",
+      "summary": "Android utility for creating verified bootable USB drives from Windows and Linux ISO images via USB OTG — no root required.",
+      "description": "Android utility for creating verified bootable USB drives from Windows and Linux ISO images via USB OTG — no root required.",
+      "translations": {
+        "en": {
+          "summary": "Android utility for creating verified bootable USB drives from Windows and Linux ISO images via USB OTG — no root required.",
+          "description": "Android utility for creating verified bootable USB drives from Windows and Linux ISO images via USB OTG — no root required."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ong-ki/Write-Image/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/ong-ki/Write-Image",
+      "github_repo_id": "1466464470",
+      "source_updated_at": "2026-11-25T03:37:21Z",
+      "homepage_url": null,
+      "owner": "ong-ki",
+      "default_branch": "main",
+      "source_commit_sha": "f98238e24db878e4289ad525f7b012871df817f5",
+      "license_text": "MIT License\n\nCopyright (c) 2026 ong-ki\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "android",
+        "android-app",
+        "bootable-usb",
+        "iso",
+        "jetpack-compose",
+        "kotlin",
+        "usb",
+        "usb-otg"
+      ],
+      "latest_version": "v1.0.0",
+      "release_url": "https://github.com/ong-ki/Write-Image/releases/tag/v1.0.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ong-ki-write-image-v1.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ong-ki-write-image-v1.0.0/THIRD-PARTY-NOTICE-ong-ki-write-image.txt",
+      "artifacts": [
+        {
+          "id": "37ea1af0742a369642c8d1d99b4feac4685fa2d5c7cf3b96d5f6295c3e3cf6c9",
+          "filename": "Write-Image-v1.0.0.apk",
+          "original_filename": "Write-Image-v1.0.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.0",
+          "size_bytes": 1675399,
+          "sha256": "37ea1af0742a369642c8d1d99b4feac4685fa2d5c7cf3b96d5f6295c3e3cf6c9",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "d038703226aebb8382e52b0dafad011086667b5f16d099c95e6f0289b8c33ec3",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ong-ki-write-image-v1.0.0/Write-Image-v1.0.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ong-ki-write-image-v1.0.0"
         }
       ],
       "platforms": [
