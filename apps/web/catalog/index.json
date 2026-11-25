@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:08:43.989950+00:00",
+  "generated_at": "2026-11-25T04:08:48.586880+00:00",
   "apps": [
     {
       "id": "defunkt-ambition",
@@ -67,6 +67,45 @@
       "default_branch": "master",
       "source_commit_sha": "5eced32ace05d091c34371a5297cc932245ba06b",
       "license_text": "Copyright (c) 2007 Chris Wanstrath & Matthew King\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of \nthis software and associated documentation files (the \"Software\"), to deal in \nthe Software without restriction, including without limitation the rights to \nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of \nthe Software, and to permit persons to whom the Software is furnished to do so, \nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all \ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR \nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS \nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR \nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER \nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN \nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "category": "other",
+      "topics": [],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "halorgium-archangel",
+      "slug": "halorgium-archangel",
+      "artifacts": [],
+      "name": "archangel",
+      "summary": "Magic configuration for your nginx, mongrels and god!",
+      "description": "Magic configuration for your nginx, mongrels and god!",
+      "translations": {
+        "en": {
+          "summary": "Magic configuration for your nginx, mongrels and god!",
+          "description": "Magic configuration for your nginx, mongrels and god!"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/263?v=4",
+      "repository_url": "https://github.com/halorgium/archangel",
+      "github_repo_id": "492",
+      "source_updated_at": "2026-06-30T12:07:37Z",
+      "homepage_url": "http://archangel.rubyforge.org/",
+      "owner": "halorgium",
+      "default_branch": "master",
+      "source_commit_sha": "10287747dc0f373d245c8b98ca6bd285f4cb0f19",
+      "license_text": "Copyright (c) 2008 FIXME full name\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
       "license_spdx": "MIT",
       "license_eligible": true,
       "project_kind": "unknown",
