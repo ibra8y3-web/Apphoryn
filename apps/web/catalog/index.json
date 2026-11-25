@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:26:28.001665+00:00",
+  "generated_at": "2026-11-25T19:30:55.716738+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -12934,6 +12934,88 @@
       ],
       "platforms": [
         "macos"
+      ]
+    },
+    {
+      "id": "diexar-labs-jotdrop",
+      "slug": "diexar-labs-jotdrop",
+      "name": "jotdrop",
+      "summary": "Free, open-source Google Keep alternative for Android, Obsidian, the web and Chrome. Keep-style note cards, plain Markdown files you own and optional end-to-end encrypted sync. Free forever, no cloud required: sync with Syncthing or any fol",
+      "description": "Free, open-source Google Keep alternative for Android, Obsidian, the web and Chrome. Keep-style note cards, plain Markdown files you own and optional end-to-end encrypted sync. Free forever, no cloud required: sync with Syncthing or any folder sync.",
+      "translations": {
+        "en": {
+          "summary": "Free, open-source Google Keep alternative for Android, Obsidian, the web and Chrome. Keep-style note cards, plain Markdown files you own and optional end-to-end encrypted sync. Free forever, no cloud required: sync with Syncthing or any fol",
+          "description": "Free, open-source Google Keep alternative for Android, Obsidian, the web and Chrome. Keep-style note cards, plain Markdown files you own and optional end-to-end encrypted sync. Free forever, no cloud required: sync with Syncthing or any folder sync."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Diexar-Labs/jotdrop/main/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/Diexar-Labs/jotdrop",
+      "github_repo_id": "1233863881",
+      "source_updated_at": "2026-11-23T17:46:54Z",
+      "homepage_url": "https://jotdrop.net",
+      "owner": "Diexar-Labs",
+      "default_branch": "main",
+      "source_commit_sha": "c6b357e687f0db75388d3cce89d97c9ba4405338",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Diexar Labs\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "android",
+        "android-app",
+        "chrome-extension",
+        "end-to-end-encryption",
+        "google-keep",
+        "google-keep-alternative",
+        "markdown",
+        "markdown-notes",
+        "note-taking",
+        "notes",
+        "notes-app",
+        "obsidian",
+        "obsidian-plugin",
+        "offline-first",
+        "open-source",
+        "privacy",
+        "quick-capture",
+        "syncthing",
+        "voice-memos",
+        "web-clipper"
+      ],
+      "latest_version": "v0.28.78",
+      "release_url": "https://github.com/Diexar-Labs/jotdrop/releases/tag/v0.28.78",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-diexar-labs-jotdrop-v0.28.78",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-diexar-labs-jotdrop-v0.28.78/THIRD-PARTY-NOTICE-diexar-labs-jotdrop.txt",
+      "artifacts": [
+        {
+          "id": "44131585cf77caec3f2efb232afc294be622566c7d1091803c83a95523c870c1",
+          "filename": "jotdrop.apk",
+          "original_filename": "jotdrop.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.28.78",
+          "size_bytes": 99732172,
+          "sha256": "44131585cf77caec3f2efb232afc294be622566c7d1091803c83a95523c870c1",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "c4a10072d1eb988e9e1d9426d9038dd9bd3fdb7cc4ab90003dedf87dfc4a433a",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-diexar-labs-jotdrop-v0.28.78/jotdrop.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-diexar-labs-jotdrop-v0.28.78"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
