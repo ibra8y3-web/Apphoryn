@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:56:16.577305+00:00",
+  "generated_at": "2026-11-25T19:56:26.728825+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -23670,7 +23670,7 @@
         }
       },
       "description_translations": {},
-      "translation_status": "english_only",
+      "translation_status": "pending",
       "ai_provider": null,
       "ai_model": null,
       "icon_url": "https://raw.githubusercontent.com/ahnafnafee/pinned-calendar/main/design/icons/play-store-icon/launcher/mipmap-hdpi/ic_launcher.png",
@@ -23680,7 +23680,7 @@
       "homepage_url": "https://pinnedcalendar.ahnafnafee.dev",
       "owner": "ahnafnafee",
       "default_branch": "main",
-      "source_commit_sha": "39787d2190b8ac0987756a166ce38047fe5e89e9",
+      "source_commit_sha": "7904ce2f780127f4cf8276ec8ac95f684f76a9dc",
       "license_text": "MIT License\n\nCopyright (c) 2026 Ahnaf An Nafee\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
