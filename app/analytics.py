@@ -294,7 +294,8 @@ class AnalyticsStore:
         """)
         if rows:
             columns = "(id,event_type,app_slug,artifact_id,platform,details_json,created_at)"
-            row_placeholders = "(" + ",".join("?" for _ in range(7)) + ")"
+            # D1's HTTP API documents string bind parameters; NULLIF converts empty sentinels to SQL NULL.
+            row_placeholders = "(?,?,NULLIF(?,''),NULLIF(?,''),NULLIF(?,''),?,?)"
             # D1 allows at most 100 bound parameters per statement: 14 rows x 7 columns = 98.
             statements = []
             for offset in range(0, len(rows), 14):
