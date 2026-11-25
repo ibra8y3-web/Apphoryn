@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:09:35.474385+00:00",
+  "generated_at": "2026-11-25T04:09:40.121400+00:00",
   "apps": [
     {
       "id": "defunkt-ambition",
@@ -237,6 +237,45 @@
       "build_recommended": false,
       "classification_source": "heuristic",
       "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "category": "other",
+      "topics": [],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "mudge-blankable",
+      "slug": "mudge-blankable",
+      "artifacts": [],
+      "name": "blankable",
+      "summary": "A Ruby mixin to determine whether an object's values are blank with examples for Arrays and Hashes.",
+      "description": "A Ruby mixin to determine whether an object's values are blank with examples for Arrays and Hashes.",
+      "translations": {
+        "en": {
+          "summary": "A Ruby mixin to determine whether an object's values are blank with examples for Arrays and Hashes.",
+          "description": "A Ruby mixin to determine whether an object's values are blank with examples for Arrays and Hashes."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/287?v=4",
+      "repository_url": "https://github.com/mudge/blankable",
+      "github_repo_id": "559",
+      "source_updated_at": "2026-06-30T12:07:39Z",
+      "homepage_url": null,
+      "owner": "mudge",
+      "default_branch": "master",
+      "source_commit_sha": "5e30751971651a0f8f2209f5f47de9e6afa75437",
+      "license_text": "Copyright (c) 2008-09, Paul Mucur, http://mucur.name\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification, are \npermitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright notice, this list of\n  conditions and the following disclaimer.\n  \n* Redistributions in binary form must reproduce the above copyright notice, this list \n  of conditions and the following disclaimer in the documentation and/or other \n  materials provided with the distribution.\n  \n* Neither the name of http://mucur.name nor the names of its contributors may be \n  used to endorse or promote products derived from this software without specific \n  prior written permission.\n  \nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n\"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\nLIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\nA PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR\nCONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,\nEXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,\nPROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR\nPROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF\nLIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING\nNEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",
+      "license_spdx": "BSD-3-Clause",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
       "category": "other",
       "topics": [],
       "latest_version": null,
