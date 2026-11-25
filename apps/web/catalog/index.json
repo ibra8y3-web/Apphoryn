@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T20:02:54.259692+00:00",
+  "generated_at": "2026-11-25T20:03:07.306575+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -17685,6 +17685,78 @@
       ],
       "platforms": [
         "macos"
+      ]
+    },
+    {
+      "id": "lunganlungpg-max-min-design",
+      "slug": "lunganlungpg-max-min-design",
+      "name": "Max-min-Design",
+      "summary": "Max-min power-optimal allocations for pairwise comparisons of treatments with binary outcomes: web app, Android APK, R and Python, with a seed-emergence case study",
+      "description": "Max-min power-optimal allocations for pairwise comparisons of treatments with binary outcomes: web app, Android APK, R and Python, with a seed-emergence case study",
+      "translations": {
+        "en": {
+          "summary": "Max-min power-optimal allocations for pairwise comparisons of treatments with binary outcomes: web app, Android APK, R and Python, with a seed-emergence case study",
+          "description": "Max-min power-optimal allocations for pairwise comparisons of treatments with binary outcomes: web app, Android APK, R and Python, with a seed-emergence case study"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/lunganlungpg/Max-min-Design/main/android_build/assets/icon_192.png",
+      "repository_url": "https://github.com/lunganlungpg/Max-min-Design",
+      "github_repo_id": "1465415713",
+      "source_updated_at": "2026-11-23T21:05:13Z",
+      "homepage_url": "https://lunganlungpg.github.io/Max-min-Design/",
+      "owner": "lunganlungpg",
+      "default_branch": "main",
+      "source_commit_sha": "dbaeefb0e849acad97267ab2d99c2c3860cf2e55",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Lunganlung P. G.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "agricultural-statistics",
+        "android-app",
+        "binary-outcomes",
+        "design-of-experiments",
+        "optimal-design",
+        "python",
+        "r",
+        "sample-size",
+        "seed-science",
+        "statistical-power"
+      ],
+      "latest_version": "v1.2.2",
+      "release_url": "https://github.com/lunganlungpg/Max-min-Design/releases/tag/v1.2.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lunganlungpg-max-min-design-v1.2.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lunganlungpg-max-min-design-v1.2.2/THIRD-PARTY-NOTICE-lunganlungpg-max-min-design.txt",
+      "artifacts": [
+        {
+          "id": "2b9afe43811f9b1cd86d5c1b5aad8dcbc221eca7c8bdf95abbb512a608996ea0",
+          "filename": "MaxMinDesign.apk",
+          "original_filename": "MaxMinDesign.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.2.2",
+          "size_bytes": 62650,
+          "sha256": "2b9afe43811f9b1cd86d5c1b5aad8dcbc221eca7c8bdf95abbb512a608996ea0",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "b971bc6daf8f3effacc961d3a8c0fe79a756fae1a74d6f4eb6827d4002deb790",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lunganlungpg-max-min-design-v1.2.2/MaxMinDesign.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lunganlungpg-max-min-design-v1.2.2"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
