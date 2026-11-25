@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:53:40.352988+00:00",
+  "generated_at": "2026-11-25T21:54:06.241790+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -10073,6 +10073,76 @@
           "signer_certificate_sha256": "d28ca4f5b7467ea19564983f492af25fd21b26b2577fbfa32c46ed59042892c8",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-soodok-deepseek-harness-local-android-v1.5.0/dsh-android-v1.5.0-x86_64-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-soodok-deepseek-harness-local-android-v1.5.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "clc-pro-deepspeak",
+      "slug": "clc-pro-deepspeak",
+      "name": "DeepSpeak",
+      "summary": "DeepSpeak-赛博养鱼APP-会记得你、有情绪、会想你",
+      "description": "DeepSpeak-赛博养鱼APP-会记得你、有情绪、会想你",
+      "translations": {
+        "en": {
+          "summary": "DeepSpeak-赛博养鱼APP-会记得你、有情绪、会想你",
+          "description": "DeepSpeak-赛博养鱼APP-会记得你、有情绪、会想你"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/clc-pro/DeepSpeak/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/clc-pro/DeepSpeak",
+      "github_repo_id": "1466128976",
+      "source_updated_at": "2026-11-22T02:44:39Z",
+      "homepage_url": null,
+      "owner": "clc-pro",
+      "default_branch": "main",
+      "source_commit_sha": "7062fc2aab433c1f9fcb7b5f73e1dc8d41d5328f",
+      "license_text": "MIT License\n\nCopyright (c) 2026 YG\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "ai-companion",
+        "android-app",
+        "deepseek",
+        "jetpack-compose",
+        "kotlin",
+        "room",
+        "sse",
+        "tts"
+      ],
+      "latest_version": "v1.13.3",
+      "release_url": "https://github.com/clc-pro/DeepSpeak/releases/tag/v1.13.3",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-clc-pro-deepspeak-v1.13.3",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-clc-pro-deepspeak-v1.13.3/THIRD-PARTY-NOTICE-clc-pro-deepspeak.txt",
+      "artifacts": [
+        {
+          "id": "af897826303e0076f69f81dc0a36f14a8df9ba9904ac34b315cdf326b9a13bda",
+          "filename": "DeepSpeak-v1.13.3.apk",
+          "original_filename": "DeepSpeak-v1.13.3.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.13.3",
+          "size_bytes": 107084268,
+          "sha256": "af897826303e0076f69f81dc0a36f14a8df9ba9904ac34b315cdf326b9a13bda",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "44bc73ba3b11afba064b12160e4fa26e45f56fee51b9deee5136fef57d8a8fb7",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-clc-pro-deepspeak-v1.13.3/DeepSpeak-v1.13.3.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-clc-pro-deepspeak-v1.13.3"
         }
       ],
       "platforms": [
