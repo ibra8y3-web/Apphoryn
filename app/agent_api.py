@@ -80,6 +80,11 @@ def test_provider(provider: str, x_apphoryn_admin: str | None = Header(default=N
     _require_admin(x_apphoryn_admin)
     return ai_router.test_provider(provider)
 
+@router.post("/providers/benchmark")
+def benchmark_providers(x_apphoryn_admin: str | None = Header(default=None)):
+    _require_admin(x_apphoryn_admin)
+    return ai_router.benchmark_models(max_models=3)
+
 
 @router.post("/schedules")
 def create_schedule(payload: CreateAgentSchedule, x_apphoryn_admin: str | None = Header(default=None)):
