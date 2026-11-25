@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:24:15.793787+00:00",
+  "generated_at": "2026-11-25T19:24:33.718368+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -13994,6 +13994,105 @@
           "signer_certificate_sha256": "ac7360ae311a36f2cc1caf1dad4848e18e191c55aaf128838fc34c92c6838016",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-leanbitlab-leantype-v4.3.6/2-LeanType_4.3.6-offline-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-leanbitlab-leantype-v4.3.6"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "saisaharsh3-leftovers",
+      "slug": "saisaharsh3-leftovers",
+      "name": "Leftovers",
+      "summary": "A fast, private expense tracker for Android: log a spend in two taps, see what's safe to spend today, and plan ahead. Data stays on your phone.",
+      "description": "A fast, private expense tracker for Android: log a spend in two taps, see what's safe to spend today, and plan ahead. Data stays on your phone.",
+      "translations": {
+        "en": {
+          "summary": "A fast, private expense tracker for Android: log a spend in two taps, see what's safe to spend today, and plan ahead. Data stays on your phone.",
+          "description": "A fast, private expense tracker for Android: log a spend in two taps, see what's safe to spend today, and plan ahead. Data stays on your phone."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/saisaharsh3/Leftovers/main/fastlane/metadata/android/en-US/images/icon.png",
+      "repository_url": "https://github.com/saisaharsh3/Leftovers",
+      "github_repo_id": "1406084909",
+      "source_updated_at": "2026-11-25T12:12:24Z",
+      "homepage_url": "https://saisaharsh3.github.io/Leftovers/",
+      "owner": "saisaharsh3",
+      "default_branch": "main",
+      "source_commit_sha": "603aaaf2f73a714d6c90ed23c58f7ae8b3cf72ee",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Leftovers contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "ai-assistant",
+        "android",
+        "android-app",
+        "budget",
+        "budget-tracker",
+        "compose",
+        "expense-manager",
+        "expense-tracker",
+        "finance",
+        "jetpack-compose",
+        "kotlin",
+        "material-you",
+        "material3",
+        "money-manager",
+        "no-ads",
+        "offline-first",
+        "open-source",
+        "personal-finance",
+        "privacy",
+        "upi"
+      ],
+      "latest_version": "v1.10.1",
+      "release_url": "https://github.com/saisaharsh3/Leftovers/releases/tag/v1.10.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-saisaharsh3-leftovers-v1.10.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-saisaharsh3-leftovers-v1.10.1/THIRD-PARTY-NOTICE-saisaharsh3-leftovers.txt",
+      "artifacts": [
+        {
+          "id": "eeea04f79527c01ad402ae256a8b8d1cdeb6ae0f648611844f0db2121e0add99",
+          "filename": "leftovers-v1.10.1-ai.apk",
+          "original_filename": "leftovers-v1.10.1-ai.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.10.1",
+          "size_bytes": 6308966,
+          "sha256": "eeea04f79527c01ad402ae256a8b8d1cdeb6ae0f648611844f0db2121e0add99",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "6957e37e326827143c204ae9841b8cfb1604d04163e393d1731822dbca688ad6",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-saisaharsh3-leftovers-v1.10.1/leftovers-v1.10.1-ai.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-saisaharsh3-leftovers-v1.10.1"
+        },
+        {
+          "id": "9e379d5b5b9df75c77705d4b9ee8ad89143a130eba83cf61932ae30f0b68e845",
+          "filename": "leftovers-v1.10.1.apk",
+          "original_filename": "leftovers-v1.10.1.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.10.1",
+          "size_bytes": 5735316,
+          "sha256": "9e379d5b5b9df75c77705d4b9ee8ad89143a130eba83cf61932ae30f0b68e845",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "6957e37e326827143c204ae9841b8cfb1604d04163e393d1731822dbca688ad6",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-saisaharsh3-leftovers-v1.10.1/leftovers-v1.10.1.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-saisaharsh3-leftovers-v1.10.1"
         }
       ],
       "platforms": [
