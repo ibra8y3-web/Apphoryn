@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from app.agent_system import AgentStore, _run_tool
+from app.agent_system import AgentStore, _run_tool, ready_agent_wave
 
 
 class AgentStoreTests(unittest.TestCase):
@@ -65,6 +65,28 @@ class AgentStoreTests(unittest.TestCase):
         self.assertEqual(activity[0]["latest_status"], "running")
         self.assertTrue(activity[0]["last_activity_at"])
 
+
+
+    def test_dependency_scheduler_runs_independent_agents_in_same_wave(self):
+        assignments = [
+            {"agent_id": "discovery", "depends_on": []},
+            {"agent_id": "research", "depends_on": []},
+            {"agent_id": "writing", "depends_on": ["research"]},
+            {"agent_id": "supervisor", "depends_on": ["discovery", "research", "writing"]},
+        ]
+        first = ready_agent_wave(assignments, set())
+        self.assertEqual([item["agent_id"] for item in first], ["discovery", "research"])
+        second = ready_agent_wave(assignments[2:], {"discovery", "research"})
+        self.assertEqual([item["agent_id"] for item in second], ["writing"])
+        final = ready_agent_wave(assignments[3:], {"discovery", "research", "writing"})
+        self.assertEqual([item["agent_id"] for item in final], ["supervisor"])
+
+    def test_dependency_scheduler_detects_cycles_by_returning_no_ready_wave(self):
+        assignments = [
+            {"agent_id": "research", "depends_on": ["writing"]},
+            {"agent_id": "writing", "depends_on": ["research"]},
+        ]
+        self.assertEqual(ready_agent_wave(assignments, set()), [])
 
     def test_code_change_permission_is_separate_from_external_action_approval(self):
         run = self.store.enqueue("Repair a broken API route safely.", allow_external_actions=True,
