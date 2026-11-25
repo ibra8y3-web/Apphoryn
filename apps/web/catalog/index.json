@@ -959,6 +959,17 @@
       "platforms": [
         "macos",
         "windows"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "b85f84b71a3b0b5f7334d9c6cbea2507d55bf860",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-25T04:23:38.309026+00:00"
+        }
       ]
     },
     {
