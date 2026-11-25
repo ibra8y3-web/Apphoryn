@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:25:01.221154+00:00",
+  "generated_at": "2026-11-25T04:25:12.379494+00:00",
   "apps": [
     {
       "id": "lumiag5-antigravitymb",
@@ -99,6 +99,83 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "rorkai-app-store-connect-cli",
+      "slug": "rorkai-app-store-connect-cli",
+      "name": "App-Store-Connect-CLI",
+      "summary": "Fast, scriptable CLI for the App Store Connect API. Automate TestFlight, builds, submissions, signing, analytics, screenshots, subscriptions, and more",
+      "description": "Fast, scriptable CLI for the App Store Connect API. Automate TestFlight, builds, submissions, signing, analytics, screenshots, subscriptions, and more",
+      "translations": {
+        "en": {
+          "summary": "Fast, scriptable CLI for the App Store Connect API. Automate TestFlight, builds, submissions, signing, analytics, screenshots, subscriptions, and more",
+          "description": "Fast, scriptable CLI for the App Store Connect API. Automate TestFlight, builds, submissions, signing, analytics, screenshots, subscriptions, and more"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/rorkai/App-Store-Connect-CLI/main/website/public/favicon.svg",
+      "repository_url": "https://github.com/rorkai/App-Store-Connect-CLI",
+      "github_repo_id": "1138200460",
+      "source_updated_at": "2026-11-25T02:07:50Z",
+      "homepage_url": "https://asccli.sh",
+      "owner": "rorkai",
+      "default_branch": "main",
+      "source_commit_sha": "470e4d6904aebfd45e8aaedeb959bd146a360809",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Rudrank Riyam\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "app-store-connect",
+        "apple",
+        "automation",
+        "cicd",
+        "cli",
+        "command-line-tool",
+        "developer-tools",
+        "devops",
+        "go",
+        "golang",
+        "ios",
+        "macos",
+        "swift",
+        "testflight",
+        "xcode"
+      ],
+      "latest_version": "7.4.0",
+      "release_url": "https://github.com/rorkai/App-Store-Connect-CLI/releases/tag/7.4.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rorkai-app-store-connect-cli-7.4.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rorkai-app-store-connect-cli-7.4.0/THIRD-PARTY-NOTICE-rorkai-app-store-connect-cli.txt",
+      "artifacts": [
+        {
+          "id": "89a0fd789dd7927e32bdfecba39e57eeb4ae429770d39b565c49348942572ec3",
+          "filename": "asc_7.4.0_windows_amd64.exe",
+          "original_filename": "asc_7.4.0_windows_amd64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "7.4.0",
+          "size_bytes": 67735552,
+          "sha256": "89a0fd789dd7927e32bdfecba39e57eeb4ae429770d39b565c49348942572ec3",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rorkai-app-store-connect-cli-7.4.0/asc_7.4.0_windows_amd64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rorkai-app-store-connect-cli-7.4.0"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
