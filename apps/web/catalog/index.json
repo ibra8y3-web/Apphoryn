@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:38:20.255853+00:00",
+  "generated_at": "2026-11-25T09:38:32.881611+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -8145,6 +8145,78 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "3441293738-wechat-mp-toolkit",
+      "slug": "3441293738-wechat-mp-toolkit",
+      "name": "wechat-mp-toolkit",
+      "summary": "微信公众号文章与历史数据协议采集归档工具 · Windows 独立桌面版 (.exe) · PAC 单域名分流 · iOS 玻璃拟态 UI · 6 格式多模板导出",
+      "description": "微信公众号文章与历史数据协议采集归档工具 · Windows 独立桌面版 (.exe) · PAC 单域名分流 · iOS 玻璃拟态 UI · 6 格式多模板导出",
+      "translations": {
+        "en": {
+          "summary": "微信公众号文章与历史数据协议采集归档工具 · Windows 独立桌面版 (.exe) · PAC 单域名分流 · iOS 玻璃拟态 UI · 6 格式多模板导出",
+          "description": "微信公众号文章与历史数据协议采集归档工具 · Windows 独立桌面版 (.exe) · PAC 单域名分流 · iOS 玻璃拟态 UI · 6 格式多模板导出"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/122080135?v=4",
+      "repository_url": "https://github.com/3441293738/wechat-mp-toolkit",
+      "github_repo_id": "1471553194",
+      "source_updated_at": "2026-11-25T09:34:34Z",
+      "homepage_url": null,
+      "owner": "3441293738",
+      "default_branch": "main",
+      "source_commit_sha": "c627e18ef78a46dc46dfc29b7e1154d00c783197",
+      "license_text": "MIT License\n\nCopyright (c) 2026 wechat-mp-toolkit contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "archive",
+        "desktop-app",
+        "flask",
+        "markdown",
+        "official-account",
+        "python",
+        "rag",
+        "wechat",
+        "wechat-mp",
+        "windows-exe"
+      ],
+      "latest_version": "v1.0.0",
+      "release_url": "https://github.com/3441293738/wechat-mp-toolkit/releases/tag/v1.0.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-3441293738-wechat-mp-toolkit-v1.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-3441293738-wechat-mp-toolkit-v1.0.0/THIRD-PARTY-NOTICE-3441293738-wechat-mp-toolkit.txt",
+      "artifacts": [
+        {
+          "id": "6907fab77d8687d75f529c6cc699236b25c4e07c8092cf9c62dd63aac5a055e7",
+          "filename": "WeChatMPToolkit-win-x64.exe",
+          "original_filename": "WeChatMPToolkit-win-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.0.0",
+          "size_bytes": 23948516,
+          "sha256": "6907fab77d8687d75f529c6cc699236b25c4e07c8092cf9c62dd63aac5a055e7",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-3441293738-wechat-mp-toolkit-v1.0.0/WeChatMPToolkit-win-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-3441293738-wechat-mp-toolkit-v1.0.0"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
