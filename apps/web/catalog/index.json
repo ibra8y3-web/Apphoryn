@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:17:21.156477+00:00",
+  "generated_at": "2026-11-25T21:17:44.775340+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -9052,6 +9052,88 @@
           "signer_certificate_sha256": "fe387b283d579cc985bf0edbe2fb1661604895cd58cce01b486a7cbe9bff70e1",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-huanmeng692-deepseek-android-v1.0.2/DeepSeek-Android-1.0.2-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-huanmeng692-deepseek-android-v1.0.2"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "guzhou079-arch-deepseek-harness-android",
+      "slug": "guzhou079-arch-deepseek-harness-android",
+      "name": "deepseek-harness-android",
+      "summary": "把 DeepSeek Harness 打包成能直接装的安卓 APK：不用 Termux、不用 root、不用配电脑，读屏/点按/虚拟屏/定时任务和整套技能都随包；它还能在手机上自己编译、打包、签名、发布。 Android APK for DeepSeek Harness — no Termux, no root, no PC. Screen control, virtual display, scheduled tasks and bundled skills out of ",
+      "description": "把 DeepSeek Harness 打包成能直接装的安卓 APK：不用 Termux、不用 root、不用配电脑，读屏/点按/虚拟屏/定时任务和整套技能都随包；它还能在手机上自己编译、打包、签名、发布。 Android APK for DeepSeek Harness — no Termux, no root, no PC. Screen control, virtual display, scheduled tasks and bundled skills out of the box; it builds, signs and releases itself on the phone.",
+      "translations": {
+        "en": {
+          "summary": "把 DeepSeek Harness 打包成能直接装的安卓 APK：不用 Termux、不用 root、不用配电脑，读屏/点按/虚拟屏/定时任务和整套技能都随包；它还能在手机上自己编译、打包、签名、发布。 Android APK for DeepSeek Harness — no Termux, no root, no PC. Screen control, virtual display, scheduled tasks and bundled skills out of ",
+          "description": "把 DeepSeek Harness 打包成能直接装的安卓 APK：不用 Termux、不用 root、不用配电脑，读屏/点按/虚拟屏/定时任务和整套技能都随包；它还能在手机上自己编译、打包、签名、发布。 Android APK for DeepSeek Harness — no Termux, no root, no PC. Screen control, virtual display, scheduled tasks and bundled skills out of the box; it builds, signs and releases itself on the phone."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/287430788?v=4",
+      "repository_url": "https://github.com/guzhou079-arch/deepseek-harness-android",
+      "github_repo_id": "1396132820",
+      "source_updated_at": "2026-11-25T20:57:47Z",
+      "homepage_url": "https://github.com/guzhou079-arch/deepseek-harness-android/releases",
+      "owner": "guzhou079-arch",
+      "default_branch": "main",
+      "source_commit_sha": "4f79d80409abdbdc7f4a131ba8b5a2a0413f9d44",
+      "license_text": "MIT License\n\nCopyright (c) 2026 zhou-gu24\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "ai-agent",
+        "ai-tools",
+        "android",
+        "android-app",
+        "apk",
+        "deepseek",
+        "deepseek-harness",
+        "dsh",
+        "dsh-plugin",
+        "llm",
+        "local-first",
+        "mobile",
+        "no-root",
+        "on-device-ai",
+        "proot",
+        "screen-automation",
+        "self-hosted",
+        "shizuku",
+        "termux",
+        "termux-alternative"
+      ],
+      "latest_version": "v1.49.6",
+      "release_url": "https://github.com/guzhou079-arch/deepseek-harness-android/releases/tag/v1.49.6",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-guzhou079-arch-deepseek-harness-android-v1.49.6",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-guzhou079-arch-deepseek-harness-android-v1.49.6/THIRD-PARTY-NOTICE-guzhou079-arch-deepseek-harness-android.txt",
+      "artifacts": [
+        {
+          "id": "fdf21373184b58bb3de942ed295440f5e285a1b1daa7508ae5363904bbd75e6f",
+          "filename": "DeepSeekHarness-v1.49.6-dist.apk",
+          "original_filename": "DeepSeekHarness-v1.49.6-dist.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.49.6",
+          "size_bytes": 120809901,
+          "sha256": "fdf21373184b58bb3de942ed295440f5e285a1b1daa7508ae5363904bbd75e6f",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "1719404f7fad226b3bc8b56580278a0a637cf3ed1e89e10378a4d1bab80e97b1",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-guzhou079-arch-deepseek-harness-android-v1.49.6/DeepSeekHarness-v1.49.6-dist.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-guzhou079-arch-deepseek-harness-android-v1.49.6"
         }
       ],
       "platforms": [
