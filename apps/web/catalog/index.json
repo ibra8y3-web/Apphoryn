@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:45:01.617237+00:00",
+  "generated_at": "2026-11-25T21:45:33.186822+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -21847,6 +21847,85 @@
           "signer_certificate_sha256": "52a04e39cdbab62dc0e598930685d6546311f9e16130afd127399db0d5878102",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ronovamain-localdrop-0.1.0/LocalDrop-0.1.0.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ronovamain-localdrop-0.1.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "carlos-aisa-localsecurevault",
+      "slug": "carlos-aisa-localsecurevault",
+      "name": "LocalSecureVault",
+      "summary": "Local-first password manager built with .NET MAUI Blazor, using AES-GCM and Argon2id encryption. No cloud, full control.",
+      "description": "Local-first password manager built with .NET MAUI Blazor, using AES-GCM and Argon2id encryption. No cloud, full control.",
+      "translations": {
+        "en": {
+          "summary": "Local-first password manager built with .NET MAUI Blazor, using AES-GCM and Argon2id encryption. No cloud, full control.",
+          "description": "Local-first password manager built with .NET MAUI Blazor, using AES-GCM and Argon2id encryption. No cloud, full control."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/carlos-aisa/LocalSecureVault/main/src/Vault.App/Resources/appicon.png",
+      "repository_url": "https://github.com/carlos-aisa/LocalSecureVault",
+      "github_repo_id": "1116472592",
+      "source_updated_at": "2026-09-22T09:17:37Z",
+      "homepage_url": null,
+      "owner": "carlos-aisa",
+      "default_branch": "main",
+      "source_commit_sha": "f6a05c13dbd76807b126a562640714e73ba4df64",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Carlos Aisa\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "aes-gcm",
+        "android-app",
+        "argon2",
+        "aspnetcore",
+        "blazor",
+        "clean-architecture",
+        "cryptography",
+        "csharp",
+        "desktop-app",
+        "dotnet",
+        "dotnet-maui",
+        "encryption",
+        "local-storage",
+        "offline-first",
+        "password-manager",
+        "privacy",
+        "security"
+      ],
+      "latest_version": "v1.1.0",
+      "release_url": "https://github.com/carlos-aisa/LocalSecureVault/releases/tag/v1.1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-carlos-aisa-localsecurevault-v1.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-carlos-aisa-localsecurevault-v1.1.0/THIRD-PARTY-NOTICE-carlos-aisa-localsecurevault.txt",
+      "artifacts": [
+        {
+          "id": "41c9cf2f8d2f8fd6334e4fc17d0849fee2365e205a5f0f6d1bbb227ff67bf341",
+          "filename": "LocalSecureVault-companion-android-v1.1.0.apk",
+          "original_filename": "LocalSecureVault-companion-android-v1.1.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.1.0",
+          "size_bytes": 38482291,
+          "sha256": "41c9cf2f8d2f8fd6334e4fc17d0849fee2365e205a5f0f6d1bbb227ff67bf341",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "2679cacf5e09e4a2e6d20db2d6d6d3c3f3f6bf1d1d0c7ef5ecf87cd3124272d6",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-carlos-aisa-localsecurevault-v1.1.0/LocalSecureVault-companion-android-v1.1.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-carlos-aisa-localsecurevault-v1.1.0"
         }
       ],
       "platforms": [
