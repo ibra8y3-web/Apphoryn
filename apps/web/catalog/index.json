@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T11:20:42.548454+00:00",
+  "generated_at": "2026-11-25T11:20:57.742900+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -9164,6 +9164,80 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "foraum-gmbh-kimai-clock",
+      "slug": "foraum-gmbh-kimai-clock",
+      "name": "kimai-clock",
+      "summary": "KimaiClock is a lightweight macOS menu bar app that lets you track and manage Kimai 2 time entries directly from your desktop.",
+      "description": "KimaiClock is a lightweight macOS menu bar app that lets you track and manage Kimai 2 time entries directly from your desktop.",
+      "translations": {
+        "en": {
+          "summary": "KimaiClock is a lightweight macOS menu bar app that lets you track and manage Kimai 2 time entries directly from your desktop.",
+          "description": "KimaiClock is a lightweight macOS menu bar app that lets you track and manage Kimai 2 time entries directly from your desktop."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/191464389?v=4",
+      "repository_url": "https://github.com/Foraum-GmbH/kimai-clock",
+      "github_repo_id": "1043172822",
+      "source_updated_at": "2026-11-08T17:48:32Z",
+      "homepage_url": "https://foraum-gmbh.github.io/kimai-clock/",
+      "owner": "Foraum-GmbH",
+      "default_branch": "main",
+      "source_commit_sha": "37c18418a928eec13a2d5d32bb91c75bee449656",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Foraum GmbH\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "appkit",
+        "automation",
+        "developertools",
+        "kimai2",
+        "macos",
+        "menubarapp",
+        "notarized",
+        "opensource",
+        "productivity",
+        "swift",
+        "swiftui",
+        "timetracking"
+      ],
+      "latest_version": "v1.6.2",
+      "release_url": "https://github.com/Foraum-GmbH/kimai-clock/releases/tag/v1.6.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-foraum-gmbh-kimai-clock-v1.6.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-foraum-gmbh-kimai-clock-v1.6.2/THIRD-PARTY-NOTICE-foraum-gmbh-kimai-clock.txt",
+      "artifacts": [
+        {
+          "id": "8878c41626498dc7cae6ebcc1063bcd4425515a2b0d4ca03e5cf02644c780698",
+          "filename": "KimaiClock.dmg",
+          "original_filename": "KimaiClock.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": null,
+          "version": "v1.6.2",
+          "size_bytes": 3639150,
+          "sha256": "8878c41626498dc7cae6ebcc1063bcd4425515a2b0d4ca03e5cf02644c780698",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-foraum-gmbh-kimai-clock-v1.6.2/KimaiClock.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-foraum-gmbh-kimai-clock-v1.6.2"
+        }
+      ],
+      "platforms": [
+        "macos"
       ]
     },
     {
