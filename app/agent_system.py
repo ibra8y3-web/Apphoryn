@@ -469,7 +469,7 @@ def _agent_call(agent_id: str, goal: str, instructions: str, context: list[dict[
         "file edits, imports, builds, signatures, quota values, costs or actions. Do not claim code was changed or deployed. "
         "Return one JSON object with keys summary, findings(array), recommendations(array), risks(array), "
         "missing_evidence(array), confidence(low|medium|high), tool_request(object or null). "
-        f"Your allowed tools are: {', '.join(agent['tools'])}. Request a tool with {name, arguments}; "
+        f"Your allowed tools are: {', '.join(agent['tools'])}. Request a tool with {{name, arguments}}; "
         "the orchestrator validates it. Import/build actions require allow_external_actions=true."
     )
     payload = {"goal": goal, "assignment": instructions, "agent": {"id": agent_id, "name": agent["name"]},
