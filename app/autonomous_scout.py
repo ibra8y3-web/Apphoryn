@@ -97,6 +97,7 @@ class AutonomousScout:
             if self.thread and self.thread.is_alive():
                 return
             self.stop_event.clear()
+            self.state["started_at"] = self.state.get("started_at") or utc_now()
             self.thread = threading.Thread(
                 target=self._run,
                 name="apphoryn-autonomous-scout",
@@ -202,14 +203,20 @@ class AutonomousScout:
             fork = bool(repo.get("fork"))
             existing = db.get_app_by_repo(repository_url)
             in_manifest = repository_url.lower() in known_manifest
+            previous_candidate = next((row for row in self.state.get("candidates", []) if str(row.get("repository_url") or "").rstrip("/").lower() == repository_url.lower()), {})
+            retry_after = float(previous_candidate.get("retry_after_epoch") or 0)
+            existing_updated = str((existing or {}).get("source_updated_at") or "")
+            upstream_updated = str(repo.get("updated_at") or "")
             if archived or fork:
                 status = "skipped_inactive_or_fork"
             elif not eligible:
                 status = "blocked_license"
-            elif existing or in_manifest:
+            elif retry_after > time.time():
+                status = "retry_pending"
+            elif in_manifest or (existing and (not upstream_updated or existing_updated == upstream_updated)):
                 status = "already_catalogued"
             else:
-                status = "discovered"
+                status = "update_available" if existing else "discovered"
                 new_candidates += 1
             candidate = {
                 "name": str(repo.get("name") or full_name.rsplit("/", 1)[-1])[:180],
@@ -227,7 +234,7 @@ class AutonomousScout:
                 "seen_at": utc_now(),
             }
             self._upsert_candidate(candidate)
-            if status == "discovered":
+            if status in {"discovered", "update_available"}:
                 eligible_candidates.append(candidate)
 
         self.state["searches_completed"] = int(self.state.get("searches_completed") or 0) + 1
@@ -280,6 +287,7 @@ class AutonomousScout:
                 except ValueError as exc:
                     candidate["status"] = "blocked_or_incomplete_source"
                     candidate["reason"] = str(exc)[:300]
+                    candidate["retry_after_epoch"] = time.time() + 86400
                     self._upsert_candidate(candidate)
                     self._event(
                         "import_skipped",
