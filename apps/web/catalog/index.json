@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:02:46.142814+00:00",
+  "generated_at": "2026-11-25T19:03:02.471404+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -25442,6 +25442,101 @@
       "platforms": [
         "android",
         "windows"
+      ]
+    },
+    {
+      "id": "mdyousuf20007-oss-zero-noise",
+      "slug": "mdyousuf20007-oss-zero-noise",
+      "name": "ZERO-Noise",
+      "summary": "Privacy-first, open-source Android app blocker and anti-scroll focus tool. Built with native AccessibilityService interventions, strict lock modes, and an AMOLED dark UI—zero ads, zero telemetry, zero subscriptions.",
+      "description": "Privacy-first, open-source Android app blocker and anti-scroll focus tool. Built with native AccessibilityService interventions, strict lock modes, and an AMOLED dark UI—zero ads, zero telemetry, zero subscriptions.",
+      "translations": {
+        "en": {
+          "summary": "Privacy-first, open-source Android app blocker and anti-scroll focus tool. Built with native AccessibilityService interventions, strict lock modes, and an AMOLED dark UI—zero ads, zero telemetry, zero subscriptions.",
+          "description": "Privacy-first, open-source Android app blocker and anti-scroll focus tool. Built with native AccessibilityService interventions, strict lock modes, and an AMOLED dark UI—zero ads, zero telemetry, zero subscriptions."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/MDYOUSUF20007-oss/ZERO-Noise/main/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/MDYOUSUF20007-oss/ZERO-Noise",
+      "github_repo_id": "1451708999",
+      "source_updated_at": "2026-11-20T14:24:00Z",
+      "homepage_url": "https://mdyousuf20007-oss.github.io/ZERO-Noise/",
+      "owner": "MDYOUSUF20007-oss",
+      "default_branch": "main",
+      "source_commit_sha": "0aeb7acd6271a5be01622d16595e0af45cbbf1a0",
+      "license_text": "MIT License\n\nCopyright (c) 2026 MDYOUSUF20007-oss\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "accessibility-service",
+        "amoled-theme",
+        "android",
+        "android-app",
+        "anti-scroll",
+        "app-blocker",
+        "capacitor",
+        "digital-minimalism",
+        "digital-wellbeing",
+        "focus",
+        "foss",
+        "no-ads",
+        "open-source",
+        "productivity",
+        "screentime",
+        "self-control"
+      ],
+      "latest_version": "v1.0.160",
+      "release_url": "https://github.com/MDYOUSUF20007-oss/ZERO-Noise/releases/tag/v1.0.160",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mdyousuf20007-oss-zero-noise-v1.0.160",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mdyousuf20007-oss-zero-noise-v1.0.160/THIRD-PARTY-NOTICE-mdyousuf20007-oss-zero-noise.txt",
+      "artifacts": [
+        {
+          "id": "ee45e662a90a293d5087b6057c170c64386c88fcde4a24c37026826aa8af3591",
+          "filename": "ZERO-requires-adb-v1.0.160.apk",
+          "original_filename": "ZERO-requires-adb-v1.0.160.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.160",
+          "size_bytes": 2629733,
+          "sha256": "ee45e662a90a293d5087b6057c170c64386c88fcde4a24c37026826aa8af3591",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "a14a361ed4b7f7d66e576992999d028a053265850a6ca4afee4fc12f2948ce11",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mdyousuf20007-oss-zero-noise-v1.0.160/ZERO-requires-adb-v1.0.160.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mdyousuf20007-oss-zero-noise-v1.0.160"
+        },
+        {
+          "id": "5aa4d4a9d3ff4f7c74e3b0e0ccd7ef49b7fba2b5eb01fa8eb3c0f1a6cf6c2b02",
+          "filename": "ZERO-v1.0.160.apk",
+          "original_filename": "ZERO-v1.0.160.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.160",
+          "size_bytes": 2606898,
+          "sha256": "5aa4d4a9d3ff4f7c74e3b0e0ccd7ef49b7fba2b5eb01fa8eb3c0f1a6cf6c2b02",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "a14a361ed4b7f7d66e576992999d028a053265850a6ca4afee4fc12f2948ce11",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mdyousuf20007-oss-zero-noise-v1.0.160/ZERO-v1.0.160.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mdyousuf20007-oss-zero-noise-v1.0.160"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
