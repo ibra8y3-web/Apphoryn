@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:16:59.821495+00:00",
+  "generated_at": "2026-11-25T23:17:22.845104+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -2321,6 +2321,83 @@
           "signer_certificate_sha256": "a36f6aa66c975c3fc2d2b2d4c424dbb911cbef08b4e16532eba82acd6d7468cc",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-takeruf-android-perapp-language-selector-v1.0.6-10/per-app-language-v1.0.6.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-takeruf-android-perapp-language-selector-v1.0.6-10"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "jurim007-android-tv-remote",
+      "slug": "jurim007-android-tv-remote",
+      "name": "android-tv-remote",
+      "summary": "Free, open-source Android TV and Google TV remote for Android. Control your TV over Wi-Fi with D-pad, touchpad, keyboard, voice input and customizable app shortcuts.",
+      "description": "Free, open-source Android TV and Google TV remote for Android. Control your TV over Wi-Fi with D-pad, touchpad, keyboard, voice input and customizable app shortcuts.",
+      "translations": {
+        "en": {
+          "summary": "Free, open-source Android TV and Google TV remote for Android. Control your TV over Wi-Fi with D-pad, touchpad, keyboard, voice input and customizable app shortcuts.",
+          "description": "Free, open-source Android TV and Google TV remote for Android. Control your TV over Wi-Fi with D-pad, touchpad, keyboard, voice input and customizable app shortcuts."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/jurim007/android-tv-remote/main/app/src/main/res/drawable-nodpi/tvcontrol_logo_adaptive.png",
+      "repository_url": "https://github.com/jurim007/android-tv-remote",
+      "github_repo_id": "1465751235",
+      "source_updated_at": "2026-11-22T15:04:54Z",
+      "homepage_url": null,
+      "owner": "jurim007",
+      "default_branch": "main",
+      "source_commit_sha": "586120074a8e0b426aefec366fca0db93ddadefe",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Juri\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "android-tv",
+        "android-tv-remote",
+        "google-tv",
+        "google-tv-remote",
+        "jetpack-compose",
+        "kotlin",
+        "material3",
+        "open-source",
+        "remote-control",
+        "smart-tv",
+        "tv-remote",
+        "wifi"
+      ],
+      "latest_version": "v1.4.1",
+      "release_url": "https://github.com/jurim007/android-tv-remote/releases/tag/v1.4.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jurim007-android-tv-remote-v1.4.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jurim007-android-tv-remote-v1.4.1/THIRD-PARTY-NOTICE-jurim007-android-tv-remote.txt",
+      "artifacts": [
+        {
+          "id": "df9d2daf16f3f7d8885892f651d1202904b421585e993e3299f80d005c5b18f9",
+          "filename": "TVControl-v1.4.1.apk",
+          "original_filename": "TVControl-v1.4.1.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.4.1",
+          "size_bytes": 14227632,
+          "sha256": "df9d2daf16f3f7d8885892f651d1202904b421585e993e3299f80d005c5b18f9",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "64d7c787cc588f2572cebc2d3b641e559c580072ff0f623571c8e660b95cd08c",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jurim007-android-tv-remote-v1.4.1/TVControl-v1.4.1.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jurim007-android-tv-remote-v1.4.1"
         }
       ],
       "platforms": [
