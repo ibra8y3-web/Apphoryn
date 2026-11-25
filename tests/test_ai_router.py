@@ -189,6 +189,24 @@ class AIRouterTests(unittest.TestCase):
             ai_router._task_capability_score(general, "software_engineer"),
         )
 
+
+    def test_local_model_preference_ranks_ollama_before_remote_specialist_models(self):
+        local = ai_router.Candidate(
+            "ollama", "llama3.2:3b", "openai", "http://ollama:11434/v1", "",
+            0, "local_open_source"
+        )
+        remote_coder = ai_router.Candidate(
+            "openrouter", "vendor/coder:free", "openai", "https://example.test/v1", "test-key",
+            128000, "free_variant"
+        )
+        with (
+            patch("app.agent_system.STORE.model_metrics", return_value=[]),
+            patch("app.agent_system.STORE.model_evaluation_metrics", return_value=[]),
+            patch.object(ai_router, "_PREFER_LOCAL", True),
+        ):
+            ranked = ai_router._rank_candidates([remote_coder, local], "software_engineer")
+        self.assertEqual(ranked[0].provider, "ollama")
+
     def test_offline_discovery_timeout_is_bounded(self):
         self.assertGreaterEqual(ai_router._DISCOVERY_TIMEOUT, 1)
         self.assertLessEqual(ai_router._DISCOVERY_TIMEOUT, 10)
