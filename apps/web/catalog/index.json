@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:12:24.675065+00:00",
+  "generated_at": "2026-11-25T19:12:48.191941+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -12015,6 +12015,128 @@
           ],
           "requested_at": "2026-11-25T11:11:50.055182+00:00"
         }
+      ]
+    },
+    {
+      "id": "liferlighdow-iteration",
+      "slug": "liferlighdow-iteration",
+      "name": "Iteration",
+      "summary": "Born for Performance, Built for Freedom.",
+      "description": "Born for Performance, Built for Freedom.",
+      "translations": {
+        "en": {
+          "summary": "Born for Performance, Built for Freedom.",
+          "description": "Born for Performance, Built for Freedom."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/LiferLighdow/Iteration/main/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/LiferLighdow/Iteration",
+      "github_repo_id": "1256539492",
+      "source_updated_at": "2026-11-25T12:33:40Z",
+      "homepage_url": null,
+      "owner": "LiferLighdow",
+      "default_branch": "main",
+      "source_commit_sha": "bab4b0d05d024f19975212294591bb94ea8839f2",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Lifer_Lighdow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-studio",
+        "launcher",
+        "liferlighdow",
+        "lightweight",
+        "liquid-glass",
+        "material-design",
+        "material-ui"
+      ],
+      "latest_version": "v6.7.2",
+      "release_url": "https://github.com/LiferLighdow/Iteration/releases/tag/v6.7.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-liferlighdow-iteration-v6.7.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-liferlighdow-iteration-v6.7.2/THIRD-PARTY-NOTICE-liferlighdow-iteration.txt",
+      "artifacts": [
+        {
+          "id": "fe5df898de0900f33c6f7ded0b9639a3bc4c1c095d52057c7e45ecfd32c06627",
+          "filename": "Iteration-v6.7.2-arm64-v8a.apk",
+          "original_filename": "Iteration-v6.7.2-arm64-v8a.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v6.7.2",
+          "size_bytes": 5831513,
+          "sha256": "fe5df898de0900f33c6f7ded0b9639a3bc4c1c095d52057c7e45ecfd32c06627",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "840f7b85b596b7a8d2ba1cb5f4c0c6fa5eb4eb133041b4a43e2dcad768a8f60a",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-liferlighdow-iteration-v6.7.2/Iteration-v6.7.2-arm64-v8a.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-liferlighdow-iteration-v6.7.2"
+        },
+        {
+          "id": "5700c83b91e862e2f092fe4b7a66bc806df488fef82d31dbc28ad43fd6ce0ee7",
+          "filename": "Iteration-v6.7.2-armeabi-v7a.apk",
+          "original_filename": "Iteration-v6.7.2-armeabi-v7a.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v6.7.2",
+          "size_bytes": 5827419,
+          "sha256": "5700c83b91e862e2f092fe4b7a66bc806df488fef82d31dbc28ad43fd6ce0ee7",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "840f7b85b596b7a8d2ba1cb5f4c0c6fa5eb4eb133041b4a43e2dcad768a8f60a",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-liferlighdow-iteration-v6.7.2/Iteration-v6.7.2-armeabi-v7a.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-liferlighdow-iteration-v6.7.2"
+        },
+        {
+          "id": "91a9f2b3cc9cc21b33625ff7e91f804f2904ae6e49e3526f7c33f914c740fb46",
+          "filename": "Iteration-v6.7.2-universal.apk",
+          "original_filename": "Iteration-v6.7.2-universal.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "universal",
+          "version": "v6.7.2",
+          "size_bytes": 5880922,
+          "sha256": "91a9f2b3cc9cc21b33625ff7e91f804f2904ae6e49e3526f7c33f914c740fb46",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "840f7b85b596b7a8d2ba1cb5f4c0c6fa5eb4eb133041b4a43e2dcad768a8f60a",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-liferlighdow-iteration-v6.7.2/Iteration-v6.7.2-universal.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-liferlighdow-iteration-v6.7.2"
+        },
+        {
+          "id": "cb8decb07dd6f47d63916ad9538ccce882482222d47f568750c66427d92889b0",
+          "filename": "Iteration-v6.7.2-x86_64.apk",
+          "original_filename": "Iteration-v6.7.2-x86_64.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "x86_64",
+          "version": "v6.7.2",
+          "size_bytes": 5831510,
+          "sha256": "cb8decb07dd6f47d63916ad9538ccce882482222d47f568750c66427d92889b0",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "840f7b85b596b7a8d2ba1cb5f4c0c6fa5eb4eb133041b4a43e2dcad768a8f60a",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-liferlighdow-iteration-v6.7.2/Iteration-v6.7.2-x86_64.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-liferlighdow-iteration-v6.7.2"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
