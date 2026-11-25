@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:53:19.545800+00:00",
+  "generated_at": "2026-11-25T21:53:40.352988+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -27254,6 +27254,76 @@
           "signer_certificate_sha256": "b473991ec08a17996a9ef2405934ce35d333ea38135ebfc1b6f4d2ab953132aa",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-n-zik-group-n-zik-v8.7.3/N-Zik-release64.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-n-zik-group-n-zik-v8.7.3"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "fahriadison-nanaplay",
+      "slug": "fahriadison-nanaplay",
+      "name": "NanaPlay",
+      "summary": "NanaPlay — open-source Android client for GeForce NOW with a console-style UI",
+      "description": "NanaPlay — open-source Android client for GeForce NOW with a console-style UI",
+      "translations": {
+        "en": {
+          "summary": "NanaPlay — open-source Android client for GeForce NOW with a console-style UI",
+          "description": "NanaPlay — open-source Android client for GeForce NOW with a console-style UI"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/FahriAdison/NanaPlay/main/android/app/src/main/res/drawable/opennow_icon.png",
+      "repository_url": "https://github.com/FahriAdison/NanaPlay",
+      "github_repo_id": "1407012114",
+      "source_updated_at": "2026-11-08T12:53:13Z",
+      "homepage_url": "https://github.com/FahriAdison/NanaPlay/releases/latest",
+      "owner": "FahriAdison",
+      "default_branch": "main",
+      "source_commit_sha": "04b9c96eaf2b1710ae1edd420b17964370e73ff1",
+      "license_text": "MIT License\n\nCopyright (c) 2025 Zortos\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "games",
+      "topics": [
+        "android-app",
+        "android-application",
+        "cloudgaming",
+        "gamestream",
+        "gamestreaming",
+        "geforcenow",
+        "jetpackcompose",
+        "kotlin-android"
+      ],
+      "latest_version": "v1.0.108+163",
+      "release_url": "https://github.com/FahriAdison/NanaPlay/releases/tag/v1.0.108%2B163",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fahriadison-nanaplay-v1.0.108-163",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fahriadison-nanaplay-v1.0.108-163/THIRD-PARTY-NOTICE-fahriadison-nanaplay.txt",
+      "artifacts": [
+        {
+          "id": "6220b0d918f6b18056299ff44102e6d2777438d873e416f4d40d35e84f11d507",
+          "filename": "NanaPlay-1.0.108.apk",
+          "original_filename": "NanaPlay-1.0.108.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.108+163",
+          "size_bytes": 46970495,
+          "sha256": "6220b0d918f6b18056299ff44102e6d2777438d873e416f4d40d35e84f11d507",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "ef0aa2684a45f53c4e98c77eb1abe801537adbba817730b6b6b86c4cee4fd6e2",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fahriadison-nanaplay-v1.0.108-163/NanaPlay-1.0.108.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fahriadison-nanaplay-v1.0.108-163"
         }
       ],
       "platforms": [
