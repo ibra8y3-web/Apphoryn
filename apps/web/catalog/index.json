@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:52:31.533958+00:00",
+  "generated_at": "2026-11-25T19:52:42.535229+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -29156,6 +29156,50 @@
       ],
       "latest_version": "4.11.0",
       "release_url": "https://github.com/vkohaupt/vokoscreenNG/releases/tag/4.11.0",
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "anmols99-voyage",
+      "slug": "anmols99-voyage",
+      "artifacts": [],
+      "name": "voyage",
+      "summary": "iOS and Android app to track your journey across earth 🌍",
+      "description": "iOS and Android app to track your journey across earth 🌍",
+      "translations": {
+        "en": {
+          "summary": "iOS and Android app to track your journey across earth 🌍",
+          "description": "iOS and Android app to track your journey across earth 🌍"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/AnmolS99/voyage/master/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "repository_url": "https://github.com/AnmolS99/voyage",
+      "github_repo_id": "1130011999",
+      "source_updated_at": "2026-11-10T07:17:41Z",
+      "homepage_url": null,
+      "owner": "AnmolS99",
+      "default_branch": "master",
+      "source_commit_sha": "c69f85afba274a24233f679af1840292e257c844",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Anmol Singh\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "other",
+      "topics": [
+        "android-app",
+        "ios-app",
+        "scenekit",
+        "swift"
+      ],
+      "latest_version": null,
+      "release_url": null,
       "platforms": [],
       "project_status": "source_available"
     },
