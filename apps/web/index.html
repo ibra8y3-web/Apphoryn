@@ -67,6 +67,19 @@
           <article class="metric-card"><div class="metric-icon amber">⚒</div><div class="metric-label" data-i18n="buildJobs">Build jobs</div><div class="metric-value" id="metricJobs">—</div><div class="metric-foot" data-i18n="fromGithubActions">From GitHub Actions</div></article>
           <article class="metric-card"><div class="metric-icon blue">✓</div><div class="metric-label" data-i18n="verifiedHashes">Verified hashes</div><div class="metric-value" id="metricVerified">0</div><div class="metric-foot" data-i18n="sha256Tracked">SHA-256 tracked</div></article>
         </div>
+        <div class="panel automation-overview home-scout-overview" id="homeScoutPanel">
+          <div class="automation-overview-head">
+            <div><div class="eyebrow muted" data-i18n="liveAutomation">LIVE AUTOMATION</div><h2 data-i18n="scoutBackgroundTitle">Apphoryn is working in the background</h2></div>
+            <span class="live-pill"><span></span><span id="scoutHomePhase">Starting</span></span>
+          </div>
+          <div class="automation-metrics">
+            <div class="metric-card"><b id="scoutHomeSearches">0</b><small data-i18n="backgroundSearches">Searches completed</small></div>
+            <div class="metric-card"><b id="scoutHomeDiscovered">0</b><small data-i18n="backgroundDiscovered">New eligible projects</small></div>
+            <div class="metric-card"><b id="scoutHomeImported">0</b><small data-i18n="backgroundImports">Imports completed</small></div>
+          </div>
+          <div class="automation-last-run"><span data-i18n="latestScoutActivity">Latest real activity</span><b id="scoutHomeActivity">Waiting for the first scan…</b></div>
+          <button class="text-button" type="button" data-go="builds"><span data-i18n="openLiveAutomation">Open live automation details</span> ↗</button>
+        </div>
         <div class="section-heading section-heading-tight"><div><div class="eyebrow muted" data-i18n="curatedForYou">CURATED FOR YOU</div><h2 data-i18n="recentlyAdded">Recently added</h2></div><button class="text-button" data-go="explore"><span data-i18n="viewAllApps">View all apps</span> ↗</button></div>
         <div class="app-grid" id="featuredGrid"><div class="empty-state"><div class="empty-symbol">◈</div><b data-i18n="noAppsYet">Your library is ready for its first app.</b><p data-i18n="noAppsHint">Discover a real GitHub project and import a licensed release to begin.</p><button class="button button-outline" data-go="discovery" data-i18n="startDiscovering">Start discovering</button></div></div>
         <div class="bottom-banner"><div class="banner-icon">✳</div><div><b data-i18n="buildYourFirst">Build your first app release</b><p data-i18n="buildYourFirstDesc">Connect your GitHub Actions workflow and turn a source project into a real installable package.</p></div><button class="button button-dark" data-go="builds" data-i18n="openBuildLab">Open build lab ↗</button></div>
