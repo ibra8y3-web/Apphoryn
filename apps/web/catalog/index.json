@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T10:43:44.005196+00:00",
+  "generated_at": "2026-11-25T10:44:19.002879+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -10984,6 +10984,112 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "dohwi-pipaya",
+      "slug": "dohwi-pipaya",
+      "name": "pipaya",
+      "summary": "pipaya: self-hosted LLM coding agent harness",
+      "description": "pipaya: self-hosted LLM coding agent harness",
+      "translations": {
+        "en": {
+          "summary": "pipaya: self-hosted LLM coding agent harness",
+          "description": "pipaya: self-hosted LLM coding agent harness"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/dohwi/pipaya/main/client/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/dohwi/pipaya",
+      "github_repo_id": "1420624261",
+      "source_updated_at": "2026-11-12T16:36:44Z",
+      "homepage_url": "https://pipaya.dohwi.com",
+      "owner": "dohwi",
+      "default_branch": "main",
+      "source_commit_sha": "1587e710f9f1bace740697ddd6c40bcd5ad9f449",
+      "license_text": "MIT License\n\nCopyright (c) 2026 dohwi\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "ai",
+      "topics": [
+        "agent-harness",
+        "ai-agent",
+        "ai-coding",
+        "coding-agent",
+        "llm",
+        "opensource",
+        "self-hosted",
+        "typescript"
+      ],
+      "latest_version": "latest",
+      "release_url": "https://github.com/dohwi/pipaya/releases/tag/latest",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-dohwi-pipaya-latest",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-dohwi-pipaya-latest/THIRD-PARTY-NOTICE-dohwi-pipaya.txt",
+      "artifacts": [
+        {
+          "id": "5a141063eca8c7d518a5b07b23a25a528c416abbc7fbaf1335019e545adc7976",
+          "filename": "pipaya-android-arm64.apk",
+          "original_filename": "pipaya-android-arm64.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "latest",
+          "size_bytes": 17816200,
+          "sha256": "5a141063eca8c7d518a5b07b23a25a528c416abbc7fbaf1335019e545adc7976",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "046e0b9953e0aab1cb795510be0f6d6ddd98ee7396647a670415cfb35dbc00ad",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-dohwi-pipaya-latest/pipaya-android-arm64.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-dohwi-pipaya-latest"
+        },
+        {
+          "id": "df79b43de7642611055b9788c2aa2fb4bc2b2f328b8743c90e8e8aceffc0d67c",
+          "filename": "pipaya-macos-arm64.dmg",
+          "original_filename": "pipaya-macos-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "latest",
+          "size_bytes": 33526989,
+          "sha256": "df79b43de7642611055b9788c2aa2fb4bc2b2f328b8743c90e8e8aceffc0d67c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-dohwi-pipaya-latest/pipaya-macos-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-dohwi-pipaya-latest"
+        },
+        {
+          "id": "330b4007563a6f7ee796fede1987e33f49420cc13b598047d836b02df0e91cc2",
+          "filename": "pipaya-windows-x64-setup.exe",
+          "original_filename": "pipaya-windows-x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "latest",
+          "size_bytes": 33863718,
+          "sha256": "330b4007563a6f7ee796fede1987e33f49420cc13b598047d836b02df0e91cc2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-dohwi-pipaya-latest/pipaya-windows-x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-dohwi-pipaya-latest"
+        }
+      ],
+      "platforms": [
+        "android",
+        "macos",
+        "windows"
       ]
     },
     {
