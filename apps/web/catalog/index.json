@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:05:19.392997+00:00",
+  "generated_at": "2026-11-25T22:05:38.176976+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -3978,6 +3978,79 @@
       ],
       "platforms": [
         "java"
+      ]
+    },
+    {
+      "id": "czy0729-bangumi",
+      "slug": "czy0729-bangumi",
+      "name": "Bangumi",
+      "summary": ":electron: An unofficial https://bgm.tv ui first app client for Android and iOS, built with React Native. 一个无广告、以爱好为驱动、不以盈利为目的、专门做 ACG 的类似豆瓣的追番记录，bgm.tv 第三方客户端。为移动端重新设计，内置大量加强的网页端难以实现的功能，且提供了相当的自定义选项。 目前已适配 iOS / Android。",
+      "description": ":electron: An unofficial https://bgm.tv ui first app client for Android and iOS, built with React Native. 一个无广告、以爱好为驱动、不以盈利为目的、专门做 ACG 的类似豆瓣的追番记录，bgm.tv 第三方客户端。为移动端重新设计，内置大量加强的网页端难以实现的功能，且提供了相当的自定义选项。 目前已适配 iOS / Android。",
+      "translations": {
+        "en": {
+          "summary": ":electron: An unofficial https://bgm.tv ui first app client for Android and iOS, built with React Native. 一个无广告、以爱好为驱动、不以盈利为目的、专门做 ACG 的类似豆瓣的追番记录，bgm.tv 第三方客户端。为移动端重新设计，内置大量加强的网页端难以实现的功能，且提供了相当的自定义选项。 目前已适配 iOS / Android。",
+          "description": ":electron: An unofficial https://bgm.tv ui first app client for Android and iOS, built with React Native. 一个无广告、以爱好为驱动、不以盈利为目的、专门做 ACG 的类似豆瓣的追番记录，bgm.tv 第三方客户端。为移动端重新设计，内置大量加强的网页端难以实现的功能，且提供了相当的自定义选项。 目前已适配 iOS / Android。"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/czy0729/Bangumi/master/src/assets/images/icon.png",
+      "repository_url": "https://github.com/czy0729/Bangumi",
+      "github_repo_id": "185632238",
+      "source_updated_at": "2026-11-25T10:38:48Z",
+      "homepage_url": null,
+      "owner": "czy0729",
+      "default_branch": "master",
+      "source_commit_sha": "5fbbc77acded22330e1d19ea3519260d51893093",
+      "license_text": "MIT License\n\nCopyright (c) 2019 https://github.com/czy0729\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "bangumi",
+        "design",
+        "expo",
+        "ios",
+        "ios-app",
+        "mobx",
+        "moe",
+        "react",
+        "react-native"
+      ],
+      "latest_version": "8.42.2",
+      "release_url": "https://github.com/czy0729/Bangumi/releases/tag/8.42.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-czy0729-bangumi-8.42.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-czy0729-bangumi-8.42.2/THIRD-PARTY-NOTICE-czy0729-bangumi.txt",
+      "artifacts": [
+        {
+          "id": "9c7443992614fc6a68935e528a3176f6b9fd65a57b2bb8d59db3c56abc1989fa",
+          "filename": "bangumi_v8.42.2_arm64-v8a.apk",
+          "original_filename": "bangumi_v8.42.2_arm64-v8a.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "8.42.2",
+          "size_bytes": 34748084,
+          "sha256": "9c7443992614fc6a68935e528a3176f6b9fd65a57b2bb8d59db3c56abc1989fa",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "8c3b2848b3ef274ea4665a2aad05504d580827393790ecc097769413a395bf80",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-czy0729-bangumi-8.42.2/bangumi_v8.42.2_arm64-v8a.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-czy0729-bangumi-8.42.2"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
