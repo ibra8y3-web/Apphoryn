@@ -14,8 +14,8 @@ class BuildRunnerTests(unittest.TestCase):
             which=lambda name: r"C:\\Program Files\\nodejs\\npm.cmd" if name == "npm.cmd" else None,
         )
         self.assertEqual(resolved[:3], ["cmd.exe", "/d", "/s"])
-        self.assertIn("npm.cmd", resolved[3])
-        self.assertIn("ci", resolved[3])
+        self.assertIn("npm.cmd", resolved[4])
+        self.assertIn("ci", resolved[4])
 
     def test_non_windows_commands_are_unchanged(self):
         command = ["npm", "ci"]

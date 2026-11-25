@@ -39,7 +39,7 @@ class BuildSupportTests(unittest.TestCase):
             "tools/go.mod",
         ])
         result = detect_supported_build_targets("owner", "repo", "main", github)
-        self.assertEqual(result["android"], "Gradle wrapper detected.")
+        self.assertEqual(result["android"], "Gradle wrapper, Android manifest and Gradle project detected.")
         self.assertEqual(result["windows"], ".NET project detected.")
         self.assertEqual(result["linux"], ".NET project detected.")
         self.assertEqual(result["macos"], ".NET project detected.")
