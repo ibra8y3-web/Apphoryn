@@ -387,7 +387,8 @@ def _safe_repo_parts(url: str) -> tuple[str, str]:
     return parts[0], parts[1].removesuffix(".git")
 
 
-def _run_tool(agent_id: str, request: dict[str, Any] | None, goal: str, allow_external_actions: bool, context: list[dict[str, Any]] | None = None) -> dict[str, Any] | None:
+def _run_tool(agent_id: str, request: dict[str, Any] | None, goal: str, allow_external_actions: bool,
+              context: list[dict[str, Any]] | None = None, allow_code_changes: bool = False) -> dict[str, Any] | None:
     allowed = set(AGENT_BY_ID.get(agent_id, {}).get("tools", []))
     if request is None and agent_id == "discovery":
         request = {"name": "github_discover", "arguments": {"query": goal, "limit": 10}}
@@ -427,6 +428,12 @@ def _run_tool(agent_id: str, request: dict[str, Any] | None, goal: str, allow_ex
                     "agents_without_tool_evidence": claims_without_tool_evidence,
                     "unresolved_evidence": unresolved[:50],
                     "reviewed_agent_ids": [row.get("agent_id") for row in completed]}
+
+        if tool_name == "multi_source_discover":
+            from .discovery_sources import DiscoverySources
+            query = str(args.get("query") or goal).strip()[:180]
+            result = DiscoverySources().search(query, max(1, min(int(args.get("limit") or 10), 20)))
+            return {"tool": tool_name, "executed": True, **result}
 
         if tool_name == "github_discover":
             from .services import CatalogService
@@ -479,6 +486,106 @@ def _run_tool(agent_id: str, request: dict[str, Any] | None, goal: str, allow_ex
             return {"tool": tool_name, "executed": True, "repository": f"{owner}/{repo}", "path": path,
                     "sha": payload.get("sha"), "content": content[:max_chars], "truncated": len(content) > max_chars}
 
+
+        if tool_name == "apply_code_patch":
+            if not allow_code_changes:
+                return {"tool": tool_name, "executed": False,
+                        "reason": "A separate explicit code-change approval was not granted for this task."}
+            if os.getenv("APPHORYN_CODE_WRITES_ENABLED", "false").lower() not in {"1", "true", "yes", "on"}:
+                return {"tool": tool_name, "executed": False,
+                        "reason": "Code writes are disabled by server policy. Set APPHORYN_CODE_WRITES_ENABLED=true after reviewing the permissions."}
+            from .github_client import GitHubClient
+            repo_url = str(args.get("repository_url") or "")
+            owner, repo = _safe_repo_parts(repo_url)
+            files = args.get("files")
+            if not isinstance(files, list) or not files or len(files) > 8:
+                raise ValueError("Supply between one and eight complete text-file replacements.")
+            allow_roots = {
+                item.strip().strip("/") for item in
+                os.getenv("APPHORYN_CODE_WRITE_ALLOWLIST", "app,tests,scripts,apps/web").split(",")
+                if item.strip()
+            }
+            normalized = []
+            total_bytes = 0
+            for item in files:
+                if not isinstance(item, dict):
+                    raise ValueError("Each file change must be an object.")
+                path = str(item.get("path") or "").strip()
+                content = item.get("content")
+                if (not path or path.startswith("/") or "\\" in path
+                        or any(part in {"", ".", ".."} for part in path.split("/"))
+                        or path.startswith(".github/")
+                        or path.lower().startswith(".env")
+                        or any(token in path.casefold() for token in ("secret", "credential", "private_key"))
+                        or path.lower().endswith((".pem", ".key", ".p12", ".pfx", ".jks"))):
+                    raise ValueError(f"Protected or unsafe repository path: {path[:160]}")
+                if not any(path == root or path.startswith(root + "/") for root in allow_roots):
+                    raise ValueError(f"Path is outside the configured code-write allowlist: {path[:160]}")
+                if not isinstance(content, str) or not content.strip() or len(content.encode("utf-8")) > 100_000:
+                    raise ValueError(f"File content is empty or exceeds 100 KB: {path[:160]}")
+                total_bytes += len(content.encode("utf-8"))
+                normalized.append({"path": path, "content": content, "summary": str(item.get("summary") or "")[:240]})
+            if len({item["path"] for item in normalized}) != len(normalized):
+                raise ValueError("A path may appear only once in a code-change request.")
+            if total_bytes > 300_000:
+                raise ValueError("Total code-change payload exceeds 300 KB.")
+            client = GitHubClient(settings.github_token)
+            if not settings.github_token:
+                raise RuntimeError("APPHORYN_GITHUB_TOKEN is required for approved code-change pull requests.")
+            metadata = client.get_repository(owner, repo)
+            if metadata.get("archived") or metadata.get("disabled"):
+                raise ValueError("Archived or disabled repositories cannot receive code-change pull requests.")
+            base_ref = str(args.get("base_ref") or metadata.get("default_branch") or "main")
+            if not re.fullmatch(r"[A-Za-z0-9._/-]{1,180}", base_ref) or ".." in base_ref.split("/"):
+                raise ValueError("Invalid target base branch.")
+            ref_path = "/repos/" + owner + "/" + repo + "/git/ref/heads/" + quote(base_ref, safe="/")
+            base_data = client.request(ref_path)
+            base_sha = str((base_data.get("object") or {}).get("sha") or "")
+            if not base_sha:
+                raise RuntimeError("GitHub did not return the base branch commit.")
+            branch_name = f"apphoryn-ai/{uuid.uuid4().hex[:12]}"
+            client.mutate("POST", f"/repos/{owner}/{repo}/git/refs",
+                          {"ref": "refs/heads/" + branch_name, "sha": base_sha})
+            committed = []
+            for item in normalized:
+                encoded = "/".join(quote(part, safe="") for part in item["path"].split("/"))
+                endpoint = f"/repos/{owner}/{repo}/contents/{encoded}"
+                existing_sha = None
+                try:
+                    current = client.request(endpoint, {"ref": branch_name})
+                    if isinstance(current, dict):
+                        existing_sha = current.get("sha")
+                except Exception as exc:
+                    if "HTTP 404" not in str(exc):
+                        raise
+                payload = {
+                    "message": "Apphoryn AI: " + (item["summary"] or "propose reviewed source change")[:120],
+                    "content": base64.b64encode(item["content"].encode("utf-8")).decode("ascii"),
+                    "branch": branch_name,
+                }
+                if existing_sha:
+                    payload["sha"] = existing_sha
+                result = client.mutate("PUT", endpoint, payload)
+                committed.append({
+                    "path": item["path"],
+                    "commit_sha": ((result.get("commit") or {}).get("sha")),
+                    "blob_sha": ((result.get("content") or {}).get("sha")),
+                })
+            title = str(args.get("pull_request_title") or "Apphoryn AI proposed source improvements").strip()[:180]
+            body = str(args.get("pull_request_body") or "Proposed by Apphoryn's AI Software Engineer.\\n\\nReview all changes, run tests, and merge manually. This automation never writes to the default branch.")[:6000]
+            pull = client.mutate("POST", f"/repos/{owner}/{repo}/pulls", {
+                "title": title, "head": branch_name, "base": base_ref, "body": body,
+                "maintainer_can_modify": False,
+            })
+            return {
+                "tool": tool_name, "executed": True, "repository": f"{owner}/{repo}",
+                "base_branch": base_ref, "proposal_branch": branch_name,
+                "pull_request_number": pull.get("number"), "pull_request_url": pull.get("html_url"),
+                "files_committed": committed,
+                "default_branch_modified": False,
+                "review_required_before_merge": True,
+            }
+
         if tool_name == "import_repository":
             if not allow_external_actions:
                 return {"tool": tool_name, "executed": False, "reason": "Explicit approval for external import actions was not granted."}
@@ -530,7 +637,8 @@ def _run_tool(agent_id: str, request: dict[str, Any] | None, goal: str, allow_ex
 
 
 def _agent_call(agent_id: str, goal: str, instructions: str, context: list[dict[str, Any]],
-                memories: list[dict[str, Any]], allow_external_actions: bool) -> tuple[dict[str, Any], dict[str, str], dict[str, Any] | None]:
+                memories: list[dict[str, Any]], allow_external_actions: bool,
+                allow_code_changes: bool = False) -> tuple[dict[str, Any], dict[str, str], dict[str, Any] | None]:
     agent = AGENT_BY_ID[agent_id]
     system = (
         f"You are {agent['name']} ({agent['title']}) inside Apphoryn. {agent['description']} "
@@ -539,7 +647,9 @@ def _agent_call(agent_id: str, goal: str, instructions: str, context: list[dict[
         "Return one JSON object with keys summary, findings(array), recommendations(array), risks(array), "
         "missing_evidence(array), confidence(low|medium|high), tool_request(object or null). "
         f"Your allowed tools are: {', '.join(agent['tools'])}. Request a tool with {{name, arguments}}; "
-        "the orchestrator validates it. Import/build actions require allow_external_actions=true."
+        "the orchestrator validates it. Import/build actions require allow_external_actions=true. "
+        "Code edits require allow_code_changes=true AND APPHORYN_CODE_WRITES_ENABLED=true; even then only a new branch and pull request may be created, never a direct default-branch push. "
+        "The code-write tool rejects workflows, secrets, credentials and paths outside its allowlist."
     )
     payload = {"goal": goal, "assignment": instructions, "agent": {"id": agent_id, "name": agent["name"]},
                "previous_agent_results": context[-8:], "shared_memory": memories,
@@ -548,10 +658,10 @@ def _agent_call(agent_id: str, goal: str, instructions: str, context: list[dict[
         {"role": "system", "content": system}, {"role": "user", "content": _json(payload)}
     ])
     request = draft.get("tool_request") if isinstance(draft.get("tool_request"), dict) else None
-    tool_result = _run_tool(agent_id, request, goal, allow_external_actions, context)
+    tool_result = _run_tool(agent_id, request, goal, allow_external_actions, context, allow_code_changes)
     if agent_id == "supervisor":
         audit = _run_tool("supervisor", {"name": "quality_review", "arguments": {}},
-                          goal, allow_external_actions, context)
+                          goal, allow_external_actions, context, allow_code_changes)
         tool_result = {"agent_requested_tool_result": tool_result, "supervisor_audit": audit}
     if tool_result is not None:
         evidence = {"initial_analysis": draft, "tool_execution_result": tool_result,
@@ -570,6 +680,7 @@ def _agent_call(agent_id: str, goal: str, instructions: str, context: list[dict[
 def execute_run(run: dict[str, Any]) -> None:
     run_id, goal = str(run["id"]), str(run["goal"])
     allow_actions = bool(run.get("allow_external_actions"))
+    allow_code_changes = bool(run.get("allow_code_changes"))
     memories = STORE.read_memories(8)
     existing_tasks = STORE.list_tasks(run_id, limit=200)
 
@@ -667,7 +778,7 @@ def execute_run(run: dict[str, Any]) -> None:
         STORE.update_task(task_id, "running")
         try:
             result, route, tool_result = _agent_call(
-                agent_id, goal, assignment["instructions"], context, memories, allow_actions
+                agent_id, goal, assignment["instructions"], context, memories, allow_actions, allow_code_changes
             )
             STORE.update_task(
                 task_id, "completed", provider=route.get("provider"), model=route.get("model"),
