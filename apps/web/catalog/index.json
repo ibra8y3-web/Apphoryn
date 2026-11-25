@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T18:53:16.822105+00:00",
+  "generated_at": "2026-11-25T18:53:31.372550+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -18383,6 +18383,88 @@
           "signer_certificate_sha256": "62b2473253b11c4c624798c715ce41a736fad29987301cfe034eb78af3d45d63",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-orewatokyo-pocket-theater-v0.1.0-b34/PocketTheater-v0.1.0-b34.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-orewatokyo-pocket-theater-v0.1.0-b34"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "rifkiwork74-projects-floating-dj-visualizer-by-rifki",
+      "slug": "rifkiwork74-projects-floating-dj-visualizer-by-rifki",
+      "name": "Projects-Floating-DJ-Visualizer-By-Rifki",
+      "summary": "A customizable Android floating audio visualizer with an integrated experimental Equalizer Engine (5/10-band), audio-effect controls, real-time visual customization, profiles, scenes, and theme-linked UI. Built on-device with Kotlin. Suppor",
+      "description": "A customizable Android floating audio visualizer with an integrated experimental Equalizer Engine (5/10-band), audio-effect controls, real-time visual customization, profiles, scenes, and theme-linked UI. Built on-device with Kotlin. Supports Android 8–16; audio capabilities vary by device.",
+      "translations": {
+        "en": {
+          "summary": "A customizable Android floating audio visualizer with an integrated experimental Equalizer Engine (5/10-band), audio-effect controls, real-time visual customization, profiles, scenes, and theme-linked UI. Built on-device with Kotlin. Suppor",
+          "description": "A customizable Android floating audio visualizer with an integrated experimental Equalizer Engine (5/10-band), audio-effect controls, real-time visual customization, profiles, scenes, and theme-linked UI. Built on-device with Kotlin. Supports Android 8–16; audio capabilities vary by device."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/252080766?v=4",
+      "repository_url": "https://github.com/rifkiwork74/Projects-Floating-DJ-Visualizer-By-Rifki",
+      "github_repo_id": "1454459056",
+      "source_updated_at": "2026-11-21T10:37:55Z",
+      "homepage_url": null,
+      "owner": "rifkiwork74",
+      "default_branch": "main",
+      "source_commit_sha": "efc376eacb0009c9f6c4e2e2a0860920f6c3a6a9",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Tech Rifki Consultant Network Engineering \n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "audio",
+        "audio-processing",
+        "audio-visualizer",
+        "eq",
+        "equalizer",
+        "equalizer-setup",
+        "equalizers",
+        "floating-window",
+        "mobile",
+        "mobile-app",
+        "overlay",
+        "overlay-window",
+        "spectrum",
+        "spectrum-virtualize",
+        "visualizer",
+        "visualizer-audio-reactive",
+        "visualizers"
+      ],
+      "latest_version": "V3.0.38.2",
+      "release_url": "https://github.com/rifkiwork74/Projects-Floating-DJ-Visualizer-By-Rifki/releases/tag/V3.0.38.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rifkiwork74-projects-floating-dj-visualizer-by-rifki-V3.0.38.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rifkiwork74-projects-floating-dj-visualizer-by-rifki-V3.0.38.2/THIRD-PARTY-NOTICE-rifkiwork74-projects-floating-dj-visualizer-by-rifki.txt",
+      "artifacts": [
+        {
+          "id": "60fec8ef4c7d7c56b193cf0d7b62d3caefc96d9c22ab447f91d22a321112742c",
+          "filename": "Floating.DJ.Visualizer.By.Rifki.-.Update.Audio.angine.-.UI.-.Stable.version.3.0.38.2.apk",
+          "original_filename": "Floating.DJ.Visualizer.By.Rifki.-.Update.Audio.angine.-.UI.-.Stable.version.3.0.38.2.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "V3.0.38.2",
+          "size_bytes": 1388398,
+          "sha256": "60fec8ef4c7d7c56b193cf0d7b62d3caefc96d9c22ab447f91d22a321112742c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "234d55591fe0c5c7eb1d13cd58bafe551bf80f1dfc9d8193a51acafe5100788d",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rifkiwork74-projects-floating-dj-visualizer-by-rifki-V3.0.38.2/Floating.DJ.Visualizer.By.Rifki.-.Update.Audio.angine.-.UI.-.Stable.version.3.0.38.2.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rifkiwork74-projects-floating-dj-visualizer-by-rifki-V3.0.38.2"
         }
       ],
       "platforms": [
