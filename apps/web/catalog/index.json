@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:36:34.581865+00:00",
+  "generated_at": "2026-11-25T23:36:57.179644+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -43623,6 +43623,77 @@
       ],
       "platforms": [
         "windows"
+      ]
+    },
+    {
+      "id": "musaddiqbaluch-quickslate",
+      "slug": "musaddiqbaluch-quickslate",
+      "name": "QuickSlate",
+      "summary": "QuickSlate is a lightweight Android Quick Settings tile utility toolkit providing fast, offline system tools, shortcuts, and utilities directly from the notification shade. Built for speed and minimalism, it enables instant system-level act",
+      "description": "QuickSlate is a lightweight Android Quick Settings tile utility toolkit providing fast, offline system tools, shortcuts, and utilities directly from the notification shade. Built for speed and minimalism, it enables instant system-level actions without opening apps, background services, or internet access.",
+      "translations": {
+        "en": {
+          "summary": "QuickSlate is a lightweight Android Quick Settings tile utility toolkit providing fast, offline system tools, shortcuts, and utilities directly from the notification shade. Built for speed and minimalism, it enables instant system-level act",
+          "description": "QuickSlate is a lightweight Android Quick Settings tile utility toolkit providing fast, offline system tools, shortcuts, and utilities directly from the notification shade. Built for speed and minimalism, it enables instant system-level actions without opening apps, background services, or internet access."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/musaddiqbaluch/QuickSlate/main/app/src/main/assets/ic_launcher.png",
+      "repository_url": "https://github.com/musaddiqbaluch/QuickSlate",
+      "github_repo_id": "1253420076",
+      "source_updated_at": "2026-11-22T13:07:07Z",
+      "homepage_url": null,
+      "owner": "musaddiqbaluch",
+      "default_branch": "main",
+      "source_commit_sha": "1b850e402c8c7467b46395e447c23bfa472f5db3",
+      "license_text": "\nMIT License\n\nCopyright (c) 2026 Musaddiq Baloch\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "network",
+      "topics": [
+        "android",
+        "android-app",
+        "android-tools",
+        "android-utility",
+        "java",
+        "offline",
+        "productivity-app",
+        "quick-settings-tile",
+        "utility"
+      ],
+      "latest_version": "v1.4",
+      "release_url": "https://github.com/musaddiqbaluch/QuickSlate/releases/tag/v1.4",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-musaddiqbaluch-quickslate-v1.4",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-musaddiqbaluch-quickslate-v1.4/THIRD-PARTY-NOTICE-musaddiqbaluch-quickslate.txt",
+      "artifacts": [
+        {
+          "id": "6ee2e21d09a8a17a59d7ae620046b3a69debb9bc8e50ff832d1f15b3da2bd304",
+          "filename": "Quick.Slate.apk",
+          "original_filename": "Quick.Slate.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.4",
+          "size_bytes": 6905399,
+          "sha256": "6ee2e21d09a8a17a59d7ae620046b3a69debb9bc8e50ff832d1f15b3da2bd304",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "d9784250afa7ff9ea38f0b6d5f8b5f400ab5aeb10220eadf693bc274521c4f2e",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-musaddiqbaluch-quickslate-v1.4/Quick.Slate.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-musaddiqbaluch-quickslate-v1.4"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
