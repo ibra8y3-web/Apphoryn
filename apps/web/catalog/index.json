@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:07:34.216335+00:00",
+  "generated_at": "2026-11-25T04:07:42.413336+00:00",
   "apps": [
     {
       "id": "defunkt-ambition",
@@ -112,6 +112,45 @@
       "build_recommended": false,
       "classification_source": "heuristic",
       "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "category": "other",
+      "topics": [],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "cdcarter-backpacking",
+      "slug": "cdcarter-backpacking",
+      "artifacts": [],
+      "name": "backpacking",
+      "summary": "An Io web framework of sorts",
+      "description": "An Io web framework of sorts",
+      "translations": {
+        "en": {
+          "summary": "An Io web framework of sorts",
+          "description": "An Io web framework of sorts"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/164?v=4",
+      "repository_url": "https://github.com/cdcarter/backpacking",
+      "github_repo_id": "334",
+      "source_updated_at": "2026-06-30T12:07:34Z",
+      "homepage_url": null,
+      "owner": "cdcarter",
+      "default_branch": "master",
+      "source_commit_sha": "12dd19a8857a99d392de34f6a7798631ee9faf19",
+      "license_text": "The MIT License\n\nCopyright (c) 2007-2008 Chris Carter\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
       "category": "other",
       "topics": [],
       "latest_version": null,
