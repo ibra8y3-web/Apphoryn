@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T10:54:23.840553+00:00",
+  "generated_at": "2026-11-25T10:54:38.281911+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -11146,6 +11146,57 @@
         "opensource",
         "pagedrop",
         "shell"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "nadimtuhin-pagifye",
+      "slug": "nadimtuhin-pagifye",
+      "artifacts": [],
+      "name": "pagifye",
+      "summary": "Pagify your content with ease",
+      "description": "Pagify your content with ease",
+      "translations": {
+        "en": {
+          "summary": "Pagify your content with ease",
+          "description": "Pagify your content with ease"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/3125771?v=4",
+      "repository_url": "https://github.com/nadimtuhin/pagifye",
+      "github_repo_id": "1087897225",
+      "source_updated_at": "2026-09-10T04:05:29Z",
+      "homepage_url": null,
+      "owner": "nadimtuhin",
+      "default_branch": "main",
+      "source_commit_sha": "837f72dc8070e091153bb4d861044a537503836d",
+      "license_text": "MIT License\n\nCopyright (c) 2024 nadimtuhin\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "category": "other",
+      "topics": [
+        "alpinejs",
+        "components",
+        "elementor",
+        "elementor-widgets",
+        "opensource",
+        "page-builder",
+        "pagifye",
+        "tailwind-css",
+        "widgets",
+        "wordpress",
+        "wordpress-plugin"
       ],
       "latest_version": null,
       "release_url": null,
