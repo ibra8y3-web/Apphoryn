@@ -33,6 +33,31 @@
   function renderWorkers(items) {
     $("workersList").innerHTML = (items||[]).map(worker => '<article class="worker-row"><div class="worker-head"><b>'+esc(worker.worker_id)+'</b>'+stateTag(worker.status)+'</div><p class="tiny">آخر نبضة: '+esc(new Date(worker.last_heartbeat_at).toLocaleString())+'</p><p class="tiny">المهمة الحالية: '+esc(worker.current_run_id || "—")+'</p></article>').join("") || '<p class="muted">لم يرسل العامل أول نبضة بعد.</p>';
   }
+  function renderAutomation(data) {
+    const enabled = Boolean(data.automation_enabled);
+    const health = data.shared_catalog_health || {};
+    const statusLabels = {
+      starting: "جارٍ بدء مراقبة الكتالوج",
+      baseline: "تم حفظ خط الأساس للكتالوج",
+      current: "الكتالوج متزامن ولا توجد تغييرات جديدة",
+      review_queued: "تم اكتشاف تغييرات وإرسال مراجعة إلى Niebex",
+      error: "تعذر فحص الكتالوج؛ ستتم إعادة المحاولة تلقائيًا"
+    };
+    $("automationStatus").textContent = enabled
+      ? "التشغيل الذاتي مفعّل دائمًا. العمال جاهزون ويعالجون المهام تلقائيًا."
+      : "مراجعة الكتالوج التلقائية متوقفة. المهام اليدوية تظل متاحة.";
+    $("toggleAutomation").textContent = enabled ? "إيقاف المراجعة التلقائية" : "تفعيل المراجعة التلقائية";
+    $("toggleAutomation").disabled = false;
+    const checkedAt = health.last_checked_at ? new Date(health.last_checked_at).toLocaleString() : "لم يتم الفحص بعد";
+    const changed = Number(health.added_count || 0) + Number(health.updated_count || 0) + Number(health.removed_count || 0);
+    const runLabel = health.review_run_id ? " · مهمة المراجعة: " + health.review_run_id : "";
+    const errorLabel = health.last_error ? " · " + health.last_error : "";
+    $("catalogAutomationDetails").textContent =
+      (statusLabels[health.status] || "حالة الكتالوج: " + String(health.status || "قيد الانتظار")) +
+      " · آخر فحص: " + checkedAt +
+      " · عدد التطبيقات: " + Number(health.app_count || 0) +
+      " · تغييرات آخر دورة: " + changed + runLabel + errorLabel;
+  }
   function renderResources(payload) {
     const groups = [...(payload?.compute||[]), ...(payload?.model_servers||[]), ...(payload?.databases||[])];
     $("resourcesList").innerHTML = groups.map(item => {
@@ -125,6 +150,7 @@
     $("runsCompleted").textContent=counts.runs_completed??0;
     $("memoryCount").textContent=counts.memory_records??0;
     renderAgents(data.agents,data.agent_activity); renderMemories(data.memories); renderWorkers(data.workers);
+    renderAutomation(data);
     renderProviders({...data.providers,metrics:data.provider_metrics,model_metrics:data.model_metrics,model_evaluations:data.model_evaluations}); renderResources(data.resources);
     renderAnalytics(data.analytics); renderRuns(data.runs); renderSchedules(data.schedules);
     $("connectionStatus").textContent="متصل بالـBackend. تم تحديث البيانات: "+new Date().toLocaleTimeString();
@@ -195,6 +221,18 @@
   });
 
   $("connectButton").addEventListener("click",connect);
+  $("toggleAutomation").addEventListener("click",async()=>{
+    const button=$("toggleAutomation");
+    const enabled=button.textContent.includes("تفعيل");
+    button.disabled=true;
+    try{
+      await api("/automation/enabled?enabled="+String(enabled),"POST");
+      await refresh();
+    }catch(error){
+      $("automationStatus").textContent=error.message;
+      button.disabled=false;
+    }
+  });
 
   $("benchmarkModels").addEventListener("click",async()=>{
     const button=$("benchmarkModels");
