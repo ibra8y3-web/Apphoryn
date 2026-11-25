@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T18:37:26.405841+00:00",
+  "generated_at": "2026-11-25T18:37:35.167385+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -10568,7 +10568,7 @@
       "translation_status": "pending",
       "ai_provider": null,
       "ai_model": null,
-      "icon_url": "https://avatars.githubusercontent.com/u/4085099?v=4",
+      "icon_url": "https://raw.githubusercontent.com/jemcik/JemRec/main/fastlane/metadata/android/en-US/images/icon.png",
       "repository_url": "https://github.com/jemcik/JemRec",
       "github_repo_id": "1364785248",
       "source_updated_at": "2026-11-25T15:46:34Z",
