@@ -17,6 +17,7 @@ if not os.environ.get("APPHORYN_GITHUB_TOKEN") and os.environ.get("GITHUB_TOKEN"
     os.environ["APPHORYN_GITHUB_TOKEN"] = os.environ["GITHUB_TOKEN"]
 
 from app.config import settings
+from app.build_support import detect_supported_build_targets
 from app.github_client import GitHubClient
 from app.github_release_mirror import GitHubReleaseMirror
 from app.repository_crawler import RepositoryCrawler
@@ -114,6 +115,15 @@ def main() -> None:
     catalog = CatalogService(github=github)
     mirror = GitHubReleaseMirror(token, target_repository, os.getenv("APPHORYN_GITHUB_REF", "main"))
     now = time.time()
+
+    configured_targets = os.getenv("APPHORYN_GLOBAL_SCOUT_BUILD_TARGETS", "off").strip().lower()
+    allowed_targets = {"android", "windows", "linux", "macos"}
+    build_targets_requested = [] if configured_targets in {"", "off", "none", "disabled"} else sorted({
+        part.strip() for part in configured_targets.split(",") if part.strip()
+    })
+    if build_targets_requested and not set(build_targets_requested).issubset(allowed_targets):
+        raise SystemExit("APPHORYN_GLOBAL_SCOUT_BUILD_TARGETS contains unsupported targets.")
+    build_budget = max(0, min(int(os.getenv("APPHORYN_GLOBAL_SCOUT_MAX_BUILDS_PER_RUN", "0")), 5))
 
     catalog_rows = load_catalog_index(Path(args.catalog_file))
     known_by_id = {
@@ -229,6 +239,46 @@ def main() -> None:
                 "apphoryn_release": publication.get("release_url"),
                 "project_status": publication.get("project_status"),
             })
+
+            # Optional source builds are disabled unless the repository owner
+            # explicitly configures targets and a per-run budget. Detection reads
+            # manifests only; third-party code executes only in the isolated build workflow.
+            if build_targets_requested:
+                available = mirror.get_available_platforms(repository_url)
+                missing = sorted(set(build_targets_requested) - available)
+                buildable = (
+                    app.get("project_kind") in {"application", "developer_tool"}
+                    and bool(app.get("build_recommended"))
+                )
+                if not missing:
+                    result["build_status"] = "requested_platforms_already_available"
+                elif not buildable:
+                    result["build_status"] = "not_dispatched_by_project_classification"
+                    result["build_targets_missing"] = missing
+                elif build_budget <= 0:
+                    result["build_status"] = "deferred_by_zero_or_exhausted_budget"
+                    result["build_targets_missing"] = missing
+                else:
+                    repository_parts = repository_url.removeprefix("https://github.com/").strip("/").split("/")
+                    owner, repo_name = repository_parts[:2] if len(repository_parts) == 2 else ("", "")
+                    git_ref = str(app.get("source_commit_sha") or app.get("default_branch") or "main")
+                    supported = detect_supported_build_targets(owner, repo_name, git_ref, github) if owner and repo_name else {}
+                    selected = sorted(set(missing) & set(supported))
+                    result["unsupported_build_targets"] = sorted(set(missing) - set(selected))
+                    if not selected:
+                        result["build_status"] = "no_supported_build_adapter"
+                    elif mirror.has_recent_build_attempt(repository_url, git_ref, targets=selected):
+                        result["build_status"] = "already_queued_or_published"
+                        result["build_targets"] = selected
+                    else:
+                        mirror.dispatch_build(repository_url, git_ref, selected, str(app.get("slug") or app.get("id")))
+                        build_budget -= 1
+                        result["build_status"] = "workflow_dispatched"
+                        result["build_targets"] = selected
+                        result["build_adapters"] = {target: supported[target] for target in selected}
+            else:
+                result["build_status"] = "automatic_build_disabled"
+
             record = {
                 "repository_url": app.get("repository_url") or repository_url,
                 "github_repo_id": app.get("github_repo_id") or candidate.get("id"),
