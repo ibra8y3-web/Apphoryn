@@ -35,7 +35,8 @@ permissions:
 jobs:
   global-scout:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # Use the full GitHub-hosted runner window; Scout checkpoints and resumes.
+    timeout-minutes: 360
     steps:
       - name: Checkout trusted Apphoryn automation
         uses: actions/checkout@v4
@@ -74,7 +75,8 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           APPHORYN_AI_SERVICE_URL: 'https://apphoryn-production.up.railway.app'
-          APPHORYN_IMPORT_INTERVAL_SECONDS: '5'
+          # No artificial per-import delay. Upstream API limits use retry/backoff.
+          APPHORYN_IMPORT_INTERVAL_SECONDS: '0'
           APPHORYN_TRANSLATION_INTERVAL_SECONDS: '1'
           APPHORYN_GLOBAL_SCOUT_REFRESH_INTERVAL_SECONDS: '600'
           # AI provider credentials stay only in Railway; GitHub Actions receives a short-lived OIDC identity.
@@ -98,7 +100,8 @@ jobs:
           python scripts/global_scout.py \
             --max-repositories 10000 \
             --max-pages 100 \
-            --run-budget-seconds 900 \
+            # Keep scanning for nearly the full six-hour GitHub-hosted runner window.
+            --run-budget-seconds 20400 \
             --import-interval-seconds "$APPHORYN_IMPORT_INTERVAL_SECONDS"
 
       - name: Persist the Scout cursor and retry queue
