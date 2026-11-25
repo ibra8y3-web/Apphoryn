@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 from fastapi import APIRouter, Header, HTTPException, Query
 from pydantic import BaseModel, Field
 
@@ -53,6 +54,11 @@ def dashboard(x_apphoryn_admin: str | None = Header(default=None)):
         "providers": ai_router.public_model_catalog(),
         "resources": resource_status(),
         "analytics": analytics.summary(),
+        "automation_enabled": bool(STORE.get_system_state(
+            "agent_autopilot_enabled",
+            os.getenv("APPHORYN_AGENT_AUTOPILOT_ENABLED", "true").lower() in {"1", "true", "yes", "on"},
+        )),
+        "shared_catalog_health": STORE.get_system_state("shared_catalog_health", {"status": "starting"}),
     }
 
 
@@ -87,6 +93,19 @@ def test_provider(provider: str, x_apphoryn_admin: str | None = Header(default=N
 def benchmark_providers(x_apphoryn_admin: str | None = Header(default=None)):
     _require_admin(x_apphoryn_admin)
     return ai_router.benchmark_models(max_models=3)
+
+
+@router.post("/automation/enabled")
+def set_automation_enabled(
+    enabled: bool = Query(...),
+    x_apphoryn_admin: str | None = Header(default=None),
+):
+    _require_admin(x_apphoryn_admin)
+    STORE.set_system_state("agent_autopilot_enabled", enabled)
+    return {
+        "enabled": enabled,
+        "message": "Autonomous catalog review is enabled." if enabled else "Autonomous catalog review is paused.",
+    }
 
 
 @router.post("/schedules")

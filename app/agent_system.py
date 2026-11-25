@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import base64
+import hashlib
 import json
 import os
 import re
@@ -14,6 +15,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote, urlparse
+from urllib.request import Request, urlopen
 
 from .config import ROOT, settings
 from . import ai_router
@@ -122,6 +124,9 @@ class AgentStore:
                     next_run_at TEXT NOT NULL, last_run_id TEXT, created_at TEXT NOT NULL, updated_at TEXT NOT NULL
                 );
                 CREATE INDEX IF NOT EXISTS idx_agent_schedules_due ON agent_schedules(enabled, next_run_at);
+                CREATE TABLE IF NOT EXISTS agent_system_state (
+                    state_key TEXT PRIMARY KEY, value_json TEXT NOT NULL, updated_at TEXT NOT NULL
+                );
             """)
             run_columns = {row[1] for row in con.execute("PRAGMA table_info(agent_runs)").fetchall()}
             if "allow_code_changes" not in run_columns:
@@ -385,6 +390,22 @@ class AgentStore:
         with self.connect() as con:
             rows = con.execute("SELECT * FROM agent_schedules ORDER BY created_at DESC").fetchall()
         return [{**dict(row), "enabled": bool(row["enabled"])} for row in rows]
+
+    def get_system_state(self, key: str, default: Any = None) -> Any:
+        with self.connect() as con:
+            row = con.execute(
+                "SELECT value_json FROM agent_system_state WHERE state_key=?", (key,)
+            ).fetchone()
+        return _loads(row["value_json"], default) if row else default
+
+    def set_system_state(self, key: str, value: Any) -> None:
+        with self.connect() as con:
+            con.execute(
+                """INSERT INTO agent_system_state(state_key,value_json,updated_at) VALUES(?,?,?)
+                   ON CONFLICT(state_key) DO UPDATE SET value_json=excluded.value_json,
+                   updated_at=excluded.updated_at""",
+                (key[:160], _json(value), utc_now()),
+            )
 
     def set_schedule_enabled(self, schedule_id: str, enabled: bool) -> bool:
         with self.connect() as con:
@@ -923,14 +944,197 @@ def execute_run(run: dict[str, Any]) -> None:
 _stop_event = threading.Event()
 _worker_lock = threading.Lock()
 _analytics_sync_lock = threading.Lock()
+_catalog_watch_lock = threading.Lock()
 _last_analytics_sync = 0.0
+_last_catalog_watch = 0.0
 _workers: list[threading.Thread] = []
+
+
+def _catalog_source_url() -> str:
+    repository = os.getenv("APPHORYN_CATALOG_REPOSITORY", "ibra8y3-web/Apphoryn").strip()
+    if not re.fullmatch(r"[A-Za-z0-9_.-]{1,100}/[A-Za-z0-9_.-]{1,100}", repository):
+        raise ValueError("APPHORYN_CATALOG_REPOSITORY must use owner/repository form.")
+    ref = os.getenv("APPHORYN_CATALOG_REF", "main").strip()
+    if not ref or len(ref) > 120 or any(part in {".", ".."} for part in ref.split("/")):
+        raise ValueError("APPHORYN_CATALOG_REF is not a safe Git reference.")
+    return (
+        "https://raw.githubusercontent.com/" + repository + "/"
+        + quote(ref, safe="") + "/apps/web/catalog/index.json"
+    )
+
+
+def _catalog_app_index(manifest: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    records = manifest.get("apps")
+    if not isinstance(records, list):
+        raise ValueError("The shared catalog manifest does not contain an apps array.")
+    indexed: dict[str, dict[str, Any]] = {}
+    for app in records[:12000]:
+        if not isinstance(app, dict):
+            continue
+        key = str(app.get("slug") or app.get("id") or "").strip()[:160]
+        if not key:
+            continue
+        artifacts = app.get("artifacts") if isinstance(app.get("artifacts"), list) else []
+        artifact_facts = []
+        for artifact in artifacts[:30]:
+            if not isinstance(artifact, dict):
+                continue
+            artifact_facts.append({
+                "sha256": str(artifact.get("sha256") or "").lower()[:64],
+                "filename": str(artifact.get("filename") or "")[:180],
+                "platform": str(artifact.get("platform") or "")[:40],
+            })
+        artifact_facts.sort(key=lambda item: (item["sha256"], item["filename"]))
+        indexed[key] = {
+            "name": str(app.get("name") or key)[:180],
+            "repository_url": str(app.get("repository_url") or "")[:300],
+            "latest_version": str(app.get("latest_version") or "")[:120],
+            "release_url": str(app.get("release_url") or "")[:500],
+            "artifacts": artifact_facts,
+        }
+    return indexed
+
+
+def _poll_shared_catalog_once() -> None:
+    """Watch the public canonical catalog and enqueue evidence-only employee reviews on change.
+
+    Global Scout owns discovery/import/build/publishing. This watcher only wakes
+    Niebex after the shared manifest changes; it never downloads or installs packages.
+    """
+    env_default = os.getenv("APPHORYN_AGENT_AUTOPILOT_ENABLED", "true").lower() in {"1", "true", "yes", "on"}
+    if not bool(STORE.get_system_state("agent_autopilot_enabled", env_default)):
+        return
+    request = Request(
+        _catalog_source_url() + "?apphoryn_refresh=" + str(int(time.time() // 300)),
+        headers={"User-Agent": "Apphoryn-Catalog-Worker/1.0", "Accept": "application/json"},
+    )
+    with urlopen(request, timeout=12) as response:
+        final_url = urlparse(response.geturl())
+        if final_url.scheme != "https" or final_url.hostname != "raw.githubusercontent.com":
+            raise ValueError("The catalog watcher received an untrusted redirect target.")
+        raw = response.read(20 * 1024 * 1024 + 1)
+    if len(raw) > 20 * 1024 * 1024:
+        raise ValueError("The shared catalog manifest exceeds the 20 MiB safety limit.")
+    manifest = json.loads(raw.decode("utf-8"))
+    if not isinstance(manifest, dict):
+        raise ValueError("The shared catalog manifest must be a JSON object.")
+    digest = hashlib.sha256(raw).hexdigest()
+    current_index = _catalog_app_index(manifest)
+    previous = STORE.get_system_state("shared_catalog_snapshot", {})
+    if not isinstance(previous, dict):
+        previous = {}
+    previous_index = previous.get("apps") if isinstance(previous.get("apps"), dict) else {}
+    previous_digest = str(previous.get("sha256") or "")
+
+    added = [key for key in current_index if key not in previous_index]
+    updated = [
+        key for key, facts in current_index.items()
+        if key in previous_index and facts != previous_index.get(key)
+    ]
+    removed = [key for key in previous_index if key not in current_index]
+    changed_keys = (added + updated + removed)[:50]
+    change_facts = []
+    for key in changed_keys:
+        facts = current_index.get(key) or previous_index.get(key) or {}
+        change_facts.append({
+            "change": "added" if key in added else "updated" if key in updated else "removed",
+            "app": facts.get("name") or key,
+            "repository_url": facts.get("repository_url") or "",
+            "latest_version": facts.get("latest_version") or "",
+            "artifact_count": len(facts.get("artifacts") or []),
+            "artifacts": (facts.get("artifacts") or [])[:8],
+        })
+
+    snapshot = {
+        "sha256": digest,
+        "generated_at": str(manifest.get("generated_at") or "")[:80],
+        "app_count": len(current_index),
+        "apps": current_index,
+        "checked_at": utc_now(),
+    }
+    STORE.set_system_state("shared_catalog_snapshot", snapshot)
+    if not previous_digest or digest == previous_digest or not changed_keys:
+        prior_health = STORE.get_system_state("shared_catalog_health", {})
+        prior_health = prior_health if isinstance(prior_health, dict) else {}
+        review_run_id = prior_health.get("review_run_id")
+        review_run = STORE.get_run(str(review_run_id)) if review_run_id else None
+        review_still_active = bool(
+            review_run and review_run.get("status") in {"queued", "running", "retry"}
+        )
+        health = dict(prior_health)
+        health.update({
+            "status": "baseline" if not previous_digest else ("review_queued" if review_still_active else "current"),
+            "last_checked_at": utc_now(),
+            "catalog_sha256": digest,
+            "app_count": len(current_index),
+        })
+        if not review_still_active and not previous_digest:
+            health["changes_queued"] = 0
+        STORE.set_system_state("shared_catalog_health", health)
+        return
+
+    goal = (
+        "AUTOMATED SHARED-CATALOG CHANGE REVIEW. The canonical Apphoryn catalog changed. "
+        "Global Scout has already handled discovery, license screening, release download, "
+        "artifact validation and publishing. Review these changed records using read-only "
+        "evidence; coordinate Discovery, Research, Updates, Writing, Security and Supervisor "
+        "where relevant. Confirm version/source consistency, highlight missing or rejected "
+        "installers, and report actionable issues. Do NOT import, build, edit code, publish "
+        "releases, or perform any external write. A missing installer must remain source-only.\n"
+        + _json({
+            "catalog_sha256": digest,
+            "catalog_generated_at": manifest.get("generated_at"),
+            "added_count": len(added),
+            "updated_count": len(updated),
+            "removed_count": len(removed),
+            "changed_records": change_facts,
+            "canonical_catalog": _catalog_source_url(),
+        })
+    )
+    queued = STORE.enqueue(
+        goal, priority=7, allow_external_actions=False, max_attempts=2, allow_code_changes=False
+    )
+    STORE.set_system_state("shared_catalog_health", {
+        "status": "review_queued",
+        "last_checked_at": utc_now(),
+        "last_change_at": utc_now(),
+        "catalog_sha256": digest,
+        "app_count": len(current_index),
+        "added_count": len(added),
+        "updated_count": len(updated),
+        "removed_count": len(removed),
+        "changes_queued": len(changed_keys),
+        "review_run_id": queued.get("id"),
+    })
+
+
+def _maybe_poll_shared_catalog() -> None:
+    global _last_catalog_watch
+    interval = max(60, min(int(os.getenv("APPHORYN_CATALOG_POLL_SECONDS", "300")), 3600))
+    if time.monotonic() - _last_catalog_watch < interval:
+        return
+    if not _catalog_watch_lock.acquire(blocking=False):
+        return
+    try:
+        _poll_shared_catalog_once()
+    except Exception as exc:
+        try:
+            STORE.set_system_state("shared_catalog_health", {
+                "status": "error", "last_checked_at": utc_now(),
+                "last_error": f"{type(exc).__name__}: {str(exc)[:500]}",
+            })
+        except Exception:
+            pass
+    finally:
+        _last_catalog_watch = time.monotonic()
+        _catalog_watch_lock.release()
 
 
 def _worker_loop(worker_id: str) -> None:
     global _last_analytics_sync
     while not _stop_event.is_set():
         try:
+            _maybe_poll_shared_catalog()
             if time.monotonic() - _last_analytics_sync >= 30 and _analytics_sync_lock.acquire(blocking=False):
                 try:
                     from .analytics import analytics
