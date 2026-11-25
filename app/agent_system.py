@@ -541,6 +541,17 @@ def _run_tool(agent_id: str, request: dict[str, Any] | None, goal: str, allow_ex
             from .github_client import GitHubClient
             repo_url = str(args.get("repository_url") or "")
             owner, repo = _safe_repo_parts(repo_url)
+            allowed_repositories = {
+                item.strip().casefold() for item in
+                os.getenv("APPHORYN_CODE_WRITE_REPOSITORIES", "").split(",") if item.strip()
+            }
+            if not allowed_repositories and settings.github_owner and settings.github_repository:
+                allowed_repositories = {f"{settings.github_owner}/{settings.github_repository}".casefold()}
+            if f"{owner}/{repo}".casefold() not in allowed_repositories:
+                raise PermissionError(
+                    "Target repository is not in APPHORYN_CODE_WRITE_REPOSITORIES. "
+                    "Code-write access is limited to explicitly approved repositories."
+                )
             files = args.get("files")
             if not isinstance(files, list) or not files or len(files) > 8:
                 raise ValueError("Supply between one and eight complete text-file replacements.")
