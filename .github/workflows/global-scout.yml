@@ -83,8 +83,10 @@ jobs:
           APPHORYN_AI_ALLOW_CREDIT_BASED_PROVIDERS: ${{ vars.APPHORYN_AI_ALLOW_CREDIT_BASED_PROVIDERS || 'false' }}
           APPHORYN_COMET_FREE_MODEL_IDS: ${{ vars.APPHORYN_COMET_FREE_MODEL_IDS || '' }}
           APPHORYN_AI_ENABLE_CLOUDFLARE: ${{ vars.APPHORYN_AI_ENABLE_CLOUDFLARE || 'false' }}
-          APPHORYN_GLOBAL_SCOUT_BUILD_TARGETS: ${{ vars.APPHORYN_GLOBAL_SCOUT_BUILD_TARGETS || 'off' }}
-          APPHORYN_GLOBAL_SCOUT_MAX_BUILDS_PER_RUN: ${{ vars.APPHORYN_GLOBAL_SCOUT_MAX_BUILDS_PER_RUN || '0' }}
+          # One source project maximum per two-hour run; only detected native adapters are built.
+          # Third-party source runs without repository secrets; trusted publisher verifies all output again.
+          APPHORYN_GLOBAL_SCOUT_BUILD_TARGETS: 'android,windows,linux,macos'
+          APPHORYN_GLOBAL_SCOUT_MAX_BUILDS_PER_RUN: '1'
           MAX_REPOSITORIES: ${{ inputs.max_repositories || '200' }}
           MAX_PAGES: ${{ inputs.max_pages || '25' }}
         shell: bash
