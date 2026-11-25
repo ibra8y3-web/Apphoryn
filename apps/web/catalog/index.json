@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T20:16:12.804244+00:00",
+  "generated_at": "2026-11-25T20:16:34.579747+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -12893,6 +12893,88 @@
       ],
       "platforms": [
         "windows"
+      ]
+    },
+    {
+      "id": "raine-works-ha-googletv",
+      "slug": "raine-works-ha-googletv",
+      "name": "ha-googletv",
+      "summary": "Google TV by Raineworks: Home Assistant integration and TV app for Google TV and Android TV. Apps, now playing, live notifications with cameras and buttons you answer with the remote, text-to-speech, media and dashboards, with no developer ",
+      "description": "Google TV by Raineworks: Home Assistant integration and TV app for Google TV and Android TV. Apps, now playing, live notifications with cameras and buttons you answer with the remote, text-to-speech, media and dashboards, with no developer mode; ADB adds the remote, power and HDMI inputs. Set up once, then it keeps itself up to date.",
+      "translations": {
+        "en": {
+          "summary": "Google TV by Raineworks: Home Assistant integration and TV app for Google TV and Android TV. Apps, now playing, live notifications with cameras and buttons you answer with the remote, text-to-speech, media and dashboards, with no developer ",
+          "description": "Google TV by Raineworks: Home Assistant integration and TV app for Google TV and Android TV. Apps, now playing, live notifications with cameras and buttons you answer with the remote, text-to-speech, media and dashboards, with no developer mode; ADB adds the remote, power and HDMI inputs. Set up once, then it keeps itself up to date."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/raine-works/ha-googletv/master/android/app/src/main/res/drawable-xhdpi/icon.png",
+      "repository_url": "https://github.com/raine-works/ha-googletv",
+      "github_repo_id": "1465100508",
+      "source_updated_at": "2026-11-25T01:40:35Z",
+      "homepage_url": null,
+      "owner": "raine-works",
+      "default_branch": "master",
+      "source_commit_sha": "5aefa30a3ec91ac1103dfdbbb8e72e7f4550268c",
+      "license_text": "MIT License\n\nCopyright (c) 2026 raineworks\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "adb",
+        "android-app",
+        "android-tv",
+        "custom-integration",
+        "dashboard",
+        "google-tv",
+        "hacs",
+        "hacs-integration",
+        "home-assistant",
+        "home-assistant-marketplace",
+        "home-automation",
+        "kotlin",
+        "media-player",
+        "notifications",
+        "python",
+        "raineworks",
+        "raineworks-featured",
+        "smart-home",
+        "text-to-speech",
+        "wake-on-lan"
+      ],
+      "latest_version": "v2.7.0",
+      "release_url": "https://github.com/raine-works/ha-googletv/releases/tag/v2.7.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-raine-works-ha-googletv-v2.7.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-raine-works-ha-googletv-v2.7.0/THIRD-PARTY-NOTICE-raine-works-ha-googletv.txt",
+      "artifacts": [
+        {
+          "id": "f73ba3a5feee02bb92f3ff272cf084680b3d6c8484fac670b5cb67bcdc46f2ef",
+          "filename": "raineworks-tv-bridge.apk",
+          "original_filename": "raineworks-tv-bridge.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v2.7.0",
+          "size_bytes": 24998653,
+          "sha256": "f73ba3a5feee02bb92f3ff272cf084680b3d6c8484fac670b5cb67bcdc46f2ef",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "58167f5f2ab3524e90a7181221ca68ae279d55a3a0a041ba3ca8580655134724",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-raine-works-ha-googletv-v2.7.0/raineworks-tv-bridge.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-raine-works-ha-googletv-v2.7.0"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
