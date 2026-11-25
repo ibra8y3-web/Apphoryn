@@ -1,13 +1,6 @@
 name: Apphoryn Global Scout — incremental public repository crawl
 
 on:
-  push:
-    branches: [main, master]
-    paths:
-      - 'scripts/global_scout.py'
-      - 'app/repository_crawler.py'
-      - 'app/github_client.py'
-      - '.github/workflows/global-scout.yml'
   schedule:
     - cron: '17 */2 * * *'
   workflow_dispatch:
@@ -22,8 +15,9 @@ on:
         default: '25'
 
 concurrency:
-  group: apphoryn-catalog-writes
+  group: apphoryn-global-scout
   cancel-in-progress: false
+  # Keep this workflow independent from the hourly search Scout; catalog writes use GitHub SHA checks and failed collisions enter the retry queue.
 
 permissions:
   contents: write
