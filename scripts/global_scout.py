@@ -634,9 +634,9 @@ def main() -> None:
                 }, batch_entries)
 
         completed = process_entries(batch_entries)
-        if not completed:
-            # Commit the cursor only after every repository in the batch is handled.
-            # Replaying the whole batch is safe because imports/build dispatches deduplicate.
+        if not completed or batch_archive["failed_batches"]:
+            # Commit the cursor only after both catalog processing and archive enqueueing
+            # complete. A failed OIDC batch is replayed safely because every insert is idempotent.
             crawler.state = state_before_batch
             retry_queue_size = persist_checkpoint()
             break
