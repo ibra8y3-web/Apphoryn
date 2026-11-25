@@ -140,6 +140,28 @@
     }catch(error){adminToken="";$("connectionStatus").textContent=error.message;}
   }
 
+  $("sourcesSearchForm").addEventListener("submit",async event=>{
+    event.preventDefault();
+    const host=$("sourcesSearchResults");
+    host.innerHTML='<p class="muted">جارٍ البحث في F-Droid وFlathub...</p>';
+    try{
+      const q=encodeURIComponent($("sourcesQuery").value.trim());
+      const result=await api("/sources/search?q="+q+"&limit=10");
+      const sourceStatus=Object.entries(result.sources||{}).map(([name,status])=>
+        '<span class="tag">'+esc(name)+': '+(status.ok?'متاح':'تعذر الاتصال')+'</span>'
+      ).join("");
+      const rows=(result.items||[]).map(item=>
+        '<article class="provider-row"><div class="provider-head"><strong>'+esc(item.name)+'</strong><span class="state">'+esc(item.source)+'</span></div>'+
+        '<p>'+esc(item.summary||"لا يوجد وصف في المصدر.")+'</p>'+
+        '<p class="tiny">الحزمة: '+esc(item.source_record_id)+' · الإصدار: '+esc(item.version||"غير محدد")+' · الترخيص: '+esc(item.license||"غير معروف")+'</p>'+
+        '<p class="tiny">حالة الثقة: '+esc(item.trust_state)+' — يلزم التحقق المستقل قبل الاستيراد.</p>'+
+        '<a href="'+esc(item.catalog_url)+'" target="_blank" rel="noopener noreferrer">فتح صفحة المصدر ↗</a></article>'
+      ).join("");
+      host.innerHTML='<div class="tag-list">'+sourceStatus+'</div>'+rows+
+        '<p class="tiny">تم العثور على '+Number(result.count||0)+' سجل. نتائج البحث ليست حزمًا موثقة أو موافقة ترخيص لإعادة التوزيع.</p>';
+    }catch(error){host.textContent=error.message;}
+  });
+
   $("scanForm").addEventListener("submit",async event=>{
     event.preventDefault();
     const message=$("scanMessage");
