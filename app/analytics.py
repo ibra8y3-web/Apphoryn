@@ -10,7 +10,7 @@ import urllib.parse
 import urllib.request
 import uuid
 from contextlib import contextmanager
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -180,13 +180,15 @@ class AnalyticsStore:
 
     def _pending_batch(self, limit: int = 100) -> list[dict[str, Any]]:
         now = _utc_now()
+        retry_cutoff = (datetime.now(timezone.utc) - timedelta(minutes=1)).isoformat()
         with self.connect() as con:
+            con.execute("BEGIN IMMEDIATE")
             rows = con.execute(
                 """SELECT * FROM analytics_events
                    WHERE synced_at IS NULL
-                     AND (last_sync_attempt_at IS NULL OR last_sync_attempt_at < datetime(?, '-1 minute'))
+                     AND (last_sync_attempt_at IS NULL OR last_sync_attempt_at < ?)
                    ORDER BY created_at ASC LIMIT ?""",
-                (now, max(1, min(limit, 500))),
+                (retry_cutoff, max(1, min(limit, 500))),
             ).fetchall()
             ids = [row["id"] for row in rows]
             con.executemany(
