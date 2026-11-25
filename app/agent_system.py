@@ -104,6 +104,13 @@ class AgentStore:
                     latency_ms INTEGER, http_status INTEGER, error TEXT, created_at TEXT NOT NULL
                 );
                 CREATE INDEX IF NOT EXISTS idx_provider_events_provider ON provider_events(provider, created_at DESC);
+                CREATE INDEX IF NOT EXISTS idx_provider_events_model ON provider_events(provider,model,created_at DESC);
+                CREATE TABLE IF NOT EXISTS model_evaluations (
+                    id TEXT PRIMARY KEY, provider TEXT NOT NULL, model TEXT NOT NULL,
+                    task_type TEXT NOT NULL, score REAL NOT NULL, latency_ms INTEGER NOT NULL,
+                    checks_json TEXT NOT NULL, created_at TEXT NOT NULL
+                );
+                CREATE INDEX IF NOT EXISTS idx_model_evaluations_lookup ON model_evaluations(provider,model,task_type,created_at DESC);
                 CREATE TABLE IF NOT EXISTS agent_workers (
                     worker_id TEXT PRIMARY KEY, status TEXT NOT NULL, current_run_id TEXT,
                     last_heartbeat_at TEXT NOT NULL, started_at TEXT NOT NULL
@@ -271,6 +278,41 @@ class AgentStore:
             rows = con.execute(
                 """SELECT provider,COUNT(*) AS requests,SUM(success) AS successes,AVG(latency_ms) AS average_latency_ms,
                    MAX(created_at) AS last_request FROM provider_events GROUP BY provider ORDER BY provider"""
+            ).fetchall()
+        return [dict(row) for row in rows]
+
+    def model_metrics(self) -> list[dict[str, Any]]:
+        with self.connect() as con:
+            rows = con.execute(
+                """SELECT e.provider,e.model,
+                   COUNT(*) AS requests,SUM(e.success) AS successes,
+                   AVG(e.latency_ms) AS average_latency_ms,
+                   (SELECT AVG(m.score) FROM model_evaluations m
+                    WHERE m.provider=e.provider AND m.model=e.model) AS benchmark_score,
+                   MAX(e.created_at) AS last_request
+                   FROM provider_events e WHERE e.model IS NOT NULL
+                   GROUP BY e.provider,e.model ORDER BY e.provider,e.model"""
+            ).fetchall()
+        return [dict(row) for row in rows]
+
+    def record_model_evaluation(self, provider: str, model: str, task_type: str,
+                                score: float, latency_ms: int, checks: Any) -> None:
+        with self.connect() as con:
+            con.execute(
+                """INSERT INTO model_evaluations
+                   (id,provider,model,task_type,score,latency_ms,checks_json,created_at)
+                   VALUES(?,?,?,?,?,?,?,?)""",
+                (str(uuid.uuid4()), provider, model, task_type[:80],
+                 max(0.0, min(float(score), 1.0)), max(0, int(latency_ms)), _json(checks), utc_now()),
+            )
+
+    def model_evaluation_metrics(self) -> list[dict[str, Any]]:
+        with self.connect() as con:
+            rows = con.execute(
+                """SELECT provider,model,task_type,COUNT(*) AS benchmarks,
+                   AVG(score) AS average_score,AVG(latency_ms) AS average_latency_ms,
+                   MAX(created_at) AS last_benchmark
+                   FROM model_evaluations GROUP BY provider,model,task_type"""
             ).fetchall()
         return [dict(row) for row in rows]
 
