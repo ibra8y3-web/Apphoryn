@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:27:40.095342+00:00",
+  "generated_at": "2026-11-25T09:27:54.481065+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -1252,6 +1252,130 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-internetdata-cli-v1.10.1/internetdata_1.10.1_linux_arm64.deb",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-internetdata-cli-v1.10.1"
+        }
+      ],
+      "platforms": [
+        "linux"
+      ]
+    },
+    {
+      "id": "vpndetection-io-cli",
+      "slug": "vpndetection-io-cli",
+      "name": "cli",
+      "summary": "Official CLI for the VPNDetection API. Look up VPNs, proxies, Tor, hosting and CDN ranges from your terminal, and download the licensed datasets.",
+      "description": "Official CLI for the VPNDetection API. Look up VPNs, proxies, Tor, hosting and CDN ranges from your terminal, and download the licensed datasets.",
+      "translations": {
+        "en": {
+          "summary": "Official CLI for the VPNDetection API. Look up VPNs, proxies, Tor, hosting and CDN ranges from your terminal, and download the licensed datasets.",
+          "description": "Official CLI for the VPNDetection API. Look up VPNs, proxies, Tor, hosting and CDN ranges from your terminal, and download the licensed datasets."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/294051759?v=4",
+      "repository_url": "https://github.com/vpndetection-io/cli",
+      "github_repo_id": "1358028545",
+      "source_updated_at": "2026-11-12T09:28:21Z",
+      "homepage_url": "https://vpndetection.io",
+      "owner": "vpndetection-io",
+      "default_branch": "main",
+      "source_commit_sha": "be46c6e49c5857d6a94212df63c375c74ea49d6f",
+      "license_text": "MIT License\n\nCopyright (c) 2025-now Mslm Dev\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "network",
+      "topics": [
+        "cli",
+        "command-line-tool",
+        "fraud-prevention",
+        "go",
+        "golang",
+        "ip-intelligence",
+        "proxy-detection",
+        "tor",
+        "vpn",
+        "vpn-detection",
+        "vpndetection"
+      ],
+      "latest_version": "v1.17.1",
+      "release_url": "https://github.com/vpndetection-io/cli/releases/tag/v1.17.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-vpndetection-io-cli-v1.17.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-vpndetection-io-cli-v1.17.1/THIRD-PARTY-NOTICE-vpndetection-io-cli.txt",
+      "artifacts": [
+        {
+          "id": "cf8a68d93df8ca68404dcbd6fe6bbb621a516465bc0aa3d5dc8fd173b14a0b0c",
+          "filename": "vpndetection_1.17.1_linux_386.deb",
+          "original_filename": "vpndetection_1.17.1_linux_386.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": null,
+          "version": "v1.17.1",
+          "size_bytes": 3360714,
+          "sha256": "cf8a68d93df8ca68404dcbd6fe6bbb621a516465bc0aa3d5dc8fd173b14a0b0c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-vpndetection-io-cli-v1.17.1/vpndetection_1.17.1_linux_386.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-vpndetection-io-cli-v1.17.1"
+        },
+        {
+          "id": "eff733001c253c0392398986a2ea9ae939abe600a4c56293a6b033bddf9c9ccc",
+          "filename": "vpndetection_1.17.1_linux_amd64.deb",
+          "original_filename": "vpndetection_1.17.1_linux_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v1.17.1",
+          "size_bytes": 3436078,
+          "sha256": "eff733001c253c0392398986a2ea9ae939abe600a4c56293a6b033bddf9c9ccc",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-vpndetection-io-cli-v1.17.1/vpndetection_1.17.1_linux_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-vpndetection-io-cli-v1.17.1"
+        },
+        {
+          "id": "0922a91046fc098384ebc424e2484ab68b26a91c59548d2dbf5324a699a71c57",
+          "filename": "vpndetection_1.17.1_linux_arm.deb",
+          "original_filename": "vpndetection_1.17.1_linux_arm.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": null,
+          "version": "v1.17.1",
+          "size_bytes": 3320182,
+          "sha256": "0922a91046fc098384ebc424e2484ab68b26a91c59548d2dbf5324a699a71c57",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-vpndetection-io-cli-v1.17.1/vpndetection_1.17.1_linux_arm.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-vpndetection-io-cli-v1.17.1"
+        },
+        {
+          "id": "0995fb722d4a786cbaf6d05110c3196ce77ba9fac7481aaef50b9177a293abee",
+          "filename": "vpndetection_1.17.1_linux_arm64.deb",
+          "original_filename": "vpndetection_1.17.1_linux_arm64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "arm64",
+          "version": "v1.17.1",
+          "size_bytes": 3089090,
+          "sha256": "0995fb722d4a786cbaf6d05110c3196ce77ba9fac7481aaef50b9177a293abee",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-vpndetection-io-cli-v1.17.1/vpndetection_1.17.1_linux_arm64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-vpndetection-io-cli-v1.17.1"
         }
       ],
       "platforms": [
