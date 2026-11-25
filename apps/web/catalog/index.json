@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:36:57.179644+00:00",
+  "generated_at": "2026-11-25T23:37:15.660658+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -46695,6 +46695,88 @@
       "release_url": "https://github.com/iamtorsten/SherlockElf/releases/tag/17.27.5",
       "platforms": [],
       "project_status": "source_available"
+    },
+    {
+      "id": "aerobaden-shiftvault",
+      "slug": "aerobaden-shiftvault",
+      "name": "ShiftVault",
+      "summary": "Offline-first personal finance and shift tracker for Android (Capacitor).",
+      "description": "Offline-first personal finance and shift tracker for Android (Capacitor).",
+      "translations": {
+        "en": {
+          "summary": "Offline-first personal finance and shift tracker for Android (Capacitor).",
+          "description": "Offline-first personal finance and shift tracker for Android (Capacitor)."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/AeroBaden/ShiftVault/main/assets/android/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/AeroBaden/ShiftVault",
+      "github_repo_id": "1464429767",
+      "source_updated_at": "2026-11-20T21:37:20Z",
+      "homepage_url": null,
+      "owner": "AeroBaden",
+      "default_branch": "main",
+      "source_commit_sha": "d5cad8c976728a13bf78218303b207a7e1dd759c",
+      "license_text": "MIT License\n\nCopyright (c) 2026 ShiftVault contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "android",
+        "android-app",
+        "budget",
+        "budgeting",
+        "capacitor",
+        "expense-tracker",
+        "fdroid",
+        "finance",
+        "hourly-wage",
+        "javascript",
+        "mobile-app",
+        "money",
+        "offline-first",
+        "open-source",
+        "personal-finance",
+        "privacy",
+        "savings",
+        "shift-work",
+        "time-tracking",
+        "timesheet"
+      ],
+      "latest_version": "v1.2.0",
+      "release_url": "https://github.com/AeroBaden/ShiftVault/releases/tag/v1.2.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aerobaden-shiftvault-v1.2.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aerobaden-shiftvault-v1.2.0/THIRD-PARTY-NOTICE-aerobaden-shiftvault.txt",
+      "artifacts": [
+        {
+          "id": "7bfa9008a88625b04ed4b826e2c4abe64ec93546e3b213008709e8ec14d1e6bc",
+          "filename": "ShiftVault-Android.apk",
+          "original_filename": "ShiftVault-Android.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.2.0",
+          "size_bytes": 3384854,
+          "sha256": "7bfa9008a88625b04ed4b826e2c4abe64ec93546e3b213008709e8ec14d1e6bc",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "5ef3246aad08a7e270166a1c849ba8953aa3dd03d8dd21493f6fcb3fec29d3ef",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aerobaden-shiftvault-v1.2.0/ShiftVault-Android.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aerobaden-shiftvault-v1.2.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
     },
     {
       "id": "cr1437-shizako",
