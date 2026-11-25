@@ -298,10 +298,10 @@ def main() -> None:
     queue: list[dict[str, Any]] = []
     queued: set[str] = set()
 
-    def enqueue(entry: dict[str, Any]) -> None:
+    def enqueue(entry: dict[str, Any], target: list[dict[str, Any]] | None = None) -> None:
         key = repo_key(str(entry.get("repository") or ""))
         if key and key not in queued:
-            queue.append(entry)
+            (target if target is not None else queue).append(entry)
             queued.add(key)
 
     for retry in due_retries:
@@ -331,6 +331,32 @@ def main() -> None:
                 "reason": f"Targeted Apphoryn app discovery: {query}",
             })
 
+    last_discovery_refresh = time.monotonic()
+
+    def refresh_targeted_discovery(target: list[dict[str, Any]]) -> None:
+        nonlocal last_discovery_refresh
+        if time.monotonic() - last_discovery_refresh < 60:
+            return
+        last_discovery_refresh = time.monotonic()
+        for query in configured_discovery_queries():
+            try:
+                candidates = catalog.discover(query, search_limit)
+            except Exception as exc:
+                print(json.dumps({
+                    "event": "targeted_discovery_refresh_failed",
+                    "query": query,
+                    "error_type": type(exc).__name__,
+                }), flush=True)
+                continue
+            for candidate in candidates:
+                url = str(candidate.get("repository_url") or "")
+                if url:
+                    enqueue({
+                        "repository": url,
+                        "candidate": candidate,
+                        "reason": f"Minute discovery refresh: {query}",
+                    }, target)
+
     crawler = RepositoryCrawler(github, args.state_file)
     scan_report: dict[str, Any] | None = None
     refresh_report: dict[str, Any] | None = None
@@ -348,6 +374,7 @@ def main() -> None:
 
     def process_entries(entries: list[dict[str, Any]]) -> bool:
         for index, entry in enumerate(entries):
+            refresh_targeted_discovery(entries)
             if time.monotonic() >= deadline:
                 for pending in entries[index:]:
                     scheduled_retries.append({**pending, "next_attempt_at": now})
@@ -529,7 +556,7 @@ def main() -> None:
         for candidate in discovered:
             url = str(candidate.get("html_url") or "")
             if url:
-                batch_entries.append({
+                enqueue({
                     "repository": url,
                     "candidate": candidate,
                     "force_refresh": cursor_key == "last_refresh_repository_id",
@@ -538,7 +565,7 @@ def main() -> None:
                         if cursor_key == "last_repository_id"
                         else "Scheduled upstream release refresh"
                     ),
-                })
+                }, batch_entries)
 
         completed = process_entries(batch_entries)
         if not completed:
