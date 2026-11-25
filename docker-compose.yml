@@ -13,10 +13,10 @@ services:
       APPHORYN_STORAGE: /srv/apphoryn/storage/artifacts
       APPHORYN_AGENT_DATABASE: /srv/apphoryn/storage/agent-workforce.sqlite3
       APPHORYN_ANALYTICS_DATABASE: /srv/apphoryn/storage/analytics.sqlite3
-      OLLAMA_BASE_URL: \${OLLAMA_BASE_URL:-}
-      VLLM_BASE_URL: \${VLLM_BASE_URL:-}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-}
+      VLLM_BASE_URL: ${VLLM_BASE_URL:-}
     ports:
-      - "\${APPHORYN_BIND:-127.0.0.1}:8000:8000"
+      - "${APPHORYN_BIND:-127.0.0.1}:8000:8000"
     volumes:
       - apphoryn_data:/srv/apphoryn/storage
     networks:
