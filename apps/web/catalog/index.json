@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:25:53.420493+00:00",
+  "generated_at": "2026-11-25T22:26:05.996867+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -13517,6 +13517,57 @@
         "macos",
         "windows"
       ]
+    },
+    {
+      "id": "dannyhand-embiggen",
+      "slug": "dannyhand-embiggen",
+      "artifacts": [],
+      "name": "embiggen",
+      "summary": "Turn your phone into a billboard",
+      "description": "Turn your phone into a billboard",
+      "translations": {
+        "en": {
+          "summary": "Turn your phone into a billboard",
+          "description": "Turn your phone into a billboard"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/dannyhand/embiggen/main/icons/icon-192.png",
+      "repository_url": "https://github.com/dannyhand/embiggen",
+      "github_repo_id": "1457793403",
+      "source_updated_at": "2026-11-22T23:03:24Z",
+      "homepage_url": "https://dannyhand.us/embiggen/",
+      "owner": "dannyhand",
+      "default_branch": "main",
+      "source_commit_sha": "762b12e5def4fd58c1fdb6856b8f02f918c9de03",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Danny Hand\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "app",
+        "billboard",
+        "flashlight",
+        "magnifier",
+        "pwa",
+        "simple",
+        "text",
+        "website"
+      ],
+      "latest_version": "v1.1.0",
+      "release_url": "https://github.com/dannyhand/embiggen/releases/tag/v1.1.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "generalaction-emdash",
