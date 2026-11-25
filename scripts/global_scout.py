@@ -311,6 +311,7 @@ def main() -> None:
 
             imported = catalog.import_repository(repository_url, mirror_release_assets=True)
             app = imported["app"]
+            result["ai_generation"] = imported.get("ai_generation") or {}
             if candidate.get("id") and not app.get("github_repo_id"):
                 app["github_repo_id"] = str(candidate["id"])
             if candidate.get("updated_at") and not app.get("source_updated_at"):

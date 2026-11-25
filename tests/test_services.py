@@ -3,7 +3,7 @@ import hashlib
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
 
 from app.database import Database, utc_now
 from app.services import CatalogService, store_uploaded_artifact
@@ -42,7 +42,27 @@ class CatalogServiceTests(unittest.TestCase):
                 return {"content": base64.b64encode(b"# Useful Tool\nA small file utility.").decode()}
             github.request.side_effect = github_request
             service = CatalogService(github=github, database=database)
-            result = service.import_repository("https://github.com/owner/usefultool", mirror_release_assets=False)
+            with patch.object(
+                services_module.DescriptionGenerator,
+                "generate",
+                return_value={
+                    "summary": "A useful file utility",
+                    "description": "A safe file utility.",
+                    "translations": {"en": {"summary": "A useful file utility", "description": "A safe file utility."}},
+                    "translation_status": "english_only",
+                    "generated_by_ai": "false",
+                    "classification_source": "heuristic",
+                    "ai_error": "OpenRouter HTTP 401: Authorization: Bearer sk-or-v1-1234567890ABCDEF",
+                },
+            ):
+                result = service.import_repository(
+                    "https://github.com/owner/usefultool", mirror_release_assets=False
+                )
+            self.assertEqual(result["ai_generation"]["status"], "fallback")
+            self.assertFalse(result["ai_generation"]["generated_by_ai"])
+            self.assertIn("OpenRouter", result["ai_generation"]["error"])
+            self.assertNotIn("sk-or-v1", result["ai_generation"]["error"])
+            self.assertNotIn("1234567890ABCDEF", result["ai_generation"]["error"])
             self.assertEqual(result["app"]["name"], "UsefulTool")
             self.assertTrue(result["app"]["license_eligible"])
             self.assertEqual(result["app"]["source_commit_sha"], "ab" * 20)
