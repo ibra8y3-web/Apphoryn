@@ -1,11 +1,50 @@
 services:
   apphoryn:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: apphoryn:local
     container_name: apphoryn
-    ports:
-      - "8000:8000"
+    restart: unless-stopped
     env_file:
       - .env
+    environment:
+      APPHORYN_DATABASE: /srv/apphoryn/storage/apphoryn.sqlite3
+      APPHORYN_STORAGE: /srv/apphoryn/storage/artifacts
+      APPHORYN_AGENT_DATABASE: /srv/apphoryn/storage/agent-workforce.sqlite3
+      APPHORYN_ANALYTICS_DATABASE: /srv/apphoryn/storage/analytics.sqlite3
+      OLLAMA_BASE_URL: \${OLLAMA_BASE_URL:-}
+      VLLM_BASE_URL: \${VLLM_BASE_URL:-}
+    ports:
+      - "\${APPHORYN_BIND:-127.0.0.1}:8000:8000"
     volumes:
-      - ./storage:/srv/apphoryn/storage
+      - apphoryn_data:/srv/apphoryn/storage
+    networks:
+      - apphoryn_internal
+    init: true
+    stop_grace_period: 30s
+    security_opt:
+      - no-new-privileges:true
+
+  ollama:
+    image: ollama/ollama:0.40.18
+    profiles:
+      - local-ai
     restart: unless-stopped
+    expose:
+      - "11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    networks:
+      - apphoryn_internal
+    init: true
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  apphoryn_data:
+  ollama_models:
+
+networks:
+  apphoryn_internal:
+    driver: bridge
