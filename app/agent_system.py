@@ -117,6 +117,14 @@ class AgentStore:
     def enqueue(self, goal: str, priority: int = 5, allow_external_actions: bool = False, max_attempts: int = 2) -> dict[str, Any]:
         run_id, now = str(uuid.uuid4()), utc_now()
         with self.connect() as con:
+            existing = con.execute(
+                """SELECT * FROM agent_runs
+                   WHERE lower(trim(goal))=lower(trim(?)) AND status IN ('queued','running','retry')
+                   ORDER BY created_at DESC LIMIT 1""",
+                (goal.strip(),),
+            ).fetchone()
+            if existing is not None:
+                return self._run_dict(existing) or {}
             con.execute(
                 """INSERT INTO agent_runs(id,goal,status,priority,allow_external_actions,max_attempts,created_at,updated_at)
                    VALUES(?,?,?,?,?,?,?,?)""",
