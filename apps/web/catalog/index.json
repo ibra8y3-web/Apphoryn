@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:57:11.295770+00:00",
+  "generated_at": "2026-11-25T22:57:31.678074+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -23824,6 +23824,79 @@
           "signer_certificate_sha256": "7d55b8af210381aabf960f07e17cf7857b6d2a642ca2da6bf0bdf1b200362f04",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kunzisoft-keepassdx-4.5.9/KeePassDX-4.5.9-libre.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kunzisoft-keepassdx-4.5.9"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "richy1989-keepit",
+      "slug": "richy1989-keepit",
+      "name": "keepIT",
+      "summary": "A self-hosted notes app with sharing between users, real-time sync, search, and reminders - plus a native Android app with offline support and a home-screen widget",
+      "description": "A self-hosted notes app with sharing between users, real-time sync, search, and reminders - plus a native Android app with offline support and a home-screen widget",
+      "translations": {
+        "en": {
+          "summary": "A self-hosted notes app with sharing between users, real-time sync, search, and reminders - plus a native Android app with offline support and a home-screen widget",
+          "description": "A self-hosted notes app with sharing between users, real-time sync, search, and reminders - plus a native Android app with offline support and a home-screen widget"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Richy1989/keepIT/main/app/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/Richy1989/keepIT",
+      "github_repo_id": "1275974334",
+      "source_updated_at": "2026-11-25T00:40:09Z",
+      "homepage_url": null,
+      "owner": "Richy1989",
+      "default_branch": "main",
+      "source_commit_sha": "c1c8e36b2f193381490f8c586b81e6e6e89634b0",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Richard Leopold\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "notes",
+        "notes-app",
+        "notes-application",
+        "notes-keeper",
+        "notes-management-system",
+        "notes-tool",
+        "notesapp",
+        "noteshare"
+      ],
+      "latest_version": "v1.5.3",
+      "release_url": "https://github.com/Richy1989/keepIT/releases/tag/v1.5.3",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-richy1989-keepit-v1.5.3",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-richy1989-keepit-v1.5.3/THIRD-PARTY-NOTICE-richy1989-keepit.txt",
+      "artifacts": [
+        {
+          "id": "2f936077029eb943bceb9eedd20ddf144b41d1aef42bbe86950ddcd13092a6c2",
+          "filename": "keepit-v1.5.3-universal.apk",
+          "original_filename": "keepit-v1.5.3-universal.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "universal",
+          "version": "v1.5.3",
+          "size_bytes": 6769936,
+          "sha256": "2f936077029eb943bceb9eedd20ddf144b41d1aef42bbe86950ddcd13092a6c2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "2a519c472795b06bcc8ecad140ccdd16cd36b51b1a9cbaa8f6fed3635e693c3a",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-richy1989-keepit-v1.5.3/keepit-v1.5.3-universal.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-richy1989-keepit-v1.5.3"
         }
       ],
       "platforms": [
