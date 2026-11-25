@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:45:56.494635+00:00",
+  "generated_at": "2026-11-25T22:46:15.088694+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -27699,6 +27699,76 @@
           "signer_certificate_sha256": "641797138357ebfb02fd637cf2409ddb7c9825785205ce66dffeef80a2bb763a",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-1window2-medbuddy-v1.0.1/MedBuddy-v1.0.1-arm64.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-1window2-medbuddy-v1.0.1"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "anacatavc-meds-reminder",
+      "slug": "anacatavc-meds-reminder",
+      "name": "meds-reminder",
+      "summary": "100% offline-first, native Android application engineered for medication adherence and multi-profile dosage reminders",
+      "description": "100% offline-first, native Android application engineered for medication adherence and multi-profile dosage reminders",
+      "translations": {
+        "en": {
+          "summary": "100% offline-first, native Android application engineered for medication adherence and multi-profile dosage reminders",
+          "description": "100% offline-first, native Android application engineered for medication adherence and multi-profile dosage reminders"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/AnaCataVC/meds-reminder/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/AnaCataVC/meds-reminder",
+      "github_repo_id": "1337645847",
+      "source_updated_at": "2026-11-09T11:25:19Z",
+      "homepage_url": "https://meds-reminder.ana-catalina.com",
+      "owner": "AnaCataVC",
+      "default_branch": "main",
+      "source_commit_sha": "bfdcd712462ca7ede2b9799ccf84af50735caa45",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Ana-Catalina\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "healt-application",
+        "meds",
+        "reminder",
+        "reminder-app",
+        "reminder-application"
+      ],
+      "latest_version": "v1.10.1",
+      "release_url": "https://github.com/AnaCataVC/meds-reminder/releases/tag/v1.10.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-anacatavc-meds-reminder-v1.10.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-anacatavc-meds-reminder-v1.10.1/THIRD-PARTY-NOTICE-anacatavc-meds-reminder.txt",
+      "artifacts": [
+        {
+          "id": "35e339e08a7d7b637278dfe5acc8863f3e5a0738a30ca7c4d65925565ee60e4c",
+          "filename": "meds-reminder-v1.10.1-release.apk",
+          "original_filename": "meds-reminder-v1.10.1-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.10.1",
+          "size_bytes": 14270550,
+          "sha256": "35e339e08a7d7b637278dfe5acc8863f3e5a0738a30ca7c4d65925565ee60e4c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "377325032dc69b02e0c7de359f1da91b6a319e95785d577d14a0618a2a8f4cff",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-anacatavc-meds-reminder-v1.10.1/meds-reminder-v1.10.1-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-anacatavc-meds-reminder-v1.10.1"
         }
       ],
       "platforms": [
