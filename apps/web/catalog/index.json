@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:47:04.379860+00:00",
+  "generated_at": "2026-11-25T22:47:41.711633+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -39451,6 +39451,145 @@
         }
       ],
       "platforms": [
+        "windows"
+      ]
+    },
+    {
+      "id": "amokrzycki-random-frame",
+      "slug": "amokrzycki-random-frame",
+      "name": "random-frame",
+      "summary": "Random public images, one frame at a time",
+      "description": "Random public images, one frame at a time",
+      "translations": {
+        "en": {
+          "summary": "Random public images, one frame at a time",
+          "description": "Random public images, one frame at a time"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/amokrzycki/random-frame/main/assets/icon.svg",
+      "repository_url": "https://github.com/amokrzycki/random-frame",
+      "github_repo_id": "1375971098",
+      "source_updated_at": "2026-11-08T16:19:38Z",
+      "homepage_url": null,
+      "owner": "amokrzycki",
+      "default_branch": "main",
+      "source_commit_sha": "a4365a4932477239b372411e2716a1c5ca6449ee",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Adrian Mokrzycki\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "android-app",
+        "linux-app",
+        "rust",
+        "tauri",
+        "typescript",
+        "vanilla-ts",
+        "windows-app"
+      ],
+      "latest_version": "v0.8.1",
+      "release_url": "https://github.com/amokrzycki/random-frame/releases/tag/v0.8.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-amokrzycki-random-frame-v0.8.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-amokrzycki-random-frame-v0.8.1/THIRD-PARTY-NOTICE-amokrzycki-random-frame.txt",
+      "artifacts": [
+        {
+          "id": "b84d740ac4b57a5559df0a0867331498321016ef33cfc318479ef354123e6516",
+          "filename": "Random-Frame-v0.8.1-android-arm64.apk",
+          "original_filename": "Random-Frame-v0.8.1-android-arm64.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v0.8.1",
+          "size_bytes": 26118180,
+          "sha256": "b84d740ac4b57a5559df0a0867331498321016ef33cfc318479ef354123e6516",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "54c5acacf09af07d08e5cb95161fec477a92ac29b34196b11d0df2d05b60bbb1",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-amokrzycki-random-frame-v0.8.1/Random-Frame-v0.8.1-android-arm64.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-amokrzycki-random-frame-v0.8.1"
+        },
+        {
+          "id": "fd72872578d8e3d4d50042c7b0719e29da441f9fe7d3ca02ae4f56ac185a1216",
+          "filename": "Random.Frame_0.8.1_amd64.AppImage",
+          "original_filename": "Random.Frame_0.8.1_amd64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.8.1",
+          "size_bytes": 88742392,
+          "sha256": "fd72872578d8e3d4d50042c7b0719e29da441f9fe7d3ca02ae4f56ac185a1216",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-amokrzycki-random-frame-v0.8.1/Random.Frame_0.8.1_amd64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-amokrzycki-random-frame-v0.8.1"
+        },
+        {
+          "id": "cf70ba3495bc0fefc5cc165107b3b0567abce22789521bf7ed7ea9abd0ad75f9",
+          "filename": "Random.Frame_0.8.1_amd64.deb",
+          "original_filename": "Random.Frame_0.8.1_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.8.1",
+          "size_bytes": 11563006,
+          "sha256": "cf70ba3495bc0fefc5cc165107b3b0567abce22789521bf7ed7ea9abd0ad75f9",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-amokrzycki-random-frame-v0.8.1/Random.Frame_0.8.1_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-amokrzycki-random-frame-v0.8.1"
+        },
+        {
+          "id": "f0e98dccf41aabe50a646579b0c1d5ac84734d72a8a9aac65b1d1b7275345ef1",
+          "filename": "Random.Frame_0.8.1_x64-setup.exe",
+          "original_filename": "Random.Frame_0.8.1_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.8.1",
+          "size_bytes": 5454456,
+          "sha256": "f0e98dccf41aabe50a646579b0c1d5ac84734d72a8a9aac65b1d1b7275345ef1",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-amokrzycki-random-frame-v0.8.1/Random.Frame_0.8.1_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-amokrzycki-random-frame-v0.8.1"
+        },
+        {
+          "id": "61b2b6763ff1ba51defb59f4d3ccb04f2f8582beebc90039067ac53b14d9dd30",
+          "filename": "Random.Frame_0.8.1_x64_en-US.msi",
+          "original_filename": "Random.Frame_0.8.1_x64_en-US.msi",
+          "platform": "windows",
+          "package_type": "Windows installer",
+          "architecture": "x86_64",
+          "version": "v0.8.1",
+          "size_bytes": 7856128,
+          "sha256": "61b2b6763ff1ba51defb59f4d3ccb04f2f8582beebc90039067ac53b14d9dd30",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-amokrzycki-random-frame-v0.8.1/Random.Frame_0.8.1_x64_en-US.msi",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-amokrzycki-random-frame-v0.8.1"
+        }
+      ],
+      "platforms": [
+        "android",
+        "linux",
         "windows"
       ]
     },
