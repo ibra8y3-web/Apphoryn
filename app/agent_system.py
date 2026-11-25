@@ -18,14 +18,14 @@ from . import ai_router
 
 AGENTS: list[dict[str, Any]] = [
     {"id": "niebex", "name": "Niebex", "title": "Central AI Brain", "description": "Plans work, selects specialists, coordinates hand-offs and reviews the run.", "tools": ["task_planner", "shared_memory", "provider_router"]},
-    {"id": "discovery", "name": "AI Discovery Agent", "title": "Discovery", "description": "Finds real public repositories and identifies new software candidates.", "tools": ["github_discover", "github_inspect"]},
+    {"id": "discovery", "name": "AI Discovery Agent", "title": "Discovery", "description": "Finds real public repositories and identifies new software candidates across GitHub, F-Droid and Flathub.", "tools": ["github_discover", "multi_source_discover", "github_inspect"]},
     {"id": "research", "name": "AI Research Agent", "title": "Research", "description": "Researches repository facts, release history and supplied documentation.", "tools": ["github_inspect", "read_repo_file"]},
     {"id": "writing", "name": "AI Writing Agent", "title": "Writing", "description": "Writes bilingual, evidence-grounded descriptions and documentation.", "tools": ["shared_memory"]},
-    {"id": "software_engineer", "name": "AI Software Engineer", "title": "Software Engineering", "description": "Reviews supplied source code and proposes changes; this release does not push code.", "tools": ["read_repo_file"]},
+    {"id": "software_engineer", "name": "AI Software Engineer", "title": "Software Engineering", "description": "Reads source code, drafts bounded changes, creates a dedicated branch and opens a reviewable pull request only with separate code-change approval.", "tools": ["read_repo_file", "apply_code_patch"]},
     {"id": "build", "name": "AI Build Agent", "title": "Build", "description": "Checks build requirements and can dispatch the existing isolated build workflow after approval.", "tools": ["github_inspect", "dispatch_build"]},
     {"id": "import", "name": "AI Import Agent", "title": "Import", "description": "Checks provenance and can import actual release assets after approval.", "tools": ["github_inspect", "import_repository"]},
     {"id": "update", "name": "AI Update Agent", "title": "Updates", "description": "Compares upstream release metadata with Apphoryn's stored version.", "tools": ["github_inspect"]},
-    {"id": "debugging", "name": "AI Debugging Agent", "title": "Debugging", "description": "Analyzes supplied logs, stack traces and build errors; proposes evidence-based fixes.", "tools": ["read_repo_file"]},
+    {"id": "debugging", "name": "AI Debugging Agent", "title": "Debugging", "description": "Analyzes supplied logs, stack traces and build errors; can prepare a bounded repair pull request only with separate code-change approval.", "tools": ["read_repo_file", "apply_code_patch"]},
     {"id": "security", "name": "AI Security Analysis Agent", "title": "Security", "description": "Checks repository and local artifact metadata using Apphoryn's real validators.", "tools": ["github_inspect", "read_repo_file", "verify_artifact"]},
     {"id": "supervisor", "name": "AI Supervisor Agent", "title": "Supervisor", "description": "Audits outputs, evidence, missing fields and claims before run completion.", "tools": ["shared_memory", "quality_review"]},
 ]
@@ -79,6 +79,7 @@ class AgentStore:
                 CREATE TABLE IF NOT EXISTS agent_runs (
                     id TEXT PRIMARY KEY, goal TEXT NOT NULL, status TEXT NOT NULL,
                     priority INTEGER NOT NULL DEFAULT 5, allow_external_actions INTEGER NOT NULL DEFAULT 0,
+                    allow_code_changes INTEGER NOT NULL DEFAULT 0,
                     attempts INTEGER NOT NULL DEFAULT 0, max_attempts INTEGER NOT NULL DEFAULT 2,
                     next_attempt_at TEXT, created_at TEXT NOT NULL, updated_at TEXT NOT NULL,
                     started_at TEXT, completed_at TEXT, last_error TEXT, result_json TEXT
@@ -113,8 +114,12 @@ class AgentStore:
                 );
                 CREATE INDEX IF NOT EXISTS idx_agent_schedules_due ON agent_schedules(enabled, next_run_at);
             """)
+            run_columns = {row[1] for row in con.execute("PRAGMA table_info(agent_runs)").fetchall()}
+            if "allow_code_changes" not in run_columns:
+                con.execute("ALTER TABLE agent_runs ADD COLUMN allow_code_changes INTEGER NOT NULL DEFAULT 0")
 
-    def enqueue(self, goal: str, priority: int = 5, allow_external_actions: bool = False, max_attempts: int = 2) -> dict[str, Any]:
+    def enqueue(self, goal: str, priority: int = 5, allow_external_actions: bool = False,
+                max_attempts: int = 2, allow_code_changes: bool = False) -> dict[str, Any]:
         run_id, now = str(uuid.uuid4()), utc_now()
         with self.connect() as con:
             existing = con.execute(
@@ -126,10 +131,10 @@ class AgentStore:
             if existing is not None:
                 return self._run_dict(existing) or {}
             con.execute(
-                """INSERT INTO agent_runs(id,goal,status,priority,allow_external_actions,max_attempts,created_at,updated_at)
-                   VALUES(?,?,?,?,?,?,?,?)""",
+                """INSERT INTO agent_runs(id,goal,status,priority,allow_external_actions,allow_code_changes,max_attempts,created_at,updated_at)
+                   VALUES(?,?,?,?,?,?,?,?,?)""",
                 (run_id, goal.strip(), "queued", max(1, min(int(priority), 10)), int(bool(allow_external_actions)),
-                 max(1, min(int(max_attempts), 3)), now, now),
+                 int(bool(allow_code_changes)), max(1, min(int(max_attempts), 3)), now, now),
             )
         return self.get_run(run_id) or {}
 
@@ -139,6 +144,7 @@ class AgentStore:
             return None
         item = dict(row)
         item["allow_external_actions"] = bool(item["allow_external_actions"])
+        item["allow_code_changes"] = bool(item.get("allow_code_changes", 0))
         item["result"] = _loads(item.pop("result_json"), None)
         return item
 
