@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:24:14.959341+00:00",
+  "generated_at": "2026-11-25T04:24:29.319772+00:00",
   "apps": [
     {
       "id": "lumiag5-antigravitymb",
@@ -970,6 +970,110 @@
           ],
           "requested_at": "2026-11-25T04:23:38.309026+00:00"
         }
+      ]
+    },
+    {
+      "id": "nlick47-hakimi",
+      "slug": "nlick47-hakimi",
+      "name": "hakimi",
+      "summary": "以Rust为核心实现的本地TLS代理，用于直连 GitHub、Pixiv、AO3、E-Hentai、Hanime、Steam、Poipiku、Hugging Face 站点，支持Windows/macOS/Android",
+      "description": "以Rust为核心实现的本地TLS代理，用于直连 GitHub、Pixiv、AO3、E-Hentai、Hanime、Steam、Poipiku、Hugging Face 站点，支持Windows/macOS/Android",
+      "translations": {
+        "en": {
+          "summary": "以Rust为核心实现的本地TLS代理，用于直连 GitHub、Pixiv、AO3、E-Hentai、Hanime、Steam、Poipiku、Hugging Face 站点，支持Windows/macOS/Android",
+          "description": "以Rust为核心实现的本地TLS代理，用于直连 GitHub、Pixiv、AO3、E-Hentai、Hanime、Steam、Poipiku、Hugging Face 站点，支持Windows/macOS/Android"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/NLick47/hakimi/main/crates/hakimi-ui/assets/app-icon.png",
+      "repository_url": "https://github.com/NLick47/hakimi",
+      "github_repo_id": "1425630237",
+      "source_updated_at": "2026-11-24T16:34:09Z",
+      "homepage_url": null,
+      "owner": "NLick47",
+      "default_branch": "main",
+      "source_commit_sha": "9127877948b9b65d18ee226cf004a6e84ae14eba",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Nick47\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "ao3",
+        "macos",
+        "macos-app",
+        "pixiv",
+        "steam",
+        "windows"
+      ],
+      "latest_version": "release-2026.11.24",
+      "release_url": "https://github.com/NLick47/hakimi/releases/tag/release-2026.11.24",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-nlick47-hakimi-release-2026.11.24",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-nlick47-hakimi-release-2026.11.24/THIRD-PARTY-NOTICE-nlick47-hakimi.txt",
+      "artifacts": [
+        {
+          "id": "32a9b8e50e32a800bd8f8642d25416f3590e031d33a48f52e12a989cd0d58ca2",
+          "filename": "hakimi-3.2.0-android.apk",
+          "original_filename": "hakimi-3.2.0-android.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "release-2026.11.24",
+          "size_bytes": 2821733,
+          "sha256": "32a9b8e50e32a800bd8f8642d25416f3590e031d33a48f52e12a989cd0d58ca2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "c2d6766c7bcd95e673e985226a10055023f8c35e4ae7aca4debb9bd1ff1d36d1",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-nlick47-hakimi-release-2026.11.24/hakimi-3.2.0-android.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-nlick47-hakimi-release-2026.11.24"
+        },
+        {
+          "id": "a538edf66874d4c177ae7ba112d256159e296af10bc990099f64b54484cb97a4",
+          "filename": "hakimi-3.2.0-armv7.apk",
+          "original_filename": "hakimi-3.2.0-armv7.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm32",
+          "version": "release-2026.11.24",
+          "size_bytes": 2362983,
+          "sha256": "a538edf66874d4c177ae7ba112d256159e296af10bc990099f64b54484cb97a4",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "c2d6766c7bcd95e673e985226a10055023f8c35e4ae7aca4debb9bd1ff1d36d1",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-nlick47-hakimi-release-2026.11.24/hakimi-3.2.0-armv7.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-nlick47-hakimi-release-2026.11.24"
+        },
+        {
+          "id": "476d2a64b24bf5e42164bd07f4317fdef5c0cca1dd9b1ad76180d2c80d2cae25",
+          "filename": "hakimi-3.2.0-macos-arm64.dmg",
+          "original_filename": "hakimi-3.2.0-macos-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "release-2026.11.24",
+          "size_bytes": 2956366,
+          "sha256": "476d2a64b24bf5e42164bd07f4317fdef5c0cca1dd9b1ad76180d2c80d2cae25",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-nlick47-hakimi-release-2026.11.24/hakimi-3.2.0-macos-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-nlick47-hakimi-release-2026.11.24"
+        }
+      ],
+      "platforms": [
+        "android",
+        "macos"
       ]
     },
     {
