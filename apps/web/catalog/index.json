@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:53:05.228335+00:00",
+  "generated_at": "2026-11-25T19:53:30.926628+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -20823,6 +20823,81 @@
           "signer_certificate_sha256": "e520a4905cf5531937776827a235023cdf542bed5444ebd27b3203231e3c1dd1",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wangzhishou-onebox-1.5.9/OneBox-1.5.9-google-arm64-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wangzhishou-onebox-1.5.9"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "neoruben-onerate",
+      "slug": "neoruben-onerate",
+      "name": "OneRate",
+      "summary": "Rate a movie once and your rating is saved on FilmAffinity, IMDb and Letterboxd. Android app.",
+      "description": "Rate a movie once and your rating is saved on FilmAffinity, IMDb and Letterboxd. Android app.",
+      "translations": {
+        "en": {
+          "summary": "Rate a movie once and your rating is saved on FilmAffinity, IMDb and Letterboxd. Android app.",
+          "description": "Rate a movie once and your rating is saved on FilmAffinity, IMDb and Letterboxd. Android app."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/neoruben/OneRate/main/assets/icon.png",
+      "repository_url": "https://github.com/neoruben/OneRate",
+      "github_repo_id": "1453108706",
+      "source_updated_at": "2026-11-11T17:58:25Z",
+      "homepage_url": "https://github.com/neoruben/OneRate/releases",
+      "owner": "neoruben",
+      "default_branch": "main",
+      "source_commit_sha": "9a832c7197ed866bd89f774b72f76be2a7ee098b",
+      "license_text": "MIT License\n\nCopyright (c) 2026 OneRate\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "apk",
+        "film",
+        "filmaffinity",
+        "geckoview",
+        "imdb",
+        "imdb-rating",
+        "kotlin",
+        "kotlin-android",
+        "movies-app-android",
+        "movies-rate",
+        "open-source"
+      ],
+      "latest_version": "v1.0.9",
+      "release_url": "https://github.com/neoruben/OneRate/releases/tag/v1.0.9",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-neoruben-onerate-v1.0.9",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-neoruben-onerate-v1.0.9/THIRD-PARTY-NOTICE-neoruben-onerate.txt",
+      "artifacts": [
+        {
+          "id": "5622f584fd0c2de20c2d55c7015ebb8997aab148d57b30fc1231fa1a81928f97",
+          "filename": "OneRate-1.0.9.apk",
+          "original_filename": "OneRate-1.0.9.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.9",
+          "size_bytes": 96197910,
+          "sha256": "5622f584fd0c2de20c2d55c7015ebb8997aab148d57b30fc1231fa1a81928f97",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "080cc381c5609fabc2a10d773924cc951c66e40dc2457534e6ecbab28e77f110",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-neoruben-onerate-v1.0.9/OneRate-1.0.9.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-neoruben-onerate-v1.0.9"
         }
       ],
       "platforms": [
