@@ -42,8 +42,11 @@ jobs:
             exit 2
           fi
           mkdir -p target reports
-          git -c http.followRedirects=false clone --depth 1 --no-tags --branch "$TARGET_REF" "https://github.com/$TARGET.git" target \
-            || git -c http.followRedirects=false clone --depth 1 --no-tags "https://github.com/$TARGET.git" target
+          if [ "$TARGET_REF" = "HEAD" ]; then
+            git -c http.followRedirects=false clone --depth 1 --no-tags "https://github.com/$TARGET.git" target
+          else
+            git -c http.followRedirects=false clone --depth 1 --no-tags --branch "$TARGET_REF" "https://github.com/$TARGET.git" target
+          fi
           git -C target rev-parse HEAD > reports/commit.txt
           printf '%s\n' "$TARGET" > reports/repository.txt
           printf '%s\n' "$TARGET_REF" > reports/requested-ref.txt
