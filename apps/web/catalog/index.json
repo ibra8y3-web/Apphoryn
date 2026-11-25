@@ -1670,7 +1670,18 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "4ca3313390e857a00f561032e92cff4ac40a0768",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-25T05:31:55.138799+00:00"
+        }
+      ]
     },
     {
       "id": "kunzisoft-keepassdx",
