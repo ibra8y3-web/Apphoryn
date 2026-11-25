@@ -83,6 +83,13 @@
       <div class="panel-head"><div><span class="eyebrow">RESOURCE ORCHESTRATOR</span><h2>أجهزة وخوادم التشغيل</h2><p>المحلي وGitHub Actions وخوادم النماذج وقواعد البيانات الخارجية.</p></div></div>
       <div id="resourcesList" class="provider-list"><p class="muted">اتصل لعرض موارد التشغيل.</p></div>
       <div class="divider"></div>
+      <div class="panel-head"><div><span class="eyebrow">OPEN SOURCE APP CATALOGS</span><h2>اكتشاف F-Droid وFlathub</h2><p>بحث مباشر في كتالوجات البرامج الرسمية. النتائج بيانات وصفية وليست ملفات تثبيت موثقة تلقائيًا.</p></div></div>
+      <form id="sourcesSearchForm" class="form-row">
+        <label>اسم التطبيق أو وصفه<input id="sourcesQuery" minlength="2" maxlength="180" placeholder="مثال: file manager" required></label>
+        <button class="secondary" type="submit">بحث في المصدرين</button>
+      </form>
+      <div id="sourcesSearchResults" class="stack"><p class="muted">ابحث في الكتالوجات الرسمية.</p></div>
+      <div class="divider"></div>
       <div class="panel-head"><div><span class="eyebrow">ISOLATED OPEN-SOURCE SCAN</span><h2>تشغيل أدوات الفحص على GitHub</h2><p>Semgrep وTrivy وOSV-Scanner وSyft وGitleaks داخل جهاز مؤقت. لا يتم تشغيل أكواد المشروع المستهدف.</p></div></div>
       <form id="scanForm">
         <label for="scanRepository">رابط مستودع عام</label>
