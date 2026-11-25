@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:57:39.484657+00:00",
+  "generated_at": "2026-11-25T21:58:04.677350+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -15604,6 +15604,81 @@
       "platforms": [
         "android",
         "windows"
+      ]
+    },
+    {
+      "id": "vneel-code-ghost",
+      "slug": "vneel-code-ghost",
+      "name": "GHOST",
+      "summary": "Agentic ✧ Gemma Inference for Android System Intelligence",
+      "description": "Agentic ✧ Gemma Inference for Android System Intelligence",
+      "translations": {
+        "en": {
+          "summary": "Agentic ✧ Gemma Inference for Android System Intelligence",
+          "description": "Agentic ✧ Gemma Inference for Android System Intelligence"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/vNeeL-code/GHOST/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/vNeeL-code/GHOST",
+      "github_repo_id": "1019911878",
+      "source_updated_at": "2026-11-18T11:49:58Z",
+      "homepage_url": "https://www.tumblr.com/blog/oracle-os",
+      "owner": "vNeeL-code",
+      "default_branch": "main",
+      "source_commit_sha": "2cf718c6c9e5caf8dce77e75746111d743095397",
+      "license_text": "MIT License\n\nCopyright (c) 2026 GHOST Project\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "system",
+      "topics": [
+        "accessibility-service",
+        "acessibility",
+        "agent",
+        "agentic-ai",
+        "android",
+        "android-app",
+        "android-development",
+        "android-ui",
+        "gemma",
+        "gemma3n",
+        "gemma4",
+        "koog",
+        "mcp"
+      ],
+      "latest_version": "v4.39",
+      "release_url": "https://github.com/vNeeL-code/GHOST/releases/tag/v4.39",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-vneel-code-ghost-v4.39",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-vneel-code-ghost-v4.39/THIRD-PARTY-NOTICE-vneel-code-ghost.txt",
+      "artifacts": [
+        {
+          "id": "4068ed75aeb413dd7825b93f7024a998e7fb13a6b66605363384ea0913c4064a",
+          "filename": "app-fdroid-release.apk",
+          "original_filename": "app-fdroid-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v4.39",
+          "size_bytes": 53199121,
+          "sha256": "4068ed75aeb413dd7825b93f7024a998e7fb13a6b66605363384ea0913c4064a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "cd3c906ddf22d154d6146fe6a6ec02cc87026a2ee749d23649c373d5d7a0c14c",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-vneel-code-ghost-v4.39/app-fdroid-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-vneel-code-ghost-v4.39"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
