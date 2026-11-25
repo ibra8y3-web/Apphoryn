@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T20:16:34.579747+00:00",
+  "generated_at": "2026-11-25T20:16:49.806666+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -16853,6 +16853,80 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "yejiu0210-leafsign-android",
+      "slug": "yejiu0210-leafsign-android",
+      "name": "LeafSign-Android",
+      "summary": "原生 Android 每日签到应用：Jetpack Compose 界面，Android Keystore 本地加密凭证，精确闹钟 + 前台服务定时调度，扫码登录。支持网易云音乐、百度贴吧、森空岛、哔哩哔哩、小黑盒。",
+      "description": "原生 Android 每日签到应用：Jetpack Compose 界面，Android Keystore 本地加密凭证，精确闹钟 + 前台服务定时调度，扫码登录。支持网易云音乐、百度贴吧、森空岛、哔哩哔哩、小黑盒。",
+      "translations": {
+        "en": {
+          "summary": "原生 Android 每日签到应用：Jetpack Compose 界面，Android Keystore 本地加密凭证，精确闹钟 + 前台服务定时调度，扫码登录。支持网易云音乐、百度贴吧、森空岛、哔哩哔哩、小黑盒。",
+          "description": "原生 Android 每日签到应用：Jetpack Compose 界面，Android Keystore 本地加密凭证，精确闹钟 + 前台服务定时调度，扫码登录。支持网易云音乐、百度贴吧、森空岛、哔哩哔哩、小黑盒。"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/yejiu0210/LeafSign-Android/main/app/src/main/res/drawable-nodpi/ic_launcher_art.png",
+      "repository_url": "https://github.com/yejiu0210/LeafSign-Android",
+      "github_repo_id": "1468864690",
+      "source_updated_at": "2026-11-25T15:42:02Z",
+      "homepage_url": null,
+      "owner": "yejiu0210",
+      "default_branch": "main",
+      "source_commit_sha": "b6defef52720de598ed4fdda9dde955101ae9a03",
+      "license_text": "MIT License\n\nCopyright (c) 2026 OneTapCheckIn contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "android",
+        "android-app",
+        "android-keystore",
+        "bilibili",
+        "jetpack-compose",
+        "kotlin",
+        "material3",
+        "netease-cloud-music",
+        "skland",
+        "task-scheduler",
+        "tieba",
+        "xiaoheihe"
+      ],
+      "latest_version": "v0.5.14",
+      "release_url": "https://github.com/yejiu0210/LeafSign-Android/releases/tag/v0.5.14",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yejiu0210-leafsign-android-v0.5.14",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yejiu0210-leafsign-android-v0.5.14/THIRD-PARTY-NOTICE-yejiu0210-leafsign-android.txt",
+      "artifacts": [
+        {
+          "id": "745122906b07c83233bded3d7fd4887d77ff12a9ca149ab1c6079e792aab62a6",
+          "filename": "LeafSign-0.5.14.apk",
+          "original_filename": "LeafSign-0.5.14.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.5.14",
+          "size_bytes": 8600160,
+          "sha256": "745122906b07c83233bded3d7fd4887d77ff12a9ca149ab1c6079e792aab62a6",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "f1036969ec94868cd8de05086919e966adea42efb1c2b95f4e3061359a0f0827",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yejiu0210-leafsign-android-v0.5.14/LeafSign-0.5.14.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yejiu0210-leafsign-android-v0.5.14"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
