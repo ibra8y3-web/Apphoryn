@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:24:47.874223+00:00",
+  "generated_at": "2026-11-25T21:25:04.409321+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -35099,6 +35099,86 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "gfxgamerlab-spider-gfx-tool",
+      "slug": "gfxgamerlab-spider-gfx-tool",
+      "name": "spider-gfx-tool",
+      "summary": "free open-source Android game booster & GFX tool for all games — RAM cleaner, Auto-DNS, iPad View, FPS HUD, plus 60/90/120 FPS configs for PUBG/BGMI. No root (Shizuku).",
+      "description": "free open-source Android game booster & GFX tool for all games — RAM cleaner, Auto-DNS, iPad View, FPS HUD, plus 60/90/120 FPS configs for PUBG/BGMI. No root (Shizuku).",
+      "translations": {
+        "en": {
+          "summary": "free open-source Android game booster & GFX tool for all games — RAM cleaner, Auto-DNS, iPad View, FPS HUD, plus 60/90/120 FPS configs for PUBG/BGMI. No root (Shizuku).",
+          "description": "free open-source Android game booster & GFX tool for all games — RAM cleaner, Auto-DNS, iPad View, FPS HUD, plus 60/90/120 FPS configs for PUBG/BGMI. No root (Shizuku)."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/GfxGamerLab/spider-gfx-tool/main/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/GfxGamerLab/spider-gfx-tool",
+      "github_repo_id": "1322662380",
+      "source_updated_at": "2026-11-25T10:00:24Z",
+      "homepage_url": "https://t.me/gfxgamerlab",
+      "owner": "GfxGamerLab",
+      "default_branch": "main",
+      "source_commit_sha": "a3bfffbc70ce7058f197cd96ba5e713773146f24",
+      "license_text": "MIT License\n\nCopyright (c) 2026 GFX Gamer Lab\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "games",
+      "topics": [
+        "120-fps",
+        "120-fps-unlocker",
+        "android-app",
+        "android-gaming",
+        "bgmi",
+        "bgmi-pubg-mobile",
+        "dns-changer",
+        "game-booster",
+        "gfx-gamer-lab",
+        "gfx-tool",
+        "gfx-tool-pubg",
+        "ipad-view",
+        "kotlin-android",
+        "mobile-gaming",
+        "no-root",
+        "open-source",
+        "ram-cleaner",
+        "shizuku"
+      ],
+      "latest_version": "v9.0",
+      "release_url": "https://github.com/GfxGamerLab/spider-gfx-tool/releases/tag/v9.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gfxgamerlab-spider-gfx-tool-v9.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gfxgamerlab-spider-gfx-tool-v9.0/THIRD-PARTY-NOTICE-gfxgamerlab-spider-gfx-tool.txt",
+      "artifacts": [
+        {
+          "id": "2448b0182a88029213b6bc28d85aba11cf36aa68e6099faae46f2c68761b523d",
+          "filename": "app-release.apk",
+          "original_filename": "app-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v9.0",
+          "size_bytes": 17419788,
+          "sha256": "2448b0182a88029213b6bc28d85aba11cf36aa68e6099faae46f2c68761b523d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "e744df4f920c7274828c99dd406e1674b74228b1f1500a416119dd5b43d7f79f",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gfxgamerlab-spider-gfx-tool-v9.0/app-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gfxgamerlab-spider-gfx-tool-v9.0"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
