@@ -168,11 +168,14 @@ def localize_existing_catalog_rows(
     *,
     interval_seconds: float = 1.0,
     deadline: float | None = None,
+    max_attempts: int | None = None,
+    pacer: ImportPacer | None = None,
 ) -> dict[str, int]:
     """Translate published descriptions in place, without rewriting source wording."""
-    pacer = ImportPacer(interval_seconds)
-    report = {"checked": 0, "translated": 0, "failed": 0, "deferred": 0}
+    pacer = pacer or ImportPacer(interval_seconds)
+    report = {"scanned": 0, "checked": 0, "translated": 0, "failed": 0, "deferred": 0}
     for app in rows:
+        report["scanned"] += 1
         if has_arabic_translation(app):
             continue
         description = str(app.get("description") or "").strip()
@@ -228,6 +231,8 @@ def localize_existing_catalog_rows(
             if any(token in message for token in ("HTTP 429", "HTTP 500", "HTTP 502", "HTTP 503", "HTTP 504", "URLError")):
                 report["deferred"] += 1
                 break
+        if max_attempts is not None and report["checked"] >= max(1, int(max_attempts)):
+            break
     return report
 
 
@@ -363,22 +368,44 @@ def main() -> None:
     results: list[dict[str, Any]] = []
     scheduled_retries = list(waiting_retries)
     deadline = time.monotonic() + max(60, int(args.run_budget_seconds))
-    localization_report = localize_existing_catalog_rows(
-        catalog_rows,
-        mirror,
-        interval_seconds=args.translation_interval_seconds,
-        deadline=deadline,
-    )
+    localization_queue = [
+        row for row in catalog_rows
+        if not has_arabic_translation(row) and str(row.get("description") or "").strip()
+    ]
+    localization_cursor = 0
+    localization_paused = False
+    localization_pacer = ImportPacer(args.translation_interval_seconds)
+    localization_report = {"scanned": 0, "checked": 0, "translated": 0, "failed": 0, "deferred": 0}
     import_pacer = ImportPacer(args.import_interval_seconds)
     processed_this_run: set[str] = set()
 
+    def localize_next_existing_row() -> None:
+        nonlocal localization_cursor, localization_paused
+        if localization_paused or localization_cursor >= len(localization_queue):
+            return
+        result = localize_existing_catalog_rows(
+            localization_queue[localization_cursor:],
+            mirror,
+            interval_seconds=args.translation_interval_seconds,
+            deadline=deadline,
+            max_attempts=1,
+            pacer=localization_pacer,
+        )
+        localization_cursor += result["scanned"]
+        for key in ("scanned", "checked", "translated", "failed", "deferred"):
+            localization_report[key] += result[key]
+        if result["deferred"]:
+            localization_paused = True
+
     def process_entries(entries: list[dict[str, Any]]) -> bool:
         for index, entry in enumerate(entries):
-            refresh_targeted_discovery(entries)
+            if time.monotonic() >= deadline:
             if time.monotonic() >= deadline:
                 for pending in entries[index:]:
                     scheduled_retries.append({**pending, "next_attempt_at": now})
                 return False
+            localize_next_existing_row()
+            refresh_targeted_discovery(entries)
             repository_url = str(entry["repository"])
             candidate = entry.get("candidate") or {}
             result: dict[str, Any] = {
