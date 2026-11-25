@@ -1718,6 +1718,18 @@
       "platforms": [
         "macos",
         "windows"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "be8e18a1dca057ca55a4e1772962510a0f3a09be",
+          "targets": [
+            "android",
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-25T04:24:08.790689+00:00"
+        }
       ]
     },
     {
