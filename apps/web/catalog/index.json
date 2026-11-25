@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T10:59:48.753414+00:00",
+  "generated_at": "2026-11-25T11:00:12.830335+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -14649,6 +14649,83 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "sacidsezgin-super-clipboard",
+      "slug": "sacidsezgin-super-clipboard",
+      "name": "super-clipboard",
+      "summary": "Win+V-style clipboard history for Linux. Press Super+V, pick, paste. Local-only, open source.",
+      "description": "Win+V-style clipboard history for Linux. Press Super+V, pick, paste. Local-only, open source.",
+      "translations": {
+        "en": {
+          "summary": "Win+V-style clipboard history for Linux. Press Super+V, pick, paste. Local-only, open source.",
+          "description": "Win+V-style clipboard history for Linux. Press Super+V, pick, paste. Local-only, open source."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/65285535?v=4",
+      "repository_url": "https://github.com/sacidsezgin/super-clipboard",
+      "github_repo_id": "1460228422",
+      "source_updated_at": "2026-11-24T00:27:13Z",
+      "homepage_url": null,
+      "owner": "sacidsezgin",
+      "default_branch": "main",
+      "source_commit_sha": "1c0a420162d476c26a8c0ac8c62c5ac85a143f22",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Sacid Sezgin\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "clipboard",
+        "clipboard-history",
+        "clipboard-manager",
+        "debian",
+        "gtk3",
+        "linux",
+        "opensource",
+        "productivity",
+        "python",
+        "ubuntu",
+        "wayland",
+        "x11",
+        "zorin",
+        "zorin-os",
+        "zorinos"
+      ],
+      "latest_version": "v1.8.1",
+      "release_url": "https://github.com/sacidsezgin/super-clipboard/releases/tag/v1.8.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sacidsezgin-super-clipboard-v1.8.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sacidsezgin-super-clipboard-v1.8.1/THIRD-PARTY-NOTICE-sacidsezgin-super-clipboard.txt",
+      "artifacts": [
+        {
+          "id": "916dc0be3a57cefe76447af340184b4ac50b3ec6e4bf84adf89f6c2e1f6c1ab3",
+          "filename": "super-clipboard_1.8.1_all.deb",
+          "original_filename": "super-clipboard_1.8.1_all.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": null,
+          "version": "v1.8.1",
+          "size_bytes": 41664,
+          "sha256": "916dc0be3a57cefe76447af340184b4ac50b3ec6e4bf84adf89f6c2e1f6c1ab3",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sacidsezgin-super-clipboard-v1.8.1/super-clipboard_1.8.1_all.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sacidsezgin-super-clipboard-v1.8.1"
+        }
+      ],
+      "platforms": [
+        "linux"
       ]
     },
     {
