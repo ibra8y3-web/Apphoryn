@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T10:27:08.258128+00:00",
+  "generated_at": "2026-11-25T10:27:17.228003+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -10174,7 +10174,7 @@
       "icon_url": "https://raw.githubusercontent.com/RikkaApps/Shizuku/master/manager/src/main/res/mipmap-hdpi/ic_launcher.png",
       "repository_url": "https://github.com/RikkaApps/Shizuku",
       "github_repo_id": "92297825",
-      "source_updated_at": "2026-11-25T03:46:28Z",
+      "source_updated_at": "2026-11-25T09:56:24Z",
       "homepage_url": null,
       "owner": "RikkaApps",
       "default_branch": "master",
