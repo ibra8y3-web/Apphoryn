@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T18:22:16.792701+00:00",
+  "generated_at": "2026-11-25T18:22:39.850415+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -7068,6 +7068,85 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "mihsian77-emubox",
+      "slug": "mihsian77-emubox",
+      "name": "Emubox",
+      "summary": "安卓上的 Windows 模拟环境工具箱：按机型匹配 GPU 驱动，聚合组件与运行库，下载走国内加速。",
+      "description": "安卓上的 Windows 模拟环境工具箱：按机型匹配 GPU 驱动，聚合组件与运行库，下载走国内加速。",
+      "translations": {
+        "en": {
+          "summary": "安卓上的 Windows 模拟环境工具箱：按机型匹配 GPU 驱动，聚合组件与运行库，下载走国内加速。",
+          "description": "安卓上的 Windows 模拟环境工具箱：按机型匹配 GPU 驱动，聚合组件与运行库，下载走国内加速。"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/mihsian77/Emubox/main/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/mihsian77/Emubox",
+      "github_repo_id": "1391589807",
+      "source_updated_at": "2026-11-23T16:02:05Z",
+      "homepage_url": "https://mihsian77.github.io/Emubox/",
+      "owner": "mihsian77",
+      "default_branch": "main",
+      "source_commit_sha": "dc6ca6d5a46bd4e27065a7593ec8461089cc504f",
+      "license_text": "MIT License\n\nCopyright (c) 2026 NotZeetaa (original author)\nCopyright (c) 2026 Rodrig02005 (maintainer)\nCopyright (c) 2026 moon279 / mihsian77 (EmuHub 国内版 modifications)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "adreno",
+        "android",
+        "android-app",
+        "box64",
+        "chinese",
+        "download-manager",
+        "drivers",
+        "dxvk",
+        "emulation",
+        "emulator",
+        "gpu-driver",
+        "mali",
+        "panvk",
+        "turnip",
+        "vulkan",
+        "wine",
+        "winlator"
+      ],
+      "latest_version": "v1.3.0",
+      "release_url": "https://github.com/mihsian77/Emubox/releases/tag/v1.3.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mihsian77-emubox-v1.3.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mihsian77-emubox-v1.3.0/THIRD-PARTY-NOTICE-mihsian77-emubox.txt",
+      "artifacts": [
+        {
+          "id": "3e4639f626338c6a188a17c72d34d7071eadfbaae085fb0d2dd05f3ec8af83ff",
+          "filename": "EmuBox-v1.3.0.apk",
+          "original_filename": "EmuBox-v1.3.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.3.0",
+          "size_bytes": 49445279,
+          "sha256": "3e4639f626338c6a188a17c72d34d7071eadfbaae085fb0d2dd05f3ec8af83ff",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "48fb198fe4e3dd82f881c74b629ce9bdb0bc0f4e694950d9e748ed691d7f2680",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mihsian77-emubox-v1.3.0/EmuBox-v1.3.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mihsian77-emubox-v1.3.0"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
