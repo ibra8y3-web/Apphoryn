@@ -133,6 +133,11 @@ def sync_analytics(x_apphoryn_admin: str | None = Header(default=None)):
     _require_admin(x_apphoryn_admin)
     return analytics.sync_once()
 
+@router.post("/analytics/test")
+def test_analytics_backend(x_apphoryn_admin: str | None = Header(default=None)):
+    _require_admin(x_apphoryn_admin)
+    return analytics.test_backend()
+
 
 @router.get("/sources/search")
 def search_official_catalogs(
