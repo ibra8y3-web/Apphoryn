@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:31:06.739228+00:00",
+  "generated_at": "2026-11-25T19:31:24.152016+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -11269,6 +11269,78 @@
           "signer_certificate_sha256": "4dc14f087ed5ab9963d1c1ef1115ec3b331e4bbda5858a0cff7fa266734acde5",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yogeshpaliyal-halo-v0.1.9/halo-v0.1.9.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yogeshpaliyal-halo-v0.1.9"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "hanphonejan-hanphone-blog",
+      "slug": "hanphonejan-hanphone-blog",
+      "name": "hanphone-blog",
+      "summary": "个人博客系统云林有风，采用前后端分离架构：Next.js 15 + Spring Boot 3 构建主站，集成 4 套主题、RSS、文档中心、照片墙与实时聊天；博客之外还内置了小游戏合集、实用工具集与创意网页等纯前端子项目，均部署在同一域名下。pnpm workspace Monorepo 管理 web / apps / server / 各类 Node 服务，配套 Kotlin 安卓原生客户端。",
+      "description": "个人博客系统云林有风，采用前后端分离架构：Next.js 15 + Spring Boot 3 构建主站，集成 4 套主题、RSS、文档中心、照片墙与实时聊天；博客之外还内置了小游戏合集、实用工具集与创意网页等纯前端子项目，均部署在同一域名下。pnpm workspace Monorepo 管理 web / apps / server / 各类 Node 服务，配套 Kotlin 安卓原生客户端。",
+      "translations": {
+        "en": {
+          "summary": "个人博客系统云林有风，采用前后端分离架构：Next.js 15 + Spring Boot 3 构建主站，集成 4 套主题、RSS、文档中心、照片墙与实时聊天；博客之外还内置了小游戏合集、实用工具集与创意网页等纯前端子项目，均部署在同一域名下。pnpm workspace Monorepo 管理 web / apps / server / 各类 Node 服务，配套 Kotlin 安卓原生客户端。",
+          "description": "个人博客系统云林有风，采用前后端分离架构：Next.js 15 + Spring Boot 3 构建主站，集成 4 套主题、RSS、文档中心、照片墙与实时聊天；博客之外还内置了小游戏合集、实用工具集与创意网页等纯前端子项目，均部署在同一域名下。pnpm workspace Monorepo 管理 web / apps / server / 各类 Node 服务，配套 Kotlin 安卓原生客户端。"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/HanphoneJan/hanphone-blog/main/apps/photo-wall/src-android/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/HanphoneJan/hanphone-blog",
+      "github_repo_id": "1042785434",
+      "source_updated_at": "2026-11-19T06:23:22Z",
+      "homepage_url": "https://hanphone.cn",
+      "owner": "HanphoneJan",
+      "default_branch": "main",
+      "source_commit_sha": "ddba2851f51ed480a4276d8b256865cf1d88f61d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 寒枫\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "network",
+      "topics": [
+        "android",
+        "android-app",
+        "java",
+        "nextjs",
+        "postgresql",
+        "react",
+        "springboot",
+        "tailwindcss",
+        "tauri",
+        "typescript"
+      ],
+      "latest_version": "v1.4.2",
+      "release_url": "https://github.com/HanphoneJan/hanphone-blog/releases/tag/v1.4.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hanphonejan-hanphone-blog-v1.4.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hanphonejan-hanphone-blog-v1.4.2/THIRD-PARTY-NOTICE-hanphonejan-hanphone-blog.txt",
+      "artifacts": [
+        {
+          "id": "c4bbe410d870cd41c6fcb1a1dfe6fb5dfad6b27c10026201bd7bb12c52370dec",
+          "filename": "hanphone-1.4.2-android.apk",
+          "original_filename": "hanphone-1.4.2-android.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.4.2",
+          "size_bytes": 22623648,
+          "sha256": "c4bbe410d870cd41c6fcb1a1dfe6fb5dfad6b27c10026201bd7bb12c52370dec",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "0fa2ee10d94a859d0af2d0fbf150e0c4a25892b9b356c5cd174b979198f2a45a",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hanphonejan-hanphone-blog-v1.4.2/hanphone-1.4.2-android.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hanphonejan-hanphone-blog-v1.4.2"
         }
       ],
       "platforms": [
