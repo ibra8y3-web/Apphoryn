@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:43:38.198176+00:00",
+  "generated_at": "2026-11-25T19:43:56.375202+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -20249,13 +20249,13 @@
         }
       },
       "description_translations": {},
-      "translation_status": "english_only",
+      "translation_status": "pending",
       "ai_provider": null,
       "ai_model": null,
       "icon_url": "https://raw.githubusercontent.com/Eslamasabry/opencode-mobile-next/master/native/androidApp/src/main/res/mipmap-hdpi/ic_launcher.png",
       "repository_url": "https://github.com/Eslamasabry/opencode-mobile-next",
       "github_repo_id": "1354621130",
-      "source_updated_at": "2026-11-25T09:29:23Z",
+      "source_updated_at": "2026-11-25T18:41:31Z",
       "homepage_url": "https://eslamasabry.github.io/opencode-mobile-next/",
       "owner": "Eslamasabry",
       "default_branch": "master",
