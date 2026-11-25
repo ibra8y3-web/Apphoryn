@@ -59,6 +59,30 @@ class AnalyticsStoreTests(unittest.TestCase):
         self.assertEqual(result["status"], "local_only")
         self.assertEqual(self.store.summary()["pending_replication"], 1)
 
+
+    def test_pending_outbox_batch_is_claimed_once_during_retry_window(self):
+        self.store.record_event("app_view", app_slug="offline-app")
+        first = self.store._pending_batch(limit=10)
+        second = self.store._pending_batch(limit=10)
+        self.assertEqual(len(first), 1)
+        self.assertEqual(second, [])
+        self.assertEqual(first[0]["app_slug"], "offline-app")
+
+    def test_cloudflare_d1_uses_one_parameterized_insert_for_the_whole_batch(self):
+        rows = [
+            {"id": "one", "event_type": "app_view", "app_slug": "app-one",
+             "artifact_id": None, "platform": None, "details": {}, "created_at": "2026-01-01T00:00:00+00:00"},
+            {"id": "two", "event_type": "download_requested", "app_slug": "app-two",
+             "artifact_id": "sha256:two", "platform": "android", "details": {}, "created_at": "2026-01-01T00:00:01+00:00"},
+        ]
+        config = {"account_id": "account", "database_id": "database", "token": "secret"}
+        with patch.object(AnalyticsStore, "_d1_request") as request:
+            AnalyticsStore._sync_d1(config, rows)
+        self.assertEqual(request.call_count, 2)
+        insert_call = request.call_args_list[-1]
+        self.assertIn("INSERT OR IGNORE", insert_call.args[3])
+        self.assertEqual(insert_call.args[4] and len(insert_call.args[4]), 14)
+
     def test_invalid_event_types_are_rejected(self):
         self.assertIsNone(self.store.record_event("login", details={"user": "someone"}))
         self.assertEqual(self.store.summary()["totals"], {})
