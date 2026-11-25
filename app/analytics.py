@@ -292,15 +292,21 @@ class AnalyticsStore:
                 created_at TEXT NOT NULL
             )
         """)
-        for row in rows:
-            cls._d1_request(
-                config["account_id"], config["database_id"], config["token"],
-                """INSERT OR IGNORE INTO apphoryn_analytics_events
-                   (id,event_type,app_slug,artifact_id,platform,details_json,created_at)
-                   VALUES(?,?,?,?,?,?,?)""",
-                [row["id"], row["event_type"], row["app_slug"], row["artifact_id"], row["platform"],
-                 json.dumps(row["details"], separators=(",", ":")), row["created_at"]],
+        if rows:
+            columns = "(id,event_type,app_slug,artifact_id,platform,details_json,created_at)"
+            row_placeholders = "(" + ",".join("?" for _ in range(7)) + ")"
+            sql = (
+                "INSERT OR IGNORE INTO apphoryn_analytics_events "
+                + columns + " VALUES " + ",".join(row_placeholders for _ in rows)
             )
+            params: list[Any] = []
+            for row in rows:
+                params.extend([
+                    row["id"], row["event_type"], row["app_slug"], row["artifact_id"],
+                    row["platform"], json.dumps(row["details"], separators=(",", ":")),
+                    row["created_at"],
+                ])
+            cls._d1_request(config["account_id"], config["database_id"], config["token"], sql, params)
 
     def sync_once(self, limit: int = 100) -> dict[str, Any]:
         provider, config = self._backend_config()
