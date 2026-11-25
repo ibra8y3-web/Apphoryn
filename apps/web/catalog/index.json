@@ -35776,7 +35776,17 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "6896e024fd6b8265e9c7e1cad0bb2581dab6c3c4",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-25T21:07:51.408540+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "tirthsaraiya29-tether",
