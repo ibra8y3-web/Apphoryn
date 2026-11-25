@@ -20,7 +20,9 @@ on:
   workflow_dispatch:
 concurrency:
   group: apphoryn-catalog-writes
-  cancel-in-progress: false
+  # The cursor and retry queue make interrupted batches replayable. Replace a
+  # stuck long-running Scout so the five-minute recovery schedule can progress.
+  cancel-in-progress: true
   # Serialize catalog writers so the two discovery pipelines cannot overwrite each other's updates.
 
 permissions:
@@ -31,7 +33,7 @@ permissions:
 jobs:
   global-scout:
     runs-on: ubuntu-latest
-    timeout-minutes: 350
+    timeout-minutes: 10
     steps:
       - name: Checkout trusted Apphoryn automation
         uses: actions/checkout@v4
@@ -93,7 +95,7 @@ jobs:
           python scripts/global_scout.py \
             --max-repositories 10000 \
             --max-pages 100 \
-            --run-budget-seconds 20400 \
+            --run-budget-seconds 240 \
             --import-interval-seconds "$APPHORYN_IMPORT_INTERVAL_SECONDS"
 
       - name: Persist the Scout cursor and retry queue
