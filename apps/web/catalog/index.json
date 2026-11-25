@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:05:01.208031+00:00",
+  "generated_at": "2026-11-25T22:05:19.392997+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -3774,7 +3774,7 @@
         }
       },
       "description_translations": {},
-      "translation_status": "english_only",
+      "translation_status": "pending",
       "ai_provider": null,
       "ai_model": null,
       "icon_url": "https://raw.githubusercontent.com/aman-nitb-cse/Aurex-Browser/main/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
