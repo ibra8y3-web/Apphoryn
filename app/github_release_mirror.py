@@ -186,7 +186,23 @@ class GitHubReleaseMirror:
             # the first publisher updates this file instead of racing to create it.
             return {"schema_version": 1, "generated_at": None, "apps": []}, result.get("sha")
         if result.get("encoding") != "base64" or not content:
-            raise GitHubMirrorError("Existing Apphoryn catalog manifest is not a base64 file response.")
+            # GitHub's Contents API omits inline Base64 for files at or above
+            # its 1 MB inline-content boundary. The blob SHA remains available,
+            # so retrieve that exact immutable Git object instead of failing
+            # every import once the Apphoryn catalog grows beyond the limit.
+            blob_sha = str(result.get("sha") or "").strip()
+            if not re.fullmatch(r"[0-9a-fA-F]{40}", blob_sha):
+                raise GitHubMirrorError(
+                    "Apphoryn catalog has no inline content and no valid Git blob SHA."
+                )
+            blob = self.request(
+                "GET", f"/repos/{self.full_name}/git/blobs/{blob_sha}"
+            )
+            content = blob.get("content") if isinstance(blob, dict) else None
+            if not content or blob.get("encoding") != "base64":
+                raise GitHubMirrorError(
+                    "GitHub did not return Base64 content for the Apphoryn catalog blob."
+                )
         raw = base64.b64decode(content.replace("\n", ""))
         try:
             manifest = json.loads(raw.decode("utf-8"))

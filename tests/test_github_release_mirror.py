@@ -47,6 +47,35 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
         self.assertEqual(manifest, {"schema_version": 1, "generated_at": None, "apps": []})
         self.assertEqual(sha, "empty-blob-sha")
 
+    def test_read_catalog_uses_git_blob_when_contents_api_omits_large_file_body(self):
+        manifest_payload = {
+            "schema_version": 1,
+            "generated_at": "2026-11-25T00:00:00+00:00",
+            "apps": [{"id": "existing-app", "name": "Existing App"}],
+        }
+        blob_sha = "a" * 40
+        encoded = base64.b64encode(
+            json.dumps(manifest_payload).encode("utf-8")
+        ).decode("ascii")
+        mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn")
+        mirror.request = Mock(side_effect=[
+            {
+                "type": "file",
+                "encoding": "none",
+                "size": 1_500_000,
+                "content": "",
+                "sha": blob_sha,
+            },
+            {"encoding": "base64", "content": encoded},
+        ])
+
+        manifest, sha = mirror._read_catalog()
+
+        self.assertEqual(manifest, manifest_payload)
+        self.assertEqual(sha, blob_sha)
+        self.assertEqual(mirror.request.call_count, 2)
+        self.assertIn(f"/git/blobs/{blob_sha}", mirror.request.call_args.args[1])
+
     def test_source_only_import_does_not_create_license_notice_release(self):
         mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn")
         mirror._read_catalog = Mock(return_value=({"schema_version": 1, "apps": []}, None))
