@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T18:53:31.372550+00:00",
+  "generated_at": "2026-11-25T18:53:45.474559+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -8734,6 +8734,80 @@
           "signer_certificate_sha256": "858149e97fc0d3345a499256ed795b1d459e8ee00f80d91207c7b09d33c78ea5",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-tobitege-flowery-net-v4.0.0/Flowery.Gallery-Android-x86.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-tobitege-flowery-net-v4.0.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "shangjin-xiao-frameecho",
+      "slug": "shangjin-xiao-frameecho",
+      "name": "FrameEcho",
+      "summary": "📸Freeze Every Frame You Love｜定格你所爱的每一帧– Android 视频抽帧 / frame extractor",
+      "description": "📸Freeze Every Frame You Love｜定格你所爱的每一帧– Android 视频抽帧 / frame extractor",
+      "translations": {
+        "en": {
+          "summary": "📸Freeze Every Frame You Love｜定格你所爱的每一帧– Android 视频抽帧 / frame extractor",
+          "description": "📸Freeze Every Frame You Love｜定格你所爱的每一帧– Android 视频抽帧 / frame extractor"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Shangjin-Xiao/FrameEcho/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/Shangjin-Xiao/FrameEcho",
+      "github_repo_id": "1181561460",
+      "source_updated_at": "2026-11-11T07:04:02Z",
+      "homepage_url": "https://frameecho.shangjinyun.cn",
+      "owner": "Shangjin-Xiao",
+      "default_branch": "main",
+      "source_commit_sha": "312daff11d9be30d92661ac3cd6aa032f79c39a9",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Shangjin Xiao\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "exif",
+        "frame-extraction",
+        "hdr",
+        "hdr-image",
+        "jetpack-compose",
+        "material3",
+        "motion-photo",
+        "video",
+        "video-processing"
+      ],
+      "latest_version": "1.2.1",
+      "release_url": "https://github.com/Shangjin-Xiao/FrameEcho/releases/tag/1.2.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shangjin-xiao-frameecho-1.2.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shangjin-xiao-frameecho-1.2.1/THIRD-PARTY-NOTICE-shangjin-xiao-frameecho.txt",
+      "artifacts": [
+        {
+          "id": "81dadf9f43d4a6460f84561c5c820a764e67de819fe3cc7b3b3d6dca00c66be0",
+          "filename": "app-release.apk",
+          "original_filename": "app-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "1.2.1",
+          "size_bytes": 5558882,
+          "sha256": "81dadf9f43d4a6460f84561c5c820a764e67de819fe3cc7b3b3d6dca00c66be0",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "4341f4edf7268069436752ff43c9bd7d5c8b3dd163cadc9ba9ec8189982b2623",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shangjin-xiao-frameecho-1.2.1/app-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shangjin-xiao-frameecho-1.2.1"
         }
       ],
       "platforms": [
