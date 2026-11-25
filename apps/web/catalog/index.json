@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:03:02.471404+00:00",
+  "generated_at": "2026-11-25T19:03:16.028685+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -6367,6 +6367,83 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "deliciousdiamond-deepexplorer-delicious",
+      "slug": "deliciousdiamond-deepexplorer-delicious",
+      "name": "deepexplorer-delicious",
+      "summary": "不到 200KB 的 Android WebView 浏览器，内置 DeepSeek AI、首页组件与下载管理；不用 Gradle / AndroidX。",
+      "description": "不到 200KB 的 Android WebView 浏览器，内置 DeepSeek AI、首页组件与下载管理；不用 Gradle / AndroidX。",
+      "translations": {
+        "en": {
+          "summary": "不到 200KB 的 Android WebView 浏览器，内置 DeepSeek AI、首页组件与下载管理；不用 Gradle / AndroidX。",
+          "description": "不到 200KB 的 Android WebView 浏览器，内置 DeepSeek AI、首页组件与下载管理；不用 Gradle / AndroidX。"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Deliciousdiamond/deepexplorer-delicious/main/docs/icon.svg",
+      "repository_url": "https://github.com/Deliciousdiamond/deepexplorer-delicious",
+      "github_repo_id": "1461346379",
+      "source_updated_at": "2026-11-21T08:26:16Z",
+      "homepage_url": "https://github.com/Deliciousdiamond/deepexplorer-delicious/releases/latest",
+      "owner": "Deliciousdiamond",
+      "default_branch": "main",
+      "source_commit_sha": "f8ad8ff028ce4f6d538e76d0f13fef25652e3b5d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Deliciousdiamond\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "ai",
+        "android",
+        "android-app",
+        "android-browser",
+        "browser",
+        "chatbot",
+        "deepseek",
+        "java",
+        "lightweight",
+        "llm",
+        "minimalist",
+        "no-gradle",
+        "open-source",
+        "privacy",
+        "webview"
+      ],
+      "latest_version": "v2.0.2",
+      "release_url": "https://github.com/Deliciousdiamond/deepexplorer-delicious/releases/tag/v2.0.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-deliciousdiamond-deepexplorer-delicious-v2.0.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-deliciousdiamond-deepexplorer-delicious-v2.0.2/THIRD-PARTY-NOTICE-deliciousdiamond-deepexplorer-delicious.txt",
+      "artifacts": [
+        {
+          "id": "c4ea24d44146034edf57925e0d40f0d804f331b981171a38393ab1e6f1912515",
+          "filename": "DeepExplorer-2.0.2.apk",
+          "original_filename": "DeepExplorer-2.0.2.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v2.0.2",
+          "size_bytes": 231678,
+          "sha256": "c4ea24d44146034edf57925e0d40f0d804f331b981171a38393ab1e6f1912515",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "d909d62cc99aaf482099f59e362882033a85eb9b791bbd15bdd757f8587a69f3",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-deliciousdiamond-deepexplorer-delicious-v2.0.2/DeepExplorer-2.0.2.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-deliciousdiamond-deepexplorer-delicious-v2.0.2"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
