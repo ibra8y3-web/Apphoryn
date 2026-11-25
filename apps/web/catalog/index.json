@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:09:42.225119+00:00",
+  "generated_at": "2026-11-25T23:10:17.252814+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -30874,6 +30874,83 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "oraziog-miraglio",
+      "slug": "oraziog-miraglio",
+      "name": "miraglio",
+      "summary": "Miraglio — misura la distanza del bersaglio per il tiro con l'arco in due modi: con la fotocamera del telefono e con il suono, dal tempo di volo registrato dal microfono.",
+      "description": "Miraglio — misura la distanza del bersaglio per il tiro con l'arco in due modi: con la fotocamera del telefono e con il suono, dal tempo di volo registrato dal microfono.",
+      "translations": {
+        "en": {
+          "summary": "Miraglio — misura la distanza del bersaglio per il tiro con l'arco in due modi: con la fotocamera del telefono e con il suono, dal tempo di volo registrato dal microfono.",
+          "description": "Miraglio — misura la distanza del bersaglio per il tiro con l'arco in due modi: con la fotocamera del telefono e con il suono, dal tempo di volo registrato dal microfono."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/oraziog/miraglio/master/app/src/main/res/drawable-nodpi/ic_launcher_image.png",
+      "repository_url": "https://github.com/oraziog/miraglio",
+      "github_repo_id": "1420565092",
+      "source_updated_at": "2026-11-22T21:18:17Z",
+      "homepage_url": null,
+      "owner": "oraziog",
+      "default_branch": "master",
+      "source_commit_sha": "d0f3ae547021297727932efbffdb77ce9cc865bd",
+      "license_text": "MIT License\n\nCopyright (c) 2026 oraziog\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "acoustics",
+        "android",
+        "android-app",
+        "archery",
+        "audio-processing",
+        "ballistics",
+        "camerax",
+        "computer-vision",
+        "distance-measurement",
+        "jetpack-compose",
+        "kotlin",
+        "object-detection",
+        "onnxruntime",
+        "rangefinder",
+        "signal-processing"
+      ],
+      "latest_version": "v1.0.10",
+      "release_url": "https://github.com/oraziog/miraglio/releases/tag/v1.0.10",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-oraziog-miraglio-v1.0.10",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-oraziog-miraglio-v1.0.10/THIRD-PARTY-NOTICE-oraziog-miraglio.txt",
+      "artifacts": [
+        {
+          "id": "cf2cdd00a692522ca8f3c325a2a59873d044301d9df2c55eac04980983d4d691",
+          "filename": "miraglio-1.0.10.apk",
+          "original_filename": "miraglio-1.0.10.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.10",
+          "size_bytes": 130053889,
+          "sha256": "cf2cdd00a692522ca8f3c325a2a59873d044301d9df2c55eac04980983d4d691",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "ce7eaa63429c09728693cde142b9f89891cbed91a6e643a67c1b69ec34250f73",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-oraziog-miraglio-v1.0.10/miraglio-1.0.10.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-oraziog-miraglio-v1.0.10"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
