@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:48:20.594261+00:00",
+  "generated_at": "2026-11-25T09:48:48.317873+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -8445,6 +8445,76 @@
       ],
       "platforms": [
         "windows"
+      ]
+    },
+    {
+      "id": "mvoong-seamstress",
+      "slug": "mvoong-seamstress",
+      "name": "seamstress",
+      "summary": "Lightweight, mouse-driven macOS tiling window manager with Option-drag splitting and live flush seam resizing.",
+      "description": "Lightweight, mouse-driven macOS tiling window manager with Option-drag splitting and live flush seam resizing.",
+      "translations": {
+        "en": {
+          "summary": "Lightweight, mouse-driven macOS tiling window manager with Option-drag splitting and live flush seam resizing.",
+          "description": "Lightweight, mouse-driven macOS tiling window manager with Option-drag splitting and live flush seam resizing."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/mvoong/seamstress/main/site/favicon.svg",
+      "repository_url": "https://github.com/mvoong/seamstress",
+      "github_repo_id": "1466472395",
+      "source_updated_at": "2026-11-24T09:31:06Z",
+      "homepage_url": null,
+      "owner": "mvoong",
+      "default_branch": "main",
+      "source_commit_sha": "f5e2b636fc245ad6c98eadbb908594ecc923eb0c",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Michael Voong\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "bsp",
+        "macos",
+        "macos-app",
+        "productivity",
+        "swift",
+        "swiftui",
+        "tiling-window-manager",
+        "window-manager"
+      ],
+      "latest_version": "v0.1.1",
+      "release_url": "https://github.com/mvoong/seamstress/releases/tag/v0.1.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mvoong-seamstress-v0.1.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mvoong-seamstress-v0.1.1/THIRD-PARTY-NOTICE-mvoong-seamstress.txt",
+      "artifacts": [
+        {
+          "id": "38c6b6adae05d5c91a0ce796dbcc053844f0365f7b0a74d1cf4395be1d36264a",
+          "filename": "Seamstress-0.1.1.dmg",
+          "original_filename": "Seamstress-0.1.1.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": null,
+          "version": "v0.1.1",
+          "size_bytes": 2300807,
+          "sha256": "38c6b6adae05d5c91a0ce796dbcc053844f0365f7b0a74d1cf4395be1d36264a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mvoong-seamstress-v0.1.1/Seamstress-0.1.1.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mvoong-seamstress-v0.1.1"
+        }
+      ],
+      "platforms": [
+        "macos"
       ]
     },
     {
