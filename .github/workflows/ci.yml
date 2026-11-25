@@ -27,8 +27,9 @@ jobs:
       - run: node --check apps/web/sw.js
       - run: python scripts/ci_build.py --help
       - run: python scripts/harvest_and_import.py --help
+      - run: python scripts/global_scout.py --help
       - run: python scripts/publish_github_release.py --help
       - run: python scripts/publish_artifacts.py --help
       - run: python -m json.tool catalog-seed-repositories.json > /dev/null
       - run: python -m json.tool apps/web/catalog/index.json > /dev/null
-      - run: python -c "import yaml; yaml.safe_load(open('docker-compose.yml', encoding='utf-8')); yaml.safe_load(open('.github/workflows/agent-compute.yml', encoding='utf-8'))"
+      - run: python -c "import yaml; [yaml.safe_load(open(path, encoding='utf-8')) for path in ('docker-compose.yml', '.github/workflows/agent-compute.yml', '.github/workflows/global-scout.yml') ]"

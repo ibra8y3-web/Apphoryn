@@ -5,6 +5,8 @@ on:
     branches: [main, master]
     paths-ignore:
       - 'apps/web/catalog/index.json'
+      - 'data/scout-state.json'
+      - 'data/scout-retry.json'
   schedule:
     - cron: '23 * * * *'
   workflow_dispatch:

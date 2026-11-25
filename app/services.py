@@ -12,6 +12,7 @@ from pathlib import Path
 from typing import Any
 
 from .config import settings
+from .artifact_store import ArtifactStore, ArtifactStoreError
 from .ai_descriptions import DescriptionGenerator
 from .artifact_validation import ArtifactValidationError, validate_artifact
 from .github_release_mirror import GitHubMirrorError, GitHubReleaseMirror
@@ -248,10 +249,6 @@ class CatalogService:
                 destination_dir = settings.storage_path / app["id"]
                 destination_dir.mkdir(parents=True, exist_ok=True)
                 temporary = destination_dir / f".{uuid.uuid4().hex}.part{Path(filename).suffix.lower()}"
-                version_dir = re.sub(r"[^A-Za-z0-9._+-]+", "_", str(version or "unknown"))[:100] or "unknown"
-                target_dir = destination_dir / version_dir
-                target_dir.mkdir(parents=True, exist_ok=True)
-                target = target_dir / f"{uuid.uuid4().hex[:8]}-{filename}"
                 try:
                     size, digest = _download_asset(download_url, temporary, settings.max_import_bytes)
                     upstream_digest = asset.get("digest") or ""
@@ -266,7 +263,18 @@ class CatalogService:
                     temporary.unlink(missing_ok=True)
                     rejected_assets.append({"filename": filename, "reason": str(exc)[:300]})
                     continue
-                os.replace(temporary, target)
+                try:
+                    target = ArtifactStore(settings.storage_path).put(
+                        temporary,
+                        expected_sha256=digest,
+                        max_bytes=settings.max_import_bytes,
+                        extension=Path(filename).suffix.lower(),
+                    )
+                except ArtifactStoreError as exc:
+                    temporary.unlink(missing_ok=True)
+                    rejected_assets.append({"filename": filename, "reason": str(exc)[:300]})
+                    continue
+                temporary.unlink(missing_ok=True)
                 platform, package_type = classification
                 artifact = self.database.add_artifact({
                     "id": str(uuid.uuid4()), "app_id": app["id"], "filename": filename,
@@ -342,11 +350,17 @@ def store_uploaded_artifact(app_id: str, filename: str, platform: str, version: 
     existing = next((item for item in database.list_artifacts(app_id) if item.get("sha256") == digest), None)
     if existing:
         return existing
-    destination_dir = settings.storage_path / app_id
-    destination_dir.mkdir(parents=True, exist_ok=True)
     artifact_id = str(uuid.uuid4())
-    target = destination_dir / f"{artifact_id}-{filename}"
-    shutil.move(str(data_path), str(target))
+    try:
+        target = ArtifactStore(settings.storage_path).put(
+            data_path,
+            expected_sha256=digest,
+            max_bytes=settings.max_artifact_bytes,
+            extension=Path(filename).suffix.lower(),
+        )
+    except ArtifactStoreError as exc:
+        raise ValueError(f"Artifact storage failed: {exc}") from exc
+    data_path.unlink(missing_ok=True)
     result = database.add_artifact({
         "id": artifact_id, "app_id": app_id, "filename": filename,
         "platform": platform, "package_type": classification[1], "version": version,

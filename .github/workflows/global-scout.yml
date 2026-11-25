@@ -1,0 +1,144 @@
+name: Apphoryn Global Scout — incremental public repository crawl
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'scripts/global_scout.py'
+      - 'app/repository_crawler.py'
+      - 'app/github_client.py'
+      - '.github/workflows/global-scout.yml'
+  schedule:
+    - cron: '17 */2 * * *'
+  workflow_dispatch:
+    inputs:
+      max_repositories:
+        description: Maximum repositories to process (a complete API page is consumed)
+        required: true
+        default: '200'
+      max_pages:
+        description: Maximum GitHub listing pages for this run
+        required: true
+        default: '25'
+
+concurrency:
+  group: apphoryn-catalog-writes
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  global-scout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout trusted Apphoryn automation
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Java for Android signature checks
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Install Android SDK build-tools for APK verification
+        shell: bash
+        run: |
+          export ANDROID_HOME="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}}"
+          SDKMANAGER="$(command -v sdkmanager || true)"
+          if [ -z "$SDKMANAGER" ]; then
+            SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager -perm -111 2>/dev/null | sort -V | tail -n 1)"
+          fi
+          if [ -z "$SDKMANAGER" ]; then
+            echo "Android sdkmanager was not found on this runner." >&2
+            exit 1
+          fi
+          yes | "$SDKMANAGER" --licenses >/dev/null || "$SDKMANAGER" --licenses </dev/null
+          "$SDKMANAGER" --install "platform-tools" "build-tools;35.0.0"
+          echo "$ANDROID_HOME/build-tools/35.0.0" >> "$GITHUB_PATH"
+
+      - name: Scan public repositories and import verified releases
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          APPHORYN_GITHUB_REF: ${{ github.ref_name }}
+          APPHORYN_AI_PROVIDER_PRIORITY: ${{ vars.APPHORYN_AI_PROVIDER_PRIORITY || 'gemini,groq,xai,openrouter,cloudflare,comet' }}
+          APPHORYN_AI_API_KEY: ${{ secrets.APPHORYN_AI_API_KEY }}
+          APPHORYN_AI_MODEL: ${{ vars.APPHORYN_AI_MODEL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          COMET_API_KEY: ${{ secrets.COMET_API_KEY }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          APPHORYN_AI_FREE_ONLY: ${{ vars.APPHORYN_AI_FREE_ONLY || 'true' }}
+          APPHORYN_AI_ALLOW_PAID_REQUESTS: ${{ vars.APPHORYN_AI_ALLOW_PAID_REQUESTS || 'false' }}
+          APPHORYN_AI_ENABLE_XAI: ${{ vars.APPHORYN_AI_ENABLE_XAI || 'false' }}
+          APPHORYN_AI_ALLOW_LEGACY_PROVIDER: ${{ vars.APPHORYN_AI_ALLOW_LEGACY_PROVIDER || 'false' }}
+          APPHORYN_AI_CONFIRM_GEMINI_GROQ_FREE_TIER: ${{ vars.APPHORYN_AI_CONFIRM_GEMINI_GROQ_FREE_TIER || 'false' }}
+          APPHORYN_AI_ALLOW_CREDIT_BASED_PROVIDERS: ${{ vars.APPHORYN_AI_ALLOW_CREDIT_BASED_PROVIDERS || 'false' }}
+          APPHORYN_COMET_FREE_MODEL_IDS: ${{ vars.APPHORYN_COMET_FREE_MODEL_IDS || '' }}
+          APPHORYN_AI_ENABLE_CLOUDFLARE: ${{ vars.APPHORYN_AI_ENABLE_CLOUDFLARE || 'false' }}
+          APPHORYN_GLOBAL_SCOUT_BUILD_TARGETS: ${{ vars.APPHORYN_GLOBAL_SCOUT_BUILD_TARGETS || 'off' }}
+          APPHORYN_GLOBAL_SCOUT_MAX_BUILDS_PER_RUN: ${{ vars.APPHORYN_GLOBAL_SCOUT_MAX_BUILDS_PER_RUN || '0' }}
+          MAX_REPOSITORIES: ${{ inputs.max_repositories || '200' }}
+          MAX_PAGES: ${{ inputs.max_pages || '25' }}
+        shell: bash
+        run: |
+          python scripts/global_scout.py \
+            --max-repositories "$MAX_REPOSITORIES" \
+            --max-pages "$MAX_PAGES"
+
+      - name: Persist the Scout cursor and retry queue
+        if: always() && hashFiles('data/scout-state.json') != ''
+        shell: bash
+        env:
+          TARGET_BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp data/scout-state.json "$RUNNER_TEMP/scout-state.json"
+          if [ -f data/scout-retry.json ]; then
+            cp data/scout-retry.json "$RUNNER_TEMP/scout-retry.json"
+          fi
+          for attempt in 1 2 3; do
+            git fetch origin "$TARGET_BRANCH"
+            git reset --hard FETCH_HEAD
+            mkdir -p data
+            cp "$RUNNER_TEMP/scout-state.json" data/scout-state.json
+            if [ -f "$RUNNER_TEMP/scout-retry.json" ]; then
+              cp "$RUNNER_TEMP/scout-retry.json" data/scout-retry.json
+            fi
+            git add data/scout-state.json data/scout-retry.json
+            if git diff --cached --quiet; then
+              echo "Scout checkpoint did not change."
+              exit 0
+            fi
+            git commit -m "Advance Apphoryn global Scout checkpoint"
+            if git push origin "HEAD:$TARGET_BRANCH"; then
+              exit 0
+            fi
+            echo "Checkpoint push raced with another commit; retrying ($attempt/3)."
+          done
+          echo "Could not persist the Scout checkpoint after three attempts." >&2
+          exit 1
+
+      - name: Save global Scout report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: apphoryn-global-scout-report
+          path: global-scout-results.json
+          if-no-files-found: warn
+          retention-days: 30
