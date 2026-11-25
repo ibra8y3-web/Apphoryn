@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:46:15.088694+00:00",
+  "generated_at": "2026-11-25T22:46:32.865654+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -27138,6 +27138,78 @@
       "release_url": "https://github.com/Proffware/MASS-PORTAL/releases/tag/EUS-4.1",
       "platforms": [],
       "project_status": "source_available"
+    },
+    {
+      "id": "g1lg1l-matcha",
+      "slug": "g1lg1l-matcha",
+      "name": "matcha",
+      "summary": "Tournaments with friends",
+      "description": "Tournaments with friends",
+      "translations": {
+        "en": {
+          "summary": "Tournaments with friends",
+          "description": "Tournaments with friends"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/g1lg1l/matcha/main/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/g1lg1l/matcha",
+      "github_repo_id": "1460516348",
+      "source_updated_at": "2026-11-18T11:31:20Z",
+      "homepage_url": "https://g1lg1l.github.io/matcha/",
+      "owner": "g1lg1l",
+      "default_branch": "main",
+      "source_commit_sha": "f220aede22cdcf53b54a1960329180b83703a3a7",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Gil Gil\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "friends",
+        "ios",
+        "ios-app",
+        "ios-development",
+        "ios-swift",
+        "tournament",
+        "webapp"
+      ],
+      "latest_version": "v0.3.1",
+      "release_url": "https://github.com/g1lg1l/matcha/releases/tag/v0.3.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-g1lg1l-matcha-v0.3.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-g1lg1l-matcha-v0.3.1/THIRD-PARTY-NOTICE-g1lg1l-matcha.txt",
+      "artifacts": [
+        {
+          "id": "3ec3b48bce8ffa7f7dc1f94da3ce008d6cc816cee35e56635e19746c89ea3e72",
+          "filename": "matcha.apk",
+          "original_filename": "matcha.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.3.1",
+          "size_bytes": 4427157,
+          "sha256": "3ec3b48bce8ffa7f7dc1f94da3ce008d6cc816cee35e56635e19746c89ea3e72",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "15cf5eed070dfc4ca0527c5f3dda0346a887163bb76c9c1535c1267973804eb1",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-g1lg1l-matcha-v0.3.1/matcha.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-g1lg1l-matcha-v0.3.1"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
     },
     {
       "id": "kalarina-bit-matewave",
