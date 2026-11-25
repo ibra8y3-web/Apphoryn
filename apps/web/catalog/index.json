@@ -20675,6 +20675,19 @@
       ],
       "platforms": [
         "android"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "b9bd54c5851545f0374640abb169d75c7d5ce533",
+          "targets": [
+            "android",
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-25T20:27:22.321953+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
       ]
     },
     {
