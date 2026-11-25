@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T11:06:04.490836+00:00",
+  "generated_at": "2026-11-25T11:06:42.713402+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -1763,6 +1763,76 @@
       ],
       "platforms": [
         "java"
+      ]
+    },
+    {
+      "id": "krulkamyl-batteryinfomac",
+      "slug": "krulkamyl-batteryinfomac",
+      "name": "BatteryInfoMac",
+      "summary": "Native macOS menu bar app displaying battery levels of connected Bluetooth devices (Classic BT + BLE GATT) with custom symbols and 8 languages.",
+      "description": "Native macOS menu bar app displaying battery levels of connected Bluetooth devices (Classic BT + BLE GATT) with custom symbols and 8 languages.",
+      "translations": {
+        "en": {
+          "summary": "Native macOS menu bar app displaying battery levels of connected Bluetooth devices (Classic BT + BLE GATT) with custom symbols and 8 languages.",
+          "description": "Native macOS menu bar app displaying battery levels of connected Bluetooth devices (Classic BT + BLE GATT) with custom symbols and 8 languages."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/krulkamyl/BatteryInfoMac/main/Assets/AppIcon-1024.png",
+      "repository_url": "https://github.com/krulkamyl/BatteryInfoMac",
+      "github_repo_id": "1470155175",
+      "source_updated_at": "2026-11-24T13:07:26Z",
+      "homepage_url": null,
+      "owner": "krulkamyl",
+      "default_branch": "main",
+      "source_commit_sha": "e612516d3c41ca26e26cd75ff440828728ce3440",
+      "license_text": "MIT License\n\nCopyright (c) 2026 BatteryInfoMac Contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "battery",
+        "ble",
+        "bluetooth",
+        "macos",
+        "menubar",
+        "opensource",
+        "swift",
+        "swiftui"
+      ],
+      "latest_version": "v1.1.0",
+      "release_url": "https://github.com/krulkamyl/BatteryInfoMac/releases/tag/v1.1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-krulkamyl-batteryinfomac-v1.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-krulkamyl-batteryinfomac-v1.1.0/THIRD-PARTY-NOTICE-krulkamyl-batteryinfomac.txt",
+      "artifacts": [
+        {
+          "id": "e2e55985e2af9c6329b3ec561c34874bace7849b64a87518c4f94eab263d5ddb",
+          "filename": "BatteryInfoMac-1.1.0-universal.dmg",
+          "original_filename": "BatteryInfoMac-1.1.0-universal.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "universal",
+          "version": "v1.1.0",
+          "size_bytes": 2548115,
+          "sha256": "e2e55985e2af9c6329b3ec561c34874bace7849b64a87518c4f94eab263d5ddb",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-krulkamyl-batteryinfomac-v1.1.0/BatteryInfoMac-1.1.0-universal.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-krulkamyl-batteryinfomac-v1.1.0"
+        }
+      ],
+      "platforms": [
+        "macos"
       ]
     },
     {
