@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:47:59.312716+00:00",
+  "generated_at": "2026-11-25T23:48:18.294827+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -51167,6 +51167,72 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "kid1412621-subspace",
+      "slug": "kid1412621-subspace",
+      "name": "subspace",
+      "summary": "Open-source other project maintained by kid1412621.",
+      "description": "Open-source other project maintained by kid1412621.",
+      "translations": {
+        "en": {
+          "summary": "Open-source other project maintained by kid1412621.",
+          "description": "Open-source other project maintained by kid1412621."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/26278054?v=4",
+      "repository_url": "https://github.com/kid1412621/subspace",
+      "github_repo_id": "737778999",
+      "source_updated_at": "2026-10-23T09:54:44Z",
+      "homepage_url": null,
+      "owner": "kid1412621",
+      "default_branch": "main",
+      "source_commit_sha": "e071f31a3d5531e9954b2beef8f3ac916a8b4478",
+      "license_text": "MIT License\n\nCopyright (c) 2024 kid1412621\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android-app",
+        "bittorrent",
+        "bittorrent-client",
+        "jetpack-compose"
+      ],
+      "latest_version": "v0.9.0",
+      "release_url": "https://github.com/kid1412621/subspace/releases/tag/v0.9.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kid1412621-subspace-v0.9.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kid1412621-subspace-v0.9.0/THIRD-PARTY-NOTICE-kid1412621-subspace.txt",
+      "artifacts": [
+        {
+          "id": "f9b32146c9324a767c81df93a03be8464b5dfe9e3aecaf5deb7fb1f7a219693a",
+          "filename": "subspace-v0.9.0-17-github-release.apk",
+          "original_filename": "subspace-v0.9.0-17-github-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.9.0",
+          "size_bytes": 6442362,
+          "sha256": "f9b32146c9324a767c81df93a03be8464b5dfe9e3aecaf5deb7fb1f7a219693a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "cc69e3a10fcc3a6eaa0605b7334b318c39eb2cc6705ff8cb1e0680b3c8d5cde7",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kid1412621-subspace-v0.9.0/subspace-v0.9.0-17-github-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kid1412621-subspace-v0.9.0"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
