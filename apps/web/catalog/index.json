@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:06:44.882881+00:00",
+  "generated_at": "2026-11-25T23:07:04.699852+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -15997,6 +15997,72 @@
       ],
       "platforms": [
         "macos"
+      ]
+    },
+    {
+      "id": "tommy-geenexus-exif-eraser",
+      "slug": "tommy-geenexus-exif-eraser",
+      "name": "exif-eraser",
+      "summary": "Permissionless image metadata erasing application for Android",
+      "description": "Permissionless image metadata erasing application for Android",
+      "translations": {
+        "en": {
+          "summary": "Permissionless image metadata erasing application for Android",
+          "description": "Permissionless image metadata erasing application for Android"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Tommy-Geenexus/exif-eraser/main/fastlane/metadata/android/en-US/images/icon.png",
+      "repository_url": "https://github.com/Tommy-Geenexus/exif-eraser",
+      "github_repo_id": "269699670",
+      "source_updated_at": "2026-11-24T14:15:54Z",
+      "homepage_url": null,
+      "owner": "Tommy-Geenexus",
+      "default_branch": "main",
+      "source_commit_sha": "d4db3783adcc879039d8747afba706fd5932d811",
+      "license_text": "MIT License\n\nCopyright (c) 2018 Tom G.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "android",
+        "android-app",
+        "exif-remover",
+        "google-play-store"
+      ],
+      "latest_version": "v6.5.1",
+      "release_url": "https://github.com/Tommy-Geenexus/exif-eraser/releases/tag/v6.5.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-tommy-geenexus-exif-eraser-v6.5.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-tommy-geenexus-exif-eraser-v6.5.1/THIRD-PARTY-NOTICE-tommy-geenexus-exif-eraser.txt",
+      "artifacts": [
+        {
+          "id": "a25c626d13ff0dd312f3e2e01d9e1641370ffbce0c4841dc62fc3bf8745f9d2f",
+          "filename": "app-release.apk",
+          "original_filename": "app-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v6.5.1",
+          "size_bytes": 3936501,
+          "sha256": "a25c626d13ff0dd312f3e2e01d9e1641370ffbce0c4841dc62fc3bf8745f9d2f",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "d910867ce2cf3dcd37db51853ebef8633fd83a142b2642274ed068152ff12201",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-tommy-geenexus-exif-eraser-v6.5.1/app-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-tommy-geenexus-exif-eraser-v6.5.1"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
