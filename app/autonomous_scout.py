@@ -217,7 +217,8 @@ class AutonomousScout:
                 status = "already_catalogued"
             else:
                 status = "update_available" if existing else "discovered"
-                new_candidates += 1
+                if not previous_candidate or previous_candidate.get("status") not in {"discovered", "update_available"}:
+                    new_candidates += 1
             candidate = {
                 "name": str(repo.get("name") or full_name.rsplit("/", 1)[-1])[:180],
                 "full_name": full_name[:240],
