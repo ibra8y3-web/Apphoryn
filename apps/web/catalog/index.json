@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T17:47:56.963556+00:00",
+  "generated_at": "2026-11-25T18:15:52.834130+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -11597,6 +11597,45 @@
         "macos",
         "windows"
       ]
+    },
+    {
+      "id": "minimagick-minimagick",
+      "slug": "minimagick-minimagick",
+      "artifacts": [],
+      "name": "minimagick",
+      "summary": "mini replacement for RMagick",
+      "description": "mini replacement for RMagick",
+      "translations": {
+        "en": {
+          "summary": "mini replacement for RMagick",
+          "description": "mini replacement for RMagick"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/2532832?v=4",
+      "repository_url": "https://github.com/minimagick/minimagick",
+      "github_repo_id": "2727",
+      "source_updated_at": "2026-11-15T11:12:43Z",
+      "homepage_url": "https://rubydoc.info/gems/mini_magick",
+      "owner": "minimagick",
+      "default_branch": "master",
+      "source_commit_sha": "93b3040bc0d6fcc11acdf8a0a6f50377c8bea178",
+      "license_text": "Copyright (c) 2005-2013 Corey Johnson probablycorey@gmail.com\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "category": "other",
+      "topics": [],
+      "latest_version": "v5.4.0",
+      "release_url": "https://github.com/minimagick/minimagick/releases/tag/v5.4.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "mira-foundry-mira-terminal",
