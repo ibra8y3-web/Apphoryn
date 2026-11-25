@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T10:12:42.889654+00:00",
+  "generated_at": "2026-11-25T10:13:02.191039+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -1059,6 +1059,88 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "sh1ny-blackgrid",
+      "slug": "sh1ny-blackgrid",
+      "name": "blackgrid",
+      "summary": "Escape from Tarkov companion for Windows: see where you are on the map from your screenshots, highlight your raid extracts, and get keep-or-sell advice for items, with optional on-screen item scanning. Reads only game logs and your screen; ",
+      "description": "Escape from Tarkov companion for Windows: see where you are on the map from your screenshots, highlight your raid extracts, and get keep-or-sell advice for items, with optional on-screen item scanning. Reads only game logs and your screen; never touches the game. Uses tarkov.dev and TarkovTracker.",
+      "translations": {
+        "en": {
+          "summary": "Escape from Tarkov companion for Windows: see where you are on the map from your screenshots, highlight your raid extracts, and get keep-or-sell advice for items, with optional on-screen item scanning. Reads only game logs and your screen; ",
+          "description": "Escape from Tarkov companion for Windows: see where you are on the map from your screenshots, highlight your raid extracts, and get keep-or-sell advice for items, with optional on-screen item scanning. Reads only game logs and your screen; never touches the game. Uses tarkov.dev and TarkovTracker."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/sh1ny/blackgrid/main/windows/runner/resources/app_icon/app_icon.svg",
+      "repository_url": "https://github.com/sh1ny/blackgrid",
+      "github_repo_id": "1406245919",
+      "source_updated_at": "2026-11-23T21:13:13Z",
+      "homepage_url": null,
+      "owner": "sh1ny",
+      "default_branch": "main",
+      "source_commit_sha": "28f6f4d9702469266d0229896c484243a47f8559",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Nikolay Bochev\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "games",
+      "topics": [
+        "desktop-app",
+        "eft",
+        "eft-tool",
+        "escape-from-tarkov",
+        "escapefromtarkov",
+        "flutter",
+        "flutter-desktop",
+        "game-companion",
+        "item-scanner",
+        "ocr",
+        "price-checker",
+        "tarkov",
+        "tarkov-app",
+        "tarkov-dev",
+        "tarkov-helper",
+        "tarkov-map",
+        "tarkov-tool",
+        "tarkov-tools",
+        "tarkov-tracker",
+        "windows"
+      ],
+      "latest_version": "v0.9.0",
+      "release_url": "https://github.com/sh1ny/blackgrid/releases/tag/v0.9.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sh1ny-blackgrid-v0.9.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sh1ny-blackgrid-v0.9.0/THIRD-PARTY-NOTICE-sh1ny-blackgrid.txt",
+      "artifacts": [
+        {
+          "id": "ddb20f458f1115c06867d3a4df5cb764d2b96cd8f846a1ae9b02dbd683ec780e",
+          "filename": "Blackgrid-0.9.0-windows-x64-setup.exe",
+          "original_filename": "Blackgrid-0.9.0-windows-x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.9.0",
+          "size_bytes": 70200059,
+          "sha256": "ddb20f458f1115c06867d3a4df5cb764d2b96cd8f846a1ae9b02dbd683ec780e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sh1ny-blackgrid-v0.9.0/Blackgrid-0.9.0-windows-x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sh1ny-blackgrid-v0.9.0"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
