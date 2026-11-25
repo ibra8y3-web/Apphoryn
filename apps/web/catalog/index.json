@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:54:57.777141+00:00",
+  "generated_at": "2026-11-25T23:55:15.487664+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -14069,6 +14069,77 @@
           "signer_certificate_sha256": "0751238605cc99d801bddd4c8b36341ee847b58fbd3e48a7f6e98773a01ee885",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-insomdroid-dislauncher-v1.3.7/Dislauncher-v1.3.7.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-insomdroid-dislauncher-v1.3.7"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "elowry-dnstoggle",
+      "slug": "elowry-dnstoggle",
+      "name": "DNSToggle",
+      "summary": "A small Android app to easily toggle Private DNS through Quick Settings",
+      "description": "A small Android app to easily toggle Private DNS through Quick Settings",
+      "translations": {
+        "en": {
+          "summary": "A small Android app to easily toggle Private DNS through Quick Settings",
+          "description": "A small Android app to easily toggle Private DNS through Quick Settings"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ELowry/DNSToggle/main/fastlane/metadata/android/en-US/images/icon.png",
+      "repository_url": "https://github.com/ELowry/DNSToggle",
+      "github_repo_id": "1219844781",
+      "source_updated_at": "2026-11-25T11:27:46Z",
+      "homepage_url": "https://eric-lowry.com/projects/DNSToggle",
+      "owner": "ELowry",
+      "default_branch": "main",
+      "source_commit_sha": "e23462f143a1934a8ea4c1aa12395d0e8cf30d07",
+      "license_text": "Copyright 2026 Eric Lowry\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android-app",
+        "android-tv",
+        "automation",
+        "private-dns",
+        "quick-settings-tile",
+        "quicksetting-tiles",
+        "quicksettings",
+        "shizuku",
+        "shizuku-app"
+      ],
+      "latest_version": "v3.1.0",
+      "release_url": "https://github.com/ELowry/DNSToggle/releases/tag/v3.1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-elowry-dnstoggle-v3.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-elowry-dnstoggle-v3.1.0/THIRD-PARTY-NOTICE-elowry-dnstoggle.txt",
+      "artifacts": [
+        {
+          "id": "76e672e0b16cce3f7fd492be8a2bbcd88006ba588956fd15d3a186bb596817fb",
+          "filename": "dns_toggle_v3.1.0.apk",
+          "original_filename": "dns_toggle_v3.1.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v3.1.0",
+          "size_bytes": 2191563,
+          "sha256": "76e672e0b16cce3f7fd492be8a2bbcd88006ba588956fd15d3a186bb596817fb",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "a2fc0ad31958329b9df09fcab9e618ff67f23bee0b46267c632ac97f9600f283",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-elowry-dnstoggle-v3.1.0/dns_toggle_v3.1.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-elowry-dnstoggle-v3.1.0"
         }
       ],
       "platforms": [
