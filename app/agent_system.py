@@ -1001,7 +1001,8 @@ def _poll_shared_catalog_once() -> None:
     Global Scout owns discovery/import/build/publishing. This watcher only wakes
     Niebex after the shared manifest changes; it never downloads or installs packages.
     """
-    if os.getenv("APPHORYN_AGENT_AUTOPILOT_ENABLED", "true").lower() not in {"1", "true", "yes", "on"}:
+    env_default = os.getenv("APPHORYN_AGENT_AUTOPILOT_ENABLED", "true").lower() in {"1", "true", "yes", "on"}
+    if not bool(STORE.get_system_state("agent_autopilot_enabled", env_default)):
         return
     request = Request(
         _catalog_source_url() + "?apphoryn_refresh=" + str(int(time.time() // 300)),
