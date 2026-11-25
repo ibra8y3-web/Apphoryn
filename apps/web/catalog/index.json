@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T20:17:03.924832+00:00",
+  "generated_at": "2026-11-25T20:17:19.872123+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -905,6 +905,82 @@
       "release_url": "https://github.com/taka-avantgarde/ai-usage-barometer/releases/tag/v0.10.3",
       "platforms": [],
       "project_status": "source_available"
+    },
+    {
+      "id": "airlyrics-airlyrics",
+      "slug": "airlyrics-airlyrics",
+      "name": "AirLyrics",
+      "summary": "An open-source Android floating lyrics app with synced LRC support for many music apps.  开源 Android 悬浮窗歌词，支持多种音乐 App 与同步 LRC。",
+      "description": "An open-source Android floating lyrics app with synced LRC support for many music apps.  开源 Android 悬浮窗歌词，支持多种音乐 App 与同步 LRC。",
+      "translations": {
+        "en": {
+          "summary": "An open-source Android floating lyrics app with synced LRC support for many music apps.  开源 Android 悬浮窗歌词，支持多种音乐 App 与同步 LRC。",
+          "description": "An open-source Android floating lyrics app with synced LRC support for many music apps.  开源 Android 悬浮窗歌词，支持多种音乐 App 与同步 LRC。"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/AirLyrics/AirLyrics/main/app/src/main/res/drawable-nodpi/airlyrics_launcher_foreground.png",
+      "repository_url": "https://github.com/AirLyrics/AirLyrics",
+      "github_repo_id": "1249357615",
+      "source_updated_at": "2026-11-25T17:23:05Z",
+      "homepage_url": null,
+      "owner": "AirLyrics",
+      "default_branch": "main",
+      "source_commit_sha": "9918db3a1a73cac8fb981da3e28fb55a8dea8dbb",
+      "license_text": "MIT License\n\nCopyright (c) 2026 AndSi-327\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "floating-lyrics",
+        "kotlin",
+        "local-lyrics",
+        "lrc",
+        "lyric-overlay",
+        "lyrics",
+        "lyrics-overlay",
+        "music",
+        "music-app",
+        "overlay-window",
+        "rust",
+        "synced-lyrics"
+      ],
+      "latest_version": "v1.2.10",
+      "release_url": "https://github.com/AirLyrics/AirLyrics/releases/tag/v1.2.10",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-airlyrics-airlyrics-v1.2.10",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-airlyrics-airlyrics-v1.2.10/THIRD-PARTY-NOTICE-airlyrics-airlyrics.txt",
+      "artifacts": [
+        {
+          "id": "f04f7266f6be350994f2d8fabc7c3619f659cc0f42a41f1dbbadc8558ab5beac",
+          "filename": "AirLyrics-v1.2.10.apk",
+          "original_filename": "AirLyrics-v1.2.10.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.2.10",
+          "size_bytes": 14148261,
+          "sha256": "f04f7266f6be350994f2d8fabc7c3619f659cc0f42a41f1dbbadc8558ab5beac",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "c892efad40528eda2064c251699250a907672cbf959bc7a23a7304bbb173f18c",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-airlyrics-airlyrics-v1.2.10/AirLyrics-v1.2.10.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-airlyrics-airlyrics-v1.2.10"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
     },
     {
       "id": "farhan-real-airspace-standoff",
