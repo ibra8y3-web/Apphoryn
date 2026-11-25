@@ -400,7 +400,6 @@ def main() -> None:
     def process_entries(entries: list[dict[str, Any]]) -> bool:
         for index, entry in enumerate(entries):
             if time.monotonic() >= deadline:
-            if time.monotonic() >= deadline:
                 for pending in entries[index:]:
                     scheduled_retries.append({**pending, "next_attempt_at": now})
                 return False
