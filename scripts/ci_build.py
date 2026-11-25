@@ -93,7 +93,7 @@ def remove_upstream_android_signing_gate(source: Path) -> int:
             continue
         end = next((
             index for index in range(start + 1, len(lines))
-            if lines[index].strip() == "}"
+            if lines[index].rstrip("\r\n") == "}"
         ), None)
         if end is None:
             raise RuntimeError(f"Could not safely isolate upstream signing guard in {gradle_file}.")

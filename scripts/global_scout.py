@@ -7,6 +7,7 @@ import json
 import os
 import sys
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -124,11 +125,11 @@ def known_current(candidate: dict[str, Any], by_id: dict[str, dict], by_url: dic
                 if latest.get("adapter_revision") != adapter_revision:
                     return False
                 try:
-                    requested_at = __import__("datetime").datetime.fromisoformat(
+                    requested_at = datetime.fromisoformat(
                         str(latest.get("requested_at") or "").replace("Z", "+00:00")
                     )
                     if requested_at.tzinfo is None:
-                        requested_at = requested_at.replace(tzinfo=__import__("datetime").timezone.utc)
+                        requested_at = requested_at.replace(tzinfo=timezone.utc)
                     age_hours = (
                         __import__("datetime").datetime.now(__import__("datetime").timezone.utc) - requested_at
                     ).total_seconds() / 3600

@@ -5,6 +5,7 @@ import hashlib
 import json
 import re
 import urllib.parse
+from pathlib import Path
 from typing import Any
 
 from .github_client import GitHubClient
@@ -32,7 +33,7 @@ def electron_build_script(scripts: dict[str, Any], target: str) -> str | None:
 
 def build_adapter_revision() -> str:
     """Stable fingerprint used to retry projects after an adapter correction."""
-    root = __import__("pathlib").Path(__file__).resolve().parents[1]
+    root = Path(__file__).resolve().parents[1]
     digest = hashlib.sha256()
     for relative in ("app/build_support.py", "scripts/ci_build.py"):
         path = root / relative
