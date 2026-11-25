@@ -21,9 +21,9 @@ on:
         default: '25'
 
 concurrency:
-  group: apphoryn-global-scout
+  group: apphoryn-catalog-writes
   cancel-in-progress: false
-  # Keep this workflow independent from the hourly search Scout; catalog writes use GitHub SHA checks and failed collisions enter the retry queue.
+  # Serialize catalog writers so the two discovery pipelines cannot overwrite each other's updates.
 
 permissions:
   contents: write

@@ -22,6 +22,7 @@ from app.github_client import GitHubClient
 from app.github_release_mirror import GitHubReleaseMirror
 from app.repository_crawler import RepositoryCrawler
 from app.services import CatalogService
+from app.storefront_eligibility import has_installable_path
 
 
 RETRY_DELAYS_SECONDS = (6 * 3600, 24 * 3600, 3 * 86400, 7 * 86400, 30 * 86400)
@@ -231,6 +232,36 @@ def main() -> None:
             if candidate.get("updated_at") and not app.get("source_updated_at"):
                 app["source_updated_at"] = str(candidate["updated_at"])
             artifacts = imported.get("artifacts", [])
+            available = mirror.get_available_platforms(repository_url)
+            missing = sorted(set(build_targets_requested) - available) if build_targets_requested else []
+            buildable = (
+                app.get("project_kind") in {"application", "developer_tool"}
+                and bool(app.get("build_recommended"))
+            )
+            repository_parts = repository_url.removeprefix("https://github.com/").strip("/").split("/")
+            owner, repo_name = repository_parts[:2] if len(repository_parts) == 2 else ("", "")
+            git_ref = str(app.get("source_commit_sha") or app.get("default_branch") or "main")
+            supported = (
+                detect_supported_build_targets(owner, repo_name, git_ref, github)
+                if build_targets_requested and missing and buildable and owner and repo_name else {}
+            )
+            selected = sorted(set(missing) & set(supported))
+            if not has_installable_path(app, artifacts, selected, available):
+                result.update({
+                    "status": "source_project_skipped",
+                    "app": app.get("name"),
+                    "project_kind": app.get("project_kind"),
+                    "verified_release_packages": 0,
+                    "build_status": "no_verified_release_or_supported_build",
+                    "reason": (
+                        "Repository metadata alone is not a store listing: no verified release "
+                        "installer or supported app build adapter was found."
+                    ),
+                })
+                results.append(result)
+                print(json.dumps(result, ensure_ascii=False), flush=True)
+                continue
+
             publication = mirror.publish_app(app, artifacts)
             result.update({
                 "status": "mirrored" if artifacts else "source_available",
@@ -243,42 +274,28 @@ def main() -> None:
                 "project_status": publication.get("project_status"),
             })
 
-            # Optional source builds are disabled unless the repository owner
-            # explicitly configures targets and a per-run budget. Detection reads
-            # manifests only; third-party code executes only in the isolated build workflow.
             if build_targets_requested:
-                available = mirror.get_available_platforms(repository_url)
-                missing = sorted(set(build_targets_requested) - available)
-                buildable = (
-                    app.get("project_kind") in {"application", "developer_tool"}
-                    and bool(app.get("build_recommended"))
-                )
                 if not missing:
                     result["build_status"] = "requested_platforms_already_available"
                 elif not buildable:
                     result["build_status"] = "not_dispatched_by_project_classification"
                     result["build_targets_missing"] = missing
+                elif not selected:
+                    result["build_status"] = "no_supported_build_adapter"
+                    result["build_targets_missing"] = missing
+                    result["unsupported_build_targets"] = missing
+                elif mirror.has_recent_build_attempt(repository_url, git_ref, targets=selected):
+                    result["build_status"] = "already_queued_or_published"
+                    result["build_targets"] = selected
                 elif build_budget <= 0:
                     result["build_status"] = "deferred_by_zero_or_exhausted_budget"
-                    result["build_targets_missing"] = missing
+                    result["build_targets"] = selected
                 else:
-                    repository_parts = repository_url.removeprefix("https://github.com/").strip("/").split("/")
-                    owner, repo_name = repository_parts[:2] if len(repository_parts) == 2 else ("", "")
-                    git_ref = str(app.get("source_commit_sha") or app.get("default_branch") or "main")
-                    supported = detect_supported_build_targets(owner, repo_name, git_ref, github) if owner and repo_name else {}
-                    selected = sorted(set(missing) & set(supported))
-                    result["unsupported_build_targets"] = sorted(set(missing) - set(selected))
-                    if not selected:
-                        result["build_status"] = "no_supported_build_adapter"
-                    elif mirror.has_recent_build_attempt(repository_url, git_ref, targets=selected):
-                        result["build_status"] = "already_queued_or_published"
-                        result["build_targets"] = selected
-                    else:
-                        mirror.dispatch_build(repository_url, git_ref, selected, str(app.get("slug") or app.get("id")))
-                        build_budget -= 1
-                        result["build_status"] = "workflow_dispatched"
-                        result["build_targets"] = selected
-                        result["build_adapters"] = {target: supported[target] for target in selected}
+                    mirror.dispatch_build(repository_url, git_ref, selected, str(app.get("slug") or app.get("id")))
+                    build_budget -= 1
+                    result["build_status"] = "workflow_dispatched"
+                    result["build_targets"] = selected
+                    result["build_adapters"] = {target: supported[target] for target in selected}
             else:
                 result["build_status"] = "automatic_build_disabled"
 

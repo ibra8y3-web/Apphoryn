@@ -2,9 +2,29 @@ import unittest
 from pathlib import Path
 
 from scripts.harvest_and_import import github_target_parts, load_seed_repositories
+from app.storefront_eligibility import has_installable_path
 
 
 class HarvestTests(unittest.TestCase):
+    def test_storefront_requires_verified_installer_or_real_supported_build(self):
+        self.assertTrue(has_installable_path(
+            {"project_kind": "unknown", "build_recommended": False},
+            [{"filename": "app.apk"}], set(),
+        ))
+        self.assertTrue(has_installable_path(
+            {"project_kind": "developer_tool", "build_recommended": True},
+            [], {"linux"},
+        ))
+        self.assertFalse(has_installable_path(
+            {"project_kind": "unknown", "build_recommended": False},
+            [], {"linux"},
+        ))
+        self.assertFalse(has_installable_path(
+            {"project_kind": "framework", "build_recommended": False},
+            [], set(),
+        ))
+
+
     def test_actions_repository_is_split_for_build_workflow_configuration(self):
         self.assertEqual(github_target_parts("ibra8y3-web/Apphoryn"), ("ibra8y3-web", "Apphoryn"))
         self.assertIsNone(github_target_parts("Apphoryn"))

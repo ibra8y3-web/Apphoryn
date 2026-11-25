@@ -37,6 +37,7 @@ from app.build_support import detect_supported_build_targets
 from app.github_client import GitHubClient
 from app.github_release_mirror import GitHubMirrorError, GitHubReleaseMirror
 from app.services import CatalogService
+from app.storefront_eligibility import has_installable_path
 
 
 def publish_ai_provider_status(mirror: GitHubReleaseMirror) -> dict[str, object]:
@@ -119,14 +120,14 @@ def configured_queries(primary: str) -> list[str]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--query", default=os.getenv("APPHORYN_QUERY", "topic:opensource"))
-    parser.add_argument("--limit", type=int, default=10, help="Maximum search results per query (1-10).")
+    parser.add_argument("--limit", type=int, default=int(os.getenv("APPHORYN_LIMIT", "6")), help="Maximum search results per query (1-10).")
     parser.add_argument("--seed-file", default=str(ROOT / "catalog-seed-repositories.json"))
     parser.add_argument("--output", default="discovery-candidates.json")
     parser.add_argument("--skip-seeds", action="store_true")
     args = parser.parse_args()
 
     limit = max(1, min(args.limit, 10))
-    max_candidates = max(1, min(int(os.getenv("APPHORYN_MAX_DISCOVERY_PER_RUN", "30")), 100))
+    max_candidates = max(1, min(int(os.getenv("APPHORYN_MAX_DISCOVERY_PER_RUN", "60")), 100))
     catalog = CatalogService()
 
     # Search several app-focused topic families without a stars threshold. Recently
@@ -203,6 +204,34 @@ def main() -> None:
                 "rejected_release_assets": imported.get("rejected_assets", []),
             })
 
+            existing_platforms = mirror.get_available_platforms(repo_url)
+            missing_targets = sorted(set(auto_targets) - existing_platforms) if auto_targets else []
+            is_buildable_app = (
+                app.get("project_kind") in {"application", "developer_tool"}
+                and bool(app.get("build_recommended"))
+            )
+            git_ref = str(app.get("source_commit_sha") or app.get("default_branch") or "main")
+            supported: dict[str, str] = {}
+            build_targets: list[str] = []
+            if auto_targets and missing_targets and is_buildable_app:
+                parts = github_target_parts(repo_url.removeprefix("https://github.com/"))
+                if parts:
+                    supported = detect_supported_build_targets(parts[0], parts[1], git_ref, GitHubClient(token))
+                build_targets = sorted(set(missing_targets) & set(supported))
+
+            if not has_installable_path(app, verified_artifacts, build_targets, existing_platforms):
+                result.update({
+                    "status": "skipped_non_installable_source",
+                    "build_status": "no_verified_release_or_supported_build",
+                    "build_reason": (
+                        "No verified installer was found and no supported source-build adapter "
+                        "was detected for an app/developer-tool classification."
+                    ),
+                })
+                results.append(result)
+                print(json.dumps(result, ensure_ascii=False), flush=True)
+                continue
+
             if verified_artifacts:
                 mirror_result = mirror.publish_app(app, verified_artifacts)
                 result["status"] = "mirrored"
@@ -214,42 +243,28 @@ def main() -> None:
                 result["project_status"] = source_result.get("project_status", "source_available")
 
             if auto_targets:
-                already_available = mirror.get_available_platforms(repo_url)
-                missing_targets = sorted(set(auto_targets) - already_available)
-                is_buildable_app = (
-                    app.get("project_kind") in {"application", "developer_tool"}
-                    and bool(app.get("build_recommended"))
-                )
                 if not missing_targets:
                     result["build_status"] = "all_requested_platforms_available"
                 elif not is_buildable_app:
                     result["build_status"] = "not_dispatched"
                     result["build_reason"] = "AI/source evidence did not classify this repository as a standalone app or executable developer tool."
+                elif not build_targets:
+                    result["build_status"] = "no_supported_build_adapter"
+                    result["build_reason"] = "No matching Gradle, .NET, Go, or Electron packaging adapter was detected in the repository."
+                elif mirror.has_recent_build_attempt(repo_url, git_ref, targets=build_targets):
+                    result["build_status"] = "already_dispatched_for_targets"
+                    result["build_ref"] = git_ref
+                    result["build_targets"] = build_targets
                 elif build_budget <= 0:
                     result["build_status"] = "deferred_by_run_budget"
-                    result["build_targets"] = missing_targets
+                    result["build_targets"] = build_targets
                 else:
-                    git_ref = str(app.get("source_commit_sha") or app.get("default_branch") or "main")
-                    parts = github_target_parts(repo_url.removeprefix("https://github.com/"))
-                    supported: dict[str, str] = {}
-                    if parts:
-                        supported = detect_supported_build_targets(parts[0], parts[1], git_ref, GitHubClient(token))
-                    build_targets = sorted(set(missing_targets) & set(supported))
-                    result["unsupported_build_targets"] = sorted(set(missing_targets) - set(build_targets))
-                    if not build_targets:
-                        result["build_status"] = "no_supported_build_adapter"
-                        result["build_reason"] = "No matching Gradle, .NET, Go, or Electron packaging adapter was detected in the repository."
-                    elif mirror.has_recent_build_attempt(repo_url, git_ref, targets=build_targets):
-                        result["build_status"] = "already_dispatched_for_targets"
-                        result["build_ref"] = git_ref
-                        result["build_targets"] = build_targets
-                    else:
-                        mirror.dispatch_build(repo_url, git_ref, build_targets, str(app.get("slug") or app.get("id")))
-                        build_budget -= 1
-                        result["build_ref"] = git_ref
-                        result["build_targets"] = build_targets
-                        result["build_adapters"] = {target: supported[target] for target in build_targets}
-                        result["build_status"] = "workflow_dispatched"
+                    mirror.dispatch_build(repo_url, git_ref, build_targets, str(app.get("slug") or app.get("id")))
+                    build_budget -= 1
+                    result["build_ref"] = git_ref
+                    result["build_targets"] = build_targets
+                    result["build_adapters"] = {target: supported[target] for target in build_targets}
+                    result["build_status"] = "workflow_dispatched"
             else:
                 result["build_status"] = "automatic_build_disabled"
         except Exception as exc:
