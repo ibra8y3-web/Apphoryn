@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:58:04.677350+00:00",
+  "generated_at": "2026-11-25T21:58:22.186609+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -28457,6 +28457,78 @@
           "signer_certificate_sha256": "b243c6c8933b5cf728aa870a845456ce029624bebb06a6d673adaaadda61c80d",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-efah-dev-nextbox-android-v2.2.1/NextBox-2.2.1-x86_64.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-efah-dev-nextbox-android-v2.2.1"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "thetemirbolatov-noirestore",
+      "slug": "thetemirbolatov-noirestore",
+      "name": "NoireStore",
+      "summary": "Магазин приложений Noire Store",
+      "description": "Магазин приложений Noire Store",
+      "translations": {
+        "en": {
+          "summary": "Магазин приложений Noire Store",
+          "description": "Магазин приложений Noire Store"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/thetemirbolatov/NoireStore/main/logo.png",
+      "repository_url": "https://github.com/thetemirbolatov/NoireStore",
+      "github_repo_id": "1469377072",
+      "source_updated_at": "2026-11-24T11:04:27Z",
+      "homepage_url": null,
+      "owner": "thetemirbolatov",
+      "default_branch": "main",
+      "source_commit_sha": "1f8e3846f5b6450484b741b1b21a81def417d672",
+      "license_text": "MIT License\n\nCopyright (c) 2026 thetemirbolatov\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "apk-downloader",
+        "app-catalog",
+        "app-store",
+        "mobile-app",
+        "mobile-application",
+        "mobile-apps",
+        "voice-search"
+      ],
+      "latest_version": "v1.0.0",
+      "release_url": "https://github.com/thetemirbolatov/NoireStore/releases/tag/v1.0.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-thetemirbolatov-noirestore-v1.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-thetemirbolatov-noirestore-v1.0.0/THIRD-PARTY-NOTICE-thetemirbolatov-noirestore.txt",
+      "artifacts": [
+        {
+          "id": "d4c73d21516dd6f04b30dbb99b78a7bd502b9d122e75403c9eac86babc3d9efc",
+          "filename": "NoireStore.apk",
+          "original_filename": "NoireStore.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.0",
+          "size_bytes": 13021299,
+          "sha256": "d4c73d21516dd6f04b30dbb99b78a7bd502b9d122e75403c9eac86babc3d9efc",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "7163a2bf2603ad5c7d26ff69bd525c4cab28ef626662b82551e81060bc42ee4c",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-thetemirbolatov-noirestore-v1.0.0/NoireStore.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-thetemirbolatov-noirestore-v1.0.0"
         }
       ],
       "platforms": [
