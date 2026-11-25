@@ -76,7 +76,7 @@ The repository contains a responsive web/PWA storefront, Android and desktop cli
 | Catalogue | Shared manifest at [apps/web/catalog/index.json](apps/web/catalog/index.json) |
 | Package integrity | SHA-256 calculation, release digest comparison when provided, package-format inspection and APK signature verification |
 | Distribution | Apphoryn-owned GitHub Releases for imported application artifacts |
-| Automation | Continuous incremental Global Scout with one-minute import pacing, isolated build workflows and persistent Niebex workers |
+| Automation | Long-running incremental Global Scout (up to 5h40m per hosted scan), checkpointed recovery, no fixed per-import delay, isolated build workflows and persistent Niebex workers |
 | AI | Central coordinator, specialist agents, provider routing, local Ollama/vLLM support and approval-gated tools |
 
 ## Product and platform visuals
@@ -128,12 +128,12 @@ The importer understands package families including APK, EXE/PE, MSI/OLE, MSIX/A
 | Automation | Trigger / cadence | Responsibility |
 |---|---|---|
 | **Apphoryn Scout** | Every hour, on relevant pushes to `main`/`master`, and manual dispatch | Search application-focused GitHub categories, inspect releases, import eligible assets and run bounded build fallbacks |
-| **Global Scout** | Long-running worker; restarted by a five-minute recovery schedule | Incremental public-repository crawl, release checks, verified imports paced one start every 60 seconds, and supported isolated builds |
+| **Global Scout** | Long-running GitHub Actions scan; five-minute recovery schedule; up to 5h40m per scan | Incremental public-repository crawl, release checks, verified imports without a fixed delay, checkpointed retries and supported isolated builds |
 | **Niebex catalogue watcher** | Every 5 minutes by default (configurable, bounded to 1–60 minutes) | Compare the shared catalogue with its saved snapshot and queue a read-only review only for real metadata/version/artifact changes |
 | **Storefront refresh** | Every 2 minutes while open, and when the user returns to the app | Refresh the shared catalogue without requiring a full browser restart |
 | **Native client builds** | Changes to client/storefront source paths, pull requests for those paths, or manual dispatch | Build the Android and desktop client packages for CI testing |
 
-The separate one-off Harvest workflow remains available from the repository's [Actions page](https://github.com/ibra8y3-web/Apphoryn/actions); automatic imports are owned by Global Scout. GitHub Actions cannot schedule a workflow more frequently than every five minutes, so the five-minute schedule is only a recovery trigger—the long-running worker itself spaces import starts by 60 seconds. Its cursor and retry queue preserve unfinished discovery/import work across runs. A candidate is never published just because a build was dispatched.
+The separate one-off Harvest workflow remains available from the repository's [Actions page](https://github.com/ibra8y3-web/Apphoryn/actions); automatic imports are owned by Global Scout. GitHub Actions permits scheduled workflows no more frequently than every five minutes and GitHub-hosted jobs can run for up to six hours. Apphoryn uses a scan budget of up to 5h40m per run, with a cursor and retry queue to resume unfinished work; there is no fixed per-import wait. GitHub API quotas, upstream availability, licensing and package-verification requirements still apply. A candidate is never published just because a build was dispatched.
 
 ## Client platforms and build outputs
 
