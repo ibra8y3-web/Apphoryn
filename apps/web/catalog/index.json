@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:06:56.925201+00:00",
+  "generated_at": "2026-11-25T21:07:19.131038+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -20379,6 +20379,80 @@
           "signer_certificate_sha256": "329d157305608c5df21bd77bed3f9c70dc1c38d0f944a6f8c969261290449c84",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jainikdroid-bit-loopa-v1.34/AdultSpace-1.34.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jainikdroid-bit-loopa-v1.34"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "zaryabkhan-loopweek",
+      "slug": "zaryabkhan-loopweek",
+      "name": "Loopweek",
+      "summary": "A free, open-source weekly to-do app for Android. One screen, seven days, nothing else. Built with Flutter. No accounts, no cloud sync, no ads, no tracking.",
+      "description": "A free, open-source weekly to-do app for Android. One screen, seven days, nothing else. Built with Flutter. No accounts, no cloud sync, no ads, no tracking.",
+      "translations": {
+        "en": {
+          "summary": "A free, open-source weekly to-do app for Android. One screen, seven days, nothing else. Built with Flutter. No accounts, no cloud sync, no ads, no tracking.",
+          "description": "A free, open-source weekly to-do app for Android. One screen, seven days, nothing else. Built with Flutter. No accounts, no cloud sync, no ads, no tracking."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ZaryabKhan/Loopweek/main/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/ZaryabKhan/Loopweek",
+      "github_repo_id": "1322163374",
+      "source_updated_at": "2026-11-11T09:20:48Z",
+      "homepage_url": "https://www.appcodecraft.com/",
+      "owner": "ZaryabKhan",
+      "default_branch": "main",
+      "source_commit_sha": "d314327de07ece28abff3bbaec0eef936020ff98",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Loopweek contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "dart",
+        "flutter",
+        "local-storage",
+        "open-source",
+        "productivity",
+        "task-manager",
+        "todo-app",
+        "weekly-planner",
+        "weekly-todo"
+      ],
+      "latest_version": "v1.3.0",
+      "release_url": "https://github.com/ZaryabKhan/Loopweek/releases/tag/v1.3.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zaryabkhan-loopweek-v1.3.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zaryabkhan-loopweek-v1.3.0/THIRD-PARTY-NOTICE-zaryabkhan-loopweek.txt",
+      "artifacts": [
+        {
+          "id": "816615280a5b0abb610e78238ee8a233410f532a1e54af836d5de4552bc5f522",
+          "filename": "Loopweek-v1.3.0.apk",
+          "original_filename": "Loopweek-v1.3.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.3.0",
+          "size_bytes": 65824301,
+          "sha256": "816615280a5b0abb610e78238ee8a233410f532a1e54af836d5de4552bc5f522",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "9e8253d4d9d174a225eaa5051db1901c892c65b86af2e5163b4692c610c49c64",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zaryabkhan-loopweek-v1.3.0/Loopweek-v1.3.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zaryabkhan-loopweek-v1.3.0"
         }
       ],
       "platforms": [
