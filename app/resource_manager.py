@@ -153,7 +153,8 @@ def dispatch_security_scan(repository_url: str, git_ref: str = "HEAD",
     if not match:
         raise ValueError("Only a canonical https://github.com/OWNER/REPOSITORY URL is accepted.")
     owner, repo = match.group(1), match.group(2).removesuffix(".git")
-    if not re.fullmatch(r"[A-Za-z0-9_.-]{1,100}", git_ref) or git_ref in {".", ".."}:
+    if (not re.fullmatch(r"[A-Za-z0-9._/-]{1,180}", git_ref)
+            or any(part in {"", ".", ".."} for part in git_ref.split("/"))):
         raise ValueError("Invalid Git ref.")
     from .github_client import GitHubClient
     client = GitHubClient(settings.github_token)
