@@ -30,3 +30,13 @@ Windows executables must contain a runnable PE entry point in an executable sect
 ## Operating limits
 
 Each run is bounded by `--max-repositories` and `--max-pages`. A complete GitHub page is always consumed, so the number processed can exceed the repository limit by less than 100. Increase limits gradually and monitor GitHub API rate limits and Actions usage.
+
+
+## Optional isolated source builds
+
+The global scanner can dispatch native source builds only when both repository variables are explicitly configured:
+
+- `APPHORYN_GLOBAL_SCOUT_BUILD_TARGETS`: comma-separated subset of `android,windows,linux,macos`. Default: `off`.
+- `APPHORYN_GLOBAL_SCOUT_MAX_BUILDS_PER_RUN`: maximum source build dispatches in one scan. Default: `0`, capped at 5.
+
+The scanner dispatches only when the project is classified as an application or executable developer tool, requested platforms are missing, and a supported Gradle/.NET/Go/Electron adapter is detected from repository manifests. The trusted Scout job does not execute third-party source code; builds run through the isolated community-build workflow. Duplicate recent build attempts are suppressed.
