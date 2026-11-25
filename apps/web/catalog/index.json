@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:08:40.058621+00:00",
+  "generated_at": "2026-11-25T23:09:01.794726+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -16510,6 +16510,82 @@
       "release_url": null,
       "platforms": [],
       "project_status": "source_available"
+    },
+    {
+      "id": "aanneion-feather-browser",
+      "slug": "aanneion-feather-browser",
+      "name": "feather_browser",
+      "summary": "An ultra-lightweight (~1.5 MB), high-performance, privacy-first Android web browser built with Kotlin & Jetpack Compose (M3). Features containerized isolated multi-profiles, hardware fingerprint spoofing, zero-overhead ad blocking, and dyna",
+      "description": "An ultra-lightweight (~1.5 MB), high-performance, privacy-first Android web browser built with Kotlin & Jetpack Compose (M3). Features containerized isolated multi-profiles, hardware fingerprint spoofing, zero-overhead ad blocking, and dynamic Material You theming.",
+      "translations": {
+        "en": {
+          "summary": "An ultra-lightweight (~1.5 MB), high-performance, privacy-first Android web browser built with Kotlin & Jetpack Compose (M3). Features containerized isolated multi-profiles, hardware fingerprint spoofing, zero-overhead ad blocking, and dyna",
+          "description": "An ultra-lightweight (~1.5 MB), high-performance, privacy-first Android web browser built with Kotlin & Jetpack Compose (M3). Features containerized isolated multi-profiles, hardware fingerprint spoofing, zero-overhead ad blocking, and dynamic Material You theming."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/aanneion/feather_browser/main/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/aanneion/feather_browser",
+      "github_repo_id": "1354047152",
+      "source_updated_at": "2026-11-24T00:29:43Z",
+      "homepage_url": null,
+      "owner": "aanneion",
+      "default_branch": "main",
+      "source_commit_sha": "10404ab2249ea695f9cbb1aa3bcd38bf6f2fe522",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Neion <numanneion3@gmail.com> (https://github.com/aanneion)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "ad-blocker",
+        "android",
+        "android-app",
+        "fingerprint-protection",
+        "isolated-profiles",
+        "jetpack-compose",
+        "kotlin",
+        "lightweight",
+        "material-design-3",
+        "material-you",
+        "multi-profile",
+        "open-source",
+        "privacy-browser",
+        "web-browser"
+      ],
+      "latest_version": "v1.0.162",
+      "release_url": "https://github.com/aanneion/feather_browser/releases/tag/v1.0.162",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aanneion-feather-browser-v1.0.162",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aanneion-feather-browser-v1.0.162/THIRD-PARTY-NOTICE-aanneion-feather-browser.txt",
+      "artifacts": [
+        {
+          "id": "b0ad3187f3c3378c7e23d56ae8ea6ab7e790446b4af9f9f47f309bf775ac9d35",
+          "filename": "Feather-Browser-v1.0.162.apk",
+          "original_filename": "Feather-Browser-v1.0.162.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.162",
+          "size_bytes": 1760717,
+          "sha256": "b0ad3187f3c3378c7e23d56ae8ea6ab7e790446b4af9f9f47f309bf775ac9d35",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "7fcbaa75c16e3f4bc235c3a088414656cea1fa409af03420f33184ccd03361bf",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aanneion-feather-browser-v1.0.162/Feather-Browser-v1.0.162.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aanneion-feather-browser-v1.0.162"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
     },
     {
       "id": "hamza417-felicity",
