@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T18:44:23.375345+00:00",
+  "generated_at": "2026-11-25T18:44:38.149693+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -14024,6 +14024,75 @@
       "release_url": "https://github.com/tw93/Mole/releases/tag/V1.74.0",
       "platforms": [],
       "project_status": "source_available"
+    },
+    {
+      "id": "youyuwangzi0001-morrow-android",
+      "slug": "youyuwangzi0001-morrow-android",
+      "name": "Morrow-Android",
+      "summary": "Morrow 安卓端 — 桌面 AI 工作台的手机伴侣 / Android companion to the Morrow desktop workbench",
+      "description": "Morrow 安卓端 — 桌面 AI 工作台的手机伴侣 / Android companion to the Morrow desktop workbench",
+      "translations": {
+        "en": {
+          "summary": "Morrow 安卓端 — 桌面 AI 工作台的手机伴侣 / Android companion to the Morrow desktop workbench",
+          "description": "Morrow 安卓端 — 桌面 AI 工作台的手机伴侣 / Android companion to the Morrow desktop workbench"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/youyuwangzi0001/Morrow-Android/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/youyuwangzi0001/Morrow-Android",
+      "github_repo_id": "1466897268",
+      "source_updated_at": "2026-11-24T06:14:47Z",
+      "homepage_url": null,
+      "owner": "youyuwangzi0001",
+      "default_branch": "main",
+      "source_commit_sha": "67483817c3960709385f74ee6920ff95ba64110b",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Morrow Studio\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "ai-agent",
+        "android",
+        "android-app",
+        "jetpack-compose",
+        "kotlin",
+        "local-first",
+        "remote-access"
+      ],
+      "latest_version": "v0.2.0",
+      "release_url": "https://github.com/youyuwangzi0001/Morrow-Android/releases/tag/v0.2.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-youyuwangzi0001-morrow-android-v0.2.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-youyuwangzi0001-morrow-android-v0.2.0/THIRD-PARTY-NOTICE-youyuwangzi0001-morrow-android.txt",
+      "artifacts": [
+        {
+          "id": "c96dbb78678c0397655c884c440d68b9c8fa36d3d161c02830d5b1d3088c2751",
+          "filename": "Morrow-Android-0.2.0.apk",
+          "original_filename": "Morrow-Android-0.2.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.2.0",
+          "size_bytes": 2421774,
+          "sha256": "c96dbb78678c0397655c884c440d68b9c8fa36d3d161c02830d5b1d3088c2751",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "567199120a48ec8e954add6aa5ac77cb257cefcbde62261598d9aad55c57ad63",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-youyuwangzi0001-morrow-android-v0.2.0/Morrow-Android-0.2.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-youyuwangzi0001-morrow-android-v0.2.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
     },
     {
       "id": "myco-ai-myco",
