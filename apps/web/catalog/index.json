@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:48:17.837374+00:00",
+  "generated_at": "2026-11-25T22:48:33.474987+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -48434,6 +48434,76 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "damianofalcioni-vibro-navigator",
+      "slug": "damianofalcioni-vibro-navigator",
+      "name": "ViBRo-Navigator",
+      "summary": "A lightweight, battery-efficient, and offline-first, GPS navigation app that vibrate directions, built around BRouter (and yes, also entirely vibe-coded)",
+      "description": "A lightweight, battery-efficient, and offline-first, GPS navigation app that vibrate directions, built around BRouter (and yes, also entirely vibe-coded)",
+      "translations": {
+        "en": {
+          "summary": "A lightweight, battery-efficient, and offline-first, GPS navigation app that vibrate directions, built around BRouter (and yes, also entirely vibe-coded)",
+          "description": "A lightweight, battery-efficient, and offline-first, GPS navigation app that vibrate directions, built around BRouter (and yes, also entirely vibe-coded)"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/damianofalcioni/ViBRo-Navigator/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/damianofalcioni/ViBRo-Navigator",
+      "github_repo_id": "1210577631",
+      "source_updated_at": "2026-11-22T17:25:19Z",
+      "homepage_url": "https://vibro-navigator.org",
+      "owner": "damianofalcioni",
+      "default_branch": "main",
+      "source_commit_sha": "2ba4dad3663a80ee6e0747f15e7c17b498380bcf",
+      "license_text": "The MIT License (MIT)\n\nCopyright (c) 2026 Damiano Falcioni\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \"Software\"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android-app",
+        "android-navigation",
+        "brouter",
+        "gnss",
+        "gps-navigation",
+        "navigation",
+        "offline-first",
+        "vibration"
+      ],
+      "latest_version": "v1.0.0",
+      "release_url": "https://github.com/damianofalcioni/ViBRo-Navigator/releases/tag/v1.0.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-damianofalcioni-vibro-navigator-v1.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-damianofalcioni-vibro-navigator-v1.0.0/THIRD-PARTY-NOTICE-damianofalcioni-vibro-navigator.txt",
+      "artifacts": [
+        {
+          "id": "a306c5a041756141be99d4edfbcf1824d5a2a28161951112493d205e0d524aa2",
+          "filename": "app-fdroid-release.apk",
+          "original_filename": "app-fdroid-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.0",
+          "size_bytes": 1572268,
+          "sha256": "a306c5a041756141be99d4edfbcf1824d5a2a28161951112493d205e0d524aa2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "dd6244380639b1e22fdd3b8fdc024cab62cc3bf741188f82a64a558c0c962e08",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-damianofalcioni-vibro-navigator-v1.0.0/app-fdroid-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-damianofalcioni-vibro-navigator-v1.0.0"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
