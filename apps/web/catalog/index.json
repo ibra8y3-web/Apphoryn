@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:54:18.286295+00:00",
+  "generated_at": "2026-11-25T19:54:39.747316+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -20622,6 +20622,80 @@
       ],
       "platforms": [
         "windows"
+      ]
+    },
+    {
+      "id": "oleh11-obminfx",
+      "slug": "oleh11-obminfx",
+      "name": "obminfx",
+      "summary": "Free, open-source Android currency converter: live ECB, National Bank of Ukraine, crypto and gold rates, plus a card/bank fee calculator. No ads, no tracking.",
+      "description": "Free, open-source Android currency converter: live ECB, National Bank of Ukraine, crypto and gold rates, plus a card/bank fee calculator. No ads, no tracking.",
+      "translations": {
+        "en": {
+          "summary": "Free, open-source Android currency converter: live ECB, National Bank of Ukraine, crypto and gold rates, plus a card/bank fee calculator. No ads, no tracking.",
+          "description": "Free, open-source Android currency converter: live ECB, National Bank of Ukraine, crypto and gold rates, plus a card/bank fee calculator. No ads, no tracking."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/oleh11/obminfx/main/assets/icon.png",
+      "repository_url": "https://github.com/oleh11/obminfx",
+      "github_repo_id": "1346871356",
+      "source_updated_at": "2026-11-25T06:47:56Z",
+      "homepage_url": "https://play.google.com/store/apps/details?id=com.obminfx.app",
+      "owner": "oleh11",
+      "default_branch": "main",
+      "source_commit_sha": "706fefacae79608583e62b946cd24bbe3c09ba89",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Oleh Antonyuk\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "capacitor",
+        "currency-converter",
+        "ecb",
+        "exchange-rates",
+        "fdroid",
+        "fintech",
+        "open-source",
+        "react",
+        "travel",
+        "ukraine"
+      ],
+      "latest_version": "v2.8.0",
+      "release_url": "https://github.com/oleh11/obminfx/releases/tag/v2.8.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-oleh11-obminfx-v2.8.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-oleh11-obminfx-v2.8.0/THIRD-PARTY-NOTICE-oleh11-obminfx.txt",
+      "artifacts": [
+        {
+          "id": "c402cc645e56acae8fb1c8161cb33560b48e3cd9108f912388de2e5384a95a41",
+          "filename": "ObminFX.apk",
+          "original_filename": "ObminFX.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v2.8.0",
+          "size_bytes": 5623126,
+          "sha256": "c402cc645e56acae8fb1c8161cb33560b48e3cd9108f912388de2e5384a95a41",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "5378a4c3deb7b2e901a82ca6b35ef6e3bf197d6a9d45b846662ecd7c37fd71f2",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-oleh11-obminfx-v2.8.0/ObminFX.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-oleh11-obminfx-v2.8.0"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
