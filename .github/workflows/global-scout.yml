@@ -72,7 +72,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           APPHORYN_AI_SERVICE_URL: 'https://apphoryn-production.up.railway.app'
-          APPHORYN_IMPORT_INTERVAL_SECONDS: '60'
+          APPHORYN_IMPORT_INTERVAL_SECONDS: '5'
           APPHORYN_TRANSLATION_INTERVAL_SECONDS: '1'
           APPHORYN_GLOBAL_SCOUT_REFRESH_INTERVAL_SECONDS: '600'
           # AI provider credentials stay only in Railway; GitHub Actions receives a short-lived OIDC identity.
