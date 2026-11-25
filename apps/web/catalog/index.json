@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:37:19.484933+00:00",
+  "generated_at": "2026-11-25T09:37:42.446686+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -5891,6 +5891,119 @@
       ],
       "platforms": [
         "macos"
+      ]
+    },
+    {
+      "id": "eslamasabry-opencode-mobile-next",
+      "slug": "eslamasabry-opencode-mobile-next",
+      "name": "opencode-mobile-next",
+      "summary": "Run Claude Code and OpenCode on your Android phone, no computer needed. Or follow and steer agents on your computer: live sessions, tool approvals and diffs.",
+      "description": "Run Claude Code and OpenCode on your Android phone, no computer needed. Or follow and steer agents on your computer: live sessions, tool approvals and diffs.",
+      "translations": {
+        "en": {
+          "summary": "Run Claude Code and OpenCode on your Android phone, no computer needed. Or follow and steer agents on your computer: live sessions, tool approvals and diffs.",
+          "description": "Run Claude Code and OpenCode on your Android phone, no computer needed. Or follow and steer agents on your computer: live sessions, tool approvals and diffs."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Eslamasabry/opencode-mobile-next/master/native/androidApp/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/Eslamasabry/opencode-mobile-next",
+      "github_repo_id": "1354621130",
+      "source_updated_at": "2026-11-25T09:29:23Z",
+      "homepage_url": "https://eslamasabry.github.io/opencode-mobile-next/",
+      "owner": "Eslamasabry",
+      "default_branch": "master",
+      "source_commit_sha": "7af4c9d33caf90787c7dc5a305b289b5b6432798",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Eslam Sabry\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ai-agent",
+        "ai-coding",
+        "android",
+        "android-app",
+        "claude-code",
+        "codex",
+        "coding-agent",
+        "dart",
+        "developer-tools",
+        "flutter",
+        "gemini-cli",
+        "llm",
+        "mobile-development",
+        "opencode",
+        "proot",
+        "self-hosted",
+        "termux"
+      ],
+      "latest_version": "v3.0.2+10150",
+      "release_url": "https://github.com/Eslamasabry/opencode-mobile-next/releases/tag/v3.0.2%2B10150",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eslamasabry-opencode-mobile-next-v3.0.2-10150",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eslamasabry-opencode-mobile-next-v3.0.2-10150/THIRD-PARTY-NOTICE-eslamasabry-opencode-mobile-next.txt",
+      "artifacts": [
+        {
+          "id": "161166dc515f88a0853d8230254b0a0fd09c186f98fed1b3cfc92120d4e97cfa",
+          "filename": "opencode-mobile-3.0.2-10150-arm64-v8a.apk",
+          "original_filename": "opencode-mobile-3.0.2-10150-arm64-v8a.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v3.0.2+10150",
+          "size_bytes": 36010542,
+          "sha256": "161166dc515f88a0853d8230254b0a0fd09c186f98fed1b3cfc92120d4e97cfa",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "842284b27aa297fb74cf831779fd16498517e1bc2104451459fec2ea7ac11d1c",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eslamasabry-opencode-mobile-next-v3.0.2-10150/opencode-mobile-3.0.2-10150-arm64-v8a.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eslamasabry-opencode-mobile-next-v3.0.2-10150"
+        },
+        {
+          "id": "b980fc2b35638fdf5e12720e84fba99dc0ffda64dafd21e946fc107c3b0a87c0",
+          "filename": "opencode-mobile-3.0.2-10150-universal.apk",
+          "original_filename": "opencode-mobile-3.0.2-10150-universal.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "universal",
+          "version": "v3.0.2+10150",
+          "size_bytes": 51353050,
+          "sha256": "b980fc2b35638fdf5e12720e84fba99dc0ffda64dafd21e946fc107c3b0a87c0",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "842284b27aa297fb74cf831779fd16498517e1bc2104451459fec2ea7ac11d1c",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eslamasabry-opencode-mobile-next-v3.0.2-10150/opencode-mobile-3.0.2-10150-universal.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eslamasabry-opencode-mobile-next-v3.0.2-10150"
+        },
+        {
+          "id": "a46763876a11e12978de2c0443dfc681e735155bbd35312ada8cb7b9f89b182d",
+          "filename": "opencode-mobile-3.0.2-10150-x86_64.apk",
+          "original_filename": "opencode-mobile-3.0.2-10150-x86_64.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "x86_64",
+          "version": "v3.0.2+10150",
+          "size_bytes": 37446633,
+          "sha256": "a46763876a11e12978de2c0443dfc681e735155bbd35312ada8cb7b9f89b182d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "842284b27aa297fb74cf831779fd16498517e1bc2104451459fec2ea7ac11d1c",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eslamasabry-opencode-mobile-next-v3.0.2-10150/opencode-mobile-3.0.2-10150-x86_64.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eslamasabry-opencode-mobile-next-v3.0.2-10150"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
