@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:28:30.177546+00:00",
+  "generated_at": "2026-11-25T22:28:48.573079+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -4086,6 +4086,80 @@
           "signer_certificate_sha256": "b6ac4731d955fce52938c6af9066fbadcdc52e2369c242d8013323c93aa22c6a",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-definitelynotrylix-aurora-notes-v1.3.59/Aurora.Notes.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-definitelynotrylix-aurora-notes-v1.3.59"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "raz3d1-autoaudio",
+      "slug": "raz3d1-autoaudio",
+      "name": "autoaudio-",
+      "summary": "睡前听 (AudioSleep / Shuiqian Ting) - discover weekly popular videos, music and audiobooks, then cache the audio for offline sleep listening. Android app in Kotlin: media resolver, HLS merge, sleep timer, dark/light theme.",
+      "description": "睡前听 (AudioSleep / Shuiqian Ting) - discover weekly popular videos, music and audiobooks, then cache the audio for offline sleep listening. Android app in Kotlin: media resolver, HLS merge, sleep timer, dark/light theme.",
+      "translations": {
+        "en": {
+          "summary": "睡前听 (AudioSleep / Shuiqian Ting) - discover weekly popular videos, music and audiobooks, then cache the audio for offline sleep listening. Android app in Kotlin: media resolver, HLS merge, sleep timer, dark/light theme.",
+          "description": "睡前听 (AudioSleep / Shuiqian Ting) - discover weekly popular videos, music and audiobooks, then cache the audio for offline sleep listening. Android app in Kotlin: media resolver, HLS merge, sleep timer, dark/light theme."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/150803247?v=4",
+      "repository_url": "https://github.com/Raz3d1/autoaudio-",
+      "github_repo_id": "1468942195",
+      "source_updated_at": "2026-11-23T15:53:02Z",
+      "homepage_url": null,
+      "owner": "Raz3d1",
+      "default_branch": "main",
+      "source_commit_sha": "564c2778f2ffda2d639c5a5dada92ad24cb4662d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 AudioSleep contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android",
+        "android-app",
+        "audio",
+        "audiobook",
+        "hls",
+        "kotlin",
+        "media-player",
+        "music",
+        "offline",
+        "podcast",
+        "sleep",
+        "sleep-timer"
+      ],
+      "latest_version": "v1.0.0",
+      "release_url": "https://github.com/Raz3d1/autoaudio-/releases/tag/v1.0.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-raz3d1-autoaudio-v1.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-raz3d1-autoaudio-v1.0.0/THIRD-PARTY-NOTICE-raz3d1-autoaudio.txt",
+      "artifacts": [
+        {
+          "id": "428873769c372405c6eea991834844ca6f81b73a4952ba3bde303e906727d027",
+          "filename": "AutoAudio-1.0.apk",
+          "original_filename": "AutoAudio-1.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.0",
+          "size_bytes": 4980338,
+          "sha256": "428873769c372405c6eea991834844ca6f81b73a4952ba3bde303e906727d027",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "b4c76ef53576d1bf981e890fa071a7857efa6015607f5f895fb43be60c1be5fb",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-raz3d1-autoaudio-v1.0.0/AutoAudio-1.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-raz3d1-autoaudio-v1.0.0"
         }
       ],
       "platforms": [
