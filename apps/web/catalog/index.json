@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T20:47:27.955567+00:00",
+  "generated_at": "2026-11-25T20:47:47.472548+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -20881,6 +20881,91 @@
           "signer_certificate_sha256": "641797138357ebfb02fd637cf2409ddb7c9825785205ce66dffeef80a2bb763a",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-1window2-medbuddy-v1.0.1/MedBuddy-v1.0.1-arm64.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-1window2-medbuddy-v1.0.1"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "futsch1-medtimer",
+      "slug": "futsch1-medtimer",
+      "name": "medTimer",
+      "summary": "MedTimer Android app",
+      "description": "MedTimer Android app",
+      "translations": {
+        "en": {
+          "summary": "MedTimer Android app",
+          "description": "MedTimer Android app"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Futsch1/medTimer/main/fastlane/metadata/android/en-US/images/icon.png",
+      "repository_url": "https://github.com/Futsch1/medTimer",
+      "github_repo_id": "745594494",
+      "source_updated_at": "2026-11-25T13:35:00Z",
+      "homepage_url": null,
+      "owner": "Futsch1",
+      "default_branch": "main",
+      "source_commit_sha": "d71961fe32fe65ea8c941ed71e104027ecb1973e",
+      "license_text": "MIT License\n\nCopyright (c) 2024 Florian Fetz\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "java",
+        "kotlin",
+        "medical",
+        "reminder-app"
+      ],
+      "latest_version": "v1.26.5",
+      "release_url": "https://github.com/Futsch1/medTimer/releases/tag/v1.26.5",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-futsch1-medtimer-v1.26.5",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-futsch1-medtimer-v1.26.5/THIRD-PARTY-NOTICE-futsch1-medtimer.txt",
+      "artifacts": [
+        {
+          "id": "236fd1e8370bfea66443b0e07b0035677538d4c7a222f9f66eb7e951bd663dc3",
+          "filename": "MedTimer-foss-release-signed.apk",
+          "original_filename": "MedTimer-foss-release-signed.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.26.5",
+          "size_bytes": 13540648,
+          "sha256": "236fd1e8370bfea66443b0e07b0035677538d4c7a222f9f66eb7e951bd663dc3",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "69bc7c72e499045b44c87fc8463f599472deb408c48de38de8554ae7754b9d84",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-futsch1-medtimer-v1.26.5/MedTimer-foss-release-signed.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-futsch1-medtimer-v1.26.5"
+        },
+        {
+          "id": "b69b9ca612ec7d9e2db4388f05ee0f1c960ff10d020d62f550e5438871fe4341",
+          "filename": "MedTimer-full-release-signed.apk",
+          "original_filename": "MedTimer-full-release-signed.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.26.5",
+          "size_bytes": 13721293,
+          "sha256": "b69b9ca612ec7d9e2db4388f05ee0f1c960ff10d020d62f550e5438871fe4341",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "69bc7c72e499045b44c87fc8463f599472deb408c48de38de8554ae7754b9d84",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-futsch1-medtimer-v1.26.5/MedTimer-full-release-signed.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-futsch1-medtimer-v1.26.5"
         }
       ],
       "platforms": [
