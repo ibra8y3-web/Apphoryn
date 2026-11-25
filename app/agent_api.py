@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from fastapi import APIRouter, Header, HTTPException
+from fastapi import APIRouter, Header, HTTPException, Query
 from pydantic import BaseModel, Field
 
 from .config import settings
@@ -8,6 +8,7 @@ from . import ai_router
 from .agent_system import AGENTS, STORE
 from .resource_manager import resource_status, dispatch_security_scan
 from .analytics import analytics
+from .discovery_sources import DiscoverySources
 
 router = APIRouter(prefix="/api/v1/admin/agents", tags=["AI workforce"])
 
@@ -131,3 +132,16 @@ def github_security_scan(payload: GitHubScanRequest, x_apphoryn_admin: str | Non
 def sync_analytics(x_apphoryn_admin: str | None = Header(default=None)):
     _require_admin(x_apphoryn_admin)
     return analytics.sync_once()
+
+
+@router.get("/sources/search")
+def search_official_catalogs(
+    q: str = Query(..., min_length=2, max_length=180),
+    limit: int = Query(10, ge=1, le=20),
+    x_apphoryn_admin: str | None = Header(default=None),
+):
+    _require_admin(x_apphoryn_admin)
+    try:
+        return DiscoverySources().search(q, limit)
+    except ValueError as exc:
+        raise HTTPException(422, str(exc)) from exc
