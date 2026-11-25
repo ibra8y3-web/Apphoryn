@@ -14,6 +14,8 @@ _CACHE_SECONDS = max(60, int(os.getenv("APPHORYN_AI_MODELS_CACHE_SECONDS", "900"
 _FREE_ONLY = os.getenv("APPHORYN_AI_FREE_ONLY", "true").lower() not in {"0", "false", "no", "off"}
 _ALLOW_CREDIT = os.getenv("APPHORYN_AI_ALLOW_CREDIT_BASED_PROVIDERS", "false").lower() in {"1", "true", "yes", "on"}
 _ENABLE_CF = os.getenv("APPHORYN_AI_ENABLE_CLOUDFLARE", "false").lower() in {"1", "true", "yes", "on"}
+_ALLOW_PAID = os.getenv("APPHORYN_AI_ALLOW_PAID_REQUESTS", "false").lower() in {"1", "true", "yes", "on"}
+_ENABLE_XAI = os.getenv("APPHORYN_AI_ENABLE_XAI", "false").lower() in {"1", "true", "yes", "on"}
 
 @dataclass(frozen=True)
 class Candidate:
@@ -64,7 +66,7 @@ def _status(provider: str, configured: bool, enabled: bool, note: str, count: in
 
 def _priority() -> list[str]:
     return [x.strip().lower() for x in os.getenv(
-        "APPHORYN_AI_PROVIDER_PRIORITY", "gemini,groq,openrouter,cloudflare,comet").split(",") if x.strip()]
+        "APPHORYN_AI_PROVIDER_PRIORITY", "gemini,groq,xai,openrouter,cloudflare,comet").split(",") if x.strip()]
 
 def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str, Any]]]:
     global _cache
@@ -87,6 +89,9 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
             "Configured but paused: the API cannot verify the project's billing tier. Set "
             "APPHORYN_AI_CONFIRM_GEMINI_GROQ_FREE_TIER=true only after confirming a free-tier project."
         ))
+    elif key and not _FREE_ONLY and not _ALLOW_PAID:
+        providers.append(_status("gemini", True, False,
+            "Paused by spending protection: paid requests are disabled. Set APPHORYN_AI_ALLOW_PAID_REQUESTS=true only after approving billing."))
     elif key:
         try:
             data = _request("https://generativelanguage.googleapis.com/v1beta/models?pageSize=1000",
@@ -116,6 +121,9 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
             "Configured but paused: the API cannot verify the account's free billing tier. "
             "Confirm the free plan before enabling this provider."
         ))
+    elif key and not _FREE_ONLY and not _ALLOW_PAID:
+        providers.append(_status("groq", True, False,
+            "Paused by spending protection: paid requests are disabled. Set APPHORYN_AI_ALLOW_PAID_REQUESTS=true only after approving billing."))
     elif key:
         try:
             data = _request("https://api.groq.com/openai/v1/models",
@@ -136,6 +144,29 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
     else:
         providers.append(_status("groq", False, False, "GROQ_API_KEY is not configured."))
 
+
+    # xAI's Grok API is a separate, usage-billed provider (not Groq).
+    key = os.getenv("XAI_API_KEY", "").strip()
+    if key and _ENABLE_XAI and _ALLOW_PAID and not _FREE_ONLY:
+        try:
+            data = _request("https://api.x.ai/v1/models", {"Authorization": f"Bearer {key}"})
+            for item in data.get("data", []):
+                model = str(item.get("id") or "")
+                if model:
+                    models.append(Candidate("xai", model, "openai", "https://api.x.ai/v1", key,
+                                            int(item.get("context_length") or 0), "paid_api_explicit_opt_in"))
+            providers.append(_status("xai", True, True,
+                "xAI model catalog loaded. API calls are usage-billed; paid access was explicitly enabled.",
+                sum(m.provider == "xai" for m in models)))
+        except ProviderError as exc:
+            providers.append(_status("xai", True, False, str(exc)))
+    elif key:
+        providers.append(_status("xai", True, False,
+            "Grok API is usage-billed and is blocked by default. Enable APPHORYN_AI_ENABLE_XAI=true, "
+            "APPHORYN_AI_ALLOW_PAID_REQUESTS=true and APPHORYN_AI_FREE_ONLY=false only after approving paid usage."))
+    else:
+        providers.append(_status("xai", False, False, "XAI_API_KEY is not configured."))
+
     # OpenRouter free-only: only explicit :free variants plus its free auto-router.
     key = os.getenv("OPENROUTER_API_KEY", "").strip()
     if key:
@@ -143,15 +174,15 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
             data = _request("https://openrouter.ai/api/v1/models", {"Authorization": f"Bearer {key}"})
             for item in data.get("data", []):
                 model = str(item.get("id") or "")
-                if model and (not _FREE_ONLY or model.endswith(":free")):
+                if model and ((not _FREE_ONLY and _ALLOW_PAID) or model.endswith(":free")):
                     models.append(Candidate("openrouter", model, "openai",
                         "https://openrouter.ai/api/v1", key, int(item.get("context_length") or 0),
                         "free_variant" if model.endswith(":free") else "paid_or_zero_price"))
-            if _FREE_ONLY:
+            if _FREE_ONLY or not _ALLOW_PAID:
                 models.append(Candidate("openrouter", "openrouter/free", "openai",
                     "https://openrouter.ai/api/v1", key, 0, "free_router"))
             providers.append(_status("openrouter", True, True,
-                "Free-only: :free models and openrouter/free only." if _FREE_ONLY else "All account-visible models enabled.",
+                "Free-only: :free models and openrouter/free only." if (_FREE_ONLY or not _ALLOW_PAID) else "All account-visible models enabled.",
                 sum(m.provider == "openrouter" for m in models)))
         except ProviderError as exc:
             providers.append(_status("openrouter", True, True, str(exc)))
@@ -198,8 +229,8 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
                 model = str(item.get("id") or item.get("model") or item.get("name") or "").strip()
                 if not model:
                     continue
-                explicitly_allowed = model in allowlist and _ALLOW_CREDIT
-                if _FREE_ONLY and not (comet_is_zero_priced(item) or explicitly_allowed):
+                explicitly_allowed = model in allowlist and _ALLOW_CREDIT and _ALLOW_PAID
+                if (_FREE_ONLY or not _ALLOW_PAID) and not (comet_is_zero_priced(item) or explicitly_allowed):
                     continue
                 context = int(item.get("context_length") or item.get("context_window") or 0)
                 models.append(Candidate(
@@ -223,7 +254,7 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
     # Cloudflare requires an account ID as well as a token, and explicit opt-in.
     key = os.getenv("CLOUDFLARE_API_TOKEN", "").strip()
     account = os.getenv("CLOUDFLARE_ACCOUNT_ID", "").strip()
-    if key and account and _ENABLE_CF:
+    if key and account and _ENABLE_CF and _ALLOW_PAID:
         try:
             query = urllib.parse.urlencode({"task": "text-generation", "hide_experimental": "true", "per_page": 100})
             url = f"https://api.cloudflare.com/client/v4/accounts/{urllib.parse.quote(account)}/ai/models/search?{query}"
@@ -241,6 +272,8 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
             providers.append(_status("cloudflare", True, True, str(exc)))
     else:
         note = "CLOUDFLARE_ACCOUNT_ID is required." if key and not account else (
+            "Disabled by spending protection; Cloudflare billing may apply. Explicit paid authorization is required."
+            if key and _ENABLE_CF and not _ALLOW_PAID else
             "Disabled until APPHORYN_AI_ENABLE_CLOUDFLARE=true; billing cannot be inferred safely." if key
             else "CLOUDFLARE_API_TOKEN is not configured.")
         providers.append(_status("cloudflare", bool(key), False, note))
@@ -253,7 +286,7 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
 
 def has_configured_ai() -> bool:
     return any(os.getenv(k, "").strip() for k in (
-        "GEMINI_API_KEY", "GROQ_API_KEY", "OPENROUTER_API_KEY", "COMET_API_KEY", "CLOUDFLARE_API_TOKEN"))
+        "GEMINI_API_KEY", "GROQ_API_KEY", "XAI_API_KEY", "OPENROUTER_API_KEY", "COMET_API_KEY", "CLOUDFLARE_API_TOKEN"))
 
 def _gemini(candidate: Candidate, messages: list[dict[str, str]]) -> dict[str, Any]:
     system = "\n\n".join(m["content"] for m in messages if m.get("role") == "system")
@@ -302,6 +335,7 @@ def generate_json(messages: list[dict[str, str]]) -> tuple[dict[str, Any], dict[
         if _cooldowns.get(key, 0) > time.time():
             continue
         attempted += 1
+        started = time.monotonic()
         try:
             if candidate.kind == "gemini":
                 result = _gemini(candidate, messages)
@@ -311,17 +345,73 @@ def generate_json(messages: list[dict[str, str]]) -> tuple[dict[str, Any], dict[
                 result = _openai(candidate, messages)
             if not isinstance(result, dict):
                 raise ProviderError("Model response was not a JSON object.")
+            _record_provider_event(candidate.provider, candidate.model, True, int((time.monotonic() - started) * 1000))
             return result, {"provider": candidate.provider, "model": candidate.model}
         except (ProviderError, KeyError, IndexError, TypeError, ValueError, json.JSONDecodeError) as exc:
             status = exc.status if isinstance(exc, ProviderError) else None
             cooldown = 180 if status == 429 else 900 if status in {401, 403} else 45 if status and status >= 500 else 60
             _cooldowns[key] = time.time() + cooldown
+            _record_provider_event(candidate.provider, candidate.model, False,
+                                   int((time.monotonic() - started) * 1000), status, str(exc))
             errors.append(f"{candidate.provider}/{candidate.model}: {str(exc)[:150]}")
     if candidates and not attempted:
         raise ProviderError("All discovered models are cooling down; retry after their cooldown windows.")
     raise ProviderError("No model completed the request. " + " | ".join(errors[:8]))
 
+def _record_provider_event(provider: str, model: str | None, success: bool, latency_ms: int | None = None,
+                           http_status: int | None = None, error: str | None = None) -> None:
+    try:
+        from .agent_system import record_provider_event
+        record_provider_event(provider, model, success, latency_ms, http_status, error)
+    except Exception:
+        # Telemetry must never make a successful model request fail.
+        pass
+
+
+def test_provider(provider: str) -> dict[str, Any]:
+    """Perform a real, minimal model response test for one configured provider."""
+    provider = provider.strip().lower()
+    candidates, statuses = discover_models(force=True)
+    status = next((item for item in statuses if item.get("provider") == provider), None)
+    candidate = next((item for item in candidates if item.provider == provider), None)
+    if candidate is None:
+        return {"provider": provider, "success": False,
+                "reason": (status or {}).get("note", "Provider is not configured or enabled."),
+                "configured": bool((status or {}).get("configured")),
+                "enabled": bool((status or {}).get("enabled"))}
+    messages = [
+        {"role": "system", "content": "Return exactly one JSON object: {\"ok\":true}. Do not add other text."},
+        {"role": "user", "content": "Connection test. Return {\"ok\":true}."},
+    ]
+    started = time.monotonic()
+    try:
+        if candidate.kind == "gemini":
+            answer = _gemini(candidate, messages)
+        elif candidate.kind == "cloudflare":
+            answer = _cloudflare(candidate, messages)
+        else:
+            answer = _openai(candidate, messages)
+        if not isinstance(answer, dict):
+            raise ProviderError("Provider returned no JSON object.")
+        latency = int((time.monotonic() - started) * 1000)
+        _record_provider_event(provider, candidate.model, True, latency)
+        return {"provider": provider, "success": True, "model": candidate.model,
+                "latency_ms": latency, "response_valid": True}
+    except Exception as exc:
+        status_code = exc.status if isinstance(exc, ProviderError) else None
+        latency = int((time.monotonic() - started) * 1000)
+        _record_provider_event(provider, candidate.model, False, latency, status_code, str(exc))
+        return {"provider": provider, "success": False, "model": candidate.model,
+                "latency_ms": latency, "reason": f"{type(exc).__name__}: {str(exc)[:500]}"}
+
+
 def public_model_catalog(force: bool = False) -> dict[str, Any]:
     models, providers = discover_models(force)
-    return {"free_only": _FREE_ONLY, "models": [m.public() for m in models], "providers": providers,
-            "warning": "Model APIs do not reveal every account's billing tier or remaining free quota. Keep keys on free plans; Comet and Cloudflare are disabled by default in free-only mode."}
+    return {
+        "free_only": _FREE_ONLY,
+        "paid_requests_allowed": _ALLOW_PAID,
+        "spending_protection_enabled": not _ALLOW_PAID,
+        "models": [m.public() for m in models],
+        "providers": providers,
+        "warning": "Model APIs do not reveal every account's billing tier or remaining free quota. Usage and quota values are never fabricated; paid traffic remains blocked unless explicitly authorized.",
+    }
