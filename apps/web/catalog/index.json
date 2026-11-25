@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T20:53:10.382499+00:00",
+  "generated_at": "2026-11-25T20:53:33.869137+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -23409,6 +23409,75 @@
           "signer_certificate_sha256": "e593e41d52abd8f7cbd3104dd44d36b307a983f19dd092f4e7099c2d80eff625",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-abhisheksati132-mydoc-v2.1.0/mydoc-v2.1.0-x86_64.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-abhisheksati132-mydoc-v2.1.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "idrisokys-mylauncher",
+      "slug": "idrisokys-mylauncher",
+      "name": "MyLauncher",
+      "summary": "Minimal Android launcher: 4-column grid, fast app/contact/web search, folders, pinned shortcuts, drag-and-drop editing and layout backup. Built with Kotlin, no ads, no tracking.",
+      "description": "Minimal Android launcher: 4-column grid, fast app/contact/web search, folders, pinned shortcuts, drag-and-drop editing and layout backup. Built with Kotlin, no ads, no tracking.",
+      "translations": {
+        "en": {
+          "summary": "Minimal Android launcher: 4-column grid, fast app/contact/web search, folders, pinned shortcuts, drag-and-drop editing and layout backup. Built with Kotlin, no ads, no tracking.",
+          "description": "Minimal Android launcher: 4-column grid, fast app/contact/web search, folders, pinned shortcuts, drag-and-drop editing and layout backup. Built with Kotlin, no ads, no tracking."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/170455514?v=4",
+      "repository_url": "https://github.com/idrisokys/MyLauncher",
+      "github_repo_id": "1436346112",
+      "source_updated_at": "2026-11-18T16:22:31Z",
+      "homepage_url": null,
+      "owner": "idrisokys",
+      "default_branch": "main",
+      "source_commit_sha": "99ac436617f55de69eccf5ece115c1379376811a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 idris okys\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "system",
+      "topics": [
+        "android",
+        "android-app",
+        "android-launcher",
+        "home-screen",
+        "kotlin",
+        "launcher",
+        "minimal-launcher"
+      ],
+      "latest_version": "v1.2",
+      "release_url": "https://github.com/idrisokys/MyLauncher/releases/tag/v1.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-idrisokys-mylauncher-v1.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-idrisokys-mylauncher-v1.2/THIRD-PARTY-NOTICE-idrisokys-mylauncher.txt",
+      "artifacts": [
+        {
+          "id": "356074d3ac139e4f5d327a754b6ed062b894ce68c3d9d0061f18ee4e7b34fc75",
+          "filename": "MYLTablet.apk",
+          "original_filename": "MYLTablet.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.2",
+          "size_bytes": 325463,
+          "sha256": "356074d3ac139e4f5d327a754b6ed062b894ce68c3d9d0061f18ee4e7b34fc75",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "9c654e66a2277978ad4d7052657d0c27d5d3ff12039968494a05c454d1c9e341",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-idrisokys-mylauncher-v1.2/MYLTablet.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-idrisokys-mylauncher-v1.2"
         }
       ],
       "platforms": [
