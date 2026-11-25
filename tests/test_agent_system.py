@@ -47,6 +47,14 @@ class AgentStoreTests(unittest.TestCase):
 
 
 
+
+    def test_duplicate_active_goal_reuses_run_without_escalating_external_approval(self):
+        first = self.store.enqueue("Check this exact upstream release.", priority=3, allow_external_actions=False)
+        second = self.store.enqueue("  check this exact upstream release.  ", priority=9, allow_external_actions=True)
+        self.assertEqual(first["id"], second["id"])
+        self.assertFalse(second["allow_external_actions"])
+        self.assertEqual(second["priority"], 3)
+
     def test_agent_activity_reports_real_latest_task_status(self):
         run = self.store.enqueue("Review the package metadata.", priority=5)
         task = self.store.create_task(run["id"], "research", "Inspect metadata", "Inspect the upstream release.")
