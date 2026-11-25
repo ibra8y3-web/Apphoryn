@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:25:54.829406+00:00",
+  "generated_at": "2026-11-25T23:26:12.416707+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -5564,6 +5564,81 @@
       "platforms": [
         "linux",
         "windows"
+      ]
+    },
+    {
+      "id": "read-the-manual-bettercountdown",
+      "slug": "read-the-manual-bettercountdown",
+      "name": "BetterCountdown",
+      "summary": "更好的倒数日 · 叩时：更好看的倒数日 App，倒计时、纪念日、生日提醒、正数日，到点提醒；还有决策转盘和随机数生成器。暖纸色圆润界面，安卓免费开源，不联网无广告，由大雾与 Claude 合作开发 🧡 ｜ countdown · days until · anniversary · reminder · decision wheel · random number · android",
+      "description": "更好的倒数日 · 叩时：更好看的倒数日 App，倒计时、纪念日、生日提醒、正数日，到点提醒；还有决策转盘和随机数生成器。暖纸色圆润界面，安卓免费开源，不联网无广告，由大雾与 Claude 合作开发 🧡 ｜ countdown · days until · anniversary · reminder · decision wheel · random number · android",
+      "translations": {
+        "en": {
+          "summary": "更好的倒数日 · 叩时：更好看的倒数日 App，倒计时、纪念日、生日提醒、正数日，到点提醒；还有决策转盘和随机数生成器。暖纸色圆润界面，安卓免费开源，不联网无广告，由大雾与 Claude 合作开发 🧡 ｜ countdown · days until · anniversary · reminder · decision wheel · random number · android",
+          "description": "更好的倒数日 · 叩时：更好看的倒数日 App，倒计时、纪念日、生日提醒、正数日，到点提醒；还有决策转盘和随机数生成器。暖纸色圆润界面，安卓免费开源，不联网无广告，由大雾与 Claude 合作开发 🧡 ｜ countdown · days until · anniversary · reminder · decision wheel · random number · android"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/read-the-manual/BetterCountdown/main/%E5%AE%89%E5%8D%93/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/read-the-manual/BetterCountdown",
+      "github_repo_id": "1467752654",
+      "source_updated_at": "2026-11-22T17:06:46Z",
+      "homepage_url": null,
+      "owner": "read-the-manual",
+      "default_branch": "main",
+      "source_commit_sha": "f832022e8ecf09da18d1324d7bc730fb1c08a2d4",
+      "license_text": "MIT License\n\nCopyright (c) 2026 今天是大雾! and Claude\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "anniversary",
+        "birthday-reminder",
+        "countdown",
+        "countdown-timer",
+        "days-matter",
+        "days-until",
+        "decision-wheel",
+        "offline",
+        "random-number-generator",
+        "reminder",
+        "spin-the-wheel"
+      ],
+      "latest_version": "v0.1",
+      "release_url": "https://github.com/read-the-manual/BetterCountdown/releases/tag/v0.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-read-the-manual-bettercountdown-v0.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-read-the-manual-bettercountdown-v0.1/THIRD-PARTY-NOTICE-read-the-manual-bettercountdown.txt",
+      "artifacts": [
+        {
+          "id": "98ff8201ff990755b01a0fcbc964d0f6473adafe3108816061a8a7b5693d6d87",
+          "filename": "Koushi.apk",
+          "original_filename": "Koushi.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.1",
+          "size_bytes": 4544831,
+          "sha256": "98ff8201ff990755b01a0fcbc964d0f6473adafe3108816061a8a7b5693d6d87",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "6b30fd059345716dca37f022c19cc2d7f573f7ac45d9483e49b7ae75f90cea6b",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-read-the-manual-bettercountdown-v0.1/Koushi.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-read-the-manual-bettercountdown-v0.1"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
