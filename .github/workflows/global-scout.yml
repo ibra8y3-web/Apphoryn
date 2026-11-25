@@ -23,7 +23,7 @@ permissions:
 jobs:
   global-scout:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 350
     steps:
       - name: Checkout trusted Apphoryn automation
         uses: actions/checkout@v4
@@ -81,9 +81,9 @@ jobs:
         shell: bash
         run: |
           python scripts/global_scout.py \
-            --max-repositories 2000 \
-            --max-pages 20 \
-            --run-budget-seconds 4500
+            --max-repositories 10000 \
+            --max-pages 100 \
+            --run-budget-seconds 20400
 
       - name: Persist the Scout cursor and retry queue
         if: always() && hashFiles('data/scout-state.json') != ''
