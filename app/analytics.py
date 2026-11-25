@@ -162,7 +162,7 @@ class AnalyticsStore:
         d1 = {
             "account_id": os.getenv("CLOUDFLARE_ACCOUNT_ID", "").strip(),
             "database_id": os.getenv("CLOUDFLARE_D1_DATABASE_ID", "").strip(),
-            "token": os.getenv("CLOUDFLARE_API_TOKEN", "").strip(),
+            "token": os.getenv("CLOUDFLARE_D1_API_TOKEN", "").strip(),
         }
         if pg:
             return "postgres", {"dsn": pg}
