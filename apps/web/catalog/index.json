@@ -44578,7 +44578,17 @@
       "latest_version": "conjugate/v1.0.0",
       "release_url": "https://github.com/scribe-org/Scribe-Android/releases/tag/conjugate/v1.0.0",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "969a8f2cd13a4e7c0bae0bd02e644c1d68dbf127",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-25T23:18:59.300013+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "mvoong-seamstress",
