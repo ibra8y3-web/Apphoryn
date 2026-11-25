@@ -23,6 +23,7 @@ from app.github_client import GitHubClient
 from app.github_release_mirror import GitHubReleaseMirror
 from app.repository_crawler import RepositoryCrawler
 from app.services import CatalogService
+from app.import_pacing import ImportPacer
 
 
 RETRY_DELAYS_SECONDS = (6 * 3600, 24 * 3600, 3 * 86400, 7 * 86400, 30 * 86400)
@@ -106,6 +107,18 @@ def known_current(candidate: dict[str, Any], by_id: dict[str, dict], by_url: dic
     existing = existing or by_url.get(repo_key(url))
     if not existing or not existing.get("source_updated_at"):
         return False
+    # An app without both Arabic fields is not a complete catalog record yet.
+    translations = existing.get("translations") if isinstance(existing.get("translations"), dict) else {}
+    description_translations = (
+        existing.get("description_translations")
+        if isinstance(existing.get("description_translations"), dict) else {}
+    )
+    if (
+        str(existing.get("translation_status") or "").lower() != "complete"
+        or not translations.get("ar")
+        or not description_translations.get("ar")
+    ):
+        return False
     upstream_updated = str(candidate.get("updated_at") or "")
     indexed_updated = str(existing.get("source_updated_at") or "")
     if upstream_updated and upstream_updated > indexed_updated:
@@ -156,6 +169,12 @@ def main() -> None:
     parser.add_argument("--max-repositories", type=int, default=10000, help="Resumable checkpoint batch size; not a total import quota.")
     parser.add_argument("--max-pages", type=int, default=20, help="Internal checkpoint batch size; repeated until the run window ends.")
     parser.add_argument("--run-budget-seconds", type=int, default=4500, help="Time available for scanning/importing before the runner timeout.")
+    parser.add_argument(
+        "--import-interval-seconds",
+        type=float,
+        default=float(os.getenv("APPHORYN_IMPORT_INTERVAL_SECONDS", "60")),
+        help="Minimum seconds between import starts; set to 60 for one import start per minute.",
+    )
     parser.add_argument("--state-file", default=str(ROOT / "data" / "scout-state.json"))
     parser.add_argument("--retry-file", default=str(ROOT / "data" / "scout-retry.json"))
     parser.add_argument("--catalog-file", default=str(ROOT / "apps" / "web" / "catalog" / "index.json"))
@@ -233,14 +252,14 @@ def main() -> None:
     results: list[dict[str, Any]] = []
     scheduled_retries = list(waiting_retries)
     deadline = time.monotonic() + max(60, int(args.run_budget_seconds))
+    import_pacer = ImportPacer(args.import_interval_seconds)
+    processed_this_run: set[str] = set()
 
-    scheduled_retries = list(waiting_retries)
     def process_entries(entries: list[dict[str, Any]]) -> bool:
         for index, entry in enumerate(entries):
             if time.monotonic() >= deadline:
                 for pending in entries[index:]:
-                    if pending.get("attempts") or pending.get("force_refresh"):
-                        scheduled_retries.append({**pending, "next_attempt_at": now})
+                    scheduled_retries.append({**pending, "next_attempt_at": now})
                 return False
             repository_url = str(entry["repository"])
             candidate = entry.get("candidate") or {}
@@ -276,6 +295,16 @@ def main() -> None:
                     results.append(result)
                     continue
 
+                import_key = repo_key(repository_url)
+                if import_key in processed_this_run:
+                    result["status"] = "already_processed_this_run"
+                    results.append(result)
+                    continue
+                if not import_pacer.wait_for_slot(deadline):
+                    for pending in entries[index:]:
+                        scheduled_retries.append({**pending, "next_attempt_at": now})
+                    return False
+                processed_this_run.add(import_key)
                 imported = catalog.import_repository(repository_url, mirror_release_assets=True)
                 app = imported["app"]
                 result["ai_generation"] = imported.get("ai_generation") or {}
@@ -353,6 +382,9 @@ def main() -> None:
                     "repository_url": app.get("repository_url") or repository_url,
                     "github_repo_id": app.get("github_repo_id") or candidate.get("id"),
                     "source_updated_at": app.get("source_updated_at") or candidate.get("updated_at"),
+                    "translation_status": app.get("translation_status") or "missing",
+                    "translations": app.get("translations") or {},
+                    "description_translations": app.get("description_translations") or {},
                 }
                 known_by_url[repo_key(str(record["repository_url"]))] = record
                 if record.get("github_repo_id"):
@@ -448,6 +480,7 @@ def main() -> None:
         "refresh_scan": refresh_report,
         "crawl_batches": crawl_batches,
         "run_budget_seconds": max(60, int(args.run_budget_seconds)),
+        "import_interval_seconds": import_pacer.interval_seconds,
         "run_time_window_reached": time.monotonic() >= deadline,
         "processed": len(results),
         "mirrored": sum(row.get("status") == "mirrored" for row in results),
