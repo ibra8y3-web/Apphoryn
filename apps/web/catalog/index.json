@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:55:15.487664+00:00",
+  "generated_at": "2026-11-25T23:55:40.685256+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -5231,6 +5231,88 @@
           "signer_certificate_sha256": "60a685333b8b79bd70998d692fd44f73d236b043429505c7555ddf7becbf3326",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-proszczok2002-autoglosnik-v1.09/AutoGlosnik-v1.09.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-proszczok2002-autoglosnik-v1.09"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "shishir-ip-automatrix",
+      "slug": "shishir-ip-automatrix",
+      "name": "AutoMatrix",
+      "summary": "Free & open-source Android automation app: focus modes, routines, trigger-condition-action task automation. 100% offline, private, Kotlin + Jetpack Compose. Tasker / MacroDroid alternative with a clean monochrome iOS-style design.",
+      "description": "Free & open-source Android automation app: focus modes, routines, trigger-condition-action task automation. 100% offline, private, Kotlin + Jetpack Compose. Tasker / MacroDroid alternative with a clean monochrome iOS-style design.",
+      "translations": {
+        "en": {
+          "summary": "Free & open-source Android automation app: focus modes, routines, trigger-condition-action task automation. 100% offline, private, Kotlin + Jetpack Compose. Tasker / MacroDroid alternative with a clean monochrome iOS-style design.",
+          "description": "Free & open-source Android automation app: focus modes, routines, trigger-condition-action task automation. 100% offline, private, Kotlin + Jetpack Compose. Tasker / MacroDroid alternative with a clean monochrome iOS-style design."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Shishir-ip/AutoMatrix/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/Shishir-ip/AutoMatrix",
+      "github_repo_id": "1410427367",
+      "source_updated_at": "2026-11-21T09:30:01Z",
+      "homepage_url": "https://github.com/Shishir-ip/AutoMatrix",
+      "owner": "Shishir-ip",
+      "default_branch": "main",
+      "source_commit_sha": "98389ffb1a91534d388a7bf9385c7462524da809",
+      "license_text": "MIT License\n\nCopyright (c) 2026 SHISHIR\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "android",
+        "android-app",
+        "automation",
+        "automation-app",
+        "do-not-disturb",
+        "focus-modes",
+        "jetpack-compose",
+        "kotlin",
+        "macrodroid",
+        "material3",
+        "mobile-automation",
+        "nfc",
+        "notification",
+        "offline-first",
+        "oled",
+        "open-source",
+        "productivity",
+        "room-database",
+        "task-automation",
+        "tasker"
+      ],
+      "latest_version": "v1.8.0",
+      "release_url": "https://github.com/Shishir-ip/AutoMatrix/releases/tag/v1.8.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shishir-ip-automatrix-v1.8.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shishir-ip-automatrix-v1.8.0/THIRD-PARTY-NOTICE-shishir-ip-automatrix.txt",
+      "artifacts": [
+        {
+          "id": "41bf4d2eb0a2b8fca899a6e83e9226313a79a0d930ccea9fa672cd337f1fc20c",
+          "filename": "AutoMatrix-v1.8.0.apk",
+          "original_filename": "AutoMatrix-v1.8.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.8.0",
+          "size_bytes": 2631456,
+          "sha256": "41bf4d2eb0a2b8fca899a6e83e9226313a79a0d930ccea9fa672cd337f1fc20c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "3bfc59a7c7517f040b2cf2d8ca3af85dda93523c1cc7173daf935d02e1af40c0",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shishir-ip-automatrix-v1.8.0/AutoMatrix-v1.8.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shishir-ip-automatrix-v1.8.0"
         }
       ],
       "platforms": [
