@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:23:05.619217+00:00",
+  "generated_at": "2026-11-25T19:23:20.505102+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -7036,7 +7036,7 @@
         }
       },
       "description_translations": {},
-      "translation_status": "english_only",
+      "translation_status": "pending",
       "ai_provider": null,
       "ai_model": null,
       "icon_url": "https://raw.githubusercontent.com/Iurika-N-T-R/DroRef/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
@@ -7046,7 +7046,7 @@
       "homepage_url": "https://iurika-n-t-r.github.io/DroRef/",
       "owner": "Iurika-N-T-R",
       "default_branch": "main",
-      "source_commit_sha": "4f299995d08e3084c98eff36012d81e9f2c2266a",
+      "source_commit_sha": "8c24a9ca2b5a8e39f6f16881a5f3cba78d2602ab",
       "license_text": "MIT License\n\nCopyright (c) 2026 DroRef contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -7069,10 +7069,10 @@
         "pureref",
         "reference-board"
       ],
-      "latest_version": "v1.5.0",
-      "release_url": "https://github.com/Iurika-N-T-R/DroRef/releases/tag/v1.5.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-iurika-n-t-r-droref-v1.5.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-iurika-n-t-r-droref-v1.5.0/THIRD-PARTY-NOTICE-iurika-n-t-r-droref.txt",
+      "latest_version": "v1.6.1",
+      "release_url": "https://github.com/Iurika-N-T-R/DroRef/releases/tag/v1.6.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-iurika-n-t-r-droref-v1.6.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-iurika-n-t-r-droref-v1.6.1/THIRD-PARTY-NOTICE-iurika-n-t-r-droref.txt",
       "artifacts": [
         {
           "id": "d86dcce81effd13b957b6d5f5bb2c6fffc7e3df05546edefc95013e90c7fc697",
@@ -7090,6 +7090,23 @@
           "signer_certificate_sha256": "292392b7f05ef5ecc2ed47650b8f3f607bd17d7b620c31636667b57a28f36aa7",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-iurika-n-t-r-droref-v1.5.0/DroRef-1.5.0.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-iurika-n-t-r-droref-v1.5.0"
+        },
+        {
+          "id": "14b2e0bd6b4fc5a92874c1d3a51b3e1217f09210a398b8f321b076078f365d08",
+          "filename": "DroRef-1.6.1.apk",
+          "original_filename": "DroRef-1.6.1.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.6.1",
+          "size_bytes": 622260,
+          "sha256": "14b2e0bd6b4fc5a92874c1d3a51b3e1217f09210a398b8f321b076078f365d08",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "292392b7f05ef5ecc2ed47650b8f3f607bd17d7b620c31636667b57a28f36aa7",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-iurika-n-t-r-droref-v1.6.1/DroRef-1.6.1.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-iurika-n-t-r-droref-v1.6.1"
         }
       ],
       "platforms": [
