@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T11:13:55.365922+00:00",
+  "generated_at": "2026-11-25T11:14:31.793387+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -13398,6 +13398,82 @@
       ],
       "platforms": [
         "windows"
+      ]
+    },
+    {
+      "id": "worstgirlinamerica-perfectgrid",
+      "slug": "worstgirlinamerica-perfectgrid",
+      "name": "PerfectGrid",
+      "summary": "Perfect Grid is an open source Python desktop app for creating detailed video preview sheets with custom grid layouts, language support, a simple UI, and human-aware frame refining.",
+      "description": "Perfect Grid is an open source Python desktop app for creating detailed video preview sheets with custom grid layouts, language support, a simple UI, and human-aware frame refining.",
+      "translations": {
+        "en": {
+          "summary": "Perfect Grid is an open source Python desktop app for creating detailed video preview sheets with custom grid layouts, language support, a simple UI, and human-aware frame refining.",
+          "description": "Perfect Grid is an open source Python desktop app for creating detailed video preview sheets with custom grid layouts, language support, a simple UI, and human-aware frame refining."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/worstgirlinamerica/PerfectGrid/main/assets/icon.png",
+      "repository_url": "https://github.com/worstgirlinamerica/PerfectGrid",
+      "github_repo_id": "1283319015",
+      "source_updated_at": "2026-11-22T00:48:12Z",
+      "homepage_url": null,
+      "owner": "worstgirlinamerica",
+      "default_branch": "main",
+      "source_commit_sha": "626c406f433ec91fb61e74cdd2348dfc71154073",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Perfect Grid contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "contact-sheets",
+        "desktop-app",
+        "ffmpeg",
+        "ffmpeg-wrapper",
+        "frame-extraction",
+        "frame-refinement",
+        "internationalization",
+        "linux",
+        "macos",
+        "mit-license",
+        "opensource",
+        "preview-sheet",
+        "python-desktop",
+        "windows"
+      ],
+      "latest_version": "v0.2.3",
+      "release_url": "https://github.com/worstgirlinamerica/PerfectGrid/releases/tag/v0.2.3",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-worstgirlinamerica-perfectgrid-v0.2.3",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-worstgirlinamerica-perfectgrid-v0.2.3/THIRD-PARTY-NOTICE-worstgirlinamerica-perfectgrid.txt",
+      "artifacts": [
+        {
+          "id": "62f4d6aca79ca96846b44a079d70bd7056676effe845f08eac12481a66f3c906",
+          "filename": "PerfectGrid-v0.2.3-Linux-x86_64.AppImage",
+          "original_filename": "PerfectGrid-v0.2.3-Linux-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.2.3",
+          "size_bytes": 145867968,
+          "sha256": "62f4d6aca79ca96846b44a079d70bd7056676effe845f08eac12481a66f3c906",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-worstgirlinamerica-perfectgrid-v0.2.3/PerfectGrid-v0.2.3-Linux-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-worstgirlinamerica-perfectgrid-v0.2.3"
+        }
+      ],
+      "platforms": [
+        "linux"
       ]
     },
     {
