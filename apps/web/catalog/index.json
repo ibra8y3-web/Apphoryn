@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:25:41.806289+00:00",
+  "generated_at": "2026-11-25T09:25:57.129331+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -5747,6 +5747,129 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "byakatris-shotcraft",
+      "slug": "byakatris-shotcraft",
+      "name": "ShotCraft",
+      "summary": "Ultra-fast, ~2 MB cross-platform screenshot, annotation & screen-draw utility in Rust (macOS, Windows, Linux).",
+      "description": "Ultra-fast, ~2 MB cross-platform screenshot, annotation & screen-draw utility in Rust (macOS, Windows, Linux).",
+      "translations": {
+        "en": {
+          "summary": "Ultra-fast, ~2 MB cross-platform screenshot, annotation & screen-draw utility in Rust (macOS, Windows, Linux).",
+          "description": "Ultra-fast, ~2 MB cross-platform screenshot, annotation & screen-draw utility in Rust (macOS, Windows, Linux)."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Byakatris/ShotCraft/main/assets/app_icon.png",
+      "repository_url": "https://github.com/Byakatris/ShotCraft",
+      "github_repo_id": "1466482071",
+      "source_updated_at": "2026-11-23T12:58:24Z",
+      "homepage_url": null,
+      "owner": "Byakatris",
+      "default_branch": "main",
+      "source_commit_sha": "095879ac2793c41c1244631c7c7498c96681165b",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Byakatris / ShotCraft contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "system",
+      "topics": [
+        "annotation",
+        "cross-platform",
+        "desktop-app",
+        "egui",
+        "rust",
+        "screen-capture",
+        "screen-drawing",
+        "screenshot"
+      ],
+      "latest_version": "v0.6.0",
+      "release_url": "https://github.com/Byakatris/ShotCraft/releases/tag/v0.6.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-byakatris-shotcraft-v0.6.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-byakatris-shotcraft-v0.6.0/THIRD-PARTY-NOTICE-byakatris-shotcraft.txt",
+      "artifacts": [
+        {
+          "id": "f48324826ac55a22458ca35c7f35cf230cb6679dd0c862681f4115369dc55665",
+          "filename": "ShotCraft-v0.6-arm64-Setup.exe",
+          "original_filename": "ShotCraft-v0.6-arm64-Setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "arm64",
+          "version": "v0.6.0",
+          "size_bytes": 1176518,
+          "sha256": "f48324826ac55a22458ca35c7f35cf230cb6679dd0c862681f4115369dc55665",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-byakatris-shotcraft-v0.6.0/ShotCraft-v0.6-arm64-Setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-byakatris-shotcraft-v0.6.0"
+        },
+        {
+          "id": "13622373281fa6bc89f546d43b7bbea7325b91795d78ecde226f0db7dab89341",
+          "filename": "ShotCraft-v0.6-linux-amd64.deb",
+          "original_filename": "ShotCraft-v0.6-linux-amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.6.0",
+          "size_bytes": 2563288,
+          "sha256": "13622373281fa6bc89f546d43b7bbea7325b91795d78ecde226f0db7dab89341",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-byakatris-shotcraft-v0.6.0/ShotCraft-v0.6-linux-amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-byakatris-shotcraft-v0.6.0"
+        },
+        {
+          "id": "6d3e1ee1853fc8ed4cabce158417d7364bfcef92c32ed6cd4e9609bbf9f82aca",
+          "filename": "ShotCraft-v0.6-Setup.exe",
+          "original_filename": "ShotCraft-v0.6-Setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.6.0",
+          "size_bytes": 1263465,
+          "sha256": "6d3e1ee1853fc8ed4cabce158417d7364bfcef92c32ed6cd4e9609bbf9f82aca",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-byakatris-shotcraft-v0.6.0/ShotCraft-v0.6-Setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-byakatris-shotcraft-v0.6.0"
+        },
+        {
+          "id": "c24c9fae0a2b9265ecc84e62e00b98aaecf5934fade4053cbe33d0f756309312",
+          "filename": "ShotCraft-v0.6.dmg",
+          "original_filename": "ShotCraft-v0.6.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": null,
+          "version": "v0.6.0",
+          "size_bytes": 3075577,
+          "sha256": "c24c9fae0a2b9265ecc84e62e00b98aaecf5934fade4053cbe33d0f756309312",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-byakatris-shotcraft-v0.6.0/ShotCraft-v0.6.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-byakatris-shotcraft-v0.6.0"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
       ]
     },
     {
