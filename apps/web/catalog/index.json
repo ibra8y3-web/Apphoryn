@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:37:46.953164+00:00",
+  "generated_at": "2026-11-25T21:38:09.075406+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -14340,6 +14340,88 @@
           "signer_certificate_sha256": "4341f4edf7268069436752ff43c9bd7d5c8b3dd163cadc9ba9ec8189982b2623",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shangjin-xiao-frameecho-1.2.1/app-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shangjin-xiao-frameecho-1.2.1"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "rushb-fr-freekiosk",
+      "slug": "rushb-fr-freekiosk",
+      "name": "freekiosk",
+      "summary": "FreeKiosk - Open-Source Android Kiosk Mode & Tablet Lockdown App for Digital Signage, Dashboards, POS & Single-Purpose Devices. Free Alternative to Fully Kiosk, with an optional cloud dashboard to manage fleets",
+      "description": "FreeKiosk - Open-Source Android Kiosk Mode & Tablet Lockdown App for Digital Signage, Dashboards, POS & Single-Purpose Devices. Free Alternative to Fully Kiosk, with an optional cloud dashboard to manage fleets",
+      "translations": {
+        "en": {
+          "summary": "FreeKiosk - Open-Source Android Kiosk Mode & Tablet Lockdown App for Digital Signage, Dashboards, POS & Single-Purpose Devices. Free Alternative to Fully Kiosk, with an optional cloud dashboard to manage fleets",
+          "description": "FreeKiosk - Open-Source Android Kiosk Mode & Tablet Lockdown App for Digital Signage, Dashboards, POS & Single-Purpose Devices. Free Alternative to Fully Kiosk, with an optional cloud dashboard to manage fleets"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/RushB-fr/freekiosk/main/src/assets/images/logo.png",
+      "repository_url": "https://github.com/RushB-fr/freekiosk",
+      "github_repo_id": "1085757536",
+      "source_updated_at": "2026-11-24T22:32:24Z",
+      "homepage_url": "https://freekiosk.app",
+      "owner": "RushB-fr",
+      "default_branch": "main",
+      "source_commit_sha": "99134f7f9d39b33fe010dde8927d3ea140ff33a9",
+      "license_text": "MIT License\n\nCopyright (c) 2025 Rushb\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "network",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "cosu",
+        "dashboard",
+        "device-management",
+        "digital-signage",
+        "external-app",
+        "fleet-management",
+        "home-assistant",
+        "kiosk",
+        "kiosk-browser",
+        "kiosk-lockdown",
+        "kiosk-mode",
+        "launcher-application",
+        "mdm",
+        "react-native",
+        "remote-management",
+        "tablet",
+        "webview"
+      ],
+      "latest_version": "v2.0.0",
+      "release_url": "https://github.com/RushB-fr/freekiosk/releases/tag/v2.0.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rushb-fr-freekiosk-v2.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rushb-fr-freekiosk-v2.0.0/THIRD-PARTY-NOTICE-rushb-fr-freekiosk.txt",
+      "artifacts": [
+        {
+          "id": "fc20bc3f325a8af7fdef6665bb0ec9c26df8e0d881e13c5fc98706350338421c",
+          "filename": "freekiosk-v2.0.0.apk",
+          "original_filename": "freekiosk-v2.0.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v2.0.0",
+          "size_bytes": 63377617,
+          "sha256": "fc20bc3f325a8af7fdef6665bb0ec9c26df8e0d881e13c5fc98706350338421c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "5eb3bb83be74faf6eedd2a2203deea3361cce86d26db859f248dc4cc09030761",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rushb-fr-freekiosk-v2.0.0/freekiosk-v2.0.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rushb-fr-freekiosk-v2.0.0"
         }
       ],
       "platforms": [
