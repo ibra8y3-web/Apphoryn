@@ -1,11 +1,11 @@
 {
   "name": "Apphoryn",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "release_channel": "stable",
   "release_date": "2026-11-25",
   "clients": {
     "web": true,
-    "android": "0.4.1",
-    "desktop": "0.4.1"
+    "android": "0.4.2",
+    "desktop": "0.4.2"
   }
 }
