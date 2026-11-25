@@ -79,6 +79,36 @@ class AiDescriptionTests(unittest.TestCase):
         self.assertEqual(result["translation_status"], "complete")
         self.assertEqual(result["ai_provider"], "openrouter")
 
+    def test_fallback_upstream_description_is_translated_without_claiming_ai_authorship(self):
+        arabic = {
+            "summary": "مدير ملفات للمجتمع",
+            "description": "تطبيق لإدارة الملفات يطوره المجتمع.",
+        }
+        with (
+            patch("app.ai_descriptions.ai_router.has_configured_ai", return_value=True),
+            patch("app.ai_descriptions.ai_router.generate_json", side_effect=[
+                RuntimeError("AI description generation unavailable"),
+                (arabic, {"provider": "test-provider", "model": "test-model"}),
+            ]),
+            patch.dict("os.environ", {"APPHORYN_AI_ALLOW_LEGACY_PROVIDER": "false"}),
+        ):
+            result = DescriptionGenerator().generate(
+                name="Community File Manager",
+                owner="example",
+                description="A community-maintained file manager.",
+                topics=["file-manager"],
+                readme_excerpt="Install the application to manage local files.",
+                category="utility",
+            )
+
+        self.assertEqual(result["description"], "A community-maintained file manager.")
+        self.assertEqual(result["description_translations"]["ar"], arabic["description"])
+        self.assertEqual(result["translations"]["ar"], arabic["summary"])
+        self.assertEqual(result["translation_status"], "complete")
+        self.assertEqual(result["generated_by_ai"], "false")
+        self.assertEqual(result["classification_source"], "heuristic")
+        self.assertEqual(result["translation_ai_provider"], "test-provider")
+
     def test_fallback_recognizes_standalone_desktop_application(self):
         result = fallback_project_classification(
             name="Example Desktop App",
