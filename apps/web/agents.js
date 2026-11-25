@@ -174,6 +174,18 @@
       message.textContent="تم إرسال الفحص إلى GitHub Actions: "+result.target_repository+" · "+result.status;
     }catch(error){message.textContent=error.message;}
   });
+  $("testAnalytics").addEventListener("click",async()=>{
+    const button=$("testAnalytics"),status=$("analyticsStatus");
+    button.disabled=true;status.textContent="جارٍ اختبار الاتصال الحقيقي بقاعدة البيانات...";
+    try{
+      const result=await api("/analytics/test","POST");
+      status.textContent=result.connected
+        ? "الاتصال ناجح: "+result.provider+" · "+(result.latency_ms??0)+" ms · "+result.note
+        : "لا يوجد اتصال: "+result.provider+" · "+(result.error||result.note||result.status);
+    }catch(error){status.textContent=error.message;}
+    finally{button.disabled=false;}
+  });
+
   $("syncAnalytics").addEventListener("click",async()=>{
     try{
       const result=await api("/analytics/sync","POST");
