@@ -45,5 +45,38 @@ class AgentStoreTests(unittest.TestCase):
         self.assertIn("approval", result["reason"].lower())
 
 
+
+    def test_shared_memory_agent_tool_reads_and_saves_real_records(self):
+        from unittest.mock import patch
+        from app.agent_system import _run_tool
+        with patch("app.agent_system.STORE", self.store):
+            saved = _run_tool("writing", {
+                "name": "shared_memory",
+                "arguments": {"operation": "save", "scope": "agent", "content": {"style": "evidence first"}}
+            }, "Write an Apphoryn summary.", False)
+            read = _run_tool("supervisor", {
+                "name": "shared_memory",
+                "arguments": {"operation": "read", "limit": 3}
+            }, "Review the task.", False)
+        self.assertTrue(saved["saved"])
+        self.assertEqual(read["memories"][0]["content"]["style"], "evidence first")
+
+    def test_supervisor_quality_review_checks_actual_previous_agent_results(self):
+        from app.agent_system import _run_tool
+        results = [
+            {"agent_id": "research", "result": {
+                "verified_tool_result": {"executed": False}, "missing_evidence": ["official release checksum"]
+            }},
+            {"agent_id": "writing", "result": {"summary": "A grounded draft."}},
+        ]
+        audit = _run_tool("supervisor", {
+            "name": "quality_review", "arguments": {}
+        }, "Review outputs.", False, results)
+        self.assertTrue(audit["executed"])
+        self.assertEqual(audit["agents_reviewed"], 2)
+        self.assertEqual(audit["agents_without_tool_evidence"], ["research"])
+        self.assertEqual(audit["unresolved_evidence"], ["official release checksum"])
+
+
 if __name__ == "__main__":
     unittest.main()
