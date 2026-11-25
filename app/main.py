@@ -18,6 +18,8 @@ from pydantic import BaseModel, Field
 
 from .config import ROOT, settings
 from . import ai_router
+from .agent_api import router as agent_router
+from .agent_system import start_agent_workers, stop_agent_workers
 from .database import db
 from .services import BuildService, CatalogService, store_uploaded_artifact
 from .github_release_mirror import GitHubReleaseMirror
@@ -28,6 +30,7 @@ if cors_origins:
     app.add_middleware(CORSMiddleware, allow_origins=cors_origins, allow_methods=["GET", "POST"], allow_headers=["*"])
 catalog = CatalogService()
 builder = BuildService(catalog=catalog)
+app.include_router(agent_router)
 MIRROR_CATALOG = ROOT / "apps" / "web" / "catalog" / "index.json"
 
 
@@ -323,6 +326,16 @@ def refresh_ai_models(x_apphoryn_admin: str | None = Header(default=None)):
     """Force a fresh model discovery against configured providers."""
     require_admin(x_apphoryn_admin)
     return ai_router.public_model_catalog(force=True)
+
+
+@app.on_event("startup")
+def start_background_agent_workers():
+    start_agent_workers()
+
+
+@app.on_event("shutdown")
+def stop_background_agent_workers():
+    stop_agent_workers()
 
 
 web_dir = ROOT / "apps" / "web"
