@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T05:34:29.294890+00:00",
+  "generated_at": "2026-11-25T05:34:38.789851+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -704,6 +704,106 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hommy-master-capcut-mate-v8.1.21/capcut-mate-windows-x64-installer.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hommy-master-capcut-mate-v8.1.21"
+        }
+      ],
+      "platforms": [
+        "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "shanelevs-ccconfig",
+      "slug": "shanelevs-ccconfig",
+      "name": "CCConfig",
+      "summary": "Multi-app AI configuration manager for Claude Code, OpenCode, Pi, Codex, Kimi Code, Qoder, ZCode, Hermes and DSH — ships as a uTools plugin and a macOS app.",
+      "description": "Multi-app AI configuration manager for Claude Code, OpenCode, Pi, Codex, Kimi Code, Qoder, ZCode, Hermes and DSH — ships as a uTools plugin and a macOS app.",
+      "translations": {
+        "en": {
+          "summary": "Multi-app AI configuration manager for Claude Code, OpenCode, Pi, Codex, Kimi Code, Qoder, ZCode, Hermes and DSH — ships as a uTools plugin and a macOS app.",
+          "description": "Multi-app AI configuration manager for Claude Code, OpenCode, Pi, Codex, Kimi Code, Qoder, ZCode, Hermes and DSH — ships as a uTools plugin and a macOS app."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ShaneLevs/CCConfig/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/ShaneLevs/CCConfig",
+      "github_repo_id": "1181664597",
+      "source_updated_at": "2026-11-23T05:43:20Z",
+      "homepage_url": null,
+      "owner": "ShaneLevs",
+      "default_branch": "main",
+      "source_commit_sha": "b4a8eeda7acb817dc4097d18ca5fc8288dc3fa78",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Shane\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ai-coding-assistant",
+        "api-key-management",
+        "claude-code",
+        "codex",
+        "config-manager",
+        "deepseek",
+        "developer-tools",
+        "kimi-code",
+        "llm",
+        "macos-app",
+        "mcp",
+        "model-context-protocol",
+        "opencode",
+        "provider-manager",
+        "tauri",
+        "tdesign",
+        "token-usage",
+        "utools",
+        "utools-plugin",
+        "vue3"
+      ],
+      "latest_version": "v2.0.2",
+      "release_url": "https://github.com/ShaneLevs/CCConfig/releases/tag/v2.0.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shanelevs-ccconfig-v2.0.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shanelevs-ccconfig-v2.0.2/THIRD-PARTY-NOTICE-shanelevs-ccconfig.txt",
+      "artifacts": [
+        {
+          "id": "b7266e526a0d1f8096b4c1d4d652701a743e626cb147f16a355f69fd7efac422",
+          "filename": "CCConfig_2.0.2_aarch64.dmg",
+          "original_filename": "CCConfig_2.0.2_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v2.0.2",
+          "size_bytes": 5440309,
+          "sha256": "b7266e526a0d1f8096b4c1d4d652701a743e626cb147f16a355f69fd7efac422",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shanelevs-ccconfig-v2.0.2/CCConfig_2.0.2_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shanelevs-ccconfig-v2.0.2"
+        },
+        {
+          "id": "ef78184a7be58fbdcd0d4c3dd28585a91c7e4c89bb955c53697e66bb53ac9f84",
+          "filename": "CCConfig_2.0.2_x64-setup.exe",
+          "original_filename": "CCConfig_2.0.2_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v2.0.2",
+          "size_bytes": 4246157,
+          "sha256": "ef78184a7be58fbdcd0d4c3dd28585a91c7e4c89bb955c53697e66bb53ac9f84",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shanelevs-ccconfig-v2.0.2/CCConfig_2.0.2_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shanelevs-ccconfig-v2.0.2"
         }
       ],
       "platforms": [
