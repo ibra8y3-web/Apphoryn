@@ -27,10 +27,16 @@ from .github_actions_oidc import GitHubActionsOIDCError, verify_github_actions_o
 from . import ai_router
 from .agent_api import router as agent_router
 from .agent_system import start_agent_workers, stop_agent_workers
-from .database import db
+from .database import db, utc_now
 from .services import BuildService, CatalogService, store_uploaded_artifact
 from .github_release_mirror import GitHubReleaseMirror
 from .analytics import analytics
+from .autonomous_scout import (
+    autonomous_scout_status,
+    start_autonomous_scout,
+    stop_autonomous_scout,
+    wake_autonomous_scout,
+)
 
 app = FastAPI(title="Apphoryn API", version="0.2.0-alpha", description="Discover, build, verify and distribute open-source software.")
 cors_origins = [origin.strip() for origin in os.getenv("APPHORYN_CORS_ORIGINS", "").split(",") if origin.strip()]
@@ -123,9 +129,31 @@ def read_mirror_catalog() -> list[dict]:
     return [item for item in items if isinstance(item, dict) and isinstance(item.get("artifacts"), list)]
 
 
+def database_catalog_rows() -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for record in db.list_apps(limit=200):
+        public_record = {
+            key: value for key, value in record.items()
+            if key not in {"license_text", "storage_path", "source_url"}
+        }
+        artifacts = []
+        for artifact in db.list_artifacts(str(record.get("id") or "")):
+            public_artifact = {
+                key: value for key, value in artifact.items()
+                if key not in {"storage_path", "source_url"}
+            }
+            artifact_id = str(artifact.get("id") or "")
+            if artifact_id:
+                public_artifact["download_url"] = f"/api/v1/downloads/{artifact_id}"
+                artifacts.append(public_artifact)
+        public_record["artifacts"] = artifacts
+        rows.append(public_record)
+    return rows
+
+
 def catalog_items(category: str | None = None, query: str | None = None, limit: int = 100) -> list[dict]:
     by_repo: dict[str, dict] = {}
-    for item in db.list_apps(limit=200) + read_mirror_catalog():
+    for item in database_catalog_rows() + read_mirror_catalog():
         key = str(item.get("repository_url") or item.get("slug") or item.get("id") or "")
         if not key:
             continue
@@ -142,16 +170,59 @@ def catalog_items(category: str | None = None, query: str | None = None, limit: 
                 known.add(digest)
         by_repo[key] = {**previous, **item, "artifacts": merged}
     rows = list(by_repo.values())
-    # The public store lists only applications that have at least one verified installable file.
     rows = [item for item in rows if item.get("artifacts")]
     if category and category != "all":
         rows = [item for item in rows if item.get("category") == category]
     if query:
         term = query.casefold()
-        rows = [item for item in rows if term in " ".join(str(item.get(field) or "") for field in ("name", "summary", "description", "owner", "category")).casefold()]
+        rows = [item for item in rows if term in " ".join(
+            str(item.get(field) or "") for field in ("name", "summary", "description", "owner", "category")
+        ).casefold()]
     rows.sort(key=lambda item: str(item.get("name", "")).casefold())
     return rows[:max(1, min(limit, 200))]
 
+
+def scout_catalog_payload() -> dict[str, Any]:
+    by_repo: dict[str, dict[str, Any]] = {}
+    for item in read_mirror_catalog():
+        key = str(item.get("repository_url") or item.get("slug") or item.get("id") or "").rstrip("/").lower()
+        if key:
+            by_repo[key] = {**item, "artifacts": list(item.get("artifacts") or [])}
+
+    for item in database_catalog_rows():
+        artifacts = list(item.get("artifacts") or [])
+        project_kind = str(item.get("project_kind") or "unknown")
+        if not artifacts and project_kind in {"library", "framework", "documentation", "service"}:
+            continue
+        key = str(item.get("repository_url") or item.get("slug") or item.get("id") or "").rstrip("/").lower()
+        if not key:
+            continue
+        previous = by_repo.get(key)
+        if previous is None:
+            by_repo[key] = item
+            continue
+        merged = list(previous.get("artifacts") or [])
+        known = {str(artifact.get("sha256") or artifact.get("id")) for artifact in merged}
+        for artifact in artifacts:
+            digest = str(artifact.get("sha256") or artifact.get("id"))
+            if digest and digest not in known:
+                merged.append(artifact)
+                known.add(digest)
+        by_repo[key] = {**previous, **item, "artifacts": merged}
+
+    manifest_metadata: dict[str, Any] = {}
+    try:
+        manifest_metadata = json.loads(MIRROR_CATALOG.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        pass
+    apps = list(by_repo.values())
+    apps.sort(key=lambda item: str(item.get("name") or "").casefold())
+    return {
+        "apps": apps,
+        "count": len(apps),
+        "generated_at": utc_now(),
+        "ai_status": manifest_metadata.get("ai_status") if isinstance(manifest_metadata, dict) else None,
+    }
 
 def find_mirrored_artifact(artifact_id: str) -> dict | None:
     for app_record in read_mirror_catalog():
@@ -165,6 +236,34 @@ def find_mirrored_artifact(artifact_id: str) -> dict | None:
 def health():
     count = sum(1 for item in read_mirror_catalog() if item.get("artifacts")) or len(db.list_apps(limit=200))
     return {"status": "ok", "name": settings.app_name, "version": "0.2.0-alpha", "catalog_count": count}
+
+
+_scout_wake_requests: dict[str, float] = {}
+
+
+@app.get("/api/v1/scout/status")
+def scout_status():
+    return autonomous_scout_status()
+
+
+@app.post("/api/v1/scout/wake")
+def scout_wake(request: Request):
+    address = client_ip(request)
+    key = hashlib.sha256(address.encode("utf-8", errors="ignore")).hexdigest()
+    now = time.monotonic()
+    previous = _scout_wake_requests.get(key, 0.0)
+    if now - previous >= 10:
+        _scout_wake_requests[key] = now
+        if len(_scout_wake_requests) > 10000:
+            _scout_wake_requests.clear()
+        state = wake_autonomous_scout("storefront_open")
+        return {"accepted": True, "coalesced": False, "status": state}
+    return {"accepted": True, "coalesced": True, "status": autonomous_scout_status()}
+
+
+@app.get("/api/v1/scout/catalog")
+def scout_catalog():
+    return scout_catalog_payload()
 
 
 @app.get("/api/v1/internal/github-actions/ai-status")
@@ -573,10 +672,12 @@ def refresh_ai_models(x_apphoryn_admin: str | None = Header(default=None), reque
 @app.on_event("startup")
 def start_background_agent_workers():
     start_agent_workers()
+    start_autonomous_scout()
 
 
 @app.on_event("shutdown")
 def stop_background_agent_workers():
+    stop_autonomous_scout()
     stop_agent_workers()
 
 
