@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T17:31:51.153811+00:00",
+  "generated_at": "2026-11-25T17:34:59.752933+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -5708,17 +5708,17 @@
         }
       },
       "description_translations": {},
-      "translation_status": "english_only",
+      "translation_status": "pending",
       "ai_provider": null,
       "ai_model": null,
       "icon_url": "https://avatars.githubusercontent.com/u/32591856?v=4",
       "repository_url": "https://github.com/electerm/electerm",
       "github_repo_id": "106087444",
-      "source_updated_at": "2026-11-25T04:15:31Z",
+      "source_updated_at": "2026-11-25T16:34:27Z",
       "homepage_url": "https://electerm.org",
       "owner": "electerm",
       "default_branch": "master",
-      "source_commit_sha": "c35b34f8b8ca54f917e313b82dce3025eb439c63",
+      "source_commit_sha": "86150af3c69cd595028f3ea3e11502e90ee324ac",
       "license_text": "The MIT License (MIT)\n\nCopyright (c) since 2017~ ZHAO Xudong <zxdong@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
