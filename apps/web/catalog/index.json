@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:05:39.924671+00:00",
+  "generated_at": "2026-11-25T21:05:53.042535+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -24307,7 +24307,7 @@
         }
       },
       "description_translations": {},
-      "translation_status": "english_only",
+      "translation_status": "pending",
       "ai_provider": null,
       "ai_model": null,
       "icon_url": "https://raw.githubusercontent.com/Davidix07TV/Nest-Music/master/desktop/src-tauri/icons/icon.png",
