@@ -8112,6 +8112,17 @@
       "platforms": [
         "android",
         "windows"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "785414c5de77d4a77ef12d7f0ebe000b9ac6c6d0",
+          "targets": [
+            "linux",
+            "macos"
+          ],
+          "requested_at": "2026-11-25T19:25:13.204244+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
       ]
     },
     {
