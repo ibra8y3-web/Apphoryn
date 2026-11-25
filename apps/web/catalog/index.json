@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:07:29.654543+00:00",
+  "generated_at": "2026-11-25T22:07:46.476714+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -9405,6 +9405,81 @@
           "signer_certificate_sha256": "b2f71932e9d72f756ed3c44549feaae9ea34e435289fc3f23d3cd16baa4289bc",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-d-gibr1l-comfort-v1.4.0/Comfort-1.4.0-x86_64.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-d-gibr1l-comfort-v1.4.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "playertwo1-controlegithub",
+      "slug": "playertwo1-controlegithub",
+      "name": "controlegithub",
+      "summary": "Open-source other project maintained by playertwo1.",
+      "description": "Open-source other project maintained by playertwo1.",
+      "translations": {
+        "en": {
+          "summary": "Open-source other project maintained by playertwo1.",
+          "description": "Open-source other project maintained by playertwo1."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/playertwo1/controlegithub/main/app/src/main/res/drawable-nodpi/ic_launcher_legacy.png",
+      "repository_url": "https://github.com/playertwo1/controlegithub",
+      "github_repo_id": "1402038819",
+      "source_updated_at": "2026-11-05T20:21:12Z",
+      "homepage_url": null,
+      "owner": "playertwo1",
+      "default_branch": "main",
+      "source_commit_sha": "bfe0025713243aabe72b6cdf6a18bde8d2fc3f28",
+      "license_text": "MIT License\n\nCopyright (c) 2026 ControleGitHub Contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "github",
+        "github-actions",
+        "github-api",
+        "github-client",
+        "github-issues",
+        "jetpack-compose",
+        "kanban",
+        "kotlin",
+        "markdown-viewer",
+        "material3",
+        "offline-first"
+      ],
+      "latest_version": "v2.7.0",
+      "release_url": "https://github.com/playertwo1/controlegithub/releases/tag/v2.7.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-playertwo1-controlegithub-v2.7.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-playertwo1-controlegithub-v2.7.0/THIRD-PARTY-NOTICE-playertwo1-controlegithub.txt",
+      "artifacts": [
+        {
+          "id": "9dbd77ffb54a646faa132d25e0182e3c389234987ca81a0ce7e9f68be77f3217",
+          "filename": "ControleGitHub-v2.7.0.apk",
+          "original_filename": "ControleGitHub-v2.7.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v2.7.0",
+          "size_bytes": 12850395,
+          "sha256": "9dbd77ffb54a646faa132d25e0182e3c389234987ca81a0ce7e9f68be77f3217",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "c622fc491da08aee1b9e196db0cc7ba92784eefc02c047c387049042ad0aa2ec",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-playertwo1-controlegithub-v2.7.0/ControleGitHub-v2.7.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-playertwo1-controlegithub-v2.7.0"
         }
       ],
       "platforms": [
