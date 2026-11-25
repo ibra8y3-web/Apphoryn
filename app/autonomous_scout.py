@@ -12,6 +12,7 @@ from .database import db, utc_now
 from .domain import license_allows_redistribution
 from .github_client import GitHubClient, GitHubError
 from .services import CatalogService
+from .repository_archive import repository_archive
 
 
 DEFAULT_QUERIES = (
@@ -213,6 +214,15 @@ class AutonomousScout:
         result = self.github.search_repositories(query=query, page=1, per_page=100)
         repositories = result.get("items") if isinstance(result, dict) else []
         repositories = repositories if isinstance(repositories, list) else []
+        # Keep every discovered public candidate in the metadata archive, independently
+        # of whether its license permits mirroring a downloadable binary.
+        archive_result = repository_archive.enqueue_batch(repositories)
+        self.state["archive_candidates_queued"] = (
+            int(self.state.get("archive_candidates_queued") or 0) + archive_result["queued"]
+        )
+        self.state["archive_candidates_refreshed"] = (
+            int(self.state.get("archive_candidates_refreshed") or 0) + archive_result["refreshed"]
+        )
         known_manifest = self._known_manifest_repositories()
         imported_this_scan = False
         new_candidates = 0

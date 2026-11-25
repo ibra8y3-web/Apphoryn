@@ -37,6 +37,11 @@ from .autonomous_scout import (
     stop_autonomous_scout,
     wake_autonomous_scout,
 )
+from .repository_archive import (
+    repository_archive,
+    start_repository_archive_worker,
+    stop_repository_archive_worker,
+)
 
 app = FastAPI(title="Apphoryn API", version="0.2.0-alpha", description="Discover, build, verify and distribute open-source software.")
 cors_origins = [origin.strip() for origin in os.getenv("APPHORYN_CORS_ORIGINS", "").split(",") if origin.strip()]
@@ -80,6 +85,10 @@ class InternalCatalogTranslationRequest(BaseModel):
     description: str = Field(min_length=1, max_length=1200)
     translations: dict[str, Any] = Field(default_factory=dict)
     description_translations: dict[str, Any] = Field(default_factory=dict)
+
+
+class InternalArchiveCandidatesRequest(BaseModel):
+    repositories: list[dict[str, Any]] = Field(default_factory=list, max_length=500)
 
 
 class InternalBuildRecoveryRequest(BaseModel):
@@ -266,11 +275,57 @@ def scout_catalog():
     return scout_catalog_payload()
 
 
+@app.get("/api/v1/archive/stats")
+def archive_stats():
+    return repository_archive.stats()
+
+
+@app.get("/api/v1/archive/repositories")
+def archive_repositories(
+    q: str | None = Query(default=None, max_length=120),
+    limit: int = Query(default=50, ge=1, le=100),
+    offset: int = Query(default=0, ge=0),
+):
+    items = repository_archive.list_repositories(q or "", limit, offset)
+    return {"items": items, "count": len(items), "limit": limit, "offset": offset}
+
+
+@app.get("/api/v1/archive/repositories/{repository_id}")
+def archive_repository_detail(repository_id: str):
+    item = repository_archive.get_repository(repository_id)
+    if item is None or item.get("classification_status") != "application":
+        raise HTTPException(404, "Archived application was not found.")
+    return item
+
+
+@app.get("/api/v1/archive/repositories/{repository_id}/versions")
+def archive_repository_versions(
+    repository_id: str,
+    limit: int = Query(default=100, ge=1, le=100),
+    offset: int = Query(default=0, ge=0),
+):
+    item = repository_archive.get_repository(repository_id)
+    if item is None or item.get("classification_status") != "application":
+        raise HTTPException(404, "Archived application was not found.")
+    versions = repository_archive.list_versions(repository_id, limit, offset)
+    return {"repository": item, "items": versions, "count": len(versions), "limit": limit, "offset": offset}
+
+
 @app.get("/api/v1/internal/github-actions/ai-status")
 def github_actions_ai_status(authorization: str | None = Header(default=None)):
     """Expose credential-free model status only to approved Apphoryn Actions workflows."""
     require_github_actions_workflow(authorization)
     return ai_router.public_model_catalog(force=True)
+
+
+@app.post("/api/v1/internal/github-actions/archive-candidates")
+def github_actions_archive_candidates(
+    payload: InternalArchiveCandidatesRequest,
+    authorization: str | None = Header(default=None),
+):
+    """Accept bounded metadata batches only from the approved Global Scout workflow."""
+    require_github_actions_workflow(authorization)
+    return repository_archive.enqueue_batch(payload.repositories)
 
 
 @app.post("/api/v1/internal/github-actions/catalog-description")
@@ -671,6 +726,7 @@ def refresh_ai_models(x_apphoryn_admin: str | None = Header(default=None), reque
 
 @app.on_event("startup")
 def start_background_agent_workers():
+    start_repository_archive_worker()
     start_agent_workers()
     start_autonomous_scout()
 
@@ -678,6 +734,7 @@ def start_background_agent_workers():
 @app.on_event("shutdown")
 def stop_background_agent_workers():
     stop_autonomous_scout()
+    stop_repository_archive_worker()
     stop_agent_workers()
 
 
