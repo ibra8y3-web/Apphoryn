@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T08:47:17.587416+00:00",
+  "generated_at": "2026-11-25T08:47:24.617740+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -4928,6 +4928,77 @@
       "platforms": [
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "hostu404-trillionairetracker",
+      "slug": "hostu404-trillionairetracker",
+      "name": "TrillionaireTracker",
+      "summary": "I could cross the desert, stars and galaxies. But I will find you, in the energy. Oh, gather round me and listen while I speak, of a war, where Hell is six feet deep.",
+      "description": "I could cross the desert, stars and galaxies. But I will find you, in the energy. Oh, gather round me and listen while I speak, of a war, where Hell is six feet deep.",
+      "translations": {
+        "en": {
+          "summary": "I could cross the desert, stars and galaxies. But I will find you, in the energy. Oh, gather round me and listen while I speak, of a war, where Hell is six feet deep.",
+          "description": "I could cross the desert, stars and galaxies. But I will find you, in the energy. Oh, gather round me and listen while I speak, of a war, where Hell is six feet deep."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/320134896?v=4",
+      "repository_url": "https://github.com/Hostu404/TrillionaireTracker",
+      "github_repo_id": "1378760104",
+      "source_updated_at": "2026-11-12T16:45:54Z",
+      "homepage_url": null,
+      "owner": "Hostu404",
+      "default_branch": "main",
+      "source_commit_sha": "6c7219d2fb04734d686cf653e98dc6eeb87f3b8a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Hostu404\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "elon",
+        "musk",
+        "tracker",
+        "tracker-application",
+        "trackers",
+        "trillionaire"
+      ],
+      "latest_version": "v1.4.0",
+      "release_url": "https://github.com/Hostu404/TrillionaireTracker/releases/tag/v1.4.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hostu404-trillionairetracker-v1.4.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hostu404-trillionairetracker-v1.4.0/THIRD-PARTY-NOTICE-hostu404-trillionairetracker.txt",
+      "artifacts": [
+        {
+          "id": "56899235c3561b8c765efe6ac2130301e174993c22e3554b0b0b68d570c07e16",
+          "filename": "app-release.apk",
+          "original_filename": "app-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.4.0",
+          "size_bytes": 1420399,
+          "sha256": "56899235c3561b8c765efe6ac2130301e174993c22e3554b0b0b68d570c07e16",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "62564b49d877d9e0353709f1bf704e99d0e602cbcb1cf0107868640112698fcc",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hostu404-trillionairetracker-v1.4.0/app-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hostu404-trillionairetracker-v1.4.0"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
