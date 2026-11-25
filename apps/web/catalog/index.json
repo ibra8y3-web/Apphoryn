@@ -3047,7 +3047,18 @@
       "latest_version": "v1.2.1",
       "release_url": "https://github.com/MT25MB/SimpleOS/releases/tag/v1.2.1",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "18a27fa0ba97a45a75954cb36c12c421080607d7",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-25T01:14:53.434303+00:00"
+        }
+      ]
     },
     {
       "id": "openskye-labs-skyelab",
