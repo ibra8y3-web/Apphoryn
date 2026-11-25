@@ -106,6 +106,62 @@ def remove_upstream_android_signing_gate(source: Path) -> int:
     return removed
 
 
+def install_android_javascript_dependencies(source: Path, project: Path) -> bool:
+    """Install app-local JavaScript dependencies required by React Native Gradle plugins.
+
+    Only run package installation when the Android settings file explicitly references
+    React Native's settings plugin or a node_modules included build. The nearest ancestor
+    package manifest containing React Native determines the package-manager working dir.
+    """
+    settings_files = [project / "settings.gradle", project / "settings.gradle.kts"]
+    settings_text = "\n".join(
+        path.read_text(encoding="utf-8", errors="replace")
+        for path in settings_files if path.is_file() and not path.is_symlink()
+    )
+    requires_node_modules = (
+        "@react-native/gradle-plugin" in settings_text
+        or "com.facebook.react.settings" in settings_text
+        or "node_modules" in settings_text
+    )
+    if not requires_node_modules:
+        return False
+
+    source_root = source.resolve()
+    current = project.resolve().parent
+    while current == source_root or source_root in current.parents:
+        manifest = current / "package.json"
+        if manifest.is_file() and not manifest.is_symlink():
+            try:
+                package_data = json.loads(manifest.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError) as exc:
+                raise RuntimeError(f"Could not read React Native package manifest {manifest}: {exc}") from exc
+            if isinstance(package_data, dict):
+                dependencies: dict[str, object] = {}
+                for key in ("dependencies", "devDependencies", "optionalDependencies"):
+                    value = package_data.get(key)
+                    if isinstance(value, dict):
+                        dependencies.update(value)
+                if "react-native" in dependencies or "@react-native/gradle-plugin" in dependencies:
+                    if (current / "package-lock.json").is_file():
+                        command = ["npm", "ci", "--no-audit", "--no-fund"]
+                    elif (current / "yarn.lock").is_file():
+                        command = ["yarn", "install", "--frozen-lockfile"]
+                    elif (current / "pnpm-lock.yaml").is_file():
+                        command = ["corepack", "pnpm", "install", "--frozen-lockfile"]
+                    else:
+                        command = ["npm", "install", "--no-audit", "--no-fund", "--package-lock=false"]
+                    print(f"Installing React Native dependencies from {current}", flush=True)
+                    run(command, cwd=current, timeout=3600)
+                    return True
+        if current == source_root:
+            break
+        current = current.parent
+
+    raise RuntimeError(
+        "Android Gradle settings require React Native node_modules, but no ancestor "
+        "package.json with a React Native dependency and supported package manager was found."
+    )
+
 def build_android(source: Path, output: Path) -> None:
     remove_upstream_android_signing_gate(source)
     wrappers = list(source.glob("**/gradlew"))[:10]
@@ -113,8 +169,14 @@ def build_android(source: Path, output: Path) -> None:
     if not wrappers:
         raise RuntimeError("No Gradle wrapper found; Android adapter cannot build this repository.")
     apksigner = find_apksigner()
+    installed_dependency_roots: set[Path] = set()
     for wrapper in wrappers:
         project = wrapper.parent
+        dependency_root = next((parent.resolve() for parent in [project.parent, *project.parents]
+                                if (parent / "package.json").is_file()), None)
+        if dependency_root and dependency_root not in installed_dependency_roots:
+            if install_android_javascript_dependencies(source, project):
+                installed_dependency_roots.add(dependency_root)
         wrapper.chmod(wrapper.stat().st_mode | 0o111)
         run([str(wrapper), "--no-daemon", "--stacktrace", "assembleRelease"], cwd=project, timeout=2400)
         release_apks = list(project.glob("**/build/outputs/apk/**/*.apk"))

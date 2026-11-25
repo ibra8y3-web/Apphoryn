@@ -3,7 +3,11 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from scripts.ci_build import command_for_runner, remove_upstream_android_signing_gate
+from scripts.ci_build import (
+    command_for_runner,
+    install_android_javascript_dependencies,
+    remove_upstream_android_signing_gate,
+)
 
 
 class BuildRunnerTests(unittest.TestCase):
@@ -20,6 +24,42 @@ class BuildRunnerTests(unittest.TestCase):
     def test_non_windows_commands_are_unchanged(self):
         command = ["npm", "ci"]
         self.assertIs(command_for_runner(command, is_windows=False), command)
+
+    def test_react_native_android_installs_nearest_locked_package_before_gradle(self):
+        with tempfile.TemporaryDirectory() as folder:
+            source = Path(folder)
+            project = source / "apps" / "mobile" / "android"
+            project.mkdir(parents=True)
+            (project / "settings.gradle").write_text(
+                'pluginManagement { includeBuild("../node_modules/@react-native/gradle-plugin") }\n'
+                'plugins { id("com.facebook.react.settings") }\n',
+                encoding="utf-8",
+            )
+            package_root = project.parent
+            (package_root / "package.json").write_text(
+                '{"dependencies":{"react-native":"0.82.1"}}', encoding="utf-8"
+            )
+            (package_root / "package-lock.json").write_text('{}', encoding="utf-8")
+
+            with patch("scripts.ci_build.run") as run_mock:
+                installed = install_android_javascript_dependencies(source, project)
+
+            self.assertTrue(installed)
+            run_mock.assert_called_once_with(
+                ["npm", "ci", "--no-audit", "--no-fund"],
+                cwd=package_root,
+                timeout=3600,
+            )
+
+    def test_android_without_react_native_settings_skips_javascript_install(self):
+        with tempfile.TemporaryDirectory() as folder:
+            source = Path(folder)
+            project = source / "android"
+            project.mkdir(parents=True)
+            (project / "settings.gradle").write_text("rootProject.name = 'Native'", encoding="utf-8")
+            with patch("scripts.ci_build.run") as run_mock:
+                self.assertFalse(install_android_javascript_dependencies(source, project))
+            run_mock.assert_not_called()
 
     def test_android_signing_guard_is_removed_only_from_disposable_clone(self):
         guard = '''tasks.matching { it.name == "packageRelease" || it.name == "packageReleaseBundle" }.configureEach {
