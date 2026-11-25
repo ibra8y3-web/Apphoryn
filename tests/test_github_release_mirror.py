@@ -35,6 +35,18 @@ def minimal_pe(path: Path) -> str:
 
 
 class GitHubReleaseMirrorTests(unittest.TestCase):
+    def test_read_catalog_treats_zero_byte_manifest_as_empty_and_keeps_sha(self):
+        mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn")
+        mirror.request = Mock(return_value={
+            "type": "file", "encoding": "none", "size": 0,
+            "content": "", "sha": "empty-blob-sha",
+        })
+
+        manifest, sha = mirror._read_catalog()
+
+        self.assertEqual(manifest, {"schema_version": 1, "generated_at": None, "apps": []})
+        self.assertEqual(sha, "empty-blob-sha")
+
     def test_source_only_import_does_not_create_license_notice_release(self):
         mirror = GitHubReleaseMirror("test-token", "owner/Apphoryn")
         mirror._read_catalog = Mock(return_value=({"schema_version": 1, "apps": []}, None))

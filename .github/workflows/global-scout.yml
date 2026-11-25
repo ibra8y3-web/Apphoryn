@@ -1,6 +1,12 @@
 name: Apphoryn Global Scout — incremental public repository crawl
 
 on:
+  push:
+    branches: [main, master]
+    paths:
+      - '.github/workflows/global-scout.yml'
+      - 'app/github_release_mirror.py'
+      - 'scripts/global_scout.py'
   schedule:
     - cron: '17 */2 * * *'
   workflow_dispatch:

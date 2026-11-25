@@ -35,7 +35,10 @@ def load_catalog_index(path: Path) -> list[dict[str, Any]]:
     if not path.exists():
         return []
     try:
-        payload = json.loads(path.read_text(encoding="utf-8"))
+        raw = path.read_text(encoding="utf-8")
+        if not raw.strip():
+            return []
+        payload = json.loads(raw)
     except (OSError, json.JSONDecodeError) as exc:
         raise RuntimeError(f"Apphoryn catalog index cannot be read safely: {exc}") from exc
     rows = payload.get("apps", []) if isinstance(payload, dict) else []

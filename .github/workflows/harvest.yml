@@ -7,6 +7,12 @@ on:
       - 'apps/web/catalog/index.json'
       - 'data/scout-state.json'
       - 'data/scout-retry.json'
+      - '.github/workflows/global-scout.yml'
+      - '.github/workflows/harvest.yml'
+      - 'app/github_release_mirror.py'
+      - 'scripts/global_scout.py'
+      - 'tests/test_global_scout.py'
+      - 'tests/test_github_release_mirror.py'
   schedule:
     - cron: '23 * * * *'
   workflow_dispatch:
@@ -80,7 +86,11 @@ jobs:
             topic:windows-app
             topic:macos-app
             topic:opensource
-          APPHORYN_MAX_DISCOVERY_PER_RUN: ${{ vars.APPHORYN_MAX_DISCOVERY_PER_RUN || '30' }}
+            topic:command-line-tool
+            topic:productivity-app
+            topic:utility-app
+            topic:open-source-app
+          APPHORYN_MAX_DISCOVERY_PER_RUN: ${{ vars.APPHORYN_MAX_DISCOVERY_PER_RUN || '60' }}
           APPHORYN_MAX_AUTO_BUILDS_PER_RUN: ${{ vars.APPHORYN_MAX_AUTO_BUILDS_PER_RUN || '3' }}
           APPHORYN_AI_PROVIDER_PRIORITY: ${{ vars.APPHORYN_AI_PROVIDER_PRIORITY || 'gemini,groq,xai,openrouter,cloudflare,comet' }}
           APPHORYN_AI_API_KEY: ${{ secrets.APPHORYN_AI_API_KEY }}

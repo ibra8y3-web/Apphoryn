@@ -179,9 +179,15 @@ class GitHubReleaseMirror:
         result = self.request("GET", f"/repos/{self.full_name}/contents/{self.catalog_path}?ref={urllib.parse.quote(self.branch)}", allow_404=True)
         if not result:
             return {"schema_version": 1, "generated_at": None, "apps": []}, None
-        if result.get("encoding") != "base64" or not result.get("content"):
+        content = result.get("content")
+        if not content and str(result.get("size", "")) == "0":
+            # GitHub returns zero-byte Contents files with no base64 payload.
+            # Treat this as an empty first-run catalog, but retain the SHA so
+            # the first publisher updates this file instead of racing to create it.
+            return {"schema_version": 1, "generated_at": None, "apps": []}, result.get("sha")
+        if result.get("encoding") != "base64" or not content:
             raise GitHubMirrorError("Existing Apphoryn catalog manifest is not a base64 file response.")
-        raw = base64.b64decode(result["content"].replace("\n", ""))
+        raw = base64.b64decode(content.replace("\n", ""))
         try:
             manifest = json.loads(raw.decode("utf-8"))
         except (UnicodeDecodeError, json.JSONDecodeError) as exc:

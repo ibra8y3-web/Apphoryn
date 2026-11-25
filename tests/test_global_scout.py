@@ -5,6 +5,7 @@ from pathlib import Path
 
 from scripts.global_scout import (
     known_current,
+    load_catalog_index,
     load_retry_queue,
     repo_key,
     retry_record,
@@ -13,6 +14,13 @@ from scripts.global_scout import (
 
 
 class GlobalScoutTests(unittest.TestCase):
+    def test_zero_byte_catalog_manifest_is_a_valid_empty_starting_point(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "index.json"
+            path.write_text("", encoding="utf-8")
+
+            self.assertEqual(load_catalog_index(path), [])
+
     def test_repository_key_normalizes_trailing_slash_and_git_suffix(self):
         self.assertEqual(repo_key("https://github.com/Owner/Repo.git/"), "https://github.com/owner/repo")
 
