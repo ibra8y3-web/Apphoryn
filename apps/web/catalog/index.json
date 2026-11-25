@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:37:57.944371+00:00",
+  "generated_at": "2026-11-25T09:38:06.312589+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -1969,6 +1969,80 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "yagues1-duovra",
+      "slug": "yagues1-duovra",
+      "name": "duovra",
+      "summary": "Windows desktop workspace for Claude Code and OpenAI Codex, featuring shared conversations, local projects, and an integrated Workbench.",
+      "description": "Windows desktop workspace for Claude Code and OpenAI Codex, featuring shared conversations, local projects, and an integrated Workbench.",
+      "translations": {
+        "en": {
+          "summary": "Windows desktop workspace for Claude Code and OpenAI Codex, featuring shared conversations, local projects, and an integrated Workbench.",
+          "description": "Windows desktop workspace for Claude Code and OpenAI Codex, featuring shared conversations, local projects, and an integrated Workbench."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/yagues1/duovra/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/yagues1/duovra",
+      "github_repo_id": "1454167845",
+      "source_updated_at": "2026-11-23T17:01:29Z",
+      "homepage_url": null,
+      "owner": "yagues1",
+      "default_branch": "main",
+      "source_commit_sha": "e9d5842195a3b0ce864c601de29117b5ff8ab502",
+      "license_text": "MIT License\n\nCopyright (c) 2026 The Duovra contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "ai-agents",
+        "ai-coding",
+        "claude-code",
+        "codex",
+        "desktop-app",
+        "liquid-glass",
+        "open-source",
+        "react",
+        "rust",
+        "tauri",
+        "typescript",
+        "windows"
+      ],
+      "latest_version": "v1.0.7",
+      "release_url": "https://github.com/yagues1/duovra/releases/tag/v1.0.7",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yagues1-duovra-v1.0.7",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yagues1-duovra-v1.0.7/THIRD-PARTY-NOTICE-yagues1-duovra.txt",
+      "artifacts": [
+        {
+          "id": "903169a10a91b9a4701fe2d09305006a6034ec85bc48b4b9665996c441468594",
+          "filename": "Duovra-1.0.7-windows-x64-setup.exe",
+          "original_filename": "Duovra-1.0.7-windows-x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.0.7",
+          "size_bytes": 5149496,
+          "sha256": "903169a10a91b9a4701fe2d09305006a6034ec85bc48b4b9665996c441468594",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yagues1-duovra-v1.0.7/Duovra-1.0.7-windows-x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yagues1-duovra-v1.0.7"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
