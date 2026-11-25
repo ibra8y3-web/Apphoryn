@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10151d">
+  <title>Apphoryn — AI Workforce</title>
+  <link rel="stylesheet" href="/agents.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <a class="brand" href="/"><span class="brand-mark">A</span><span>apphoryn<span class="dot">.</span><small>AI WORKFORCE</small></span></a>
+      <a class="back" href="/">العودة إلى المتجر ↗</a>
+    </header>
+
+    <section class="intro">
+      <span class="eyebrow">NIEBEX · CENTRAL AI BRAIN</span>
+      <h1>مركز قيادة الذكاء الاصطناعي</h1>
+      <p>إدارة الموظفين والمهام والنماذج والذاكرة والعمال الخلفيين. كل حالة معروضة تأتي من الـBackend وقاعدة البيانات الفعلية.</p>
+    </section>
+
+    <section class="panel auth-panel">
+      <div><h2>اتصال الإدارة</h2><p>أدخل رمز APPHORYN_ADMIN_TOKEN. لا يتم حفظه في المتصفح أو قاعدة البيانات.</p></div>
+      <div class="auth-row">
+        <input id="adminToken" type="password" autocomplete="off" placeholder="رمز الإدارة">
+        <button id="connectButton" class="primary">اتصال وفحص النظام</button>
+      </div>
+      <p id="connectionStatus" class="notice">لم يتم الاتصال بعد.</p>
+    </section>
+
+    <section class="metrics" id="metrics">
+      <article class="metric"><span>مهام كلية</span><b id="runsTotal">—</b></article>
+      <article class="metric"><span>مهام نشطة</span><b id="runsActive">—</b></article>
+      <article class="metric"><span>مهام مكتملة</span><b id="runsCompleted">—</b></article>
+      <article class="metric"><span>سجلات الذاكرة</span><b id="memoryCount">—</b></article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><span class="eyebrow">TASK QUEUE</span><h2>إرسال مهمة إلى Niebex</h2><p>سيخطط العقل المركزي المهمة ويوزعها على الموظفين المناسبين.</p></div></div>
+      <form id="taskForm">
+        <label for="taskGoal">المهمة المطلوبة</label>
+        <textarea id="taskGoal" minlength="8" maxlength="12000" required placeholder="اكتب ما تريد من Apphoryn تنفيذه أو تحليله..."></textarea>
+        <div class="form-row">
+          <label>الأولوية
+            <select id="priority"><option value="5">عادية</option><option value="8">مرتفعة</option><option value="10">عاجلة</option><option value="2">منخفضة</option></select>
+          </label>
+          <label class="check"><input id="externalApproval" type="checkbox"><span>أوافق على الاستيراد الحقيقي أو إرسال مهمة بناء إلى GitHub Actions عند الحاجة</span></label>
+          <button type="submit" class="primary" id="submitTask">إرسال المهمة</button>
+        </div>
+        <p class="muted">من دون تحديد الموافقة، لن ينفذ النظام استيرادًا أو تشغيل بناء خارجيًا. ولا يسمح هذا الخيار باستخدام نموذج مدفوع.</p>
+      </form>
+      <p id="taskMessage" class="notice"></p>
+    </section>
+
+    <section class="grid-two">
+      <section class="panel">
+        <div class="panel-head"><div><span class="eyebrow">AI EMPLOYEES</span><h2>فريق الموظفين</h2><p>التعريفات والصلاحيات المسجلة في النظام.</p></div></div>
+        <div id="agentsList" class="agents-list"><p class="muted">اتصل لعرض الموظفين.</p></div>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><div><span class="eyebrow">BACKGROUND WORKERS</span><h2>حالة العامل الخلفي</h2><p>آخر نبضة محفوظة من كل عامل.</p></div></div>
+        <div id="workersList" class="stack"><p class="muted">لا توجد بيانات بعد.</p></div>
+        <div class="divider"></div>
+        <div class="panel-head"><div><span class="eyebrow">SCHEDULER</span><h2>جدولة مهمة متكررة</h2><p>الجدولة محفوظة على الـBackend ولا تعتمد على بقاء الصفحة مفتوحة.</p></div></div>
+        <form id="scheduleForm">
+          <label for="scheduleGoal">مهمة الجدولة</label>
+          <textarea id="scheduleGoal" minlength="8" maxlength="12000" required placeholder="مثال: ابحث أسبوعيًا عن تطبيقات مفتوحة المصدر صغيرة..."></textarea>
+          <div class="form-row">
+            <label>التكرار بالساعات<input id="scheduleHours" type="number" min="1" max="720" value="24" required></label>
+            <button type="submit" class="secondary">حفظ الجدولة</button>
+          </div>
+        </form>
+        <div id="schedulesList" class="stack"></div>
+      </section>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head split"><div><span class="eyebrow">UNIVERSAL PROVIDER MANAGER</span><h2>مزودو الذكاء الاصطناعي</h2><p>فحص الاتصال الحقيقي واختبار توليد رد فعلي. المفاتيح لا تظهر هنا.</p></div><button id="refreshProviders" class="secondary" disabled>تحديث الفحص</button></div>
+      <div id="spendingBanner" class="notice">حماية الإنفاق: —</div>
+      <div id="providersList" class="provider-list"><p class="muted">اتصل لعرض حالة المزودين.</p></div>
+      <p class="muted">الحصة المتبقية والأسعار لا تُعرض إلا عندما يوفرها المزود بشكل موثوق. لا يعرض Apphoryn أرقامًا تقديرية على أنها بيانات حقيقية.</p>
+    </section>
+
+    <section class="grid-two">
+      <section class="panel">
+        <div class="panel-head"><div><span class="eyebrow">PERSISTENT TASKS</span><h2>سجل المهام</h2></div><button id="refreshAll" class="secondary" disabled>تحديث الكل</button></div>
+        <div id="runsList" class="stack"><p class="muted">لا توجد مهام بعد.</p></div>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><div><span class="eyebrow">AGENT HANDOFFS</span><h2>تفاصيل التنفيذ</h2></div></div>
+        <div id="taskDetails" class="stack"><p class="muted">اختر مهمة من السجل لعرض تسليمات الموظفين ونتائجهم.</p></div>
+      </section>
+    </section>
+
+    <footer>Apphoryn · جميع الحالات من النظام الحقيقي · لا توجد بيانات تجريبية</footer>
+  </main>
+  <script src="/agents.js"></script>
+</body>
+</html>
