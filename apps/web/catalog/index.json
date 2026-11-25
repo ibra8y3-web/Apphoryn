@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:06:13.526388+00:00",
+  "generated_at": "2026-11-25T19:10:38.511841+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -19124,6 +19124,83 @@
       ],
       "platforms": [
         "windows"
+      ]
+    },
+    {
+      "id": "aempiem-penumbra-e621",
+      "slug": "aempiem-penumbra-e621",
+      "name": "penumbra-e621",
+      "summary": "Unofficial e621 client for Android: a vertical, full-screen feed of images, GIFs and videos with tag lists and a personalized For-you list. Kotlin, Jetpack Compose, Media3.",
+      "description": "Unofficial e621 client for Android: a vertical, full-screen feed of images, GIFs and videos with tag lists and a personalized For-you list. Kotlin, Jetpack Compose, Media3.",
+      "translations": {
+        "en": {
+          "summary": "Unofficial e621 client for Android: a vertical, full-screen feed of images, GIFs and videos with tag lists and a personalized For-you list. Kotlin, Jetpack Compose, Media3.",
+          "description": "Unofficial e621 client for Android: a vertical, full-screen feed of images, GIFs and videos with tag lists and a personalized For-you list. Kotlin, Jetpack Compose, Media3."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/aempiem/penumbra-e621/main/logo/penumbra-logo.png",
+      "repository_url": "https://github.com/aempiem/penumbra-e621",
+      "github_repo_id": "1435196542",
+      "source_updated_at": "2026-10-27T04:02:27Z",
+      "homepage_url": null,
+      "owner": "aempiem",
+      "default_branch": "main",
+      "source_commit_sha": "52cd77080106f8ac9d4af7ac77ee7ffc36f07318",
+      "license_text": "MIT License\n\nCopyright (c) 2026 aempiem\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android",
+        "android-app",
+        "e621",
+        "e621-client",
+        "exoplayer",
+        "furry",
+        "jetpack-compose",
+        "kotlin",
+        "material3",
+        "media3",
+        "nsfw",
+        "reels",
+        "room-database",
+        "short-video",
+        "vertical-video"
+      ],
+      "latest_version": "v1.0",
+      "release_url": "https://github.com/aempiem/penumbra-e621/releases/tag/v1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aempiem-penumbra-e621-v1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aempiem-penumbra-e621-v1.0/THIRD-PARTY-NOTICE-aempiem-penumbra-e621.txt",
+      "artifacts": [
+        {
+          "id": "4670bd6c9a8a4addaf8def13ad814cdfba44ac5b9daf561c039f865d52e28073",
+          "filename": "Penumbra-1.0.apk",
+          "original_filename": "Penumbra-1.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0",
+          "size_bytes": 2745606,
+          "sha256": "4670bd6c9a8a4addaf8def13ad814cdfba44ac5b9daf561c039f865d52e28073",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "4b28fb519547a52edf146e9d030e8fd7914622e8e78d25d9d0bb8dd2af653ae1",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aempiem-penumbra-e621-v1.0/Penumbra-1.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aempiem-penumbra-e621-v1.0"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
