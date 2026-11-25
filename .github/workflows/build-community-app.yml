@@ -85,7 +85,6 @@ jobs:
           REPOSITORY_URL: ${{ inputs.repository_url }}
           GIT_REF: ${{ inputs.git_ref }}
           TARGET: ${{ matrix.target }}
-        env:
           APPHORYN_AI_SERVICE_URL: 'https://apphoryn-production.up.railway.app'
         run: >-
           python scripts/build_with_recovery.py
