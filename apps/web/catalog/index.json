@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:38:54.661735+00:00",
+  "generated_at": "2026-11-25T09:39:02.894698+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -1298,6 +1298,88 @@
       "platforms": [
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "aaditya-v-more-claude-graft",
+      "slug": "aaditya-v-more-claude-graft",
+      "name": "claude-graft",
+      "summary": "Run multiple Claude Desktop accounts side by side on Mac or Windows, and share their usage so Claude Code can carry on when one hits its limit. Free and open source.",
+      "description": "Run multiple Claude Desktop accounts side by side on Mac or Windows, and share their usage so Claude Code can carry on when one hits its limit. Free and open source.",
+      "translations": {
+        "en": {
+          "summary": "Run multiple Claude Desktop accounts side by side on Mac or Windows, and share their usage so Claude Code can carry on when one hits its limit. Free and open source.",
+          "description": "Run multiple Claude Desktop accounts side by side on Mac or Windows, and share their usage so Claude Code can carry on when one hits its limit. Free and open source."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/aaditya-v-more/claude-graft/main/docs/assets/icon.png",
+      "repository_url": "https://github.com/aaditya-v-more/claude-graft",
+      "github_repo_id": "1344282570",
+      "source_updated_at": "2026-11-24T22:53:10Z",
+      "homepage_url": "https://graft.aadityamore.com/",
+      "owner": "aaditya-v-more",
+      "default_branch": "main",
+      "source_commit_sha": "31ed0d603dee956eb2a50c11d9eb42070c3c9e20",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Aaditya Vitthal More\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "account-switcher",
+        "anthropic",
+        "claude",
+        "claude-ai",
+        "claude-code",
+        "claude-desktop",
+        "csharp",
+        "developer-tools",
+        "llm",
+        "macos",
+        "macos-app",
+        "menu-bar",
+        "multiple-accounts",
+        "swift",
+        "swiftui",
+        "usage-limits",
+        "usage-tracker",
+        "windows",
+        "windows-app",
+        "winui3"
+      ],
+      "latest_version": "v2.2.1",
+      "release_url": "https://github.com/aaditya-v-more/claude-graft/releases/tag/v2.2.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aaditya-v-more-claude-graft-v2.2.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aaditya-v-more-claude-graft-v2.2.1/THIRD-PARTY-NOTICE-aaditya-v-more-claude-graft.txt",
+      "artifacts": [
+        {
+          "id": "e60d8479d05c5610834c28d603de1857813215a64b17a0a31114939996ef62dc",
+          "filename": "ClaudeGraft-2.2.1.dmg",
+          "original_filename": "ClaudeGraft-2.2.1.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": null,
+          "version": "v2.2.1",
+          "size_bytes": 9302433,
+          "sha256": "e60d8479d05c5610834c28d603de1857813215a64b17a0a31114939996ef62dc",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aaditya-v-more-claude-graft-v2.2.1/ClaudeGraft-2.2.1.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aaditya-v-more-claude-graft-v2.2.1"
+        }
+      ],
+      "platforms": [
+        "macos"
       ]
     },
     {
