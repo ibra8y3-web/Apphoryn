@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:27:15.330753+00:00",
+  "generated_at": "2026-11-25T09:27:40.095342+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -1134,6 +1134,128 @@
       "platforms": [
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "internetdata-cli",
+      "slug": "internetdata-cli",
+      "name": "cli",
+      "summary": "Official CLI for the InternetData API: look up any IP address, AS or domain, and download the IP databases your organization licenses.",
+      "description": "Official CLI for the InternetData API: look up any IP address, AS or domain, and download the IP databases your organization licenses.",
+      "translations": {
+        "en": {
+          "summary": "Official CLI for the InternetData API: look up any IP address, AS or domain, and download the IP databases your organization licenses.",
+          "description": "Official CLI for the InternetData API: look up any IP address, AS or domain, and download the IP databases your organization licenses."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/184025186?v=4",
+      "repository_url": "https://github.com/internetdata/cli",
+      "github_repo_id": "871991160",
+      "source_updated_at": "2026-11-13T21:23:19Z",
+      "homepage_url": "https://internetdata.io",
+      "owner": "internetdata",
+      "default_branch": "main",
+      "source_commit_sha": "105b1bf7ecab8c69187ffc43de298452fb99fec5",
+      "license_text": "MIT License\n\nCopyright (c) 2025-now Mslm Dev\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "network",
+      "topics": [
+        "asn",
+        "cli",
+        "command-line-tool",
+        "geoip",
+        "go",
+        "golang",
+        "internetdata",
+        "ip-database",
+        "ip-intelligence"
+      ],
+      "latest_version": "v1.10.1",
+      "release_url": "https://github.com/internetdata/cli/releases/tag/v1.10.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-internetdata-cli-v1.10.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-internetdata-cli-v1.10.1/THIRD-PARTY-NOTICE-internetdata-cli.txt",
+      "artifacts": [
+        {
+          "id": "dca123f201fa9f261df181e26b171e26e794cc7f47c447e2c458af3e7d3f5939",
+          "filename": "internetdata_1.10.1_linux_386.deb",
+          "original_filename": "internetdata_1.10.1_linux_386.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": null,
+          "version": "v1.10.1",
+          "size_bytes": 3374100,
+          "sha256": "dca123f201fa9f261df181e26b171e26e794cc7f47c447e2c458af3e7d3f5939",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-internetdata-cli-v1.10.1/internetdata_1.10.1_linux_386.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-internetdata-cli-v1.10.1"
+        },
+        {
+          "id": "40501a420058f9b750488e7be778ba2ae343c3e67a20cbba8ad4ceb32cebb0ea",
+          "filename": "internetdata_1.10.1_linux_amd64.deb",
+          "original_filename": "internetdata_1.10.1_linux_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v1.10.1",
+          "size_bytes": 3451900,
+          "sha256": "40501a420058f9b750488e7be778ba2ae343c3e67a20cbba8ad4ceb32cebb0ea",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-internetdata-cli-v1.10.1/internetdata_1.10.1_linux_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-internetdata-cli-v1.10.1"
+        },
+        {
+          "id": "0680b79c91c388ca66ac4df3dfd2e66dc8437dd9acd87be741cb862e33f6f3aa",
+          "filename": "internetdata_1.10.1_linux_arm.deb",
+          "original_filename": "internetdata_1.10.1_linux_arm.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": null,
+          "version": "v1.10.1",
+          "size_bytes": 3332296,
+          "sha256": "0680b79c91c388ca66ac4df3dfd2e66dc8437dd9acd87be741cb862e33f6f3aa",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-internetdata-cli-v1.10.1/internetdata_1.10.1_linux_arm.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-internetdata-cli-v1.10.1"
+        },
+        {
+          "id": "37d77c6163632d24a25dffaff279a0090a41db230b52579683c26cf5d98370b7",
+          "filename": "internetdata_1.10.1_linux_arm64.deb",
+          "original_filename": "internetdata_1.10.1_linux_arm64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "arm64",
+          "version": "v1.10.1",
+          "size_bytes": 3104558,
+          "sha256": "37d77c6163632d24a25dffaff279a0090a41db230b52579683c26cf5d98370b7",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-internetdata-cli-v1.10.1/internetdata_1.10.1_linux_arm64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-internetdata-cli-v1.10.1"
+        }
+      ],
+      "platforms": [
+        "linux"
       ]
     },
     {
