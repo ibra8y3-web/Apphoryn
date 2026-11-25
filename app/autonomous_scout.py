@@ -234,11 +234,17 @@ class AutonomousScout:
                 "seen_at": utc_now(),
             }
             self._upsert_candidate(candidate)
-            if status in {"discovered", "update_available"}:
-                eligible_candidates.append(candidate)
 
         self.state["searches_completed"] = int(self.state.get("searches_completed") or 0) + 1
         self.state["total_discovered"] = int(self.state.get("total_discovered") or 0) + new_candidates
+        # Keep a durable candidate queue across rotating search topics. A result
+        # is not forgotten just because the next minute searches another topic.
+        eligible_candidates = [
+            row for row in self.state.get("candidates", [])
+            if row.get("status") in {"discovered", "update_available"}
+            and float(row.get("retry_after_epoch") or 0) <= time.time()
+            and row.get("license_eligible") is True
+        ]
         self._event(
             "search_completed",
             f"GitHub search completed: {len(repositories)} results, {new_candidates} new eligible candidates.",
@@ -255,6 +261,8 @@ class AutonomousScout:
                 repository_url = str(candidate["repository_url"])
                 self.state["phase"] = "importing"
                 self.state["current_query"] = query
+                self.state["last_import_epoch"] = time.time()
+                self.state["last_import_at"] = utc_now()
                 self._save()
                 try:
                     imported = self.catalog.import_repository(
@@ -265,8 +273,6 @@ class AutonomousScout:
                     artifacts = imported.get("artifacts") or []
                     self.state["total_imported"] = int(self.state.get("total_imported") or 0) + 1
                     self.state["total_packages"] = int(self.state.get("total_packages") or 0) + len(artifacts)
-                    self.state["last_import_at"] = utc_now()
-                    self.state["last_import_epoch"] = time.time()
                     candidate["status"] = "imported" if artifacts else "source_added_no_verified_package"
                     candidate["name"] = str(app_record.get("name") or candidate["name"])
                     self._upsert_candidate(candidate)
@@ -295,6 +301,7 @@ class AutonomousScout:
                         repository_url=repository_url,
                         name=candidate["name"],
                     )
+                    break
                 except Exception as exc:
                     candidate["status"] = "retry_pending"
                     candidate["reason"] = f"{type(exc).__name__}: {str(exc)[:240]}"
@@ -307,10 +314,10 @@ class AutonomousScout:
                         repository_url=repository_url,
                         name=candidate["name"],
                     )
-                    continue
+                    break
 
         self.state["last_completed_at"] = utc_now()
-        self.state["next_scan_at"] = utc_now()
+        self.state["next_scan_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(time.time() + 60))
         self.state["phase"] = "idle"
         self.state["current_query"] = None
         if not imported_this_scan and eligible_candidates and not may_import:
