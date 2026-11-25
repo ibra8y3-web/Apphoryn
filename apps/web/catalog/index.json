@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:07:47.784299+00:00",
+  "generated_at": "2026-11-25T04:07:58.720645+00:00",
   "apps": [
     {
       "id": "defunkt-ambition",
@@ -114,6 +114,53 @@
       "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
       "category": "other",
       "topics": [],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "collectiveidea-audited",
+      "slug": "collectiveidea-audited",
+      "artifacts": [],
+      "name": "audited",
+      "summary": "Audited (formerly acts_as_audited) is an ORM extension that logs all changes to your Rails models.",
+      "description": "Audited (formerly acts_as_audited) is an ORM extension that logs all changes to your Rails models.",
+      "translations": {
+        "en": {
+          "summary": "Audited (formerly acts_as_audited) is an ORM extension that logs all changes to your Rails models.",
+          "description": "Audited (formerly acts_as_audited) is an ORM extension that logs all changes to your Rails models."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/128?v=4",
+      "repository_url": "https://github.com/collectiveidea/audited",
+      "github_repo_id": "363",
+      "source_updated_at": "2026-11-23T12:02:57Z",
+      "homepage_url": null,
+      "owner": "collectiveidea",
+      "default_branch": "main",
+      "source_commit_sha": "dbf8432604ec97734bcfb3dc6df61f4faa0d1b84",
+      "license_text": "Copyright © 2010 Brandon Keepers - Collective Idea\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "category": "other",
+      "topics": [
+        "activerecord",
+        "audit",
+        "audit-log",
+        "audit-trail",
+        "auditing",
+        "rails",
+        "ruby"
+      ],
       "latest_version": null,
       "release_url": null,
       "platforms": [],
