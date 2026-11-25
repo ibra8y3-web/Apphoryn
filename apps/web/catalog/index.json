@@ -12615,7 +12615,17 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "8b616c3f07840e7eb6a8f485a508cc853f057438",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-25T20:53:18.459045+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "huskyvoice-foldberry",
