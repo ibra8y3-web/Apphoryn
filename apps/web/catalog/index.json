@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:06:58.514447+00:00",
+  "generated_at": "2026-11-25T04:07:03.216132+00:00",
   "apps": [
     {
       "id": "defunkt-ambition",
@@ -830,6 +830,45 @@
       "classification_source": "heuristic",
       "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
       "category": "other",
+      "topics": [],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "mojombo-yaws",
+      "slug": "mojombo-yaws",
+      "artifacts": [],
+      "name": "yaws",
+      "summary": "YAWS is an erlang web server",
+      "description": "YAWS is an erlang web server",
+      "translations": {
+        "en": {
+          "summary": "YAWS is an erlang web server",
+          "description": "YAWS is an erlang web server"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/1?v=4",
+      "repository_url": "https://github.com/mojombo/yaws",
+      "github_repo_id": "191",
+      "source_updated_at": "2026-10-23T19:50:06Z",
+      "homepage_url": null,
+      "owner": "mojombo",
+      "default_branch": "master",
+      "source_commit_sha": "f75fde80f1e35a87335f21d0983e3285eb665f17",
+      "license_text": "\nCopyright (c) 2006, Claes Wikstrom, klacke@hyber.org\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without \nmodification, are permitted provided that the following conditions are met:\n\n    * Redistributions of source code must retain the above copyright \n      notice, this list of conditions and the following disclaimer.\n    * Redistributions in binary form must reproduce the above copyright \n      notice, this list of conditions and the following disclaimer in the \n      documentation and/or other materials provided with the distribution.\n    * Neither the name of \"Yaws\" nor the names of its contributors may be \n      used to endorse or promote products derived from this software without \n      specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" \nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE \nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE \nARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE \nLIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR \nCONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF \nSUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS \nINTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN \nCONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) \nARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE \nPOSSIBILITY OF SUCH DAMAGE.\n",
+      "license_spdx": "BSD-3-Clause",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "category": "network",
       "topics": [],
       "latest_version": null,
       "release_url": null,
