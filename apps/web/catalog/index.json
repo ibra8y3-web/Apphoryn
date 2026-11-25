@@ -42010,7 +42010,17 @@
       "latest_version": "v2.5.2",
       "release_url": "https://github.com/oasisprotocol/wallet/releases/tag/v2.5.2",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "ce781ea4e085f427541fee8302bcbbfab1fab326",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-25T21:45:10.233650+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "tia8910-walletlens",
