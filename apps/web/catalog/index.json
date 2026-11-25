@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:47:41.711633+00:00",
+  "generated_at": "2026-11-25T22:48:01.573151+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -11872,6 +11872,73 @@
           "signer_certificate_sha256": "d28ca4f5b7467ea19564983f492af25fd21b26b2577fbfa32c46ed59042892c8",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-soodok-deepseek-harness-local-android-v1.5.0/dsh-android-v1.5.0-x86_64-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-soodok-deepseek-harness-local-android-v1.5.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "lucky845-deepseek-monitor",
+      "slug": "lucky845-deepseek-monitor",
+      "name": "deepseek-monitor",
+      "summary": "DeepSeek 用量监控：六端 Flutter 客户端（Android / iOS / macOS / Windows / Linux / Web）与桌面小组件",
+      "description": "DeepSeek 用量监控：六端 Flutter 客户端（Android / iOS / macOS / Windows / Linux / Web）与桌面小组件",
+      "translations": {
+        "en": {
+          "summary": "DeepSeek 用量监控：六端 Flutter 客户端（Android / iOS / macOS / Windows / Linux / Web）与桌面小组件",
+          "description": "DeepSeek 用量监控：六端 Flutter 客户端（Android / iOS / macOS / Windows / Linux / Web）与桌面小组件"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/lucky845/deepseek-monitor/main/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/lucky845/deepseek-monitor",
+      "github_repo_id": "1439297782",
+      "source_updated_at": "2026-11-02T11:23:02Z",
+      "homepage_url": null,
+      "owner": "lucky845",
+      "default_branch": "main",
+      "source_commit_sha": "b49bbb858c4023d07db00adc24904e82768e91fa",
+      "license_text": "MIT License\n\nCopyright (c) 2026 lucky845\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android-app",
+        "deepseek-harness",
+        "flutter",
+        "ios-app",
+        "macos-app"
+      ],
+      "latest_version": "v1.1.0",
+      "release_url": "https://github.com/lucky845/deepseek-monitor/releases/tag/v1.1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lucky845-deepseek-monitor-v1.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lucky845-deepseek-monitor-v1.1.0/THIRD-PARTY-NOTICE-lucky845-deepseek-monitor.txt",
+      "artifacts": [
+        {
+          "id": "7547c096e495538a2a175708a33d43a28af8b1de405be60b786a5c370fc3cf70",
+          "filename": "deepseek_monitor-android.apk",
+          "original_filename": "deepseek_monitor-android.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.1.0",
+          "size_bytes": 25978188,
+          "sha256": "7547c096e495538a2a175708a33d43a28af8b1de405be60b786a5c370fc3cf70",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "e07bd43d5c11547b244f37fdcd991071a35029b8398c87f64cf5a5cadf7c1185",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lucky845-deepseek-monitor-v1.1.0/deepseek_monitor-android.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lucky845-deepseek-monitor-v1.1.0"
         }
       ],
       "platforms": [
