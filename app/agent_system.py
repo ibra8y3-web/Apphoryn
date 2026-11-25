@@ -577,7 +577,7 @@ def _run_tool(agent_id: str, request: dict[str, Any] | None, goal: str, allow_ex
                 content = item.get("content")
                 if (not path or path.startswith("/") or "\\" in path
                         or any(part in {"", ".", ".."} for part in path.split("/"))
-                        or path.startswith(".github/")
+                        or path.casefold().startswith(".github/")
                         or path.lower().startswith(".env")
                         or any(token in path.casefold() for token in ("secret", "credential", "private_key"))
                         or path.lower().endswith((".pem", ".key", ".p12", ".pfx", ".jks"))):
@@ -635,7 +635,7 @@ def _run_tool(agent_id: str, request: dict[str, Any] | None, goal: str, allow_ex
                     "blob_sha": ((result.get("content") or {}).get("sha")),
                 })
             title = str(args.get("pull_request_title") or "Apphoryn AI proposed source improvements").strip()[:180]
-            body = str(args.get("pull_request_body") or "Proposed by Apphoryn's AI Software Engineer.\\n\\nReview all changes, run tests, and merge manually. This automation never writes to the default branch.")[:6000]
+            body = str(args.get("pull_request_body") or "Proposed by Apphoryn's AI Software Engineer.\n\nReview all changes, run tests, and merge manually. This automation never writes to the default branch.")[:6000]
             pull = client.mutate("POST", f"/repos/{owner}/{repo}/pulls", {
                 "title": title, "head": branch_name, "base": base_ref, "body": body,
                 "maintainer_can_modify": False,
@@ -716,7 +716,8 @@ def _agent_call(agent_id: str, goal: str, instructions: str, context: list[dict[
     )
     payload = {"goal": goal, "assignment": instructions, "agent": {"id": agent_id, "name": agent["name"]},
                "previous_agent_results": context[-8:], "shared_memory": memories,
-               "allow_external_actions": allow_external_actions}
+               "allow_external_actions": allow_external_actions,
+               "allow_code_changes": allow_code_changes}
     draft, route = ai_router.generate_json([
         {"role": "system", "content": system}, {"role": "user", "content": _json(payload)}
     ], task_type=agent_id)
