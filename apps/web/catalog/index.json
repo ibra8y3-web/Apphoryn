@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T20:37:48.099346+00:00",
+  "generated_at": "2026-11-25T20:42:37.184985+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -34217,6 +34217,118 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "greyfoundry-ursa-android",
+      "slug": "greyfoundry-ursa-android",
+      "name": "ursa-android",
+      "summary": "Native Android client for Uptime Kuma: real-time monitoring, multi-server, and FOSS push (UnifiedPush, no relay, no Firebase).",
+      "description": "Native Android client for Uptime Kuma: real-time monitoring, multi-server, and FOSS push (UnifiedPush, no relay, no Firebase).",
+      "translations": {
+        "en": {
+          "summary": "Native Android client for Uptime Kuma: real-time monitoring, multi-server, and FOSS push (UnifiedPush, no relay, no Firebase).",
+          "description": "Native Android client for Uptime Kuma: real-time monitoring, multi-server, and FOSS push (UnifiedPush, no relay, no Firebase)."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/greyfoundry/ursa-android/main/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "repository_url": "https://github.com/greyfoundry/ursa-android",
+      "github_repo_id": "1288640017",
+      "source_updated_at": "2026-11-20T10:43:11Z",
+      "homepage_url": null,
+      "owner": "greyfoundry",
+      "default_branch": "main",
+      "source_commit_sha": "0d6a22b88467472aa108d5b7a1f30f8fb9146a3a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 AstorisTheBrave\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "network",
+      "topics": [
+        "android",
+        "android-app",
+        "foss",
+        "homelab",
+        "jetpack-compose",
+        "kotlin",
+        "material-you",
+        "material3",
+        "mobile-app",
+        "monitoring",
+        "ntfy",
+        "push-notifications",
+        "self-hosted",
+        "unifiedpush",
+        "uptime-kuma",
+        "uptime-monitoring"
+      ],
+      "latest_version": "v1.3.4",
+      "release_url": "https://github.com/greyfoundry/ursa-android/releases/tag/v1.3.4",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-greyfoundry-ursa-android-v1.3.4",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-greyfoundry-ursa-android-v1.3.4/THIRD-PARTY-NOTICE-greyfoundry-ursa-android.txt",
+      "artifacts": [
+        {
+          "id": "8082a6352e5fa6d2ece6e644788ecdd75b79921fce19fa68ca137533eb3aa271",
+          "filename": "ursa-fdroid-v1.3.4.apk",
+          "original_filename": "ursa-fdroid-v1.3.4.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.3.4",
+          "size_bytes": 17400653,
+          "sha256": "8082a6352e5fa6d2ece6e644788ecdd75b79921fce19fa68ca137533eb3aa271",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "1f359fb27aa92453412527921b16d59e45505bf6f7bb83bc3c2c5edf05315cd2",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-greyfoundry-ursa-android-v1.3.4/ursa-fdroid-v1.3.4.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-greyfoundry-ursa-android-v1.3.4"
+        },
+        {
+          "id": "f207813651e78adbf626cc3a8a290f032263c366a22322c16ef8883f433e02df",
+          "filename": "ursa-v1.3.4.apk",
+          "original_filename": "ursa-v1.3.4.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.3.4",
+          "size_bytes": 17993307,
+          "sha256": "f207813651e78adbf626cc3a8a290f032263c366a22322c16ef8883f433e02df",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "1f359fb27aa92453412527921b16d59e45505bf6f7bb83bc3c2c5edf05315cd2",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-greyfoundry-ursa-android-v1.3.4/ursa-v1.3.4.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-greyfoundry-ursa-android-v1.3.4"
+        },
+        {
+          "id": "4933adaff8afff613bb77f7bf9274986bcfe526c3f9c8d99a91790082e79c3ad",
+          "filename": "ursa-wear-v1.3.4.apk",
+          "original_filename": "ursa-wear-v1.3.4.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.3.4",
+          "size_bytes": 23617389,
+          "sha256": "4933adaff8afff613bb77f7bf9274986bcfe526c3f9c8d99a91790082e79c3ad",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "1f359fb27aa92453412527921b16d59e45505bf6f7bb83bc3c2c5edf05315cd2",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-greyfoundry-ursa-android-v1.3.4/ursa-wear-v1.3.4.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-greyfoundry-ursa-android-v1.3.4"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
