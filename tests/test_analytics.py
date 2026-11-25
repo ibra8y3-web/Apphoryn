@@ -1,5 +1,6 @@
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 from app.analytics import AnalyticsStore
@@ -48,7 +49,7 @@ class AnalyticsStoreTests(unittest.TestCase):
 
     def test_local_mode_keeps_events_without_claiming_remote_sync(self):
         self.store.record_event("app_view", app_slug="offline-app")
-        with unittest.mock.patch.dict("os.environ", {
+        with patch.dict("os.environ", {
             "APPHORYN_ANALYTICS_POSTGRES_DSN": "",
             "CLOUDFLARE_ACCOUNT_ID": "",
             "CLOUDFLARE_D1_DATABASE_ID": "",
