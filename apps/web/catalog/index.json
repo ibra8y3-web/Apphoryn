@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:52:10.887312+00:00",
+  "generated_at": "2026-11-25T09:52:22.407137+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -3531,6 +3531,80 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yim2412-fifa-match-tracker-v3.14.1/FifaMatchTracker-Setup-v3.14.1.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yim2412-fifa-match-tracker-v3.14.1"
+        }
+      ],
+      "platforms": [
+        "windows"
+      ]
+    },
+    {
+      "id": "polete-bermejo-floord",
+      "slug": "polete-bermejo-floord",
+      "name": "floord",
+      "summary": "Lightweight Rust daemon that automatically organizes incoming files into system directories based on file extensions.",
+      "description": "Lightweight Rust daemon that automatically organizes incoming files into system directories based on file extensions.",
+      "translations": {
+        "en": {
+          "summary": "Lightweight Rust daemon that automatically organizes incoming files into system directories based on file extensions.",
+          "description": "Lightweight Rust daemon that automatically organizes incoming files into system directories based on file extensions."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/182244119?v=4",
+      "repository_url": "https://github.com/polete-bermejo/floord",
+      "github_repo_id": "1432129139",
+      "source_updated_at": "2026-11-25T09:49:05Z",
+      "homepage_url": null,
+      "owner": "polete-bermejo",
+      "default_branch": "main",
+      "source_commit_sha": "e0c1903cc768b502a4183a31f0ff30ff142ba7b7",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Pol Bermejo Gorrindo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "system",
+      "topics": [
+        "automation",
+        "background-service",
+        "command-line-tool",
+        "daemon",
+        "file-automation",
+        "file-management",
+        "file-organizer",
+        "linux",
+        "rust",
+        "system-utility",
+        "systemd",
+        "unix"
+      ],
+      "latest_version": "v0.4.4",
+      "release_url": "https://github.com/polete-bermejo/floord/releases/tag/v0.4.4",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-polete-bermejo-floord-v0.4.4",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-polete-bermejo-floord-v0.4.4/THIRD-PARTY-NOTICE-polete-bermejo-floord.txt",
+      "artifacts": [
+        {
+          "id": "63ac3dd00b371388c5d93b35e5429b47b5d085ab97188ef834cbc2da23dc05fc",
+          "filename": "floord-windows.exe",
+          "original_filename": "floord-windows.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.4.4",
+          "size_bytes": 1135616,
+          "sha256": "63ac3dd00b371388c5d93b35e5429b47b5d085ab97188ef834cbc2da23dc05fc",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-polete-bermejo-floord-v0.4.4/floord-windows.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-polete-bermejo-floord-v0.4.4"
         }
       ],
       "platforms": [
