@@ -428,7 +428,8 @@ def _rank_candidates(candidates: list[Candidate], task_type: str | None) -> list
         quality = float(evaluation.get("average_score") or 0)
         evidence_score = (0.30 * success_rate + 0.25 * quality + 0.10 * latency_score)
         priority = priorities.index(candidate.provider) if candidate.provider in priorities else len(priorities)
-        return (-(_task_capability_score(candidate, task_type) + evidence_score), priority, -candidate.context)
+        local_rank = 0 if _PREFER_LOCAL and candidate.provider in {"ollama", "vllm"} else 1
+        return (local_rank, -(_task_capability_score(candidate, task_type) + evidence_score), priority, -candidate.context)
     return sorted(candidates, key=rank)
 
 
