@@ -8,6 +8,7 @@ from scripts.global_scout import (
     known_current,
     load_catalog_index,
     load_retry_queue,
+    localize_existing_catalog_rows,
     repo_key,
     retry_record,
     save_retry_queue,
@@ -106,6 +107,51 @@ class GlobalScoutTests(unittest.TestCase):
         by_url = {repo_key(existing["repository_url"]): existing}
         self.assertFalse(known_current(candidate, by_id, by_url, adapter_revision="new-revision"))
         self.assertTrue(known_current(candidate, by_id, by_url, adapter_revision="old-revision"))
+
+    def test_existing_catalog_localization_preserves_published_english_description(self):
+        from unittest.mock import patch
+
+        app = {
+            "name": "Example App",
+            "slug": "example-app",
+            "summary": "Original published summary",
+            "description": "Original developer-written description.",
+            "translations": {"en": "Original published summary"},
+            "description_translations": {"en": "Original developer-written description."},
+            "translation_status": "english_only",
+            "license_eligible": True,
+            "license_spdx": "MIT",
+            "repository_url": "https://github.com/owner/example-app",
+        }
+        localized = {
+            "summary": "Original published summary",
+            "description": "Original developer-written description.",
+            "translations": {"en": "Original published summary", "ar": "ملخص عربي"},
+            "description_translations": {
+                "en": "Original developer-written description.",
+                "ar": "وصف عربي للمطور.",
+            },
+            "translation_status": "complete",
+        }
+
+        class FakeMirror:
+            def __init__(self):
+                self.published = None
+
+            def publish_app(self, updated, artifacts):
+                self.published = (updated, artifacts)
+                return {"project_status": "source_available"}
+
+        mirror = FakeMirror()
+        with patch("scripts.global_scout.call_apphoryn_internal_api", return_value=localized) as translate:
+            report = localize_existing_catalog_rows([app], mirror, interval_seconds=0)
+
+        self.assertEqual(report["translated"], 1)
+        self.assertEqual(app["description"], "Original developer-written description.")
+        self.assertEqual(app["description_translations"]["ar"], "وصف عربي للمطور.")
+        self.assertEqual(mirror.published[0]["description"], "Original developer-written description.")
+        self.assertEqual(mirror.published[1], [])
+        translate.assert_called_once()
 
     def test_retry_backoff_is_bounded_and_preserves_upstream_candidate(self):
         entry = {
