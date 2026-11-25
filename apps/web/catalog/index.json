@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:14:54.547171+00:00",
+  "generated_at": "2026-11-25T21:15:29.881863+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -27126,6 +27126,80 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "dajeovv-opencode-android",
+      "slug": "dajeovv-opencode-android",
+      "name": "opencode-android",
+      "summary": "OpenCode Android — unofficial client for opencode. The real coding agent runs natively on your phone: no Termux, no PC, no root. One arm64 APK for Android 8+, with file editing, shell commands, and wireless ADB app control.",
+      "description": "OpenCode Android — unofficial client for opencode. The real coding agent runs natively on your phone: no Termux, no PC, no root. One arm64 APK for Android 8+, with file editing, shell commands, and wireless ADB app control.",
+      "translations": {
+        "en": {
+          "summary": "OpenCode Android — unofficial client for opencode. The real coding agent runs natively on your phone: no Termux, no PC, no root. One arm64 APK for Android 8+, with file editing, shell commands, and wireless ADB app control.",
+          "description": "OpenCode Android — unofficial client for opencode. The real coding agent runs natively on your phone: no Termux, no PC, no root. One arm64 APK for Android 8+, with file editing, shell commands, and wireless ADB app control."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Dajeovv/opencode-android/main/docs/logo.png",
+      "repository_url": "https://github.com/Dajeovv/opencode-android",
+      "github_repo_id": "1422308915",
+      "source_updated_at": "2026-11-24T21:07:09Z",
+      "homepage_url": "https://github.com/Dajeovv/opencode-android/releases/latest",
+      "owner": "Dajeovv",
+      "default_branch": "main",
+      "source_commit_sha": "bd1c0403b56ebcde5e3f3dec45d1b7c660b96e83",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Dajeovv\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "ai",
+      "topics": [
+        "ai-agents",
+        "ai-coding",
+        "android",
+        "android-app",
+        "apk",
+        "arm64",
+        "coding-agent",
+        "llm",
+        "no-root",
+        "on-device",
+        "opencode",
+        "termux-alternative"
+      ],
+      "latest_version": "v5.0.4",
+      "release_url": "https://github.com/Dajeovv/opencode-android/releases/tag/v5.0.4",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-dajeovv-opencode-android-v5.0.4",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-dajeovv-opencode-android-v5.0.4/THIRD-PARTY-NOTICE-dajeovv-opencode-android.txt",
+      "artifacts": [
+        {
+          "id": "af8c80bcebe1f6f762e7b3c1af73d52fc2f029ad97ed32055f0e6a4edb27c0d8",
+          "filename": "OpenCodeAndroid-v5.0.4.apk",
+          "original_filename": "OpenCodeAndroid-v5.0.4.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v5.0.4",
+          "size_bytes": 222384782,
+          "sha256": "af8c80bcebe1f6f762e7b3c1af73d52fc2f029ad97ed32055f0e6a4edb27c0d8",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "461ea3a8d0f70607228dc6508795aa60533eaa953ecbd100cb6bf44f721c3b67",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-dajeovv-opencode-android-v5.0.4/OpenCodeAndroid-v5.0.4.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-dajeovv-opencode-android-v5.0.4"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
