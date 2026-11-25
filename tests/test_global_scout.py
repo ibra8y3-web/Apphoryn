@@ -84,6 +84,9 @@ class GlobalScoutTests(unittest.TestCase):
             "github_repo_id": "789",
             "repository_url": "https://github.com/owner/repo",
             "source_updated_at": "2026-01-01T00:00:00Z",
+            "translation_status": "complete",
+            "translations": {"ar": "وصف عربي"},
+            "description_translations": {"ar": "شرح عربي كامل"},
             "artifacts": [],
             "build_attempts": [{
                 "git_ref": "abc123",
