@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T18:19:49.590584+00:00",
+  "generated_at": "2026-11-25T18:20:00.882261+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -11205,6 +11205,88 @@
       "platforms": [
         "linux",
         "windows"
+      ]
+    },
+    {
+      "id": "jainikdroid-bit-loopa",
+      "slug": "jainikdroid-bit-loopa",
+      "name": "loopa",
+      "summary": "Adult Space (formerly Loopa): free open-source Android app for 17 adult video sources — RedGIFs, Reddit, Pornhub, xVideos, xHamster, YouPorn, Erome, Eporner, FikFap and more. Unique 3D interest graph and on-device taste model. Ad-free feed,",
+      "description": "Adult Space (formerly Loopa): free open-source Android app for 17 adult video sources — RedGIFs, Reddit, Pornhub, xVideos, xHamster, YouPorn, Erome, Eporner, FikFap and more. Unique 3D interest graph and on-device taste model. Ad-free feed, previews, downloads, auto-update. Unofficial. 18+",
+      "translations": {
+        "en": {
+          "summary": "Adult Space (formerly Loopa): free open-source Android app for 17 adult video sources — RedGIFs, Reddit, Pornhub, xVideos, xHamster, YouPorn, Erome, Eporner, FikFap and more. Unique 3D interest graph and on-device taste model. Ad-free feed,",
+          "description": "Adult Space (formerly Loopa): free open-source Android app for 17 adult video sources — RedGIFs, Reddit, Pornhub, xVideos, xHamster, YouPorn, Erome, Eporner, FikFap and more. Unique 3D interest graph and on-device taste model. Ad-free feed, previews, downloads, auto-update. Unofficial. 18+"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/jainikdroid-bit/loopa/main/docs/img/icon.svg",
+      "repository_url": "https://github.com/jainikdroid-bit/loopa",
+      "github_repo_id": "1448160297",
+      "source_updated_at": "2026-11-23T12:49:40Z",
+      "homepage_url": "https://jainikdroid-bit.github.io/loopa/",
+      "owner": "jainikdroid-bit",
+      "default_branch": "main",
+      "source_commit_sha": "6e8c55246b491e00594deff5d1839a46ff6ecaa8",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Loopa contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android",
+        "android-app",
+        "eporner",
+        "erome",
+        "kotlin",
+        "no-ads",
+        "nsfw",
+        "open-source",
+        "pornhub",
+        "privacy",
+        "reddit",
+        "reddit-client",
+        "reddit-video-downloader",
+        "redgifs",
+        "redgifs-app",
+        "redgifs-client",
+        "video-downloader",
+        "video-player",
+        "xhamster",
+        "xvideos"
+      ],
+      "latest_version": "v1.34",
+      "release_url": "https://github.com/jainikdroid-bit/loopa/releases/tag/v1.34",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jainikdroid-bit-loopa-v1.34",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jainikdroid-bit-loopa-v1.34/THIRD-PARTY-NOTICE-jainikdroid-bit-loopa.txt",
+      "artifacts": [
+        {
+          "id": "6a2db51fa30f9accbde8eb6816e19d4d49ea7dbc6602b45e832f54a3a3ffb454",
+          "filename": "AdultSpace-1.34.apk",
+          "original_filename": "AdultSpace-1.34.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.34",
+          "size_bytes": 4618290,
+          "sha256": "6a2db51fa30f9accbde8eb6816e19d4d49ea7dbc6602b45e832f54a3a3ffb454",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "329d157305608c5df21bd77bed3f9c70dc1c38d0f944a6f8c969261290449c84",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jainikdroid-bit-loopa-v1.34/AdultSpace-1.34.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jainikdroid-bit-loopa-v1.34"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
