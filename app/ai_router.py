@@ -10,6 +10,7 @@ from dataclasses import dataclass
 from typing import Any
 
 _TIMEOUT = 35
+_DISCOVERY_TIMEOUT = max(1.0, min(float(os.getenv("APPHORYN_AI_DISCOVERY_TIMEOUT_SECONDS", "3")), 10.0))
 _CACHE_SECONDS = max(60, int(os.getenv("APPHORYN_AI_MODELS_CACHE_SECONDS", "900")))
 _FREE_ONLY = os.getenv("APPHORYN_AI_FREE_ONLY", "true").lower() not in {"0", "false", "no", "off"}
 _ALLOW_CREDIT = os.getenv("APPHORYN_AI_ALLOW_CREDIT_BASED_PROVIDERS", "false").lower() in {"1", "true", "yes", "on"}
@@ -41,7 +42,7 @@ _cache: dict[str, Any] = {"until": 0.0, "models": [], "providers": []}
 _cooldowns: dict[str, float] = {}
 
 def _request(url: str, headers: dict[str, str] | None = None,
-             body: dict[str, Any] | None = None) -> Any:
+             body: dict[str, Any] | None = None, timeout: float | None = None) -> Any:
     h = {"Accept": "application/json", "User-Agent": "Apphoryn-AI-Router/1.0"}
     h.update(headers or {})
     data = None if body is None else json.dumps(body, ensure_ascii=False).encode("utf-8")
@@ -49,7 +50,7 @@ def _request(url: str, headers: dict[str, str] | None = None,
         h["Content-Type"] = "application/json"
     req = urllib.request.Request(url, data=data, headers=h, method="GET" if body is None else "POST")
     try:
-        with urllib.request.urlopen(req, timeout=_TIMEOUT) as response:
+        with urllib.request.urlopen(req, timeout=timeout if timeout is not None else _TIMEOUT) as response:
             return json.loads(response.read(8 * 1024 * 1024).decode("utf-8"))
     except urllib.error.HTTPError as exc:
         detail = ""
@@ -95,7 +96,7 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
             base = _local_base_url(ollama_value)
             root = base[:-3] if base.endswith("/v1") else base
             key = os.getenv("OLLAMA_API_KEY", "").strip()
-            data = _request(root + "/api/tags", {"Authorization": f"Bearer {key}"} if key else {})
+            data = _request(root + "/api/tags", {"Authorization": f"Bearer {key}"} if key else {}, timeout=_DISCOVERY_TIMEOUT)
             rows = data.get("models") or []
             for item in rows if isinstance(rows, list) else []:
                 if not isinstance(item, dict):
@@ -103,8 +104,7 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
                 model = str(item.get("name") or item.get("model") or "").strip()
                 if model:
                     models.append(Candidate("ollama", model, "openai", root + "/v1", key,
-                                            int((item.get("details") or {}).get("parameter_size_bytes") or 0),
-                                            "local_open_source"))
+                                            0, "local_open_source"))
             providers.append(_status("ollama", True, bool(rows), "Local Ollama model tags loaded; no provider API billing is involved.",
                                      sum(m.provider == "ollama" for m in models)))
         except ProviderError as exc:
@@ -119,7 +119,7 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
             if not base.endswith("/v1"):
                 base += "/v1"
             key = os.getenv("VLLM_API_KEY", "").strip()
-            data = _request(base + "/models", {"Authorization": f"Bearer {key}"} if key else {})
+            data = _request(base + "/models", {"Authorization": f"Bearer {key}"} if key else {}, timeout=_DISCOVERY_TIMEOUT)
             rows = data.get("data") or []
             for item in rows if isinstance(rows, list) else []:
                 if not isinstance(item, dict):
@@ -154,7 +154,7 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
     elif key:
         try:
             data = _request("https://generativelanguage.googleapis.com/v1beta/models?pageSize=1000",
-                            {"x-goog-api-key": key})
+                            {"x-goog-api-key": key}, timeout=_DISCOVERY_TIMEOUT)
             for item in data.get("models", []):
                 methods = item.get("supportedGenerationMethods", [])
                 model = str(item.get("name") or "").removeprefix("models/")
@@ -186,7 +186,7 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
     elif key:
         try:
             data = _request("https://api.groq.com/openai/v1/models",
-                            {"Authorization": f"Bearer {key}"})
+                            {"Authorization": f"Bearer {key}"}, timeout=_DISCOVERY_TIMEOUT)
             for item in data.get("data", []):
                 model = str(item.get("id") or "")
                 if model:
@@ -208,7 +208,7 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
     key = os.getenv("XAI_API_KEY", "").strip()
     if key and _ENABLE_XAI and _ALLOW_PAID and not _FREE_ONLY:
         try:
-            data = _request("https://api.x.ai/v1/models", {"Authorization": f"Bearer {key}"})
+            data = _request("https://api.x.ai/v1/models", {"Authorization": f"Bearer {key}"}, timeout=_DISCOVERY_TIMEOUT)
             for item in data.get("data", []):
                 model = str(item.get("id") or "")
                 if model:
@@ -230,7 +230,7 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
     key = os.getenv("OPENROUTER_API_KEY", "").strip()
     if key:
         try:
-            data = _request("https://openrouter.ai/api/v1/models", {"Authorization": f"Bearer {key}"})
+            data = _request("https://openrouter.ai/api/v1/models", {"Authorization": f"Bearer {key}"}, timeout=_DISCOVERY_TIMEOUT)
             for item in data.get("data", []):
                 model = str(item.get("id") or "")
                 if model and ((not _FREE_ONLY and _ALLOW_PAID) or model.endswith(":free")):
@@ -277,7 +277,7 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
 
     if key:
         try:
-            data = _request("https://api.cometapi.com/api/models", {"Authorization": f"Bearer {key}"})
+            data = _request("https://api.cometapi.com/api/models", {"Authorization": f"Bearer {key}"}, timeout=_DISCOVERY_TIMEOUT)
             rows = data if isinstance(data, list) else (
                 data.get("data") or data.get("models") or data.get("items") or data.get("result") or []
             )
@@ -317,7 +317,7 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
         try:
             query = urllib.parse.urlencode({"task": "text-generation", "hide_experimental": "true", "per_page": 100})
             url = f"https://api.cloudflare.com/client/v4/accounts/{urllib.parse.quote(account)}/ai/models/search?{query}"
-            data = _request(url, {"Authorization": f"Bearer {key}"})
+            data = _request(url, {"Authorization": f"Bearer {key}"}, timeout=_DISCOVERY_TIMEOUT)
             for item in data.get("result", []):
                 model = str(item.get("name") or item.get("id") or "")
                 if model:
