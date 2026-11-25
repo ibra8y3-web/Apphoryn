@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:53:46.939972+00:00",
+  "generated_at": "2026-11-25T19:54:04.651136+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -28058,6 +28058,80 @@
           "signer_certificate_sha256": "ef258104cfe58c54d43255f54de70eee62f51eec9accce5f25bd046744bb9cb5",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-thezenox-thermalab-V1.1.0/thermaLab-1.1.0.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-thezenox-thermalab-V1.1.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "aoxiuy-token-monitor-for-android",
+      "slug": "aoxiuy-token-monitor-for-android",
+      "name": "token-monitor-For-Android",
+      "summary": "Open-source ai project maintained by AoXIUy.",
+      "description": "Open-source ai project maintained by AoXIUy.",
+      "translations": {
+        "en": {
+          "summary": "Open-source ai project maintained by AoXIUy.",
+          "description": "Open-source ai project maintained by AoXIUy."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/78833411?v=4",
+      "repository_url": "https://github.com/AoXIUy/token-monitor-For-Android",
+      "github_repo_id": "1436689510",
+      "source_updated_at": "2026-11-16T15:46:20Z",
+      "homepage_url": null,
+      "owner": "AoXIUy",
+      "default_branch": "main",
+      "source_commit_sha": "d8547d0abf06950fd63b9a77f6fd204c537353de",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Javis\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "ai",
+      "topics": [
+        "ai-tools",
+        "android",
+        "android-app",
+        "android-widget",
+        "cost-tracking",
+        "java",
+        "llm",
+        "react",
+        "token-monitor",
+        "token-usage",
+        "typescript",
+        "webview"
+      ],
+      "latest_version": "v1.27.0",
+      "release_url": "https://github.com/AoXIUy/token-monitor-For-Android/releases/tag/v1.27.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aoxiuy-token-monitor-for-android-v1.27.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aoxiuy-token-monitor-for-android-v1.27.0/THIRD-PARTY-NOTICE-aoxiuy-token-monitor-for-android.txt",
+      "artifacts": [
+        {
+          "id": "b7dd2fccce2766fe976e9ce0dc074dcfb59c8e0711297af61530c10a57580148",
+          "filename": "Token-Monitor-Android-1.27.0.apk",
+          "original_filename": "Token-Monitor-Android-1.27.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.27.0",
+          "size_bytes": 1302335,
+          "sha256": "b7dd2fccce2766fe976e9ce0dc074dcfb59c8e0711297af61530c10a57580148",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "147afc2b38cf4487adbe862df5ab52fcbb9a511ba5f8f58554b7502b4763c499",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aoxiuy-token-monitor-for-android-v1.27.0/Token-Monitor-Android-1.27.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aoxiuy-token-monitor-for-android-v1.27.0"
         }
       ],
       "platforms": [
