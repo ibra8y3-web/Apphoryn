@@ -1,8 +1,8 @@
 import unittest
 from unittest.mock import patch
 
-from app.resource_manager import _local_base_url, resource_status
-from app.ai_router import ProviderError
+from app.resource_manager import resource_status
+from app.ai_router import _local_base_url, ProviderError
 
 
 class ResourceManagerTests(unittest.TestCase):
