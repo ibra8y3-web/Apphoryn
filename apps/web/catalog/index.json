@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:08:56.971658+00:00",
+  "generated_at": "2026-11-25T04:09:00.960771+00:00",
   "apps": [
     {
       "id": "defunkt-ambition",
@@ -706,6 +706,45 @@
       "classification_source": "heuristic",
       "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
       "category": "other",
+      "topics": [],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "jnunemaker-googlereader",
+      "slug": "jnunemaker-googlereader",
+      "artifacts": [],
+      "name": "googlereader",
+      "summary": "[DEAD AND UNMAINTAINED] Wrapper for Google Reader's undocumented and possibly \"unstable\" API. By unstable, I mean if they haven't documented it, then they could change it at anytime without notice.",
+      "description": "[DEAD AND UNMAINTAINED] Wrapper for Google Reader's undocumented and possibly \"unstable\" API. By unstable, I mean if they haven't documented it, then they could change it at anytime without notice.",
+      "translations": {
+        "en": {
+          "summary": "[DEAD AND UNMAINTAINED] Wrapper for Google Reader's undocumented and possibly \"unstable\" API. By unstable, I mean if they haven't documented it, then they could change it at anytime without notice.",
+          "description": "[DEAD AND UNMAINTAINED] Wrapper for Google Reader's undocumented and possibly \"unstable\" API. By unstable, I mean if they haven't documented it, then they could change it at anytime without notice."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/235?v=4",
+      "repository_url": "https://github.com/jnunemaker/googlereader",
+      "github_repo_id": "510",
+      "source_updated_at": "2026-06-30T12:07:37Z",
+      "homepage_url": null,
+      "owner": "jnunemaker",
+      "default_branch": "master",
+      "source_commit_sha": "5c404ecb39a244a3835e21b7b538e7fd9ef4cf7b",
+      "license_text": "Copyright (c) 2007 John Nunemaker\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "category": "productivity",
       "topics": [],
       "latest_version": null,
       "release_url": null,
