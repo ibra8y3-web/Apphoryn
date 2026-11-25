@@ -454,9 +454,10 @@ def _run_tool(agent_id: str, request: dict[str, Any] | None, goal: str, allow_ex
             path = str(args.get("path") or "").strip().strip("/")
             if not path or any(part in {".", ".."} for part in path.split("/")):
                 raise ValueError("A safe repository-relative file path is required.")
-            ref = quote(str(args.get("ref") or "HEAD"), safe="")
+            ref_value = str(args.get("ref") or "").strip()
+            ref_query = f"?ref={quote(ref_value, safe='')}" if ref_value else ""
             encoded_path = "/".join(quote(part, safe="") for part in path.split("/"))
-            payload = GitHubClient().request(f"/repos/{owner}/{repo}/contents/{encoded_path}?ref={ref}")
+            payload = GitHubClient().request(f"/repos/{owner}/{repo}/contents/{encoded_path}{ref_query}")
             if isinstance(payload, list) or payload.get("encoding") != "base64":
                 raise ValueError("GitHub did not return a base64 file payload.")
             content = base64.b64decode(payload.get("content") or "").decode("utf-8", errors="replace")
@@ -534,6 +535,10 @@ def _agent_call(agent_id: str, goal: str, instructions: str, context: list[dict[
     ])
     request = draft.get("tool_request") if isinstance(draft.get("tool_request"), dict) else None
     tool_result = _run_tool(agent_id, request, goal, allow_external_actions, context)
+    if agent_id == "supervisor":
+        audit = _run_tool("supervisor", {"name": "quality_review", "arguments": {}},
+                          goal, allow_external_actions, context)
+        tool_result = {"agent_requested_tool_result": tool_result, "supervisor_audit": audit}
     if tool_result is not None:
         evidence = {"initial_analysis": draft, "tool_execution_result": tool_result,
                     "instruction": "Produce the final JSON analysis. The tool output is the only proof the operation occurred."}
