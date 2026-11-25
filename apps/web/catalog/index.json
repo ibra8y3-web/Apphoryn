@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:16:11.670408+00:00",
+  "generated_at": "2026-11-25T23:16:40.933654+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -12674,6 +12674,128 @@
           "signer_certificate_sha256": "44bc73ba3b11afba064b12160e4fa26e45f56fee51b9deee5136fef57d8a8fb7",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-clc-pro-deepspeak-v1.13.3/DeepSpeak-v1.13.3.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-clc-pro-deepspeak-v1.13.3"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "jaypsmall-demonidraw",
+      "slug": "jaypsmall-demonidraw",
+      "name": "DemoniDraw",
+      "summary": "😈 DemoniDraw Apk 🎨 Motor de automatización basado en gestos para Android con acceso root. Dibuja patrones para activar macros y automatizaciones complejas del sistema en tiempo real.",
+      "description": "😈 DemoniDraw Apk 🎨 Motor de automatización basado en gestos para Android con acceso root. Dibuja patrones para activar macros y automatizaciones complejas del sistema en tiempo real.",
+      "translations": {
+        "en": {
+          "summary": "😈 DemoniDraw Apk 🎨 Motor de automatización basado en gestos para Android con acceso root. Dibuja patrones para activar macros y automatizaciones complejas del sistema en tiempo real.",
+          "description": "😈 DemoniDraw Apk 🎨 Motor de automatización basado en gestos para Android con acceso root. Dibuja patrones para activar macros y automatizaciones complejas del sistema en tiempo real."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Jaypsmall/DemoniDraw/master/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/Jaypsmall/DemoniDraw",
+      "github_repo_id": "1297809908",
+      "source_updated_at": "2026-11-08T21:31:27Z",
+      "homepage_url": "https://jaypsmall.github.io/DemoniDraw/",
+      "owner": "Jaypsmall",
+      "default_branch": "master",
+      "source_commit_sha": "2c1faeae33cdc6f58fd3192cc8ab75a093bc5b39",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Architect_D4d\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "accessibility",
+        "accessibility-automation",
+        "android",
+        "android-app",
+        "android-development",
+        "android-studio",
+        "gesture",
+        "kotlin",
+        "root"
+      ],
+      "latest_version": "root",
+      "release_url": "https://github.com/Jaypsmall/DemoniDraw/releases/tag/root",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jaypsmall-demonidraw-root",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jaypsmall-demonidraw-root/THIRD-PARTY-NOTICE-jaypsmall-demonidraw.txt",
+      "artifacts": [
+        {
+          "id": "4abae32da4396deb1d3a3e509a4ece2642a3d02573b1bd56aa067384c4d45d3d",
+          "filename": "DemoniDraw_v1.0.1.apk",
+          "original_filename": "DemoniDraw_v1.0.1.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "root",
+          "size_bytes": 13534498,
+          "sha256": "4abae32da4396deb1d3a3e509a4ece2642a3d02573b1bd56aa067384c4d45d3d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "e7bb841bafa087c948363bf1ef65ba342fdc81f8573364fc794897d808a92e01",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jaypsmall-demonidraw-root/DemoniDraw_v1.0.1.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jaypsmall-demonidraw-root"
+        },
+        {
+          "id": "9d93b3219c9bed31e086b4084b40aec8e1b7870678bc30bf72caa4a8edeb2ae2",
+          "filename": "DemoniDraw_v1.0.2.apk",
+          "original_filename": "DemoniDraw_v1.0.2.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "root",
+          "size_bytes": 13550882,
+          "sha256": "9d93b3219c9bed31e086b4084b40aec8e1b7870678bc30bf72caa4a8edeb2ae2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "e7bb841bafa087c948363bf1ef65ba342fdc81f8573364fc794897d808a92e01",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jaypsmall-demonidraw-root/DemoniDraw_v1.0.2.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jaypsmall-demonidraw-root"
+        },
+        {
+          "id": "70c1e1a8534aaa4980dfbbca05d8f60ccf176b023dba888ac09d0d441e856f3e",
+          "filename": "DemoniDraw_v1.0.3.apk",
+          "original_filename": "DemoniDraw_v1.0.3.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "root",
+          "size_bytes": 20931145,
+          "sha256": "70c1e1a8534aaa4980dfbbca05d8f60ccf176b023dba888ac09d0d441e856f3e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "16183930a773982f2f5d5d86461658d4c7cae8771ea92c9278fd328fca73b70f",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jaypsmall-demonidraw-root/DemoniDraw_v1.0.3.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jaypsmall-demonidraw-root"
+        },
+        {
+          "id": "e1f931c1e8fa003591211d62b2a0f9f37030ca51d96025dafa7c53646b03041e",
+          "filename": "DemoniDraw_v1.0.apk",
+          "original_filename": "DemoniDraw_v1.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "root",
+          "size_bytes": 14604882,
+          "sha256": "e1f931c1e8fa003591211d62b2a0f9f37030ca51d96025dafa7c53646b03041e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "e7bb841bafa087c948363bf1ef65ba342fdc81f8573364fc794897d808a92e01",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jaypsmall-demonidraw-root/DemoniDraw_v1.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jaypsmall-demonidraw-root"
         }
       ],
       "platforms": [
