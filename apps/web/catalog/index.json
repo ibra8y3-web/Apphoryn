@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:59:21.516015+00:00",
+  "generated_at": "2026-11-25T22:59:47.417627+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -18725,6 +18725,88 @@
           "signer_certificate_sha256": "b1868505e313bc8b534d0bd09ae11b72f4c81a28a4a0b8972566b360fd39b4e1",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-maneeshacooray-gitling-v1.0.66/app-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-maneeshacooray-gitling-v1.0.66"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "tanzireren-gitpush",
+      "slug": "tanzireren-gitpush",
+      "name": "GitPush",
+      "summary": "GitPush is a powerful Android GitHub client that lets you upload files, folders, and ZIPs, manage repositories, browse and edit code, handle GitHub Actions and Releases, and use AI-powered tools — entirely from your Android phone, without a",
+      "description": "GitPush is a powerful Android GitHub client that lets you upload files, folders, and ZIPs, manage repositories, browse and edit code, handle GitHub Actions and Releases, and use AI-powered tools — entirely from your Android phone, without a PC or terminal.",
+      "translations": {
+        "en": {
+          "summary": "GitPush is a powerful Android GitHub client that lets you upload files, folders, and ZIPs, manage repositories, browse and edit code, handle GitHub Actions and Releases, and use AI-powered tools — entirely from your Android phone, without a",
+          "description": "GitPush is a powerful Android GitHub client that lets you upload files, folders, and ZIPs, manage repositories, browse and edit code, handle GitHub Actions and Releases, and use AI-powered tools — entirely from your Android phone, without a PC or terminal."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/TanzirEren/GitPush/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/TanzirEren/GitPush",
+      "github_repo_id": "1412737261",
+      "source_updated_at": "2026-11-23T14:08:31Z",
+      "homepage_url": null,
+      "owner": "TanzirEren",
+      "default_branch": "main",
+      "source_commit_sha": "5110500e0739756b3efc5214d0d121f5a742eaed",
+      "license_text": "MIT License\n\nCopyright (c) 2026 TanzirDev\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ai-assistant",
+        "android",
+        "android-app",
+        "android-development",
+        "branch-management",
+        "code-editor",
+        "commit",
+        "developer-tools",
+        "file-upload",
+        "git",
+        "git-client",
+        "github",
+        "github-actions",
+        "github-client",
+        "github-releases",
+        "gitpush",
+        "java",
+        "mobile-development",
+        "repository-manager",
+        "zip-uploader"
+      ],
+      "latest_version": "v2.2.0",
+      "release_url": "https://github.com/TanzirEren/GitPush/releases/tag/v2.2.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-tanzireren-gitpush-v2.2.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-tanzireren-gitpush-v2.2.0/THIRD-PARTY-NOTICE-tanzireren-gitpush.txt",
+      "artifacts": [
+        {
+          "id": "2e0fe54a211f9dd871442ed7970934667bd191a4267ed58036fb6a237b5109a8",
+          "filename": "GitPush-v2.2.0.apk",
+          "original_filename": "GitPush-v2.2.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v2.2.0",
+          "size_bytes": 7515404,
+          "sha256": "2e0fe54a211f9dd871442ed7970934667bd191a4267ed58036fb6a237b5109a8",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "809122c00a4405a362c3d9867991da16c8a7d263920a6d9548a210a60644f9d6",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-tanzireren-gitpush-v2.2.0/GitPush-v2.2.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-tanzireren-gitpush-v2.2.0"
         }
       ],
       "platforms": [
