@@ -97,10 +97,10 @@ jobs:
             topic:flutter
         shell: bash
         run: |
+          # Keep scanning for nearly the full six-hour GitHub-hosted runner window.
           python scripts/global_scout.py \
             --max-repositories 10000 \
             --max-pages 100 \
-            # Keep scanning for nearly the full six-hour GitHub-hosted runner window.
             --run-budget-seconds 20400 \
             --import-interval-seconds "$APPHORYN_IMPORT_INTERVAL_SECONDS"
 
