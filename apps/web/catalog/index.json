@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:05:38.283542+00:00",
+  "generated_at": "2026-11-25T23:06:01.989818+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -23119,6 +23119,75 @@
           "signer_certificate_sha256": "648c37527717df4d254eddb3e3b7f405039371392e612efbe6f83bc45deb738c",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-danielchalmers-journalapp-v12.0.6/com.danielchalmers.journalapp-Signed.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-danielchalmers-journalapp-v12.0.6"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "pranavv1210-journeysync-app",
+      "slug": "pranavv1210-journeysync-app",
+      "name": "JourneySync-App",
+      "summary": "JourneySync is a ride coordination app for bikers to create, discover, and join rides in real time. It includes Gmail login, profile management, nearby ride alerts, ride lobby/live ride tracking, SOS sharing features, and Supabase-powered b",
+      "description": "JourneySync is a ride coordination app for bikers to create, discover, and join rides in real time. It includes Gmail login, profile management, nearby ride alerts, ride lobby/live ride tracking, SOS sharing features, and Supabase-powered backend services for authentication, data, and storage.",
+      "translations": {
+        "en": {
+          "summary": "JourneySync is a ride coordination app for bikers to create, discover, and join rides in real time. It includes Gmail login, profile management, nearby ride alerts, ride lobby/live ride tracking, SOS sharing features, and Supabase-powered b",
+          "description": "JourneySync is a ride coordination app for bikers to create, discover, and join rides in real time. It includes Gmail login, profile management, nearby ride alerts, ride lobby/live ride tracking, SOS sharing features, and Supabase-powered backend services for authentication, data, and storage."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/pranavv1210/JourneySync-App/main/assets/logo.png",
+      "repository_url": "https://github.com/pranavv1210/JourneySync-App",
+      "github_repo_id": "1159161005",
+      "source_updated_at": "2026-11-20T10:57:48Z",
+      "homepage_url": "https://journeysyncrideapp.in/",
+      "owner": "pranavv1210",
+      "default_branch": "main",
+      "source_commit_sha": "1ac613387dfc947ed40cac39263ebc8b67a44c17",
+      "license_text": "﻿MIT License\n\nCopyright (c) 2026 Pranav V\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android-app",
+        "dart",
+        "flutter-app",
+        "ios-app",
+        "openstreetmap",
+        "rider",
+        "supabase"
+      ],
+      "latest_version": "v1.5.0",
+      "release_url": "https://github.com/pranavv1210/JourneySync-App/releases/tag/v1.5.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pranavv1210-journeysync-app-v1.5.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pranavv1210-journeysync-app-v1.5.0/THIRD-PARTY-NOTICE-pranavv1210-journeysync-app.txt",
+      "artifacts": [
+        {
+          "id": "676ebb01002b3f35f4b86caacfd884c75f6f6b6ecd24973c5aaf660a9b3cfc8c",
+          "filename": "journeysync-v1.5.0.apk",
+          "original_filename": "journeysync-v1.5.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.5.0",
+          "size_bytes": 70309726,
+          "sha256": "676ebb01002b3f35f4b86caacfd884c75f6f6b6ecd24973c5aaf660a9b3cfc8c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "253a0e7370df7a797b628e1a4b82a71862c2b555aaca849f5ceadf7093b88e19",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pranavv1210-journeysync-app-v1.5.0/journeysync-v1.5.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pranavv1210-journeysync-app-v1.5.0"
         }
       ],
       "platforms": [
