@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:24:43.219824+00:00",
+  "generated_at": "2026-11-25T09:24:51.891203+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -6183,6 +6183,55 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "pideoh-twinscript",
+      "slug": "pideoh-twinscript",
+      "artifacts": [],
+      "name": "twinscript",
+      "summary": "Desktop app for macOS and Windows: real-time meeting transcription with two-way translation, shown side by side.",
+      "description": "Desktop app for macOS and Windows: real-time meeting transcription with two-way translation, shown side by side.",
+      "translations": {
+        "en": {
+          "summary": "Desktop app for macOS and Windows: real-time meeting transcription with two-way translation, shown side by side.",
+          "description": "Desktop app for macOS and Windows: real-time meeting transcription with two-way translation, shown side by side."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/pideoh/twinscript/main/icons/icon.svg",
+      "repository_url": "https://github.com/pideoh/twinscript",
+      "github_repo_id": "1466439068",
+      "source_updated_at": "2026-11-22T02:06:25Z",
+      "homepage_url": "https://zenn.dev/pideoh/articles/twinscript-realtime-translation",
+      "owner": "pideoh",
+      "default_branch": "main",
+      "source_commit_sha": "59ad977cab9da6bf1d135d14e422b1d6e895c398",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Hideo Sumi\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "desktop-app",
+        "electron",
+        "gemini",
+        "live-captions",
+        "macos",
+        "speech-to-text",
+        "transcription",
+        "translation",
+        "windows"
+      ],
+      "latest_version": "v0.13.0",
+      "release_url": "https://github.com/pideoh/twinscript/releases/tag/v0.13.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "zev-kaapor-wavvy",
