@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:04:10.070791+00:00",
+  "generated_at": "2026-11-25T23:04:36.575772+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -49805,6 +49805,107 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "jittiponpannak-vibequickpdf",
+      "slug": "jittiponpannak-vibequickpdf",
+      "name": "VibeQuickPDF",
+      "summary": "แอป Flutter สำหรับแปลงรูปภาพเป็นไฟล์ PDF",
+      "description": "แอป Flutter สำหรับแปลงรูปภาพเป็นไฟล์ PDF",
+      "translations": {
+        "en": {
+          "summary": "แอป Flutter สำหรับแปลงรูปภาพเป็นไฟล์ PDF",
+          "description": "แอป Flutter สำหรับแปลงรูปภาพเป็นไฟล์ PDF"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/JittiponPannak/VibeQuickPDF/main/assets/icon.png",
+      "repository_url": "https://github.com/JittiponPannak/VibeQuickPDF",
+      "github_repo_id": "1306709878",
+      "source_updated_at": "2026-11-22T10:36:02Z",
+      "homepage_url": null,
+      "owner": "JittiponPannak",
+      "default_branch": "main",
+      "source_commit_sha": "82414a0f17086a675397012b7c95720f6d1c8609",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Jittipon Pannak\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android-app",
+        "flutter-app",
+        "pdf",
+        "thai",
+        "vibe-coded"
+      ],
+      "latest_version": "1.3.2",
+      "release_url": "https://github.com/JittiponPannak/VibeQuickPDF/releases/tag/1.3.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jittiponpannak-vibequickpdf-1.3.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jittiponpannak-vibequickpdf-1.3.2/THIRD-PARTY-NOTICE-jittiponpannak-vibequickpdf.txt",
+      "artifacts": [
+        {
+          "id": "8a8f9524fca5137f0b43a177ade20b66b41da1e64674b2cb04f3c5b6bc009661",
+          "filename": "VibeQuickPDF-1.3.2-arm64-v8a-release.apk",
+          "original_filename": "VibeQuickPDF-1.3.2-arm64-v8a-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "1.3.2",
+          "size_bytes": 20646226,
+          "sha256": "8a8f9524fca5137f0b43a177ade20b66b41da1e64674b2cb04f3c5b6bc009661",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "22a120946b2748a26aaf3a3f60d2c75fd9f5ba9f2b3bd3617696c662b5661d8e",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jittiponpannak-vibequickpdf-1.3.2/VibeQuickPDF-1.3.2-arm64-v8a-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jittiponpannak-vibequickpdf-1.3.2"
+        },
+        {
+          "id": "f672311f05d54c95be92e0fc2af10301e29df142e60cdad1b4f765372ee2a13b",
+          "filename": "VibeQuickPDF-1.3.2-armeabi-v7a-release.apk",
+          "original_filename": "VibeQuickPDF-1.3.2-armeabi-v7a-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "1.3.2",
+          "size_bytes": 18852012,
+          "sha256": "f672311f05d54c95be92e0fc2af10301e29df142e60cdad1b4f765372ee2a13b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "22a120946b2748a26aaf3a3f60d2c75fd9f5ba9f2b3bd3617696c662b5661d8e",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jittiponpannak-vibequickpdf-1.3.2/VibeQuickPDF-1.3.2-armeabi-v7a-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jittiponpannak-vibequickpdf-1.3.2"
+        },
+        {
+          "id": "928c1a920d9ffb3263e05301b2bee932194b138b7d748725890543a33fb3d443",
+          "filename": "VibeQuickPDF-1.3.2-x86_64-release.apk",
+          "original_filename": "VibeQuickPDF-1.3.2-x86_64-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "x86_64",
+          "version": "1.3.2",
+          "size_bytes": 22203225,
+          "sha256": "928c1a920d9ffb3263e05301b2bee932194b138b7d748725890543a33fb3d443",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "22a120946b2748a26aaf3a3f60d2c75fd9f5ba9f2b3bd3617696c662b5661d8e",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jittiponpannak-vibequickpdf-1.3.2/VibeQuickPDF-1.3.2-x86_64-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jittiponpannak-vibequickpdf-1.3.2"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
