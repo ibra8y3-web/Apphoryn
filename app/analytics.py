@@ -315,6 +315,46 @@ class AnalyticsStore:
             cls._d1_request(config["account_id"], config["database_id"], config["token"],
                             {"batch": statements})
 
+    def test_backend(self) -> dict[str, Any]:
+        provider, config = self._backend_config()
+        if provider == "local_sqlite":
+            return {
+                "provider": provider,
+                "connected": True,
+                "status": "local_only",
+                "note": "Local SQLite is the active durable database. No remote database is configured.",
+            }
+        started = time.monotonic()
+        try:
+            if provider == "postgres":
+                try:
+                    import psycopg
+                except ImportError as exc:
+                    raise RuntimeError("Install psycopg[binary] to test PostgreSQL connectivity.") from exc
+                with psycopg.connect(config["dsn"], connect_timeout=5) as connection:
+                    with connection.cursor() as cursor:
+                        cursor.execute("SELECT 1")
+                        row = cursor.fetchone()
+                        if not row or row[0] != 1:
+                            raise RuntimeError("PostgreSQL connectivity test returned an unexpected result.")
+            else:
+                self._d1_request(config["account_id"], config["database_id"], config["token"], "SELECT 1")
+            return {
+                "provider": provider,
+                "connected": True,
+                "status": "connected",
+                "latency_ms": int((time.monotonic() - started) * 1000),
+                "note": "The remote database answered a real SELECT 1 query.",
+            }
+        except Exception as exc:
+            return {
+                "provider": provider,
+                "connected": False,
+                "status": "unavailable",
+                "latency_ms": int((time.monotonic() - started) * 1000),
+                "error": f"{type(exc).__name__}: {str(exc)[:300]}",
+            }
+
     def sync_once(self, limit: int = 100) -> dict[str, Any]:
         provider, config = self._backend_config()
         if provider == "local_sqlite":
