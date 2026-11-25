@@ -323,8 +323,6 @@ def download_artifact(artifact_id: str):
         if storage_root in path.parents and path.is_file():
             app_record = db.get_app(str(artifact.get("app_id") or "")) or {}
             app_slug = str(app_record.get("slug") or "")
-            analytics.record_event("download_requested", app_slug=app_slug,
-                                   artifact_id=artifact_id, platform=str(artifact.get("platform") or ""))
             return FileResponse(
                 path, filename=artifact["filename"], media_type="application/octet-stream",
                 headers={"X-Content-Type-Options": "nosniff", "Cache-Control": "private, no-store"},
@@ -359,8 +357,6 @@ def download_artifact(artifact_id: str):
     if final_url.scheme != "https" or final_url.hostname not in _RELEASE_ASSET_HOSTS:
         response.close()
         raise HTTPException(502, "Release asset resolved to an untrusted host.")
-    analytics.record_event("download_requested", app_slug=app_slug, artifact_id=artifact_id,
-                           platform=str(mirrored.get("platform") or ""))
     declared_length = response.headers.get("Content-Length")
     if declared_length:
         try:
@@ -383,15 +379,21 @@ def download_artifact(artifact_id: str):
     def stream_release_asset():
         total = 0
         completed = False
+        digest = hashlib.sha256()
+        expected_digest = str(mirrored.get("sha256") or "").lower()
+        expected_length = int(declared_length) if declared_length else None
         try:
             while True:
                 chunk = response.read(1024 * 1024)
                 if not chunk:
-                    completed = total > 0
+                    length_matches = expected_length is None or total == expected_length
+                    digest_matches = not expected_digest or digest.hexdigest() == expected_digest
+                    completed = total > 0 and length_matches and digest_matches
                     break
                 total += len(chunk)
                 if total > settings.max_artifact_bytes:
                     raise RuntimeError("Mirrored release asset exceeded the configured download limit.")
+                digest.update(chunk)
                 yield chunk
         finally:
             response.close()
