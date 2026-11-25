@@ -596,7 +596,9 @@ class RepositoryArchiveWorker:
     def _run(self) -> None:
         while not self.stop_event.is_set():
             result = self.archive.process_next(self.github)
-            self.stop_event.wait(2 if result else 15)
+            # Keep unauthenticated public API traffic below GitHub's hourly core limit.
+            delay = 2 if settings.github_token else 65
+            self.stop_event.wait(delay if result else max(15, delay))
 
     def stop(self) -> None:
         self.stop_event.set()
