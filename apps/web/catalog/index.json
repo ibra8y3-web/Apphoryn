@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:32:05.344175+00:00",
+  "generated_at": "2026-11-25T09:36:10.952219+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -8188,7 +8188,7 @@
     }
   ],
   "ai_status": {
-    "checked_at": "2026-11-25T05:28:31.446839+00:00",
+    "checked_at": "2026-11-25T09:36:10.238246+00:00",
     "free_only": true,
     "available_provider_count": 2,
     "available_model_count": 13,
