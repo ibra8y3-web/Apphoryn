@@ -54,6 +54,8 @@ def _zip_members(path: Path) -> set[str]:
 
 
 def _is_pe(path: Path) -> bool:
+    """Accept runnable PE application images, not DLLs or header-only lookalikes."""
+    file_size = path.stat().st_size
     with path.open("rb") as stream:
         if stream.read(2) != b"MZ":
             return False
@@ -62,21 +64,128 @@ def _is_pe(path: Path) -> bool:
         if len(pointer) != 4:
             return False
         offset = struct.unpack("<I", pointer)[0]
-        if offset < 64 or offset > path.stat().st_size - 24:
+        if offset < 64 or offset > file_size - 24:
             return False
         stream.seek(offset)
-        return stream.read(4) == b"PE\x00\x00"
+        headers = stream.read(24)
+        if len(headers) != 24 or headers[:4] != bytes((0x50, 0x45, 0, 0)):
+            return False
 
+        machine = struct.unpack("<H", headers[4:6])[0]
+        section_count = struct.unpack("<H", headers[6:8])[0]
+        optional_size = struct.unpack("<H", headers[20:22])[0]
+        characteristics = struct.unpack("<H", headers[22:24])[0]
+        known_machines = {0x014C, 0x8664, 0x01C0, 0x01C2, 0x01C4, 0xAA64}
+        if machine not in known_machines or not 1 <= section_count <= 96:
+            return False
+        if not (characteristics & 0x0002) or (characteristics & 0x2000):
+            return False
+        if optional_size < 96 or offset + 24 + optional_size > file_size:
+            return False
+
+        optional_header = stream.read(optional_size)
+        if len(optional_header) != optional_size:
+            return False
+        magic = struct.unpack("<H", optional_header[:2])[0]
+        if magic not in {0x10B, 0x20B}:
+            return False
+        entry_point = struct.unpack("<I", optional_header[16:20])[0]
+        if entry_point == 0:
+            return False
+
+        section_table = offset + 24 + optional_size
+        section_table_end = section_table + section_count * 40
+        if section_table_end > file_size:
+            return False
+        stream.seek(section_table)
+        entry_is_in_executable_section = False
+        for _ in range(section_count):
+            section = stream.read(40)
+            if len(section) != 40:
+                return False
+            virtual_size = struct.unpack("<I", section[8:12])[0]
+            virtual_address = struct.unpack("<I", section[12:16])[0]
+            raw_size = struct.unpack("<I", section[16:20])[0]
+            raw_pointer = struct.unpack("<I", section[20:24])[0]
+            section_flags = struct.unpack("<I", section[36:40])[0]
+            if not raw_size or raw_pointer < section_table_end or raw_pointer + raw_size > file_size:
+                continue
+            if not (section_flags & 0x20000000):
+                continue
+            span = max(virtual_size, raw_size)
+            if virtual_address <= entry_point < virtual_address + span:
+                entry_is_in_executable_section = True
+        return entry_is_in_executable_section
 
 def _elf_header(path: Path) -> bytes:
+    file_size = path.stat().st_size
     with path.open("rb") as stream:
         header = stream.read(64)
-    if len(header) < 20 or header[:4] != b"\x7fELF":
+    if len(header) < 20 or header[:4] != bytes((0x7F, 0x45, 0x4C, 0x46)):
         raise ArtifactValidationError("File does not contain a valid ELF header.")
     if header[4] not in (1, 2) or header[5] not in (1, 2) or header[6] != 1:
         raise ArtifactValidationError("ELF class, byte order, or version is invalid.")
-    return header
+    byte_order = "<" if header[5] == 1 else ">"
+    is_64_bit = header[4] == 2
+    minimum_size = 64 if is_64_bit else 52
+    if len(header) < minimum_size:
+        raise ArtifactValidationError("ELF executable header is truncated.")
 
+    file_type = struct.unpack_from(byte_order + "H", header, 16)[0]
+    entry_point = struct.unpack_from(byte_order + ("Q" if is_64_bit else "I"), header, 24)[0]
+    if file_type not in {2, 3} or entry_point == 0:
+        raise ArtifactValidationError(
+            "ELF is not a runnable executable; relocatable objects and shared libraries are not store apps."
+        )
+
+    if is_64_bit:
+        program_offset = struct.unpack_from(byte_order + "Q", header, 32)[0]
+        entry_size = struct.unpack_from(byte_order + "H", header, 54)[0]
+        entry_count = struct.unpack_from(byte_order + "H", header, 56)[0]
+        minimum_entry_size = 56
+    else:
+        program_offset = struct.unpack_from(byte_order + "I", header, 28)[0]
+        entry_size = struct.unpack_from(byte_order + "H", header, 42)[0]
+        entry_count = struct.unpack_from(byte_order + "H", header, 44)[0]
+        minimum_entry_size = 32
+    if (
+        program_offset == 0 or not 1 <= entry_count <= 1024
+        or entry_size < minimum_entry_size
+        or program_offset + entry_size * entry_count > file_size
+    ):
+        raise ArtifactValidationError("ELF has no valid program-header table for execution.")
+
+    with path.open("rb") as stream:
+        stream.seek(program_offset)
+        table = stream.read(entry_size * entry_count)
+    executable_segment_found = False
+    for index in range(entry_count):
+        segment = table[index * entry_size:(index + 1) * entry_size]
+        if len(segment) < minimum_entry_size:
+            break
+        segment_type = struct.unpack_from(byte_order + "I", segment, 0)[0]
+        if is_64_bit:
+            flags = struct.unpack_from(byte_order + "I", segment, 4)[0]
+            file_offset = struct.unpack_from(byte_order + "Q", segment, 8)[0]
+            virtual_address = struct.unpack_from(byte_order + "Q", segment, 16)[0]
+            file_bytes = struct.unpack_from(byte_order + "Q", segment, 32)[0]
+            memory_bytes = struct.unpack_from(byte_order + "Q", segment, 40)[0]
+        else:
+            file_offset = struct.unpack_from(byte_order + "I", segment, 4)[0]
+            virtual_address = struct.unpack_from(byte_order + "I", segment, 8)[0]
+            file_bytes = struct.unpack_from(byte_order + "I", segment, 16)[0]
+            memory_bytes = struct.unpack_from(byte_order + "I", segment, 20)[0]
+            flags = struct.unpack_from(byte_order + "I", segment, 24)[0]
+        if (
+            segment_type == 1 and (flags & 1) and file_bytes > 0 and memory_bytes > 0
+            and file_offset + file_bytes <= file_size
+            and virtual_address <= entry_point < virtual_address + memory_bytes
+        ):
+            executable_segment_found = True
+            break
+    if not executable_segment_found:
+        raise ArtifactValidationError("ELF has no executable load segment containing its entry point.")
+    return header
 
 def _ar_members(path: Path) -> set[str]:
     members: set[str] = set()
@@ -218,8 +327,20 @@ def validate_artifact(path: str | Path, *, require_apk_signature: bool = True) -
             raise ArtifactValidationError("MSIX/APPX package lacks its manifest, block map, or signature.")
     elif suffix == ".jar":
         members = _zip_members(candidate)
-        if "META-INF/MANIFEST.MF" not in members or not any(name.endswith(".class") for name in members):
+        manifest_name = next((name for name in members if name.upper() == "META-INF/MANIFEST.MF"), None)
+        if manifest_name is None or not any(name.endswith(".class") for name in members):
             raise ArtifactValidationError("JAR lacks a manifest or compiled Java classes.")
+        try:
+            with zipfile.ZipFile(candidate) as archive:
+                manifest_bytes = archive.read(manifest_name)
+        except (OSError, KeyError, zipfile.BadZipFile) as exc:
+            raise ArtifactValidationError("JAR manifest cannot be read.") from exc
+        # Manifest continuation lines begin with one space; unfold them before parsing.
+        unfolded_manifest = re.sub(rb"\r?\n ", b"", manifest_bytes)
+        if not re.search(rb"(?im)^Main-Class:\s*[^\s]+", unfolded_manifest):
+            raise ArtifactValidationError(
+                "JAR is not an executable application: its manifest has no Main-Class entry."
+            )
     elif suffix == ".exe":
         if not _is_pe(candidate):
             raise ArtifactValidationError("EXE does not contain a valid Windows PE header.")
