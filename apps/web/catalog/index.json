@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:15:47.955655+00:00",
+  "generated_at": "2026-11-25T23:16:11.670408+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -12674,6 +12674,94 @@
           "signer_certificate_sha256": "44bc73ba3b11afba064b12160e4fa26e45f56fee51b9deee5136fef57d8a8fb7",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-clc-pro-deepspeak-v1.13.3/DeepSpeak-v1.13.3.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-clc-pro-deepspeak-v1.13.3"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "jaypsmall-demoniwifi",
+      "slug": "jaypsmall-demoniwifi",
+      "name": "DemoniWifi",
+      "summary": "😈 DemoniWifi Apk 📡 Es una aplicación móvil con una interfaz temática diseñada para probar y auditar conexiones Wi-Fi. La herramienta permite gestionar escaneos de redes cercanas y ejecutar secuencias de prueba con credenciales predefinidas.",
+      "description": "😈 DemoniWifi Apk 📡 Es una aplicación móvil con una interfaz temática diseñada para probar y auditar conexiones Wi-Fi. La herramienta permite gestionar escaneos de redes cercanas y ejecutar secuencias de prueba con credenciales predefinidas.",
+      "translations": {
+        "en": {
+          "summary": "😈 DemoniWifi Apk 📡 Es una aplicación móvil con una interfaz temática diseñada para probar y auditar conexiones Wi-Fi. La herramienta permite gestionar escaneos de redes cercanas y ejecutar secuencias de prueba con credenciales predefinidas.",
+          "description": "😈 DemoniWifi Apk 📡 Es una aplicación móvil con una interfaz temática diseñada para probar y auditar conexiones Wi-Fi. La herramienta permite gestionar escaneos de redes cercanas y ejecutar secuencias de prueba con credenciales predefinidas."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Jaypsmall/DemoniWifi/master/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/Jaypsmall/DemoniWifi",
+      "github_repo_id": "1339910175",
+      "source_updated_at": "2026-11-22T12:46:16Z",
+      "homepage_url": "https://jaypsmall.github.io/DemoniWifi/",
+      "owner": "Jaypsmall",
+      "default_branch": "master",
+      "source_commit_sha": "5df619791a180fe461511613aae71aea05e7ac86",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Architect_D4d\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "android-app",
+        "kotlin",
+        "open-source",
+        "root",
+        "wifi",
+        "wifi-hacking",
+        "wifi-network",
+        "wifi-password",
+        "wifi-scanner"
+      ],
+      "latest_version": "android",
+      "release_url": "https://github.com/Jaypsmall/DemoniWifi/releases/tag/android",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jaypsmall-demoniwifi-android",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jaypsmall-demoniwifi-android/THIRD-PARTY-NOTICE-jaypsmall-demoniwifi.txt",
+      "artifacts": [
+        {
+          "id": "d65bad5fbb0590dee9e31b6b6c3aecd795c47871c46a6f213a9e4c680de49b8b",
+          "filename": "DemoniWifi_v1.0.4.apk",
+          "original_filename": "DemoniWifi_v1.0.4.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "android",
+          "size_bytes": 12495876,
+          "sha256": "d65bad5fbb0590dee9e31b6b6c3aecd795c47871c46a6f213a9e4c680de49b8b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "e7bb841bafa087c948363bf1ef65ba342fdc81f8573364fc794897d808a92e01",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jaypsmall-demoniwifi-android/DemoniWifi_v1.0.4.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jaypsmall-demoniwifi-android"
+        },
+        {
+          "id": "ca4e238bcf24aa1879d2b52e318b6ef72770c3b43a387b9f30093c72e543fbf5",
+          "filename": "DemoniWifi_v1.0.5.apk",
+          "original_filename": "DemoniWifi_v1.0.5.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "android",
+          "size_bytes": 19548570,
+          "sha256": "ca4e238bcf24aa1879d2b52e318b6ef72770c3b43a387b9f30093c72e543fbf5",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "16183930a773982f2f5d5d86461658d4c7cae8771ea92c9278fd328fca73b70f",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jaypsmall-demoniwifi-android/DemoniWifi_v1.0.5.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jaypsmall-demoniwifi-android"
         }
       ],
       "platforms": [
