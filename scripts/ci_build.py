@@ -179,7 +179,10 @@ def build_android(source: Path, output: Path) -> None:
             if install_android_javascript_dependencies(source, project):
                 installed_dependency_roots.add(dependency_root)
         wrapper.chmod(wrapper.stat().st_mode | 0o111)
-        run([str(wrapper), "--no-daemon", "--stacktrace", "assembleRelease"], cwd=project, timeout=2400)
+        gradle_command = [str(wrapper), "--no-daemon", "--stacktrace", "assembleRelease"]
+        if os.getenv("APPHORYN_BUILD_RECOVERY_ACTION") == "gradle_refresh_dependencies":
+            gradle_command.insert(-1, "--refresh-dependencies")
+        run(gradle_command, cwd=project, timeout=2400)
         release_apks = list(project.glob("**/build/outputs/apk/**/*.apk"))
         for candidate in release_apks:
             if candidate.is_file():
@@ -213,6 +216,8 @@ def build_dotnet(source: Path, output: Path, target: str) -> None:
 
     for project in selected:
         published = output / project.stem
+        if os.getenv("APPHORYN_BUILD_RECOVERY_ACTION") == "dotnet_restore":
+            run(["dotnet", "restore", str(project), "--force"], cwd=source, timeout=1200)
         run([
             "dotnet", "publish", str(project), "-c", "Release", "-r", rid,
             "--self-contained", "true", "-p:UseAppHost=true", "-o", str(published),
@@ -263,6 +268,9 @@ def build_go(source: Path, output: Path, target: str) -> None:
             if re.search(r"(?m)^\\s*package\\s+main(?:\\s|$)", source_text):
                 main_packages.add(source_file.parent)
 
+        if os.getenv("APPHORYN_BUILD_RECOVERY_ACTION") == "go_mod_download":
+            run(["go", "mod", "download"], cwd=module_root, timeout=900)
+
         for package_dir in sorted(main_packages):
             relative = package_dir.relative_to(module_root)
             package_arg = "." if relative == Path(".") else "./" + relative.as_posix()
@@ -310,17 +318,27 @@ def build_electron(source: Path, output: Path, target: str) -> None:
         project = package_file.parent
         build_command = str((package_data.get("scripts") or {}).get("build") or "")
         frontend = project.parent / "frontend"
+        recovery_action = os.getenv("APPHORYN_BUILD_RECOVERY_ACTION", "")
         if (
             frontend != project
             and (frontend / "package-lock.json").is_file()
             and "frontend/node_modules" in build_command.replace("\\", "/")
         ):
-            run(["npm", "ci", "--no-audit", "--no-fund", "--prefix", str(frontend)], cwd=source, timeout=1800)
+            frontend_install = (
+                ["npm", "install", "--no-audit", "--no-fund", "--prefix", str(frontend)]
+                if recovery_action == "npm_reinstall"
+                else ["npm", "ci", "--no-audit", "--no-fund", "--prefix", str(frontend)]
+            )
+            run(frontend_install, cwd=source, timeout=1800)
 
         install_command = (
-            ["npm", "ci", "--no-audit", "--no-fund"]
-            if (project / "package-lock.json").is_file()
-            else ["npm", "install", "--no-audit", "--no-fund", "--package-lock=false"]
+            ["npm", "install", "--no-audit", "--no-fund"]
+            if recovery_action == "npm_reinstall"
+            else (
+                ["npm", "ci", "--no-audit", "--no-fund"]
+                if (project / "package-lock.json").is_file()
+                else ["npm", "install", "--no-audit", "--no-fund", "--package-lock=false"]
+            )
         )
         run(install_command, cwd=project, timeout=1800)
         run(["npm", "run", selected_script], cwd=project, timeout=3600)
