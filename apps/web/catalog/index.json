@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:06:25.595078+00:00",
+  "generated_at": "2026-11-25T22:06:48.805569+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -25782,6 +25782,71 @@
           "signer_certificate_sha256": "33ae143cfc9936fa5a6f8663a1b94e5e99388c4d94c3e36b0471e695568a3e8e",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ibt-si-mibt-v1.2.0-4/mibt-1.2.0-4-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ibt-si-mibt-v1.2.0-4"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "zp1ke-minesweeper",
+      "slug": "zp1ke-minesweeper",
+      "name": "minesweeper",
+      "summary": "MineSweeper game for Android with Flutter",
+      "description": "MineSweeper game for Android with Flutter",
+      "translations": {
+        "en": {
+          "summary": "MineSweeper game for Android with Flutter",
+          "description": "MineSweeper game for Android with Flutter"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/zp1ke/minesweeper/main/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/zp1ke/minesweeper",
+      "github_repo_id": "484907542",
+      "source_updated_at": "2025-10-04T00:11:36Z",
+      "homepage_url": "https://play.google.com/store/apps/details?id=com.h4j4x.minesweeper",
+      "owner": "zp1ke",
+      "default_branch": "main",
+      "source_commit_sha": "8fb25c3fe603fe57678c3eff4bc885dd57963a14",
+      "license_text": "MIT License\n\nCopyright (c) 2022 Michel Atucha Tarafa\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "games",
+      "topics": [
+        "android-app",
+        "dartlang",
+        "flutter-app"
+      ],
+      "latest_version": "1.2.0+11",
+      "release_url": "https://github.com/zp1ke/minesweeper/releases/tag/1.2.0%2B11",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zp1ke-minesweeper-1.2.0-11",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zp1ke-minesweeper-1.2.0-11/THIRD-PARTY-NOTICE-zp1ke-minesweeper.txt",
+      "artifacts": [
+        {
+          "id": "e395ab006b5461a66051e261e842a9a9c86e40c467e1312aa29e0ffcb72b1efe",
+          "filename": "app-release.apk",
+          "original_filename": "app-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "1.2.0+11",
+          "size_bytes": 57862582,
+          "sha256": "e395ab006b5461a66051e261e842a9a9c86e40c467e1312aa29e0ffcb72b1efe",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "6b619f3e2ef7c564b8f249e6302756c45af172614812f1d301c7a7daaa6afa5f",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zp1ke-minesweeper-1.2.0-11/app-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zp1ke-minesweeper-1.2.0-11"
         }
       ],
       "platforms": [
