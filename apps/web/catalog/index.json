@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T05:30:21.390573+00:00",
+  "generated_at": "2026-11-25T05:30:31.893741+00:00",
   "apps": [
     {
       "id": "home-assistant-android",
@@ -2716,6 +2716,85 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "ahnafnafee-pinned-calendar",
+      "slug": "ahnafnafee-pinned-calendar",
+      "name": "pinned-calendar",
+      "summary": "📌 Pin this week's Google Calendar events + to-dos to your Android notification shade — self-healing, 100% on-device, Material You. Kotlin · Jetpack Compose.",
+      "description": "📌 Pin this week's Google Calendar events + to-dos to your Android notification shade — self-healing, 100% on-device, Material You. Kotlin · Jetpack Compose.",
+      "translations": {
+        "en": {
+          "summary": "📌 Pin this week's Google Calendar events + to-dos to your Android notification shade — self-healing, 100% on-device, Material You. Kotlin · Jetpack Compose.",
+          "description": "📌 Pin this week's Google Calendar events + to-dos to your Android notification shade — self-healing, 100% on-device, Material You. Kotlin · Jetpack Compose."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ahnafnafee/pinned-calendar/main/design/icons/play-store-icon/launcher/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/ahnafnafee/pinned-calendar",
+      "github_repo_id": "1257856162",
+      "source_updated_at": "2026-08-31T16:51:36Z",
+      "homepage_url": "https://pinnedcalendar.ahnafnafee.dev",
+      "owner": "ahnafnafee",
+      "default_branch": "main",
+      "source_commit_sha": "39787d2190b8ac0987756a166ce38047fe5e89e9",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Ahnaf An Nafee\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "agenda",
+        "android",
+        "android-app",
+        "calendar",
+        "dynamic-color",
+        "foss",
+        "google-calendar",
+        "jetpack-compose",
+        "kotlin",
+        "material-you",
+        "material3",
+        "notification",
+        "offline",
+        "privacy",
+        "productivity",
+        "todo",
+        "workmanager"
+      ],
+      "latest_version": "v3.3.1",
+      "release_url": "https://github.com/ahnafnafee/pinned-calendar/releases/tag/v3.3.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ahnafnafee-pinned-calendar-v3.3.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ahnafnafee-pinned-calendar-v3.3.1/THIRD-PARTY-NOTICE-ahnafnafee-pinned-calendar.txt",
+      "artifacts": [
+        {
+          "id": "54f5a54382e9e4c5fd8cbdfb4e6b9a0d085aae0e7d2cde43218afec5f20fe212",
+          "filename": "PinnedCalendar-3.3.1.apk",
+          "original_filename": "PinnedCalendar-3.3.1.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v3.3.1",
+          "size_bytes": 13753784,
+          "sha256": "54f5a54382e9e4c5fd8cbdfb4e6b9a0d085aae0e7d2cde43218afec5f20fe212",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "fb35b2acebe0c3e998fbe38fe8816e6a16ed0bd7d581034df494525082de71d8",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ahnafnafee-pinned-calendar-v3.3.1/PinnedCalendar-3.3.1.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ahnafnafee-pinned-calendar-v3.3.1"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
