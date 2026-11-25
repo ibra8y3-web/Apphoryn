@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:45:58.266726+00:00",
+  "generated_at": "2026-11-25T19:46:31.285561+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -14729,6 +14729,105 @@
           "signer_certificate_sha256": "bb08110e538dc6ba8930f75897eacd8f97f3764a371c82763fb63e0cb43121dc",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kauri-off-kiroku-v0.9.0/kiroku.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kauri-off-kiroku-v0.9.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "simplefysakib-klipora-ai-viral-shorts-maker",
+      "slug": "simplefysakib-klipora-ai-viral-shorts-maker",
+      "name": "Klipora---AI-Viral-Shorts-Maker",
+      "summary": "Free Android app for turning long videos into vertical Shorts and Reels with AI-assisted clip selection, synced captions, optional Gemini transcription backup, and Groq as the recommended transcription provider. Includes free 1080p export a",
+      "description": "Free Android app for turning long videos into vertical Shorts and Reels with AI-assisted clip selection, synced captions, optional Gemini transcription backup, and Groq as the recommended transcription provider. Includes free 1080p export and high-speed downloads.",
+      "translations": {
+        "en": {
+          "summary": "Free Android app for turning long videos into vertical Shorts and Reels with AI-assisted clip selection, synced captions, optional Gemini transcription backup, and Groq as the recommended transcription provider. Includes free 1080p export a",
+          "description": "Free Android app for turning long videos into vertical Shorts and Reels with AI-assisted clip selection, synced captions, optional Gemini transcription backup, and Groq as the recommended transcription provider. Includes free 1080p export and high-speed downloads."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/simplefysakib/Klipora---AI-Viral-Shorts-Maker/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/simplefysakib/Klipora---AI-Viral-Shorts-Maker",
+      "github_repo_id": "1432967638",
+      "source_updated_at": "2026-11-25T11:01:55Z",
+      "homepage_url": "https://klipora.sites.tab.bot/",
+      "owner": "simplefysakib",
+      "default_branch": "main",
+      "source_commit_sha": "36d29614ca3d96d2e1848b962af9b48cac63a5a0",
+      "license_text": "MIT License\n\nCopyright (c) 2026 simplefysakib\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ai-video",
+        "android",
+        "android-app",
+        "apk",
+        "auto-captions",
+        "captions",
+        "face-tracking",
+        "free-apk",
+        "gemini",
+        "groq",
+        "klipora",
+        "long-video-to-shorts",
+        "podcast-clips",
+        "reels-maker",
+        "shorts-maker",
+        "subtitles",
+        "video-editor",
+        "video-to-shorts",
+        "viral-shorts",
+        "youtube-shorts"
+      ],
+      "latest_version": "v6.2.1",
+      "release_url": "https://github.com/simplefysakib/Klipora---AI-Viral-Shorts-Maker/releases/tag/v6.2.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-simplefysakib-klipora-ai-viral-shorts-maker-v6.2.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-simplefysakib-klipora-ai-viral-shorts-maker-v6.2.1/THIRD-PARTY-NOTICE-simplefysakib-klipora-ai-viral-shorts-maker.txt",
+      "artifacts": [
+        {
+          "id": "d3c76c165f7766704eaf6acb554ec5664b8a11163255e535a60002a18481ecee",
+          "filename": "Klipora_arm64_6.2.1.apk",
+          "original_filename": "Klipora_arm64_6.2.1.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v6.2.1",
+          "size_bytes": 61871218,
+          "sha256": "d3c76c165f7766704eaf6acb554ec5664b8a11163255e535a60002a18481ecee",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "a453ef51958e262fa13ef25a689ff8e523dc283f2e4d5a1aefa00ad8fd2c3c81",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-simplefysakib-klipora-ai-viral-shorts-maker-v6.2.1/Klipora_arm64_6.2.1.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-simplefysakib-klipora-ai-viral-shorts-maker-v6.2.1"
+        },
+        {
+          "id": "6a37d79e4adfc9e54c580be5c57d953aec9f15e7e87ffdc4a5847d0cd6eaab6c",
+          "filename": "Klipora_universal_6.2.1.apk",
+          "original_filename": "Klipora_universal_6.2.1.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "universal",
+          "version": "v6.2.1",
+          "size_bytes": 120797376,
+          "sha256": "6a37d79e4adfc9e54c580be5c57d953aec9f15e7e87ffdc4a5847d0cd6eaab6c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "a453ef51958e262fa13ef25a689ff8e523dc283f2e4d5a1aefa00ad8fd2c3c81",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-simplefysakib-klipora-ai-viral-shorts-maker-v6.2.1/Klipora_universal_6.2.1.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-simplefysakib-klipora-ai-viral-shorts-maker-v6.2.1"
         }
       ],
       "platforms": [
