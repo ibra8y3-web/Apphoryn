@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:06:01.989818+00:00",
+  "generated_at": "2026-11-25T23:06:24.333572+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -1967,6 +1967,74 @@
       "release_url": null,
       "platforms": [],
       "project_status": "source_available"
+    },
+    {
+      "id": "hossain-khan-android-code-with-ai",
+      "slug": "hossain-khan-android-code-with-ai",
+      "name": "android-code-with-ai",
+      "summary": "CodeMateX - A simple app that leverages on-device AI model to conversate and learn coding in different programming languages.",
+      "description": "CodeMateX - A simple app that leverages on-device AI model to conversate and learn coding in different programming languages.",
+      "translations": {
+        "en": {
+          "summary": "CodeMateX - A simple app that leverages on-device AI model to conversate and learn coding in different programming languages.",
+          "description": "CodeMateX - A simple app that leverages on-device AI model to conversate and learn coding in different programming languages."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/hossain-khan/android-code-with-ai/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/hossain-khan/android-code-with-ai",
+      "github_repo_id": "1248464204",
+      "source_updated_at": "2026-11-10T02:47:18Z",
+      "homepage_url": "https://liquidlabs.ca/android/codematex/",
+      "owner": "hossain-khan",
+      "default_branch": "main",
+      "source_commit_sha": "8bca35fc8675fbbfdad84a37ba66965ebe1e0451",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Hossain Khan\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android-app",
+        "android-application",
+        "circuit",
+        "metro",
+        "programming-concepts",
+        "programming-exercise"
+      ],
+      "latest_version": "1.36.0",
+      "release_url": "https://github.com/hossain-khan/android-code-with-ai/releases/tag/1.36.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hossain-khan-android-code-with-ai-1.36.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hossain-khan-android-code-with-ai-1.36.0/THIRD-PARTY-NOTICE-hossain-khan-android-code-with-ai.txt",
+      "artifacts": [
+        {
+          "id": "8feb1a73eb4e5cfd8610e2c81ee2fa6c210596e4c281df124b7e4908ac232646",
+          "filename": "codematex-v1.36.0.apk",
+          "original_filename": "codematex-v1.36.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "1.36.0",
+          "size_bytes": 57390087,
+          "sha256": "8feb1a73eb4e5cfd8610e2c81ee2fa6c210596e4c281df124b7e4908ac232646",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "c05499fe3bc5ec8ef7b64e8566f0ec2c6735f4d49b3fedf6f304a7dd6457fc8e",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hossain-khan-android-code-with-ai-1.36.0/codematex-v1.36.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hossain-khan-android-code-with-ai-1.36.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
     },
     {
       "id": "parryqiu-android-imessage-relay",
