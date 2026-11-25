@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T10:49:04.800191+00:00",
+  "generated_at": "2026-11-25T10:49:34.364145+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -11938,6 +11938,114 @@
       "platforms": [
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "ravenswatch-modding-ravenswatchmodmanager",
+      "slug": "ravenswatch-modding-ravenswatchmodmanager",
+      "name": "RavenswatchModManager",
+      "summary": "Mod manager and modding SDK for Ravenswatch install mods in one click, or build your own. Windows + Linux.",
+      "description": "Mod manager and modding SDK for Ravenswatch install mods in one click, or build your own. Windows + Linux.",
+      "translations": {
+        "en": {
+          "summary": "Mod manager and modding SDK for Ravenswatch install mods in one click, or build your own. Windows + Linux.",
+          "description": "Mod manager and modding SDK for Ravenswatch install mods in one click, or build your own. Windows + Linux."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Ravenswatch-Modding/RavenswatchModManager/main/apps/desktop/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/Ravenswatch-Modding/RavenswatchModManager",
+      "github_repo_id": "1241416625",
+      "source_updated_at": "2026-11-23T23:39:51Z",
+      "homepage_url": "https://rsmm.me",
+      "owner": "Ravenswatch-Modding",
+      "default_branch": "main",
+      "source_commit_sha": "aa038fb23cac66addf8de859930fc89ed8e35174",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Ovilli\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "application",
+        "linux",
+        "mod-manager",
+        "modding",
+        "mods",
+        "opensource",
+        "ravenswatch",
+        "ravenswatch-mods",
+        "ravenswatchmodmanager",
+        "rsmm",
+        "windows"
+      ],
+      "latest_version": "v6.1.1",
+      "release_url": "https://github.com/Ravenswatch-Modding/RavenswatchModManager/releases/tag/v6.1.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ravenswatch-modding-ravenswatchmodmanager-v6.1.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ravenswatch-modding-ravenswatchmodmanager-v6.1.1/THIRD-PARTY-NOTICE-ravenswatch-modding-ravenswatchmodmanager.txt",
+      "artifacts": [
+        {
+          "id": "df60942cb66bdac747dee0bccc0a5ff9086ac18c8d6e057649ee82165e6a0b83",
+          "filename": "Ravenswatch.Mod.Manager_6.1.1_amd64.AppImage",
+          "original_filename": "Ravenswatch.Mod.Manager_6.1.1_amd64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v6.1.1",
+          "size_bytes": 143899128,
+          "sha256": "df60942cb66bdac747dee0bccc0a5ff9086ac18c8d6e057649ee82165e6a0b83",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ravenswatch-modding-ravenswatchmodmanager-v6.1.1/Ravenswatch.Mod.Manager_6.1.1_amd64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ravenswatch-modding-ravenswatchmodmanager-v6.1.1"
+        },
+        {
+          "id": "288c4ff21b21d328f4693da581b0f484a3b3bb36a50a86cfc071e8e48a5394f5",
+          "filename": "Ravenswatch.Mod.Manager_6.1.1_amd64.deb",
+          "original_filename": "Ravenswatch.Mod.Manager_6.1.1_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v6.1.1",
+          "size_bytes": 47097244,
+          "sha256": "288c4ff21b21d328f4693da581b0f484a3b3bb36a50a86cfc071e8e48a5394f5",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ravenswatch-modding-ravenswatchmodmanager-v6.1.1/Ravenswatch.Mod.Manager_6.1.1_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ravenswatch-modding-ravenswatchmodmanager-v6.1.1"
+        },
+        {
+          "id": "8483a18df39d76175d3dde08afad6127c2d6b29543621846432f6600e0210af4",
+          "filename": "Ravenswatch.Mod.Manager_6.1.1_x64-setup.exe",
+          "original_filename": "Ravenswatch.Mod.Manager_6.1.1_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v6.1.1",
+          "size_bytes": 31505540,
+          "sha256": "8483a18df39d76175d3dde08afad6127c2d6b29543621846432f6600e0210af4",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ravenswatch-modding-ravenswatchmodmanager-v6.1.1/Ravenswatch.Mod.Manager_6.1.1_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ravenswatch-modding-ravenswatchmodmanager-v6.1.1"
+        }
+      ],
+      "platforms": [
+        "linux",
         "windows"
       ]
     },
