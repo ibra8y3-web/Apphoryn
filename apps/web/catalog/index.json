@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:09:12.938250+00:00",
+  "generated_at": "2026-11-25T04:09:17.916679+00:00",
   "apps": [
     {
       "id": "defunkt-ambition",
@@ -504,6 +504,45 @@
       "default_branch": "master",
       "source_commit_sha": "b9c1a925c573878a0b0e4c9c0c28c9f6b994ebb8",
       "license_text": "Copyright (c) 2007 Daniel Morrison, Collective Idea\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "category": "other",
+      "topics": [],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "drnic-drnic-js-test-helpers",
+      "slug": "drnic-drnic-js-test-helpers",
+      "artifacts": [],
+      "name": "drnic_js_test_helpers",
+      "summary": "JavaScript helper libraries for unit testing",
+      "description": "JavaScript helper libraries for unit testing",
+      "translations": {
+        "en": {
+          "summary": "JavaScript helper libraries for unit testing",
+          "description": "JavaScript helper libraries for unit testing"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/108?v=4",
+      "repository_url": "https://github.com/drnic/drnic_js_test_helpers",
+      "github_repo_id": "521",
+      "source_updated_at": "2026-06-30T12:07:38Z",
+      "homepage_url": "http://drnicwilliams.com",
+      "owner": "drnic",
+      "default_branch": "master",
+      "source_commit_sha": "d2a24bebdebc085a670b4c92289e5bb83bafb264",
+      "license_text": "Copyright (c) 2008 Dr Nic Williams\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
       "license_spdx": "MIT",
       "license_eligible": true,
       "project_kind": "unknown",
