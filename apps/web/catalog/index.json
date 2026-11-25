@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:06:47.619521+00:00",
+  "generated_at": "2026-11-25T04:06:52.109931+00:00",
   "apps": [
     {
       "id": "defunkt-ambition",
@@ -560,6 +560,45 @@
       "topics": [],
       "latest_version": "v6.0.0",
       "release_url": "https://github.com/ruby-git/ruby-git/releases/tag/v6.0.0",
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "queso-signal-wiki",
+      "slug": "queso-signal-wiki",
+      "artifacts": [],
+      "name": "signal-wiki",
+      "summary": "The easy to use rails wiki",
+      "description": "The easy to use rails wiki",
+      "translations": {
+        "en": {
+          "summary": "The easy to use rails wiki",
+          "description": "The easy to use rails wiki"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/106?v=4",
+      "repository_url": "https://github.com/queso/signal-wiki",
+      "github_repo_id": "177",
+      "source_updated_at": "2026-07-28T12:41:50Z",
+      "homepage_url": "http://signalwiki.com",
+      "owner": "queso",
+      "default_branch": "master",
+      "source_commit_sha": "46d4cabb2f4308f3a0a596a974ea379de13d10c1",
+      "license_text": "Copyright (c) 2007-2008 Josh Owens\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "category": "other",
+      "topics": [],
+      "latest_version": null,
+      "release_url": null,
       "platforms": [],
       "project_status": "source_available"
     },
