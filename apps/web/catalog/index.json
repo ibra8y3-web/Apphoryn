@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:44:10.207687+00:00",
+  "generated_at": "2026-11-25T19:44:23.783984+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -7261,6 +7261,75 @@
           "signer_certificate_sha256": "d909d62cc99aaf482099f59e362882033a85eb9b791bbd15bdd757f8587a69f3",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-deliciousdiamond-deepexplorer-delicious-v2.0.2/DeepExplorer-2.0.2.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-deliciousdiamond-deepexplorer-delicious-v2.0.2"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "huanmeng692-deepseek-android",
+      "slug": "huanmeng692-deepseek-android",
+      "name": "DeepSeek-Android",
+      "summary": "Third-party DeepSeek Android client: streaming chat, DeepThink, web search, account-managed API key, balance and top-up. Built with Kotlin + Jetpack Compose.",
+      "description": "Third-party DeepSeek Android client: streaming chat, DeepThink, web search, account-managed API key, balance and top-up. Built with Kotlin + Jetpack Compose.",
+      "translations": {
+        "en": {
+          "summary": "Third-party DeepSeek Android client: streaming chat, DeepThink, web search, account-managed API key, balance and top-up. Built with Kotlin + Jetpack Compose.",
+          "description": "Third-party DeepSeek Android client: streaming chat, DeepThink, web search, account-managed API key, balance and top-up. Built with Kotlin + Jetpack Compose."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Huanmeng692/DeepSeek-Android/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/Huanmeng692/DeepSeek-Android",
+      "github_repo_id": "1471483185",
+      "source_updated_at": "2026-11-25T08:28:25Z",
+      "homepage_url": null,
+      "owner": "Huanmeng692",
+      "default_branch": "main",
+      "source_commit_sha": "f3abf10f8d988d6c6942199d5426b4e54fa8f4b7",
+      "license_text": "MIT License\n\nCopyright (c) 2026 DeepSeek Android contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "ai",
+        "android",
+        "android-app",
+        "chat",
+        "deepseek",
+        "jetpack-compose",
+        "kotlin"
+      ],
+      "latest_version": "v1.0.2",
+      "release_url": "https://github.com/Huanmeng692/DeepSeek-Android/releases/tag/v1.0.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-huanmeng692-deepseek-android-v1.0.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-huanmeng692-deepseek-android-v1.0.2/THIRD-PARTY-NOTICE-huanmeng692-deepseek-android.txt",
+      "artifacts": [
+        {
+          "id": "58e5d4ad5a14f5293830522ff37826bf7dc2f2fec8ffae7d9ddb948878e27e3c",
+          "filename": "DeepSeek-Android-1.0.2-release.apk",
+          "original_filename": "DeepSeek-Android-1.0.2-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.2",
+          "size_bytes": 3942809,
+          "sha256": "58e5d4ad5a14f5293830522ff37826bf7dc2f2fec8ffae7d9ddb948878e27e3c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "fe387b283d579cc985bf0edbe2fb1661604895cd58cce01b486a7cbe9bff70e1",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-huanmeng692-deepseek-android-v1.0.2/DeepSeek-Android-1.0.2-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-huanmeng692-deepseek-android-v1.0.2"
         }
       ],
       "platforms": [
