@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+import hashlib
 import hmac
 import json
 import os
+import time
 import tempfile
 import uuid
 import urllib.error
@@ -16,6 +18,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
+from typing import Literal
 
 from .config import ROOT, settings
 from . import ai_router
@@ -34,6 +37,12 @@ catalog = CatalogService()
 builder = BuildService(catalog=catalog)
 app.include_router(agent_router)
 MIRROR_CATALOG = ROOT / "apps" / "web" / "catalog" / "index.json"
+
+
+class PublicAnalyticsEvent(BaseModel):
+    event_type: Literal["app_view", "catalog_view", "search", "favorite_added", "favorite_removed"]
+    app_slug: str | None = Field(default=None, max_length=180)
+    details: dict[str, str | int | float | bool] = Field(default_factory=dict)
 
 
 class ImportRequest(BaseModel):
@@ -125,6 +134,49 @@ def app_detail(slug: str):
         raise HTTPException(404, "Application not found.")
     analytics.record_event("app_view", app_slug=str(match.get("slug") or slug))
     return match
+
+
+_analytics_rate_limit: dict[str, tuple[int, int]] = {}
+
+
+def _allow_analytics_request(request: Request) -> bool:
+    # The source IP is hashed only in process memory for a short rate-limit window.
+    host = request.client.host if request.client else "unknown"
+    key = hashlib.sha256(host.encode("utf-8", errors="ignore")).hexdigest()
+    minute = int(time.time() // 60)
+    window, count = _analytics_rate_limit.get(key, (minute, 0))
+    if window != minute:
+        window, count = minute, 0
+    if count >= 90:
+        return False
+    _analytics_rate_limit[key] = (window, count + 1)
+    if len(_analytics_rate_limit) > 10000:
+        for old_key, (old_window, _) in list(_analytics_rate_limit.items()):
+            if old_window < minute - 1:
+                _analytics_rate_limit.pop(old_key, None)
+    return True
+
+
+@app.post("/api/v1/analytics/events")
+def record_public_analytics_event(payload: PublicAnalyticsEvent, request: Request):
+    if not _allow_analytics_request(request):
+        raise HTTPException(429, "Analytics event rate limit exceeded.")
+    app_slug = (payload.app_slug or "").strip()
+    if payload.event_type in {"app_view", "favorite_added", "favorite_removed"}:
+        if not app_slug:
+            raise HTTPException(422, "app_slug is required for this event.")
+        match = next((item for item in catalog_items(limit=200) if item.get("slug") == app_slug), None)
+        if not match:
+            raise HTTPException(404, "Application not found.")
+        analytics.record_event(payload.event_type, app_slug=app_slug, details=payload.details)
+        return {"accepted": True}
+    if payload.event_type == "search":
+        query = str(payload.details.get("query") or "").strip()[:180]
+        if len(query) >= 2:
+            analytics.record_search(query, 0, source="storefront")
+        return {"accepted": True}
+    analytics.record_event("catalog_view", details=payload.details)
+    return {"accepted": True}
 
 
 @app.get("/api/v1/discovery/search")
