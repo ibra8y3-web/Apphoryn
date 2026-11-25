@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T23:46:58.679547+00:00",
+  "generated_at": "2026-11-25T01:13:30.513615+00:00",
   "apps": [
     {
       "id": "706972745-assetmanager",
@@ -3759,11 +3759,23 @@
     }
   ],
   "ai_status": {
-    "checked_at": "2026-11-24T23:38:30.924949+00:00",
+    "checked_at": "2026-11-25T01:13:30.159665+00:00",
     "free_only": true,
     "available_provider_count": 2,
     "available_model_count": 13,
     "providers": [
+      {
+        "provider": "ollama",
+        "state": "not_configured",
+        "models_discovered": 0,
+        "models": []
+      },
+      {
+        "provider": "vllm",
+        "state": "not_configured",
+        "models_discovered": 0,
+        "models": []
+      },
       {
         "provider": "gemini",
         "state": "paused",
@@ -3773,6 +3785,12 @@
       {
         "provider": "groq",
         "state": "paused",
+        "models_discovered": 0,
+        "models": []
+      },
+      {
+        "provider": "xai",
+        "state": "not_configured",
         "models_discovered": 0,
         "models": []
       },
