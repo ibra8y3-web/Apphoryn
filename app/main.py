@@ -40,8 +40,9 @@ MIRROR_CATALOG = ROOT / "apps" / "web" / "catalog" / "index.json"
 
 
 class PublicAnalyticsEvent(BaseModel):
-    event_type: Literal["app_view", "catalog_view", "search", "favorite_added", "favorite_removed"]
+    event_type: Literal["app_view", "catalog_view", "search", "favorite_added", "favorite_removed", "download_requested"]
     app_slug: str | None = Field(default=None, max_length=180)
+    artifact_id: str | None = Field(default=None, max_length=180)
     details: dict[str, str | int | float | bool] = Field(default_factory=dict)
 
 
@@ -162,13 +163,21 @@ def record_public_analytics_event(payload: PublicAnalyticsEvent, request: Reques
     if not _allow_analytics_request(request):
         raise HTTPException(429, "Analytics event rate limit exceeded.")
     app_slug = (payload.app_slug or "").strip()
-    if payload.event_type in {"app_view", "favorite_added", "favorite_removed"}:
+    if payload.event_type in {"app_view", "favorite_added", "favorite_removed", "download_requested"}:
         if not app_slug:
             raise HTTPException(422, "app_slug is required for this event.")
         match = next((item for item in catalog_items(limit=200) if item.get("slug") == app_slug), None)
         if not match:
             raise HTTPException(404, "Application not found.")
-        analytics.record_event(payload.event_type, app_slug=app_slug, details=payload.details)
+        artifact_id = (payload.artifact_id or "").strip()
+        if payload.event_type == "download_requested":
+            if not artifact_id or not any(
+                artifact_id in {str(artifact.get("id") or ""), str(artifact.get("sha256") or "")}
+                for artifact in match.get("artifacts") or []
+            ):
+                raise HTTPException(422, "A verified artifact belonging to this app is required.")
+        analytics.record_event(payload.event_type, app_slug=app_slug,
+                               artifact_id=artifact_id or None, details=payload.details)
         return {"accepted": True}
     if payload.event_type == "search":
         query = str(payload.details.get("query") or "").strip()[:180]
