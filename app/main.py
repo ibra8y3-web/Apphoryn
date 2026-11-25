@@ -131,7 +131,7 @@ def read_mirror_catalog() -> list[dict]:
 
 def database_catalog_rows() -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
-    for record in db.list_apps(limit=200):
+    for record in db.list_all_apps():
         public_record = {
             key: value for key, value in record.items()
             if key not in {"license_text", "storage_path", "source_url"}
