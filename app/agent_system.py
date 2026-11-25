@@ -699,7 +699,7 @@ def _agent_call(agent_id: str, goal: str, instructions: str, context: list[dict[
                "allow_external_actions": allow_external_actions}
     draft, route = ai_router.generate_json([
         {"role": "system", "content": system}, {"role": "user", "content": _json(payload)}
-    ])
+    ], task_type=agent_id)
     request = draft.get("tool_request") if isinstance(draft.get("tool_request"), dict) else None
     tool_result = _run_tool(agent_id, request, goal, allow_external_actions, context, allow_code_changes)
     if agent_id == "supervisor":
@@ -712,7 +712,7 @@ def _agent_call(agent_id: str, goal: str, instructions: str, context: list[dict[
         final, final_route = ai_router.generate_json([
             {"role": "system", "content": system}, {"role": "user", "content": _json(payload)},
             {"role": "user", "content": _json(evidence)}
-        ])
+        ], task_type=agent_id)
         final["verified_tool_result"] = tool_result
         return final, final_route, tool_result
     draft.pop("tool_request", None)
@@ -750,7 +750,9 @@ def execute_run(run: dict[str, Any]) -> None:
             "specialist IDs: discovery, research, writing, software_engineer, build, import, update, debugging, security. "
             "Select only relevant agents, maximum 8. The Supervisor is added by the system at the end. "
             "Never promise unimplemented code edits or claim an action is complete without tool evidence. "
-            "Return JSON: {summary:string,tasks:[{agent_id:string,title:string,instructions:string}]}."
+            "Return JSON: {summary:string,tasks:[{agent_id:string,title:string,instructions:string,depends_on:string[]}]} . "
+            "Put independent repository discovery, documentation research and security reconnaissance in the same parallel wave with empty depends_on. "
+            "Add dependencies only when an agent truly needs another agent's output. The supervisor is added automatically after every specialist."
         )
         try:
             plan, planner_route = ai_router.generate_json([
@@ -758,8 +760,9 @@ def execute_run(run: dict[str, Any]) -> None:
                 {"role": "user", "content": _json({"goal": goal, "agents": [
                     {"id": a["id"], "title": a["title"], "description": a["description"], "tools": a["tools"]}
                     for a in AGENTS if a["id"] != "niebex"
-                ], "shared_memory": memories, "allow_external_actions": allow_actions})}
-            ])
+                ], "shared_memory": memories, "allow_external_actions": allow_actions,
+                    "allow_code_changes": allow_code_changes})}
+            ], task_type="niebex")
         except Exception as exc:
             STORE.update_task(planner_task, "failed", error=f"{type(exc).__name__}: {str(exc)[:700]}")
             raise
