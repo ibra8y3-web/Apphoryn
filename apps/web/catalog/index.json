@@ -32490,7 +32490,17 @@
       "latest_version": "v3.6.0",
       "release_url": "https://github.com/geckour/Q/releases/tag/v3.6.0",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "3d133078baa47bc433b5a106b9b01eb504a96b37",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-25T21:28:11.491998+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "cuperino-qprompt-teleprompter",
