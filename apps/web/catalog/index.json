@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:48:56.675757+00:00",
+  "generated_at": "2026-11-25T21:53:19.545800+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -36393,6 +36393,66 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "iamtorsten-sherlockelf",
+      "slug": "iamtorsten-sherlockelf",
+      "artifacts": [],
+      "name": "SherlockElf",
+      "summary": "SherlockElf is a powerful tool designed for both static and dynamic analysis of Android ELF binaries and dynamic iOS Macho-O binaries (experimental).",
+      "description": "SherlockElf is a powerful tool designed for both static and dynamic analysis of Android ELF binaries and dynamic iOS Macho-O binaries (experimental).",
+      "translations": {
+        "en": {
+          "summary": "SherlockElf is a powerful tool designed for both static and dynamic analysis of Android ELF binaries and dynamic iOS Macho-O binaries (experimental).",
+          "description": "SherlockElf is a powerful tool designed for both static and dynamic analysis of Android ELF binaries and dynamic iOS Macho-O binaries (experimental)."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/19864638?v=4",
+      "repository_url": "https://github.com/iamtorsten/SherlockElf",
+      "github_repo_id": "839807307",
+      "source_updated_at": "2026-11-25T03:33:48Z",
+      "homepage_url": null,
+      "owner": "iamtorsten",
+      "default_branch": "main",
+      "source_commit_sha": "7183d8a7049693eafe22d83ddc26bf05ffaa2fbe",
+      "license_text": "MIT License\n\nCopyright (c) 2024 Torsten\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-emulator",
+        "deobfuscation",
+        "deobfuscator",
+        "dynamic-analysis",
+        "elf",
+        "elf-parser",
+        "emulator",
+        "frida",
+        "ios",
+        "ios-reverse",
+        "libart",
+        "libc",
+        "libso",
+        "memory",
+        "memory-injection",
+        "native-library",
+        "reverse-engineering",
+        "static-analysis"
+      ],
+      "latest_version": "17.27.5",
+      "release_url": "https://github.com/iamtorsten/SherlockElf/releases/tag/17.27.5",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "cr1437-shizako",
