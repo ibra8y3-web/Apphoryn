@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:48:49.077025+00:00",
+  "generated_at": "2026-11-25T22:49:21.135036+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -5405,6 +5405,77 @@
           "signer_certificate_sha256": "82cf998baecbf6bac92c47627b06c352a7261cc0840fdcbde1394944e94ba946",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-exbin-bined-android-0.2.12/bined-android-0.2.12.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-exbin-bined-android-0.2.12"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "bit-hero-333-bingelog",
+      "slug": "bit-hero-333-bingelog",
+      "name": "BingeLog",
+      "summary": "A local-first media tracker Android app.",
+      "description": "A local-first media tracker Android app.",
+      "translations": {
+        "en": {
+          "summary": "A local-first media tracker Android app.",
+          "description": "A local-first media tracker Android app."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/bit-hero-333/BingeLog/master/assets/images/icon.png",
+      "repository_url": "https://github.com/bit-hero-333/BingeLog",
+      "github_repo_id": "1418853526",
+      "source_updated_at": "2026-11-18T10:50:17Z",
+      "homepage_url": null,
+      "owner": "bit-hero-333",
+      "default_branch": "master",
+      "source_commit_sha": "3c986fd6aff2c6ce0c24aa5d254ad2f7850d5410",
+      "license_text": "MIT License\n\nCopyright (c) 2026 BingeLog Contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "ai-coding",
+        "android-app",
+        "android-application",
+        "app",
+        "media-tracker",
+        "media-tracking",
+        "tmdb",
+        "tmdb-api",
+        "typescript"
+      ],
+      "latest_version": "v0.31.0",
+      "release_url": "https://github.com/bit-hero-333/BingeLog/releases/tag/v0.31.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bit-hero-333-bingelog-v0.31.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bit-hero-333-bingelog-v0.31.0/THIRD-PARTY-NOTICE-bit-hero-333-bingelog.txt",
+      "artifacts": [
+        {
+          "id": "d8df75004561ce490d31880d5565db51db15d7078ab920f72f7eb877ce7a18b0",
+          "filename": "BingeLog-v0.31.0.apk",
+          "original_filename": "BingeLog-v0.31.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.31.0",
+          "size_bytes": 138604658,
+          "sha256": "d8df75004561ce490d31880d5565db51db15d7078ab920f72f7eb877ce7a18b0",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "fac61745dc0903786fb9ede62a962b399f7348f0bb6f899b8332667591033b9c",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bit-hero-333-bingelog-v0.31.0/BingeLog-v0.31.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bit-hero-333-bingelog-v0.31.0"
         }
       ],
       "platforms": [
