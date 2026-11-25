@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T10:06:59.099340+00:00",
+  "generated_at": "2026-11-25T10:07:34.250901+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -2333,6 +2333,115 @@
         }
       ],
       "platforms": [
+        "windows"
+      ]
+    },
+    {
+      "id": "neuralnomadsai-codenomad",
+      "slug": "neuralnomadsai-codenomad",
+      "name": "CodeNomad",
+      "summary": "CodeNomad: The command center that puts AI coding on steroids.",
+      "description": "CodeNomad: The command center that puts AI coding on steroids.",
+      "translations": {
+        "en": {
+          "summary": "CodeNomad: The command center that puts AI coding on steroids.",
+          "description": "CodeNomad: The command center that puts AI coding on steroids."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/NeuralNomadsAI/CodeNomad/dev/packages/electron-app/electron/resources/icon.png",
+      "repository_url": "https://github.com/NeuralNomadsAI/CodeNomad",
+      "github_repo_id": "1087925615",
+      "source_updated_at": "2026-11-24T09:31:08Z",
+      "homepage_url": "https://neuralnomadsai.github.io/CodeNomad/",
+      "owner": "NeuralNomadsAI",
+      "default_branch": "dev",
+      "source_commit_sha": "c197e875bfaf2704c615b6917f3f1ddca19278ae",
+      "license_text": "MIT License\n\nCopyright (c) 2025-2026 CodeNomad contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "agentic-coding",
+        "ai",
+        "ai-coding",
+        "coding-agent",
+        "desktop-app",
+        "developer-tools",
+        "electron",
+        "llm",
+        "opencode",
+        "solidjs",
+        "tauri",
+        "typescript"
+      ],
+      "latest_version": "v1.1.0",
+      "release_url": "https://github.com/NeuralNomadsAI/CodeNomad/releases/tag/v1.1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-neuralnomadsai-codenomad-v1.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-neuralnomadsai-codenomad-v1.1.0/THIRD-PARTY-NOTICE-neuralnomadsai-codenomad.txt",
+      "artifacts": [
+        {
+          "id": "9f48704217c0760e63acf6869874963dbafa66fb719dcfbfa777297c7f509bbd",
+          "filename": "CodeNomad-Electron-linux-x64-1.1.0.deb",
+          "original_filename": "CodeNomad-Electron-linux-x64-1.1.0.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v1.1.0",
+          "size_bytes": 145836288,
+          "sha256": "9f48704217c0760e63acf6869874963dbafa66fb719dcfbfa777297c7f509bbd",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-neuralnomadsai-codenomad-v1.1.0/CodeNomad-Electron-linux-x64-1.1.0.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-neuralnomadsai-codenomad-v1.1.0"
+        },
+        {
+          "id": "cc5d82dbd45b4987857db043e276bd986ae040d78d85750f618f8b4b58943ca3",
+          "filename": "CodeNomad-Tauri-linux-x64-1.1.0.AppImage",
+          "original_filename": "CodeNomad-Tauri-linux-x64-1.1.0.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v1.1.0",
+          "size_bytes": 186120696,
+          "sha256": "cc5d82dbd45b4987857db043e276bd986ae040d78d85750f618f8b4b58943ca3",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-neuralnomadsai-codenomad-v1.1.0/CodeNomad-Tauri-linux-x64-1.1.0.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-neuralnomadsai-codenomad-v1.1.0"
+        },
+        {
+          "id": "4cb77ece4f4ab81559a0d27a6db6d0fb92ed9d8ec9474f15fd0ce872ad69c45a",
+          "filename": "CodeNomad-Tauri-windows-x64-1.1.0.exe",
+          "original_filename": "CodeNomad-Tauri-windows-x64-1.1.0.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.1.0",
+          "size_bytes": 67790567,
+          "sha256": "4cb77ece4f4ab81559a0d27a6db6d0fb92ed9d8ec9474f15fd0ce872ad69c45a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-neuralnomadsai-codenomad-v1.1.0/CodeNomad-Tauri-windows-x64-1.1.0.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-neuralnomadsai-codenomad-v1.1.0"
+        }
+      ],
+      "platforms": [
+        "linux",
         "windows"
       ]
     },
