@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:57:08.823432+00:00",
+  "generated_at": "2026-11-25T23:57:37.376140+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -50570,6 +50570,97 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "okeydw-soundcloud-android",
+      "slug": "okeydw-soundcloud-android",
+      "name": "SoundCloud-Android",
+      "summary": "🎵 Лучший неофициальный SoundCloud мультиплатформенный клиент  | БЕЗ РЕКЛАМЫ | БЕЗ КАПЧИ | БЕЗ ЦЕНЗУРЫ | ДОСТУПНО В РОССИИ",
+      "description": "🎵 Лучший неофициальный SoundCloud мультиплатформенный клиент  | БЕЗ РЕКЛАМЫ | БЕЗ КАПЧИ | БЕЗ ЦЕНЗУРЫ | ДОСТУПНО В РОССИИ",
+      "translations": {
+        "en": {
+          "summary": "🎵 Лучший неофициальный SoundCloud мультиплатформенный клиент  | БЕЗ РЕКЛАМЫ | БЕЗ КАПЧИ | БЕЗ ЦЕНЗУРЫ | ДОСТУПНО В РОССИИ",
+          "description": "🎵 Лучший неофициальный SoundCloud мультиплатформенный клиент  | БЕЗ РЕКЛАМЫ | БЕЗ КАПЧИ | БЕЗ ЦЕНЗУРЫ | ДОСТУПНО В РОССИИ"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/okeydw/SoundCloud-Android/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/okeydw/SoundCloud-Android",
+      "github_repo_id": "1302680128",
+      "source_updated_at": "2026-11-25T19:38:15Z",
+      "homepage_url": "https://getsoundcloud.app/",
+      "owner": "okeydw",
+      "default_branch": "main",
+      "source_commit_sha": "743a2cffc5dfa2ff3d6d1cae6f1b3bbd07c2657d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 okey\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-music-player",
+        "music",
+        "music-app",
+        "music-player",
+        "music-streaming",
+        "soundcloud",
+        "soundcloud-alternative",
+        "soundcloud-client",
+        "soundcloud-music",
+        "soundcloud-player"
+      ],
+      "latest_version": "v0.4.7",
+      "release_url": "https://github.com/okeydw/SoundCloud-Android/releases/tag/v0.4.7",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-okeydw-soundcloud-android-v0.4.7",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-okeydw-soundcloud-android-v0.4.7/THIRD-PARTY-NOTICE-okeydw-soundcloud-android.txt",
+      "artifacts": [
+        {
+          "id": "aafc40be6ffe7c72a1dd31a1eb2e845e16288aab4d0cc860be3edf485b67eac4",
+          "filename": "SoundCloud-Full-v0.4.7.apk",
+          "original_filename": "SoundCloud-Full-v0.4.7.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.4.7",
+          "size_bytes": 27284960,
+          "sha256": "aafc40be6ffe7c72a1dd31a1eb2e845e16288aab4d0cc860be3edf485b67eac4",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "81392e5a30b8ada4ecc94543981791030c5797ea1de2200d14c421e8378e0a39",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-okeydw-soundcloud-android-v0.4.7/SoundCloud-Full-v0.4.7.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-okeydw-soundcloud-android-v0.4.7"
+        },
+        {
+          "id": "016abf0db1869feb3532e8c7632bae9250a8204a37d8b8979c97d1589dbe9b2f",
+          "filename": "SoundCloud-Lite-v0.4.7.apk",
+          "original_filename": "SoundCloud-Lite-v0.4.7.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.4.7",
+          "size_bytes": 4738014,
+          "sha256": "016abf0db1869feb3532e8c7632bae9250a8204a37d8b8979c97d1589dbe9b2f",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "81392e5a30b8ada4ecc94543981791030c5797ea1de2200d14c421e8378e0a39",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-okeydw-soundcloud-android-v0.4.7/SoundCloud-Lite-v0.4.7.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-okeydw-soundcloud-android-v0.4.7"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
