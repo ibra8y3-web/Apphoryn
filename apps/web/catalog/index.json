@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:05:21.211431+00:00",
+  "generated_at": "2026-11-25T23:05:38.283542+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -3014,6 +3014,86 @@
       "release_url": null,
       "platforms": [],
       "project_status": "source_available"
+    },
+    {
+      "id": "rxhrxh520-apibalance",
+      "slug": "rxhrxh520-apibalance",
+      "name": "APIBalance",
+      "summary": "安卓端 AI API 余额查询工具｜支持 DeepSeek / Kimi / 智谱GLM / Anthropic / 火山方舟 / Codex，密钥本地加密",
+      "description": "安卓端 AI API 余额查询工具｜支持 DeepSeek / Kimi / 智谱GLM / Anthropic / 火山方舟 / Codex，密钥本地加密",
+      "translations": {
+        "en": {
+          "summary": "安卓端 AI API 余额查询工具｜支持 DeepSeek / Kimi / 智谱GLM / Anthropic / 火山方舟 / Codex，密钥本地加密",
+          "description": "安卓端 AI API 余额查询工具｜支持 DeepSeek / Kimi / 智谱GLM / Anthropic / 火山方舟 / Codex，密钥本地加密"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/RXHrxh520/APIBalance/main/docs/assets/brand/logo.png",
+      "repository_url": "https://github.com/RXHrxh520/APIBalance",
+      "github_repo_id": "1312682302",
+      "source_updated_at": "2026-11-24T03:51:14Z",
+      "homepage_url": "https://rxhrxh520.github.io/APIBalance/",
+      "owner": "RXHrxh520",
+      "default_branch": "main",
+      "source_commit_sha": "ae42afeb643f5bfe169f7b5a9f0442819323311c",
+      "license_text": "BSD 3-Clause License\n\nCopyright (c) 2026, 软小寒\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+      "license_spdx": "BSD-3-Clause",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "anthropic",
+        "api",
+        "api-client",
+        "apikey",
+        "balance-checker",
+        "claude",
+        "deepseek",
+        "glm",
+        "java",
+        "keystore",
+        "kimi",
+        "material-design",
+        "moonshot",
+        "quota",
+        "token-usage",
+        "zhipu"
+      ],
+      "latest_version": "v1.5.5",
+      "release_url": "https://github.com/RXHrxh520/APIBalance/releases/tag/v1.5.5",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rxhrxh520-apibalance-v1.5.5",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rxhrxh520-apibalance-v1.5.5/THIRD-PARTY-NOTICE-rxhrxh520-apibalance.txt",
+      "artifacts": [
+        {
+          "id": "b785b406604cc44a41ebdd617bb93cd632bfa8ce0328671d85342530c9d08547",
+          "filename": "APIBalance_v1.5.5.apk",
+          "original_filename": "APIBalance_v1.5.5.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.5.5",
+          "size_bytes": 1701363,
+          "sha256": "b785b406604cc44a41ebdd617bb93cd632bfa8ce0328671d85342530c9d08547",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "088ee5fac52e7f9a8b897d6ed9e99ee222b1f846184d741922dea66ddabb929a",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rxhrxh520-apibalance-v1.5.5/APIBalance_v1.5.5.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rxhrxh520-apibalance-v1.5.5"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
     },
     {
       "id": "martinstyk-apk-analyzer",
