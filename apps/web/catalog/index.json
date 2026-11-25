@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:56:37.312447+00:00",
+  "generated_at": "2026-11-25T22:56:54.367858+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -52090,6 +52090,83 @@
           "signer_certificate_sha256": "f7ebbf960581fe7951b20cd162e68f94e3f14d460e527e2d40d5b55775c4450d",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-qaq-cmyk-yingxia-player-v1.9.0/YingXia-1.9.0.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-qaq-cmyk-yingxia-player-v1.9.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "eldavoo-ylih",
+      "slug": "eldavoo-ylih",
+      "name": "ylih",
+      "summary": "An Android app that records how long your headphones stay connected, forever and locally, so you know how many hours a pair lasted before it died.",
+      "description": "An Android app that records how long your headphones stay connected, forever and locally, so you know how many hours a pair lasted before it died.",
+      "translations": {
+        "en": {
+          "summary": "An Android app that records how long your headphones stay connected, forever and locally, so you know how many hours a pair lasted before it died.",
+          "description": "An Android app that records how long your headphones stay connected, forever and locally, so you know how many hours a pair lasted before it died."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ElDavoo/ylih/main/fastlane/metadata/android/en-US/images/icon.png",
+      "repository_url": "https://github.com/ElDavoo/ylih",
+      "github_repo_id": "1312718608",
+      "source_updated_at": "2026-11-24T17:01:21Z",
+      "homepage_url": "https://f-droid.org/packages/it.eldavo.ylih/",
+      "owner": "ElDavoo",
+      "default_branch": "main",
+      "source_commit_sha": "0f4d3b654252393913a4bfc47076ab8b433ad454",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Davide Palma\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "android",
+        "android-app",
+        "bluetooth",
+        "fdroid",
+        "glance-widgets",
+        "headphones",
+        "jetpack-compose",
+        "kotlin",
+        "material-you",
+        "material3",
+        "no-internet-permission",
+        "offline-first",
+        "privacy",
+        "room-database",
+        "usage-tracking"
+      ],
+      "latest_version": "v1.4.3",
+      "release_url": "https://github.com/ElDavoo/ylih/releases/tag/v1.4.3",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eldavoo-ylih-v1.4.3",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eldavoo-ylih-v1.4.3/THIRD-PARTY-NOTICE-eldavoo-ylih.txt",
+      "artifacts": [
+        {
+          "id": "6020f76725c60b9dfb85faaa563674811997576c36c20c089cf124bce5b676fe",
+          "filename": "ylih-v1.4.3-classic.apk",
+          "original_filename": "ylih-v1.4.3-classic.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.4.3",
+          "size_bytes": 5440418,
+          "sha256": "6020f76725c60b9dfb85faaa563674811997576c36c20c089cf124bce5b676fe",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "ba4f1511f0d1e49d468387ab6fac6b2df748b887e7018f8ebe4fccd207cf417a",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eldavoo-ylih-v1.4.3/ylih-v1.4.3-classic.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eldavoo-ylih-v1.4.3"
         }
       ],
       "platforms": [
