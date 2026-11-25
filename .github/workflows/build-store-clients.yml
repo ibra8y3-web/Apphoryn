@@ -8,6 +8,11 @@ on:
     paths: ['apps/web/**', 'apps/android/**', 'apps/desktop/**', '.github/workflows/build-store-clients.yml']
   workflow_dispatch:
 
+# Keep only the newest native-client build for the current storefront sources.
+concurrency:
+  group: apphoryn-native-store-clients
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
