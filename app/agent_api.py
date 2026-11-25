@@ -36,6 +36,8 @@ def dashboard(x_apphoryn_admin: str | None = Header(default=None)):
     _require_admin(x_apphoryn_admin)
     return {
         "agents": AGENTS,
+        "agent_activity": STORE.agent_activity(),
+        "memories": STORE.read_memories(15),
         "counts": STORE.counts(),
         "runs": STORE.list_runs(30),
         "tasks": STORE.list_tasks(limit=80),
