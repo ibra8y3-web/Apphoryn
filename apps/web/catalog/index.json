@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T11:19:20.304951+00:00",
+  "generated_at": "2026-11-25T11:20:22.028192+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -6682,6 +6682,130 @@
       ],
       "platforms": [
         "windows"
+      ]
+    },
+    {
+      "id": "tobitege-flowery-net",
+      "slug": "tobitege-flowery-net",
+      "name": "Flowery.NET",
+      "summary": "Beautiful DaisyUI-styled components for Avalonia UI in C#",
+      "description": "Beautiful DaisyUI-styled components for Avalonia UI in C#",
+      "translations": {
+        "en": {
+          "summary": "Beautiful DaisyUI-styled components for Avalonia UI in C#",
+          "description": "Beautiful DaisyUI-styled components for Avalonia UI in C#"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/tobitege/Flowery.NET/avalonia12/Flowery.NET.Gallery.Android/Resources/mipmap-xxxhdpi/ic_launcher.png",
+      "repository_url": "https://github.com/tobitege/Flowery.NET",
+      "github_repo_id": "1107983162",
+      "source_updated_at": "2026-11-23T16:57:27Z",
+      "homepage_url": "https://tobitege.github.io/Flowery.NET/",
+      "owner": "tobitege",
+      "default_branch": "avalonia12",
+      "source_commit_sha": "9fe7bc715bdb484e29fdd0ac639463391114b65e",
+      "license_text": "MIT License\n\nCopyright (c) 2025, 2026 by @tobitege\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "avalonia",
+        "avalonia-ui",
+        "cross-platform-gui",
+        "csharp",
+        "csharp-library",
+        "daisyui",
+        "dotnet",
+        "opensource",
+        "wasm",
+        "windows"
+      ],
+      "latest_version": "v4.0.0",
+      "release_url": "https://github.com/tobitege/Flowery.NET/releases/tag/v4.0.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-tobitege-flowery-net-v4.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-tobitege-flowery-net-v4.0.0/THIRD-PARTY-NOTICE-tobitege-flowery-net.txt",
+      "artifacts": [
+        {
+          "id": "b39a6cfc05cc10600908acbee0df3df15edd5435ebe631440b4bc5ef3b130d95",
+          "filename": "Flowery.Gallery-Android-arm.apk",
+          "original_filename": "Flowery.Gallery-Android-arm.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v4.0.0",
+          "size_bytes": 85294724,
+          "sha256": "b39a6cfc05cc10600908acbee0df3df15edd5435ebe631440b4bc5ef3b130d95",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "26379fe2a189655f9f5db0781ade420f0f5a7eb3bb28041b2fd25938f13761ab",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-tobitege-flowery-net-v4.0.0/Flowery.Gallery-Android-arm.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-tobitege-flowery-net-v4.0.0"
+        },
+        {
+          "id": "15f549341f45b8c793ac0f67762e91a8ae8774d792d9d580343a54f5849900ea",
+          "filename": "Flowery.Gallery-Android-arm64.apk",
+          "original_filename": "Flowery.Gallery-Android-arm64.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v4.0.0",
+          "size_bytes": 83578274,
+          "sha256": "15f549341f45b8c793ac0f67762e91a8ae8774d792d9d580343a54f5849900ea",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "ce2cc586f42143b258a977e55782905327ff1976ed5b88dd48d0cf22d8598ec3",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-tobitege-flowery-net-v4.0.0/Flowery.Gallery-Android-arm64.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-tobitege-flowery-net-v4.0.0"
+        },
+        {
+          "id": "a8bb4c474dffe2dbe71528ff2ee530cad7f1c8d2e71c71ad6081134cb559cfa0",
+          "filename": "Flowery.Gallery-Android-x64.apk",
+          "original_filename": "Flowery.Gallery-Android-x64.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "x86_64",
+          "version": "v4.0.0",
+          "size_bytes": 86023247,
+          "sha256": "a8bb4c474dffe2dbe71528ff2ee530cad7f1c8d2e71c71ad6081134cb559cfa0",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "cccd46cea29968fbc152969849501427171589061766d0da457fca84fc25ca8d",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-tobitege-flowery-net-v4.0.0/Flowery.Gallery-Android-x64.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-tobitege-flowery-net-v4.0.0"
+        },
+        {
+          "id": "d3fcc5b64ac1f89b1ffca5cb4377ed7e4de2fc1721d4287f6c9e903f64ed65ba",
+          "filename": "Flowery.Gallery-Android-x86.apk",
+          "original_filename": "Flowery.Gallery-Android-x86.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "x86",
+          "version": "v4.0.0",
+          "size_bytes": 85494524,
+          "sha256": "d3fcc5b64ac1f89b1ffca5cb4377ed7e4de2fc1721d4287f6c9e903f64ed65ba",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "858149e97fc0d3345a499256ed795b1d459e8ee00f80d91207c7b09d33c78ea5",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-tobitege-flowery-net-v4.0.0/Flowery.Gallery-Android-x86.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-tobitege-flowery-net-v4.0.0"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
