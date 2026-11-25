@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:11:19.190464+00:00",
+  "generated_at": "2026-11-25T19:11:33.649615+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -8891,6 +8891,69 @@
           "signer_certificate_sha256": "4d77f55745749b04fcbe9a60e1a2edca5dd0cfbbd72bb58ce0dd156cb1b814c9",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aryan-raj3112-episteme-v1.0.60/Episteme-oss-v1.0.60-oss-releaseOffline.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aryan-raj3112-episteme-v1.0.60"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "huidoudour-event",
+      "slug": "huidoudour-event",
+      "name": "Event",
+      "summary": "Event logging tool, intended for development and learning purposes only",
+      "description": "Event logging tool, intended for development and learning purposes only",
+      "translations": {
+        "en": {
+          "summary": "Event logging tool, intended for development and learning purposes only",
+          "description": "Event logging tool, intended for development and learning purposes only"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/huidoudour/Event/master/.idea/icon.svg",
+      "repository_url": "https://github.com/huidoudour/Event",
+      "github_repo_id": "1174482235",
+      "source_updated_at": "2026-11-12T15:55:43Z",
+      "homepage_url": "https://event.ccrh-cmit.uno/",
+      "owner": "huidoudour",
+      "default_branch": "master",
+      "source_commit_sha": "2815fd6dd52d66da032987a4af3b8e807f083266",
+      "license_text": "MIT License\n\nCopyright (c) 2026 huidoudour\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android-app"
+      ],
+      "latest_version": "v2.1",
+      "release_url": "https://github.com/huidoudour/Event/releases/tag/v2.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-huidoudour-event-v2.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-huidoudour-event-v2.1/THIRD-PARTY-NOTICE-huidoudour-event.txt",
+      "artifacts": [
+        {
+          "id": "826fae90b8435627fa7e4b68e5dbf527d253ad0eff7e2ea31bcc9c0111ba5c66",
+          "filename": "Event-2.1.163.3a7c690-163-Release.apk",
+          "original_filename": "Event-2.1.163.3a7c690-163-Release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v2.1",
+          "size_bytes": 10059427,
+          "sha256": "826fae90b8435627fa7e4b68e5dbf527d253ad0eff7e2ea31bcc9c0111ba5c66",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "3d653de5b0ea63d1576f01b97f4dfbd7be786007845485adf861224e1b4444b3",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-huidoudour-event-v2.1/Event-2.1.163.3a7c690-163-Release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-huidoudour-event-v2.1"
         }
       ],
       "platforms": [
