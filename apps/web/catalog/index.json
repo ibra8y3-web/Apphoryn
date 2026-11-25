@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T17:40:54.251422+00:00",
+  "generated_at": "2026-11-25T17:41:11.306178+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -471,6 +471,58 @@
         "android",
         "linux"
       ]
+    },
+    {
+      "id": "taka-avantgarde-ai-usage-barometer",
+      "slug": "taka-avantgarde-ai-usage-barometer",
+      "artifacts": [],
+      "name": "ai-usage-barometer",
+      "summary": "A Mac app that shows how much Claude Code and Codex you have left — in the Dock icon, a floating bar, or the menu bar.",
+      "description": "A Mac app that shows how much Claude Code and Codex you have left — in the Dock icon, a floating bar, or the menu bar.",
+      "translations": {
+        "en": {
+          "summary": "A Mac app that shows how much Claude Code and Codex you have left — in the Dock icon, a floating bar, or the menu bar.",
+          "description": "A Mac app that shows how much Claude Code and Codex you have left — in the Dock icon, a floating bar, or the menu bar."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/60106224?v=4",
+      "repository_url": "https://github.com/taka-avantgarde/ai-usage-barometer",
+      "github_repo_id": "1315608163",
+      "source_updated_at": "2026-10-30T07:42:00Z",
+      "homepage_url": "https://github.com/taka-avantgarde/ai-usage-barometer/releases/latest",
+      "owner": "taka-avantgarde",
+      "default_branch": "main",
+      "source_commit_sha": "7c6b7debda2135f62d01d28739c2e84e2a9cb05a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Takayuki Miyano, Atlas Associates Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "other",
+      "topics": [
+        "appkit",
+        "claude",
+        "claude-code",
+        "codex",
+        "dock",
+        "macos",
+        "macos-app",
+        "menubar",
+        "rate-limits",
+        "swift",
+        "swiftbar",
+        "usage-monitor"
+      ],
+      "latest_version": "v0.10.3",
+      "release_url": "https://github.com/taka-avantgarde/ai-usage-barometer/releases/tag/v0.10.3",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "mrmans0n-alas",
