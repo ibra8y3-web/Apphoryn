@@ -10,7 +10,7 @@ from jwt import PyJWKClient
 ISSUER = "https://token.actions.githubusercontent.com"
 AUDIENCE = "apphoryn-catalog-automation"
 ALLOWED_REPOSITORY = "ibra8y3-web/Apphoryn"
-ALLOWED_WORKFLOWS = {"harvest.yml", "global-scout.yml"}
+ALLOWED_WORKFLOWS = {"harvest.yml", "global-scout.yml", "build-community-app.yml"}
 ALLOWED_EVENTS = {"push", "schedule", "workflow_dispatch"}
 JWKS_URL = f"{ISSUER}/.well-known/jwks"
 _jwks_client = PyJWKClient(JWKS_URL, cache_jwk_set=True, lifespan=3600)
