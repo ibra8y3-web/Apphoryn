@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:36:39.460293+00:00",
+  "generated_at": "2026-11-25T22:36:56.055783+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -49809,6 +49809,78 @@
           "signer_certificate_sha256": "f7ebbf960581fe7951b20cd162e68f94e3f14d460e527e2d40d5b55775c4450d",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-qaq-cmyk-yingxia-player-v1.9.0/YingXia-1.9.0.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-qaq-cmyk-yingxia-player-v1.9.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "archeonzero-zai-az-chatapp",
+      "slug": "archeonzero-zai-az-chatapp",
+      "name": "Zai-AZ-chatApp",
+      "summary": "Z.ai chat app from ArcheonZero",
+      "description": "Z.ai chat app from ArcheonZero",
+      "translations": {
+        "en": {
+          "summary": "Z.ai chat app from ArcheonZero",
+          "description": "Z.ai chat app from ArcheonZero"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ArcheonZero/Zai-AZ-chatApp/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/ArcheonZero/Zai-AZ-chatApp",
+      "github_repo_id": "1463211979",
+      "source_updated_at": "2026-11-18T20:17:13Z",
+      "homepage_url": null,
+      "owner": "ArcheonZero",
+      "default_branch": "main",
+      "source_commit_sha": "0b6f68f45d9e26c0394065fc04733d8963f49b12",
+      "license_text": "MIT License\n\nCopyright (c) 2026 The-JDdev\nCopyright (c) 2026 Archeon Zero (modifications and version 2.0.0)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "apk",
+        "chat-z-ai",
+        "kotlin",
+        "material-design-3",
+        "mit-license",
+        "unofficial-client",
+        "webview",
+        "wrapper"
+      ],
+      "latest_version": "v2.0.0",
+      "release_url": "https://github.com/ArcheonZero/Zai-AZ-chatApp/releases/tag/v2.0.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-archeonzero-zai-az-chatapp-v2.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-archeonzero-zai-az-chatapp-v2.0.0/THIRD-PARTY-NOTICE-archeonzero-zai-az-chatapp.txt",
+      "artifacts": [
+        {
+          "id": "8af1a751dd61589db398d1eb17a8f8f2d8744e53525f07acb70940428650b687",
+          "filename": "AZ-chat-2.0.0-release.apk",
+          "original_filename": "AZ-chat-2.0.0-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v2.0.0",
+          "size_bytes": 1909232,
+          "sha256": "8af1a751dd61589db398d1eb17a8f8f2d8744e53525f07acb70940428650b687",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "8d0e0365b6f8813fe5da1ce4a44ab4e5600b86a875d003ff8e6ec15b28a70056",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-archeonzero-zai-az-chatapp-v2.0.0/AZ-chat-2.0.0-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-archeonzero-zai-az-chatapp-v2.0.0"
         }
       ],
       "platforms": [
