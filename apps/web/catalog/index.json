@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T20:04:07.562446+00:00",
+  "generated_at": "2026-11-25T20:04:18.798328+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -1848,7 +1848,7 @@
         }
       },
       "description_translations": {},
-      "translation_status": "english_only",
+      "translation_status": "pending",
       "ai_provider": null,
       "ai_model": null,
       "icon_url": "https://raw.githubusercontent.com/lumiag5/antigravitymb/main/android/app/src/main/res/drawable/app_icon.png",
