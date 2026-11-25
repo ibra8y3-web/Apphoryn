@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:27:54.481065+00:00",
+  "generated_at": "2026-11-25T09:28:07.988727+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -2869,6 +2869,86 @@
       "platforms": [
         "android",
         "macos"
+      ]
+    },
+    {
+      "id": "yogeshpaliyal-halo",
+      "slug": "yogeshpaliyal-halo",
+      "name": "Halo",
+      "summary": "The one-thumb app switcher for Android. A floating edge bubble: hold, slide to an app on a radial menu of favourites and recent apps, let go. Open source, no ads, no tracking, no internet permission.",
+      "description": "The one-thumb app switcher for Android. A floating edge bubble: hold, slide to an app on a radial menu of favourites and recent apps, let go. Open source, no ads, no tracking, no internet permission.",
+      "translations": {
+        "en": {
+          "summary": "The one-thumb app switcher for Android. A floating edge bubble: hold, slide to an app on a radial menu of favourites and recent apps, let go. Open source, no ads, no tracking, no internet permission.",
+          "description": "The one-thumb app switcher for Android. A floating edge bubble: hold, slide to an app on a radial menu of favourites and recent apps, let go. Open source, no ads, no tracking, no internet permission."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/yogeshpaliyal/Halo/main/fastlane/metadata/android/en-US/images/icon.png",
+      "repository_url": "https://github.com/yogeshpaliyal/Halo",
+      "github_repo_id": "1451757846",
+      "source_updated_at": "2026-11-24T17:42:20Z",
+      "homepage_url": "https://github.com/yogeshpaliyal/Halo/releases/tag/latest-master",
+      "owner": "yogeshpaliyal",
+      "default_branch": "main",
+      "source_commit_sha": "6c71b5c01047beedbbe81f3b684c3ba008db37a8",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Yogesh Paliyal\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android",
+        "android-app",
+        "app-switcher",
+        "edge-panel",
+        "floating-bubble",
+        "floating-button",
+        "jetpack-compose",
+        "kotlin",
+        "material-you",
+        "no-tracking",
+        "one-handed",
+        "pie-menu",
+        "pixel",
+        "privacy",
+        "productivity",
+        "productivity-app",
+        "radial-menu",
+        "sidebar"
+      ],
+      "latest_version": "v0.1.9",
+      "release_url": "https://github.com/yogeshpaliyal/Halo/releases/tag/v0.1.9",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yogeshpaliyal-halo-v0.1.9",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yogeshpaliyal-halo-v0.1.9/THIRD-PARTY-NOTICE-yogeshpaliyal-halo.txt",
+      "artifacts": [
+        {
+          "id": "c6d433e1f43c81e58255198078028fe05abce35fc55b1e274336c4799e53e745",
+          "filename": "halo-v0.1.9.apk",
+          "original_filename": "halo-v0.1.9.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.1.9",
+          "size_bytes": 1665184,
+          "sha256": "c6d433e1f43c81e58255198078028fe05abce35fc55b1e274336c4799e53e745",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "4dc14f087ed5ab9963d1c1ef1115ec3b331e4bbda5858a0cff7fa266734acde5",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yogeshpaliyal-halo-v0.1.9/halo-v0.1.9.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yogeshpaliyal-halo-v0.1.9"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
