@@ -27848,6 +27848,18 @@
       "platforms": [
         "android",
         "windows"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "03e5a84c14ee4c16921e37be63a1523452b1ffdd",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-25T20:35:22.469473+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
       ]
     },
     {
