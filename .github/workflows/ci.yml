@@ -23,6 +23,7 @@ jobs:
       - run: python -m compileall -q app scripts tests
       - run: python -m unittest discover -s tests -v
       - run: node --check apps/web/app.js
+      - run: node --check apps/web/agents.js
       - run: node --check apps/web/sw.js
       - run: python scripts/ci_build.py --help
       - run: python scripts/harvest_and_import.py --help
