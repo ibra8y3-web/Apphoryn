@@ -29,6 +29,25 @@ ALLOWED_DOWNLOAD_HOSTS = {
 }
 
 
+
+def _safe_ai_error(value: Any) -> str:
+    """Keep provider diagnostics useful without copying credentials into Scout reports."""
+    message = str(value or "")
+    message = re.sub(r"(?i)Bearer\s+\S+", "Bearer [REDACTED]", message)
+    message = re.sub(
+        r"(?i)\b(?:sk-or-v1-|sk-|gsk_|AIza)[A-Za-z0-9_-]{10,}",
+        "[REDACTED]",
+        message,
+    )
+    message = re.sub(
+        r"(?i)(api[_-]?key|authorization|access[_-]?token|secret)\s*[:=]\s*\S+",
+        r"\1=[REDACTED]",
+        message,
+    )
+    return message[:240]
+
+
+
 def _repository_parts(repository_url: str) -> tuple[str, str]:
     path = urllib.parse.urlparse(repository_url).path.strip("/")
     owner, repo = path.split("/", 1)
@@ -285,7 +304,27 @@ class CatalogService:
                     "source_url": download_url, "storage_path": str(target), "created_at": utc_now(),
                 })
                 imported.append(artifact)
-        return {"app": app, "artifacts": imported, "rejected_assets": rejected_assets, "release_found": bool(release)}
+        ai_provider = str(generated.get("ai_provider") or "").strip()
+        ai_generated = (
+            str(generated.get("generated_by_ai") or "").strip().lower() in {"true", "1", "yes"}
+            or bool(ai_provider and generated.get("classification_source") == "ai")
+        )
+        ai_generation = {
+            "status": "generated" if ai_generated else "fallback",
+            "generated_by_ai": ai_generated,
+            "provider": ai_provider or None,
+            "model": str(generated.get("ai_model") or "").strip() or None,
+            "classification_source": str(generated.get("classification_source") or "heuristic"),
+            "translation_status": str(generated.get("translation_status") or "missing"),
+            "error": _safe_ai_error(generated.get("ai_error")),
+        }
+        return {
+            "app": app,
+            "artifacts": imported,
+            "rejected_assets": rejected_assets,
+            "release_found": bool(release),
+            "ai_generation": ai_generation,
+        }
 
 
 class BuildService:
