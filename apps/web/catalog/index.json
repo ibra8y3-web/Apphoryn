@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T20:13:38.748814+00:00",
+  "generated_at": "2026-11-25T20:13:55.829550+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -11597,6 +11597,78 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "huskyvoice-foldberry",
+      "slug": "huskyvoice-foldberry",
+      "name": "foldberry",
+      "summary": "Galaxy Z Fold8 向けの BlackBerry 風ホームアプリ。画面上の QWERTY キーをアプリ起動キーとして使います。非公式アプリです。A BlackBerry-style home launcher for Galaxy Z Fold8 — use an on-screen QWERTY keyboard as app launch keys. Unofficial app.",
+      "description": "Galaxy Z Fold8 向けの BlackBerry 風ホームアプリ。画面上の QWERTY キーをアプリ起動キーとして使います。非公式アプリです。A BlackBerry-style home launcher for Galaxy Z Fold8 — use an on-screen QWERTY keyboard as app launch keys. Unofficial app.",
+      "translations": {
+        "en": {
+          "summary": "Galaxy Z Fold8 向けの BlackBerry 風ホームアプリ。画面上の QWERTY キーをアプリ起動キーとして使います。非公式アプリです。A BlackBerry-style home launcher for Galaxy Z Fold8 — use an on-screen QWERTY keyboard as app launch keys. Unofficial app.",
+          "description": "Galaxy Z Fold8 向けの BlackBerry 風ホームアプリ。画面上の QWERTY キーをアプリ起動キーとして使います。非公式アプリです。A BlackBerry-style home launcher for Galaxy Z Fold8 — use an on-screen QWERTY keyboard as app launch keys. Unofficial app."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/39932905?v=4",
+      "repository_url": "https://github.com/huskyvoice/foldberry",
+      "github_repo_id": "1463707510",
+      "source_updated_at": "2026-11-19T05:55:46Z",
+      "homepage_url": null,
+      "owner": "huskyvoice",
+      "default_branch": "main",
+      "source_commit_sha": "304a8f8a94858fccaea367c45f1e45f3391b1675",
+      "license_text": "MIT License\n\nCopyright (c) 2026 huskyvoice\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "blackberry",
+        "blackberry10",
+        "galaxy-z-fold",
+        "galaxy-z-fold8",
+        "jetpack-compose",
+        "kotlin",
+        "launcher",
+        "zfold8"
+      ],
+      "latest_version": "v0.8.2",
+      "release_url": "https://github.com/huskyvoice/foldberry/releases/tag/v0.8.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-huskyvoice-foldberry-v0.8.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-huskyvoice-foldberry-v0.8.2/THIRD-PARTY-NOTICE-huskyvoice-foldberry.txt",
+      "artifacts": [
+        {
+          "id": "aecd66884253dffb38967c916497a126cce9e83167638387518e74c8831db3c7",
+          "filename": "FoldBerry.apk",
+          "original_filename": "FoldBerry.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.8.2",
+          "size_bytes": 19863529,
+          "sha256": "aecd66884253dffb38967c916497a126cce9e83167638387518e74c8831db3c7",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "a11c1ecc6843e1f1eeeb26255e2310dc7865afbe9449865716f01d47017f6e3f",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-huskyvoice-foldberry-v0.8.2/FoldBerry.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-huskyvoice-foldberry-v0.8.2"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
