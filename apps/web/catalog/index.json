@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T11:51:14.000321+00:00",
+  "generated_at": "2026-11-25T12:04:56.339443+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -5515,6 +5515,105 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "akshit-bansal11-edgepad",
+      "slug": "akshit-bansal11-edgepad",
+      "name": "edgepad",
+      "summary": "Turn an Android phone into a trackpad, remote and control deck for a Windows, Mac or Linux laptop. Corner dials, keyboard, gamepad, presenter, file transfer, clipboard and stats. No account, no server, no cloud.",
+      "description": "Turn an Android phone into a trackpad, remote and control deck for a Windows, Mac or Linux laptop. Corner dials, keyboard, gamepad, presenter, file transfer, clipboard and stats. No account, no server, no cloud.",
+      "translations": {
+        "en": {
+          "summary": "Turn an Android phone into a trackpad, remote and control deck for a Windows, Mac or Linux laptop. Corner dials, keyboard, gamepad, presenter, file transfer, clipboard and stats. No account, no server, no cloud.",
+          "description": "Turn an Android phone into a trackpad, remote and control deck for a Windows, Mac or Linux laptop. Corner dials, keyboard, gamepad, presenter, file transfer, clipboard and stats. No account, no server, no cloud."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/akshit-bansal11/edgepad/main/site/app/icon.svg",
+      "repository_url": "https://github.com/akshit-bansal11/edgepad",
+      "github_repo_id": "1365671317",
+      "source_updated_at": "2026-11-25T11:47:35Z",
+      "homepage_url": "https://getedgepad.com",
+      "owner": "akshit-bansal11",
+      "default_branch": "main",
+      "source_commit_sha": "785414c5de77d4a77ef12d7f0ebe000b9ac6c6d0",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Akshit Bansal\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "android",
+        "android-app",
+        "bluetooth",
+        "bluetooth-classic",
+        "csharp",
+        "dotnet",
+        "file-transfer",
+        "gamepad",
+        "kotlin",
+        "linux",
+        "macos",
+        "media-controls",
+        "remote-control",
+        "rfcomm",
+        "touchpad",
+        "trackpad",
+        "virtual-keyboard",
+        "windows",
+        "winforms"
+      ],
+      "latest_version": "v5.1.0",
+      "release_url": "https://github.com/akshit-bansal11/edgepad/releases/tag/v5.1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-akshit-bansal11-edgepad-v5.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-akshit-bansal11-edgepad-v5.1.0/THIRD-PARTY-NOTICE-akshit-bansal11-edgepad.txt",
+      "artifacts": [
+        {
+          "id": "f13465d2582277df1a3bcada6f99eeb8d92a9d68c667a89411a2ba8575a24ab9",
+          "filename": "Edgepad-5.1.0.apk",
+          "original_filename": "Edgepad-5.1.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v5.1.0",
+          "size_bytes": 2465689,
+          "sha256": "f13465d2582277df1a3bcada6f99eeb8d92a9d68c667a89411a2ba8575a24ab9",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "84106046e6b755e3baf9f6dffe2c367fab6d91ece42d7a5d383ce3dce7f8a73e",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-akshit-bansal11-edgepad-v5.1.0/Edgepad-5.1.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-akshit-bansal11-edgepad-v5.1.0"
+        },
+        {
+          "id": "337dc978d50d027f107ae2383e58fa4fa891b158b77e92af624668fec8c4b6d8",
+          "filename": "Edgepad-5.1.0.exe",
+          "original_filename": "Edgepad-5.1.0.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v5.1.0",
+          "size_bytes": 59560254,
+          "sha256": "337dc978d50d027f107ae2383e58fa4fa891b158b77e92af624668fec8c4b6d8",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-akshit-bansal11-edgepad-v5.1.0/Edgepad-5.1.0.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-akshit-bansal11-edgepad-v5.1.0"
+        }
+      ],
+      "platforms": [
+        "android",
+        "windows"
       ]
     },
     {
