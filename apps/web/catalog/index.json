@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:54:06.241790+00:00",
+  "generated_at": "2026-11-25T21:54:45.002254+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -42568,6 +42568,73 @@
           "signer_certificate_sha256": "09d3d52f2c8520e1caa438316c46b461101eeb8506c2c3dcbed5f5fc1f53455e",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-varun-legend-vplayer-Debug/Vplayer.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-varun-legend-vplayer-Debug"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "rmyndharis-vscodroid",
+      "slug": "rmyndharis-vscodroid",
+      "name": "VSCodroid",
+      "summary": "VS Code ported to Android — a full IDE on-the-go for developers",
+      "description": "VS Code ported to Android — a full IDE on-the-go for developers",
+      "translations": {
+        "en": {
+          "summary": "VS Code ported to Android — a full IDE on-the-go for developers",
+          "description": "VS Code ported to Android — a full IDE on-the-go for developers"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/rmyndharis/VSCodroid/main/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "repository_url": "https://github.com/rmyndharis/VSCodroid",
+      "github_repo_id": "1155222373",
+      "source_updated_at": "2026-11-25T17:33:31Z",
+      "homepage_url": "https://rmyndharis.github.io/VSCodroid/",
+      "owner": "rmyndharis",
+      "default_branch": "main",
+      "source_commit_sha": "843708384856a8686355ddb75a63e43cce62b2a0",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Yudhi Armyndharis and VSCodroid Community\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android",
+        "android-app",
+        "ide",
+        "mobile-ide",
+        "vscode"
+      ],
+      "latest_version": "v1.11.0",
+      "release_url": "https://github.com/rmyndharis/VSCodroid/releases/tag/v1.11.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rmyndharis-vscodroid-v1.11.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rmyndharis-vscodroid-v1.11.0/THIRD-PARTY-NOTICE-rmyndharis-vscodroid.txt",
+      "artifacts": [
+        {
+          "id": "4f83ff6fd8a70f19ee04ad93861d68522a2936c203f6ec941e9c12c4527051a3",
+          "filename": "app-release.apk",
+          "original_filename": "app-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.11.0",
+          "size_bytes": 218504196,
+          "sha256": "4f83ff6fd8a70f19ee04ad93861d68522a2936c203f6ec941e9c12c4527051a3",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "b454eac2948da735d5ee9d081f4eca5e6af94bbcc5643b4b039637148c2b7ce4",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rmyndharis-vscodroid-v1.11.0/app-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rmyndharis-vscodroid-v1.11.0"
         }
       ],
       "platforms": [
