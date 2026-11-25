@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:09:21.111841+00:00",
+  "generated_at": "2026-11-25T04:09:25.172528+00:00",
   "apps": [
     {
       "id": "defunkt-ambition",
@@ -933,6 +933,45 @@
       "default_branch": "master",
       "source_commit_sha": "d8f94ee10bfdf5dfff7467a151a36349ab0b4010",
       "license_text": "Copyright (c) Chris Wanstrath\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\nSoftware), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "category": "other",
+      "topics": [],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "maddox-imdb",
+      "slug": "maddox-imdb",
+      "artifacts": [],
+      "name": "imdb",
+      "summary": "Don't use this anymore, use maddox/imdb-party",
+      "description": "Don't use this anymore, use maddox/imdb-party",
+      "translations": {
+        "en": {
+          "summary": "Don't use this anymore, use maddox/imdb-party",
+          "description": "Don't use this anymore, use maddox/imdb-party"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/260?v=4",
+      "repository_url": "https://github.com/maddox/imdb",
+      "github_repo_id": "531",
+      "source_updated_at": "2026-06-30T12:07:38Z",
+      "homepage_url": null,
+      "owner": "maddox",
+      "default_branch": "master",
+      "source_commit_sha": "81d306d3b9f569a676ac5b7aec3a64c57a041450",
+      "license_text": "Copyright (c) 2009 Jon Maddox\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
       "project_kind": "unknown",
