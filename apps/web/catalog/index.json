@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T18:45:07.974504+00:00",
+  "generated_at": "2026-11-25T18:45:37.109661+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -15805,6 +15805,102 @@
           "signer_certificate_sha256": "d0883f4093e7183b3d620fdf5ac384dac7a3bc63e0e5ddb8cf041d327bea682e",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jlourcey-omnitome-v2.1.1/OmniTome_v2.1.1.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jlourcey-omnitome-v2.1.1"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "dzianisv-opencode-mobile",
+      "slug": "dzianisv-opencode-mobile",
+      "name": "opencode-mobile",
+      "summary": "OpenCode Mobile — open-source Android client for the OpenCode AI coding agent. Run AI coding sessions from your phone against your self-hosted server over Tailscale. Available on F-Droid.",
+      "description": "OpenCode Mobile — open-source Android client for the OpenCode AI coding agent. Run AI coding sessions from your phone against your self-hosted server over Tailscale. Available on F-Droid.",
+      "translations": {
+        "en": {
+          "summary": "OpenCode Mobile — open-source Android client for the OpenCode AI coding agent. Run AI coding sessions from your phone against your self-hosted server over Tailscale. Available on F-Droid.",
+          "description": "OpenCode Mobile — open-source Android client for the OpenCode AI coding agent. Run AI coding sessions from your phone against your self-hosted server over Tailscale. Available on F-Droid."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/dzianisv/opencode-mobile/main/assets/icon.png",
+      "repository_url": "https://github.com/dzianisv/opencode-mobile",
+      "github_repo_id": "1241773613",
+      "source_updated_at": "2026-11-25T16:32:14Z",
+      "homepage_url": "https://agentlabs.cc/opencode",
+      "owner": "dzianisv",
+      "default_branch": "main",
+      "source_commit_sha": "91bcba5fef55b8158ed6d8a0437257dadef47fe6",
+      "license_text": "MIT License\n\nCopyright (c) 2026 VIBE TECHNOLOGIES, LLC\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-coding-assistant",
+        "android",
+        "android-app",
+        "claude",
+        "coding-agent",
+        "developer-tools",
+        "expo",
+        "fdroid",
+        "llm",
+        "mobile-client",
+        "open-source",
+        "opencode",
+        "react-native",
+        "self-hosted",
+        "tailscale"
+      ],
+      "latest_version": "v0.4.27",
+      "release_url": "https://github.com/dzianisv/opencode-mobile/releases/tag/v0.4.27",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-dzianisv-opencode-mobile-v0.4.27",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-dzianisv-opencode-mobile-v0.4.27/THIRD-PARTY-NOTICE-dzianisv-opencode-mobile.txt",
+      "artifacts": [
+        {
+          "id": "6bf4040953cbccddffc3870c062856829d6d55770a140c8c7fac7e99b922e1ae",
+          "filename": "app-release-fdroid.apk",
+          "original_filename": "app-release-fdroid.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.4.27",
+          "size_bytes": 92378952,
+          "sha256": "6bf4040953cbccddffc3870c062856829d6d55770a140c8c7fac7e99b922e1ae",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "0c259d94e0ffea5d6319614b229d4b6bdc22de1f56e38e76948398d2df6aa099",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-dzianisv-opencode-mobile-v0.4.27/app-release-fdroid.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-dzianisv-opencode-mobile-v0.4.27"
+        },
+        {
+          "id": "854c5579a221662a193765c09145ce3b54bc2699cbc562863fea6976f0a3d7a6",
+          "filename": "app-release.apk",
+          "original_filename": "app-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.4.27",
+          "size_bytes": 92907400,
+          "sha256": "854c5579a221662a193765c09145ce3b54bc2699cbc562863fea6976f0a3d7a6",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "0c259d94e0ffea5d6319614b229d4b6bdc22de1f56e38e76948398d2df6aa099",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-dzianisv-opencode-mobile-v0.4.27/app-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-dzianisv-opencode-mobile-v0.4.27"
         }
       ],
       "platforms": [
