@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:49:03.681389+00:00",
+  "generated_at": "2026-11-25T23:49:21.653384+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -51817,6 +51817,82 @@
           "signer_certificate_sha256": "1b670270708e768f97798278ab25712e3534097898ced4b2a12932da3c1bf080",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ixinortyan-suzuemojy-android-v1.8.1/SuzuEmojy-v1.8.1.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ixinortyan-suzuemojy-android-v1.8.1"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "abovsh-svitlyachok",
+      "slug": "abovsh-svitlyachok",
+      "name": "svitlyachok",
+      "summary": "Android-застосунок, який показує графік відключень світла для кількох місць: сповіщення, віджети, статистика. Нічого не надсилає з телефона.",
+      "description": "Android-застосунок, який показує графік відключень світла для кількох місць: сповіщення, віджети, статистика. Нічого не надсилає з телефона.",
+      "translations": {
+        "en": {
+          "summary": "Android-застосунок, який показує графік відключень світла для кількох місць: сповіщення, віджети, статистика. Нічого не надсилає з телефона.",
+          "description": "Android-застосунок, який показує графік відключень світла для кількох місць: сповіщення, віджети, статистика. Нічого не надсилає з телефона."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ABovsh/svitlyachok/main/docs/icon.svg",
+      "repository_url": "https://github.com/ABovsh/svitlyachok",
+      "github_repo_id": "1440693462",
+      "source_updated_at": "2026-11-18T06:36:59Z",
+      "homepage_url": "https://abovsh.github.io/svitlyachok/",
+      "owner": "ABovsh",
+      "default_branch": "main",
+      "source_commit_sha": "b1296ee68615b08de1bb008cff2ee66d7cd6d2b6",
+      "license_text": "MIT License\n\nCopyright (c) 2026 ABovsh\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "android",
+        "android-app",
+        "blackout",
+        "dtek",
+        "electricity",
+        "java",
+        "outage-schedule",
+        "power-outage",
+        "power-outages",
+        "privacy",
+        "svitlo",
+        "ukraine",
+        "ukrainian",
+        "widget"
+      ],
+      "latest_version": "v1.11.0",
+      "release_url": "https://github.com/ABovsh/svitlyachok/releases/tag/v1.11.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-abovsh-svitlyachok-v1.11.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-abovsh-svitlyachok-v1.11.0/THIRD-PARTY-NOTICE-abovsh-svitlyachok.txt",
+      "artifacts": [
+        {
+          "id": "300ec8e168767a0d73f7cf7fc53286ebeed914e6344100b338730ee6d267212d",
+          "filename": "Svitlyachok-1.11.0.apk",
+          "original_filename": "Svitlyachok-1.11.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.11.0",
+          "size_bytes": 534704,
+          "sha256": "300ec8e168767a0d73f7cf7fc53286ebeed914e6344100b338730ee6d267212d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "90b243e60a57dd7e207e6cba971675ff4ee14840a556471de8fa030938f97ff4",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-abovsh-svitlyachok-v1.11.0/Svitlyachok-1.11.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-abovsh-svitlyachok-v1.11.0"
         }
       ],
       "platforms": [
