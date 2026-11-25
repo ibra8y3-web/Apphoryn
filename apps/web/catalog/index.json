@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T10:11:09.213794+00:00",
+  "generated_at": "2026-11-25T10:11:13.450060+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -5423,6 +5423,53 @@
         "android",
         "linux"
       ]
+    },
+    {
+      "id": "rzh-98-hostlane",
+      "slug": "rzh-98-hostlane",
+      "artifacts": [],
+      "name": "Hostlane",
+      "summary": "SSH runtime for your own agents: exec, files, tunnels, and port management on remote servers — no LLM, server needs only sshd.",
+      "description": "SSH runtime for your own agents: exec, files, tunnels, and port management on remote servers — no LLM, server needs only sshd.",
+      "translations": {
+        "en": {
+          "summary": "SSH runtime for your own agents: exec, files, tunnels, and port management on remote servers — no LLM, server needs only sshd.",
+          "description": "SSH runtime for your own agents: exec, files, tunnels, and port management on remote servers — no LLM, server needs only sshd."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/rzh-98/Hostlane/main/apps/desktop/resources/icon.png",
+      "repository_url": "https://github.com/rzh-98/Hostlane",
+      "github_repo_id": "1470166505",
+      "source_updated_at": "2026-11-24T16:30:19Z",
+      "homepage_url": null,
+      "owner": "rzh-98",
+      "default_branch": "main",
+      "source_commit_sha": "96dcd1b5258044722889a5b65f79082536c260c3",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Zihao\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "network",
+      "topics": [
+        "agent",
+        "ai-agents",
+        "devops",
+        "electron",
+        "mcp",
+        "rust",
+        "ssh"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "kele551-hotnews",
