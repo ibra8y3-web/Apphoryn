@@ -6,6 +6,7 @@ import os
 import re
 import sqlite3
 import threading
+import time
 import uuid
 from contextlib import contextmanager
 from datetime import datetime, timedelta, timezone
@@ -808,12 +809,22 @@ def execute_run(run: dict[str, Any]) -> None:
 
 _stop_event = threading.Event()
 _worker_lock = threading.Lock()
+_analytics_sync_lock = threading.Lock()
+_last_analytics_sync = 0.0
 _workers: list[threading.Thread] = []
 
 
 def _worker_loop(worker_id: str) -> None:
+    global _last_analytics_sync
     while not _stop_event.is_set():
         try:
+            if time.monotonic() - _last_analytics_sync >= 30 and _analytics_sync_lock.acquire(blocking=False):
+                try:
+                    from .analytics import analytics
+                    analytics.sync_once(limit=100)
+                    _last_analytics_sync = time.monotonic()
+                finally:
+                    _analytics_sync_lock.release()
             STORE.enqueue_due_schedules()
             run = STORE.claim_run(worker_id)
             if run is None:
