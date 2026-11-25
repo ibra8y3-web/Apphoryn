@@ -47,6 +47,8 @@ def dashboard(x_apphoryn_admin: str | None = Header(default=None)):
         "workers": STORE.worker_rows(),
         "schedules": STORE.list_schedules(),
         "provider_metrics": STORE.provider_metrics(),
+        "model_metrics": STORE.model_metrics(),
+        "model_evaluations": STORE.model_evaluation_metrics(),
         "providers": ai_router.public_model_catalog(),
         "resources": resource_status(),
         "analytics": analytics.summary(),
