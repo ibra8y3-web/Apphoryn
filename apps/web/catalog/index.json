@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T11:09:07.437688+00:00",
+  "generated_at": "2026-11-25T11:10:00.941144+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -16251,6 +16251,61 @@
         "macos",
         "windows"
       ]
+    },
+    {
+      "id": "vellira-dev-vellira",
+      "slug": "vellira-dev-vellira",
+      "artifacts": [],
+      "name": "vellira",
+      "summary": "TypeScript-first design system for React and React Native with shared design tokens, accessible components and consistent APIs.",
+      "description": "TypeScript-first design system for React and React Native with shared design tokens, accessible components and consistent APIs.",
+      "translations": {
+        "en": {
+          "summary": "TypeScript-first design system for React and React Native with shared design tokens, accessible components and consistent APIs.",
+          "description": "TypeScript-first design system for React and React Native with shared design tokens, accessible components and consistent APIs."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/vellira-dev/vellira/main/apps/native-storybook/assets/icon.png",
+      "repository_url": "https://github.com/vellira-dev/vellira",
+      "github_repo_id": "1239088789",
+      "source_updated_at": "2026-11-12T15:41:33Z",
+      "homepage_url": "https://vellira.dev",
+      "owner": "vellira-dev",
+      "default_branch": "main",
+      "source_commit_sha": "a5816a15a7a3e9eb06c2777a6648b942cf97fed0",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Roman Bakurov\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "category": "system",
+      "topics": [
+        "accessibility",
+        "component-library",
+        "cross-platform",
+        "css-variables",
+        "design-systems",
+        "design-tokens",
+        "frontend",
+        "mobile-development",
+        "opensource",
+        "react",
+        "react-native",
+        "storybook",
+        "typescript",
+        "ui-library",
+        "web-development"
+      ],
+      "latest_version": "v2.201.0",
+      "release_url": "https://github.com/vellira-dev/vellira/releases/tag/v2.201.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "kernel-hunter-vesper",
