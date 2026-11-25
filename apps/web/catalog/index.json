@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:42:04.092937+00:00",
+  "generated_at": "2026-11-25T19:42:18.531788+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -28413,6 +28413,80 @@
           "signer_certificate_sha256": "40067d4fd1ebb6e8d53745a5b45ffe95a84e064b3713e405ee604b5731dc1b10",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zev-kaapor-wavvy-v1.1.1/Wavvy-v1.1.1-universal.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zev-kaapor-wavvy-v1.1.1"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "danyk20-webmirror",
+      "slug": "danyk20-webmirror",
+      "name": "WebMirror",
+      "summary": "Mirror your Android phone screen to your Tesla: wireless screen sharing with sound and touch control to the Tesla browser (or any browser). No app or cable needed in the car.",
+      "description": "Mirror your Android phone screen to your Tesla: wireless screen sharing with sound and touch control to the Tesla browser (or any browser). No app or cable needed in the car.",
+      "translations": {
+        "en": {
+          "summary": "Mirror your Android phone screen to your Tesla: wireless screen sharing with sound and touch control to the Tesla browser (or any browser). No app or cable needed in the car.",
+          "description": "Mirror your Android phone screen to your Tesla: wireless screen sharing with sound and touch control to the Tesla browser (or any browser). No app or cable needed in the car."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/danyk20/WebMirror/main/app/src/main/assets/web/icon.svg",
+      "repository_url": "https://github.com/danyk20/WebMirror",
+      "github_repo_id": "1462820164",
+      "source_updated_at": "2026-11-19T15:58:45Z",
+      "homepage_url": "https://danyk20.github.io/WebMirror/",
+      "owner": "danyk20",
+      "default_branch": "main",
+      "source_commit_sha": "9064fa959367d1b032ca12727b5b22c2f8787c5c",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Daniel Košč\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "network",
+      "topics": [
+        "android",
+        "android-app",
+        "jetpack-compose",
+        "kotlin",
+        "mirror-phone-to-tesla",
+        "screen-mirroring",
+        "screen-sharing",
+        "tesla",
+        "tesla-browser",
+        "tesla-screen-mirroring",
+        "webcodecs",
+        "wireless-display"
+      ],
+      "latest_version": "v0.3.3",
+      "release_url": "https://github.com/danyk20/WebMirror/releases/tag/v0.3.3",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-danyk20-webmirror-v0.3.3",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-danyk20-webmirror-v0.3.3/THIRD-PARTY-NOTICE-danyk20-webmirror.txt",
+      "artifacts": [
+        {
+          "id": "0830a52531a0c2eb173776f992d502be814015ff02760a539ec8e1e1ea4a7e44",
+          "filename": "WebMirror-0.3.3.apk",
+          "original_filename": "WebMirror-0.3.3.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.3.3",
+          "size_bytes": 2947853,
+          "sha256": "0830a52531a0c2eb173776f992d502be814015ff02760a539ec8e1e1ea4a7e44",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "aba60de08391e40ef4c41eb6ee630d4ac58f39dd6dbed43f44690ebd4c81eb6a",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-danyk20-webmirror-v0.3.3/WebMirror-0.3.3.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-danyk20-webmirror-v0.3.3"
         }
       ],
       "platforms": [
