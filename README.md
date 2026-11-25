@@ -159,3 +159,71 @@ The provider dashboard can refresh model discovery and send a minimal real test 
 
 For a self-hosted backend, copy the same variables into `.env`. Keep provider keys server-side; never put them in `apps/web`, browser JavaScript, public catalog JSON, or the build jobs that execute third-party source code.
 
+## Additional AI, compute, discovery and analytics services
+
+These features extend the existing storefront. They do not replace the existing catalog, importer, artifact verifier or build adapters.
+
+### Open-source discovery sources
+
+The authenticated AI Workforce dashboard now queries the official F-Droid search API and Flathub catalog API alongside the existing GitHub discovery path. Results retain their source, package ID, release metadata and catalog URL. They are marked as catalog metadata, not verified installation binaries. F-Droid APK mirroring still requires signature-chain/index verification and an explicit redistribution-license review; Flathub AppStream data is not a cross-platform Windows/macOS/Android installer.
+
+### Open-source security tools on GitHub compute
+
+The workflow `.github/workflows/agent-compute.yml` uses a short-lived GitHub-hosted runner to execute:
+- Semgrep static analysis
+- Trivy filesystem, dependency, secret and misconfiguration scans
+- OSV-Scanner dependency vulnerability scan
+- Syft CycloneDX SBOM generation
+- Gitleaks secret detection with redacted output
+
+The workflow accepts only a public `owner/repository` target. It clones the specified branch/tag/commit and mounts source read-only into scanner containers. It does not execute build files, package scripts, repository Actions workflows or arbitrary target code. Reports are uploaded as a workflow artifact. This is a security-analysis job, not a permanent cloud computer and not a guarantee that software is safe.
+
+Enable it only after configuring the Apphoryn GitHub token, repository owner/name and `APPHORYN_GITHUB_COMPUTE_ENABLED=true`. A separate approval checkbox is required for each scan dispatch.
+
+### Local open-weight AI and offline operation
+
+The optional Docker Compose profile `local-ai` runs the official Ollama container on a private internal network. Apphoryn discovers its installed models and can route work to its OpenAI-compatible inference endpoint. vLLM can also be configured at a loopback or private Docker service URL for GPU hosts.
+
+```bash
+cp .env.example .env
+# Configure APPHORYN_ADMIN_TOKEN and APPHORYN_INGEST_TOKEN in .env first.
+docker compose up -d --build
+# Optional local model server:
+# Set OLLAMA_BASE_URL=http://ollama:11434 in .env, then:
+docker compose --profile local-ai up -d
+docker compose exec ollama ollama pull qwen2.5-coder:7b
+```
+
+The Docker volume `apphoryn_data` retains the catalog DB, agent queue/memory DB, analytics DB and artifact files. The separate `ollama_models` volume retains downloaded model weights. Back up both volumes. The application image runs as a non-root user and binds to localhost by default; use an authenticated TLS reverse proxy and firewall before remote exposure.
+
+**Offline boundary:** when the host remains powered on but the Internet fails, the local UI/API, SQLite queue, shared memory, analytics capture and already-downloaded local models can continue. GitHub Actions, upstream repositories, cloud AI providers and remote database replication cannot work until connectivity returns. A powered-off device cannot run background workers.
+
+### Durable privacy-minimizing analytics
+
+The storefront records:
+- catalog and app-detail views,
+- searches (query text is SHA-256 hashed before storage),
+- favorite add/remove actions,
+- verified-artifact download requests,
+- downloads completed by the Apphoryn backend download stream.
+
+The event ledger writes to a local SQLite outbox first. It can replicate in bounded batches to either a PostgreSQL-compatible Neon/Supabase database (`APPHORYN_ANALYTICS_POSTGRES_DSN`) or Cloudflare D1 (`CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_D1_DATABASE_ID`, `CLOUDFLARE_D1_API_TOKEN`). D1 uses a dedicated least-privilege token separate from the AI inference token. Pending events remain local if the network/database is unavailable and are retried when connectivity returns.
+
+The system does not store client IPs, cookies, auth headers or raw search text in the analytics ledger. The public event endpoint is rate-limited and validates app slugs/artifact IDs against the real catalog. A browser can report a download request, but only a completed backend artifact stream increments completed downloads. Direct third-party downloads outside this backend cannot truthfully be counted as completed by this server.
+
+### Model routing and benchmarking
+
+Ollama/vLLM local models are discovered without provider API billing. Model routing considers specialist type, context capability, observed success rate, average latency and persisted benchmark results. The dashboard can test a provider connection and run a bounded deterministic benchmark against local or catalog-confirmed-free model classes only; paid models are excluded from this benchmark. The score is a small reproducible check, not a universal intelligence ranking.
+
+### Approval-gated AI code proposals
+
+The Software Engineer and Debugging agents may prepare source replacements and create a uniquely named branch plus pull request only when:
+- the individual task has `allow_code_changes=true`;
+- the backend has `APPHORYN_CODE_WRITES_ENABLED=true`;
+- the target repository is allowlisted; and
+- every changed path is inside `APPHORYN_CODE_WRITE_ALLOWLIST`.
+
+The tool rejects workflow files, environment files, secrets and signing-key files. It does not push directly to `main`. Human review and repository CI are required before a pull request is merged. Keep the GitHub token's permissions minimal.
+
+For Docker startup, storage, local models, database configuration and security boundaries see [deploy/README.md](deploy/README.md).
+
