@@ -254,7 +254,7 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
     # Cloudflare requires an account ID as well as a token, and explicit opt-in.
     key = os.getenv("CLOUDFLARE_API_TOKEN", "").strip()
     account = os.getenv("CLOUDFLARE_ACCOUNT_ID", "").strip()
-    if key and account and _ENABLE_CF and _ALLOW_PAID:
+    if key and account and _ENABLE_CF and _ALLOW_PAID and not _FREE_ONLY:
         try:
             query = urllib.parse.urlencode({"task": "text-generation", "hide_experimental": "true", "per_page": 100})
             url = f"https://api.cloudflare.com/client/v4/accounts/{urllib.parse.quote(account)}/ai/models/search?{query}"
