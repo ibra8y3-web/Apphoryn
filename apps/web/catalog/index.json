@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:04:36.575772+00:00",
+  "generated_at": "2026-11-25T23:05:00.447694+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -30495,6 +30495,83 @@
           "requested_at": "2026-11-25T21:18:27.183728+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
         }
+      ]
+    },
+    {
+      "id": "kaia-alenia-mnemis",
+      "slug": "kaia-alenia-mnemis",
+      "name": "Mnemis",
+      "summary": "Extensible Android video player with native KoalaSync watch parties, local playback, web streams, and plugin-ready integrations.",
+      "description": "Extensible Android video player with native KoalaSync watch parties, local playback, web streams, and plugin-ready integrations.",
+      "translations": {
+        "en": {
+          "summary": "Extensible Android video player with native KoalaSync watch parties, local playback, web streams, and plugin-ready integrations.",
+          "description": "Extensible Android video player with native KoalaSync watch parties, local playback, web streams, and plugin-ready integrations."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Kaia-Alenia/Mnemis/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/Kaia-Alenia/Mnemis",
+      "github_repo_id": "1337752849",
+      "source_updated_at": "2026-11-15T16:27:36Z",
+      "homepage_url": null,
+      "owner": "Kaia-Alenia",
+      "default_branch": "main",
+      "source_commit_sha": "7ba047ea8224c3238c13d50d07d18acc6cee88db",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Alenia Studios\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android",
+        "android-app",
+        "androidx-media3",
+        "dash",
+        "exoplayer",
+        "hls",
+        "koalasync",
+        "kotlin",
+        "media-player",
+        "multimedia",
+        "plugin-system",
+        "video-player",
+        "video-streaming",
+        "watch-party",
+        "webview"
+      ],
+      "latest_version": "v1.0.9",
+      "release_url": "https://github.com/Kaia-Alenia/Mnemis/releases/tag/v1.0.9",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kaia-alenia-mnemis-v1.0.9",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kaia-alenia-mnemis-v1.0.9/THIRD-PARTY-NOTICE-kaia-alenia-mnemis.txt",
+      "artifacts": [
+        {
+          "id": "3eca79ae2cc3334bd5334885e62204e66fbf2de0434e67c82cdbcaf0b4082587",
+          "filename": "mnemis-v1.0.9-debug.apk",
+          "original_filename": "mnemis-v1.0.9-debug.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.9",
+          "size_bytes": 10598124,
+          "sha256": "3eca79ae2cc3334bd5334885e62204e66fbf2de0434e67c82cdbcaf0b4082587",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "c114bf8802f9bccd29b2c85f55c4f9a922ada5d69cce5fb73c65fcde39ed40dc",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kaia-alenia-mnemis-v1.0.9/mnemis-v1.0.9-debug.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kaia-alenia-mnemis-v1.0.9"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
