@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T17:41:36.132627+00:00",
+  "generated_at": "2026-11-25T17:41:48.562327+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -6901,6 +6901,64 @@
       "platforms": [
         "macos"
       ]
+    },
+    {
+      "id": "kriswonka-fanshift",
+      "slug": "kriswonka-fanshift",
+      "artifacts": [],
+      "name": "FanShift",
+      "summary": "macOS menu bar fan control: cycle fan profiles with a global hotkey, each with its own temperature-to-RPM curve. Talks to the SMC directly.",
+      "description": "macOS menu bar fan control: cycle fan profiles with a global hotkey, each with its own temperature-to-RPM curve. Talks to the SMC directly.",
+      "translations": {
+        "en": {
+          "summary": "macOS menu bar fan control: cycle fan profiles with a global hotkey, each with its own temperature-to-RPM curve. Talks to the SMC directly.",
+          "description": "macOS menu bar fan control: cycle fan profiles with a global hotkey, each with its own temperature-to-RPM curve. Talks to the SMC directly."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/KrisWonka/FanShift/main/docs/images/icon.png",
+      "repository_url": "https://github.com/KrisWonka/FanShift",
+      "github_repo_id": "1458265118",
+      "source_updated_at": "2026-11-25T08:25:41Z",
+      "homepage_url": null,
+      "owner": "KrisWonka",
+      "default_branch": "main",
+      "source_commit_sha": "94c425a0814a637edca13a0f55fd9194886b947f",
+      "license_text": "MIT License\n\nCopyright (c) 2026 KrisWonka\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "category": "other",
+      "topics": [
+        "apple-silicon",
+        "fan-control",
+        "fan-curve",
+        "fan-speed",
+        "homebrew-cask",
+        "hotkey",
+        "mac",
+        "macbook",
+        "macbook-pro",
+        "macos",
+        "macos-app",
+        "menu-bar-app",
+        "menubar",
+        "smc",
+        "swift",
+        "swiftui",
+        "temperature-monitor",
+        "thermal"
+      ],
+      "latest_version": "v0.1.0",
+      "release_url": "https://github.com/KrisWonka/FanShift/releases/tag/v0.1.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "yim2412-fifa-match-tracker",
