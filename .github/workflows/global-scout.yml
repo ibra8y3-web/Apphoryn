@@ -13,16 +13,16 @@ on:
       - 'app/services.py'
       - 'scripts/ci_build.py'
       - 'app/build_support.py'
-  # GitHub scheduled workflows have a five-minute minimum. The worker itself
-  # enforces a 60-second gap between each import while this long run is active.
+  # The scanner needs a longer uninterrupted window for GitHub discovery and
+  # import. New scheduled ticks wait instead of cancelling an active scan.
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 concurrency:
   group: apphoryn-catalog-writes
-  # The cursor and retry queue make interrupted batches replayable. Replace a
-  # stuck long-running Scout so the five-minute recovery schedule can progress.
-  cancel-in-progress: true
+  # The cursor and retry queue make interrupted batches replayable. Keep one
+  # active scan running to completion; do not kill imports on the next schedule.
+  cancel-in-progress: false
   # Serialize catalog writers so the two discovery pipelines cannot overwrite each other's updates.
 
 permissions:
@@ -33,7 +33,7 @@ permissions:
 jobs:
   global-scout:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     steps:
       - name: Checkout trusted Apphoryn automation
         uses: actions/checkout@v4
@@ -74,6 +74,7 @@ jobs:
           APPHORYN_AI_SERVICE_URL: 'https://apphoryn-production.up.railway.app'
           APPHORYN_IMPORT_INTERVAL_SECONDS: '60'
           APPHORYN_TRANSLATION_INTERVAL_SECONDS: '1'
+          APPHORYN_GLOBAL_SCOUT_REFRESH_INTERVAL_SECONDS: '600'
           # AI provider credentials stay only in Railway; GitHub Actions receives a short-lived OIDC identity.
           # Dispatch all eligible supported targets; there is no Apphoryn per-run build quota.
           # Third-party source runs without repository secrets; trusted publisher verifies all output again.
@@ -95,7 +96,7 @@ jobs:
           python scripts/global_scout.py \
             --max-repositories 10000 \
             --max-pages 100 \
-            --run-budget-seconds 240 \
+            --run-budget-seconds 900 \
             --import-interval-seconds "$APPHORYN_IMPORT_INTERVAL_SECONDS"
 
       - name: Persist the Scout cursor and retry queue
