@@ -268,6 +268,7 @@ async function loadScoutStatus(){
   const response=await fetch("/api/v1/scout/status?refresh="+Date.now(),{cache:"no-store",credentials:"same-origin"});
   if(!response.ok)throw new Error("Scout status unavailable");
   state.scoutStatus=await response.json();
+  renderScoutHome();
   renderAutomationJobs();
   return state.scoutStatus;
  }catch(error){
@@ -280,6 +281,7 @@ async function wakeAutonomousScout(){
   if(response.ok){
    const payload=await response.json();
    if(payload.status)state.scoutStatus=payload.status;
+   renderScoutHome();
    renderAutomationJobs();
   }
  }catch(error){}
@@ -315,6 +317,33 @@ function runStatus(run){
  }
  if(run.status==="queued"||run.status==="waiting")return state.language==="ar"?"في الانتظار":"Queued";
  return state.language==="ar"?"يعمل الآن":"Running";
+}
+function renderScoutHome(){
+ const status=state.scoutStatus;
+ if(!status)return;
+ const ar=state.language==="ar";
+ const phase=String(status.phase||"starting");
+ const labels={
+  searching:ar?"بحث حقيقي جارٍ الآن":"Searching real repositories now",
+  importing:ar?"استيراد إصدار حقيقي جارٍ":"Importing a real release",
+  queued:ar?"العمل في قائمة التنفيذ":"Work queued",
+  idle:status.worker_alive?(ar?"الكشاف يعمل ويراقب مصادر جديدة":"Scout is running and monitoring new sources"):(ar?"العامل غير متصل":"Worker offline"),
+  rate_limited:ar?"ينتظر حصة GitHub ثم سيستأنف":"Waiting for GitHub API quota, then resumes",
+  error:ar?"خطأ مسجل وسيعيد المحاولة":"An error was logged; retrying",
+  starting:ar?"بدء الكشاف المستقل":"Starting autonomous Scout"
+ };
+ const phaseNode=$("scoutHomePhase");
+ if(phaseNode)phaseNode.textContent=labels[phase]||labels.starting;
+ const metric=(id,value)=>{const node=$(id);if(node)node.textContent=Number(value||0).toLocaleString(ar?"ar-EG":"en-US");};
+ metric("scoutHomeSearches",status.searches_completed);
+ metric("scoutHomeDiscovered",status.total_discovered);
+ metric("scoutHomeImported",status.total_imported);
+ const activity=$("scoutHomeActivity");
+ const latest=(status.events||[])[0];
+ if(activity){
+  activity.textContent=latest?.message||(ar?"في انتظار أول نتيجة بحث محفوظة":"Waiting for the first saved search result");
+  activity.title=latest?.at||"";
+ }
 }
 function renderAutomationJobs(){
  const host=$("jobsList");
