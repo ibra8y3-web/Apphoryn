@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T11:11:11.341395+00:00",
+  "generated_at": "2026-11-25T11:11:45.129687+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -7949,6 +7949,112 @@
           "requested_at": "2026-11-25T10:07:02.371493+00:00",
           "adapter_revision": "ee84e73f7c3f876a8ded"
         }
+      ]
+    },
+    {
+      "id": "enjoyer09-ironwaves-pos-platform",
+      "slug": "enjoyer09-ironwaves-pos-platform",
+      "name": "ironwaves-pos-platform",
+      "summary": "Cloud-Native Multi-Tenant Point of Sale (POS), KDS & Hospitality ERP. MIT licensed, 1,450+ commits.",
+      "description": "Cloud-Native Multi-Tenant Point of Sale (POS), KDS & Hospitality ERP. MIT licensed, 1,450+ commits.",
+      "translations": {
+        "en": {
+          "summary": "Cloud-Native Multi-Tenant Point of Sale (POS), KDS & Hospitality ERP. MIT licensed, 1,450+ commits.",
+          "description": "Cloud-Native Multi-Tenant Point of Sale (POS), KDS & Hospitality ERP. MIT licensed, 1,450+ commits."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Enjoyer09/ironwaves-pos-platform/main/src/assets/logo.png",
+      "repository_url": "https://github.com/Enjoyer09/ironwaves-pos-platform",
+      "github_repo_id": "1190698916",
+      "source_updated_at": "2026-10-26T06:10:47Z",
+      "homepage_url": null,
+      "owner": "Enjoyer09",
+      "default_branch": "main",
+      "source_commit_sha": "29f815858c2d177d8ea2cddb0308a0fbb90ca0e5",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Abbas Aliyev\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "claude-code",
+        "erp",
+        "fastapi",
+        "hospitality",
+        "opensource",
+        "point-of-sale",
+        "pos",
+        "react19",
+        "restaurant"
+      ],
+      "latest_version": "v1.231-rc1",
+      "release_url": "https://github.com/Enjoyer09/ironwaves-pos-platform/releases/tag/v1.231-rc1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-enjoyer09-ironwaves-pos-platform-v1.231-rc1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-enjoyer09-ironwaves-pos-platform-v1.231-rc1/THIRD-PARTY-NOTICE-enjoyer09-ironwaves-pos-platform.txt",
+      "artifacts": [
+        {
+          "id": "cd5a4a1dd6e955b205e705235e4fe56be7005e0854e969b9729ebee6bfa6423a",
+          "filename": "ironwaves-print-agent-macos-arm64.pkg",
+          "original_filename": "ironwaves-print-agent-macos-arm64.pkg",
+          "platform": "macos",
+          "package_type": "macOS installer",
+          "architecture": "arm64",
+          "version": "v1.231-rc1",
+          "size_bytes": 16412744,
+          "sha256": "cd5a4a1dd6e955b205e705235e4fe56be7005e0854e969b9729ebee6bfa6423a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-enjoyer09-ironwaves-pos-platform-v1.231-rc1/ironwaves-print-agent-macos-arm64.pkg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-enjoyer09-ironwaves-pos-platform-v1.231-rc1"
+        },
+        {
+          "id": "a5f7ca1d73749186379cd6d2b1438a40bf6b85d3fd34e5f7bfb7f42b94ff3511",
+          "filename": "ironwaves-print-agent-macos-x64.pkg",
+          "original_filename": "ironwaves-print-agent-macos-x64.pkg",
+          "platform": "macos",
+          "package_type": "macOS installer",
+          "architecture": "x86_64",
+          "version": "v1.231-rc1",
+          "size_bytes": 18332159,
+          "sha256": "a5f7ca1d73749186379cd6d2b1438a40bf6b85d3fd34e5f7bfb7f42b94ff3511",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-enjoyer09-ironwaves-pos-platform-v1.231-rc1/ironwaves-print-agent-macos-x64.pkg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-enjoyer09-ironwaves-pos-platform-v1.231-rc1"
+        },
+        {
+          "id": "29d8ef6dfa3396dfd20109676fb4dd8521c9d2eba1a98ea331b6226da66ce186",
+          "filename": "ironwaves-print-agent-setup.exe",
+          "original_filename": "ironwaves-print-agent-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.231-rc1",
+          "size_bytes": 14565289,
+          "sha256": "29d8ef6dfa3396dfd20109676fb4dd8521c9d2eba1a98ea331b6226da66ce186",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-enjoyer09-ironwaves-pos-platform-v1.231-rc1/ironwaves-print-agent-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-enjoyer09-ironwaves-pos-platform-v1.231-rc1"
+        }
+      ],
+      "platforms": [
+        "macos",
+        "windows"
       ]
     },
     {
