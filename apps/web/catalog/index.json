@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:33:57.851001+00:00",
+  "generated_at": "2026-11-25T22:34:18.589666+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -38546,6 +38546,79 @@
       ],
       "platforms": [
         "macos"
+      ]
+    },
+    {
+      "id": "samyak2403-repostore",
+      "slug": "samyak2403-repostore",
+      "name": "RepoStore",
+      "summary": "Explore apps published on GitHub, view release details, and install APKs instantly — all in one place. Developed using pure Kotlin, optimized for modern Android devices.",
+      "description": "Explore apps published on GitHub, view release details, and install APKs instantly — all in one place. Developed using pure Kotlin, optimized for modern Android devices.",
+      "translations": {
+        "en": {
+          "summary": "Explore apps published on GitHub, view release details, and install APKs instantly — all in one place. Developed using pure Kotlin, optimized for modern Android devices.",
+          "description": "Explore apps published on GitHub, view release details, and install APKs instantly — all in one place. Developed using pure Kotlin, optimized for modern Android devices."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/samyak2403/RepoStore/main/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/samyak2403/RepoStore",
+      "github_repo_id": "1133357548",
+      "source_updated_at": "2026-11-25T21:13:19Z",
+      "homepage_url": "https://repostore.in/",
+      "owner": "samyak2403",
+      "default_branch": "main",
+      "source_commit_sha": "6e2eef830fd37c04a2beded8b5a66debf51d81b2",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Samyak Kamble\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-studio",
+        "api",
+        "app-store",
+        "foss",
+        "github",
+        "github-app",
+        "github-store",
+        "kotlin",
+        "open-source-project"
+      ],
+      "latest_version": "v1.0.22",
+      "release_url": "https://github.com/samyak2403/RepoStore/releases/tag/v1.0.22",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-samyak2403-repostore-v1.0.22",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-samyak2403-repostore-v1.0.22/THIRD-PARTY-NOTICE-samyak2403-repostore.txt",
+      "artifacts": [
+        {
+          "id": "a6b725914ea99d87b3a8cdf5b6db7e786dfb369b9f107a586018e1a7778919fe",
+          "filename": "app-release.apk",
+          "original_filename": "app-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.22",
+          "size_bytes": 13939280,
+          "sha256": "a6b725914ea99d87b3a8cdf5b6db7e786dfb369b9f107a586018e1a7778919fe",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "dbddc76bf7056f3cfde555c3859c3bbfc31a6f38da89764be9a7633c7e64ce25",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-samyak2403-repostore-v1.0.22/app-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-samyak2403-repostore-v1.0.22"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
