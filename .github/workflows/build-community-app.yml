@@ -40,7 +40,7 @@ jobs:
           - target: macos
             runner: macos-latest
     runs-on: ${{ matrix.runner }}
-    timeout-minutes: 90
+    timeout-minutes: 350
     steps:
       - name: Checkout trusted Apphoryn build adapters only
         uses: actions/checkout@v4
