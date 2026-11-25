@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T20:32:38.689266+00:00",
+  "generated_at": "2026-11-25T20:33:19.419415+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -27219,6 +27219,131 @@
       ],
       "platforms": [
         "linux"
+      ]
+    },
+    {
+      "id": "jevonscode-phonebridge",
+      "slug": "jevonscode-phonebridge",
+      "name": "phonebridge",
+      "summary": "Connect your AI assistant to Android: see the screen, tap, swipe and type through the PhoneBridge App.",
+      "description": "Connect your AI assistant to Android: see the screen, tap, swipe and type through the PhoneBridge App.",
+      "translations": {
+        "en": {
+          "summary": "Connect your AI assistant to Android: see the screen, tap, swipe and type through the PhoneBridge App.",
+          "description": "Connect your AI assistant to Android: see the screen, tap, swipe and type through the PhoneBridge App."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/JevonsCode/phonebridge/main/mobile/assets/brand/logo.png",
+      "repository_url": "https://github.com/JevonsCode/phonebridge",
+      "github_repo_id": "1411959913",
+      "source_updated_at": "2026-11-06T17:51:42Z",
+      "homepage_url": "https://有点.意思.com/phonebridge/",
+      "owner": "JevonsCode",
+      "default_branch": "main",
+      "source_commit_sha": "5f259ca9fecd94e66f1f4cefd49417d1eaef20ba",
+      "license_text": "MIT License\n\nCopyright (c) 2026 PhoneBridge contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "accessibility",
+        "ai-agents",
+        "android",
+        "android-app",
+        "apk",
+        "automation",
+        "flutter",
+        "kotlin",
+        "mcp",
+        "open-source"
+      ],
+      "latest_version": "v0.8.0",
+      "release_url": "https://github.com/JevonsCode/phonebridge/releases/tag/v0.8.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jevonscode-phonebridge-v0.8.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jevonscode-phonebridge-v0.8.0/THIRD-PARTY-NOTICE-jevonscode-phonebridge.txt",
+      "artifacts": [
+        {
+          "id": "93da2b9c78cca5cf75a7e1010b56927e678fe6ae98b0c0f16786be247abafeea",
+          "filename": "phonebridge-0.8.0-arm64.apk",
+          "original_filename": "phonebridge-0.8.0-arm64.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v0.8.0",
+          "size_bytes": 38767916,
+          "sha256": "93da2b9c78cca5cf75a7e1010b56927e678fe6ae98b0c0f16786be247abafeea",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "8ce72b7e5687933ea65307b99d3e2b1e41c837a26d18740f9dbc72aeb0bcdbc0",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jevonscode-phonebridge-v0.8.0/phonebridge-0.8.0-arm64.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jevonscode-phonebridge-v0.8.0"
+        },
+        {
+          "id": "0655d5a0c2b56c70a4376676682f9fab57de911119dd00b3063d2fc25f4a6642",
+          "filename": "phonebridge-0.8.0-macos-arm64.dmg",
+          "original_filename": "phonebridge-0.8.0-macos-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.8.0",
+          "size_bytes": 93128036,
+          "sha256": "0655d5a0c2b56c70a4376676682f9fab57de911119dd00b3063d2fc25f4a6642",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jevonscode-phonebridge-v0.8.0/phonebridge-0.8.0-macos-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jevonscode-phonebridge-v0.8.0"
+        },
+        {
+          "id": "c5b1c866f274112e2d1df8a4d141a963f849e1e1c56321dda2febdccc98dc3cb",
+          "filename": "phonebridge-0.8.0-macos-x64.dmg",
+          "original_filename": "phonebridge-0.8.0-macos-x64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "x86_64",
+          "version": "v0.8.0",
+          "size_bytes": 99067489,
+          "sha256": "c5b1c866f274112e2d1df8a4d141a963f849e1e1c56321dda2febdccc98dc3cb",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jevonscode-phonebridge-v0.8.0/phonebridge-0.8.0-macos-x64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jevonscode-phonebridge-v0.8.0"
+        },
+        {
+          "id": "4df2b73e9fc452e96c03c074f5dc73dca74f2c4c28d6fe9f80cb5a97cca180d5",
+          "filename": "phonebridge-0.8.0-windows-setup.exe",
+          "original_filename": "phonebridge-0.8.0-windows-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.8.0",
+          "size_bytes": 64668672,
+          "sha256": "4df2b73e9fc452e96c03c074f5dc73dca74f2c4c28d6fe9f80cb5a97cca180d5",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jevonscode-phonebridge-v0.8.0/phonebridge-0.8.0-windows-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jevonscode-phonebridge-v0.8.0"
+        }
+      ],
+      "platforms": [
+        "android",
+        "macos",
+        "windows"
       ]
     },
     {
