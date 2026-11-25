@@ -340,7 +340,8 @@ def main() -> None:
 
     def refresh_targeted_discovery(target: list[dict[str, Any]]) -> None:
         nonlocal last_discovery_refresh
-        if time.monotonic() - last_discovery_refresh < 60:
+        refresh_interval = max(60.0, float(os.getenv("APPHORYN_GLOBAL_SCOUT_REFRESH_INTERVAL_SECONDS", "600")))
+        if time.monotonic() - last_discovery_refresh < refresh_interval:
             return
         last_discovery_refresh = time.monotonic()
         for query in configured_discovery_queries():
@@ -403,7 +404,8 @@ def main() -> None:
                 for pending in entries[index:]:
                     scheduled_retries.append({**pending, "next_attempt_at": now})
                 return False
-            localize_next_existing_row()
+            # Discovery/import is the critical path. Do not wait on AI translation
+            # of an existing catalog row before processing a real new candidate.
             refresh_targeted_discovery(entries)
             repository_url = str(entry["repository"])
             candidate = entry.get("candidate") or {}
@@ -618,6 +620,16 @@ def main() -> None:
             ) + 1
             retry_queue_size = persist_checkpoint()
             break
+
+    # Existing catalog localization is best-effort and runs only after the
+    # discovery/import pass, so a slow or rate-limited AI provider cannot starve
+    # new application imports.
+    if (
+        not localization_paused
+        and localization_cursor < len(localization_queue)
+        and time.monotonic() < deadline
+    ):
+        localize_next_existing_row()
 
     report = {
         "forward_scan": scan_report,
