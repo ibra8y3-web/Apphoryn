@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:35:55.352007+00:00",
+  "generated_at": "2026-11-25T22:36:11.443588+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -15418,6 +15418,83 @@
           "signer_certificate_sha256": "6e8ac882f40074a513ac14042425c31eb9c31cf253fc53e640fd06ec904469d9",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hamza417-felicity-0.0.35_alpha/felicity-foss-x86_64.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hamza417-felicity-0.0.35_alpha"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "wized2-fern",
+      "slug": "wized2-fern",
+      "name": "Fern",
+      "summary": "Offline Material You system monitor for Android — CPU, RAM, battery, thermals, per-app stats via Shizuku/root. No ads, no tracking.",
+      "description": "Offline Material You system monitor for Android — CPU, RAM, battery, thermals, per-app stats via Shizuku/root. No ads, no tracking.",
+      "translations": {
+        "en": {
+          "summary": "Offline Material You system monitor for Android — CPU, RAM, battery, thermals, per-app stats via Shizuku/root. No ads, no tracking.",
+          "description": "Offline Material You system monitor for Android — CPU, RAM, battery, thermals, per-app stats via Shizuku/root. No ads, no tracking."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/245696177?v=4",
+      "repository_url": "https://github.com/wized2/Fern",
+      "github_repo_id": "1369692082",
+      "source_updated_at": "2026-11-25T03:02:52Z",
+      "homepage_url": "https://get-fern.vercel.app",
+      "owner": "wized2",
+      "default_branch": "main",
+      "source_commit_sha": "9400c712f38df59762dbcf67acac3adb8f39eac5",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Endroid\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the \"Software\", and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the \"Software\".\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "android",
+        "android-app",
+        "battery",
+        "cpu-monitor",
+        "device-info",
+        "foss",
+        "jetpack-compose",
+        "kotlin",
+        "material-you",
+        "material3",
+        "no-tracking",
+        "open-source",
+        "privacy",
+        "shizuku",
+        "system-monitor"
+      ],
+      "latest_version": "v1.12.1",
+      "release_url": "https://github.com/wized2/Fern/releases/tag/v1.12.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wized2-fern-v1.12.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wized2-fern-v1.12.1/THIRD-PARTY-NOTICE-wized2-fern.txt",
+      "artifacts": [
+        {
+          "id": "444b8aad18711bdc9739163da827aabcaf1b10db2997987c8c2be51d7dad1782",
+          "filename": "Fern-release.apk",
+          "original_filename": "Fern-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.12.1",
+          "size_bytes": 1211816,
+          "sha256": "444b8aad18711bdc9739163da827aabcaf1b10db2997987c8c2be51d7dad1782",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "a97be3e0460cdae458250b8261d62b5abf79a06e4a6d9fe6d94b04daff513ed2",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wized2-fern-v1.12.1/Fern-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wized2-fern-v1.12.1"
         }
       ],
       "platforms": [
