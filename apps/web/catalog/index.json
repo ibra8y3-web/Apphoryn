@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:38:06.312589+00:00",
+  "generated_at": "2026-11-25T09:38:20.255853+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -6702,6 +6702,79 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "php-programmist-piwright",
+      "slug": "php-programmist-piwright",
+      "name": "PiWright",
+      "summary": "Open-source desktop GUI for the pi coding agent — AI chat, agent-driven kanban, git branch graph, Monaco editor and terminal in one native Windows app. WSL support, MCP, Telegram notifications, remote access from a phone.",
+      "description": "Open-source desktop GUI for the pi coding agent — AI chat, agent-driven kanban, git branch graph, Monaco editor and terminal in one native Windows app. WSL support, MCP, Telegram notifications, remote access from a phone.",
+      "translations": {
+        "en": {
+          "summary": "Open-source desktop GUI for the pi coding agent — AI chat, agent-driven kanban, git branch graph, Monaco editor and terminal in one native Windows app. WSL support, MCP, Telegram notifications, remote access from a phone.",
+          "description": "Open-source desktop GUI for the pi coding agent — AI chat, agent-driven kanban, git branch graph, Monaco editor and terminal in one native Windows app. WSL support, MCP, Telegram notifications, remote access from a phone."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/php-programmist/PiWright/main/scripts/icon.png",
+      "repository_url": "https://github.com/php-programmist/PiWright",
+      "github_repo_id": "1466456233",
+      "source_updated_at": "2026-11-25T08:26:15Z",
+      "homepage_url": null,
+      "owner": "php-programmist",
+      "default_branch": "main",
+      "source_commit_sha": "b07b228b72e21044dc3d96d92a6eaa027ac173ad",
+      "license_text": "MIT License\n\nCopyright (c) 2026 php-programmist\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ade",
+        "ai-agent",
+        "chatbot-ui",
+        "coding-agent",
+        "desktop-app",
+        "developer-tools",
+        "electron",
+        "ide",
+        "react",
+        "typescript",
+        "windows"
+      ],
+      "latest_version": "v0.4.1",
+      "release_url": "https://github.com/php-programmist/PiWright/releases/tag/v0.4.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-php-programmist-piwright-v0.4.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-php-programmist-piwright-v0.4.1/THIRD-PARTY-NOTICE-php-programmist-piwright.txt",
+      "artifacts": [
+        {
+          "id": "7fb3e72ea90582c100bd75e4c23993caba67f6bc2fe34434738406e58974d0b8",
+          "filename": "PiWright-0.4.1.exe",
+          "original_filename": "PiWright-0.4.1.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.4.1",
+          "size_bytes": 133059318,
+          "sha256": "7fb3e72ea90582c100bd75e4c23993caba67f6bc2fe34434738406e58974d0b8",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-php-programmist-piwright-v0.4.1/PiWright-0.4.1.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-php-programmist-piwright-v0.4.1"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
