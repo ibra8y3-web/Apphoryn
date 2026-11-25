@@ -308,6 +308,7 @@ async function loadJobs(force=false){
 }
 function openApp(id){
  const app=state.apps.find(item=>item.id===id);if(!app)return;
+ recordStoreEvent('app_view',String(app.slug||''));
  const artifacts=app.artifacts||[];
  $('modalContent').innerHTML=`<div class="modal-header">${appIconMarkup(app)}<div><h2 id="modalTitle">${esc(app.name)}</h2><p>${esc(app.owner)} · ${esc(app.latest_version||t('sourceOnly'))}</p></div></div><p class="modal-description">${esc(localizedDescription(app))}</p><div class="tag-row"><span class="tag">${esc(app.category)}</span><span class="tag">${esc(app.license_spdx||'')}</span><span class="tag">${artifacts.length} ${t('packages')}</span></div><div class="modal-section"><h3>${t('packageTypes')}</h3>${artifacts.length?artifacts.map(artifact=>`<div class="modal-artifact"><div><b>${esc(artifact.filename)}</b><small>${esc(artifact.platform)} · ${formatBytes(artifact.size_bytes)} · SHA-256 ${esc((artifact.sha256||'').slice(0,12))}…</small><small>${artifact.upstream_digest_verified?t('artifactVerified'):t('artifactHashLocal')}</small></div>${installButton(artifact)}</div>`).join(''):`<p class="form-note">${t('noArtifacts')}</p>`}</div>`;
  $('modalBackdrop').classList.add('open');
@@ -361,6 +362,7 @@ function attachEvents(){
  });
  $('discoveryForm').addEventListener('submit',event=>{event.preventDefault();searchDiscovery($('discoveryQuery').value);});
  $('catalogSearch').addEventListener('input',renderApps);
+ $('catalogSearch').addEventListener('change',event=>recordStoreEvent('search','','',String(event.target.value||'')));
  $('categoryFilter').addEventListener('change',renderApps);
  $('languageSelect').addEventListener('change',event=>{applyLanguage(event.target.value);toast(t('languageChanged'));});
  $('settingsLanguage').addEventListener('change',event=>{applyLanguage(event.target.value);toast(t('languageChanged'));});
