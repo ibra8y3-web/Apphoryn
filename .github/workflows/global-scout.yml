@@ -65,8 +65,8 @@ jobs:
           # Dispatch all eligible supported targets; there is no Apphoryn per-run build quota.
           # Third-party source runs without repository secrets; trusted publisher verifies all output again.
           APPHORYN_GLOBAL_SCOUT_BUILD_TARGETS: 'android,windows,linux,macos'
-                    APPHORYN_GLOBAL_SCOUT_SEARCH_LIMIT: '100'
-                    APPHORYN_GLOBAL_SCOUT_DISCOVERY_QUERIES: |
+          APPHORYN_GLOBAL_SCOUT_SEARCH_LIMIT: '100'
+          APPHORYN_GLOBAL_SCOUT_DISCOVERY_QUERIES: |
             topic:android-app
             topic:desktop-app
             topic:linux-app

@@ -32,4 +32,4 @@ jobs:
       - run: python scripts/publish_artifacts.py --help
       - run: python -m json.tool catalog-seed-repositories.json > /dev/null
       - run: python -m json.tool apps/web/catalog/index.json > /dev/null
-      - run: python -c "import yaml; [yaml.safe_load(open(path, encoding='utf-8')) for path in ('docker-compose.yml', '.github/workflows/agent-compute.yml', '.github/workflows/global-scout.yml') ]"
+      - run: python -c "import yaml; [yaml.safe_load(open(path, encoding='utf-8')) for path in ('docker-compose.yml', '.github/workflows/agent-compute.yml', '.github/workflows/global-scout.yml', '.github/workflows/harvest.yml') ]"
