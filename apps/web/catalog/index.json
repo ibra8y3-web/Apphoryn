@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:08:03.647824+00:00",
+  "generated_at": "2026-11-25T04:08:08.361946+00:00",
   "apps": [
     {
       "id": "defunkt-ambition",
@@ -777,6 +777,45 @@
       "default_branch": "master",
       "source_commit_sha": "ed1d4ca52e365e12975a97c35ed74a53c4cf00e5",
       "license_text": "Copyright (c) 2006 Mark Daggett & Garry Dolley\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "category": "other",
+      "topics": [],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "collectiveidea-random-finders",
+      "slug": "collectiveidea-random-finders",
+      "artifacts": [],
+      "name": "random_finders",
+      "summary": "A Rails plugin that allows quick and easy fetching of random records, or records in random order.",
+      "description": "A Rails plugin that allows quick and easy fetching of random records, or records in random order.",
+      "translations": {
+        "en": {
+          "summary": "A Rails plugin that allows quick and easy fetching of random records, or records in random order.",
+          "description": "A Rails plugin that allows quick and easy fetching of random records, or records in random order."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/128?v=4",
+      "repository_url": "https://github.com/collectiveidea/random_finders",
+      "github_repo_id": "371",
+      "source_updated_at": "2026-06-30T12:07:35Z",
+      "homepage_url": "http://daniel.collectiveidea.com/blog/2007/05/17/the-road-to-randomness/",
+      "owner": "collectiveidea",
+      "default_branch": "master",
+      "source_commit_sha": "7ae7dc7f03749802e5c35b08bf1711516a4eafb8",
+      "license_text": "Copyright (c) 2007 Daniel Morrison, Collective Idea (http://collectiveidea.com)\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
       "license_spdx": "MIT",
       "license_eligible": true,
       "project_kind": "unknown",
