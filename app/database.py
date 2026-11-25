@@ -252,6 +252,13 @@ class Database:
         with self.connect() as con:
             return [self._dict(row) or {} for row in con.execute(sql, args).fetchall()]
 
+
+    def list_all_apps(self) -> list[dict[str, Any]]:
+        """Return the full catalog without imposing a global application-count ceiling."""
+        with self.connect() as con:
+            rows = con.execute("SELECT * FROM apps ORDER BY updated_at DESC").fetchall()
+            return [self._dict(row) or {} for row in rows]
+
     def add_artifact(self, item: dict[str, Any]) -> dict[str, Any]:
         """Store one verified binary per app/content hash, regardless of release tag or filename."""
         with self.connect() as con:
