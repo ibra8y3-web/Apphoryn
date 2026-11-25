@@ -18,8 +18,17 @@
     const status = String(value || "unknown");
     return '<span class="state '+esc(status)+'">'+esc(labels[status] || status)+'</span>';
   }
-  function renderAgents(items) {
-    $("agentsList").innerHTML = (items||[]).map(agent => '<article class="agent-card"><strong>'+esc(agent.name)+' <span class="tiny">· '+esc(agent.title)+'</span></strong><p>'+esc(agent.description)+'</p><div class="tag-list">'+(agent.tools||[]).map(tool=>'<span class="tag">'+esc(tool)+'</span>').join("")+'</div></article>').join("") || '<p class="muted">لا يوجد موظفون مسجلون.</p>';
+  function renderAgents(items, activity) {
+    const byId = new Map((activity||[]).map(row=>[row.agent_id,row]));
+    $("agentsList").innerHTML = (items||[]).map(agent => {
+      const live = byId.get(agent.id);
+      const status = live?.latest_status || "idle";
+      const last = live?.last_activity_at ? new Date(live.last_activity_at).toLocaleString() : "لم ينفذ مهمة بعد";
+      return '<article class="agent-card"><div class="provider-head"><strong>'+esc(agent.name)+' <span class="tiny">· '+esc(agent.title)+'</span></strong>'+stateTag(status)+'</div><p>'+esc(agent.description)+'</p><p class="tiny">المهام المسجلة: '+Number(live?.task_count||0)+' · آخر نشاط: '+esc(last)+'</p><div class="tag-list">'+(agent.tools||[]).map(tool=>'<span class="tag">'+esc(tool)+'</span>').join("")+'</div></article>';
+    }).join("") || '<p class="muted">لا يوجد موظفون مسجلون.</p>';
+  }
+  function renderMemories(items) {
+    $("memoryList").innerHTML = (items||[]).map(item => '<article class="task-row"><div class="run-head"><b>'+esc(item.scope||"memory")+'</b><span class="tiny">'+esc(item.project_key||"سياق عام")+'</span></div><p class="tiny">'+esc(new Date(item.created_at).toLocaleString())+'</p><pre>'+esc(JSON.stringify(item.content,null,2))+'</pre></article>').join("") || '<p class="muted">لا توجد ذاكرة محفوظة بعد.</p>';
   }
   function renderWorkers(items) {
     $("workersList").innerHTML = (items||[]).map(worker => '<article class="worker-row"><div class="worker-head"><b>'+esc(worker.worker_id)+'</b>'+stateTag(worker.status)+'</div><p class="tiny">آخر نبضة: '+esc(new Date(worker.last_heartbeat_at).toLocaleString())+'</p><p class="tiny">المهمة الحالية: '+esc(worker.current_run_id || "—")+'</p></article>').join("") || '<p class="muted">لم يرسل العامل أول نبضة بعد.</p>';
@@ -75,7 +84,7 @@
     $("runsActive").textContent=Number(counts.runs_queued||0)+Number(counts.runs_running||0)+Number(counts.runs_retry||0);
     $("runsCompleted").textContent=counts.runs_completed??0;
     $("memoryCount").textContent=counts.memory_records??0;
-    renderAgents(data.agents); renderWorkers(data.workers); renderProviders({...data.providers,metrics:data.provider_metrics}); renderRuns(data.runs); renderSchedules(data.schedules);
+    renderAgents(data.agents,data.agent_activity); renderMemories(data.memories); renderWorkers(data.workers); renderProviders({...data.providers,metrics:data.provider_metrics}); renderRuns(data.runs); renderSchedules(data.schedules);
     $("connectionStatus").textContent="متصل بالـBackend. تم تحديث البيانات: "+new Date().toLocaleTimeString();
     $("refreshProviders").disabled=false; $("refreshAll").disabled=false;
   }
