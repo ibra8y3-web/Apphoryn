@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:06:52.109931+00:00",
+  "generated_at": "2026-11-25T04:06:55.242113+00:00",
   "apps": [
     {
       "id": "defunkt-ambition",
@@ -560,6 +560,45 @@
       "topics": [],
       "latest_version": "v6.0.0",
       "release_url": "https://github.com/ruby-git/ruby-git/releases/tag/v6.0.0",
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "drnic-ruby-on-rails-tmbundle",
+      "slug": "drnic-ruby-on-rails-tmbundle",
+      "artifacts": [],
+      "name": "ruby-on-rails-tmbundle",
+      "summary": "Ruby on Rails TextMate bundle [Learn it with PeepCode - http://peepcode.com/products/textmate-for-rails-2]",
+      "description": "Ruby on Rails TextMate bundle [Learn it with PeepCode - http://peepcode.com/products/textmate-for-rails-2]",
+      "translations": {
+        "en": {
+          "summary": "Ruby on Rails TextMate bundle [Learn it with PeepCode - http://peepcode.com/products/textmate-for-rails-2]",
+          "description": "Ruby on Rails TextMate bundle [Learn it with PeepCode - http://peepcode.com/products/textmate-for-rails-2]"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/drnic/ruby-on-rails-tmbundle/master/website/images/logo_bundle.png",
+      "repository_url": "https://github.com/drnic/ruby-on-rails-tmbundle",
+      "github_repo_id": "179",
+      "source_updated_at": "2026-10-30T16:07:06Z",
+      "homepage_url": "http://groups.google.com/group/rails-textmate",
+      "owner": "drnic",
+      "default_branch": "master",
+      "source_commit_sha": "683f6e652cc467e0007f80aa11f174a4d9189f3c",
+      "license_text": "Copyright (c) 2006 syncPEOPLE, LLC.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "category": "other",
+      "topics": [],
+      "latest_version": null,
+      "release_url": null,
       "platforms": [],
       "project_status": "source_available"
     },
