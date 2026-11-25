@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:09:45.970651+00:00",
+  "generated_at": "2026-11-25T04:09:52.017928+00:00",
   "apps": [
     {
       "id": "defunkt-ambition",
@@ -745,6 +745,45 @@
       "classification_source": "heuristic",
       "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
       "category": "other",
+      "topics": [],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "kirindave-fuzed-old",
+      "slug": "kirindave-fuzed-old",
+      "artifacts": [],
+      "name": "fuzed-old",
+      "summary": "An integrated replacement for Mongrel+Revproxy systems in erlang",
+      "description": "An integrated replacement for Mongrel+Revproxy systems in erlang",
+      "translations": {
+        "en": {
+          "summary": "An integrated replacement for Mongrel+Revproxy systems in erlang",
+          "description": "An integrated replacement for Mongrel+Revproxy systems in erlang"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/36?v=4",
+      "repository_url": "https://github.com/KirinDave/fuzed-old",
+      "github_repo_id": "649",
+      "source_updated_at": "2026-06-30T12:07:41Z",
+      "homepage_url": null,
+      "owner": "KirinDave",
+      "default_branch": "master",
+      "source_commit_sha": "b346dcfcc6ebbab410ff09946740f1143ad14dca",
+      "license_text": "Copyright (c) 2007,2008, Dave Fayram, Tom Preston-Werner\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\n\n*  Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\n\n* Neither the name of the <ORGANIZATION> nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n\"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\nLIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\nA PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR\nCONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,\nEXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,\nPROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR\nPROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF\nLIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING\nNEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",
+      "license_spdx": "BSD-3-Clause",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "category": "network",
       "topics": [],
       "latest_version": null,
       "release_url": null,
