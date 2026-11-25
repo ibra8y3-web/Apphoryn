@@ -326,6 +326,7 @@ Copy `.env.example` and configure only the features you intend to run. Common se
 | `APPHORYN_AGENT_AUTOPILOT_ENABLED` | Default for workforce autopilot | `true`; saved admin setting takes precedence |
 | `APPHORYN_CATALOG_POLL_SECONDS` | Niebex shared-catalog polling interval | `300`, clamped to 60–3600 seconds |
 | `APPHORYN_IMPORT_INTERVAL_SECONDS` | Minimum interval between automatic app import starts | `60` seconds; first import starts immediately |
+| `APPHORYN_TRANSLATION_INTERVAL_SECONDS` | Minimum interval between backfill translation requests | `1` second; stored source descriptions are preserved |
 | `APPHORYN_GITHUB_COMPUTE_ENABLED` | Enable the GitHub-hosted security compute path | `false` |
 | `APPHORYN_CODE_WRITES_ENABLED` | Permit gated source-code PR actions | `false` |
 | `APPHORYN_AI_FREE_ONLY` | Prefer free-only provider policy | `true` |
