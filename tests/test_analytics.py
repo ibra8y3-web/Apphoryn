@@ -79,9 +79,12 @@ class AnalyticsStoreTests(unittest.TestCase):
         with patch.object(AnalyticsStore, "_d1_request") as request:
             AnalyticsStore._sync_d1(config, rows)
         self.assertEqual(request.call_count, 2)
-        insert_call = request.call_args_list[-1]
-        self.assertIn("INSERT OR IGNORE", insert_call.args[3])
-        self.assertEqual(insert_call.args[4] and len(insert_call.args[4]), 14)
+        batch_payload = request.call_args_list[-1].args[3]
+        self.assertEqual(len(batch_payload["batch"]), 1)
+        statement = batch_payload["batch"][0]
+        self.assertIn("INSERT OR IGNORE", statement["sql"])
+        self.assertEqual(len(statement["params"]), 14)
+        self.assertLessEqual(len(statement["params"]), 100)
 
     def test_invalid_event_types_are_rejected(self):
         self.assertIsNone(self.store.record_event("login", details={"user": "someone"}))
