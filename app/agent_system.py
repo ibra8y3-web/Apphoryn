@@ -508,13 +508,17 @@ def execute_run(run: dict[str, Any]) -> None:
         "Never promise unimplemented code edits or claim an action is complete without tool evidence. "
         "Return JSON: {summary:string,tasks:[{agent_id:string,title:string,instructions:string}]}."
     )
-    plan, planner_route = ai_router.generate_json([
-        {"role": "system", "content": planner_system},
-        {"role": "user", "content": _json({"goal": goal, "agents": [
-            {"id": a["id"], "title": a["title"], "description": a["description"], "tools": a["tools"]}
-            for a in AGENTS if a["id"] != "niebex"
-        ], "shared_memory": memories, "allow_external_actions": allow_actions})}
-    ])
+    try:
+        plan, planner_route = ai_router.generate_json([
+            {"role": "system", "content": planner_system},
+            {"role": "user", "content": _json({"goal": goal, "agents": [
+                {"id": a["id"], "title": a["title"], "description": a["description"], "tools": a["tools"]}
+                for a in AGENTS if a["id"] != "niebex"
+            ], "shared_memory": memories, "allow_external_actions": allow_actions})}
+        ])
+    except Exception as exc:
+        STORE.update_task(planner_task, "failed", error=f"{type(exc).__name__}: {str(exc)[:700]}")
+        raise
     planned = plan.get("tasks") if isinstance(plan.get("tasks"), list) else []
     assignments: list[dict[str, str]] = []
     seen: set[str] = set()
