@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:23:36.383440+00:00",
+  "generated_at": "2026-11-25T04:24:07.038293+00:00",
   "apps": [
     {
       "id": "lumiag5-antigravitymb",
@@ -1577,6 +1577,147 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "myco-ai-myco",
+      "slug": "myco-ai-myco",
+      "name": "myco",
+      "summary": "All your AI agents, one app. Use the Claude Code, Codex and other agents you already pay for: run several at once, reach your other computers and your phone, put them on a schedule. Mac, Windows, Linux and iPhone; self-hosted.",
+      "description": "All your AI agents, one app. Use the Claude Code, Codex and other agents you already pay for: run several at once, reach your other computers and your phone, put them on a schedule. Mac, Windows, Linux and iPhone; self-hosted.",
+      "translations": {
+        "en": {
+          "summary": "All your AI agents, one app. Use the Claude Code, Codex and other agents you already pay for: run several at once, reach your other computers and your phone, put them on a schedule. Mac, Windows, Linux and iPhone; self-hosted.",
+          "description": "All your AI agents, one app. Use the Claude Code, Codex and other agents you already pay for: run several at once, reach your other computers and your phone, put them on a schedule. Mac, Windows, Linux and iPhone; self-hosted."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/myco-ai/myco/main/internal/templates/testdata/official/doc/icon.svg",
+      "repository_url": "https://github.com/myco-ai/myco",
+      "github_repo_id": "1446349724",
+      "source_updated_at": "2026-11-25T03:19:10Z",
+      "homepage_url": "https://myco.ing",
+      "owner": "myco-ai",
+      "default_branch": "main",
+      "source_commit_sha": "be8e18a1dca057ca55a4e1772962510a0f3a09be",
+      "license_text": "MIT License\n\nCopyright (c) 2026 chenhg5\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "agent-orchestration",
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "coding-agents",
+        "developer-tools",
+        "golang",
+        "macos-app",
+        "multi-agent",
+        "self-hosted"
+      ],
+      "latest_version": "v0.22.11",
+      "release_url": "https://github.com/myco-ai/myco/releases/tag/v0.22.11",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-myco-ai-myco-v0.22.11",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-myco-ai-myco-v0.22.11/THIRD-PARTY-NOTICE-myco-ai-myco.txt",
+      "artifacts": [
+        {
+          "id": "2cfe53bf09fb0ef3902474bd33484b766c94444872eafb417400e6f1d7279b2a",
+          "filename": "myco-app-windows-amd64.exe",
+          "original_filename": "myco-app-windows-amd64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.22.11",
+          "size_bytes": 33391616,
+          "sha256": "2cfe53bf09fb0ef3902474bd33484b766c94444872eafb417400e6f1d7279b2a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-myco-ai-myco-v0.22.11/myco-app-windows-amd64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-myco-ai-myco-v0.22.11"
+        },
+        {
+          "id": "f18d66cac399b010e58e47ec45edd33309e6730ab6d9b9f4a16f634973af3374",
+          "filename": "myco-app-windows-arm64.exe",
+          "original_filename": "myco-app-windows-arm64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "arm64",
+          "version": "v0.22.11",
+          "size_bytes": 31492608,
+          "sha256": "f18d66cac399b010e58e47ec45edd33309e6730ab6d9b9f4a16f634973af3374",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-myco-ai-myco-v0.22.11/myco-app-windows-arm64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-myco-ai-myco-v0.22.11"
+        },
+        {
+          "id": "62406a9aa100494f408bcaa0c7f230277df9ad3d662d4bd89316bd65bed1b327",
+          "filename": "myco-windows-amd64.exe",
+          "original_filename": "myco-windows-amd64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.22.11",
+          "size_bytes": 40525824,
+          "sha256": "62406a9aa100494f408bcaa0c7f230277df9ad3d662d4bd89316bd65bed1b327",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-myco-ai-myco-v0.22.11/myco-windows-amd64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-myco-ai-myco-v0.22.11"
+        },
+        {
+          "id": "ab30b273fbd22247bb4bfebc2a9d86db9e3c2f22722962cb0b2a97460f1bae67",
+          "filename": "myco-windows-arm64.exe",
+          "original_filename": "myco-windows-arm64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "arm64",
+          "version": "v0.22.11",
+          "size_bytes": 38065664,
+          "sha256": "ab30b273fbd22247bb4bfebc2a9d86db9e3c2f22722962cb0b2a97460f1bae67",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-myco-ai-myco-v0.22.11/myco-windows-arm64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-myco-ai-myco-v0.22.11"
+        },
+        {
+          "id": "a74477f67eb70757ec25d5fd75856a8ca827cfd041e77749c8c38c25eaada00a",
+          "filename": "myco.dmg",
+          "original_filename": "myco.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": null,
+          "version": "v0.22.11",
+          "size_bytes": 72149533,
+          "sha256": "a74477f67eb70757ec25d5fd75856a8ca827cfd041e77749c8c38c25eaada00a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-myco-ai-myco-v0.22.11/myco.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-myco-ai-myco-v0.22.11"
+        }
+      ],
+      "platforms": [
+        "macos",
+        "windows"
       ]
     },
     {
