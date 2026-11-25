@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:42:18.531788+00:00",
+  "generated_at": "2026-11-25T19:42:35.148629+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -19385,6 +19385,74 @@
           ],
           "requested_at": "2026-11-25T10:37:13.946471+00:00"
         }
+      ]
+    },
+    {
+      "id": "zhd4-notesr",
+      "slug": "zhd4-notesr",
+      "name": "NoteSR",
+      "summary": "Encrypted notes app for Android",
+      "description": "Encrypted notes app for Android",
+      "translations": {
+        "en": {
+          "summary": "Encrypted notes app for Android",
+          "description": "Encrypted notes app for Android"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/zHd4/NoteSR/master/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/zHd4/NoteSR",
+      "github_repo_id": "254608746",
+      "source_updated_at": "2026-11-18T07:55:27Z",
+      "homepage_url": null,
+      "owner": "zHd4",
+      "default_branch": "master",
+      "source_commit_sha": "7d3499e35f5ef711ed85e07e00ced0af6abc803e",
+      "license_text": "MIT License\n\nCopyright (c) 2026 zHd4\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "aes",
+        "aes-256",
+        "android-app",
+        "encryption-tool",
+        "notes-app",
+        "notesr"
+      ],
+      "latest_version": "5.6.0",
+      "release_url": "https://github.com/zHd4/NoteSR/releases/tag/5.6.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zhd4-notesr-5.6.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zhd4-notesr-5.6.0/THIRD-PARTY-NOTICE-zhd4-notesr.txt",
+      "artifacts": [
+        {
+          "id": "1673cff14b17825fb78406132c125caa81da2d5f0d8b8262d8ec75de8e77097a",
+          "filename": "NoteSR_v5.6.0.apk",
+          "original_filename": "NoteSR_v5.6.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "5.6.0",
+          "size_bytes": 37405980,
+          "sha256": "1673cff14b17825fb78406132c125caa81da2d5f0d8b8262d8ec75de8e77097a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "34ad32410ddcb2d13876577fe156e7cd4a240c089b5ae9a2a051cd151dcede58",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zhd4-notesr-5.6.0/NoteSR_v5.6.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zhd4-notesr-5.6.0"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
