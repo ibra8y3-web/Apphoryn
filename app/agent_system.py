@@ -431,6 +431,14 @@ def _safe_repo_parts(url: str) -> tuple[str, str]:
     return parts[0], parts[1].removesuffix(".git")
 
 
+def ready_agent_wave(pending: list[dict[str, Any]], completed_agent_ids: set[str]) -> list[dict[str, Any]]:
+    """Return all currently executable agents without violating declared dependencies."""
+    return [
+        assignment for assignment in pending
+        if set(assignment.get("depends_on") or []).issubset(completed_agent_ids)
+    ]
+
+
 def _run_tool(agent_id: str, request: dict[str, Any] | None, goal: str, allow_external_actions: bool,
               context: list[dict[str, Any]] | None = None, allow_code_changes: bool = False) -> dict[str, Any] | None:
     allowed = set(AGENT_BY_ID.get(agent_id, {}).get("tools", []))
@@ -868,10 +876,7 @@ def execute_run(run: dict[str, Any]) -> None:
             raise
 
     while pending:
-        ready = [
-            item for item in pending
-            if set(item.get("depends_on") or []).issubset(finished)
-        ]
+        ready = ready_agent_wave(pending, finished)
         if not ready:
             unresolved = {item["agent_id"]: item.get("depends_on", []) for item in pending}
             raise RuntimeError(f"Agent plan contains a dependency cycle or missing dependency: {unresolved}")
