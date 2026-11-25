@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:36:59.068992+00:00",
+  "generated_at": "2026-11-25T09:37:09.939836+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -1885,6 +1885,85 @@
           "signer_certificate_sha256": "292392b7f05ef5ecc2ed47650b8f3f607bd17d7b620c31636667b57a28f36aa7",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-iurika-n-t-r-droref-v1.5.0/DroRef-1.5.0.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-iurika-n-t-r-droref-v1.5.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "cmtrkr83-eksi-okur",
+      "slug": "cmtrkr83-eksi-okur",
+      "name": "eksi-okur",
+      "summary": "ekşi sözlük istemcisi",
+      "description": "ekşi sözlük istemcisi",
+      "translations": {
+        "en": {
+          "summary": "ekşi sözlük istemcisi",
+          "description": "ekşi sözlük istemcisi"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/cmtrkr83/eksi-okur/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/cmtrkr83/eksi-okur",
+      "github_repo_id": "1469771686",
+      "source_updated_at": "2026-11-24T09:07:21Z",
+      "homepage_url": null,
+      "owner": "cmtrkr83",
+      "default_branch": "main",
+      "source_commit_sha": "a03ce354e43637b7a4e551529ed5c90ac0c21de9",
+      "license_text": "MIT License\n\nCopyright (c) 2024 Cem TÜRKER\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-client",
+        "coroutines",
+        "eksi-okur",
+        "eksi-sozluk",
+        "eksisozluk",
+        "jetpack-compose",
+        "jsoup",
+        "kotlin",
+        "material-design",
+        "material3",
+        "mvvm",
+        "okhttp",
+        "reading-app",
+        "room",
+        "turkish"
+      ],
+      "latest_version": "v1.2",
+      "release_url": "https://github.com/cmtrkr83/eksi-okur/releases/tag/v1.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-cmtrkr83-eksi-okur-v1.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-cmtrkr83-eksi-okur-v1.2/THIRD-PARTY-NOTICE-cmtrkr83-eksi-okur.txt",
+      "artifacts": [
+        {
+          "id": "d480a3d2bd7fe416eecf256527e6f620319fb0e38bd34d25c6ad838e57346b47",
+          "filename": "app-debug.apk",
+          "original_filename": "app-debug.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.2",
+          "size_bytes": 20021429,
+          "sha256": "d480a3d2bd7fe416eecf256527e6f620319fb0e38bd34d25c6ad838e57346b47",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "3ff74396fb69478f7c8abfb483162977838d1857df652bee7453150f659df67f",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-cmtrkr83-eksi-okur-v1.2/app-debug.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-cmtrkr83-eksi-okur-v1.2"
         }
       ],
       "platforms": [
