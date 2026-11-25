@@ -255,13 +255,13 @@ class AnalyticsStore:
 
     @staticmethod
     def _d1_request(account_id: str, database_id: str, token: str,
-                    sql: str, params: list[Any] | None = None) -> None:
+                    sql: str | dict[str, Any], params: list[Any] | None = None) -> None:
         url = (
             "https://api.cloudflare.com/client/v4/accounts/"
             + urllib.parse.quote(account_id, safe="")
             + "/d1/database/" + urllib.parse.quote(database_id, safe="") + "/query"
         )
-        body = {"sql": sql}
+        body = dict(sql) if isinstance(sql, dict) else {"sql": sql}
         if params is not None:
             body["params"] = params
         request = urllib.request.Request(
@@ -295,18 +295,25 @@ class AnalyticsStore:
         if rows:
             columns = "(id,event_type,app_slug,artifact_id,platform,details_json,created_at)"
             row_placeholders = "(" + ",".join("?" for _ in range(7)) + ")"
-            sql = (
-                "INSERT OR IGNORE INTO apphoryn_analytics_events "
-                + columns + " VALUES " + ",".join(row_placeholders for _ in rows)
-            )
-            params: list[Any] = []
-            for row in rows:
-                params.extend([
-                    row["id"], row["event_type"], row["app_slug"], row["artifact_id"],
-                    row["platform"], json.dumps(row["details"], separators=(",", ":")),
-                    row["created_at"],
-                ])
-            cls._d1_request(config["account_id"], config["database_id"], config["token"], sql, params)
+            # D1 allows at most 100 bound parameters per statement: 14 rows x 7 columns = 98.
+            statements = []
+            for offset in range(0, len(rows), 14):
+                chunk = rows[offset:offset + 14]
+                sql = (
+                    "INSERT OR IGNORE INTO apphoryn_analytics_events "
+                    + columns + " VALUES " + ",".join(row_placeholders for _ in chunk)
+                )
+                params: list[Any] = []
+                for row in chunk:
+                    params.extend([
+                        row["id"], row["event_type"], row["app_slug"], row["artifact_id"],
+                        row["platform"], json.dumps(row["details"], separators=(",", ":")),
+                        row["created_at"],
+                    ])
+                statements.append({"sql": sql, "params": params})
+            # Cloudflare's REST batch endpoint executes multiple bounded statements in one request.
+            cls._d1_request(config["account_id"], config["database_id"], config["token"],
+                            {"batch": statements})
 
     def sync_once(self, limit: int = 100) -> dict[str, Any]:
         provider, config = self._backend_config()
