@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:08:08.361946+00:00",
+  "generated_at": "2026-11-25T04:08:12.381565+00:00",
   "apps": [
     {
       "id": "defunkt-ambition",
@@ -1260,6 +1260,45 @@
       "default_branch": "master",
       "source_commit_sha": "51a8b32ffda1bafd53efb394a905246bff8d3a7a",
       "license_text": "Copyright (c) 2007 Jesse Newland\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "category": "other",
+      "topics": [],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "collectiveidea-with-action",
+      "slug": "collectiveidea-with-action",
+      "artifacts": [],
+      "name": "with_action",
+      "summary": "A respond_to style helper for doing different actions based on which request parameters are passed.",
+      "description": "A respond_to style helper for doing different actions based on which request parameters are passed.",
+      "translations": {
+        "en": {
+          "summary": "A respond_to style helper for doing different actions based on which request parameters are passed.",
+          "description": "A respond_to style helper for doing different actions based on which request parameters are passed."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/128?v=4",
+      "repository_url": "https://github.com/collectiveidea/with_action",
+      "github_repo_id": "372",
+      "source_updated_at": "2026-06-30T12:07:35Z",
+      "homepage_url": null,
+      "owner": "collectiveidea",
+      "default_branch": "master",
+      "source_commit_sha": "44bd9a3ba23c369c130bc96f3e4f0aff14a4a098",
+      "license_text": "Copyright (c) 2007 [name of plugin creator]\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
       "project_kind": "unknown",
