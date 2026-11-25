@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:14:53.264262+00:00",
+  "generated_at": "2026-11-25T19:15:08.425646+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -26877,6 +26877,83 @@
           "signer_certificate_sha256": "f62d348b1ea01b9b286326a6db58807df2315b3a04fc71291a3b97c9cc907381",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-q7df1-xrayfa-v1.7.4/XrayFA-x86_64-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-q7df1-xrayfa-v1.7.4"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "qaq-cmyk-yingxia-player",
+      "slug": "qaq-cmyk-yingxia-player",
+      "name": "yingxia-player",
+      "summary": "Offline Android local video player with zero internet permission & AES-256-GCM streaming encrypted vault (Kotlin / Jetpack Compose / Media3) · 映匣本地播放器",
+      "description": "Offline Android local video player with zero internet permission & AES-256-GCM streaming encrypted vault (Kotlin / Jetpack Compose / Media3) · 映匣本地播放器",
+      "translations": {
+        "en": {
+          "summary": "Offline Android local video player with zero internet permission & AES-256-GCM streaming encrypted vault (Kotlin / Jetpack Compose / Media3) · 映匣本地播放器",
+          "description": "Offline Android local video player with zero internet permission & AES-256-GCM streaming encrypted vault (Kotlin / Jetpack Compose / Media3) · 映匣本地播放器"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/QAQ-cmyk/yingxia-player/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/QAQ-cmyk/yingxia-player",
+      "github_repo_id": "1456130587",
+      "source_updated_at": "2026-11-25T15:54:16Z",
+      "homepage_url": "https://qaq-cmyk.github.io/yingxia-player/",
+      "owner": "QAQ-cmyk",
+      "default_branch": "main",
+      "source_commit_sha": "8dbcbe077534223adcd4edb76d603c07830af5a7",
+      "license_text": "MIT License\n\nCopyright (c) 2026 QAQ-cmyk\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android",
+        "android-app",
+        "encryption",
+        "exoplayer",
+        "fdroid",
+        "foss",
+        "jetpack-compose",
+        "kotlin",
+        "material3",
+        "media3",
+        "offline-first",
+        "privacy",
+        "tink",
+        "vault",
+        "video-player"
+      ],
+      "latest_version": "v1.9.0",
+      "release_url": "https://github.com/QAQ-cmyk/yingxia-player/releases/tag/v1.9.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-qaq-cmyk-yingxia-player-v1.9.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-qaq-cmyk-yingxia-player-v1.9.0/THIRD-PARTY-NOTICE-qaq-cmyk-yingxia-player.txt",
+      "artifacts": [
+        {
+          "id": "4dee55709e26e5994462137c1cecefc0210f3db2e8257974452a504ec1ec694d",
+          "filename": "YingXia-1.9.0.apk",
+          "original_filename": "YingXia-1.9.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.9.0",
+          "size_bytes": 17048549,
+          "sha256": "4dee55709e26e5994462137c1cecefc0210f3db2e8257974452a504ec1ec694d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "f7ebbf960581fe7951b20cd162e68f94e3f14d460e527e2d40d5b55775c4450d",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-qaq-cmyk-yingxia-player-v1.9.0/YingXia-1.9.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-qaq-cmyk-yingxia-player-v1.9.0"
         }
       ],
       "platforms": [
