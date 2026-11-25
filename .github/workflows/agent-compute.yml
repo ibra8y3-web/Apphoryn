@@ -1,0 +1,125 @@
+name: Apphoryn isolated open-source security scan
+
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: Public GitHub repository in owner/name form
+        required: true
+        type: string
+      git_ref:
+        description: Branch, tag or commit to inspect
+        required: true
+        default: HEAD
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: apphoryn-scan-${{ inputs.repository }}
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    name: Isolated static analysis
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Validate target and clone without credentials
+        shell: bash
+        env:
+          TARGET: ${{ inputs.repository }}
+          TARGET_REF: ${{ inputs.git_ref }}
+        run: |
+          set -euo pipefail
+          if [[ ! "$TARGET" =~ ^[A-Za-z0-9_.-]{1,100}/[A-Za-z0-9_.-]{1,100}$ ]]; then
+            echo "Target must be owner/repository with no URL, whitespace or path traversal." >&2
+            exit 2
+          fi
+          if [[ \${#TARGET_REF} -gt 200 || "$TARGET_REF" == -* || "$TARGET_REF" == *$'\n'* || "$TARGET_REF" == *$'\r'* ]]; then
+            echo "Invalid Git ref." >&2
+            exit 2
+          fi
+          mkdir -p target reports
+          git -c http.followRedirects=false clone --depth 1 --no-tags --branch "$TARGET_REF" "https://github.com/$TARGET.git" target \
+            || git -c http.followRedirects=false clone --depth 1 --no-tags "https://github.com/$TARGET.git" target
+          git -C target rev-parse HEAD > reports/commit.txt
+          printf '%s\n' "$TARGET" > reports/repository.txt
+          printf '%s\n' "$TARGET_REF" > reports/requested-ref.txt
+          printf '%s\n' "No target code, package scripts or workflow files were executed." > reports/execution-policy.txt
+
+      - name: Run Semgrep static analysis
+        shell: bash
+        run: |
+          set +e
+          docker run --rm -v "$PWD/target:/src:ro" -v "$PWD/reports:/reports" \
+            returntocorp/semgrep:1.144.0 scan --config auto --json --output /reports/semgrep.json /src
+          echo "semgrep_exit=$?" >> reports/exit-codes.txt
+
+      - name: Run Trivy filesystem, dependency, secret and misconfiguration scan
+        shell: bash
+        run: |
+          set +e
+          docker run --rm -v "$PWD/target:/src:ro" -v "$PWD/reports:/reports" \
+            aquasec/trivy:0.58.1 fs --scanners vuln,misconfig,secret --format json --output /reports/trivy.json /src
+          echo "trivy_exit=$?" >> reports/exit-codes.txt
+
+      - name: Run OSV dependency vulnerability scan
+        shell: bash
+        run: |
+          set +e
+          docker run --rm -v "$PWD/target:/src:ro" -v "$PWD/reports:/reports" \
+            ghcr.io/google/osv-scanner:v2.3.3 scan source --recursive /src --format json --output-file /reports/osv.json
+          echo "osv_exit=$?" >> reports/exit-codes.txt
+
+      - name: Generate CycloneDX software bill of materials
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm -v "$PWD/target:/src:ro" -v "$PWD/reports:/reports" \
+            anchore/syft:v1.18.1 dir:/src -o cyclonedx-json=/reports/sbom.cdx.json
+
+      - name: Scan exposed secrets without printing values
+        shell: bash
+        run: |
+          set +e
+          docker run --rm -v "$PWD/target:/src:ro" -v "$PWD/reports:/reports" \
+            zricethezav/gitleaks:v8.22.1 detect --source /src --no-git --redact \
+            --report-format json --report-path /reports/gitleaks.json
+          echo "gitleaks_exit=$?" >> reports/exit-codes.txt
+
+      - name: Summarize scan execution
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report = Path("reports")
+          codes = {}
+          path = report / "exit-codes.txt"
+          if path.exists():
+              for line in path.read_text().splitlines():
+                  if "=" in line:
+                      key, value = line.split("=", 1)
+                      codes[key] = int(value)
+          files = sorted(p.name for p in report.glob("*") if p.is_file())
+          (report / "scan-summary.json").write_text(json.dumps({
+              "runner": "github-hosted-ephemeral",
+              "tools": ["semgrep", "trivy", "osv-scanner", "syft", "gitleaks"],
+              "exit_codes": codes,
+              "report_files": files,
+              "target_code_executed": False,
+              "secret_values_redacted": True
+          }, indent=2) + "\n")
+          PY
+
+      - name: Upload audit results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: apphoryn-source-scan-${{ github.run_id }}
+          path: reports/
+          if-no-files-found: warn
+          retention-days: 14
