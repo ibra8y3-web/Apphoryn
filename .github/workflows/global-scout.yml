@@ -15,8 +15,10 @@ on:
       - 'app/build_support.py'
   # The scanner needs a longer uninterrupted window for GitHub discovery and
   # import. New scheduled ticks wait instead of cancelling an active scan.
+  # Keep one persistent discovery/import cycle active: if a 15-minute scan is
+  # still running, the latest scheduled run waits in the concurrency queue.
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 concurrency:
   group: apphoryn-catalog-writes
