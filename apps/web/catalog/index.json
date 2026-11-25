@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:28:05.303314+00:00",
+  "generated_at": "2026-11-25T21:28:39.070164+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -23999,6 +23999,72 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "ch1nse1-mirror",
+      "slug": "ch1nse1-mirror",
+      "name": "Mirror",
+      "summary": "只存在手机里的个人记忆库：记录、回顾、秒针，Agent 可连。Android / Kotlin / Compose。",
+      "description": "只存在手机里的个人记忆库：记录、回顾、秒针，Agent 可连。Android / Kotlin / Compose。",
+      "translations": {
+        "en": {
+          "summary": "只存在手机里的个人记忆库：记录、回顾、秒针，Agent 可连。Android / Kotlin / Compose。",
+          "description": "只存在手机里的个人记忆库：记录、回顾、秒针，Agent 可连。Android / Kotlin / Compose。"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Ch1nSe1/Mirror/main/app/src/main/res/drawable/ic_app_icon.jpg",
+      "repository_url": "https://github.com/Ch1nSe1/Mirror",
+      "github_repo_id": "1468750719",
+      "source_updated_at": "2026-11-24T10:38:14Z",
+      "homepage_url": null,
+      "owner": "Ch1nSe1",
+      "default_branch": "main",
+      "source_commit_sha": "cd3a90904a5978957986b3663aa23ef84c8f14dd",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Memore contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android-app",
+        "jetpack-compose",
+        "kotlin",
+        "personal-memory"
+      ],
+      "latest_version": "v1.3.0",
+      "release_url": "https://github.com/Ch1nSe1/Mirror/releases/tag/v1.3.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ch1nse1-mirror-v1.3.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ch1nse1-mirror-v1.3.0/THIRD-PARTY-NOTICE-ch1nse1-mirror.txt",
+      "artifacts": [
+        {
+          "id": "f7eb281878821c54f5e78ca68ac3aff74c29e895b3ea3d225d92324d5888b6e2",
+          "filename": "Mirror-1.3.0.apk",
+          "original_filename": "Mirror-1.3.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.3.0",
+          "size_bytes": 42625942,
+          "sha256": "f7eb281878821c54f5e78ca68ac3aff74c29e895b3ea3d225d92324d5888b6e2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "6c81d77c34eba74623b2359b8d88ea4a636ae82dc2ec88ce1f813f2f1395ce61",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ch1nse1-mirror-v1.3.0/Mirror-1.3.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ch1nse1-mirror-v1.3.0"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
