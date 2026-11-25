@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:07:30.263322+00:00",
+  "generated_at": "2026-11-25T04:07:34.216335+00:00",
   "apps": [
     {
       "id": "defunkt-ambition",
@@ -985,6 +985,45 @@
       "build_recommended": false,
       "classification_source": "heuristic",
       "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "category": "other",
+      "topics": [],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "jnicklas-uploadcolumn",
+      "slug": "jnicklas-uploadcolumn",
+      "artifacts": [],
+      "name": "uploadcolumn",
+      "summary": "UploadColumn is no longer maintained, check out CarrierWave for an alternative",
+      "description": "UploadColumn is no longer maintained, check out CarrierWave for an alternative",
+      "translations": {
+        "en": {
+          "summary": "UploadColumn is no longer maintained, check out CarrierWave for an alternative",
+          "description": "UploadColumn is no longer maintained, check out CarrierWave for an alternative"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/134?v=4",
+      "repository_url": "https://github.com/jnicklas/uploadcolumn",
+      "github_repo_id": "251",
+      "source_updated_at": "2026-09-25T13:11:58Z",
+      "homepage_url": "https://github.com/jnicklas/carrierwave",
+      "owner": "jnicklas",
+      "default_branch": "master",
+      "source_commit_sha": "c2c14ad15467e97afd905f57d89e05b1b6c65d23",
+      "license_text": "Copyright (c) 2006 Sebastian Kanthak, Jonas Nicklas \n\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the \"Software\"), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
       "category": "other",
       "topics": [],
       "latest_version": null,
