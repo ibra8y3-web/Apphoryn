@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:45:35.935479+00:00",
+  "generated_at": "2026-11-25T22:45:56.494635+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -41995,6 +41995,70 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "nikableh-sift",
+      "slug": "nikableh-sift",
+      "name": "sift",
+      "summary": "Sort photos and videos into albums with a single tap",
+      "description": "Sort photos and videos into albums with a single tap",
+      "translations": {
+        "en": {
+          "summary": "Sort photos and videos into albums with a single tap",
+          "description": "Sort photos and videos into albums with a single tap"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/nikableh/sift/main/docs/images/icon.svg",
+      "repository_url": "https://github.com/nikableh/sift",
+      "github_repo_id": "1456535553",
+      "source_updated_at": "2026-11-21T00:07:57Z",
+      "homepage_url": null,
+      "owner": "nikableh",
+      "default_branch": "main",
+      "source_commit_sha": "1b72ec626620eee5f450ebb8e77de56a6efc5589",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Nika Krasnova\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android-app",
+        "media"
+      ],
+      "latest_version": "v0.11.0",
+      "release_url": "https://github.com/nikableh/sift/releases/tag/v0.11.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-nikableh-sift-v0.11.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-nikableh-sift-v0.11.0/THIRD-PARTY-NOTICE-nikableh-sift.txt",
+      "artifacts": [
+        {
+          "id": "d31ab0e4fade47c2d8c5fce78fa98fbc57ea2195799e2b78abd0fa79e47eaba7",
+          "filename": "sift-0.11.0.apk",
+          "original_filename": "sift-0.11.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.11.0",
+          "size_bytes": 3836686,
+          "sha256": "d31ab0e4fade47c2d8c5fce78fa98fbc57ea2195799e2b78abd0fa79e47eaba7",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "eb7d8c04f33d4821675f70deac2aeed3fb71400504398c3447521caf492ffdee",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-nikableh-sift-v0.11.0/sift-0.11.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-nikableh-sift-v0.11.0"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
