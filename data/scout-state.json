@@ -1,10 +1,10 @@
 {
   "schema_version": 3,
-  "last_repository_id": 905,
+  "last_repository_id": 2028,
   "last_refresh_repository_id": 0,
   "totals": {
-    "repository_pages": 2,
-    "repositories_seen": 200,
+    "repository_pages": 4,
+    "repositories_seen": 400,
     "empty_tail_checks": 0,
     "refresh_passes_completed": 0
   }
