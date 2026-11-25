@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T18:22:39.850415+00:00",
+  "generated_at": "2026-11-25T18:22:50.013675+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -8049,6 +8049,88 @@
           "signer_certificate_sha256": "669b8eef55eca28129e5ab9d29804ec7352ea5e3b84a1d6f8de379ec26625c28",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-melodious-nub-fundflow-v1.1.1/Fundflow_v1.1.1.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-melodious-nub-fundflow-v1.1.1"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "mokshablr-gander",
+      "slug": "mokshablr-gander",
+      "name": "gander",
+      "summary": "Take a gander at any file. Offline, zero-permission Android viewer for PDF, Word, Excel, PowerPoint, ODT, RTF, ZIP, STL, photos, video, audio, Markdown and code.",
+      "description": "Take a gander at any file. Offline, zero-permission Android viewer for PDF, Word, Excel, PowerPoint, ODT, RTF, ZIP, STL, photos, video, audio, Markdown and code.",
+      "translations": {
+        "en": {
+          "summary": "Take a gander at any file. Offline, zero-permission Android viewer for PDF, Word, Excel, PowerPoint, ODT, RTF, ZIP, STL, photos, video, audio, Markdown and code.",
+          "description": "Take a gander at any file. Offline, zero-permission Android viewer for PDF, Word, Excel, PowerPoint, ODT, RTF, ZIP, STL, photos, video, audio, Markdown and code."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/mokshablr/gander/main/tests/fixtures/files/icon.svg",
+      "repository_url": "https://github.com/mokshablr/gander",
+      "github_repo_id": "1305551246",
+      "source_updated_at": "2026-11-25T07:17:09Z",
+      "homepage_url": "https://arjun.maniyani.com/gander",
+      "owner": "mokshablr",
+      "default_branch": "main",
+      "source_commit_sha": "359a2d643088a60bc50043c4c5da9124d0cdafb8",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Arjun Maniyani\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android",
+        "android-app",
+        "apk",
+        "document-viewer",
+        "docx",
+        "docx-viewer",
+        "exoplayer",
+        "file-viewer",
+        "foss",
+        "kotlin",
+        "markdown",
+        "material-design",
+        "no-permissions",
+        "offline-first",
+        "pdf-viewer",
+        "pptx",
+        "privacy",
+        "stl-viewer",
+        "video-player",
+        "xlsx"
+      ],
+      "latest_version": "v2.11",
+      "release_url": "https://github.com/mokshablr/gander/releases/tag/v2.11",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mokshablr-gander-v2.11",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mokshablr-gander-v2.11/THIRD-PARTY-NOTICE-mokshablr-gander.txt",
+      "artifacts": [
+        {
+          "id": "be89adfe511e400f1adfdb06bae79da600709c00b25fd966fb49f50883e309e3",
+          "filename": "Gander-2.11.apk",
+          "original_filename": "Gander-2.11.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v2.11",
+          "size_bytes": 5384590,
+          "sha256": "be89adfe511e400f1adfdb06bae79da600709c00b25fd966fb49f50883e309e3",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "5b5cf64a94237cd5f0e085760038bc1cebdf18daba5cb3eaca7c159f22a7e24b",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mokshablr-gander-v2.11/Gander-2.11.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mokshablr-gander-v2.11"
         }
       ],
       "platforms": [
