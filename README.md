@@ -76,7 +76,7 @@ The repository contains a responsive web/PWA storefront, Android and desktop cli
 | Catalogue | Shared manifest at [apps/web/catalog/index.json](apps/web/catalog/index.json) |
 | Package integrity | SHA-256 calculation, release digest comparison when provided, package-format inspection and APK signature verification |
 | Distribution | Apphoryn-owned GitHub Releases for imported application artifacts |
-| Automation | Hourly Scout, two-hour Global Scout, isolated build workflows and persistent Niebex workers |
+| Automation | Continuous incremental Global Scout with one-minute import pacing, isolated build workflows and persistent Niebex workers |
 | AI | Central coordinator, specialist agents, provider routing, local Ollama/vLLM support and approval-gated tools |
 
 ## Product and platform visuals
@@ -95,7 +95,7 @@ The catalogue is generated from real discovery and import results. The upstream 
 
 ```mermaid
 flowchart TD
-    A["Hourly Scout / Global Scout"] --> B["Discover public repositories"]
+    A["Continuous Global Scout"] --> B["Discover public repositories"]
     B --> C["Check repository status and SPDX license"]
     C -->|Eligible| D["Inspect upstream releases and assets"]
     C -->|Rejected or unclear| X["Skip and record the reason"]
@@ -114,7 +114,7 @@ flowchart TD
 
 ### Discovery, import and verification
 
-1. **Discovery:** the hourly Scout searches application-focused GitHub categories and checks the maintained seed list. Global Scout incrementally crawls public repositories.
+1. **Discovery:** Global Scout searches application-focused GitHub categories and incrementally crawls public repositories, resuming from a persistent cursor.
 2. **Eligibility:** archived repositories, projects without a usable license declaration, and licenses outside the configured SPDX redistribution allowlist are not automatically mirrored.
 3. **Real release assets:** the importer downloads actual upstream release files. A source archive, README link, screenshot or repository URL is not treated as an installable package.
 4. **Integrity checks:** Apphoryn calculates SHA-256 locally, compares a supplied upstream digest when available, and inspects each file according to its format. APK verification uses Android `apksigner`.
@@ -128,12 +128,12 @@ The importer understands package families including APK, EXE/PE, MSI/OLE, MSIX/A
 | Automation | Trigger / cadence | Responsibility |
 |---|---|---|
 | **Apphoryn Scout** | Every hour, on relevant pushes to `main`/`master`, and manual dispatch | Search application-focused GitHub categories, inspect releases, import eligible assets and run bounded build fallbacks |
-| **Global Scout** | Every two hours and manual dispatch | Incremental public-repository crawl, release checks, verified imports and at most one source project build per run |
+| **Global Scout** | Long-running worker; restarted by a five-minute recovery schedule | Incremental public-repository crawl, release checks, verified imports paced one start every 60 seconds, and supported isolated builds |
 | **Niebex catalogue watcher** | Every 5 minutes by default (configurable, bounded to 1–60 minutes) | Compare the shared catalogue with its saved snapshot and queue a read-only review only for real metadata/version/artifact changes |
 | **Storefront refresh** | Every 2 minutes while open, and when the user returns to the app | Refresh the shared catalogue without requiring a full browser restart |
 | **Native client builds** | Changes to client/storefront source paths, pull requests for those paths, or manual dispatch | Build the Android and desktop client packages for CI testing |
 
-Scout workflows can also be started manually from the repository's [Actions page](https://github.com/ibra8y3-web/Apphoryn/actions). Build limits are intentionally bounded; a candidate is never published just because a build was dispatched.
+The separate one-off Harvest workflow remains available from the repository's [Actions page](https://github.com/ibra8y3-web/Apphoryn/actions); automatic imports are owned by Global Scout. GitHub Actions cannot schedule a workflow more frequently than every five minutes, so the five-minute schedule is only a recovery trigger—the long-running worker itself spaces import starts by 60 seconds. Its cursor and retry queue preserve unfinished discovery/import work across runs. A candidate is never published just because a build was dispatched.
 
 ## Client platforms and build outputs
 
@@ -325,6 +325,7 @@ Copy `.env.example` and configure only the features you intend to run. Common se
 | `APPHORYN_AGENT_WORKERS` | Background worker count | `2`, configurable from 1 to 4 |
 | `APPHORYN_AGENT_AUTOPILOT_ENABLED` | Default for workforce autopilot | `true`; saved admin setting takes precedence |
 | `APPHORYN_CATALOG_POLL_SECONDS` | Niebex shared-catalog polling interval | `300`, clamped to 60–3600 seconds |
+| `APPHORYN_IMPORT_INTERVAL_SECONDS` | Minimum interval between automatic app import starts | `60` seconds; first import starts immediately |
 | `APPHORYN_GITHUB_COMPUTE_ENABLED` | Enable the GitHub-hosted security compute path | `false` |
 | `APPHORYN_CODE_WRITES_ENABLED` | Permit gated source-code PR actions | `false` |
 | `APPHORYN_AI_FREE_ONLY` | Prefer free-only provider policy | `true` |
