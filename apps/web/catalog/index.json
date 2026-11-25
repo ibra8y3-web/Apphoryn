@@ -8055,6 +8055,15 @@
       "platforms": [
         "macos",
         "windows"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "29f815858c2d177d8ea2cddb0308a0fbb90ca0e5",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-25T11:11:50.055182+00:00"
+        }
       ]
     },
     {
