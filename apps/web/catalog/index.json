@@ -4180,6 +4180,15 @@
       ],
       "platforms": [
         "java"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "c7bffc6ce7b19fafc8ede63ff11233d5f4489498",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-25T08:50:17.389904+00:00"
+        }
       ]
     },
     {
