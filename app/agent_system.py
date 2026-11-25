@@ -264,6 +264,20 @@ class AgentStore:
             rows = con.execute("SELECT * FROM agent_workers ORDER BY worker_id").fetchall()
         return [dict(row) for row in rows]
 
+    def agent_activity(self) -> list[dict[str, Any]]:
+        with self.connect() as con:
+            rows = con.execute(
+                """SELECT t.agent_id,COUNT(*) AS task_count,MAX(t.updated_at) AS last_activity_at
+                   FROM agent_tasks t GROUP BY t.agent_id ORDER BY t.agent_id"""
+            ).fetchall()
+            latest = con.execute(
+                """SELECT t.agent_id,t.status FROM agent_tasks t
+                   JOIN (SELECT agent_id,MAX(updated_at) AS latest_at FROM agent_tasks GROUP BY agent_id) x
+                   ON t.agent_id=x.agent_id AND t.updated_at=x.latest_at"""
+            ).fetchall()
+        status_by_agent = {row["agent_id"]: row["status"] for row in latest}
+        return [{**dict(row), "latest_status": status_by_agent.get(row["agent_id"], "idle")} for row in rows]
+
     def counts(self) -> dict[str, int]:
         with self.connect() as con:
             runs = con.execute("SELECT status,COUNT(*) n FROM agent_runs GROUP BY status").fetchall()
