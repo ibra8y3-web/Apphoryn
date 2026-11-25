@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:43:56.375202+00:00",
+  "generated_at": "2026-11-25T19:44:10.207687+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -8026,6 +8026,80 @@
       ],
       "platforms": [
         "windows"
+      ]
+    },
+    {
+      "id": "sampple-korea-dynamicisland",
+      "slug": "sampple-korea-dynamicisland",
+      "name": "dynamicisland",
+      "summary": "A Dynamic Island for Samsung One UI (LSPosed module)",
+      "description": "A Dynamic Island for Samsung One UI (LSPosed module)",
+      "translations": {
+        "en": {
+          "summary": "A Dynamic Island for Samsung One UI (LSPosed module)",
+          "description": "A Dynamic Island for Samsung One UI (LSPosed module)"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/sampple-korea/dynamicisland/main/app/src/main/res/drawable-nodpi/ic_launcher_foreground.png",
+      "repository_url": "https://github.com/sampple-korea/dynamicisland",
+      "github_repo_id": "1429044738",
+      "source_updated_at": "2026-11-24T21:34:23Z",
+      "homepage_url": null,
+      "owner": "sampple-korea",
+      "default_branch": "main",
+      "source_commit_sha": "e2aaf4b7c622fbaeb58619914f5e9e4b8d0fa516",
+      "license_text": "MIT License\n\nCopyright (c) 2026 sampple-korea\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "system",
+      "topics": [
+        "android",
+        "android-app",
+        "android-module",
+        "dynamic-island",
+        "live-notifications",
+        "lsposed",
+        "now-bar",
+        "one-ui",
+        "samsung",
+        "samsung-galaxy",
+        "systemui",
+        "xposed"
+      ],
+      "latest_version": "v0.1.17",
+      "release_url": "https://github.com/sampple-korea/dynamicisland/releases/tag/v0.1.17",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sampple-korea-dynamicisland-v0.1.17",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sampple-korea-dynamicisland-v0.1.17/THIRD-PARTY-NOTICE-sampple-korea-dynamicisland.txt",
+      "artifacts": [
+        {
+          "id": "a6fb3ad34786fed217bc68cccbac8021c0e9a1a2531870edb0bb2b789ec96274",
+          "filename": "DynamicIsland-0.1.17.apk",
+          "original_filename": "DynamicIsland-0.1.17.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.1.17",
+          "size_bytes": 1986127,
+          "sha256": "a6fb3ad34786fed217bc68cccbac8021c0e9a1a2531870edb0bb2b789ec96274",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "71a0f30fd1f3818d67956a3475dac05ec11664496a78d0092620c9c902598664",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sampple-korea-dynamicisland-v0.1.17/DynamicIsland-0.1.17.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sampple-korea-dynamicisland-v0.1.17"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
