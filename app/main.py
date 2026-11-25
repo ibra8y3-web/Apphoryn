@@ -11,6 +11,7 @@ import urllib.request
 from pathlib import Path
 
 from fastapi import FastAPI, Header, HTTPException, Query, Request
+from starlette.background import BackgroundTask
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
@@ -23,6 +24,7 @@ from .agent_system import start_agent_workers, stop_agent_workers
 from .database import db
 from .services import BuildService, CatalogService, store_uploaded_artifact
 from .github_release_mirror import GitHubReleaseMirror
+from .analytics import analytics
 
 app = FastAPI(title="Apphoryn API", version="0.2.0-alpha", description="Discover, build, verify and distribute open-source software.")
 cors_origins = [origin.strip() for origin in os.getenv("APPHORYN_CORS_ORIGINS", "").split(",") if origin.strip()]
@@ -110,6 +112,9 @@ def health():
 @app.get("/api/v1/catalog/apps")
 def list_apps(category: str | None = None, q: str | None = None, limit: int = Query(80, ge=1, le=200)):
     items = catalog_items(category, q, limit)
+    analytics.record_event("catalog_view")
+    if q:
+        analytics.record_search(q, len(items), source="catalog")
     return {"items": items, "count": len(items)}
 
 
@@ -118,13 +123,16 @@ def app_detail(slug: str):
     match = next((item for item in catalog_items(limit=200) if item.get("slug") == slug or item.get("id") == slug), None)
     if not match:
         raise HTTPException(404, "Application not found.")
+    analytics.record_event("app_view", app_slug=str(match.get("slug") or slug))
     return match
 
 
 @app.get("/api/v1/discovery/search")
 def discovery_search(q: str = Query(..., min_length=2, max_length=120), limit: int = Query(20, ge=1, le=50)):
     try:
-        return {"items": catalog.discover(q, limit), "query": q}
+        items = catalog.discover(q, limit)
+        analytics.record_search(q, len(items), source="github")
+        return {"items": items, "query": q}
     except Exception as exc:
         raise HTTPException(502, f"GitHub discovery failed: {exc}") from exc
 
@@ -252,9 +260,17 @@ def download_artifact(artifact_id: str):
         path = Path(artifact["storage_path"]).resolve()
         storage_root = settings.storage_path.resolve()
         if storage_root in path.parents and path.is_file():
+            app_record = db.get_app(str(artifact.get("app_id") or "")) or {}
+            app_slug = str(app_record.get("slug") or "")
+            analytics.record_event("download_requested", app_slug=app_slug,
+                                   artifact_id=artifact_id, platform=str(artifact.get("platform") or ""))
             return FileResponse(
                 path, filename=artifact["filename"], media_type="application/octet-stream",
                 headers={"X-Content-Type-Options": "nosniff", "Cache-Control": "private, no-store"},
+                background=BackgroundTask(
+                    analytics.record_event, "download_completed", app_slug=app_slug,
+                    artifact_id=artifact_id, platform=str(artifact.get("platform") or "")
+                ),
             )
 
     mirrored = find_mirrored_artifact(artifact_id)
@@ -265,6 +281,10 @@ def download_artifact(artifact_id: str):
         raise HTTPException(404, "Only Apphoryn-owned release assets can be served by this endpoint.")
 
     filename = Path(str(mirrored.get("filename") or mirrored.get("name") or "application.bin")).name
+    app_record = next((item for item in read_mirror_catalog()
+                       if any(str(row.get("id") or "") == artifact_id or str(row.get("sha256") or "") == artifact_id
+                              for row in item.get("artifacts") or [])), {})
+    app_slug = str(app_record.get("slug") or "")
     request = urllib.request.Request(
         url, headers={"User-Agent": "Apphoryn-Store/1.0", "Accept": "application/octet-stream"}
     )
@@ -278,6 +298,8 @@ def download_artifact(artifact_id: str):
     if final_url.scheme != "https" or final_url.hostname not in _RELEASE_ASSET_HOSTS:
         response.close()
         raise HTTPException(502, "Release asset resolved to an untrusted host.")
+    analytics.record_event("download_requested", app_slug=app_slug, artifact_id=artifact_id,
+                           platform=str(mirrored.get("platform") or ""))
     declared_length = response.headers.get("Content-Length")
     if declared_length:
         try:
@@ -299,10 +321,12 @@ def download_artifact(artifact_id: str):
 
     def stream_release_asset():
         total = 0
+        completed = False
         try:
             while True:
                 chunk = response.read(1024 * 1024)
                 if not chunk:
+                    completed = total > 0
                     break
                 total += len(chunk)
                 if total > settings.max_artifact_bytes:
@@ -310,6 +334,9 @@ def download_artifact(artifact_id: str):
                 yield chunk
         finally:
             response.close()
+            if completed:
+                analytics.record_event("download_completed", app_slug=app_slug, artifact_id=artifact_id,
+                                       platform=str(mirrored.get("platform") or ""))
 
     return StreamingResponse(stream_release_asset(), media_type="application/octet-stream", headers=headers)
 
