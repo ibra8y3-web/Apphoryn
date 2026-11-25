@@ -110,13 +110,11 @@ def translate_catalog_description(
         "build_recommended": False,
     }
     if _has_arabic_translation(source):
-        return {
-            "summary": original_summary or original_description[:240],
-            "description": original_description,
-            "translations": source["translations"],
-            "description_translations": source["description_translations"],
-            "translation_status": "complete",
-        }
+        output = _normalise(source)
+        output["summary"] = original_summary or original_description[:240]
+        output["description"] = original_description
+        output["translation_status"] = "complete"
+        return output
 
     localized, route = _with_arabic_translation(source, {})
     output = _normalise(
