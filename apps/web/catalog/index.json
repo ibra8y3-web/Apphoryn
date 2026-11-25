@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:34:18.589666+00:00",
+  "generated_at": "2026-11-25T22:34:40.748444+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -35699,6 +35699,105 @@
           "signer_certificate_sha256": "c9458115c2330f37a513cf1881bb54a3c58ea67668ba1b0d1d13f4f94ec28506",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-idea-atmosphere-photodroid-v0.4.0/PhotoDroid-v0.4.0.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-idea-atmosphere-photodroid-v0.4.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "theclumsypirate-photosphere-android",
+      "slug": "theclumsypirate-photosphere-android",
+      "name": "photosphere-android",
+      "summary": "An Android app that stitches 360° photo spheres and includes a built-in camera.",
+      "description": "An Android app that stitches 360° photo spheres and includes a built-in camera.",
+      "translations": {
+        "en": {
+          "summary": "An Android app that stitches 360° photo spheres and includes a built-in camera.",
+          "description": "An Android app that stitches 360° photo spheres and includes a built-in camera."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/theclumsypirate/photosphere-android/main/docs/assets/icon.svg",
+      "repository_url": "https://github.com/theclumsypirate/photosphere-android",
+      "github_repo_id": "1417192400",
+      "source_updated_at": "2026-11-25T14:42:27Z",
+      "homepage_url": null,
+      "owner": "theclumsypirate",
+      "default_branch": "main",
+      "source_commit_sha": "524e86467c00a3d13c1af9694d9e4d18cffe9a99",
+      "license_text": "MIT License\n\nCopyright (c) 2025-2026 Neo Malesa\nCopyright (c) theclumsypirate\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "360",
+        "360-camera",
+        "360-panorama",
+        "360-photo",
+        "360-photo-app",
+        "360-view",
+        "android",
+        "android-app",
+        "camerax",
+        "equirectangular",
+        "image",
+        "jetpack-compose",
+        "kotlin",
+        "opencv",
+        "panorama",
+        "panorma-360",
+        "photography",
+        "photosphere",
+        "stitched-images",
+        "stitching"
+      ],
+      "latest_version": "v0.0.6-beta",
+      "release_url": "https://github.com/theclumsypirate/photosphere-android/releases/tag/v0.0.6-beta",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-theclumsypirate-photosphere-android-v0.0.6-beta",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-theclumsypirate-photosphere-android-v0.0.6-beta/THIRD-PARTY-NOTICE-theclumsypirate-photosphere-android.txt",
+      "artifacts": [
+        {
+          "id": "de1688076e2f51fce4d8ac2d0c48c02d1c7b9bf3007398d460913520ffd5a116",
+          "filename": "photosphere_android_v0.0.6-beta_arm64-v8a.apk",
+          "original_filename": "photosphere_android_v0.0.6-beta_arm64-v8a.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v0.0.6-beta",
+          "size_bytes": 26862586,
+          "sha256": "de1688076e2f51fce4d8ac2d0c48c02d1c7b9bf3007398d460913520ffd5a116",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "f9b17df5217c318656357386074b58d8e1bc5d438a305a74510e6d045de55a45",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-theclumsypirate-photosphere-android-v0.0.6-beta/photosphere_android_v0.0.6-beta_arm64-v8a.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-theclumsypirate-photosphere-android-v0.0.6-beta"
+        },
+        {
+          "id": "ffa3fbc380ca964f4b0e99658336172cd814ea1e95289ab3bdff2978aaddd9d1",
+          "filename": "photosphere_android_v0.0.6-beta_armeabi-v7a.apk",
+          "original_filename": "photosphere_android_v0.0.6-beta_armeabi-v7a.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.0.6-beta",
+          "size_bytes": 18577332,
+          "sha256": "ffa3fbc380ca964f4b0e99658336172cd814ea1e95289ab3bdff2978aaddd9d1",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "f9b17df5217c318656357386074b58d8e1bc5d438a305a74510e6d045de55a45",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-theclumsypirate-photosphere-android-v0.0.6-beta/photosphere_android_v0.0.6-beta_armeabi-v7a.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-theclumsypirate-photosphere-android-v0.0.6-beta"
         }
       ],
       "platforms": [
