@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:57:20.375954+00:00",
+  "generated_at": "2026-11-25T21:57:39.484657+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -34332,6 +34332,82 @@
           "signer_certificate_sha256": "873eaac45e7027873d7a5161b5c96af29de0556072f6b52413f1b6a999fbfc6c",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gitakoos-proton-photos-v2.5.0/photosforproton-x86_64-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gitakoos-proton-photos-v2.5.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "seruhere-pubify",
+      "slug": "seruhere-pubify",
+      "name": "Pubify",
+      "summary": "Convert your pdf to standard epub format and read it within the app. Unlimited, on device conversion. HAPPY READING.",
+      "description": "Convert your pdf to standard epub format and read it within the app. Unlimited, on device conversion. HAPPY READING.",
+      "translations": {
+        "en": {
+          "summary": "Convert your pdf to standard epub format and read it within the app. Unlimited, on device conversion. HAPPY READING.",
+          "description": "Convert your pdf to standard epub format and read it within the app. Unlimited, on device conversion. HAPPY READING."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/seruhere/Pubify/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/seruhere/Pubify",
+      "github_repo_id": "1361577098",
+      "source_updated_at": "2026-11-24T06:49:39Z",
+      "homepage_url": null,
+      "owner": "seruhere",
+      "default_branch": "main",
+      "source_commit_sha": "fb32ca9bb69e4ed4fc098489247ec6225af49a39",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Serma Murmu\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "apk",
+        "apk-distribution",
+        "apks-installer",
+        "mobile",
+        "mobile-app",
+        "pdf",
+        "pdf-parser",
+        "pdf-processing",
+        "pdf-reader",
+        "pdf-tools",
+        "pdf-viewer"
+      ],
+      "latest_version": "Pubify",
+      "release_url": "https://github.com/seruhere/Pubify/releases/tag/Pubify",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-seruhere-pubify-Pubify",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-seruhere-pubify-Pubify/THIRD-PARTY-NOTICE-seruhere-pubify.txt",
+      "artifacts": [
+        {
+          "id": "74bf4ac39ab117bb735eecfe7119910c9322ecc3df41bd4e83efea04dd915674",
+          "filename": "Pubify.v1.0.0.apk",
+          "original_filename": "Pubify.v1.0.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "Pubify",
+          "size_bytes": 22900921,
+          "sha256": "74bf4ac39ab117bb735eecfe7119910c9322ecc3df41bd4e83efea04dd915674",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "67d90ad564cf85dde48bbd2b02e4b333e3867a4d8898b1456e2da08eab1c2f23",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-seruhere-pubify-Pubify/Pubify.v1.0.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-seruhere-pubify-Pubify"
         }
       ],
       "platforms": [
