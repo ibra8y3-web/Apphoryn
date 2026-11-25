@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:17:14.189509+00:00",
+  "generated_at": "2026-11-25T22:18:02.533686+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -21220,6 +21220,144 @@
           "signer_certificate_sha256": "2f41a816b8d60aa1d7cd4976b4452b0335e583d4f4ab14071f303177850ce460",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-keymapperorg-keymapper-v4.7.1/keymapper-4.7.1-foss.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-keymapperorg-keymapper-v4.7.1"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "lechixy-kicker",
+      "slug": "lechixy-kicker",
+      "name": "Kicker",
+      "summary": "Unofficial Kick.com client built with Compose for Android 💚",
+      "description": "Unofficial Kick.com client built with Compose for Android 💚",
+      "translations": {
+        "en": {
+          "summary": "Unofficial Kick.com client built with Compose for Android 💚",
+          "description": "Unofficial Kick.com client built with Compose for Android 💚"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/lechixy/Kicker/main/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/lechixy/Kicker",
+      "github_repo_id": "1404703425",
+      "source_updated_at": "2026-11-22T12:47:10Z",
+      "homepage_url": null,
+      "owner": "lechixy",
+      "default_branch": "main",
+      "source_commit_sha": "88b3d49917bc94c60f7b0b3d07cd6dec31e8e148",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Melih Şahin Yıldız\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "jetpack-compose",
+        "kick",
+        "kick-com",
+        "material-design",
+        "material-you",
+        "material3"
+      ],
+      "latest_version": "v1.3.0",
+      "release_url": "https://github.com/lechixy/Kicker/releases/tag/v1.3.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lechixy-kicker-v1.3.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lechixy-kicker-v1.3.0/THIRD-PARTY-NOTICE-lechixy-kicker.txt",
+      "artifacts": [
+        {
+          "id": "9f29388348b2747b610312f24940bbeae3ded7c1de7f0d0e45a0685f623952d3",
+          "filename": "kicker_1.3.0_arm64-v8a_release.apk",
+          "original_filename": "kicker_1.3.0_arm64-v8a_release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v1.3.0",
+          "size_bytes": 64461268,
+          "sha256": "9f29388348b2747b610312f24940bbeae3ded7c1de7f0d0e45a0685f623952d3",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "a09f73c091d4b912a06aefe5afe40f4e13e04004407b4186269bd562cfbae0ec",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lechixy-kicker-v1.3.0/kicker_1.3.0_arm64-v8a_release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lechixy-kicker-v1.3.0"
+        },
+        {
+          "id": "7ebe48ca75900c4ebae7cd2d9a457f84399084aa574b568b1474d69f57e4813e",
+          "filename": "kicker_1.3.0_armeabi-v7a_release.apk",
+          "original_filename": "kicker_1.3.0_armeabi-v7a_release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.3.0",
+          "size_bytes": 64459344,
+          "sha256": "7ebe48ca75900c4ebae7cd2d9a457f84399084aa574b568b1474d69f57e4813e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "a09f73c091d4b912a06aefe5afe40f4e13e04004407b4186269bd562cfbae0ec",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lechixy-kicker-v1.3.0/kicker_1.3.0_armeabi-v7a_release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lechixy-kicker-v1.3.0"
+        },
+        {
+          "id": "bbf8f49e55a0f5f7aacd04df6c4545cdec57f2e2fbc031df9b2a4b6bd635eacc",
+          "filename": "kicker_1.3.0_universal_release.apk",
+          "original_filename": "kicker_1.3.0_universal_release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "universal",
+          "version": "v1.3.0",
+          "size_bytes": 64559156,
+          "sha256": "bbf8f49e55a0f5f7aacd04df6c4545cdec57f2e2fbc031df9b2a4b6bd635eacc",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "a09f73c091d4b912a06aefe5afe40f4e13e04004407b4186269bd562cfbae0ec",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lechixy-kicker-v1.3.0/kicker_1.3.0_universal_release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lechixy-kicker-v1.3.0"
+        },
+        {
+          "id": "3a383346162dace1922b3d08ef79230de49ba630fcbe7c28cbbb1a19497779a4",
+          "filename": "kicker_1.3.0_x86_64_release.apk",
+          "original_filename": "kicker_1.3.0_x86_64_release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "x86_64",
+          "version": "v1.3.0",
+          "size_bytes": 64460326,
+          "sha256": "3a383346162dace1922b3d08ef79230de49ba630fcbe7c28cbbb1a19497779a4",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "a09f73c091d4b912a06aefe5afe40f4e13e04004407b4186269bd562cfbae0ec",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lechixy-kicker-v1.3.0/kicker_1.3.0_x86_64_release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lechixy-kicker-v1.3.0"
+        },
+        {
+          "id": "93bb0bc0f587e9fcbed93e4a68042b51df2911b32bc86933c79f3052a9ec1888",
+          "filename": "kicker_1.3.0_x86_release.apk",
+          "original_filename": "kicker_1.3.0_x86_release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "x86",
+          "version": "v1.3.0",
+          "size_bytes": 64458872,
+          "sha256": "93bb0bc0f587e9fcbed93e4a68042b51df2911b32bc86933c79f3052a9ec1888",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "a09f73c091d4b912a06aefe5afe40f4e13e04004407b4186269bd562cfbae0ec",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lechixy-kicker-v1.3.0/kicker_1.3.0_x86_release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lechixy-kicker-v1.3.0"
         }
       ],
       "platforms": [
