@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:23:20.505102+00:00",
+  "generated_at": "2026-11-25T19:23:56.406007+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -20653,7 +20653,7 @@
         }
       },
       "description_translations": {},
-      "translation_status": "english_only",
+      "translation_status": "pending",
       "ai_provider": null,
       "ai_model": null,
       "icon_url": "https://raw.githubusercontent.com/heikeyangle-code/pi-android/main/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
@@ -20663,7 +20663,7 @@
       "homepage_url": null,
       "owner": "heikeyangle-code",
       "default_branch": "main",
-      "source_commit_sha": "1944344c8aed4ed4743bdf803fd805b21a2306c3",
+      "source_commit_sha": "77ad84ba0deac0611129086b5aea716c6d06634e",
       "license_text": "MIT License\n\nCopyright (c) 2026 heikeyangle-code\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -20695,10 +20695,10 @@
         "proot",
         "terminal"
       ],
-      "latest_version": "v0.2.0",
-      "release_url": "https://github.com/heikeyangle-code/pi-android/releases/tag/v0.2.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-heikeyangle-code-pi-android-v0.2.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-heikeyangle-code-pi-android-v0.2.0/THIRD-PARTY-NOTICE-heikeyangle-code-pi-android.txt",
+      "latest_version": "v0.2.1",
+      "release_url": "https://github.com/heikeyangle-code/pi-android/releases/tag/v0.2.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-heikeyangle-code-pi-android-v0.2.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-heikeyangle-code-pi-android-v0.2.1/THIRD-PARTY-NOTICE-heikeyangle-code-pi-android.txt",
       "artifacts": [
         {
           "id": "066b0dd2a65bfd1238f1844016da969d561812d8782e4d1eca072f6a141a3ad8",
@@ -20716,6 +20716,40 @@
           "signer_certificate_sha256": "b12b3607b5978386c13a55a47020fd95750fa6f9db048cdf6148661c05a09c7c",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-heikeyangle-code-pi-android-v0.2.0/pi-android-0.2.0-sideload28-arm64.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-heikeyangle-code-pi-android-v0.2.0"
+        },
+        {
+          "id": "6b36b2876bebba7a6dda434fc24b0e2b8c77f4b93354ab5ccf95b6bb2301a1d6",
+          "filename": "pi-android-0.2.1-modern36-arm64.apk",
+          "original_filename": "pi-android-0.2.1-modern36-arm64.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v0.2.1",
+          "size_bytes": 140376197,
+          "sha256": "6b36b2876bebba7a6dda434fc24b0e2b8c77f4b93354ab5ccf95b6bb2301a1d6",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "b12b3607b5978386c13a55a47020fd95750fa6f9db048cdf6148661c05a09c7c",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-heikeyangle-code-pi-android-v0.2.1/pi-android-0.2.1-modern36-arm64.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-heikeyangle-code-pi-android-v0.2.1"
+        },
+        {
+          "id": "0c8002b770a00635706d419a0008158fecb1c2c8d1421f036cf8df76e1034e98",
+          "filename": "pi-android-0.2.1-sideload28-arm64.apk",
+          "original_filename": "pi-android-0.2.1-sideload28-arm64.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v0.2.1",
+          "size_bytes": 140376197,
+          "sha256": "0c8002b770a00635706d419a0008158fecb1c2c8d1421f036cf8df76e1034e98",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "b12b3607b5978386c13a55a47020fd95750fa6f9db048cdf6148661c05a09c7c",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-heikeyangle-code-pi-android-v0.2.1/pi-android-0.2.1-sideload28-arm64.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-heikeyangle-code-pi-android-v0.2.1"
         }
       ],
       "platforms": [
