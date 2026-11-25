@@ -46,6 +46,17 @@ class AgentStoreTests(unittest.TestCase):
 
 
 
+
+    def test_agent_activity_reports_real_latest_task_status(self):
+        run = self.store.enqueue("Review the package metadata.", priority=5)
+        task = self.store.create_task(run["id"], "research", "Inspect metadata", "Inspect the upstream release.")
+        self.store.update_task(task, "running")
+        activity = self.store.agent_activity()
+        self.assertEqual(activity[0]["agent_id"], "research")
+        self.assertEqual(activity[0]["task_count"], 1)
+        self.assertEqual(activity[0]["latest_status"], "running")
+        self.assertTrue(activity[0]["last_activity_at"])
+
     def test_shared_memory_agent_tool_reads_and_saves_real_records(self):
         from unittest.mock import patch
         from app.agent_system import _run_tool
