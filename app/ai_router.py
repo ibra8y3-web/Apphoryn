@@ -16,6 +16,7 @@ _ALLOW_CREDIT = os.getenv("APPHORYN_AI_ALLOW_CREDIT_BASED_PROVIDERS", "false").l
 _ENABLE_CF = os.getenv("APPHORYN_AI_ENABLE_CLOUDFLARE", "false").lower() in {"1", "true", "yes", "on"}
 _ALLOW_PAID = os.getenv("APPHORYN_AI_ALLOW_PAID_REQUESTS", "false").lower() in {"1", "true", "yes", "on"}
 _ENABLE_XAI = os.getenv("APPHORYN_AI_ENABLE_XAI", "false").lower() in {"1", "true", "yes", "on"}
+_PREFER_LOCAL = os.getenv("APPHORYN_AI_PREFER_LOCAL", "true").lower() in {"1", "true", "yes", "on"}
 
 @dataclass(frozen=True)
 class Candidate:
@@ -66,7 +67,16 @@ def _status(provider: str, configured: bool, enabled: bool, note: str, count: in
 
 def _priority() -> list[str]:
     return [x.strip().lower() for x in os.getenv(
-        "APPHORYN_AI_PROVIDER_PRIORITY", "gemini,groq,xai,openrouter,cloudflare,comet").split(",") if x.strip()]
+        "APPHORYN_AI_PROVIDER_PRIORITY", "ollama,vllm,gemini,groq,xai,openrouter,cloudflare,comet").split(",") if x.strip()]
+
+def _local_base_url(value: str) -> str:
+    parsed = urllib.parse.urlparse(value.strip())
+    if (parsed.scheme not in {"http", "https"} or parsed.hostname not in {
+        "127.0.0.1", "localhost", "::1", "ollama", "vllm", "host.docker.internal"
+    } or parsed.username or parsed.password or parsed.query or parsed.fragment):
+        raise ProviderError("Local model endpoint must be loopback or a named private Docker Compose service.")
+    return value.rstrip("/")
+
 
 def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str, Any]]]:
     global _cache
@@ -75,6 +85,55 @@ def discover_models(force: bool = False) -> tuple[list[Candidate], list[dict[str
         return list(_cache["models"]), list(_cache["providers"])
     models: list[Candidate] = []
     providers: list[dict[str, Any]] = []
+
+
+    # Self-hosted open-weight model servers. These endpoints are restricted to loopback
+    # or Compose service names so a secret-bearing backend cannot be turned into an SSRF proxy.
+    ollama_value = os.getenv("OLLAMA_BASE_URL", "").strip()
+    if ollama_value:
+        try:
+            base = _local_base_url(ollama_value)
+            root = base[:-3] if base.endswith("/v1") else base
+            key = os.getenv("OLLAMA_API_KEY", "").strip()
+            data = _request(root + "/api/tags", {"Authorization": f"Bearer {key}"} if key else {})
+            rows = data.get("models") or []
+            for item in rows if isinstance(rows, list) else []:
+                if not isinstance(item, dict):
+                    continue
+                model = str(item.get("name") or item.get("model") or "").strip()
+                if model:
+                    models.append(Candidate("ollama", model, "openai", root + "/v1", key,
+                                            int((item.get("details") or {}).get("parameter_size_bytes") or 0),
+                                            "local_open_source"))
+            providers.append(_status("ollama", True, bool(rows), "Local Ollama model tags loaded; no provider API billing is involved.",
+                                     sum(m.provider == "ollama" for m in models)))
+        except ProviderError as exc:
+            providers.append(_status("ollama", True, False, str(exc)))
+    else:
+        providers.append(_status("ollama", False, False, "OLLAMA_BASE_URL is not configured."))
+
+    vllm_value = os.getenv("VLLM_BASE_URL", "").strip()
+    if vllm_value:
+        try:
+            base = _local_base_url(vllm_value)
+            if not base.endswith("/v1"):
+                base += "/v1"
+            key = os.getenv("VLLM_API_KEY", "").strip()
+            data = _request(base + "/models", {"Authorization": f"Bearer {key}"} if key else {})
+            rows = data.get("data") or []
+            for item in rows if isinstance(rows, list) else []:
+                if not isinstance(item, dict):
+                    continue
+                model = str(item.get("id") or "").strip()
+                if model:
+                    models.append(Candidate("vllm", model, "openai", base, key,
+                                            int(item.get("context_length") or 0), "local_open_source"))
+            providers.append(_status("vllm", True, bool(rows), "Local vLLM model catalog loaded; protected by the configured private endpoint.",
+                                     sum(m.provider == "vllm" for m in models)))
+        except ProviderError as exc:
+            providers.append(_status("vllm", True, False, str(exc)))
+    else:
+        providers.append(_status("vllm", False, False, "VLLM_BASE_URL is not configured."))
 
     # Gemini and Groq list models but do not expose an enforceable account billing tier.
     # In free-only mode, require an explicit owner confirmation before sending billable API traffic.
@@ -303,7 +362,7 @@ def _gemini(candidate: Candidate, messages: list[dict[str, str]]) -> dict[str, A
 def _openai(candidate: Candidate, messages: list[dict[str, str]]) -> dict[str, Any]:
     body = {"model": candidate.model, "messages": messages, "temperature": 0.2,
             "response_format": {"type": "json_object"}}
-    headers = {"Authorization": f"Bearer {candidate.key}"}
+    headers = {"Authorization": f"Bearer {candidate.key}"} if candidate.key else {}
     if candidate.provider == "openrouter":
         headers.update({"HTTP-Referer": os.getenv("APPHORYN_PUBLIC_BASE_URL", "https://apphoryn.example"),
                         "X-Title": "Apphoryn"})
@@ -326,8 +385,56 @@ def _cloudflare(candidate: Candidate, messages: list[dict[str, str]]) -> dict[st
         raise ProviderError("Cloudflare returned no text content.")
     return json.loads(content) if isinstance(content, str) else content
 
-def generate_json(messages: list[dict[str, str]]) -> tuple[dict[str, Any], dict[str, str]]:
+def _task_capability_score(candidate: Candidate, task_type: str | None) -> float:
+    task = (task_type or "").lower()
+    model = candidate.model.casefold()
+    score = 0.0
+    if task in {"software_engineer", "debugging", "build", "security"}:
+        if any(word in model for word in ("coder", "code", "devstral", "codestral", "deepseek-coder")):
+            score += 0.35
+    if task in {"research", "discovery", "update", "niebex"}:
+        if candidate.context >= 64000:
+            score += 0.20
+        elif candidate.context >= 32000:
+            score += 0.10
+        if any(word in model for word in ("reason", "r1", "thinking", "research")):
+            score += 0.15
+    if task in {"writing", "research"} and any(word in model for word in ("qwen", "gemini", "aya", "llama", "mistral")):
+        score += 0.08
+    if _PREFER_LOCAL and candidate.provider in {"ollama", "vllm"}:
+        score += 0.18
+    return score
+
+
+def _rank_candidates(candidates: list[Candidate], task_type: str | None) -> list[Candidate]:
+    try:
+        from .agent_system import STORE
+        history = {(row["provider"], row["model"]): row for row in STORE.model_metrics()}
+        evaluations = {}
+        for row in STORE.model_evaluation_metrics():
+            if row["task_type"] == "general":
+                evaluations[(row["provider"], row["model"])] = row
+    except Exception:
+        history, evaluations = {}, {}
+
+    priorities = _priority()
+    def rank(candidate: Candidate):
+        metrics = history.get((candidate.provider, candidate.model), {})
+        requests = int(metrics.get("requests") or 0)
+        success_rate = (float(metrics.get("successes") or 0) / requests) if requests else 0.0
+        latency = float(metrics.get("average_latency_ms") or 0)
+        latency_score = max(0.0, 1.0 - min(latency, 10000.0) / 10000.0) if latency else 0.0
+        evaluation = evaluations.get((candidate.provider, candidate.model), {})
+        quality = float(evaluation.get("average_score") or 0)
+        evidence_score = (0.30 * success_rate + 0.25 * quality + 0.10 * latency_score)
+        priority = priorities.index(candidate.provider) if candidate.provider in priorities else len(priorities)
+        return (-(_task_capability_score(candidate, task_type) + evidence_score), priority, -candidate.context)
+    return sorted(candidates, key=rank)
+
+
+def generate_json(messages: list[dict[str, str]], task_type: str | None = None) -> tuple[dict[str, Any], dict[str, str]]:
     candidates, _ = discover_models()
+    candidates = _rank_candidates(candidates, task_type)
     errors: list[str] = []
     attempted = 0
     for candidate in candidates:
