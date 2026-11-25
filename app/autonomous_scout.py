@@ -343,8 +343,9 @@ class AutonomousScout:
             reason = str(self.state.get("last_reason") or ("scheduled_cycle" if not signaled else "storefront_open"))
             self.last_scan_monotonic = time.monotonic()
             try:
-                with self.lock:
-                    self._scan_once(reason)
+                # Do not hold the state lock across network calls or package downloads.
+                # The status endpoint must remain responsive while a scan is running.
+                self._scan_once(reason)
             except GitHubError as exc:
                 with self.lock:
                     self.state["phase"] = "rate_limited" if "HTTP 403" in str(exc) or "HTTP 429" in str(exc) else "error"
