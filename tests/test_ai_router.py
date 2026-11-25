@@ -117,5 +117,37 @@ class AIRouterTests(unittest.TestCase):
         self.assertEqual(route["model"], "second:free")
 
 
-if __name__ == "__main__":
+
+    def test_xai_grok_is_blocked_by_default_even_when_key_exists(self):
+        env = {
+            "GEMINI_API_KEY": "", "GROQ_API_KEY": "", "XAI_API_KEY": "xai-test-key",
+            "OPENROUTER_API_KEY": "", "COMET_API_KEY": "", "CLOUDFLARE_API_TOKEN": "",
+        }
+        with patch.dict(os.environ, env, clear=False), \\
+             patch.object(ai_router, "_FREE_ONLY", True), \\
+             patch.object(ai_router, "_ALLOW_PAID", False), \\
+             patch.object(ai_router, "_ENABLE_XAI", True), \\
+             patch.object(ai_router, "_request") as request:
+            models, providers = ai_router.discover_models(force=True)
+        self.assertFalse(any(model.provider == "xai" for model in models))
+        status = next(item for item in providers if item["provider"] == "xai")
+        self.assertTrue(status["configured"])
+        self.assertFalse(status["enabled"])
+        self.assertFalse(request.called)
+
+    def test_xai_grok_model_discovery_requires_explicit_paid_authorization(self):
+        env = {
+            "GEMINI_API_KEY": "", "GROQ_API_KEY": "", "XAI_API_KEY": "xai-test-key",
+            "OPENROUTER_API_KEY": "", "COMET_API_KEY": "", "CLOUDFLARE_API_TOKEN": "",
+        }
+        with patch.dict(os.environ, env, clear=False), \\
+             patch.object(ai_router, "_FREE_ONLY", False), \\
+             patch.object(ai_router, "_ALLOW_PAID", True), \\
+             patch.object(ai_router, "_ENABLE_XAI", True), \\
+             patch.object(ai_router, "_request", return_value={"data": [{"id": "grok-test"}]}):
+            models, providers = ai_router.discover_models(force=True)
+        self.assertEqual([model.model for model in models if model.provider == "xai"], ["grok-test"])
+        status = next(item for item in providers if item["provider"] == "xai")
+        self.assertTrue(status["enabled"])
+\n\nif __name__ == "__main__":
     unittest.main()
