@@ -154,7 +154,8 @@ def retry_record(entry: dict[str, Any], now: float, reason: str) -> dict[str, An
 def main() -> None:
     parser = argparse.ArgumentParser(description="Apphoryn incremental public GitHub repository scanner.")
     parser.add_argument("--max-repositories", type=int, default=10000, help="Resumable checkpoint batch size; not a total import quota.")
-    parser.add_argument("--max-pages", type=int, default=100, help="Resumable checkpoint batch size; the next run continues from the saved cursor.")
+    parser.add_argument("--max-pages", type=int, default=20, help="Internal checkpoint batch size; repeated until the run window ends.")
+    parser.add_argument("--run-budget-seconds", type=int, default=4500, help="Time available for scanning/importing before the runner timeout.")
     parser.add_argument("--state-file", default=str(ROOT / "data" / "scout-state.json"))
     parser.add_argument("--retry-file", default=str(ROOT / "data" / "scout-retry.json"))
     parser.add_argument("--catalog-file", default=str(ROOT / "apps" / "web" / "catalog" / "index.json"))
@@ -227,194 +228,233 @@ def main() -> None:
             })
 
     crawler = RepositoryCrawler(github, args.state_file)
-    discovered, scan_report = crawler.scan(
-        max_repositories=args.max_repositories,
-        max_pages=args.max_pages,
-        cursor_key="last_repository_id",
-    )
-    for candidate in discovered:
-        url = str(candidate.get("html_url") or "")
-        if url:
-            enqueue({
-                "repository": url,
-                "candidate": candidate,
-                "reason": "Incremental GitHub public repository listing",
-            })
-
+    scan_report: dict[str, Any] | None = None
     refresh_report: dict[str, Any] | None = None
-    if scan_report.get("reached_current_end"):
-        refreshed, refresh_report = crawler.scan(
-            max_repositories=args.max_repositories,
-            max_pages=args.max_pages,
-            cursor_key="last_refresh_repository_id",
+    results: list[dict[str, Any]] = []
+    scheduled_retries = list(waiting_retries)
+    deadline = time.monotonic() + max(60, int(args.run_budget_seconds))
+
+    scheduled_retries = list(waiting_retries)
+    def process_entries(entries: list[dict[str, Any]]) -> bool:
+        for index, entry in enumerate(entries):
+            if time.monotonic() >= deadline:
+                for pending in entries[index:]:
+                    if pending.get("attempts") or pending.get("force_refresh"):
+                        scheduled_retries.append({**pending, "next_attempt_at": now})
+                return False
+            repository_url = str(entry["repository"])
+            candidate = entry.get("candidate") or {}
+            result: dict[str, Any] = {
+                "repository": repository_url,
+                "reason": str(entry.get("reason") or ""),
+                "status": "started",
+            }
+            try:
+                if candidate.get("fork") is True:
+                    result.update({
+                        "status": "fork_skipped",
+                        "reason": "Fork repositories are scanned but not imported as duplicate app listings.",
+                    })
+                    results.append(result)
+                    continue
+                if candidate.get("archived") is True or candidate.get("disabled") is True:
+                    result.update({
+                        "status": "inactive_repository_skipped",
+                        "reason": "Archived or disabled upstream repositories are not imported.",
+                    })
+                    results.append(result)
+                    continue
+                existing = (
+                    known_by_id.get(str(candidate.get("id") or ""))
+                    or known_by_url.get(repo_key(repository_url))
+                )
+                if (
+                    not entry.get("force_refresh")
+                    and known_current(candidate, known_by_id, known_by_url, adapter_revision)
+                ):
+                    result["status"] = "already_current"
+                    results.append(result)
+                    continue
+
+                imported = catalog.import_repository(repository_url, mirror_release_assets=True)
+                app = imported["app"]
+                result["ai_generation"] = imported.get("ai_generation") or {}
+                if candidate.get("id") and not app.get("github_repo_id"):
+                    app["github_repo_id"] = str(candidate["id"])
+                if candidate.get("updated_at") and not app.get("source_updated_at"):
+                    app["source_updated_at"] = str(candidate["updated_at"])
+                artifacts = imported.get("artifacts", [])
+                available = mirror.get_available_platforms(repository_url)
+                missing = sorted(set(build_targets_requested) - available) if build_targets_requested else []
+                buildable = (
+                    app.get("project_kind") in {"application", "developer_tool"}
+                    and bool(app.get("build_recommended"))
+                )
+                repository_parts = repository_url.removeprefix("https://github.com/").strip("/").split("/")
+                owner, repo_name = repository_parts[:2] if len(repository_parts) == 2 else ("", "")
+                git_ref = str(app.get("source_commit_sha") or app.get("default_branch") or "main")
+                supported = (
+                    detect_supported_build_targets(owner, repo_name, git_ref, github)
+                    if build_targets_requested and missing and buildable and owner and repo_name else {}
+                )
+                selected = sorted(set(missing) & set(supported))
+                project_kind = str(app.get("project_kind") or "unknown")
+                is_app_project = (
+                    project_kind in {"application", "developer_tool"}
+                    or bool(artifacts)
+                    or bool(available)
+                )
+                if not is_app_project:
+                    result.update({
+                        "status": "non_app_project_skipped",
+                        "app": app.get("name"),
+                        "project_kind": project_kind,
+                        "reason": "The repository was not verified as an application/developer tool and has no verified installer.",
+                    })
+                    results.append(result)
+                    print(json.dumps(result, ensure_ascii=False), flush=True)
+                    continue
+
+                publication = mirror.publish_app(app, artifacts)
+                result.update({
+                    "status": "mirrored" if artifacts else "source_available",
+                    "app": app.get("name"),
+                    "license": app.get("license_spdx"),
+                    "project_kind": app.get("project_kind"),
+                    "verified_release_packages": len(artifacts),
+                    "rejected_release_assets": imported.get("rejected_assets", []),
+                    "apphoryn_release": publication.get("release_url"),
+                    "project_status": publication.get("project_status"),
+                })
+
+                if build_targets_requested:
+                    if not missing:
+                        result["build_status"] = "requested_platforms_already_available"
+                    elif not buildable:
+                        result["build_status"] = "not_dispatched_by_project_classification"
+                        result["build_targets_missing"] = missing
+                    elif not selected:
+                        result["build_status"] = "no_supported_build_adapter"
+                        result["build_targets_missing"] = missing
+                        result["unsupported_build_targets"] = missing
+                    elif mirror.has_recent_build_attempt(repository_url, git_ref, targets=selected, adapter_revision=adapter_revision):
+                        result["build_status"] = "already_queued_or_published"
+                        result["build_targets"] = selected
+                    else:
+                        # Dispatch all supported missing targets. No Apphoryn per-run quota.
+                        mirror.dispatch_build(repository_url, git_ref, selected, str(app.get("slug") or app.get("id")), adapter_revision=adapter_revision)
+                        result["build_status"] = "workflow_dispatched"
+                        result["build_targets"] = selected
+                        result["build_adapters"] = {target: supported[target] for target in selected}
+                else:
+                    result["build_status"] = "automatic_build_disabled"
+
+                record = {
+                    "repository_url": app.get("repository_url") or repository_url,
+                    "github_repo_id": app.get("github_repo_id") or candidate.get("id"),
+                    "source_updated_at": app.get("source_updated_at") or candidate.get("updated_at"),
+                }
+                known_by_url[repo_key(str(record["repository_url"]))] = record
+                if record.get("github_repo_id"):
+                    known_by_id[str(record["github_repo_id"])] = record
+            except ValueError as exc:
+                message = str(exc)
+                if "license text could not be retrieved" in message.lower():
+                    scheduled_retries.append(retry_record(entry, now, message))
+                    result.update({"status": "retry_scheduled", "reason": message[:500]})
+                else:
+                    result.update({"status": "rejected_by_policy", "reason": message[:500]})
+            except Exception as exc:
+                message = f"{type(exc).__name__}: {exc}"
+                scheduled_retries.append(retry_record(entry, now, message))
+                result.update({"status": "failed_retry_scheduled", "reason": message[:500]})
+            results.append(result)
+            print(json.dumps(result, ensure_ascii=False), flush=True)
+
+        return True
+
+    def persist_checkpoint() -> int:
+        deduplicated: dict[str, dict[str, Any]] = {}
+        for row in scheduled_retries:
+            candidate = row.get("candidate") or {}
+            key = str(candidate.get("id") or repo_key(str(row.get("repository") or "")))
+            if key:
+                previous = deduplicated.get(key)
+                if previous is None or int(row.get("attempts") or 0) > int(previous.get("attempts") or 0):
+                    deduplicated[key] = row
+        crawler.save()
+        save_retry_queue(Path(args.retry_file), list(deduplicated.values()))
+        return len(deduplicated)
+
+    # Process retries and app-focused search results before advancing the global cursor.
+    completed = process_entries(queue)
+    retry_queue_size = persist_checkpoint()
+    cursor_key = "last_repository_id"
+    crawl_batches = 0
+
+    # No total app/repository quota: continue checkpoint batches until the hosted
+    # runner's time window ends, then resume from the last fully processed batch.
+    while completed and time.monotonic() < deadline:
+        state_before_batch = json.loads(json.dumps(crawler.state))
+        discovered, current_report = crawler.scan(
+            max_repositories=max(1, min(int(args.max_repositories), 10000)),
+            max_pages=max(1, min(int(args.max_pages), 100)),
+            cursor_key=cursor_key,
         )
-        for candidate in refreshed:
+        crawl_batches += 1
+        batch_entries: list[dict[str, Any]] = []
+        for candidate in discovered:
             url = str(candidate.get("html_url") or "")
             if url:
-                enqueue({
+                batch_entries.append({
                     "repository": url,
                     "candidate": candidate,
-                    "force_refresh": True,
-                    "reason": "Scheduled upstream release refresh",
+                    "force_refresh": cursor_key == "last_refresh_repository_id",
+                    "reason": (
+                        "Incremental GitHub public repository listing"
+                        if cursor_key == "last_repository_id"
+                        else "Scheduled upstream release refresh"
+                    ),
                 })
-        if refresh_report.get("reached_current_end"):
+
+        completed = process_entries(batch_entries)
+        if not completed:
+            # Commit the cursor only after every repository in the batch is handled.
+            # Replaying the whole batch is safe because imports/build dispatches deduplicate.
+            crawler.state = state_before_batch
+            retry_queue_size = persist_checkpoint()
+            break
+
+        if cursor_key == "last_repository_id":
+            scan_report = current_report
+        else:
+            refresh_report = current_report
+
+        retry_queue_size = persist_checkpoint()
+        if current_report.get("reached_current_end"):
+            if cursor_key == "last_repository_id":
+                cursor_key = "last_refresh_repository_id"
+                continue
+
             crawler.state["last_refresh_repository_id"] = 0
             crawler.state["totals"]["refresh_passes_completed"] = int(
                 crawler.state["totals"].get("refresh_passes_completed", 0)
             ) + 1
+            retry_queue_size = persist_checkpoint()
+            break
 
-    results: list[dict[str, Any]] = []
-    scheduled_retries = list(waiting_retries)
-    for entry in queue:
-        repository_url = str(entry["repository"])
-        candidate = entry.get("candidate") or {}
-        result: dict[str, Any] = {
-            "repository": repository_url,
-            "reason": str(entry.get("reason") or ""),
-            "status": "started",
-        }
-        try:
-            if candidate.get("fork") is True:
-                result.update({
-                    "status": "fork_skipped",
-                    "reason": "Fork repositories are scanned but not imported as duplicate app listings.",
-                })
-                results.append(result)
-                continue
-            if candidate.get("archived") is True or candidate.get("disabled") is True:
-                result.update({
-                    "status": "inactive_repository_skipped",
-                    "reason": "Archived or disabled upstream repositories are not imported.",
-                })
-                results.append(result)
-                continue
-            existing = (
-                known_by_id.get(str(candidate.get("id") or ""))
-                or known_by_url.get(repo_key(repository_url))
-            )
-            if (
-                not entry.get("force_refresh")
-                and known_current(candidate, known_by_id, known_by_url, adapter_revision)
-            ):
-                result["status"] = "already_current"
-                results.append(result)
-                continue
-
-            imported = catalog.import_repository(repository_url, mirror_release_assets=True)
-            app = imported["app"]
-            result["ai_generation"] = imported.get("ai_generation") or {}
-            if candidate.get("id") and not app.get("github_repo_id"):
-                app["github_repo_id"] = str(candidate["id"])
-            if candidate.get("updated_at") and not app.get("source_updated_at"):
-                app["source_updated_at"] = str(candidate["updated_at"])
-            artifacts = imported.get("artifacts", [])
-            available = mirror.get_available_platforms(repository_url)
-            missing = sorted(set(build_targets_requested) - available) if build_targets_requested else []
-            buildable = (
-                app.get("project_kind") in {"application", "developer_tool"}
-                and bool(app.get("build_recommended"))
-            )
-            repository_parts = repository_url.removeprefix("https://github.com/").strip("/").split("/")
-            owner, repo_name = repository_parts[:2] if len(repository_parts) == 2 else ("", "")
-            git_ref = str(app.get("source_commit_sha") or app.get("default_branch") or "main")
-            supported = (
-                detect_supported_build_targets(owner, repo_name, git_ref, github)
-                if build_targets_requested and missing and buildable and owner and repo_name else {}
-            )
-            selected = sorted(set(missing) & set(supported))
-            project_kind = str(app.get("project_kind") or "unknown")
-            is_app_project = (
-                project_kind in {"application", "developer_tool"}
-                or bool(artifacts)
-                or bool(available)
-            )
-            if not is_app_project:
-                result.update({
-                    "status": "non_app_project_skipped",
-                    "app": app.get("name"),
-                    "project_kind": project_kind,
-                    "reason": "The repository was not verified as an application/developer tool and has no verified installer.",
-                })
-                results.append(result)
-                print(json.dumps(result, ensure_ascii=False), flush=True)
-                continue
-
-            publication = mirror.publish_app(app, artifacts)
-            result.update({
-                "status": "mirrored" if artifacts else "source_available",
-                "app": app.get("name"),
-                "license": app.get("license_spdx"),
-                "project_kind": app.get("project_kind"),
-                "verified_release_packages": len(artifacts),
-                "rejected_release_assets": imported.get("rejected_assets", []),
-                "apphoryn_release": publication.get("release_url"),
-                "project_status": publication.get("project_status"),
-            })
-
-            if build_targets_requested:
-                if not missing:
-                    result["build_status"] = "requested_platforms_already_available"
-                elif not buildable:
-                    result["build_status"] = "not_dispatched_by_project_classification"
-                    result["build_targets_missing"] = missing
-                elif not selected:
-                    result["build_status"] = "no_supported_build_adapter"
-                    result["build_targets_missing"] = missing
-                    result["unsupported_build_targets"] = missing
-                elif mirror.has_recent_build_attempt(repository_url, git_ref, targets=selected, adapter_revision=adapter_revision):
-                    result["build_status"] = "already_queued_or_published"
-                    result["build_targets"] = selected
-                else:
-                    # Dispatch all supported missing targets. No Apphoryn per-run quota.
-                    mirror.dispatch_build(repository_url, git_ref, selected, str(app.get("slug") or app.get("id")), adapter_revision=adapter_revision)
-                    result["build_status"] = "workflow_dispatched"
-                    result["build_targets"] = selected
-                    result["build_adapters"] = {target: supported[target] for target in selected}
-            else:
-                result["build_status"] = "automatic_build_disabled"
-
-            record = {
-                "repository_url": app.get("repository_url") or repository_url,
-                "github_repo_id": app.get("github_repo_id") or candidate.get("id"),
-                "source_updated_at": app.get("source_updated_at") or candidate.get("updated_at"),
-            }
-            known_by_url[repo_key(str(record["repository_url"]))] = record
-            if record.get("github_repo_id"):
-                known_by_id[str(record["github_repo_id"])] = record
-        except ValueError as exc:
-            message = str(exc)
-            if "license text could not be retrieved" in message.lower():
-                scheduled_retries.append(retry_record(entry, now, message))
-                result.update({"status": "retry_scheduled", "reason": message[:500]})
-            else:
-                result.update({"status": "rejected_by_policy", "reason": message[:500]})
-        except Exception as exc:
-            message = f"{type(exc).__name__}: {exc}"
-            scheduled_retries.append(retry_record(entry, now, message))
-            result.update({"status": "failed_retry_scheduled", "reason": message[:500]})
-        results.append(result)
-        print(json.dumps(result, ensure_ascii=False), flush=True)
-
-    deduplicated: dict[str, dict[str, Any]] = {}
-    for row in scheduled_retries:
-        candidate = row.get("candidate") or {}
-        key = str(candidate.get("id") or repo_key(str(row.get("repository") or "")))
-        if key:
-            previous = deduplicated.get(key)
-            if previous is None or int(row.get("attempts") or 0) > int(previous.get("attempts") or 0):
-                deduplicated[key] = row
-
-    crawler.save()
-    save_retry_queue(Path(args.retry_file), list(deduplicated.values()))
     report = {
         "forward_scan": scan_report,
         "refresh_scan": refresh_report,
+        "crawl_batches": crawl_batches,
+        "run_budget_seconds": max(60, int(args.run_budget_seconds)),
+        "run_time_window_reached": time.monotonic() >= deadline,
         "processed": len(results),
         "mirrored": sum(row.get("status") == "mirrored" for row in results),
         "source_only": sum(row.get("status") == "source_available" for row in results),
         "rejected": sum(row.get("status") == "rejected_by_policy" for row in results),
         "failed": sum(row.get("status") in {"failed_retry_scheduled", "retry_scheduled"} for row in results),
-        "retry_queue_size": len(deduplicated),
+        "retry_queue_size": retry_queue_size,
     }
     Path(args.output).write_text(json.dumps({"report": report, "results": results}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False), flush=True)

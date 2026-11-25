@@ -9,6 +9,7 @@ on:
       - 'scripts/global_scout.py'
   schedule:
     - cron: '17 */2 * * *'
+  workflow_dispatch:
 concurrency:
   group: apphoryn-catalog-writes
   cancel-in-progress: false
@@ -80,8 +81,9 @@ jobs:
         shell: bash
         run: |
           python scripts/global_scout.py \
-            --max-repositories 10000 \
-            --max-pages 100
+            --max-repositories 2000 \
+            --max-pages 20 \
+            --run-budget-seconds 4500
 
       - name: Persist the Scout cursor and retry queue
         if: always() && hashFiles('data/scout-state.json') != ''
