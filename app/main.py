@@ -18,11 +18,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
-from typing import Literal
+from typing import Any, Literal
 
 from .config import ROOT, settings
 from .netutil import check_admin_token, client_ip
-from .ai_descriptions import DescriptionGenerator
+from .ai_descriptions import DescriptionGenerator, translate_catalog_description
 from .github_actions_oidc import GitHubActionsOIDCError, verify_github_actions_oidc
 from . import ai_router
 from .agent_api import router as agent_router
@@ -67,6 +67,13 @@ class InternalCatalogDescriptionRequest(BaseModel):
     topics: list[str] = Field(default_factory=list, max_length=25)
     readme_excerpt: str = Field(default="", max_length=12000)
     category: str = Field(default="other", max_length=80)
+
+
+class InternalCatalogTranslationRequest(BaseModel):
+    summary: str = Field(default="", max_length=240)
+    description: str = Field(min_length=1, max_length=1200)
+    translations: dict[str, Any] = Field(default_factory=dict)
+    description_translations: dict[str, Any] = Field(default_factory=dict)
 
 
 _ci_ai_request_counts: dict[tuple[str, int], int] = {}
@@ -178,6 +185,24 @@ def github_actions_catalog_description(
         )
     except Exception as exc:
         raise HTTPException(502, f"Catalog AI generation failed: {type(exc).__name__}.") from exc
+
+
+@app.post("/api/v1/internal/github-actions/catalog-translation")
+def github_actions_catalog_translation(
+    payload: InternalCatalogTranslationRequest,
+    authorization: str | None = Header(default=None),
+):
+    """Translate existing catalog text without changing its original wording."""
+    require_github_actions_workflow(authorization)
+    try:
+        return translate_catalog_description(
+            summary=payload.summary,
+            description=payload.description,
+            translations=payload.translations,
+            description_translations=payload.description_translations,
+        )
+    except Exception as exc:
+        raise HTTPException(502, f"Catalog translation failed: {type(exc).__name__}.") from exc
 
 
 @app.get("/api/v1/catalog/apps")
