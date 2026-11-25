@@ -9043,6 +9043,15 @@
         "linux",
         "macos",
         "windows"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "18c27502454c5ea2f408098124a2e51245fac7c3",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-25T10:37:13.946471+00:00"
+        }
       ]
     },
     {
