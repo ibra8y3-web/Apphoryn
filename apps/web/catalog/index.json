@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:25:37.093883+00:00",
+  "generated_at": "2026-11-25T22:25:53.420493+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -37313,6 +37313,81 @@
       "release_url": null,
       "platforms": [],
       "project_status": "source_available"
+    },
+    {
+      "id": "renaudallard-rassh",
+      "slug": "renaudallard-rassh",
+      "name": "rassh",
+      "summary": "SSH client for Android built on OpenSSH and LibreSSL, with its own terminal emulator and extra keys for Unix work",
+      "description": "SSH client for Android built on OpenSSH and LibreSSL, with its own terminal emulator and extra keys for Unix work",
+      "translations": {
+        "en": {
+          "summary": "SSH client for Android built on OpenSSH and LibreSSL, with its own terminal emulator and extra keys for Unix work",
+          "description": "SSH client for Android built on OpenSSH and LibreSSL, with its own terminal emulator and extra keys for Unix work"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/renaudallard/rassh/main/fastlane/metadata/android/en-US/images/icon.png",
+      "repository_url": "https://github.com/renaudallard/rassh",
+      "github_repo_id": "1402865576",
+      "source_updated_at": "2026-11-25T11:14:33Z",
+      "homepage_url": null,
+      "owner": "renaudallard",
+      "default_branch": "main",
+      "source_commit_sha": "dd2dc6883065b97d7fec0482c5522c72d8a28718",
+      "license_text": "Copyright (c) 2026 Renaud Allard <renaud@allard.it>\n\nPermission to use, copy, modify, and distribute this software for any\npurpose with or without fee is hereby granted, provided that the above\ncopyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES\nWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR\nANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES\nWHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN\nACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF\nOR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n",
+      "license_spdx": "ISC",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "f-droid",
+        "kotlin",
+        "libressl",
+        "openssh",
+        "reproducible-builds",
+        "scp",
+        "sftp",
+        "ssh",
+        "ssh-client",
+        "terminal",
+        "terminal-emulator"
+      ],
+      "latest_version": "v0.1.30",
+      "release_url": "https://github.com/renaudallard/rassh/releases/tag/v0.1.30",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-renaudallard-rassh-v0.1.30",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-renaudallard-rassh-v0.1.30/THIRD-PARTY-NOTICE-renaudallard-rassh.txt",
+      "artifacts": [
+        {
+          "id": "e78f21a86bdf5479625f6b3e61f2825d57962e71ae2da9642c0365ed9bcb665e",
+          "filename": "rassh-v0.1.30.apk",
+          "original_filename": "rassh-v0.1.30.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.1.30",
+          "size_bytes": 4005032,
+          "sha256": "e78f21a86bdf5479625f6b3e61f2825d57962e71ae2da9642c0365ed9bcb665e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "0c3c763d093d0536e7b46c56fa89eb695d9f16c2ec0723ebaf20822b852046fc",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-renaudallard-rassh-v0.1.30/rassh-v0.1.30.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-renaudallard-rassh-v0.1.30"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
     },
     {
       "id": "aetherravyn-ravenbot",
