@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:51:39.099652+00:00",
+  "generated_at": "2026-11-25T09:52:10.887312+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -176,6 +176,88 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "mrmans0n-alas",
+      "slug": "mrmans0n-alas",
+      "name": "alas",
+      "summary": "Agentic Development Environment (ADE) for macOS. Build in parallel with your agents!",
+      "description": "Agentic Development Environment (ADE) for macOS. Build in parallel with your agents!",
+      "translations": {
+        "en": {
+          "summary": "Agentic Development Environment (ADE) for macOS. Build in parallel with your agents!",
+          "description": "Agentic Development Environment (ADE) for macOS. Build in parallel with your agents!"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/mrmans0n/alas/main/Alas/Resources/RemoteWeb/icon.svg",
+      "repository_url": "https://github.com/mrmans0n/alas",
+      "github_repo_id": "1224908126",
+      "source_updated_at": "2026-11-21T00:50:42Z",
+      "homepage_url": "https://alas.build",
+      "owner": "mrmans0n",
+      "default_branch": "main",
+      "source_commit_sha": "7cb681df5eea4c2297b472679a3a444bcbe2333d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Nacho Lopez\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "agentic-ai",
+        "macos-app",
+        "swift"
+      ],
+      "latest_version": "v0.24.10",
+      "release_url": "https://github.com/mrmans0n/alas/releases/tag/v0.24.10",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mrmans0n-alas-v0.24.10",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mrmans0n-alas-v0.24.10/THIRD-PARTY-NOTICE-mrmans0n-alas.txt",
+      "artifacts": [
+        {
+          "id": "b610ce56690f323ad81fb1a7203521ebe9bc35aa6940a778dd424e192771e4e5",
+          "filename": "Alas-0.24.10-arm64.dmg",
+          "original_filename": "Alas-0.24.10-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.24.10",
+          "size_bytes": 180309539,
+          "sha256": "b610ce56690f323ad81fb1a7203521ebe9bc35aa6940a778dd424e192771e4e5",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mrmans0n-alas-v0.24.10/Alas-0.24.10-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mrmans0n-alas-v0.24.10"
+        },
+        {
+          "id": "40db9ed33741b2e76e0095f106b5212a864e11018411045b9ebff99c64532413",
+          "filename": "Alas-0.24.10-x86_64.dmg",
+          "original_filename": "Alas-0.24.10-x86_64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "x86_64",
+          "version": "v0.24.10",
+          "size_bytes": 192422151,
+          "sha256": "40db9ed33741b2e76e0095f106b5212a864e11018411045b9ebff99c64532413",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mrmans0n-alas-v0.24.10/Alas-0.24.10-x86_64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mrmans0n-alas-v0.24.10"
+        }
+      ],
+      "platforms": [
+        "macos"
       ]
     },
     {
