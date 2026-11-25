@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T05:31:48.043316+00:00",
+  "generated_at": "2026-11-25T05:31:52.772340+00:00",
   "apps": [
     {
       "id": "home-assistant-android",
@@ -1617,6 +1617,60 @@
         "android",
         "macos"
       ]
+    },
+    {
+      "id": "breeze-ideablade-validation-editor",
+      "slug": "breeze-ideablade-validation-editor",
+      "artifacts": [],
+      "name": "ideablade-validation-editor",
+      "summary": "Desktop editor for IdeaBlade Validation's metadata: edit the rules through forms instead of raw JSON, in JSON, TypeScript or C# files, with the library's own checks, code completion in expressions, and models, properties and validators pick",
+      "description": "Desktop editor for IdeaBlade Validation's metadata: edit the rules through forms instead of raw JSON, in JSON, TypeScript or C# files, with the library's own checks, code completion in expressions, and models, properties and validators picked from Breeze metadata, TypeScript and C#. Electron and Angular.",
+      "translations": {
+        "en": {
+          "summary": "Desktop editor for IdeaBlade Validation's metadata: edit the rules through forms instead of raw JSON, in JSON, TypeScript or C# files, with the library's own checks, code completion in expressions, and models, properties and validators pick",
+          "description": "Desktop editor for IdeaBlade Validation's metadata: edit the rules through forms instead of raw JSON, in JSON, TypeScript or C# files, with the library's own checks, code completion in expressions, and models, properties and validators picked from Breeze metadata, TypeScript and C#. Electron and Angular."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Breeze/ideablade-validation-editor/main/build/icon.png",
+      "repository_url": "https://github.com/Breeze/ideablade-validation-editor",
+      "github_repo_id": "1470869262",
+      "source_updated_at": "2026-11-24T21:39:18Z",
+      "homepage_url": null,
+      "owner": "Breeze",
+      "default_branch": "main",
+      "source_commit_sha": "4ca3313390e857a00f561032e92cff4ac40a0768",
+      "license_text": "MIT License\n\nCopyright (c) 2018-2026 IdeaBlade\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "angular",
+        "breezejs",
+        "business-rules",
+        "code-completion",
+        "csharp",
+        "data-validation",
+        "desktop-app",
+        "dotnet",
+        "editor",
+        "electron",
+        "json-schema",
+        "metadata",
+        "typescript",
+        "validation"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "kunzisoft-keepassdx",
