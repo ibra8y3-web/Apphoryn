@@ -57,15 +57,15 @@ jobs:
         run: |
           set +e
           docker run --rm -v "$PWD/target:/src:ro" -v "$PWD/reports:/reports" \
-            returntocorp/semgrep:1.144.0 scan --config auto --json --output /reports/semgrep.json /src
+            returntocorp/semgrep:1.186.0 scan --config auto --json --output /reports/semgrep.json /src
           echo "semgrep_exit=$?" >> reports/exit-codes.txt
 
-      - name: Run Trivy filesystem, dependency, secret and misconfiguration scan
+      - name: Run Trivy filesystem, dependency and misconfiguration scan
         shell: bash
         run: |
           set +e
           docker run --rm -v "$PWD/target:/src:ro" -v "$PWD/reports:/reports" \
-            aquasec/trivy:0.58.1 fs --scanners vuln,misconfig,secret --format json --output /reports/trivy.json /src
+            aquasec/trivy:0.76.2 fs --scanners vuln,misconfig --format json --output /reports/trivy.json /src
           echo "trivy_exit=$?" >> reports/exit-codes.txt
 
       - name: Run OSV dependency vulnerability scan
@@ -73,7 +73,7 @@ jobs:
         run: |
           set +e
           docker run --rm -v "$PWD/target:/src:ro" -v "$PWD/reports:/reports" \
-            ghcr.io/google/osv-scanner:v2.3.3 scan source --recursive /src --format json --output-file /reports/osv.json
+            ghcr.io/google/osv-scanner:v2.7.1 scan source --recursive /src --format json --output-file /reports/osv.json
           echo "osv_exit=$?" >> reports/exit-codes.txt
 
       - name: Generate CycloneDX software bill of materials
@@ -81,14 +81,14 @@ jobs:
         run: |
           set -euo pipefail
           docker run --rm -v "$PWD/target:/src:ro" -v "$PWD/reports:/reports" \
-            anchore/syft:v1.18.1 dir:/src -o cyclonedx-json=/reports/sbom.cdx.json
+            anchore/syft:v1.57.2 dir:/src -o cyclonedx-json=/reports/sbom.cdx.json
 
       - name: Scan exposed secrets without printing values
         shell: bash
         run: |
           set +e
           docker run --rm -v "$PWD/target:/src:ro" -v "$PWD/reports:/reports" \
-            zricethezav/gitleaks:v8.22.1 detect --source /src --no-git --redact \
+            ghcr.io/gitleaks/gitleaks:v8.30.1 detect --source /src --no-git --redact \
             --report-format json --report-path /reports/gitleaks.json
           echo "gitleaks_exit=$?" >> reports/exit-codes.txt
 
