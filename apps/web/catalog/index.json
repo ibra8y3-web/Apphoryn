@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T20:04:18.798328+00:00",
+  "generated_at": "2026-11-25T20:04:34.545277+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -23036,6 +23036,88 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "masterteniment-otg-flasher",
+      "slug": "masterteniment-otg-flasher",
+      "name": "otg-flasher",
+      "summary": "OTG FlashTool is an Android utility for performing supported firmware, custom recovery, and OTA package operations on compatible Android devices using USB OTG, without a PC.",
+      "description": "OTG FlashTool is an Android utility for performing supported firmware, custom recovery, and OTA package operations on compatible Android devices using USB OTG, without a PC.",
+      "translations": {
+        "en": {
+          "summary": "OTG FlashTool is an Android utility for performing supported firmware, custom recovery, and OTA package operations on compatible Android devices using USB OTG, without a PC.",
+          "description": "OTG FlashTool is an Android utility for performing supported firmware, custom recovery, and OTA package operations on compatible Android devices using USB OTG, without a PC."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/MasterTeniment/otg-flasher/main/fastlane/metadata/android/en-US/images/icon.png",
+      "repository_url": "https://github.com/MasterTeniment/otg-flasher",
+      "github_repo_id": "1464719805",
+      "source_updated_at": "2026-11-23T22:05:58Z",
+      "homepage_url": null,
+      "owner": "MasterTeniment",
+      "default_branch": "main",
+      "source_commit_sha": "028dceec20313f161976e6357f170234b9211d12",
+      "license_text": "MIT License\n\nCopyright (c) 2025-2026 Teniment\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "system",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "android-flashing",
+        "android-flashing-tool",
+        "android-utility-software",
+        "custom-recovery",
+        "custom-rom",
+        "custom-roms",
+        "firmware",
+        "firmware-tools",
+        "firmware-update",
+        "jetpack-compose",
+        "kotlin",
+        "kotlin-android",
+        "open-source",
+        "ota-updates",
+        "otg",
+        "otg-cable",
+        "usb-otg"
+      ],
+      "latest_version": "v2.8.2",
+      "release_url": "https://github.com/MasterTeniment/otg-flasher/releases/tag/v2.8.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-masterteniment-otg-flasher-v2.8.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-masterteniment-otg-flasher-v2.8.2/THIRD-PARTY-NOTICE-masterteniment-otg-flasher.txt",
+      "artifacts": [
+        {
+          "id": "46dee0acb24f1f7d64ac291076127f3a655e5282ca29f70a822e7c0488146adf",
+          "filename": "OTGFlashTool-v2.8.2.apk",
+          "original_filename": "OTGFlashTool-v2.8.2.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v2.8.2",
+          "size_bytes": 10287072,
+          "sha256": "46dee0acb24f1f7d64ac291076127f3a655e5282ca29f70a822e7c0488146adf",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "368f2e20ddc56679124e29f143c760fa3184f56deeacd41aa2eb71935ce23419",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-masterteniment-otg-flasher-v2.8.2/OTGFlashTool-v2.8.2.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-masterteniment-otg-flasher-v2.8.2"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
