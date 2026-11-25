@@ -52,6 +52,35 @@ def configured_discovery_queries() -> list[str]:
     return list(dict.fromkeys(configured or DEFAULT_GLOBAL_SCOUT_QUERIES))
 
 
+def submit_archive_candidates(candidates: list[dict[str, Any]]) -> dict[str, int]:
+    """Queue discovery metadata in bounded OIDC batches; the Railway worker archives app versions."""
+    totals = {"queued": 0, "refreshed": 0, "ignored": 0, "batches": 0, "failed_batches": 0}
+    rows = [row for row in candidates if isinstance(row, dict) and (row.get("html_url") or row.get("repository_url"))]
+    for start in range(0, len(rows), 200):
+        batch = rows[start:start + 200]
+        try:
+            result = call_apphoryn_internal_api(
+                "/api/v1/internal/github-actions/archive-candidates",
+                method="POST",
+                payload={"repositories": batch},
+            )
+            for key in ("queued", "refreshed", "ignored"):
+                totals[key] += int(result.get(key) or 0)
+            totals["batches"] += 1
+        except Exception as exc:
+            totals["failed_batches"] += 1
+            print(json.dumps({
+                "event": "repository_archive_enqueue_failed",
+                "batch_start": start,
+                "batch_size": len(batch),
+                "error_type": type(exc).__name__,
+                "message": str(exc)[:240],
+            }, ensure_ascii=False), flush=True)
+    if rows:
+        print(json.dumps({"event": "repository_archive_enqueue", **totals, "candidates": len(rows)}, ensure_ascii=False), flush=True)
+    return totals
+
+
 
 def repo_key(value: str) -> str:
     return value.strip().rstrip("/").casefold().removesuffix(".git")
@@ -336,6 +365,12 @@ def main() -> None:
                 "reason": f"Targeted Apphoryn app discovery: {query}",
             })
 
+    archive_targeted = [
+        entry.get("candidate") for entry in queue
+        if isinstance(entry.get("candidate"), dict)
+    ]
+    archive_totals = submit_archive_candidates(archive_targeted)
+
     last_discovery_refresh = time.monotonic()
 
     def refresh_targeted_discovery(target: list[dict[str, Any]]) -> None:
@@ -580,6 +615,9 @@ def main() -> None:
             cursor_key=cursor_key,
         )
         crawl_batches += 1
+        batch_archive = submit_archive_candidates(discovered)
+        for key in ("queued", "refreshed", "ignored", "batches", "failed_batches"):
+            archive_totals[key] += batch_archive[key]
         batch_entries: list[dict[str, Any]] = []
         for candidate in discovered:
             url = str(candidate.get("html_url") or "")
@@ -645,6 +683,7 @@ def main() -> None:
         "rejected": sum(row.get("status") == "rejected_by_policy" for row in results),
         "failed": sum(row.get("status") in {"failed_retry_scheduled", "retry_scheduled"} for row in results),
         "retry_queue_size": retry_queue_size,
+        "repository_archive": archive_totals,
     }
     Path(args.output).write_text(json.dumps({"report": report, "results": results}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False), flush=True)
