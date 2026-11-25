@@ -153,5 +153,7 @@ class AIRouterTests(unittest.TestCase):
         self.assertEqual([model.model for model in models if model.provider == "xai"], ["grok-test"])
         status = next(item for item in providers if item["provider"] == "xai")
         self.assertTrue(status["enabled"])
-\n\nif __name__ == "__main__":
+
+
+if __name__ == "__main__":
     unittest.main()
