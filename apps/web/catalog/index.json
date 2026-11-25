@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:06:37.411302+00:00",
+  "generated_at": "2026-11-25T21:06:56.925201+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -37670,6 +37670,74 @@
           "requested_at": "2026-11-25T19:52:48.449075+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
         }
+      ]
+    },
+    {
+      "id": "varun-legend-vplayer",
+      "slug": "varun-legend-vplayer",
+      "name": "Vplayer",
+      "summary": "A simple, lightweight Android video player built with ExoPlayer (media3), featuring gesture controls, PiP support, and MediaStore-based file browsing. Open-sourced as a learning project for early Android developers.",
+      "description": "A simple, lightweight Android video player built with ExoPlayer (media3), featuring gesture controls, PiP support, and MediaStore-based file browsing. Open-sourced as a learning project for early Android developers.",
+      "translations": {
+        "en": {
+          "summary": "A simple, lightweight Android video player built with ExoPlayer (media3), featuring gesture controls, PiP support, and MediaStore-based file browsing. Open-sourced as a learning project for early Android developers.",
+          "description": "A simple, lightweight Android video player built with ExoPlayer (media3), featuring gesture controls, PiP support, and MediaStore-based file browsing. Open-sourced as a learning project for early Android developers."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/165490800?v=4",
+      "repository_url": "https://github.com/varun-legend/Vplayer",
+      "github_repo_id": "1006930754",
+      "source_updated_at": "2026-01-16T12:46:00Z",
+      "homepage_url": null,
+      "owner": "varun-legend",
+      "default_branch": "main",
+      "source_commit_sha": "eab58956d262abb3c6f4adf53301480e9456a01f",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Varun Prasath\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android-app",
+        "exoplayer",
+        "glideimageloader",
+        "kotlin-android",
+        "media3-exoplayer",
+        "video-player"
+      ],
+      "latest_version": "Debug",
+      "release_url": "https://github.com/varun-legend/Vplayer/releases/tag/Debug",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-varun-legend-vplayer-Debug",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-varun-legend-vplayer-Debug/THIRD-PARTY-NOTICE-varun-legend-vplayer.txt",
+      "artifacts": [
+        {
+          "id": "1ce01ad122355be7248c0fc1e2731b74255a72d3d60f66be40306b45970f60f6",
+          "filename": "Vplayer.apk",
+          "original_filename": "Vplayer.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "Debug",
+          "size_bytes": 9026176,
+          "sha256": "1ce01ad122355be7248c0fc1e2731b74255a72d3d60f66be40306b45970f60f6",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "09d3d52f2c8520e1caa438316c46b461101eeb8506c2c3dcbed5f5fc1f53455e",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-varun-legend-vplayer-Debug/Vplayer.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-varun-legend-vplayer-Debug"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
