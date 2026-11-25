@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T05:33:53.975317+00:00",
+  "generated_at": "2026-11-25T05:34:16.206220+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -1529,6 +1529,159 @@
           ],
           "requested_at": "2026-11-25T04:23:38.309026+00:00"
         }
+      ]
+    },
+    {
+      "id": "secnotes-glassweather",
+      "slug": "secnotes-glassweather",
+      "name": "glassweather",
+      "summary": "A worthy successor to MSN Weather — current weather, 7-day forecast, and 30 years of on-this-day history. Web, Windows & Linux desktop.  MSN 天气的替代品——实时天气、7 天预报、30 年今日历史，支持网页与 Windows/Linux 桌面。",
+      "description": "A worthy successor to MSN Weather — current weather, 7-day forecast, and 30 years of on-this-day history. Web, Windows & Linux desktop.  MSN 天气的替代品——实时天气、7 天预报、30 年今日历史，支持网页与 Windows/Linux 桌面。",
+      "translations": {
+        "en": {
+          "summary": "A worthy successor to MSN Weather — current weather, 7-day forecast, and 30 years of on-this-day history. Web, Windows & Linux desktop.  MSN 天气的替代品——实时天气、7 天预报、30 年今日历史，支持网页与 Windows/Linux 桌面。",
+          "description": "A worthy successor to MSN Weather — current weather, 7-day forecast, and 30 years of on-this-day history. Web, Windows & Linux desktop.  MSN 天气的替代品——实时天气、7 天预报、30 年今日历史，支持网页与 Windows/Linux 桌面。"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/secnotes/glassweather/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/secnotes/glassweather",
+      "github_repo_id": "1337082964",
+      "source_updated_at": "2026-11-24T14:48:16Z",
+      "homepage_url": "https://secnotes.github.io/glassweather",
+      "owner": "secnotes",
+      "default_branch": "main",
+      "source_commit_sha": "d686a3a2b02c9d34bb33048d77f10cd939b4e0bc",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Yansong Li (secnotes)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "desktop-app",
+        "msn-weather",
+        "weather",
+        "weather-forecast",
+        "windows-app"
+      ],
+      "latest_version": "v0.1.0",
+      "release_url": "https://github.com/secnotes/glassweather/releases/tag/v0.1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-secnotes-glassweather-v0.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-secnotes-glassweather-v0.1.0/THIRD-PARTY-NOTICE-secnotes-glassweather.txt",
+      "artifacts": [
+        {
+          "id": "6718322948772ffee0fa05494e19c0bb1f5dbb3ee5504b3233fae9015f68301c",
+          "filename": "GlassWeather-0.1.0-1.x86_64.rpm",
+          "original_filename": "GlassWeather-0.1.0-1.x86_64.rpm",
+          "platform": "linux",
+          "package_type": "RPM package",
+          "architecture": "x86_64",
+          "version": "v0.1.0",
+          "size_bytes": 2496073,
+          "sha256": "6718322948772ffee0fa05494e19c0bb1f5dbb3ee5504b3233fae9015f68301c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-secnotes-glassweather-v0.1.0/GlassWeather-0.1.0-1.x86_64.rpm",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-secnotes-glassweather-v0.1.0"
+        },
+        {
+          "id": "968f5b2c07e49c754c166cc03bb953f126e815b17c4a450aaae89336e821cc78",
+          "filename": "GlassWeather_0.1.0_amd64.AppImage",
+          "original_filename": "GlassWeather_0.1.0_amd64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.1.0",
+          "size_bytes": 81172984,
+          "sha256": "968f5b2c07e49c754c166cc03bb953f126e815b17c4a450aaae89336e821cc78",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-secnotes-glassweather-v0.1.0/GlassWeather_0.1.0_amd64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-secnotes-glassweather-v0.1.0"
+        },
+        {
+          "id": "f973db1d6fcdc7bfac0a6da33e83f1fa745d430835b9ff7d901e0d32a3498088",
+          "filename": "GlassWeather_0.1.0_amd64.deb",
+          "original_filename": "GlassWeather_0.1.0_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.1.0",
+          "size_bytes": 2490166,
+          "sha256": "f973db1d6fcdc7bfac0a6da33e83f1fa745d430835b9ff7d901e0d32a3498088",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-secnotes-glassweather-v0.1.0/GlassWeather_0.1.0_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-secnotes-glassweather-v0.1.0"
+        },
+        {
+          "id": "cf82b235ed689b60c14909597c31a7905631077b388d3884325a19eba3083743",
+          "filename": "GlassWeather_0.1.0_x64-setup.exe",
+          "original_filename": "GlassWeather_0.1.0_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.1.0",
+          "size_bytes": 2041918,
+          "sha256": "cf82b235ed689b60c14909597c31a7905631077b388d3884325a19eba3083743",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-secnotes-glassweather-v0.1.0/GlassWeather_0.1.0_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-secnotes-glassweather-v0.1.0"
+        },
+        {
+          "id": "868b1985da55274a217597e97f47b7127426783e2543e3241d5ca2aa07a15711",
+          "filename": "GlassWeather_0.1.0_x64_en-US.msi",
+          "original_filename": "GlassWeather_0.1.0_x64_en-US.msi",
+          "platform": "windows",
+          "package_type": "Windows installer",
+          "architecture": "x86_64",
+          "version": "v0.1.0",
+          "size_bytes": 2994176,
+          "sha256": "868b1985da55274a217597e97f47b7127426783e2543e3241d5ca2aa07a15711",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-secnotes-glassweather-v0.1.0/GlassWeather_0.1.0_x64_en-US.msi",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-secnotes-glassweather-v0.1.0"
+        },
+        {
+          "id": "92ae5b713361eba5673ccab6c16f026bf6222e9277be062f33024e5fee436ede",
+          "filename": "GlassWeather_v0.1.0_x64_portable.exe",
+          "original_filename": "GlassWeather_v0.1.0_x64_portable.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.1.0",
+          "size_bytes": 8669184,
+          "sha256": "92ae5b713361eba5673ccab6c16f026bf6222e9277be062f33024e5fee436ede",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-secnotes-glassweather-v0.1.0/GlassWeather_v0.1.0_x64_portable.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-secnotes-glassweather-v0.1.0"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "windows"
       ]
     },
     {
