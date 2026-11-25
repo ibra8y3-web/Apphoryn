@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:24:47.252658+00:00",
+  "generated_at": "2026-11-25T04:25:01.221154+00:00",
   "apps": [
     {
       "id": "lumiag5-antigravitymb",
@@ -2214,6 +2214,78 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-roger364-ramscope-v1.0.0/ramscope-1.0.0.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-roger364-ramscope-v1.0.0"
+        }
+      ],
+      "platforms": [
+        "windows"
+      ]
+    },
+    {
+      "id": "seabeardev-reverie",
+      "slug": "seabeardev-reverie",
+      "name": "Reverie",
+      "summary": "A command-line information store for quick reference of frequently used data, with dot notation paths, shell completions, and MCP server for AI agent   integration.",
+      "description": "A command-line information store for quick reference of frequently used data, with dot notation paths, shell completions, and MCP server for AI agent   integration.",
+      "translations": {
+        "en": {
+          "summary": "A command-line information store for quick reference of frequently used data, with dot notation paths, shell completions, and MCP server for AI agent   integration.",
+          "description": "A command-line information store for quick reference of frequently used data, with dot notation paths, shell completions, and MCP server for AI agent   integration."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/40605056?v=4",
+      "repository_url": "https://github.com/seabearDEV/Reverie",
+      "github_repo_id": "1160240960",
+      "source_updated_at": "2026-11-25T03:00:43Z",
+      "homepage_url": "https://seabear.dev/work/reverie/",
+      "owner": "seabearDEV",
+      "default_branch": "main",
+      "source_commit_sha": "41ce9dfea214a5f893577240e5ac88478b254d05",
+      "license_text": "MIT License\n\nCopyright (c) 2025 Kory Hoopes\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "bun",
+        "cli",
+        "command-line-tool",
+        "data-store",
+        "developer-tools",
+        "mcp-server",
+        "model-context-protocol",
+        "producitivity",
+        "shell-completions",
+        "typescript"
+      ],
+      "latest_version": "v1.3.0",
+      "release_url": "https://github.com/seabearDEV/Reverie/releases/tag/v1.3.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-seabeardev-reverie-v1.3.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-seabeardev-reverie-v1.3.0/THIRD-PARTY-NOTICE-seabeardev-reverie.txt",
+      "artifacts": [
+        {
+          "id": "85b5bebf4f12ec4f9d1fbe96d17e7a01e7f29597a9b5cf0832936b052b25b0e5",
+          "filename": "rvr-win-x64.exe",
+          "original_filename": "rvr-win-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.3.0",
+          "size_bytes": 100241920,
+          "sha256": "85b5bebf4f12ec4f9d1fbe96d17e7a01e7f29597a9b5cf0832936b052b25b0e5",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-seabeardev-reverie-v1.3.0/rvr-win-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-seabeardev-reverie-v1.3.0"
         }
       ],
       "platforms": [
