@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:24:52.910831+00:00",
+  "generated_at": "2026-11-25T19:25:06.892773+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -8034,7 +8034,7 @@
       "icon_url": "https://raw.githubusercontent.com/akshit-bansal11/edgepad/main/site/app/icon.svg",
       "repository_url": "https://github.com/akshit-bansal11/edgepad",
       "github_repo_id": "1365671317",
-      "source_updated_at": "2026-11-25T11:47:35Z",
+      "source_updated_at": "2026-11-25T16:59:49Z",
       "homepage_url": "https://getedgepad.com",
       "owner": "akshit-bansal11",
       "default_branch": "main",
