@@ -8,6 +8,7 @@ import sqlite3
 import threading
 import time
 import uuid
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from contextlib import contextmanager
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -768,8 +769,9 @@ def execute_run(run: dict[str, Any]) -> None:
             raise
 
         planned = plan.get("tasks") if isinstance(plan.get("tasks"), list) else []
-        assignments: list[dict[str, str]] = []
+        assignments: list[dict[str, Any]] = []
         seen: set[str] = set()
+        requested_dependencies: dict[str, list[str]] = {}
         for item in planned:
             if not isinstance(item, dict):
                 continue
@@ -777,22 +779,33 @@ def execute_run(run: dict[str, Any]) -> None:
             if agent_id not in AGENT_BY_ID or agent_id in {"niebex", "supervisor"} or agent_id in seen:
                 continue
             seen.add(agent_id)
+            raw_dependencies = item.get("depends_on") if isinstance(item.get("depends_on"), list) else []
+            requested_dependencies[agent_id] = [
+                str(dep).strip() for dep in raw_dependencies
+                if isinstance(dep, str) and str(dep).strip() and str(dep).strip() != agent_id
+            ][:8]
             assignments.append({
                 "agent_id": agent_id,
                 "title": str(item.get("title") or AGENT_BY_ID[agent_id]["title"])[:180],
                 "instructions": str(item.get("instructions") or goal)[:6000],
+                "depends_on": [],
             })
             if len(assignments) >= 8:
                 break
         if not assignments:
             assignments = [
-                {"agent_id": "research", "title": "Research the request", "instructions": goal},
-                {"agent_id": "writing", "title": "Prepare a structured result", "instructions": goal},
+                {"agent_id": "research", "title": "Research the request", "instructions": goal, "depends_on": []},
+                {"agent_id": "writing", "title": "Prepare a structured result", "instructions": goal, "depends_on": []},
             ]
+        allowed_agent_ids = {item["agent_id"] for item in assignments}
+        for assignment in assignments:
+            deps = requested_dependencies.get(assignment["agent_id"], [])
+            assignment["depends_on"] = [dep for dep in deps if dep in allowed_agent_ids]
         assignments.append({
             "agent_id": "supervisor",
             "title": "Review evidence and final result",
             "instructions": "Audit preceding agent outputs and flag unsupported claims and unresolved requirements.",
+            "depends_on": [item["agent_id"] for item in assignments],
         })
         STORE.update_task(
             planner_task, "completed",
@@ -800,44 +813,82 @@ def execute_run(run: dict[str, Any]) -> None:
             result={"summary": str(plan.get("summary") or "")[:1200], "plan": assignments},
         )
 
-    # Preserve completed specialist outputs across process restarts and continue at the first unfinished agent.
+    # Resume completed agents, then execute dependency-free specialists concurrently in bounded waves.
     completed_by_agent: dict[str, dict[str, Any]] = {}
     for task in existing_tasks:
-        if task["agent_id"] not in {"niebex"} and task["status"] == "completed" and isinstance(task.get("result"), dict):
+        if task["agent_id"] != "niebex" and task["status"] == "completed" and isinstance(task.get("result"), dict):
             completed_by_agent[task["agent_id"]] = task
 
     context: list[dict[str, Any]] = []
     for assignment in assignments:
-        agent_id = assignment["agent_id"]
-        completed_task = completed_by_agent.get(agent_id)
+        completed_task = completed_by_agent.get(assignment["agent_id"])
         if completed_task:
             context.append({
-                "agent_id": agent_id,
+                "agent_id": assignment["agent_id"],
                 "title": completed_task["title"],
                 "provider": completed_task.get("provider"),
                 "model": completed_task.get("model"),
                 "result": completed_task["result"],
             })
-            continue
 
+    pending = [item for item in assignments if item["agent_id"] not in completed_by_agent]
+    finished = {item["agent_id"] for item in assignments if item["agent_id"] in completed_by_agent}
+    configured_parallelism = max(1, min(int(os.getenv("APPHORYN_AGENT_TASK_CONCURRENCY", "3")), 4))
+
+    def execute_assignment(assignment: dict[str, Any], prior_context: list[dict[str, Any]]) -> dict[str, Any]:
+        agent_id = str(assignment["agent_id"])
         task_id = STORE.create_task(run_id, agent_id, assignment["title"], assignment["instructions"])
         STORE.update_task(task_id, "running")
         try:
             result, route, tool_result = _agent_call(
-                agent_id, goal, assignment["instructions"], context, memories, allow_actions, allow_code_changes
+                agent_id, goal, assignment["instructions"], prior_context, memories,
+                allow_actions, allow_code_changes
             )
             STORE.update_task(
                 task_id, "completed", provider=route.get("provider"), model=route.get("model"),
                 result=result, tool_result=tool_result,
             )
-            context.append({
+            return {
                 "agent_id": agent_id, "title": assignment["title"],
                 "provider": route.get("provider"), "model": route.get("model"), "result": result,
-            })
-            STORE.heartbeat(threading.current_thread().name, "running", run_id)
+            }
         except Exception as exc:
             STORE.update_task(task_id, "failed", error=f"{type(exc).__name__}: {str(exc)[:700]}")
             raise
+
+    while pending:
+        ready = [
+            item for item in pending
+            if set(item.get("depends_on") or []).issubset(finished)
+        ]
+        if not ready:
+            unresolved = {item["agent_id"]: item.get("depends_on", []) for item in pending}
+            raise RuntimeError(f"Agent plan contains a dependency cycle or missing dependency: {unresolved}")
+        prior_context = list(context)
+        completed_wave: dict[str, dict[str, Any]] = {}
+        failures: list[Exception] = []
+        with ThreadPoolExecutor(max_workers=min(configured_parallelism, len(ready)),
+                                thread_name_prefix=f"agent-{run_id[:8]}") as executor:
+            future_map = {
+                executor.submit(execute_assignment, assignment, prior_context): assignment
+                for assignment in ready
+            }
+            for future in as_completed(future_map):
+                assignment = future_map[future]
+                try:
+                    completed_wave[assignment["agent_id"]] = future.result()
+                except Exception as exc:
+                    failures.append(exc)
+        if failures:
+            raise failures[0]
+        # Append in planner order, not completion-time order, for stable and auditable results.
+        for assignment in ready:
+            result = completed_wave[assignment["agent_id"]]
+            context.append(result)
+            finished.add(assignment["agent_id"])
+        ready_ids = {item["agent_id"] for item in ready}
+        pending = [item for item in pending if item["agent_id"] not in ready_ids]
+        STORE.heartbeat(threading.current_thread().name, "running", run_id)
 
     final_result = {
         "plan_summary": str(plan.get("summary") or "")[:1200],
