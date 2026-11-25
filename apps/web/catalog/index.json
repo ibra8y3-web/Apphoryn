@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T18:17:33.310854+00:00",
+  "generated_at": "2026-11-25T18:17:50.498082+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -3798,6 +3798,79 @@
       "platforms": [
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "roxycon-dev-ciallo-reader",
+      "slug": "roxycon-dev-ciallo-reader",
+      "name": "Ciallo-Reader",
+      "summary": "Android 小说、漫画与电子书阅读器；支持 TXT、EPUB、CBZ、本地书架、多源搜索、下载与离线阅读。 Android novel, manga & ebook reader.",
+      "description": "Android 小说、漫画与电子书阅读器；支持 TXT、EPUB、CBZ、本地书架、多源搜索、下载与离线阅读。 Android novel, manga & ebook reader.",
+      "translations": {
+        "en": {
+          "summary": "Android 小说、漫画与电子书阅读器；支持 TXT、EPUB、CBZ、本地书架、多源搜索、下载与离线阅读。 Android novel, manga & ebook reader.",
+          "description": "Android 小说、漫画与电子书阅读器；支持 TXT、EPUB、CBZ、本地书架、多源搜索、下载与离线阅读。 Android novel, manga & ebook reader."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/roxycon-dev/Ciallo-Reader/main/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/roxycon-dev/Ciallo-Reader",
+      "github_repo_id": "1316127843",
+      "source_updated_at": "2026-11-25T17:29:28Z",
+      "homepage_url": "https://roxycon-dev.github.io/Ciallo-Reader/",
+      "owner": "roxycon-dev",
+      "default_branch": "main",
+      "source_commit_sha": "1d3b5ffe6c9b2f05a155ba19662dd1a9e8658615",
+      "license_text": "MIT License\n\nCopyright (c) 2026 roxycon-dev\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-reader",
+        "cbz",
+        "ebook-reader",
+        "epub",
+        "jetpack-compose",
+        "kotlin",
+        "manga-reader",
+        "novel-reader",
+        "offline-reading"
+      ],
+      "latest_version": "v1.6.8",
+      "release_url": "https://github.com/roxycon-dev/Ciallo-Reader/releases/tag/v1.6.8",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-roxycon-dev-ciallo-reader-v1.6.8",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-roxycon-dev-ciallo-reader-v1.6.8/THIRD-PARTY-NOTICE-roxycon-dev-ciallo-reader.txt",
+      "artifacts": [
+        {
+          "id": "e1d927e9a95b885dbb723537fbd158286509df110aa34d7ea54886667eeb6a4e",
+          "filename": "Ciallo-Reader-v1.6.8.apk",
+          "original_filename": "Ciallo-Reader-v1.6.8.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.6.8",
+          "size_bytes": 31457162,
+          "sha256": "e1d927e9a95b885dbb723537fbd158286509df110aa34d7ea54886667eeb6a4e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "3ee5fb4018a00457eb24cbbfc43e78967d24069b760a5d386d6c9454b3770794",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-roxycon-dev-ciallo-reader-v1.6.8/Ciallo-Reader-v1.6.8.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-roxycon-dev-ciallo-reader-v1.6.8"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
