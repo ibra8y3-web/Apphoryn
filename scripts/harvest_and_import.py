@@ -37,6 +37,7 @@ from app.build_support import detect_supported_build_targets
 from app.github_client import GitHubClient
 from app.github_release_mirror import GitHubMirrorError, GitHubReleaseMirror
 from app.services import CatalogService
+from app.import_pacing import ImportPacer
 from app.github_actions_client import call_apphoryn_internal_api
 
 
@@ -127,6 +128,12 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--query", default=os.getenv("APPHORYN_QUERY", "topic:opensource"))
     parser.add_argument("--limit", type=int, default=int(os.getenv("APPHORYN_LIMIT", "100")), help="GitHub search page size (1-100); results are paginated.")
+    parser.add_argument(
+        "--import-interval-seconds",
+        type=float,
+        default=float(os.getenv("APPHORYN_IMPORT_INTERVAL_SECONDS", "60")),
+        help="Minimum seconds between import starts (default: 60).",
+    )
     parser.add_argument("--seed-file", default=str(ROOT / "catalog-seed-repositories.json"))
     parser.add_argument("--output", default="discovery-candidates.json")
     parser.add_argument("--skip-seeds", action="store_true")
@@ -182,6 +189,7 @@ def main() -> None:
         raise SystemExit("APPHORYN_AUTO_BUILD_TARGETS contains unsupported targets.")
 
     results: list[dict[str, object]] = []
+    import_pacer = ImportPacer(args.import_interval_seconds)
     for entry in queue:
         repo_url = entry["repository"]
         result: dict[str, object] = {
@@ -190,6 +198,7 @@ def main() -> None:
             "status": "started",
         }
         try:
+            import_pacer.wait_for_slot()
             imported = catalog.import_repository(repo_url, mirror_release_assets=True)
             app = imported["app"]
             verified_artifacts = imported.get("artifacts", [])

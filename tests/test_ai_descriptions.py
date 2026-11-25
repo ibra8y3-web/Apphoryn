@@ -79,6 +79,62 @@ class AiDescriptionTests(unittest.TestCase):
         self.assertEqual(result["translation_status"], "complete")
         self.assertEqual(result["ai_provider"], "openrouter")
 
+    def test_fallback_upstream_description_is_translated_without_claiming_ai_authorship(self):
+        arabic = {
+            "summary": "مدير ملفات للمجتمع",
+            "description": "تطبيق لإدارة الملفات يطوره المجتمع.",
+        }
+        with (
+            patch("app.ai_descriptions.ai_router.has_configured_ai", return_value=True),
+            patch("app.ai_descriptions.ai_router.generate_json", side_effect=[
+                RuntimeError("AI description generation unavailable"),
+                (arabic, {"provider": "test-provider", "model": "test-model"}),
+            ]),
+            patch.dict("os.environ", {"APPHORYN_AI_ALLOW_LEGACY_PROVIDER": "false"}),
+        ):
+            result = DescriptionGenerator().generate(
+                name="Community File Manager",
+                owner="example",
+                description="A community-maintained file manager.",
+                topics=["file-manager"],
+                readme_excerpt="Install the application to manage local files.",
+                category="utility",
+            )
+
+        self.assertEqual(result["description"], "A community-maintained file manager.")
+        self.assertEqual(result["description_translations"]["ar"], arabic["description"])
+        self.assertEqual(result["translations"]["ar"], arabic["summary"])
+        self.assertEqual(result["translation_status"], "complete")
+        self.assertEqual(result["generated_by_ai"], "false")
+        self.assertEqual(result["classification_source"], "heuristic")
+        self.assertEqual(result["translation_ai_provider"], "test-provider")
+
+    def test_translation_only_helper_preserves_the_published_source_wording(self):
+        from app.ai_descriptions import translate_catalog_description
+
+        arabic = {
+            "summary": "وصف عربي موجز",
+            "description": "هذا هو الوصف العربي الأصلي للتطبيق.",
+        }
+        with (
+            patch("app.ai_descriptions.ai_router.generate_json", return_value=(
+                arabic, {"provider": "test-provider", "model": "test-model"}
+            )),
+        ):
+            result = translate_catalog_description(
+                summary="Original published summary",
+                description="Original published description, written by its developer.",
+                translations={"en": "Original published summary"},
+                description_translations={"en": "Original published description, written by its developer."},
+            )
+
+        self.assertEqual(result["summary"], "Original published summary")
+        self.assertEqual(result["description"], "Original published description, written by its developer.")
+        self.assertEqual(result["translations"]["ar"], "وصف عربي موجز")
+        self.assertEqual(result["description_translations"]["ar"], "هذا هو الوصف العربي الأصلي للتطبيق.")
+        self.assertEqual(result["translation_status"], "complete")
+        self.assertEqual(result["translation_ai_provider"], "test-provider")
+
     def test_fallback_recognizes_standalone_desktop_application(self):
         result = fallback_project_classification(
             name="Example Desktop App",

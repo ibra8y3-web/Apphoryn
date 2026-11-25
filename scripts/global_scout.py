@@ -23,6 +23,8 @@ from app.github_client import GitHubClient
 from app.github_release_mirror import GitHubReleaseMirror
 from app.repository_crawler import RepositoryCrawler
 from app.services import CatalogService
+from app.import_pacing import ImportPacer
+from app.github_actions_client import call_apphoryn_internal_api
 
 
 RETRY_DELAYS_SECONDS = (6 * 3600, 24 * 3600, 3 * 86400, 7 * 86400, 30 * 86400)
@@ -139,6 +141,101 @@ def known_current(candidate: dict[str, Any], by_id: dict[str, dict], by_url: dic
     return True
 
 
+def has_arabic_translation(app: dict[str, Any]) -> bool:
+    translations = app.get("translations") if isinstance(app.get("translations"), dict) else {}
+    descriptions = (
+        app.get("description_translations")
+        if isinstance(app.get("description_translations"), dict) else {}
+    )
+    arabic_value = translations.get("ar")
+    arabic_summary = (
+        str(arabic_value.get("summary") or "").strip()
+        if isinstance(arabic_value, dict) else str(arabic_value or "").strip()
+    )
+    arabic_description = str(descriptions.get("ar") or "").strip()
+    if not arabic_description and isinstance(arabic_value, dict):
+        arabic_description = str(arabic_value.get("description") or "").strip()
+    return bool(
+        str(app.get("translation_status") or "").lower() == "complete"
+        and arabic_summary
+        and arabic_description
+    )
+
+
+def localize_existing_catalog_rows(
+    rows: list[dict[str, Any]],
+    mirror: GitHubReleaseMirror,
+    *,
+    interval_seconds: float = 1.0,
+    deadline: float | None = None,
+    max_attempts: int | None = None,
+    pacer: ImportPacer | None = None,
+) -> dict[str, int]:
+    """Translate published descriptions in place, without rewriting source wording."""
+    pacer = pacer or ImportPacer(interval_seconds)
+    report = {"scanned": 0, "checked": 0, "translated": 0, "failed": 0, "deferred": 0}
+    for app in rows:
+        report["scanned"] += 1
+        if has_arabic_translation(app):
+            continue
+        description = str(app.get("description") or "").strip()
+        if not description:
+            continue
+        report["checked"] += 1
+        if not pacer.wait_for_slot(deadline):
+            report["deferred"] += 1
+            break
+        try:
+            localized = call_apphoryn_internal_api(
+                "/api/v1/internal/github-actions/catalog-translation",
+                method="POST",
+                payload={
+                    "summary": str(app.get("summary") or ""),
+                    "description": description,
+                    "translations": app.get("translations") or {},
+                    "description_translations": app.get("description_translations") or {},
+                },
+            )
+            if not has_arabic_translation(localized):
+                raise ValueError("Arabic summary and description were not both returned.")
+            updated = {
+                **app,
+                "summary": str(app.get("summary") or localized.get("summary") or ""),
+                "description": description,
+                "translations": localized.get("translations") or {},
+                "description_translations": localized.get("description_translations") or {},
+                "translation_status": "complete",
+            }
+            mirror.publish_app(updated, [])
+            app.update({
+                "translations": updated["translations"],
+                "description_translations": updated["description_translations"],
+                "translation_status": "complete",
+            })
+            report["translated"] += 1
+            print(json.dumps({
+                "event": "existing_catalog_description_translated",
+                "app": str(app.get("name") or app.get("slug") or ""),
+                "status": "complete",
+            }, ensure_ascii=False), flush=True)
+        except Exception as exc:
+            report["failed"] += 1
+            message = f"{type(exc).__name__}: {exc}"
+            print(json.dumps({
+                "event": "existing_catalog_translation_failed",
+                "app": str(app.get("name") or app.get("slug") or ""),
+                "error": message[:300],
+            }, ensure_ascii=False), flush=True)
+            # Provider/API failures are unlikely to improve by retrying thousands
+            # of rows in the same run. The next scheduled run will retry them.
+            if any(token in message for token in ("HTTP 429", "HTTP 500", "HTTP 502", "HTTP 503", "HTTP 504", "URLError")):
+                report["deferred"] += 1
+                break
+        if max_attempts is not None and report["checked"] >= max(1, int(max_attempts)):
+            break
+    return report
+
+
 def retry_record(entry: dict[str, Any], now: float, reason: str) -> dict[str, Any]:
     attempts = int(entry.get("attempts") or 0) + 1
     delay = RETRY_DELAYS_SECONDS[min(attempts - 1, len(RETRY_DELAYS_SECONDS) - 1)]
@@ -156,6 +253,18 @@ def main() -> None:
     parser.add_argument("--max-repositories", type=int, default=10000, help="Resumable checkpoint batch size; not a total import quota.")
     parser.add_argument("--max-pages", type=int, default=20, help="Internal checkpoint batch size; repeated until the run window ends.")
     parser.add_argument("--run-budget-seconds", type=int, default=4500, help="Time available for scanning/importing before the runner timeout.")
+    parser.add_argument(
+        "--import-interval-seconds",
+        type=float,
+        default=float(os.getenv("APPHORYN_IMPORT_INTERVAL_SECONDS", "60")),
+        help="Minimum seconds between import starts; set to 60 for one import start per minute.",
+    )
+    parser.add_argument(
+        "--translation-interval-seconds",
+        type=float,
+        default=float(os.getenv("APPHORYN_TRANSLATION_INTERVAL_SECONDS", "1")),
+        help="Minimum seconds between existing-catalog translation requests.",
+    )
     parser.add_argument("--state-file", default=str(ROOT / "data" / "scout-state.json"))
     parser.add_argument("--retry-file", default=str(ROOT / "data" / "scout-retry.json"))
     parser.add_argument("--catalog-file", default=str(ROOT / "apps" / "web" / "catalog" / "index.json"))
@@ -194,10 +303,10 @@ def main() -> None:
     queue: list[dict[str, Any]] = []
     queued: set[str] = set()
 
-    def enqueue(entry: dict[str, Any]) -> None:
+    def enqueue(entry: dict[str, Any], target: list[dict[str, Any]] | None = None) -> None:
         key = repo_key(str(entry.get("repository") or ""))
         if key and key not in queued:
-            queue.append(entry)
+            (target if target is not None else queue).append(entry)
             queued.add(key)
 
     for retry in due_retries:
@@ -227,21 +336,75 @@ def main() -> None:
                 "reason": f"Targeted Apphoryn app discovery: {query}",
             })
 
+    last_discovery_refresh = time.monotonic()
+
+    def refresh_targeted_discovery(target: list[dict[str, Any]]) -> None:
+        nonlocal last_discovery_refresh
+        if time.monotonic() - last_discovery_refresh < 60:
+            return
+        last_discovery_refresh = time.monotonic()
+        for query in configured_discovery_queries():
+            try:
+                candidates = catalog.discover(query, search_limit)
+            except Exception as exc:
+                print(json.dumps({
+                    "event": "targeted_discovery_refresh_failed",
+                    "query": query,
+                    "error_type": type(exc).__name__,
+                }), flush=True)
+                continue
+            for candidate in candidates:
+                url = str(candidate.get("repository_url") or "")
+                if url:
+                    enqueue({
+                        "repository": url,
+                        "candidate": candidate,
+                        "reason": f"Minute discovery refresh: {query}",
+                    }, target)
+
     crawler = RepositoryCrawler(github, args.state_file)
     scan_report: dict[str, Any] | None = None
     refresh_report: dict[str, Any] | None = None
     results: list[dict[str, Any]] = []
     scheduled_retries = list(waiting_retries)
     deadline = time.monotonic() + max(60, int(args.run_budget_seconds))
+    localization_queue = [
+        row for row in catalog_rows
+        if not has_arabic_translation(row) and str(row.get("description") or "").strip()
+    ]
+    localization_cursor = 0
+    localization_paused = False
+    localization_pacer = ImportPacer(args.translation_interval_seconds)
+    localization_report = {"scanned": 0, "checked": 0, "translated": 0, "failed": 0, "deferred": 0}
+    import_pacer = ImportPacer(args.import_interval_seconds)
+    processed_this_run: set[str] = set()
 
-    scheduled_retries = list(waiting_retries)
+    def localize_next_existing_row() -> None:
+        nonlocal localization_cursor, localization_paused
+        if localization_paused or localization_cursor >= len(localization_queue):
+            return
+        result = localize_existing_catalog_rows(
+            localization_queue[localization_cursor:],
+            mirror,
+            interval_seconds=args.translation_interval_seconds,
+            deadline=deadline,
+            max_attempts=1,
+            pacer=localization_pacer,
+        )
+        localization_cursor += result["scanned"]
+        for key in ("scanned", "checked", "translated", "failed", "deferred"):
+            localization_report[key] += result[key]
+        if result["deferred"]:
+            localization_paused = True
+
     def process_entries(entries: list[dict[str, Any]]) -> bool:
         for index, entry in enumerate(entries):
             if time.monotonic() >= deadline:
                 for pending in entries[index:]:
-                    if pending.get("attempts") or pending.get("force_refresh"):
-                        scheduled_retries.append({**pending, "next_attempt_at": now})
+                    scheduled_retries.append({**pending, "next_attempt_at": now})
                 return False
+            localize_next_existing_row()
+            refresh_targeted_discovery(entries)
             repository_url = str(entry["repository"])
             candidate = entry.get("candidate") or {}
             result: dict[str, Any] = {
@@ -276,6 +439,16 @@ def main() -> None:
                     results.append(result)
                     continue
 
+                import_key = repo_key(repository_url)
+                if import_key in processed_this_run:
+                    result["status"] = "already_processed_this_run"
+                    results.append(result)
+                    continue
+                if not import_pacer.wait_for_slot(deadline):
+                    for pending in entries[index:]:
+                        scheduled_retries.append({**pending, "next_attempt_at": now})
+                    return False
+                processed_this_run.add(import_key)
                 imported = catalog.import_repository(repository_url, mirror_release_assets=True)
                 app = imported["app"]
                 result["ai_generation"] = imported.get("ai_generation") or {}
@@ -353,6 +526,9 @@ def main() -> None:
                     "repository_url": app.get("repository_url") or repository_url,
                     "github_repo_id": app.get("github_repo_id") or candidate.get("id"),
                     "source_updated_at": app.get("source_updated_at") or candidate.get("updated_at"),
+                    "translation_status": app.get("translation_status") or "missing",
+                    "translations": app.get("translations") or {},
+                    "description_translations": app.get("description_translations") or {},
                 }
                 known_by_url[repo_key(str(record["repository_url"]))] = record
                 if record.get("github_repo_id"):
@@ -406,7 +582,7 @@ def main() -> None:
         for candidate in discovered:
             url = str(candidate.get("html_url") or "")
             if url:
-                batch_entries.append({
+                enqueue({
                     "repository": url,
                     "candidate": candidate,
                     "force_refresh": cursor_key == "last_refresh_repository_id",
@@ -415,7 +591,7 @@ def main() -> None:
                         if cursor_key == "last_repository_id"
                         else "Scheduled upstream release refresh"
                     ),
-                })
+                }, batch_entries)
 
         completed = process_entries(batch_entries)
         if not completed:
@@ -448,6 +624,8 @@ def main() -> None:
         "refresh_scan": refresh_report,
         "crawl_batches": crawl_batches,
         "run_budget_seconds": max(60, int(args.run_budget_seconds)),
+        "import_interval_seconds": import_pacer.interval_seconds,
+        "existing_catalog_localization": localization_report,
         "run_time_window_reached": time.monotonic() >= deadline,
         "processed": len(results),
         "mirrored": sum(row.get("status") == "mirrored" for row in results),

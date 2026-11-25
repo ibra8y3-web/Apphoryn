@@ -38,9 +38,28 @@ def _translation_value(value: Any) -> tuple[str, str]:
     return "", ""
 
 
+def _has_arabic_translation(result: dict[str, Any]) -> bool:
+    """Accept both the source AI shape and Apphoryn's normalized translation fields."""
+    translations = result.get("translations") if isinstance(result.get("translations"), dict) else {}
+    ar_summary, ar_description = _translation_value(translations.get("ar"))
+    description_translations = (
+        result.get("description_translations")
+        if isinstance(result.get("description_translations"), dict) else {}
+    )
+    if not ar_description:
+        ar_description = str(description_translations.get("ar") or "").strip()
+    return bool(ar_summary and ar_description)
+
+
 def _with_arabic_translation(result: dict[str, Any], route: dict[str, str]) -> tuple[dict[str, Any], dict[str, str] | None]:
     translations = result.get("translations") if isinstance(result.get("translations"), dict) else {}
     ar_summary, ar_description = _translation_value(translations.get("ar"))
+    description_translations = (
+        result.get("description_translations")
+        if isinstance(result.get("description_translations"), dict) else {}
+    )
+    if not ar_description:
+        ar_description = str(description_translations.get("ar") or "").strip()
     if ar_summary and ar_description:
         return result, None
 
@@ -67,6 +86,50 @@ def _with_arabic_translation(result: dict[str, Any], route: dict[str, str]) -> t
     merged_translations["ar"] = {"summary": translated_summary, "description": translated_description}
     merged["translations"] = merged_translations
     return merged, translation_route
+
+
+def translate_catalog_description(
+    *,
+    summary: str,
+    description: str,
+    translations: dict[str, Any] | None = None,
+    description_translations: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Translate an already-published description without rewriting its source text."""
+    original_summary = str(summary or "").strip()
+    original_description = str(description or "").strip()
+    if not original_description:
+        raise ValueError("A source description is required for Arabic localization.")
+
+    source = {
+        "summary": original_summary or original_description[:240],
+        "description": original_description,
+        "translations": dict(translations or {}),
+        "description_translations": dict(description_translations or {}),
+        "project_kind": "unknown",
+        "build_recommended": False,
+    }
+    if _has_arabic_translation(source):
+        output = _normalise(source)
+        output["summary"] = original_summary or original_description[:240]
+        output["description"] = original_description
+        output["translation_status"] = "complete"
+        return output
+
+    localized, route = _with_arabic_translation(source, {})
+    output = _normalise(
+        localized,
+        translation_provider=(route or {}).get("provider", ""),
+        translation_model=(route or {}).get("model", ""),
+    )
+    # The translator may only add localized fields; never replace the published
+    # English/source wording as a side effect of a translation pass.
+    output["summary"] = original_summary or original_description[:240]
+    output["description"] = original_description
+    output["translation_status"] = (
+        "complete" if _has_arabic_translation(output) else "pending"
+    )
+    return output
 
 
 def _normalise(result: dict[str, Any], provider: str = "", model: str = "",
@@ -157,6 +220,10 @@ class DescriptionGenerator:
                 )
                 if not remote_result.get("summary") or not remote_result.get("description"):
                     raise ValueError("Apphoryn AI bridge returned incomplete catalog metadata.")
+                # Do not mark a record complete until both Arabic fields are present.
+                if not _has_arabic_translation(remote_result):
+                    remote_result = dict(remote_result)
+                    remote_result["translation_status"] = "pending"
                 return remote_result
             except Exception as exc:
                 errors = f"Railway AI bridge: {type(exc).__name__}: {str(exc)[:160]}"
@@ -212,6 +279,27 @@ class DescriptionGenerator:
             "translation_status": "english_only",
             **fallback,
         }
+
+        # Upstream descriptions and deterministic fallback descriptions deserve
+        # the same Arabic localization as AI-authored descriptions. Keep the
+        # original English text intact and save Arabic separately.
+        if ai_router.has_configured_ai():
+            try:
+                localized, translation_route = _with_arabic_translation(result, {})
+                normalized = _normalise(
+                    localized,
+                    translation_provider=(translation_route or {}).get("provider", ""),
+                    translation_model=(translation_route or {}).get("model", ""),
+                )
+                normalized["generated_by_ai"] = "false"
+                normalized.update(fallback)
+                normalized["translation_status"] = (
+                    "complete" if _has_arabic_translation(normalized) else "pending"
+                )
+                result = normalized
+            except Exception as exc:
+                errors = (errors + "; " if errors else "") + f"Arabic localization: {str(exc)[:160]}"
+
         if errors:
             result["ai_error"] = errors
         return result

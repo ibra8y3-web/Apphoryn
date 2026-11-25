@@ -1,20 +1,8 @@
 name: Apphoryn Scout — import real software releases
 
+# The continuous Global Scout workflow owns recurring imports. This workflow
+# is kept for an administrator-requested, one-off discovery/import run only.
 on:
-  push:
-    branches: [main, master]
-    paths-ignore:
-      - 'apps/web/catalog/index.json'
-      - 'data/scout-state.json'
-      - 'data/scout-retry.json'
-      - '.github/workflows/global-scout.yml'
-      - '.github/workflows/harvest.yml'
-      - 'app/github_release_mirror.py'
-      - 'scripts/global_scout.py'
-      - 'tests/test_global_scout.py'
-      - 'tests/test_github_release_mirror.py'
-  schedule:
-    - cron: '23 * * * *'
   workflow_dispatch:
     inputs:
       query:
@@ -78,6 +66,7 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           APPHORYN_GITHUB_REF: ${{ github.ref_name }}
           APPHORYN_AI_SERVICE_URL: 'https://apphoryn-production.up.railway.app'
+          APPHORYN_IMPORT_INTERVAL_SECONDS: '60'
           APPHORYN_QUERY: ${{ inputs.query || 'topic:opensource' }}
           APPHORYN_LIMIT: ${{ inputs.limit || '100' }}
           APPHORYN_AUTO_BUILD_TARGETS: ${{ vars.APPHORYN_AUTO_BUILD_TARGETS || 'android,windows,linux,macos' }}
@@ -95,9 +84,9 @@ jobs:
           SKIP_SEEDS: ${{ inputs.skip_seeds || 'false' }}
         run: |
           if [ "$SKIP_SEEDS" = "true" ]; then
-            python scripts/harvest_and_import.py --query "$APPHORYN_QUERY" --limit "$APPHORYN_LIMIT" --skip-seeds
+            python scripts/harvest_and_import.py --query "$APPHORYN_QUERY" --limit "$APPHORYN_LIMIT" --import-interval-seconds "$APPHORYN_IMPORT_INTERVAL_SECONDS" --skip-seeds
           else
-            python scripts/harvest_and_import.py --query "$APPHORYN_QUERY" --limit "$APPHORYN_LIMIT"
+            python scripts/harvest_and_import.py --query "$APPHORYN_QUERY" --limit "$APPHORYN_LIMIT" --import-interval-seconds "$APPHORYN_IMPORT_INTERVAL_SECONDS"
           fi
       - name: Save discovery and mirror report
         if: always()

@@ -8,6 +8,7 @@ from scripts.global_scout import (
     known_current,
     load_catalog_index,
     load_retry_queue,
+    localize_existing_catalog_rows,
     repo_key,
     retry_record,
     save_retry_queue,
@@ -49,6 +50,9 @@ class GlobalScoutTests(unittest.TestCase):
             "github_repo_id": "123",
             "repository_url": "https://github.com/owner/repo",
             "source_updated_at": "2026-01-01T00:00:00Z",
+            "translation_status": "complete",
+            "translations": {"ar": "وصف عربي"},
+            "description_translations": {"ar": "شرح عربي كامل"},
         }
         by_id = {"123": existing}
         by_url = {repo_key(existing["repository_url"]): existing}
@@ -58,11 +62,34 @@ class GlobalScoutTests(unittest.TestCase):
         self.assertFalse(known_current(changed, by_id, by_url))
         self.assertFalse(known_current(changed, {}, {}))
 
+    def test_missing_arabic_translation_does_not_force_source_reimport(self):
+        existing = {
+            "github_repo_id": "321",
+            "repository_url": "https://github.com/owner/untranslated",
+            "source_updated_at": "2026-01-01T00:00:00Z",
+            "translation_status": "english_only",
+            "translations": {"en": "An English summary"},
+            "description_translations": {"en": "An English description"},
+        }
+        candidate = {
+            "id": 321,
+            "html_url": existing["repository_url"],
+            "updated_at": "2026-01-01T00:00:00Z",
+        }
+        by_id = {"321": existing}
+        by_url = {repo_key(existing["repository_url"]): existing}
+        # Translation is handled by the translation-only queue; source freshness
+        # must not re-download/re-import the app or replace its published wording.
+        self.assertTrue(known_current(candidate, by_id, by_url))
+
     def test_known_repository_reopens_after_build_adapter_revision_changes(self):
         existing = {
             "github_repo_id": "789",
             "repository_url": "https://github.com/owner/repo",
             "source_updated_at": "2026-01-01T00:00:00Z",
+            "translation_status": "complete",
+            "translations": {"ar": "وصف عربي"},
+            "description_translations": {"ar": "شرح عربي كامل"},
             "artifacts": [],
             "build_attempts": [{
                 "git_ref": "abc123",
@@ -80,6 +107,51 @@ class GlobalScoutTests(unittest.TestCase):
         by_url = {repo_key(existing["repository_url"]): existing}
         self.assertFalse(known_current(candidate, by_id, by_url, adapter_revision="new-revision"))
         self.assertTrue(known_current(candidate, by_id, by_url, adapter_revision="old-revision"))
+
+    def test_existing_catalog_localization_preserves_published_english_description(self):
+        from unittest.mock import patch
+
+        app = {
+            "name": "Example App",
+            "slug": "example-app",
+            "summary": "Original published summary",
+            "description": "Original developer-written description.",
+            "translations": {"en": "Original published summary"},
+            "description_translations": {"en": "Original developer-written description."},
+            "translation_status": "english_only",
+            "license_eligible": True,
+            "license_spdx": "MIT",
+            "repository_url": "https://github.com/owner/example-app",
+        }
+        localized = {
+            "summary": "Original published summary",
+            "description": "Original developer-written description.",
+            "translations": {"en": "Original published summary", "ar": "ملخص عربي"},
+            "description_translations": {
+                "en": "Original developer-written description.",
+                "ar": "وصف عربي للمطور.",
+            },
+            "translation_status": "complete",
+        }
+
+        class FakeMirror:
+            def __init__(self):
+                self.published = None
+
+            def publish_app(self, updated, artifacts):
+                self.published = (updated, artifacts)
+                return {"project_status": "source_available"}
+
+        mirror = FakeMirror()
+        with patch("scripts.global_scout.call_apphoryn_internal_api", return_value=localized) as translate:
+            report = localize_existing_catalog_rows([app], mirror, interval_seconds=0)
+
+        self.assertEqual(report["translated"], 1)
+        self.assertEqual(app["description"], "Original developer-written description.")
+        self.assertEqual(app["description_translations"]["ar"], "وصف عربي للمطور.")
+        self.assertEqual(mirror.published[0]["description"], "Original developer-written description.")
+        self.assertEqual(mirror.published[1], [])
+        translate.assert_called_once()
 
     def test_retry_backoff_is_bounded_and_preserves_upstream_candidate(self):
         entry = {
