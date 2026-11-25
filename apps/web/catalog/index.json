@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T08:50:01.682852+00:00",
+  "generated_at": "2026-11-25T08:50:14.313528+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -4107,6 +4107,79 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "tricatch-oehostsapp",
+      "slug": "tricatch-oehostsapp",
+      "name": "oeHostsApp",
+      "summary": "Desktop app (Java/Swing) for local web development: launch Chrome with per-profile host-resolver rules, route real-looking HTTPS domains to any backend through a built-in reverse proxy with your own root CA, and inspect the traffic live. On",
+      "description": "Desktop app (Java/Swing) for local web development: launch Chrome with per-profile host-resolver rules, route real-looking HTTPS domains to any backend through a built-in reverse proxy with your own root CA, and inspect the traffic live. One jar for Windows and macOS.",
+      "translations": {
+        "en": {
+          "summary": "Desktop app (Java/Swing) for local web development: launch Chrome with per-profile host-resolver rules, route real-looking HTTPS domains to any backend through a built-in reverse proxy with your own root CA, and inspect the traffic live. On",
+          "description": "Desktop app (Java/Swing) for local web development: launch Chrome with per-profile host-resolver rules, route real-looking HTTPS domains to any backend through a built-in reverse proxy with your own root CA, and inspect the traffic live. One jar for Windows and macOS."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/tricatch/oeHostsApp/master/src/main/resources/icon/oe_logo_favicon.svg",
+      "repository_url": "https://github.com/tricatch/oeHostsApp",
+      "github_repo_id": "1453409253",
+      "source_updated_at": "2026-11-24T09:39:09Z",
+      "homepage_url": null,
+      "owner": "tricatch",
+      "default_branch": "master",
+      "source_commit_sha": "c7bffc6ce7b19fafc8ede63ff11233d5f4489498",
+      "license_text": "MIT License\n\nCopyright (c) 2026 tricatch\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "network",
+      "topics": [
+        "chrome",
+        "desktop-app",
+        "devtools",
+        "forward-proxy",
+        "hosts",
+        "https",
+        "java",
+        "localhost",
+        "reverse-proxy",
+        "ssl",
+        "swing"
+      ],
+      "latest_version": "0.4.1",
+      "release_url": "https://github.com/tricatch/oeHostsApp/releases/tag/0.4.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-tricatch-oehostsapp-0.4.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-tricatch-oehostsapp-0.4.1/THIRD-PARTY-NOTICE-tricatch-oehostsapp.txt",
+      "artifacts": [
+        {
+          "id": "38d1f66da574626a3c318f86db5f4bb82b031087acb0c675bb5ac774740c0a01",
+          "filename": "oehostsapp.jar",
+          "original_filename": "oehostsapp.jar",
+          "platform": "java",
+          "package_type": "Java archive",
+          "architecture": null,
+          "version": "0.4.1",
+          "size_bytes": 25495883,
+          "sha256": "38d1f66da574626a3c318f86db5f4bb82b031087acb0c675bb5ac774740c0a01",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-tricatch-oehostsapp-0.4.1/oehostsapp.jar",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-tricatch-oehostsapp-0.4.1"
+        }
+      ],
+      "platforms": [
+        "java"
       ]
     },
     {
