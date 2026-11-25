@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:33:48.146657+00:00",
+  "generated_at": "2026-11-25T21:34:12.595029+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -39281,6 +39281,85 @@
           "signer_certificate_sha256": "c9ec46d560a35c448d6e6b7b71035aca2ce48358f983d2f93b61a9364865a51c",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-madhav-manchanda-udham-v1.0/udham-v1.0.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-madhav-manchanda-udham-v1.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "xixogo5105-uiptv",
+      "slug": "xixogo5105-uiptv",
+      "name": "uiptv",
+      "summary": "UIPTV - A Universal IPTV Player",
+      "description": "UIPTV - A Universal IPTV Player",
+      "translations": {
+        "en": {
+          "summary": "UIPTV - A Universal IPTV Player",
+          "description": "UIPTV - A Universal IPTV Player"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/xixogo5105/uiptv/main/javafx-app/src/main/resources/icon.png",
+      "repository_url": "https://github.com/xixogo5105/uiptv",
+      "github_repo_id": "766298538",
+      "source_updated_at": "2026-11-22T17:10:02Z",
+      "homepage_url": "https://xixogo5105.github.io/uiptv/",
+      "owner": "xixogo5105",
+      "default_branch": "main",
+      "source_commit_sha": "7a46f7ab809410b41c2b65c3dc1b1055a741b059",
+      "license_text": "MIT License\n\nCopyright (c) 2026 UIPTV contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "iptv",
+        "iptv-player",
+        "java",
+        "javafx",
+        "kotlin-android",
+        "linux",
+        "m3u8",
+        "m3u8-playlist",
+        "macos",
+        "media",
+        "player-video",
+        "stalker-portal",
+        "windows",
+        "xtreme"
+      ],
+      "latest_version": "v1.1.1",
+      "release_url": "https://github.com/xixogo5105/uiptv/releases/tag/v1.1.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-xixogo5105-uiptv-v1.1.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-xixogo5105-uiptv-v1.1.1/THIRD-PARTY-NOTICE-xixogo5105-uiptv.txt",
+      "artifacts": [
+        {
+          "id": "8070abf5334c06781255eba91acd5d2da11d1bd25cf1090c24efbe93be435520",
+          "filename": "UIPTV-android-universal.apk",
+          "original_filename": "UIPTV-android-universal.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "universal",
+          "version": "v1.1.1",
+          "size_bytes": 127942865,
+          "sha256": "8070abf5334c06781255eba91acd5d2da11d1bd25cf1090c24efbe93be435520",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "ee9eddbca5aa2d84d1345e38cee7bd90cfc8391e7c766b84fac53287fca3f435",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-xixogo5105-uiptv-v1.1.1/UIPTV-android-universal.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-xixogo5105-uiptv-v1.1.1"
         }
       ],
       "platforms": [
