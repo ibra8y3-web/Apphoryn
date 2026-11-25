@@ -845,6 +845,18 @@
         "android",
         "linux",
         "windows"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "7352222fba60304bc5ffa804f906cf215126af31",
+          "targets": [
+            "android",
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-25T09:24:08.332620+00:00"
+        }
       ]
     },
     {
