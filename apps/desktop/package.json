@@ -1,6 +1,6 @@
 {
   "name": "apphoryn-desktop",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "private": true,
   "description": "Apphoryn native open-software store client",
   "main": "main.cjs",
