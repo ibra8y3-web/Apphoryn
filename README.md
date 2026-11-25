@@ -127,3 +127,103 @@ Android clients install signed APKs and supported XAPK split bundles; XAPK files
 
 
 Unsigned source-built Android release packages are never published as installable apps. To enable automatic publication of source-built APKs that are not already signed upstream, configure a persistent Apphoryn Android keystore in GitHub Actions secrets; those credentials are exposed only to the trusted publisher stage, never to untrusted source builds.
+
+## Niebex AI workforce (additive backend module)
+
+The AI workforce is an additional service layer. It does not replace the store catalogue, release importer, package verifier, or existing build workflows.
+
+- **Niebex** creates a task plan and delegates work to ten named specialist agents. The Supervisor reviews the returned evidence.
+- The durable queue, run/task history, shared memory, schedules, worker heartbeats and model-request telemetry live in a separate SQLite database: `storage/agent-workforce.sqlite3`. Keep the existing `storage` volume mounted when deploying or upgrading.
+- FastAPI starts background workers at service startup. Set `APPHORYN_AGENT_WORKERS` from 1 to 4 to control local worker concurrency. These workers run while the backend process is running; GitHub Actions Scout remains a separate scheduled workflow.
+- The dashboard is available at `/agents.html`. It calls protected endpoints under `/api/v1/admin/agents` and requires the existing `APPHORYN_ADMIN_TOKEN` in the request header. The dashboard does not write the token to browser storage.
+- Current allowlisted tools perform real GitHub repository discovery, repository/latest-release inspection, safe repository-file reads, local package validation, approved imports and approved isolated build dispatches. Each tool result is stored separately from the agent's generated analysis.
+- Importing or dispatching a build requires checking **external action approval** for that task. Scheduled tasks always run with external actions disabled. The approval does not authorize paid model usage.
+- The Software Engineer agent can inspect source files and propose code changes in this release; it does not yet commit code changes to upstream repositories. Broad web research, direct F-Droid/Flathub ingestion, model-quality benchmarks, and full provider billing/quota telemetry are not claimed as implemented.
+
+### AI provider credentials and spending safeguards
+
+Add only the credentials you actually use to the backend deployment environment and, when using Scout-generated provider reports, to repository **Settings → Secrets and variables → Actions → Secrets**:
+
+- `GEMINI_API_KEY`
+- `GROQ_API_KEY`
+- `OPENROUTER_API_KEY`
+- `COMET_API_KEY`
+- `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`
+- `XAI_API_KEY` for xAI Grok (this is not the same company as Groq)
+
+Gemini and Groq are deliberately paused in free-only mode until you confirm that both provider accounts are on their free tiers. Only after checking each provider's billing console, set the Actions variable `APPHORYN_AI_CONFIRM_GEMINI_GROQ_FREE_TIER=true`. This is a safety assertion; it is not a live quota check.
+
+xAI's Grok API is usage-billed. It is disabled by default. To authorize that paid provider, set the `XAI_API_KEY` secret and the variables `APPHORYN_AI_ENABLE_XAI=true`, `APPHORYN_AI_FREE_ONLY=false`, and `APPHORYN_AI_ALLOW_PAID_REQUESTS=true`. The last two settings are an explicit global paid-traffic authorization and can enable paid requests from other configured providers too. Leave them false unless you approve that broader exposure.
+
+The provider dashboard can refresh model discovery and send a minimal real test request to one configured provider. The APIs do not consistently expose remaining free quota or account-level billing plan, so Apphoryn records observed request counts, success and response latency without inventing quota or cost figures.
+
+For a self-hosted backend, copy the same variables into `.env`. Keep provider keys server-side; never put them in `apps/web`, browser JavaScript, public catalog JSON, or the build jobs that execute third-party source code.
+
+## Additional AI, compute, discovery and analytics services
+
+These features extend the existing storefront. They do not replace the existing catalog, importer, artifact verifier or build adapters.
+
+### Open-source discovery sources
+
+The authenticated AI Workforce dashboard now queries the official F-Droid search API and Flathub catalog API alongside the existing GitHub discovery path. Results retain their source, package ID, release metadata and catalog URL. They are marked as catalog metadata, not verified installation binaries. F-Droid APK mirroring still requires signature-chain/index verification and an explicit redistribution-license review; Flathub AppStream data is not a cross-platform Windows/macOS/Android installer.
+
+### Open-source security tools on GitHub compute
+
+The workflow `.github/workflows/agent-compute.yml` uses a short-lived GitHub-hosted runner to execute:
+- Semgrep static analysis
+- Trivy filesystem, dependency, secret and misconfiguration scans
+- OSV-Scanner dependency vulnerability scan
+- Syft CycloneDX SBOM generation
+- Gitleaks secret detection with redacted output
+
+The workflow accepts only a public `owner/repository` target. It clones the specified branch/tag/commit and mounts source read-only into scanner containers. It does not execute build files, package scripts, repository Actions workflows or arbitrary target code. Reports are uploaded as a workflow artifact. This is a security-analysis job, not a permanent cloud computer and not a guarantee that software is safe.
+
+Enable it only after configuring the Apphoryn GitHub token, repository owner/name and `APPHORYN_GITHUB_COMPUTE_ENABLED=true`. A separate approval checkbox is required for each scan dispatch.
+
+### Local open-weight AI and offline operation
+
+The optional Docker Compose profile `local-ai` runs the official Ollama container on a private internal network. Apphoryn discovers its installed models and can route work to its OpenAI-compatible inference endpoint. vLLM can also be configured at a loopback or private Docker service URL for GPU hosts.
+
+```bash
+cp .env.example .env
+# Configure APPHORYN_ADMIN_TOKEN and APPHORYN_INGEST_TOKEN in .env first.
+docker compose up -d --build
+# Optional local model server:
+# Set OLLAMA_BASE_URL=http://ollama:11434 in .env, then:
+docker compose --profile local-ai up -d
+docker compose exec ollama ollama pull qwen2.5-coder:7b
+```
+
+The Docker volume `apphoryn_data` retains the catalog DB, agent queue/memory DB, analytics DB and artifact files. The separate `ollama_models` volume retains downloaded model weights. Back up both volumes. The application image runs as a non-root user and binds to localhost by default; use an authenticated TLS reverse proxy and firewall before remote exposure.
+
+**Offline boundary:** when the host remains powered on but the Internet fails, the local UI/API, SQLite queue, shared memory, analytics capture and already-downloaded local models can continue. GitHub Actions, upstream repositories, cloud AI providers and remote database replication cannot work until connectivity returns. A powered-off device cannot run background workers.
+
+### Durable privacy-minimizing analytics
+
+The storefront records:
+- catalog and app-detail views,
+- searches (query text is SHA-256 hashed before storage),
+- favorite add/remove actions,
+- verified-artifact download requests,
+- downloads completed by the Apphoryn backend download stream.
+
+The event ledger writes to a local SQLite outbox first. It can replicate in bounded batches to either a PostgreSQL-compatible Neon/Supabase database (`APPHORYN_ANALYTICS_POSTGRES_DSN`) or Cloudflare D1 (`CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_D1_DATABASE_ID`, `CLOUDFLARE_D1_API_TOKEN`). D1 uses a dedicated least-privilege token separate from the AI inference token. Pending events remain local if the network/database is unavailable and are retried when connectivity returns.
+
+The system does not store client IPs, cookies, auth headers or raw search text in the analytics ledger. The public event endpoint is rate-limited and validates app slugs/artifact IDs against the real catalog. A browser can report a download request, but only a completed backend artifact stream increments completed downloads. Direct third-party downloads outside this backend cannot truthfully be counted as completed by this server.
+
+### Model routing and benchmarking
+
+Ollama/vLLM local models are discovered without provider API billing. Model routing considers specialist type, context capability, observed success rate, average latency and persisted benchmark results. The dashboard can test a provider connection and run a bounded deterministic benchmark against local or catalog-confirmed-free model classes only; paid models are excluded from this benchmark. The score is a small reproducible check, not a universal intelligence ranking.
+
+### Approval-gated AI code proposals
+
+The Software Engineer and Debugging agents may prepare source replacements and create a uniquely named branch plus pull request only when:
+- the individual task has `allow_code_changes=true`;
+- the backend has `APPHORYN_CODE_WRITES_ENABLED=true`;
+- the target repository is allowlisted; and
+- every changed path is inside `APPHORYN_CODE_WRITE_ALLOWLIST`.
+
+The tool rejects workflow files, environment files, secrets and signing-key files. It does not push directly to `main`. Human review and repository CI are required before a pull request is merged. Keep the GitHub token's permissions minimal.
+
+For Docker startup, storage, local models, database configuration and security boundaries see [deploy/README.md](deploy/README.md).
+

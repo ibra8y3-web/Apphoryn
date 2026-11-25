@@ -16,6 +16,16 @@ function readSaved(){try{return JSON.parse(localStorage.getItem('apphoryn-saved'
 function saveSaved(){localStorage.setItem('apphoryn-saved',JSON.stringify(state.saved));}
 function esc(value=''){return String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
 function toast(message,error=false){const node=document.createElement('div');node.className='toast'+(error?' error':'');node.textContent=message;$('toastRegion').appendChild(node);setTimeout(()=>node.remove(),4200);}
+function recordStoreEvent(eventType,appSlug='',artifactId='',query=''){
+ const body={event_type:eventType,app_slug:appSlug||null,artifact_id:artifactId||null,details:query?{query}:{}};
+ fetch('/api/v1/analytics/events',{
+  method:'POST',
+  headers:{'Content-Type':'application/json','Accept':'application/json'},
+  credentials:'omit',
+  keepalive:true,
+  body:JSON.stringify(body)
+ }).catch(()=>{});
+}
 function applyLanguage(language){state.language=translations[language]?language:'en';localStorage.setItem('apphoryn-language',state.language);document.documentElement.lang=state.language;document.documentElement.dir=state.language==='ar'?'rtl':'ltr';$('languageSelect').value=state.language;$('settingsLanguage').value=state.language;document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;const value=t(key);if(value.includes('<br>')||value.includes('<em>'))el.innerHTML=value;else el.textContent=value});document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>el.placeholder=t(el.dataset.i18nPlaceholder));document.title='Apphoryn — '+t('heroTitle').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();renderCategories();renderApps();renderDiscovery();renderSaved();renderDownloads();renderAiStatus();renderAutomationJobs();renderSourceQueue();$('pageCrumb').textContent=document.querySelector('.nav-link.active [data-i18n]')?.textContent||t('overview');}
 function navigate(view){const target=$('view-'+view);if(!target)return;document.querySelectorAll('.view').forEach(el=>el.classList.toggle('active',el===target));document.querySelectorAll('.nav-link[data-view]').forEach(el=>el.classList.toggle('active',el.dataset.view===view));const active=document.querySelector('.nav-link.active [data-i18n]');$('pageCrumb').textContent=active?.textContent||view;history.replaceState(null,'','#'+view);closeSidebar();if(view==='builds')loadJobs(true);if(view==='downloads')renderDownloads();}
 function closeSidebar(){$('sidebar').classList.remove('open');$('sidebarScrim').classList.remove('open');}
@@ -75,6 +85,8 @@ async function installArtifact(artifactId){
  if(!artifact){toast(t('noArtifacts'),true);return}
  const downloadUrl=String(artifact.download_url||'');
  if(!isApphorynReleaseAsset(downloadUrl)){toast(t('packageUnavailable'),true);return}
+ const ownerApp=state.apps.find(item=>(item.artifacts||[]).some(row=>String(row.id||row.sha256||'')===String(artifactId)));
+ if(ownerApp)recordStoreEvent('download_requested',String(ownerApp.slug||''),String(artifact.id||artifact.sha256||''));
  const payload={apiBase:'',artifactId:String(artifact.id||artifact.sha256||''),filename:String(artifact.filename||''),platform:String(artifact.platform||''),packageType:String(artifact.package_type||''),sha256:String(artifact.sha256||''),downloadUrl};
  try{
   if(window.ApphorynNative&&typeof window.ApphorynNative.installArtifact==='function'){
@@ -296,6 +308,7 @@ async function loadJobs(force=false){
 }
 function openApp(id){
  const app=state.apps.find(item=>item.id===id);if(!app)return;
+ recordStoreEvent('app_view',String(app.slug||''));
  const artifacts=app.artifacts||[];
  $('modalContent').innerHTML=`<div class="modal-header">${appIconMarkup(app)}<div><h2 id="modalTitle">${esc(app.name)}</h2><p>${esc(app.owner)} · ${esc(app.latest_version||t('sourceOnly'))}</p></div></div><p class="modal-description">${esc(localizedDescription(app))}</p><div class="tag-row"><span class="tag">${esc(app.category)}</span><span class="tag">${esc(app.license_spdx||'')}</span><span class="tag">${artifacts.length} ${t('packages')}</span></div><div class="modal-section"><h3>${t('packageTypes')}</h3>${artifacts.length?artifacts.map(artifact=>`<div class="modal-artifact"><div><b>${esc(artifact.filename)}</b><small>${esc(artifact.platform)} · ${formatBytes(artifact.size_bytes)} · SHA-256 ${esc((artifact.sha256||'').slice(0,12))}…</small><small>${artifact.upstream_digest_verified?t('artifactVerified'):t('artifactHashLocal')}</small></div>${installButton(artifact)}</div>`).join(''):`<p class="form-note">${t('noArtifacts')}</p>`}</div>`;
  $('modalBackdrop').classList.add('open');
@@ -329,7 +342,7 @@ async function searchDiscovery(query){
   button.disabled=false;button.innerHTML=`${t('searchGithub')} ↗`;
  }
 }
-function toggleSaved(id){const exists=state.saved.includes(id);state.saved=exists?state.saved.filter(item=>item!==id):[...state.saved,id];saveSaved();renderApps();renderSaved();toast(t(exists?'removedToast':'savedToast'));}
+function toggleSaved(id){const exists=state.saved.includes(id);state.saved=exists?state.saved.filter(item=>item!==id):[...state.saved,id];saveSaved();renderApps();renderSaved();const app=state.apps.find(item=>String(item.id)===String(id));if(app)recordStoreEvent(exists?'favorite_removed':'favorite_added',String(app.slug||''));toast(t(exists?'removedToast':'savedToast'));}
 function attachEvents(){
  document.addEventListener('click',event=>{
   const nav=event.target.closest('[data-view]');
@@ -349,6 +362,7 @@ function attachEvents(){
  });
  $('discoveryForm').addEventListener('submit',event=>{event.preventDefault();searchDiscovery($('discoveryQuery').value);});
  $('catalogSearch').addEventListener('input',renderApps);
+ $('catalogSearch').addEventListener('change',event=>recordStoreEvent('search','','',String(event.target.value||'')));
  $('categoryFilter').addEventListener('change',renderApps);
  $('languageSelect').addEventListener('change',event=>{applyLanguage(event.target.value);toast(t('languageChanged'));});
  $('settingsLanguage').addEventListener('change',event=>{applyLanguage(event.target.value);toast(t('languageChanged'));});
@@ -363,5 +377,5 @@ function attachEvents(){
   if(event.key==='Escape'){$('modalBackdrop').classList.remove('open');closeSidebar();}
  });
 }
-async function init(){if(localStorage.getItem('apphoryn-theme')==='light')document.body.classList.add('light');applyLanguage(state.language);attachEvents();await Promise.all([loadCatalog(),loadJobs(true)]);const hash=location.hash.replace('#','');if(hash&&$('view-'+hash))navigate(hash);}
+async function init(){if(localStorage.getItem('apphoryn-theme')==='light')document.body.classList.add('light');applyLanguage(state.language);attachEvents();await Promise.all([loadCatalog(),loadJobs(true)]);recordStoreEvent('catalog_view');const hash=location.hash.replace('#','');if(hash&&$('view-'+hash))navigate(hash);}
 init();

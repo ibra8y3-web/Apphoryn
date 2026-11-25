@@ -57,7 +57,37 @@ class GitHubClient:
                 return None
             raise
 
-    def dispatch_workflow(self, owner: str, repo: str, workflow: str, ref: str, inputs: dict[str, str]) -> None:
+    def mutate(self, method: str, path: str, payload: dict[str, Any] | None = None) -> Any:
+        """Perform an authenticated GitHub API mutation on the configured origin only."""
+        if not self.token:
+            raise GitHubError("APPHORYN_GITHUB_TOKEN is required for repository mutations.")
+        if not path.startswith("/repos/") or path.startswith("//") or "://" in path:
+            raise GitHubError("Only GitHub repository API paths are permitted.")
+        data = None if payload is None else json.dumps(payload, ensure_ascii=False).encode("utf-8")
+        headers = {
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "Authorization": f"Bearer {self.token}",
+            "User-Agent": "Apphoryn-Open-Source-Store/1.0",
+            "Content-Type": "application/json",
+        }
+        request = urllib.request.Request(API + path, data=data, headers=headers, method=method.upper())
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                raw = response.read(2 * 1024 * 1024)
+                if not raw:
+                    return {"status": response.status}
+                try:
+                    return json.loads(raw.decode("utf-8"))
+                except json.JSONDecodeError:
+                    return {"status": response.status}
+        except urllib.error.HTTPError as exc:
+            detail = exc.read(1600).decode("utf-8", errors="replace")
+            raise GitHubError(f"GitHub API mutation returned HTTP {exc.code}: {detail[:1000]}") from exc
+        except (urllib.error.URLError, TimeoutError, OSError) as exc:
+            raise GitHubError(f"GitHub API mutation failed: {type(exc).__name__}") from exc
+
+    def dispatch_workflow(self, owner: str, repo: str, workflow: str, ref: str, inputs: dict[str, str]) -> dict[str, Any]:
         if not self.token:
             raise GitHubError("APPHORYN_GITHUB_TOKEN is required to dispatch build workflows.")
         path = f"/repos/{owner}/{repo}/actions/workflows/{workflow}/dispatches"
@@ -72,8 +102,15 @@ class GitHubClient:
         request = urllib.request.Request(API + path, data=body, headers=headers, method="POST")
         try:
             with urllib.request.urlopen(request, timeout=30) as response:
-                if response.status not in (201, 204):
+                if response.status not in (200, 201, 204):
                     raise GitHubError(f"Workflow dispatch failed with HTTP {response.status}.")
+                raw = response.read(1024 * 1024)
+                if not raw:
+                    return {"status": response.status}
+                try:
+                    return json.loads(raw.decode("utf-8"))
+                except json.JSONDecodeError:
+                    return {"status": response.status}
         except urllib.error.HTTPError as exc:
             detail = exc.read(1024).decode("utf-8", errors="replace")
             raise GitHubError(f"Workflow dispatch failed with HTTP {exc.code}: {detail}") from exc

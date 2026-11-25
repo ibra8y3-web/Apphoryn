@@ -117,5 +117,100 @@ class AIRouterTests(unittest.TestCase):
         self.assertEqual(route["model"], "second:free")
 
 
+
+    def test_xai_grok_is_blocked_by_default_even_when_key_exists(self):
+        env = {
+            "GEMINI_API_KEY": "", "GROQ_API_KEY": "", "XAI_API_KEY": "xai-test-key",
+            "OPENROUTER_API_KEY": "", "COMET_API_KEY": "", "CLOUDFLARE_API_TOKEN": "",
+        }
+        with (
+            patch.dict(os.environ, env, clear=False),
+            patch.object(ai_router, "_FREE_ONLY", True),
+            patch.object(ai_router, "_ALLOW_PAID", False),
+            patch.object(ai_router, "_ENABLE_XAI", True),
+            patch.object(ai_router, "_request") as request,
+        ):
+            models, providers = ai_router.discover_models(force=True)
+        self.assertFalse(any(model.provider == "xai" for model in models))
+        status = next(item for item in providers if item["provider"] == "xai")
+        self.assertTrue(status["configured"])
+        self.assertFalse(status["enabled"])
+        self.assertFalse(request.called)
+
+    def test_xai_grok_model_discovery_requires_explicit_paid_authorization(self):
+        env = {
+            "GEMINI_API_KEY": "", "GROQ_API_KEY": "", "XAI_API_KEY": "xai-test-key",
+            "OPENROUTER_API_KEY": "", "COMET_API_KEY": "", "CLOUDFLARE_API_TOKEN": "",
+        }
+        with (
+            patch.dict(os.environ, env, clear=False),
+            patch.object(ai_router, "_FREE_ONLY", False),
+            patch.object(ai_router, "_ALLOW_PAID", True),
+            patch.object(ai_router, "_ENABLE_XAI", True),
+            patch.object(ai_router, "_request", return_value={"data": [{"id": "grok-test"}]}),
+        ):
+            models, providers = ai_router.discover_models(force=True)
+        self.assertEqual([model.model for model in models if model.provider == "xai"], ["grok-test"])
+        status = next(item for item in providers if item["provider"] == "xai")
+        self.assertTrue(status["enabled"])
+
+
+
+    def test_local_ollama_models_are_discovered_without_cloud_credentials(self):
+        env = {
+            "GEMINI_API_KEY": "", "GROQ_API_KEY": "", "XAI_API_KEY": "",
+            "OPENROUTER_API_KEY": "", "COMET_API_KEY": "", "CLOUDFLARE_API_TOKEN": "",
+            "OLLAMA_BASE_URL": "http://ollama:11434", "OLLAMA_API_KEY": "",
+            "VLLM_BASE_URL": "",
+        }
+        with (
+            patch.dict(os.environ, env, clear=False),
+            patch.object(ai_router, "_FREE_ONLY", True),
+            patch.object(ai_router, "_request", return_value={"models": [{"name": "qwen2.5-coder:7b"}]}),
+        ):
+            models, providers = ai_router.discover_models(force=True)
+        local = [item for item in models if item.provider == "ollama"]
+        self.assertEqual([item.model for item in local], ["qwen2.5-coder:7b"])
+        self.assertEqual(local[0].free_class, "local_open_source")
+        self.assertEqual(local[0].context, 0)
+        self.assertTrue(next(row for row in providers if row["provider"] == "ollama")["enabled"])
+
+    def test_local_model_endpoint_rejects_public_hosts_and_credentials(self):
+        with self.assertRaises(ai_router.ProviderError):
+            ai_router._local_base_url("https://public-model.example/api")
+        with self.assertRaises(ai_router.ProviderError):
+            ai_router._local_base_url("http://user:password@ollama:11434")
+
+    def test_coding_specialist_prefers_coder_named_models(self):
+        coder = ai_router.Candidate("ollama", "qwen2.5-coder:7b", "openai", "http://ollama:11434/v1", "", 0, "local_open_source")
+        general = ai_router.Candidate("ollama", "llama3.2:3b", "openai", "http://ollama:11434/v1", "", 0, "local_open_source")
+        self.assertGreater(
+            ai_router._task_capability_score(coder, "software_engineer"),
+            ai_router._task_capability_score(general, "software_engineer"),
+        )
+
+
+    def test_local_model_preference_ranks_ollama_before_remote_specialist_models(self):
+        local = ai_router.Candidate(
+            "ollama", "llama3.2:3b", "openai", "http://ollama:11434/v1", "",
+            0, "local_open_source"
+        )
+        remote_coder = ai_router.Candidate(
+            "openrouter", "vendor/coder:free", "openai", "https://example.test/v1", "test-key",
+            128000, "free_variant"
+        )
+        with (
+            patch("app.agent_system.STORE.model_metrics", return_value=[]),
+            patch("app.agent_system.STORE.model_evaluation_metrics", return_value=[]),
+            patch.object(ai_router, "_PREFER_LOCAL", True),
+        ):
+            ranked = ai_router._rank_candidates([remote_coder, local], "software_engineer")
+        self.assertEqual(ranked[0].provider, "ollama")
+
+    def test_offline_discovery_timeout_is_bounded(self):
+        self.assertGreaterEqual(ai_router._DISCOVERY_TIMEOUT, 1)
+        self.assertLessEqual(ai_router._DISCOVERY_TIMEOUT, 10)
+
+
 if __name__ == "__main__":
     unittest.main()
