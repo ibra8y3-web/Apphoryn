@@ -4,6 +4,7 @@ import unittest
 from pathlib import Path
 
 from scripts.global_scout import (
+    configured_discovery_queries,
     known_current,
     load_catalog_index,
     load_retry_queue,
@@ -14,6 +15,25 @@ from scripts.global_scout import (
 
 
 class GlobalScoutTests(unittest.TestCase):
+    def test_default_global_queries_target_recent_installable_app_categories(self):
+        from unittest.mock import patch
+
+        with patch.dict("os.environ", {}, clear=False):
+            self.assertTrue(any("topic:android-app" in query for query in configured_discovery_queries()))
+            self.assertTrue(any("topic:desktop-app" in query for query in configured_discovery_queries()))
+            self.assertTrue(all("pushed:>" in query for query in configured_discovery_queries()))
+
+    def test_global_queries_can_be_overridden_and_are_deduplicated(self):
+        from unittest.mock import patch
+
+        with patch.dict("os.environ", {
+            "APPHORYN_GLOBAL_SCOUT_DISCOVERY_QUERIES": "topic:android-app\ntopic:desktop-app\ntopic:android-app"
+        }, clear=False):
+            self.assertEqual(
+                configured_discovery_queries(),
+                ["topic:android-app", "topic:desktop-app"],
+            )
+
     def test_zero_byte_catalog_manifest_is_a_valid_empty_starting_point(self):
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / "index.json"

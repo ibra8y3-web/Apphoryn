@@ -27,6 +27,29 @@ from app.storefront_eligibility import has_installable_path
 
 RETRY_DELAYS_SECONDS = (6 * 3600, 24 * 3600, 3 * 86400, 7 * 86400, 30 * 86400)
 
+DEFAULT_GLOBAL_SCOUT_QUERIES = (
+    "topic:android-app pushed:>2025-01-01",
+    "topic:desktop-app pushed:>2025-01-01",
+    "topic:linux-app pushed:>2025-01-01",
+    "topic:windows-app pushed:>2025-01-01",
+    "topic:macos-app pushed:>2025-01-01",
+    "topic:command-line-tool pushed:>2025-01-01",
+    "topic:productivity-app pushed:>2025-01-01",
+    "topic:utility-app pushed:>2025-01-01",
+    "topic:electron pushed:>2025-01-01",
+    "topic:flutter pushed:>2025-01-01",
+)
+
+
+def configured_discovery_queries() -> list[str]:
+    configured = [
+        line.strip()
+        for line in os.getenv("APPHORYN_GLOBAL_SCOUT_DISCOVERY_QUERIES", "").splitlines()
+        if line.strip()
+    ]
+    return list(dict.fromkeys(configured or DEFAULT_GLOBAL_SCOUT_QUERIES))
+
+
 
 def repo_key(value: str) -> str:
     return value.strip().rstrip("/").casefold().removesuffix(".git")
@@ -150,6 +173,37 @@ def main() -> None:
 
     for retry in due_retries:
         enqueue({**retry, "force_refresh": True, "reason": retry.get("reason") or "Scheduled retry"})
+
+    # Search app-focused topics first. The public /repositories endpoint is
+    # ordered by repository ID and would otherwise spend many cycles on old libraries.
+    search_limit = max(1, min(int(os.getenv("APPHORYN_GLOBAL_SCOUT_SEARCH_LIMIT", "6")), 10))
+    search_budget = max(1, min(int(os.getenv("APPHORYN_GLOBAL_SCOUT_MAX_DISCOVERY_PER_RUN", "60")), 100))
+    targeted_count = 0
+    for query in configured_discovery_queries():
+        if targeted_count >= search_budget:
+            break
+        try:
+            candidates = catalog.discover(query, search_limit)
+        except Exception as exc:
+            print(json.dumps({
+                "event": "targeted_discovery_failed",
+                "query": query,
+                "error_type": type(exc).__name__,
+            }), flush=True)
+            continue
+        for candidate in candidates:
+            url = str(candidate.get("repository_url") or "")
+            key = repo_key(url)
+            if not key or key in queued:
+                continue
+            enqueue({
+                "repository": url,
+                "candidate": candidate,
+                "reason": f"Targeted Apphoryn app discovery: {query}",
+            })
+            targeted_count += 1
+            if targeted_count >= search_budget:
+                break
 
     crawler = RepositoryCrawler(github, args.state_file)
     discovered, scan_report = crawler.scan(
