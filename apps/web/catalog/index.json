@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:25:57.129331+00:00",
+  "generated_at": "2026-11-25T09:26:07.824871+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -693,6 +693,79 @@
       "platforms": [
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "2019xiaopeng-bookreading",
+      "slug": "2019xiaopeng-bookreading",
+      "name": "BookReading",
+      "summary": "Windows 桌面全格式阅读器：EPUB / TXT / 漫画 / PDF · 微信读书风格 · 本地优先 · Tauri 2 + React + Rust",
+      "description": "Windows 桌面全格式阅读器：EPUB / TXT / 漫画 / PDF · 微信读书风格 · 本地优先 · Tauri 2 + React + Rust",
+      "translations": {
+        "en": {
+          "summary": "Windows 桌面全格式阅读器：EPUB / TXT / 漫画 / PDF · 微信读书风格 · 本地优先 · Tauri 2 + React + Rust",
+          "description": "Windows 桌面全格式阅读器：EPUB / TXT / 漫画 / PDF · 微信读书风格 · 本地优先 · Tauri 2 + React + Rust"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/2019xiaopeng/BookReading/main/src/assets/app-icon.png",
+      "repository_url": "https://github.com/2019xiaopeng/BookReading",
+      "github_repo_id": "1227142127",
+      "source_updated_at": "2026-11-12T09:31:47Z",
+      "homepage_url": "https://github.com/2019xiaopeng/BookReading/releases",
+      "owner": "2019xiaopeng",
+      "default_branch": "main",
+      "source_commit_sha": "2c820f9419cb2d03eb2cffc5efda2e20b99e5162",
+      "license_text": "MIT License\n\nCopyright (c) 2026 2019xiaopeng\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "comics",
+        "desktop-app",
+        "epub",
+        "manga-reader",
+        "pdf-reader",
+        "react",
+        "reader",
+        "rust",
+        "tauri",
+        "typescript",
+        "windows"
+      ],
+      "latest_version": "v3.1.8",
+      "release_url": "https://github.com/2019xiaopeng/BookReading/releases/tag/v3.1.8",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-2019xiaopeng-bookreading-v3.1.8",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-2019xiaopeng-bookreading-v3.1.8/THIRD-PARTY-NOTICE-2019xiaopeng-bookreading.txt",
+      "artifacts": [
+        {
+          "id": "11197dabca48e9fa3df978d56e9903948d3e76173d4c26ddd9520a23fb48247c",
+          "filename": "bookreading_3.1.8_x64-setup.exe",
+          "original_filename": "bookreading_3.1.8_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v3.1.8",
+          "size_bytes": 6229753,
+          "sha256": "11197dabca48e9fa3df978d56e9903948d3e76173d4c26ddd9520a23fb48247c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-2019xiaopeng-bookreading-v3.1.8/bookreading_3.1.8_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-2019xiaopeng-bookreading-v3.1.8"
+        }
+      ],
+      "platforms": [
         "windows"
       ]
     },
