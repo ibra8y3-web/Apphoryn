@@ -33,6 +33,31 @@
   function renderWorkers(items) {
     $("workersList").innerHTML = (items||[]).map(worker => '<article class="worker-row"><div class="worker-head"><b>'+esc(worker.worker_id)+'</b>'+stateTag(worker.status)+'</div><p class="tiny">آخر نبضة: '+esc(new Date(worker.last_heartbeat_at).toLocaleString())+'</p><p class="tiny">المهمة الحالية: '+esc(worker.current_run_id || "—")+'</p></article>').join("") || '<p class="muted">لم يرسل العامل أول نبضة بعد.</p>';
   }
+  function renderResources(payload) {
+    const groups = [...(payload?.compute||[]), ...(payload?.model_servers||[]), ...(payload?.databases||[])];
+    $("resourcesList").innerHTML = groups.map(item => {
+      const state = item.available === true ? "available" : item.available === false ? (item.configured ? "unavailable" : "not_configured") : (item.configured ? "paused" : "not_configured");
+      const details = [
+        item.description || "",
+        item.limits || "",
+        item.error || "",
+        item.repository ? "المستودع: "+item.repository : "",
+        item.models?.length ? "النماذج: "+item.models.join(", ") : "",
+        item.active_workers != null ? "العمال النشطون: "+Number(item.active_workers)+"/"+Number(item.workers||0) : "",
+        item.note || ""
+      ].filter(Boolean).join(" · ");
+      return '<article class="provider-row"><div class="provider-head"><strong>'+esc(item.id||item.provider)+'</strong>'+stateTag(state)+'</div><p>'+esc(details)+'</p></article>';
+    }).join("") || '<p class="muted">لم يتم تسجيل موارد.</p>';
+    const offline = payload?.offline_mode;
+    if (offline) $("resourcesList").insertAdjacentHTML("beforeend",
+      '<article class="notice">وضع انقطاع الإنترنت: العامل المحلي والطابور وSQLite يظلون متاحين على الخادم المحلي. الخدمات البعيدة وGitHub لا تعمل أثناء انقطاع الاتصال.</article>');
+  }
+  function renderAnalytics(payload) {
+    if (!payload) { $("analyticsSummary").innerHTML='<p class="muted">لم يتم استلام ملخص التحليلات.</p>'; return; }
+    const backend=payload.backend||{};
+    let rows=(payload.per_app||[]).map(row=>'<article class="run-row"><div class="run-head"><b>'+esc(row.app_slug)+'</b><span class="tiny">مشاهدات '+Number(row.views||0)+'</span></div><p>طلبات التنزيل: '+Number(row.downloads||0)+' · تنزيلات مكتملة: '+Number(row.completed_downloads||0)+'</p></article>').join("");
+    $("analyticsSummary").innerHTML='<article class="metric"><span>مشاهدات التطبيقات</span><b>'+Number(payload.views||0)+'</b></article><article class="metric"><span>طلبات التنزيل</span><b>'+Number(payload.download_requests||0)+'</b></article><article class="metric"><span>تنزيلات مكتملة</span><b>'+Number(payload.completed_downloads||0)+'</b></article><article class="notice">قاعدة البيانات: '+esc(backend.provider||"local_sqlite")+' · سجلات تنتظر المزامنة: '+Number(payload.pending_replication||0)+' · '+esc(backend.note||"")+'</article>'+ (rows || '<p class="muted">لا توجد مشاهدات أو تنزيلات مسجلة بعد.</p>');
+  }
   function renderProviders(payload) {
     const providers = payload?.providers || [];
     $("spendingBanner").textContent = "حماية الإنفاق: "+(payload.spending_protection_enabled ? "مفعّلة — الطلبات المدفوعة ممنوعة" : "معطّلة — يجب مراجعة إعدادات الفوترة");
@@ -84,7 +109,9 @@
     $("runsActive").textContent=Number(counts.runs_queued||0)+Number(counts.runs_running||0)+Number(counts.runs_retry||0);
     $("runsCompleted").textContent=counts.runs_completed??0;
     $("memoryCount").textContent=counts.memory_records??0;
-    renderAgents(data.agents,data.agent_activity); renderMemories(data.memories); renderWorkers(data.workers); renderProviders({...data.providers,metrics:data.provider_metrics}); renderRuns(data.runs); renderSchedules(data.schedules);
+    renderAgents(data.agents,data.agent_activity); renderMemories(data.memories); renderWorkers(data.workers);
+    renderProviders({...data.providers,metrics:data.provider_metrics}); renderResources(data.resources);
+    renderAnalytics(data.analytics); renderRuns(data.runs); renderSchedules(data.schedules);
     $("connectionStatus").textContent="متصل بالـBackend. تم تحديث البيانات: "+new Date().toLocaleTimeString();
     $("refreshProviders").disabled=false; $("refreshAll").disabled=false;
   }
@@ -97,6 +124,27 @@
       refreshHandle=setInterval(()=>refresh().catch(error=>$("connectionStatus").textContent=error.message),6000);
     }catch(error){adminToken="";$("connectionStatus").textContent=error.message;}
   }
+
+  $("scanForm").addEventListener("submit",async event=>{
+    event.preventDefault();
+    const message=$("scanMessage");
+    if(!$("scanApproval").checked){message.textContent="يجب تأكيد تشغيل الكمبيوتر المؤقت قبل الإرسال.";return;}
+    try{
+      const result=await api("/resources/github-security-scan","POST",{
+        repository_url:$("scanRepository").value.trim(),git_ref:$("scanRef").value.trim(),
+        approval:$("scanApproval").checked
+      });
+      message.textContent="تم إرسال الفحص إلى GitHub Actions: "+result.target_repository+" · "+result.status;
+    }catch(error){message.textContent=error.message;}
+  });
+  $("syncAnalytics").addEventListener("click",async()=>{
+    try{
+      const result=await api("/analytics/sync","POST");
+      $("analyticsSummary").insertAdjacentHTML("afterbegin",'<p class="notice">نتيجة المزامنة: '+esc(result.status)+' · سجلات: '+Number(result.synced||0)+'</p>');
+      await refresh();
+    }catch(error){alert(error.message);}
+  });
+
   $("connectButton").addEventListener("click",connect);
   $("refreshAll").addEventListener("click",()=>refresh().catch(error=>alert(error.message)));
   $("refreshProviders").addEventListener("click",async()=>{
@@ -108,7 +156,7 @@
     const button=$("submitTask");button.disabled=true;
     try{
       const result=await api("/tasks","POST",{goal:$("taskGoal").value,priority:Number($("priority").value),
-        allow_external_actions:$("externalApproval").checked,max_attempts:2});
+        allow_external_actions:$("externalApproval").checked,allow_code_changes:$("codeApproval").checked,max_attempts:2});
       $("taskMessage").textContent="تم تسجيل المهمة في الطابور: "+result.id+" · الحالة: "+result.status;
       $("taskForm").reset();await refresh();
     }catch(error){$("taskMessage").textContent=error.message;}
