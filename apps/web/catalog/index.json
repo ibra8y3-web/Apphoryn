@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:35:40.794559+00:00",
+  "generated_at": "2026-11-25T19:36:13.594285+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -29099,6 +29099,74 @@
           "signer_certificate_sha256": "f62d348b1ea01b9b286326a6db58807df2315b3a04fc71291a3b97c9cc907381",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-q7df1-xrayfa-v1.7.4/XrayFA-x86_64-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-q7df1-xrayfa-v1.7.4"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "yamatosaki-yahagi-kancolle-browser",
+      "slug": "yamatosaki-yahagi-kancolle-browser",
+      "name": "yahagi-kancolle-browser",
+      "summary": "Yahagi - A free, open-source KanColle (Kantai Collection / 艦これ / 艦隊これくしょん) client for Android and iOS",
+      "description": "Yahagi - A free, open-source KanColle (Kantai Collection / 艦これ / 艦隊これくしょん) client for Android and iOS",
+      "translations": {
+        "en": {
+          "summary": "Yahagi - A free, open-source KanColle (Kantai Collection / 艦これ / 艦隊これくしょん) client for Android and iOS",
+          "description": "Yahagi - A free, open-source KanColle (Kantai Collection / 艦これ / 艦隊これくしょん) client for Android and iOS"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/yamatosaki/yahagi-kancolle-browser/master/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/yamatosaki/yahagi-kancolle-browser",
+      "github_repo_id": "1319269242",
+      "source_updated_at": "2026-11-13T12:10:33Z",
+      "homepage_url": "https://yahagi.xyz/",
+      "owner": "yamatosaki",
+      "default_branch": "master",
+      "source_commit_sha": "e28d550f25b22a883a8aeee638697001639d1ec8",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Yahagi contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "ios",
+        "ios-app",
+        "kancolle",
+        "kantai-collection"
+      ],
+      "latest_version": "1.0.9",
+      "release_url": "https://github.com/yamatosaki/yahagi-kancolle-browser/releases/tag/1.0.9",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yamatosaki-yahagi-kancolle-browser-1.0.9",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yamatosaki-yahagi-kancolle-browser-1.0.9/THIRD-PARTY-NOTICE-yamatosaki-yahagi-kancolle-browser.txt",
+      "artifacts": [
+        {
+          "id": "3bd3e65976f808064d7da50e28f0384f14060a0ea940e10f15722dddc06de751",
+          "filename": "Yahagi-1.0.9.apk",
+          "original_filename": "Yahagi-1.0.9.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "1.0.9",
+          "size_bytes": 146041063,
+          "sha256": "3bd3e65976f808064d7da50e28f0384f14060a0ea940e10f15722dddc06de751",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "ea33c5f1e06f615fe480463bbac7c1155bc3107bea47b6db706833378019c482",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yamatosaki-yahagi-kancolle-browser-1.0.9/Yahagi-1.0.9.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yamatosaki-yahagi-kancolle-browser-1.0.9"
         }
       ],
       "platforms": [
