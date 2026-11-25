@@ -86,11 +86,27 @@ class CatalogServiceTests(unittest.TestCase):
                 "translations": {}, "created_at": now, "updated_at": now,
             })
             incoming = folder_path / "minimal-pe-fixture.exe"
-            # This validates PE header parsing only; it is not claimed to be runnable software.
-            pe = bytearray(256)
+            # Structurally valid PE application fixture for executable-file validation.
+            pe = bytearray(1024)
+            pe_offset = 128
             pe[:2] = b"MZ"
-            pe[0x3C:0x40] = (128).to_bytes(4, "little")
-            pe[128:132] = b"PE\0\0"
+            pe[0x3C:0x40] = pe_offset.to_bytes(4, "little")
+            pe[pe_offset:pe_offset + 4] = bytes((0x50, 0x45, 0, 0))
+            pe[pe_offset + 4:pe_offset + 6] = (0x8664).to_bytes(2, "little")
+            pe[pe_offset + 6:pe_offset + 8] = (1).to_bytes(2, "little")
+            pe[pe_offset + 20:pe_offset + 22] = (0xF0).to_bytes(2, "little")
+            pe[pe_offset + 22:pe_offset + 24] = (0x0002).to_bytes(2, "little")
+            optional = pe_offset + 24
+            pe[optional:optional + 2] = (0x20B).to_bytes(2, "little")
+            pe[optional + 16:optional + 20] = (0x1000).to_bytes(4, "little")
+            section = optional + 0xF0
+            pe[section:section + 5] = b".text"
+            pe[section + 8:section + 12] = (0x1000).to_bytes(4, "little")
+            pe[section + 12:section + 16] = (0x1000).to_bytes(4, "little")
+            pe[section + 16:section + 20] = (128).to_bytes(4, "little")
+            pe[section + 20:section + 24] = (512).to_bytes(4, "little")
+            pe[section + 36:section + 40] = (0x60000020).to_bytes(4, "little")
+            pe[512:640] = bytes((0xC3,)) * 128
             incoming.write_bytes(pe)
             expected = hashlib.sha256(incoming.read_bytes()).hexdigest()
             old_storage = services_module.settings.storage_path
