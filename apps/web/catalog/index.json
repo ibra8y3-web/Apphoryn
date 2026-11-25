@@ -1959,7 +1959,18 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "7a80814896b788f8b6d03feba80032af9bcc72cb",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-25T04:24:17.031930+00:00"
+        }
+      ]
     },
     {
       "id": "roger364-ramscope",
