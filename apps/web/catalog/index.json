@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:49:01.278414+00:00",
+  "generated_at": "2026-11-25T09:50:48.926105+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -3383,6 +3383,76 @@
           ],
           "requested_at": "2026-11-25T04:23:38.309026+00:00"
         }
+      ]
+    },
+    {
+      "id": "yim2412-fifa-match-tracker",
+      "slug": "yim2412-fifa-match-tracker",
+      "name": "fifa-match-tracker",
+      "summary": "넥슨 오픈API로 EA SPORTS FC 온라인 감독모드 전적을 조회하고 집계하는 PySide6 데스크톱 앱입니다(승률·선수 지표·전술 상성·슛 맵, SQLite 누적 저장).",
+      "description": "넥슨 오픈API로 EA SPORTS FC 온라인 감독모드 전적을 조회하고 집계하는 PySide6 데스크톱 앱입니다(승률·선수 지표·전술 상성·슛 맵, SQLite 누적 저장).",
+      "translations": {
+        "en": {
+          "summary": "넥슨 오픈API로 EA SPORTS FC 온라인 감독모드 전적을 조회하고 집계하는 PySide6 데스크톱 앱입니다(승률·선수 지표·전술 상성·슛 맵, SQLite 누적 저장).",
+          "description": "넥슨 오픈API로 EA SPORTS FC 온라인 감독모드 전적을 조회하고 집계하는 PySide6 데스크톱 앱입니다(승률·선수 지표·전술 상성·슛 맵, SQLite 누적 저장)."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/282561433?v=4",
+      "repository_url": "https://github.com/yim2412/fifa-match-tracker",
+      "github_repo_id": "1303964067",
+      "source_updated_at": "2026-11-13T16:00:46Z",
+      "homepage_url": "https://yim2412.github.io/fifa-match-tracker/",
+      "owner": "yim2412",
+      "default_branch": "master",
+      "source_commit_sha": "5497c7620283044ee3573f5a16f12d5a1bfe1200",
+      "license_text": "MIT License\n\nCopyright (c) 2026 준\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "desktop-app",
+        "ea-sports-fc",
+        "fconline",
+        "game-stats",
+        "nexon-open-api",
+        "pyside6",
+        "python",
+        "sqlite"
+      ],
+      "latest_version": "v3.14.1",
+      "release_url": "https://github.com/yim2412/fifa-match-tracker/releases/tag/v3.14.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yim2412-fifa-match-tracker-v3.14.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yim2412-fifa-match-tracker-v3.14.1/THIRD-PARTY-NOTICE-yim2412-fifa-match-tracker.txt",
+      "artifacts": [
+        {
+          "id": "49cf00743447a35a6321019eacf4b55f624f69b5519c20b3028b9404603c93d5",
+          "filename": "FifaMatchTracker-Setup-v3.14.1.exe",
+          "original_filename": "FifaMatchTracker-Setup-v3.14.1.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v3.14.1",
+          "size_bytes": 35610860,
+          "sha256": "49cf00743447a35a6321019eacf4b55f624f69b5519c20b3028b9404603c93d5",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yim2412-fifa-match-tracker-v3.14.1/FifaMatchTracker-Setup-v3.14.1.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yim2412-fifa-match-tracker-v3.14.1"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
