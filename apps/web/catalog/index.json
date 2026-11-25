@@ -3956,7 +3956,18 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "3cd6b57d26985b68e9baa103757f0070b39da1ae",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-25T05:33:05.663896+00:00"
+        }
+      ]
     },
     {
       "id": "silverfeit-stiksound",
