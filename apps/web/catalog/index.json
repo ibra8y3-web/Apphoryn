@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T04:06:31.067580+00:00",
+  "generated_at": "2026-11-25T04:06:34.951944+00:00",
   "apps": [
     {
       "id": "defunkt-ambition",
@@ -445,6 +445,45 @@
           "requested_at": "2026-11-25T04:05:38.447257+00:00"
         }
       ]
+    },
+    {
+      "id": "ruby-git-ruby-git",
+      "slug": "ruby-git-ruby-git",
+      "artifacts": [],
+      "name": "ruby-git",
+      "summary": "Ruby/Git is a Ruby library that can be used to create, read and manipulate Git repositories by wrapping system calls to the git binary.",
+      "description": "Ruby/Git is a Ruby library that can be used to create, read and manipulate Git repositories by wrapping system calls to the git binary.",
+      "translations": {
+        "en": {
+          "summary": "Ruby/Git is a Ruby library that can be used to create, read and manipulate Git repositories by wrapping system calls to the git binary.",
+          "description": "Ruby/Git is a Ruby library that can be used to create, read and manipulate Git repositories by wrapping system calls to the git binary."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/30619330?v=4",
+      "repository_url": "https://github.com/ruby-git/ruby-git",
+      "github_repo_id": "130",
+      "source_updated_at": "2026-11-09T18:16:11Z",
+      "homepage_url": null,
+      "owner": "ruby-git",
+      "default_branch": "main",
+      "source_commit_sha": "98c4c9541dc71350b530ccf06a61a5c547e409a3",
+      "license_text": "The MIT License\n\nCopyright (c) 2008 Scott Chacon, 2020 James Couball, and the ruby-git contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "category": "system",
+      "topics": [],
+      "latest_version": "v6.0.0",
+      "release_url": "https://github.com/ruby-git/ruby-git/releases/tag/v6.0.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "defunkt-starling",
