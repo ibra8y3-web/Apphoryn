@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T01:13:30.513615+00:00",
+  "generated_at": "2026-11-25T01:14:49.737466+00:00",
   "apps": [
     {
       "id": "706972745-assetmanager",
@@ -2987,6 +2987,67 @@
       "classification_reason": "The repository describes reusable code, a package, SDK, or framework rather than a standalone installer.",
       "project_status": "installable",
       "icon_url": "https://avatars.githubusercontent.com/u/31959043?v=4"
+    },
+    {
+      "id": "mt25mb-simpleos",
+      "slug": "mt25mb-simpleos",
+      "artifacts": [],
+      "name": "SimpleOS",
+      "summary": "SimpleOS is a free, open-source immutable Linux OS for older adults and non-technical users, with a calm six-tile launcher, scam-blocking browser, and PIN-protected caregiver tools.",
+      "description": "SimpleOS is a free, MIT-licensed, immutable Linux distribution built on uBlue's Fedora Atomic base and shipped as a bootc container image. It targets older adults and non-technical users: system files are read-only, updates arrive as a whole image with the last working version kept for rollback, and the everyday `senior` account has no sudo or wheel access.\n\nThe desktop is a labwc kiosk session with greetd autologin, plus Orca, CUPS, Flatpak, PipeWire, Firefox, Loupe and RustDesk. A React/Electron launcher (simpleos-shell) shows six large tiles, 18px+ text, daily reminders in ~/.config/simpleos, Read Aloud and local Vosk voice commands, family video contact cards, an optional photo frame, and PIN-protected Caregiver Settings with a health summary, update check and one-step rollback.\n\nFirefox is locked to HTTPS with uBlock Origin preinstalled, notification and location prompts blocked, and no extra extensions. The repo includes the image Containerfile, system configs, an ISO builder (scripts/build-iso.sh), a QEMU/VirtualBox test path, a full test suite and a GitHub Pages site; CI publishes the image to GHCR and releases ship installer ISO parts.",
+      "translations": {
+        "en": "SimpleOS is a free, open-source immutable Linux OS for older adults and non-technical users, with a calm six-tile launcher, scam-blocking browser, and PIN-protected caregiver tools.",
+        "ar": "SimpleOS نظام تشغيل لينكس مفتوح المصدر وغير قابل للتعديل، موجّه لكبار السن والمستخدمين غير المتخصصين، بواجهة إطلاق هادئة بستة أزرار كبيرة، وحماية من الاحتيال والإعلانات، وأدوات دعم للمرشدين محمية برمز PIN."
+      },
+      "description_translations": {
+        "en": "SimpleOS is a free, MIT-licensed, immutable Linux distribution built on uBlue's Fedora Atomic base and shipped as a bootc container image. It targets older adults and non-technical users: system files are read-only, updates arrive as a whole image with the last working version kept for rollback, and the everyday `senior` account has no sudo or wheel access.\n\nThe desktop is a labwc kiosk session with greetd autologin, plus Orca, CUPS, Flatpak, PipeWire, Firefox, Loupe and RustDesk. A React/Electron launcher (simpleos-shell) shows six large tiles, 18px+ text, daily reminders in ~/.config/simpleos, Read Aloud and local Vosk voice commands, family video contact cards, an optional photo frame, and PIN-protected Caregiver Settings with a health summary, update check and one-step rollback.\n\nFirefox is locked to HTTPS with uBlock Origin preinstalled, notification and location prompts blocked, and no extra extensions. The repo includes the image Containerfile, system configs, an ISO builder (scripts/build-iso.sh), a QEMU/VirtualBox test path, a full test suite and a GitHub Pages site; CI publishes the image to GHCR and releases ship installer ISO parts.",
+        "ar": "SimpleOS نظام تشغيل لينكس حر ومفتوح المصدر (MIT) وغير قابل للتعديل، مبني على أساس Fedora Atomic من uBlue ويُوزَّع كصورة حاوية bootc. وهو موجّه لكبار السن والمستخدمين غير المتخصصين: ملفات النظام للقراءة فقط، وتصل التحديثات كصورة كاملة مع الاحتفاظ بآخر إصدار عامل للرجوع إليه، وحساب المستخدم اليومي `senior` بلا صلاحيات sudo أو wheel.\n\nسطح المكتب هو جلسة kiosk على labwc مع تسجيل دخول تلقائي عبر greetd، ويضم Orca وCUPS وFlatpak وPipeWire وFirefox وLoupe وRustDesk. أما واجهة الإطلاق (simpleos-shell) المبنية بـReact وElectron فتعرض ستة أزرار كبيرة، ونصًا بحجم 18 بكسل أو أكبر، وتذكيرات يومية تُحفظ في ~/.config/simpleos، وقراءة جهورية وأوامر صوتية محلية عبر Vosk، وبطاقات تواصل فيديو مع العائلة، وإطار صور اختياريًا، وإعدادات Caregiver محمية برمز PIN مع ملخص لحالة النظام وفحص للتحديثات ورجوع بخطوة واحدة.\n\nFirefox مقفل على HTTPS مع uBlock Origin مثبتًا مسبقًا، وحجب نوافذ الإشعارات والموقع، ومنع تثبيت إضافات أخرى. ويضم المستودع ملف Containerfile للصورة وإعدادات النظام وأداة بناء ISO (scripts/build-iso.sh) ومسار اختبار عبر QEMU أو VirtualBox ومجموعة اختبارات كاملة وموقع GitHub Pages؛ وينشر CI الصورة إلى GHCR وتوفّر الإصدارات أجزاء ISO للتركيب."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://raw.githubusercontent.com/MT25MB/SimpleOS/main/docs/assets/simpleos-logo.png",
+      "repository_url": "https://github.com/MT25MB/SimpleOS",
+      "github_repo_id": "1466142995",
+      "source_updated_at": "2026-11-21T16:56:27Z",
+      "homepage_url": "https://mt25mb.github.io/SimpleOS/",
+      "owner": "MT25MB",
+      "default_branch": "main",
+      "source_commit_sha": "18a27fa0ba97a45a75954cb36c12c421080607d7",
+      "license_text": "MIT License\n\nCopyright (c) 2026 SimpleOS contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "The repository is a standalone end-user product: an immutable Linux distribution distributed as a bootc image and a bootable installer ISO, with a React/Electron launcher as its user-facing shell, so 'application' is the closest fit in the available taxonomy (no operating-system kind exists). build_recommended is true because the README documents a supported, scripted build path with CI evidence: ",
+      "category": "security",
+      "topics": [
+        "a11y",
+        "accessibility",
+        "anti-scam",
+        "assistive-technology",
+        "bootc",
+        "elderly-care",
+        "electron",
+        "fedora-atomic",
+        "immutable-os",
+        "kiosk",
+        "labwc",
+        "linux",
+        "linux-distribution",
+        "opensource",
+        "privacy",
+        "react",
+        "seniors",
+        "typescript",
+        "universal-blue",
+        "wayland"
+      ],
+      "latest_version": "v1.2.1",
+      "release_url": "https://github.com/MT25MB/SimpleOS/releases/tag/v1.2.1",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "openskye-labs-skyelab",
