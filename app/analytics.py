@@ -124,7 +124,8 @@ class AnalyticsStore:
                 """SELECT app_slug,
                    SUM(CASE WHEN event_type='app_view' THEN 1 ELSE 0 END) AS views,
                    SUM(CASE WHEN event_type='download_requested' THEN 1 ELSE 0 END) AS downloads,
-                   SUM(CASE WHEN event_type='download_completed' THEN 1 ELSE 0 END) AS completed_downloads
+                   SUM(CASE WHEN event_type='download_completed' THEN 1 ELSE 0 END) AS completed_downloads,
+                   SUM(CASE WHEN event_type='favorite_added' THEN 1 ELSE 0 END) AS favorites_added
                    FROM analytics_events WHERE app_slug IS NOT NULL
                    GROUP BY app_slug ORDER BY downloads DESC,views DESC LIMIT 50"""
             ).fetchall()
@@ -145,6 +146,8 @@ class AnalyticsStore:
             "views": counts.get("app_view", 0),
             "download_requests": counts.get("download_requested", 0),
             "completed_downloads": counts.get("download_completed", 0),
+            "favorites_added": counts.get("favorite_added", 0),
+            "favorites_removed": counts.get("favorite_removed", 0),
             "searches": counts.get("search", 0),
             "per_app": [dict(row) for row in apps],
             "pending_replication": int(pending),
