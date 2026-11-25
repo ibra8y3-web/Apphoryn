@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T10:08:00.319911+00:00",
+  "generated_at": "2026-11-25T10:08:23.364677+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -176,6 +176,104 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "nu-idea-agent-bar",
+      "slug": "nu-idea-agent-bar",
+      "name": "agent-bar",
+      "summary": "macOS widget: which Claude Code, Codex and Hermes sessions are working and which are waiting for you",
+      "description": "macOS widget: which Claude Code, Codex and Hermes sessions are working and which are waiting for you",
+      "translations": {
+        "en": {
+          "summary": "macOS widget: which Claude Code, Codex and Hermes sessions are working and which are waiting for you",
+          "description": "macOS widget: which Claude Code, Codex and Hermes sessions are working and which are waiting for you"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/nu-idea/agent-bar/main/assets/icon.png",
+      "repository_url": "https://github.com/nu-idea/agent-bar",
+      "github_repo_id": "1471287379",
+      "source_updated_at": "2026-11-25T08:02:16Z",
+      "homepage_url": "https://t.me/nu_idea",
+      "owner": "nu-idea",
+      "default_branch": "main",
+      "source_commit_sha": "1a61f3fae263380caaaabe7417c7d9458d3cf3de",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Nu Idea\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ai-agents",
+        "ai-coding",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "codex",
+        "codex-cli",
+        "coding-agents",
+        "developer-tools",
+        "electron",
+        "hermes-agent",
+        "macos",
+        "macos-app",
+        "menu-bar-app",
+        "menubar",
+        "notifications",
+        "openai-codex",
+        "productivity",
+        "vibe-coding"
+      ],
+      "latest_version": "v0.2.0",
+      "release_url": "https://github.com/nu-idea/agent-bar/releases/tag/v0.2.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-nu-idea-agent-bar-v0.2.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-nu-idea-agent-bar-v0.2.0/THIRD-PARTY-NOTICE-nu-idea-agent-bar.txt",
+      "artifacts": [
+        {
+          "id": "f45859ea6a0403c9d23e3345474ad40f80d598b936fa0c53c968d3b7bbf83f60",
+          "filename": "agent-bar-arm64.dmg",
+          "original_filename": "agent-bar-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.2.0",
+          "size_bytes": 119625635,
+          "sha256": "f45859ea6a0403c9d23e3345474ad40f80d598b936fa0c53c968d3b7bbf83f60",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-nu-idea-agent-bar-v0.2.0/agent-bar-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-nu-idea-agent-bar-v0.2.0"
+        },
+        {
+          "id": "bd5e0415a4328acc5b82aee71d1ef8a6b0d84b53089ec381a2d3842fb08eb267",
+          "filename": "agent-bar-x64.dmg",
+          "original_filename": "agent-bar-x64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "x86_64",
+          "version": "v0.2.0",
+          "size_bytes": 126822636,
+          "sha256": "bd5e0415a4328acc5b82aee71d1ef8a6b0d84b53089ec381a2d3842fb08eb267",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-nu-idea-agent-bar-v0.2.0/agent-bar-x64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-nu-idea-agent-bar-v0.2.0"
+        }
+      ],
+      "platforms": [
+        "macos"
       ]
     },
     {
