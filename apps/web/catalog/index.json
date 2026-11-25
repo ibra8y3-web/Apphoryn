@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:24:31.868686+00:00",
+  "generated_at": "2026-11-25T09:24:43.219824+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -2734,6 +2734,86 @@
       "platforms": [
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "kele551-hotnews",
+      "slug": "kele551-hotnews",
+      "name": "hotnews",
+      "summary": "热点新闻聚合：网页形式的国内 / 国际热榜图库，单文件 exe 双击即用。中文检索：热点新闻 / 今日热榜 / 微博热搜 / 知乎热榜 / 新闻聚合 / 国际新闻 / 实时热点。Hot news aggregator (single-file exe): China & global trending lists in a web UI.",
+      "description": "热点新闻聚合：网页形式的国内 / 国际热榜图库，单文件 exe 双击即用。中文检索：热点新闻 / 今日热榜 / 微博热搜 / 知乎热榜 / 新闻聚合 / 国际新闻 / 实时热点。Hot news aggregator (single-file exe): China & global trending lists in a web UI.",
+      "translations": {
+        "en": {
+          "summary": "热点新闻聚合：网页形式的国内 / 国际热榜图库，单文件 exe 双击即用。中文检索：热点新闻 / 今日热榜 / 微博热搜 / 知乎热榜 / 新闻聚合 / 国际新闻 / 实时热点。Hot news aggregator (single-file exe): China & global trending lists in a web UI.",
+          "description": "热点新闻聚合：网页形式的国内 / 国际热榜图库，单文件 exe 双击即用。中文检索：热点新闻 / 今日热榜 / 微博热搜 / 知乎热榜 / 新闻聚合 / 国际新闻 / 实时热点。Hot news aggregator (single-file exe): China & global trending lists in a web UI."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/kele551/hotnews/main/docs/icon.png",
+      "repository_url": "https://github.com/kele551/hotnews",
+      "github_repo_id": "1406685466",
+      "source_updated_at": "2026-11-24T06:30:49Z",
+      "homepage_url": "https://kele551.github.io/hotnews/",
+      "owner": "kele551",
+      "default_branch": "main",
+      "source_commit_sha": "938c49f7a8057874410b3b64de6062f99ea0fed2",
+      "license_text": "MIT License\n\nCopyright (C) 2026 HaiFeng (kele551)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "baidu",
+        "china-news",
+        "desktop-app",
+        "fastapi",
+        "hot-list",
+        "hot-news",
+        "news",
+        "news-aggregator",
+        "open-source",
+        "portable",
+        "python",
+        "toutiao",
+        "trending",
+        "web-app",
+        "weibo",
+        "windows",
+        "world-news",
+        "zhihu"
+      ],
+      "latest_version": "v1.6.1",
+      "release_url": "https://github.com/kele551/hotnews/releases/tag/v1.6.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kele551-hotnews-v1.6.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kele551-hotnews-v1.6.1/THIRD-PARTY-NOTICE-kele551-hotnews.txt",
+      "artifacts": [
+        {
+          "id": "ca25d555ae50f1b6fb97c11d3bf8fcf23df49f78730b5ebd407dd65ee39aebef",
+          "filename": "hotnews-v1.6.1.exe",
+          "original_filename": "hotnews-v1.6.1.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.6.1",
+          "size_bytes": 17348830,
+          "sha256": "ca25d555ae50f1b6fb97c11d3bf8fcf23df49f78730b5ebd407dd65ee39aebef",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kele551-hotnews-v1.6.1/hotnews-v1.6.1.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kele551-hotnews-v1.6.1"
+        }
+      ],
+      "platforms": [
         "windows"
       ]
     },
