@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:20:52.770829+00:00",
+  "generated_at": "2026-11-25T19:21:11.395862+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -512,6 +512,99 @@
       ],
       "platforms": [
         "macos"
+      ]
+    },
+    {
+      "id": "qezawat-a-agent-trader",
+      "slug": "qezawat-a-agent-trader",
+      "name": "Agent-Trader",
+      "summary": "Agentic AI futures-trading app for Android: an LLM chat brain that can act on a real Bitunix USDT-M futures account. Kotlin + Compose, 21 strategies, live WebSocket feed, paper-by-default with an armed live-trading switch.",
+      "description": "Agentic AI futures-trading app for Android: an LLM chat brain that can act on a real Bitunix USDT-M futures account. Kotlin + Compose, 21 strategies, live WebSocket feed, paper-by-default with an armed live-trading switch.",
+      "translations": {
+        "en": {
+          "summary": "Agentic AI futures-trading app for Android: an LLM chat brain that can act on a real Bitunix USDT-M futures account. Kotlin + Compose, 21 strategies, live WebSocket feed, paper-by-default with an armed live-trading switch.",
+          "description": "Agentic AI futures-trading app for Android: an LLM chat brain that can act on a real Bitunix USDT-M futures account. Kotlin + Compose, 21 strategies, live WebSocket feed, paper-by-default with an armed live-trading switch."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/291129508?v=4",
+      "repository_url": "https://github.com/qezawat-a/Agent-Trader",
+      "github_repo_id": "1450963253",
+      "source_updated_at": "2026-11-22T10:42:07Z",
+      "homepage_url": null,
+      "owner": "qezawat-a",
+      "default_branch": "main",
+      "source_commit_sha": "2df10bf23eaeed7d90f28038ef1a35753a96615a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 qezawat-a\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "ai",
+      "topics": [
+        "agentic-ai",
+        "ai-agent",
+        "android",
+        "android-app",
+        "bitunix",
+        "cryptocurrency",
+        "futures-trading",
+        "jetpack-compose",
+        "kotlin",
+        "llm",
+        "material3",
+        "okhttp",
+        "trading",
+        "trading-bot"
+      ],
+      "latest_version": "v1.0.202611251835",
+      "release_url": "https://github.com/qezawat-a/Agent-Trader/releases/tag/v1.0.202611251835",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-qezawat-a-agent-trader-v1.0.202611251835",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-qezawat-a-agent-trader-v1.0.202611251835/THIRD-PARTY-NOTICE-qezawat-a-agent-trader.txt",
+      "artifacts": [
+        {
+          "id": "3eaa5d0361521d25632ae16d0d3610e15db24aaddb3cb40046ebe9fe4cbff791",
+          "filename": "Agent-Trader-debug.apk",
+          "original_filename": "Agent-Trader-debug.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.202611251835",
+          "size_bytes": 12758688,
+          "sha256": "3eaa5d0361521d25632ae16d0d3610e15db24aaddb3cb40046ebe9fe4cbff791",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "a9e3fe09cd61a1c97a0a6b480ed31954fa559f8524f1d1949531221305e55306",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-qezawat-a-agent-trader-v1.0.202611251835/Agent-Trader-debug.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-qezawat-a-agent-trader-v1.0.202611251835"
+        },
+        {
+          "id": "dfba110365919b1901537e333e64f785369217455e2f4a1acf83288e8726a7a5",
+          "filename": "Agent-Trader-release.apk",
+          "original_filename": "Agent-Trader-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.202611251835",
+          "size_bytes": 1713535,
+          "sha256": "dfba110365919b1901537e333e64f785369217455e2f4a1acf83288e8726a7a5",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "98adada716581f4dace5d14416f54813c9d785006700dec9aaa3d982e0982316",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-qezawat-a-agent-trader-v1.0.202611251835/Agent-Trader-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-qezawat-a-agent-trader-v1.0.202611251835"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
