@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:05:00.447694+00:00",
+  "generated_at": "2026-11-25T23:05:21.211431+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -47056,6 +47056,79 @@
       ],
       "platforms": [
         "macos"
+      ]
+    },
+    {
+      "id": "zero6689-tailnet-byok",
+      "slug": "zero6689-tailnet-byok",
+      "name": "tailnet-byok",
+      "summary": "把 DSH 变成随身控制台：用手机或平板连接你自己电脑上跑的 DSH。需要你自己的 tailnet（Tailscale 账号 + 官方 Tailscale 应用）与一台可连通的 DSH 服务器；本项目不提供 tailnet、节点、服务器、密钥或中转。",
+      "description": "把 DSH 变成随身控制台：用手机或平板连接你自己电脑上跑的 DSH。需要你自己的 tailnet（Tailscale 账号 + 官方 Tailscale 应用）与一台可连通的 DSH 服务器；本项目不提供 tailnet、节点、服务器、密钥或中转。",
+      "translations": {
+        "en": {
+          "summary": "把 DSH 变成随身控制台：用手机或平板连接你自己电脑上跑的 DSH。需要你自己的 tailnet（Tailscale 账号 + 官方 Tailscale 应用）与一台可连通的 DSH 服务器；本项目不提供 tailnet、节点、服务器、密钥或中转。",
+          "description": "把 DSH 变成随身控制台：用手机或平板连接你自己电脑上跑的 DSH。需要你自己的 tailnet（Tailscale 账号 + 官方 Tailscale 应用）与一台可连通的 DSH 服务器；本项目不提供 tailnet、节点、服务器、密钥或中转。"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/zero6689/tailnet-byok/main/app/src/main/res/mipmap-hdpi/ic_launcher_background.png",
+      "repository_url": "https://github.com/zero6689/tailnet-byok",
+      "github_repo_id": "1375951891",
+      "source_updated_at": "2026-09-26T14:02:40Z",
+      "homepage_url": "https://zero6689.github.io/tailnet-byok/",
+      "owner": "zero6689",
+      "default_branch": "main",
+      "source_commit_sha": "4c69e9a5e9a01a5c965f8feab6dcfb329101ef8b",
+      "license_text": "MIT License\n\nCopyright (c) 2026 tailnet-byok contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "apk",
+        "byok",
+        "dsh",
+        "jetpack-compose",
+        "kotlin",
+        "remote-access",
+        "self-hosted",
+        "tailscale",
+        "wireguard"
+      ],
+      "latest_version": "v0.4.7",
+      "release_url": "https://github.com/zero6689/tailnet-byok/releases/tag/v0.4.7",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zero6689-tailnet-byok-v0.4.7",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zero6689-tailnet-byok-v0.4.7/THIRD-PARTY-NOTICE-zero6689-tailnet-byok.txt",
+      "artifacts": [
+        {
+          "id": "357af0dd34ea3fcdfcc38aba818bee5e6d06766afd083fa3d02c6fd64f22822e",
+          "filename": "tailnet-byok-arm64.apk",
+          "original_filename": "tailnet-byok-arm64.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v0.4.7",
+          "size_bytes": 45934412,
+          "sha256": "357af0dd34ea3fcdfcc38aba818bee5e6d06766afd083fa3d02c6fd64f22822e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "4d7f05e24afd70917963ad213ab382b6b0ac913f00933d1f526f23e3b5819790",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zero6689-tailnet-byok-v0.4.7/tailnet-byok-arm64.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zero6689-tailnet-byok-v0.4.7"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
