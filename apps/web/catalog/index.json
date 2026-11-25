@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T05:34:55.441527+00:00",
+  "generated_at": "2026-11-25T05:35:15.390346+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -808,6 +808,83 @@
       ],
       "platforms": [
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "teriks-dgenerate",
+      "slug": "teriks-dgenerate",
+      "name": "dgenerate",
+      "summary": "dgenerate is a scriptable command line tool (and library) for generating images and animation sequences using stable diffusion and related techniques, with an accompanying GUI scripting environment.",
+      "description": "dgenerate is a scriptable command line tool (and library) for generating images and animation sequences using stable diffusion and related techniques, with an accompanying GUI scripting environment.",
+      "translations": {
+        "en": {
+          "summary": "dgenerate is a scriptable command line tool (and library) for generating images and animation sequences using stable diffusion and related techniques, with an accompanying GUI scripting environment.",
+          "description": "dgenerate is a scriptable command line tool (and library) for generating images and animation sequences using stable diffusion and related techniques, with an accompanying GUI scripting environment."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/14919098?v=4",
+      "repository_url": "https://github.com/Teriks/dgenerate",
+      "github_repo_id": "653408376",
+      "source_updated_at": "2026-11-16T20:04:03Z",
+      "homepage_url": "https://dgenerate.readthedocs.io",
+      "owner": "Teriks",
+      "default_branch": "version_6.0.0",
+      "source_commit_sha": "d3e1a8f3f8928db14acad6de70e6fbaa1c713b21",
+      "license_text": "BSD 3-Clause License\n\nCopyright (c) 2023, Teriks\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+      "license_spdx": "BSD-3-Clause",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ai",
+        "ai-upscale",
+        "command-line",
+        "command-line-tool",
+        "cross-platform",
+        "gui-application",
+        "image-editing",
+        "image-generation",
+        "image-processing",
+        "scriptable",
+        "stable-diffusion",
+        "upscaling",
+        "video-editing",
+        "video-generation",
+        "video-processing"
+      ],
+      "latest_version": "v5.0.0",
+      "release_url": "https://github.com/Teriks/dgenerate/releases/tag/v5.0.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-teriks-dgenerate-v5.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-teriks-dgenerate-v5.0.0/THIRD-PARTY-NOTICE-teriks-dgenerate.txt",
+      "artifacts": [
+        {
+          "id": "8004cda6b245ec98f8e521af342885234dd2bc026ea5498c88e2092f80f69f95",
+          "filename": "dgenerate-installer-win-5.0.0.exe",
+          "original_filename": "dgenerate-installer-win-5.0.0.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v5.0.0",
+          "size_bytes": 23846415,
+          "sha256": "8004cda6b245ec98f8e521af342885234dd2bc026ea5498c88e2092f80f69f95",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-teriks-dgenerate-v5.0.0/dgenerate-installer-win-5.0.0.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-teriks-dgenerate-v5.0.0"
+        }
+      ],
+      "platforms": [
         "windows"
       ]
     },
