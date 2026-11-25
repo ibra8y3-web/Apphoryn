@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T09:24:20.972735+00:00",
+  "generated_at": "2026-11-25T09:24:31.868686+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -1329,6 +1329,79 @@
           "signer_certificate_sha256": "050a421130209589ac72bdf25649ff74fa148720a14e8d82b95b251ad577ed03",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rajnishkmehta-dhwanicontrol-v1.4.0/DhwaniControl.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rajnishkmehta-dhwanicontrol-v1.4.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "iurika-n-t-r-droref",
+      "slug": "iurika-n-t-r-droref",
+      "name": "DroRef",
+      "summary": "Free, open-source reference board for Android. Opens and saves PureRef .pur files.",
+      "description": "Free, open-source reference board for Android. Opens and saves PureRef .pur files.",
+      "translations": {
+        "en": {
+          "summary": "Free, open-source reference board for Android. Opens and saves PureRef .pur files.",
+          "description": "Free, open-source reference board for Android. Opens and saves PureRef .pur files."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Iurika-N-T-R/DroRef/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/Iurika-N-T-R/DroRef",
+      "github_repo_id": "1427051621",
+      "source_updated_at": "2026-11-21T12:14:25Z",
+      "homepage_url": "https://iurika-n-t-r.github.io/DroRef/",
+      "owner": "Iurika-N-T-R",
+      "default_branch": "main",
+      "source_commit_sha": "4f299995d08e3084c98eff36012d81e9f2c2266a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 DroRef contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "artists",
+        "digital-art",
+        "jetpack-compose",
+        "kotlin",
+        "mit-license",
+        "offline-first",
+        "open-source",
+        "pureref",
+        "reference-board"
+      ],
+      "latest_version": "v1.5.0",
+      "release_url": "https://github.com/Iurika-N-T-R/DroRef/releases/tag/v1.5.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-iurika-n-t-r-droref-v1.5.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-iurika-n-t-r-droref-v1.5.0/THIRD-PARTY-NOTICE-iurika-n-t-r-droref.txt",
+      "artifacts": [
+        {
+          "id": "d86dcce81effd13b957b6d5f5bb2c6fffc7e3df05546edefc95013e90c7fc697",
+          "filename": "DroRef-1.5.0.apk",
+          "original_filename": "DroRef-1.5.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.5.0",
+          "size_bytes": 597648,
+          "sha256": "d86dcce81effd13b957b6d5f5bb2c6fffc7e3df05546edefc95013e90c7fc697",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "292392b7f05ef5ecc2ed47650b8f3f607bd17d7b620c31636667b57a28f36aa7",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-iurika-n-t-r-droref-v1.5.0/DroRef-1.5.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-iurika-n-t-r-droref-v1.5.0"
         }
       ],
       "platforms": [
