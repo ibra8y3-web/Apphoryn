@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T10:07:34.250901+00:00",
+  "generated_at": "2026-11-25T10:07:45.992974+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -3759,6 +3759,88 @@
           ],
           "requested_at": "2026-11-25T04:23:38.309026+00:00"
         }
+      ]
+    },
+    {
+      "id": "vassilidev-evict",
+      "slug": "vassilidev-evict",
+      "name": "evict",
+      "summary": "The bouncer for your disk: a fast, free disk space analyzer for macOS, Windows and Linux. Treemap of the whole disk, large files, duplicates and caches, safe cleanup.",
+      "description": "The bouncer for your disk: a fast, free disk space analyzer for macOS, Windows and Linux. Treemap of the whole disk, large files, duplicates and caches, safe cleanup.",
+      "translations": {
+        "en": {
+          "summary": "The bouncer for your disk: a fast, free disk space analyzer for macOS, Windows and Linux. Treemap of the whole disk, large files, duplicates and caches, safe cleanup.",
+          "description": "The bouncer for your disk: a fast, free disk space analyzer for macOS, Windows and Linux. Treemap of the whole disk, large files, duplicates and caches, safe cleanup."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/vassilidev/evict/main/docs/icon.png",
+      "repository_url": "https://github.com/vassilidev/evict",
+      "github_repo_id": "1466889218",
+      "source_updated_at": "2026-11-22T10:29:39Z",
+      "homepage_url": "https://vassilidev.github.io/evict/",
+      "owner": "vassilidev",
+      "default_branch": "main",
+      "source_commit_sha": "a2f8a6d5948a37cec0ae1b73889490aa569246e7",
+      "license_text": "MIT License\n\nCopyright (c) 2026 vassilidev\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "system",
+      "topics": [
+        "c",
+        "cleanup",
+        "disk-analyzer",
+        "disk-cleanup",
+        "disk-space",
+        "disk-usage",
+        "disk-usage-analyzer",
+        "duplicate-finder",
+        "gtk",
+        "large-files",
+        "linux",
+        "linux-app",
+        "macos",
+        "macos-app",
+        "storage-analyzer",
+        "swiftui",
+        "treemap",
+        "webview2",
+        "windows",
+        "windows-app"
+      ],
+      "latest_version": "v1.13.0",
+      "release_url": "https://github.com/vassilidev/evict/releases/tag/v1.13.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-vassilidev-evict-v1.13.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-vassilidev-evict-v1.13.0/THIRD-PARTY-NOTICE-vassilidev-evict.txt",
+      "artifacts": [
+        {
+          "id": "2d0575d7dbc67b16748b5c7250f16d2d1c0d41badfd487d2712411289f6c53f2",
+          "filename": "Evict.dmg",
+          "original_filename": "Evict.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": null,
+          "version": "v1.13.0",
+          "size_bytes": 1096960,
+          "sha256": "2d0575d7dbc67b16748b5c7250f16d2d1c0d41badfd487d2712411289f6c53f2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-vassilidev-evict-v1.13.0/Evict.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-vassilidev-evict-v1.13.0"
+        }
+      ],
+      "platforms": [
+        "macos"
       ]
     },
     {
