@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:14:30.630994+00:00",
+  "generated_at": "2026-11-25T21:14:54.547171+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -30727,6 +30727,78 @@
       "release_url": "https://github.com/robbyczgw-cla/pocket-ui/releases/tag/v0.7.2",
       "platforms": [],
       "project_status": "source_available"
+    },
+    {
+      "id": "ismailsevik-podcastler",
+      "slug": "ismailsevik-podcastler",
+      "name": "podcastler",
+      "summary": "A smallish Android Podcast player",
+      "description": "A smallish Android Podcast player",
+      "translations": {
+        "en": {
+          "summary": "A smallish Android Podcast player",
+          "description": "A smallish Android Podcast player"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/255663813?v=4",
+      "repository_url": "https://github.com/ismailsevik/podcastler",
+      "github_repo_id": "1448770726",
+      "source_updated_at": "2026-11-08T14:50:33Z",
+      "homepage_url": "https://ismailsevik.com",
+      "owner": "ismailsevik",
+      "default_branch": "main",
+      "source_commit_sha": "b0510412dc00b6f350db9a52a8922d3609678cbd",
+      "license_text": "MIT License\n\nCopyright (c) 2026 İsmail Şevik\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "apk",
+        "kotlin",
+        "podcast",
+        "podcast-listening",
+        "podcast-player",
+        "podcasting",
+        "podcasts"
+      ],
+      "latest_version": "Podcastler-v3",
+      "release_url": "https://github.com/ismailsevik/podcastler/releases/tag/Podcastler-v3",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ismailsevik-podcastler-Podcastler-v3",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ismailsevik-podcastler-Podcastler-v3/THIRD-PARTY-NOTICE-ismailsevik-podcastler.txt",
+      "artifacts": [
+        {
+          "id": "5e0a727428513c2ef4ce45b89d6a33f3d3c6eef30d0ccd67525e736b6f6a07b6",
+          "filename": "podcastler-2026-11-17.apk",
+          "original_filename": "podcastler-2026-11-17.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "Podcastler-v3",
+          "size_bytes": 46226608,
+          "sha256": "5e0a727428513c2ef4ce45b89d6a33f3d3c6eef30d0ccd67525e736b6f6a07b6",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "d418ec200b208b490ea7e78d4625371c1003d39bc8b7586f48cd7a049c21cce0",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ismailsevik-podcastler-Podcastler-v3/podcastler-2026-11-17.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ismailsevik-podcastler-Podcastler-v3"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
     },
     {
       "id": "rifkiwork74-projects-floating-dj-visualizer-by-rifki",
