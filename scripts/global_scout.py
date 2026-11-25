@@ -24,6 +24,7 @@ from app.github_release_mirror import GitHubReleaseMirror
 from app.repository_crawler import RepositoryCrawler
 from app.services import CatalogService
 from app.import_pacing import ImportPacer
+from app.github_actions_client import call_apphoryn_internal_api
 
 
 RETRY_DELAYS_SECONDS = (6 * 3600, 24 * 3600, 3 * 86400, 7 * 86400, 30 * 86400)
@@ -107,18 +108,6 @@ def known_current(candidate: dict[str, Any], by_id: dict[str, dict], by_url: dic
     existing = existing or by_url.get(repo_key(url))
     if not existing or not existing.get("source_updated_at"):
         return False
-    # An app without both Arabic fields is not a complete catalog record yet.
-    translations = existing.get("translations") if isinstance(existing.get("translations"), dict) else {}
-    description_translations = (
-        existing.get("description_translations")
-        if isinstance(existing.get("description_translations"), dict) else {}
-    )
-    if (
-        str(existing.get("translation_status") or "").lower() != "complete"
-        or not translations.get("ar")
-        or not description_translations.get("ar")
-    ):
-        return False
     upstream_updated = str(candidate.get("updated_at") or "")
     indexed_updated = str(existing.get("source_updated_at") or "")
     if upstream_updated and upstream_updated > indexed_updated:
@@ -152,6 +141,88 @@ def known_current(candidate: dict[str, Any], by_id: dict[str, dict], by_url: dic
     return True
 
 
+def has_arabic_translation(app: dict[str, Any]) -> bool:
+    translations = app.get("translations") if isinstance(app.get("translations"), dict) else {}
+    descriptions = (
+        app.get("description_translations")
+        if isinstance(app.get("description_translations"), dict) else {}
+    )
+    return bool(
+        str(app.get("translation_status") or "").lower() == "complete"
+        and translations.get("ar")
+        and descriptions.get("ar")
+    )
+
+
+def localize_existing_catalog_rows(
+    rows: list[dict[str, Any]],
+    mirror: GitHubReleaseMirror,
+    *,
+    interval_seconds: float = 1.0,
+    deadline: float | None = None,
+) -> dict[str, int]:
+    """Translate published descriptions in place, without rewriting source wording."""
+    pacer = ImportPacer(interval_seconds)
+    report = {"checked": 0, "translated": 0, "failed": 0, "deferred": 0}
+    for app in rows:
+        if has_arabic_translation(app):
+            continue
+        description = str(app.get("description") or "").strip()
+        if not description:
+            continue
+        report["checked"] += 1
+        if not pacer.wait_for_slot(deadline):
+            report["deferred"] += 1
+            break
+        try:
+            localized = call_apphoryn_internal_api(
+                "/api/v1/internal/github-actions/catalog-translation",
+                method="POST",
+                payload={
+                    "summary": str(app.get("summary") or ""),
+                    "description": description,
+                    "translations": app.get("translations") or {},
+                    "description_translations": app.get("description_translations") or {},
+                },
+            )
+            if not has_arabic_translation(localized):
+                raise ValueError("Arabic summary and description were not both returned.")
+            updated = {
+                **app,
+                "summary": str(app.get("summary") or localized.get("summary") or ""),
+                "description": description,
+                "translations": localized.get("translations") or {},
+                "description_translations": localized.get("description_translations") or {},
+                "translation_status": "complete",
+            }
+            mirror.publish_app(updated, [])
+            app.update({
+                "translations": updated["translations"],
+                "description_translations": updated["description_translations"],
+                "translation_status": "complete",
+            })
+            report["translated"] += 1
+            print(json.dumps({
+                "event": "existing_catalog_description_translated",
+                "app": str(app.get("name") or app.get("slug") or ""),
+                "status": "complete",
+            }, ensure_ascii=False), flush=True)
+        except Exception as exc:
+            report["failed"] += 1
+            message = f"{type(exc).__name__}: {exc}"
+            print(json.dumps({
+                "event": "existing_catalog_translation_failed",
+                "app": str(app.get("name") or app.get("slug") or ""),
+                "error": message[:300],
+            }, ensure_ascii=False), flush=True)
+            # Provider/API failures are unlikely to improve by retrying thousands
+            # of rows in the same run. The next scheduled run will retry them.
+            if any(token in message for token in ("HTTP 429", "HTTP 500", "HTTP 502", "HTTP 503", "HTTP 504", "URLError")):
+                report["deferred"] += 1
+                break
+    return report
+
+
 def retry_record(entry: dict[str, Any], now: float, reason: str) -> dict[str, Any]:
     attempts = int(entry.get("attempts") or 0) + 1
     delay = RETRY_DELAYS_SECONDS[min(attempts - 1, len(RETRY_DELAYS_SECONDS) - 1)]
@@ -174,6 +245,12 @@ def main() -> None:
         type=float,
         default=float(os.getenv("APPHORYN_IMPORT_INTERVAL_SECONDS", "60")),
         help="Minimum seconds between import starts; set to 60 for one import start per minute.",
+    )
+    parser.add_argument(
+        "--translation-interval-seconds",
+        type=float,
+        default=float(os.getenv("APPHORYN_TRANSLATION_INTERVAL_SECONDS", "1")),
+        help="Minimum seconds between existing-catalog translation requests.",
     )
     parser.add_argument("--state-file", default=str(ROOT / "data" / "scout-state.json"))
     parser.add_argument("--retry-file", default=str(ROOT / "data" / "scout-retry.json"))
@@ -252,6 +329,12 @@ def main() -> None:
     results: list[dict[str, Any]] = []
     scheduled_retries = list(waiting_retries)
     deadline = time.monotonic() + max(60, int(args.run_budget_seconds))
+    localization_report = localize_existing_catalog_rows(
+        catalog_rows,
+        mirror,
+        interval_seconds=args.translation_interval_seconds,
+        deadline=deadline,
+    )
     import_pacer = ImportPacer(args.import_interval_seconds)
     processed_this_run: set[str] = set()
 
@@ -481,6 +564,7 @@ def main() -> None:
         "crawl_batches": crawl_batches,
         "run_budget_seconds": max(60, int(args.run_budget_seconds)),
         "import_interval_seconds": import_pacer.interval_seconds,
+        "existing_catalog_localization": localization_report,
         "run_time_window_reached": time.monotonic() >= deadline,
         "processed": len(results),
         "mirrored": sum(row.get("status") == "mirrored" for row in results),
