@@ -155,5 +155,44 @@ class AIRouterTests(unittest.TestCase):
         self.assertTrue(status["enabled"])
 
 
+
+    def test_local_ollama_models_are_discovered_without_cloud_credentials(self):
+        env = {
+            "GEMINI_API_KEY": "", "GROQ_API_KEY": "", "XAI_API_KEY": "",
+            "OPENROUTER_API_KEY": "", "COMET_API_KEY": "", "CLOUDFLARE_API_TOKEN": "",
+            "OLLAMA_BASE_URL": "http://ollama:11434", "OLLAMA_API_KEY": "",
+            "VLLM_BASE_URL": "",
+        }
+        with (
+            patch.dict(os.environ, env, clear=False),
+            patch.object(ai_router, "_FREE_ONLY", True),
+            patch.object(ai_router, "_request", return_value={"models": [{"name": "qwen2.5-coder:7b"}]}),
+        ):
+            models, providers = ai_router.discover_models(force=True)
+        local = [item for item in models if item.provider == "ollama"]
+        self.assertEqual([item.model for item in local], ["qwen2.5-coder:7b"])
+        self.assertEqual(local[0].free_class, "local_open_source")
+        self.assertEqual(local[0].context, 0)
+        self.assertTrue(next(row for row in providers if row["provider"] == "ollama")["enabled"])
+
+    def test_local_model_endpoint_rejects_public_hosts_and_credentials(self):
+        with self.assertRaises(ai_router.ProviderError):
+            ai_router._local_base_url("https://public-model.example/api")
+        with self.assertRaises(ai_router.ProviderError):
+            ai_router._local_base_url("http://user:password@ollama:11434")
+
+    def test_coding_specialist_prefers_coder_named_models(self):
+        coder = ai_router.Candidate("ollama", "qwen2.5-coder:7b", "openai", "http://ollama:11434/v1", "", 0, "local_open_source")
+        general = ai_router.Candidate("ollama", "llama3.2:3b", "openai", "http://ollama:11434/v1", "", 0, "local_open_source")
+        self.assertGreater(
+            ai_router._task_capability_score(coder, "software_engineer"),
+            ai_router._task_capability_score(general, "software_engineer"),
+        )
+
+    def test_offline_discovery_timeout_is_bounded(self):
+        self.assertGreaterEqual(ai_router._DISCOVERY_TIMEOUT, 1)
+        self.assertLessEqual(ai_router._DISCOVERY_TIMEOUT, 10)
+
+
 if __name__ == "__main__":
     unittest.main()
