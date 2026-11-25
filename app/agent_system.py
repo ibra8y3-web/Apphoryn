@@ -552,70 +552,124 @@ def execute_run(run: dict[str, Any]) -> None:
     run_id, goal = str(run["id"]), str(run["goal"])
     allow_actions = bool(run.get("allow_external_actions"))
     memories = STORE.read_memories(8)
-    planner_task = STORE.create_task(run_id, "niebex", "Plan and coordinate request",
-                                     "Select specialists and define verifiable deliverables.")
-    STORE.update_task(planner_task, "running")
-    planner_system = (
-        "You are Niebex, Apphoryn's central AI brain. Create a concise ordered work plan. Choose only these "
-        "specialist IDs: discovery, research, writing, software_engineer, build, import, update, debugging, security. "
-        "Select only relevant agents, maximum 8. The Supervisor is added by the system at the end. "
-        "Never promise unimplemented code edits or claim an action is complete without tool evidence. "
-        "Return JSON: {summary:string,tasks:[{agent_id:string,title:string,instructions:string}]}."
-    )
-    try:
-        plan, planner_route = ai_router.generate_json([
-            {"role": "system", "content": planner_system},
-            {"role": "user", "content": _json({"goal": goal, "agents": [
-                {"id": a["id"], "title": a["title"], "description": a["description"], "tools": a["tools"]}
-                for a in AGENTS if a["id"] != "niebex"
-            ], "shared_memory": memories, "allow_external_actions": allow_actions})}
-        ])
-    except Exception as exc:
-        STORE.update_task(planner_task, "failed", error=f"{type(exc).__name__}: {str(exc)[:700]}")
-        raise
-    planned = plan.get("tasks") if isinstance(plan.get("tasks"), list) else []
-    assignments: list[dict[str, str]] = []
-    seen: set[str] = set()
-    for item in planned:
-        if not isinstance(item, dict):
-            continue
-        agent_id = str(item.get("agent_id") or "").strip()
-        if agent_id not in AGENT_BY_ID or agent_id in {"niebex", "supervisor"} or agent_id in seen:
-            continue
-        seen.add(agent_id)
-        assignments.append({"agent_id": agent_id,
-            "title": str(item.get("title") or AGENT_BY_ID[agent_id]["title"])[:180],
-            "instructions": str(item.get("instructions") or goal)[:6000]})
-        if len(assignments) >= 8:
-            break
-    if not assignments:
-        assignments = [
-            {"agent_id": "research", "title": "Research the request", "instructions": goal},
-            {"agent_id": "writing", "title": "Prepare a structured result", "instructions": goal},
-        ]
-    assignments.append({"agent_id": "supervisor", "title": "Review evidence and final result",
-                        "instructions": "Audit preceding agent outputs and flag unsupported claims and unresolved requirements."})
-    STORE.update_task(planner_task, "completed", provider=planner_route.get("provider"),
-                      model=planner_route.get("model"),
-                      result={"summary": str(plan.get("summary") or "")[:1200], "plan": assignments})
+    existing_tasks = STORE.list_tasks(run_id, limit=200)
+
+    # Reuse a completed Niebex plan when a worker is restarted; otherwise create a new planner task.
+    saved_planner = next((
+        task for task in reversed(existing_tasks)
+        if task["agent_id"] == "niebex" and task["status"] == "completed"
+        and isinstance(task.get("result"), dict)
+        and isinstance(task["result"].get("plan"), list)
+    ), None)
+    if saved_planner:
+        saved_result = saved_planner["result"]
+        plan = {"summary": saved_result.get("summary", ""), "tasks": saved_result["plan"]}
+        planner_route = {"provider": saved_planner.get("provider"), "model": saved_planner.get("model")}
+        assignments = saved_result["plan"]
+    else:
+        planner_task = STORE.create_task(
+            run_id, "niebex", "Plan and coordinate request",
+            "Select specialists and define verifiable deliverables."
+        )
+        STORE.update_task(planner_task, "running")
+        planner_system = (
+            "You are Niebex, Apphoryn's central AI brain. Create a concise ordered work plan. Choose only these "
+            "specialist IDs: discovery, research, writing, software_engineer, build, import, update, debugging, security. "
+            "Select only relevant agents, maximum 8. The Supervisor is added by the system at the end. "
+            "Never promise unimplemented code edits or claim an action is complete without tool evidence. "
+            "Return JSON: {summary:string,tasks:[{agent_id:string,title:string,instructions:string}]}."
+        )
+        try:
+            plan, planner_route = ai_router.generate_json([
+                {"role": "system", "content": planner_system},
+                {"role": "user", "content": _json({"goal": goal, "agents": [
+                    {"id": a["id"], "title": a["title"], "description": a["description"], "tools": a["tools"]}
+                    for a in AGENTS if a["id"] != "niebex"
+                ], "shared_memory": memories, "allow_external_actions": allow_actions})}
+            ])
+        except Exception as exc:
+            STORE.update_task(planner_task, "failed", error=f"{type(exc).__name__}: {str(exc)[:700]}")
+            raise
+
+        planned = plan.get("tasks") if isinstance(plan.get("tasks"), list) else []
+        assignments: list[dict[str, str]] = []
+        seen: set[str] = set()
+        for item in planned:
+            if not isinstance(item, dict):
+                continue
+            agent_id = str(item.get("agent_id") or "").strip()
+            if agent_id not in AGENT_BY_ID or agent_id in {"niebex", "supervisor"} or agent_id in seen:
+                continue
+            seen.add(agent_id)
+            assignments.append({
+                "agent_id": agent_id,
+                "title": str(item.get("title") or AGENT_BY_ID[agent_id]["title"])[:180],
+                "instructions": str(item.get("instructions") or goal)[:6000],
+            })
+            if len(assignments) >= 8:
+                break
+        if not assignments:
+            assignments = [
+                {"agent_id": "research", "title": "Research the request", "instructions": goal},
+                {"agent_id": "writing", "title": "Prepare a structured result", "instructions": goal},
+            ]
+        assignments.append({
+            "agent_id": "supervisor",
+            "title": "Review evidence and final result",
+            "instructions": "Audit preceding agent outputs and flag unsupported claims and unresolved requirements.",
+        })
+        STORE.update_task(
+            planner_task, "completed",
+            provider=planner_route.get("provider"), model=planner_route.get("model"),
+            result={"summary": str(plan.get("summary") or "")[:1200], "plan": assignments},
+        )
+
+    # Preserve completed specialist outputs across process restarts and continue at the first unfinished agent.
+    completed_by_agent: dict[str, dict[str, Any]] = {}
+    for task in existing_tasks:
+        if task["agent_id"] not in {"niebex"} and task["status"] == "completed" and isinstance(task.get("result"), dict):
+            completed_by_agent[task["agent_id"]] = task
+
     context: list[dict[str, Any]] = []
     for assignment in assignments:
         agent_id = assignment["agent_id"]
+        completed_task = completed_by_agent.get(agent_id)
+        if completed_task:
+            context.append({
+                "agent_id": agent_id,
+                "title": completed_task["title"],
+                "provider": completed_task.get("provider"),
+                "model": completed_task.get("model"),
+                "result": completed_task["result"],
+            })
+            continue
+
         task_id = STORE.create_task(run_id, agent_id, assignment["title"], assignment["instructions"])
         STORE.update_task(task_id, "running")
         try:
-            result, route, tool_result = _agent_call(agent_id, goal, assignment["instructions"], context,
-                                                     memories, allow_actions)
-            STORE.update_task(task_id, "completed", provider=route.get("provider"), model=route.get("model"),
-                              result=result, tool_result=tool_result)
-            context.append({"agent_id": agent_id, "title": assignment["title"], "provider": route.get("provider"),
-                            "model": route.get("model"), "result": result})
+            result, route, tool_result = _agent_call(
+                agent_id, goal, assignment["instructions"], context, memories, allow_actions
+            )
+            STORE.update_task(
+                task_id, "completed", provider=route.get("provider"), model=route.get("model"),
+                result=result, tool_result=tool_result,
+            )
+            context.append({
+                "agent_id": agent_id, "title": assignment["title"],
+                "provider": route.get("provider"), "model": route.get("model"), "result": result,
+            })
             STORE.heartbeat(threading.current_thread().name, "running", run_id)
         except Exception as exc:
             STORE.update_task(task_id, "failed", error=f"{type(exc).__name__}: {str(exc)[:700]}")
             raise
-    final_result = {"plan_summary": str(plan.get("summary") or "")[:1200], "agent_results": context,
-                    "completed_agent_count": len(context), "external_actions_approved": allow_actions}
+
+    final_result = {
+        "plan_summary": str(plan.get("summary") or "")[:1200],
+        "agent_results": context,
+        "completed_agent_count": len(context),
+        "external_actions_approved": allow_actions,
+        "resumed_from_saved_tasks": bool(existing_tasks),
+    }
     STORE.update_run(run_id, "completed", result=final_result)
     repo_match = _REPO_RE.search(goal)
     project_key = f"{repo_match.group(1)}/{repo_match.group(2)}" if repo_match else None
