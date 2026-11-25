@@ -1054,13 +1054,23 @@ def _poll_shared_catalog_once() -> None:
     }
     STORE.set_system_state("shared_catalog_snapshot", snapshot)
     if not previous_digest or digest == previous_digest or not changed_keys:
-        STORE.set_system_state("shared_catalog_health", {
-            "status": "baseline" if not previous_digest else "current",
+        prior_health = STORE.get_system_state("shared_catalog_health", {})
+        prior_health = prior_health if isinstance(prior_health, dict) else {}
+        review_run_id = prior_health.get("review_run_id")
+        review_run = STORE.get_run(str(review_run_id)) if review_run_id else None
+        review_still_active = bool(
+            review_run and review_run.get("status") in {"queued", "running", "retry"}
+        )
+        health = dict(prior_health)
+        health.update({
+            "status": "baseline" if not previous_digest else ("review_queued" if review_still_active else "current"),
             "last_checked_at": utc_now(),
             "catalog_sha256": digest,
             "app_count": len(current_index),
-            "changes_queued": 0,
         })
+        if not review_still_active and not previous_digest:
+            health["changes_queued"] = 0
+        STORE.set_system_state("shared_catalog_health", health)
         return
 
     goal = (
