@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T17:41:48.562327+00:00",
+  "generated_at": "2026-11-25T17:41:56.050220+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -4392,7 +4392,7 @@
         }
       },
       "description_translations": {},
-      "translation_status": "english_only",
+      "translation_status": "pending",
       "ai_provider": null,
       "ai_model": null,
       "icon_url": "https://avatars.githubusercontent.com/u/294051759?v=4",
