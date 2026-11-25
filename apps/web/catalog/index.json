@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T19:42:46.036389+00:00",
+  "generated_at": "2026-11-25T19:42:59.511222+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -10869,7 +10869,7 @@
         }
       },
       "description_translations": {},
-      "translation_status": "english_only",
+      "translation_status": "pending",
       "ai_provider": null,
       "ai_model": null,
       "icon_url": "https://raw.githubusercontent.com/Melodious-nub/FundFlow/main/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
@@ -10879,7 +10879,7 @@
       "homepage_url": "https://melodious-nub.github.io/FundFlow/",
       "owner": "Melodious-nub",
       "default_branch": "main",
-      "source_commit_sha": "5b9d248e37b60a127c1470fd56190431903eb185",
+      "source_commit_sha": "df5bc7f6e269e04369d1d658dc6862690fc2a750",
       "license_text": "MIT License\n\nCopyright (c) 2026 Md. Shawon Talukder\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -10919,6 +10919,23 @@
           "signature_status": "verified",
           "signer_certificate_sha256": "669b8eef55eca28129e5ab9d29804ec7352ea5e3b84a1d6f8de379ec26625c28",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-melodious-nub-fundflow-v1.1.1/Fundflow_v1.1.1.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-melodious-nub-fundflow-v1.1.1"
+        },
+        {
+          "id": "4c29359f6bd48c94779a27aa6108deabae416cca2df2d53695704a1699f33638",
+          "filename": "4c29359f6bd48c94779a27aa6108deabae416cca2df2d53695704a1699f33638-4c29359f6bd4.apk",
+          "original_filename": "Fundflow_v1.1.1.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.1.1",
+          "size_bytes": 7733807,
+          "sha256": "4c29359f6bd48c94779a27aa6108deabae416cca2df2d53695704a1699f33638",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "669b8eef55eca28129e5ab9d29804ec7352ea5e3b84a1d6f8de379ec26625c28",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-melodious-nub-fundflow-v1.1.1/4c29359f6bd48c94779a27aa6108deabae416cca2df2d53695704a1699f33638-4c29359f6bd4.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-melodious-nub-fundflow-v1.1.1"
         }
       ],
