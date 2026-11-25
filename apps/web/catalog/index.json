@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T10:06:49.107432+00:00",
+  "generated_at": "2026-11-25T10:06:59.099340+00:00",
   "apps": [
     {
       "id": "pdwaldrop-absotui",
@@ -5091,12 +5091,12 @@
       "slug": "breeze-ideablade-validation-editor",
       "artifacts": [],
       "name": "ideablade-validation-editor",
-      "summary": "Desktop editor for IdeaBlade Validation's metadata: edit the rules through forms instead of raw JSON, in JSON, TypeScript or C# files, with the library's own checks, code completion in expressions, and models, properties and validators pick",
-      "description": "Desktop editor for IdeaBlade Validation's metadata: edit the rules through forms instead of raw JSON, in JSON, TypeScript or C# files, with the library's own checks, code completion in expressions, and models, properties and validators picked from Breeze metadata, TypeScript and C#. Electron and Angular.",
+      "summary": "Desktop editor for IdeaBlade Validation's metadata in JSON, TypeScript or C# files: forms instead of raw JSON, the library's own checks, code completion in expressions, a regex tester, project files, and models and properties from Breeze, T",
+      "description": "Desktop editor for IdeaBlade Validation's metadata in JSON, TypeScript or C# files: forms instead of raw JSON, the library's own checks, code completion in expressions, a regex tester, project files, and models and properties from Breeze, TS and C# sources. Installers for Windows, macOS and Linux (alpha). Electron and Angular.",
       "translations": {
         "en": {
-          "summary": "Desktop editor for IdeaBlade Validation's metadata: edit the rules through forms instead of raw JSON, in JSON, TypeScript or C# files, with the library's own checks, code completion in expressions, and models, properties and validators pick",
-          "description": "Desktop editor for IdeaBlade Validation's metadata: edit the rules through forms instead of raw JSON, in JSON, TypeScript or C# files, with the library's own checks, code completion in expressions, and models, properties and validators picked from Breeze metadata, TypeScript and C#. Electron and Angular."
+          "summary": "Desktop editor for IdeaBlade Validation's metadata in JSON, TypeScript or C# files: forms instead of raw JSON, the library's own checks, code completion in expressions, a regex tester, project files, and models and properties from Breeze, T",
+          "description": "Desktop editor for IdeaBlade Validation's metadata in JSON, TypeScript or C# files: forms instead of raw JSON, the library's own checks, code completion in expressions, a regex tester, project files, and models and properties from Breeze, TS and C# sources. Installers for Windows, macOS and Linux (alpha). Electron and Angular."
         }
       },
       "description_translations": {},
@@ -5106,11 +5106,11 @@
       "icon_url": "https://raw.githubusercontent.com/Breeze/ideablade-validation-editor/main/build/icon.png",
       "repository_url": "https://github.com/Breeze/ideablade-validation-editor",
       "github_repo_id": "1470869262",
-      "source_updated_at": "2026-11-24T21:39:18Z",
+      "source_updated_at": "2026-11-25T06:12:04Z",
       "homepage_url": null,
       "owner": "Breeze",
       "default_branch": "main",
-      "source_commit_sha": "4ca3313390e857a00f561032e92cff4ac40a0768",
+      "source_commit_sha": "4e571212b023cba67007a599b21b365de6334a08",
       "license_text": "MIT License\n\nCopyright (c) 2018-2026 IdeaBlade\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -5124,14 +5124,18 @@
         "breezejs",
         "business-rules",
         "code-completion",
+        "cross-platform",
         "csharp",
         "data-validation",
         "desktop-app",
+        "developer-tools",
         "dotnet",
         "editor",
         "electron",
+        "ideablade",
         "json-schema",
         "metadata",
+        "regex",
         "typescript",
         "validation"
       ],
