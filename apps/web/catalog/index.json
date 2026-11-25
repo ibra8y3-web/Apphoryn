@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T11:18:20.917967+00:00",
+  "generated_at": "2026-11-25T11:18:43.270968+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -14701,6 +14701,59 @@
       "platforms": [
         "windows"
       ]
+    },
+    {
+      "id": "musabx44-rapid-programming-language",
+      "slug": "musabx44-rapid-programming-language",
+      "artifacts": [],
+      "name": "Rapid-Programming-Language",
+      "summary": "Modern, general-purpose language that compiles to native x86-64 Linux binaries. Fast to write, fast to run, fast to learn — with a proper C FFI story built in.",
+      "description": "Modern, general-purpose language that compiles to native x86-64 Linux binaries. Fast to write, fast to run, fast to learn — with a proper C FFI story built in.",
+      "translations": {
+        "en": {
+          "summary": "Modern, general-purpose language that compiles to native x86-64 Linux binaries. Fast to write, fast to run, fast to learn — with a proper C FFI story built in.",
+          "description": "Modern, general-purpose language that compiles to native x86-64 Linux binaries. Fast to write, fast to run, fast to learn — with a proper C FFI story built in."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/151944535?v=4",
+      "repository_url": "https://github.com/musabX44/Rapid-Programming-Language",
+      "github_repo_id": "1358321421",
+      "source_updated_at": "2026-09-06T16:42:02Z",
+      "homepage_url": null,
+      "owner": "musabX44",
+      "default_branch": "main",
+      "source_commit_sha": "95d63eee4dd30b212ba1cb049af168add6e07131",
+      "license_text": "MIT License\n\nCopyright (c) 2026 0x00\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "aot",
+        "c",
+        "c-alternative",
+        "compiler",
+        "language",
+        "network-programming",
+        "open-source",
+        "opensource",
+        "performance",
+        "programming-language",
+        "rust-alternative",
+        "sysprog",
+        "systems-programming"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "aetherravyn-ravenbot",
