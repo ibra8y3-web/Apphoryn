@@ -21,6 +21,7 @@ from pydantic import BaseModel, Field
 from typing import Literal
 
 from .config import ROOT, settings
+from .netutil import check_admin_token, client_ip
 from . import ai_router
 from .agent_api import router as agent_router
 from .agent_system import start_agent_workers, stop_agent_workers
@@ -57,11 +58,8 @@ class BuildRequest(BaseModel):
     targets: list[str] = Field(default_factory=lambda: ["linux"])
 
 
-def require_admin(token: str | None) -> None:
-    if not settings.admin_token:
-        raise HTTPException(503, "Admin actions are disabled until APPHORYN_ADMIN_TOKEN is configured.")
-    if not token or not hmac.compare_digest(token, settings.admin_token):
-        raise HTTPException(401, "A valid Apphoryn admin token is required.")
+def require_admin(token: str | None, request: Request | None = None) -> None:
+    check_admin_token(token, settings.admin_token, request)
 
 
 def read_mirror_catalog() -> list[dict]:
@@ -142,7 +140,7 @@ _analytics_rate_limit: dict[str, tuple[int, int]] = {}
 
 def _allow_analytics_request(request: Request) -> bool:
     # The source IP is hashed only in process memory for a short rate-limit window.
-    host = request.client.host if request.client else "unknown"
+    host = client_ip(request)
     key = hashlib.sha256(host.encode("utf-8", errors="ignore")).hexdigest()
     minute = int(time.time() // 60)
     window, count = _analytics_rate_limit.get(key, (minute, 0))
@@ -199,8 +197,8 @@ def discovery_search(q: str = Query(..., min_length=2, max_length=120), limit: i
 
 
 @app.post("/api/v1/admin/import")
-def import_repository(payload: ImportRequest, x_apphoryn_admin: str | None = Header(default=None)):
-    require_admin(x_apphoryn_admin)
+def import_repository(payload: ImportRequest, x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
+    require_admin(x_apphoryn_admin, request)
     try:
         result = catalog.import_repository(payload.repository_url, payload.mirror_release_assets)
         if settings.github_token and settings.github_owner and settings.github_repository:
@@ -214,8 +212,8 @@ def import_repository(payload: ImportRequest, x_apphoryn_admin: str | None = Hea
 
 
 @app.post("/api/v1/admin/build")
-def request_build(payload: BuildRequest, x_apphoryn_admin: str | None = Header(default=None)):
-    require_admin(x_apphoryn_admin)
+def request_build(payload: BuildRequest, x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
+    require_admin(x_apphoryn_admin, request)
     try:
         return builder.dispatch(payload.repository_url, payload.git_ref, payload.targets)
     except ValueError as exc:
@@ -225,8 +223,8 @@ def request_build(payload: BuildRequest, x_apphoryn_admin: str | None = Header(d
 
 
 @app.get("/api/v1/admin/jobs")
-def jobs(x_apphoryn_admin: str | None = Header(default=None)):
-    require_admin(x_apphoryn_admin)
+def jobs(x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
+    require_admin(x_apphoryn_admin, request)
     return {"items": db.list_jobs()}
 
 
@@ -405,16 +403,16 @@ def download_artifact(artifact_id: str):
 
 
 @app.get("/api/v1/admin/ai/models")
-def ai_models(x_apphoryn_admin: str | None = Header(default=None)):
+def ai_models(x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
     """Return model/provider status without ever returning credentials."""
-    require_admin(x_apphoryn_admin)
+    require_admin(x_apphoryn_admin, request)
     return ai_router.public_model_catalog()
 
 
 @app.post("/api/v1/admin/ai/models/refresh")
-def refresh_ai_models(x_apphoryn_admin: str | None = Header(default=None)):
+def refresh_ai_models(x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
     """Force a fresh model discovery against configured providers."""
-    require_admin(x_apphoryn_admin)
+    require_admin(x_apphoryn_admin, request)
     return ai_router.public_model_catalog(force=True)
 
 

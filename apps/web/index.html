@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#0b1018">
+  <meta name="color-scheme" content="dark light">
   <meta name="description" content="Apphoryn — discover, build and install real open-source software.">
   <link rel="manifest" href="/manifest.json">
   <link rel="icon" type="image/svg+xml" href="/icon.svg">
@@ -25,7 +26,7 @@
         <a class="nav-link" href="#categories" data-view="categories"><span class="nav-icon">▦</span><span data-i18n="categories">Categories</span></a>
         <a class="nav-link" href="#discovery" data-view="discovery"><span class="nav-icon">⌕</span><span data-i18n="discovery">AI discovery</span><span class="nav-new">AI</span></a>
         <a class="nav-link" href="#builds" data-view="builds"><span class="nav-icon">⚒</span><span data-i18n="buildLab">Build lab</span></a>
-        <a class="nav-link" href="/agents.html"><span class="nav-icon">✳</span><span>AI Workforce</span></a>
+        <a class="nav-link" href="/agents.html" data-admin-gate><span class="nav-icon">🔒</span><span data-i18n="adminArea">Admin · AI Workforce</span></a>
       </nav>
       <div class="nav-divider"></div>
       <div class="workspace-label" data-i18n="library">YOUR LIBRARY</div>
@@ -55,7 +56,7 @@
           <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="openSoftwareNetwork">THE OPEN SOFTWARE NETWORK</span></div>
             <h1 data-i18n="heroTitle">Discover better.<br><em>Build freely.</em></h1>
             <p data-i18n="heroSubtitle">A growing home for real open-source apps. Discover projects, build installable releases and get them from one trusted library.</p>
-            <div class="hero-actions"><button class="button button-primary" data-go="explore"><span>Explore the store</span><span>↗</span></button><button class="button button-quiet" data-go="discovery"><span class="sparkle">✳</span><span data-i18n="meetScout">Meet Apphoryn Scout</span></button></div>
+            <div class="hero-actions"><button class="button button-primary" data-go="explore"><span data-i18n="explore">Explore apps</span><span>↗</span></button><button class="button button-quiet" data-go="discovery"><span class="sparkle">✳</span><span data-i18n="meetScout">Meet Apphoryn Scout</span></button></div>
           </div>
           <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="core-logo"><img src="/icon.svg" alt=""></div><div class="float-chip chip-one">⌘ <span>BUILD</span></div><div class="float-chip chip-two">◈ <span>DISCOVER</span></div><div class="float-chip chip-three">⇩ <span>INSTALL</span></div><div class="art-caption">OPEN SOURCE <b>×</b> BUILT TOGETHER</div></div>
         </div>
@@ -81,7 +82,7 @@
   <div class="scout-head"><div class="scout-avatar">✳</div><div><b>Scout discovery engine</b><small data-i18n="scoutHint">Live GitHub search · no popularity threshold</small></div><span class="live-pill"><span></span> LIVE</span></div>
   <form id="discoveryForm" class="scout-form"><input id="discoveryQuery" value="topic:opensource" aria-label="GitHub search query"><button type="submit" class="button button-primary" id="discoveryButton"><span data-i18n="searchGithub">Search GitHub</span> ↗</button></form>
   <div class="query-chips"><button data-query="topic:opensource">Open source</button><button data-query="topic:android-app">Android apps</button><button data-query="topic:desktop-app">Desktop apps</button><button data-query="topic:linux-app">Linux apps</button><button data-query="topic:developer-tools">Developer tools</button></div>
-  <p class="form-note" data-i18n="scoutAutoNote">Search is live. Scout also runs automatically every hour and imports eligible releases in the background.</p>
+  <p class="form-note" data-i18n="scoutAutoNote">Search is live. Scout also runs automatically every two hours and imports eligible releases in the background.</p>
  </div>
  <div class="results-heading"><h2 data-i18n="discoveryResults">Discovery results</h2><span id="discoveryCount">—</span></div>
  <div id="discoveryResults" class="discovery-list"><div class="empty-state compact"><div class="empty-symbol">⌕</div><b data-i18n="searchToDiscover">Search GitHub to discover real projects.</b><p data-i18n="discoveryDisclaimer">A search result is not an installable app until a verified package is stored.</p></div></div>
@@ -104,9 +105,9 @@
   <p id="aiStatusNote" class="form-note" data-i18n="aiStatusDisclaimer">Provider health is refreshed by Scout. The storefront never receives API keys.</p>
  </div>
  <div class="panel pipeline-panel">
-  <div class="panel-title"><div><h2 data-i18n="automaticPipeline">Automatic pipeline</h2><p data-i18n="sourceToStore">From discovered source to verified package</p></div><span class="pipeline-badge">HOURLY SCOUT</span></div>
+  <div class="panel-title"><div><h2 data-i18n="automaticPipeline">Automatic pipeline</h2><p data-i18n="sourceToStore">From discovered source to verified package</p></div><span class="pipeline-badge">SCOUT · EVERY 2 HOURS</span></div>
   <div class="pipeline-steps">
-   <div class="pipeline-step"><span>01</span><div><b data-i18n="discoverStage">Discover</b><small data-i18n="discoverStageDesc">Hourly GitHub search without a stars minimum</small></div><i>✓</i></div>
+   <div class="pipeline-step"><span>01</span><div><b data-i18n="discoverStage">Discover</b><small data-i18n="discoverStageDesc">GitHub search every two hours without a stars minimum</small></div><i>✓</i></div>
    <div class="pipeline-step"><span>02</span><div><b data-i18n="describeStage">Describe with AI</b><small data-i18n="describeStageDesc">Evidence-based English and Arabic metadata</small></div><i>✓</i></div>
    <div class="pipeline-step"><span>03</span><div><b data-i18n="buildStage">Build supported targets</b><small data-i18n="buildStageDesc">Native isolated workers, only for detected adapters</small></div><i>↗</i></div>
    <div class="pipeline-step"><span>04</span><div><b data-i18n="publishStage">Verify and publish</b><small data-i18n="publishStageDesc">Validate signatures and hashes before storefront listing</small></div><i>⇩</i></div>
@@ -129,9 +130,17 @@
       <footer class="footer"><span>© 2026 Apphoryn</span><span data-i18n="footerTagline">Open software. Built together.</span><span>Apphoryn Store</span></footer>
     </main>
   </div>
+  <nav class="bottom-nav" aria-label="Quick navigation">
+    <a class="nav-link active" href="#home" data-view="home"><span class="nav-icon">⌂</span><span data-i18n="overview">Overview</span></a>
+    <a class="nav-link" href="#explore" data-view="explore"><span class="nav-icon">◈</span><span data-i18n="explore">Explore apps</span></a>
+    <a class="nav-link" href="#discovery" data-view="discovery"><span class="nav-icon">⌕</span><span data-i18n="discovery">AI discovery</span></a>
+    <a class="nav-link" href="#builds" data-view="builds"><span class="nav-icon">⚒</span><span data-i18n="buildLab">Build lab</span></a>
+    <a class="nav-link" href="#saved" data-view="saved"><span class="nav-icon">♡</span><span data-i18n="saved">Saved apps</span></a>
+  </nav>
   <div class="sidebar-scrim" id="sidebarScrim"></div>
   <div class="toast-region" id="toastRegion" aria-live="polite"></div>
   <div class="modal-backdrop" id="modalBackdrop"><div class="app-modal" id="appModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close">×</button><div id="modalContent"></div></div></div>
+  <div class="modal-backdrop" id="adminGate"><form class="app-modal admin-gate-card" id="adminGateForm" autocomplete="off" role="dialog" aria-modal="true" aria-labelledby="adminGateTitle"><button class="modal-close" id="adminGateClose" type="button" aria-label="Close">×</button><div class="admin-gate-icon" aria-hidden="true">🔐</div><h2 id="adminGateTitle">Admin area is protected</h2><p id="adminGateHint">Enter the admin password to continue.</p><input id="adminGateToken" type="password" autocomplete="current-password" required placeholder="••••••••"><button class="button button-primary full-button" id="adminGateSubmit" type="submit">Unlock</button><p class="form-note" id="adminGateMsg" role="status"></p></form></div>
   <script src="/app.js" defer></script>
   <script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}));}</script>
 </body>

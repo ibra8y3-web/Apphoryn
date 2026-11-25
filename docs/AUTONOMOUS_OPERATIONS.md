@@ -36,3 +36,18 @@ Optional controls:
 - `APPHORYN_CATALOG_REF` — canonical catalog branch; default `main`.
 
 Global Scout build targets default to `android,windows,linux,macos` with `APPHORYN_GLOBAL_SCOUT_MAX_BUILDS_PER_RUN=1`. Only targets supported by the trusted build-adapter detector are dispatched.
+
+## Work/rest duty cycle
+
+The catalog watcher can run on a fixed cycle instead of continuously. From the (password-gated) admin page set the work minutes and rest minutes; the work window starts when the cycle is saved. During rest the watcher is idle; manually submitted tasks and saved schedules still run. Rest `0` means continuous (the default).
+
+- `APPHORYN_AGENT_WORK_MINUTES` / `APPHORYN_AGENT_REST_MINUTES` — defaults used until a cycle is saved from the admin page (default 60 / 0).
+- `POST /api/v1/admin/agents/automation/schedule` — `{ "work_minutes": 60, "rest_minutes": 30 }`.
+
+## Admin access
+
+The admin page shows only a password screen until `APPHORYN_ADMIN_TOKEN` is verified (`GET /api/v1/admin/agents/verify`). The token is kept in memory only, the session locks after 15 idle minutes, and wrong passwords are never locked out (unlimited attempts; each wrong try is delayed 0.4 s). Set `APPHORYN_ADMIN_MAX_FAILED=N` to enable an optional per-visitor lockout.
+
+### Running behind a reverse proxy
+
+Set `APPHORYN_TRUSTED_PROXY_HOPS=1` (number of proxies in front of the app). Without it every visitor appears to come from the proxy address, so the failed-login lockout and the analytics rate limit would apply to all users together. Do not set it when the app is directly exposed, because `X-Forwarded-For` could then be spoofed.

@@ -995,6 +995,57 @@ def _catalog_app_index(manifest: dict[str, Any]) -> dict[str, dict[str, Any]]:
     return indexed
 
 
+def autopilot_schedule() -> dict[str, Any]:
+    """Return the persisted work/rest duty cycle of the autonomous catalog watcher.
+
+    ``rest_minutes == 0`` means continuous operation (the default, so existing
+    deployments behave exactly as before until an administrator saves a cycle).
+    """
+    raw = STORE.get_system_state("agent_autopilot_schedule", None)
+    raw = raw if isinstance(raw, dict) else {}
+    try:
+        work = int(raw.get("work_minutes", os.getenv("APPHORYN_AGENT_WORK_MINUTES", "60")))
+        rest = int(raw.get("rest_minutes", os.getenv("APPHORYN_AGENT_REST_MINUTES", "0")))
+        anchor = float(raw.get("anchor", 0))
+    except (TypeError, ValueError):
+        work, rest, anchor = 60, 0, 0.0
+    return {
+        "work_minutes": max(5, min(work, 1440)),
+        "rest_minutes": max(0, min(rest, 1440)),
+        "anchor": anchor,
+    }
+
+
+def autopilot_phase(now: float | None = None) -> dict[str, Any]:
+    """Compute whether the autonomous watcher is inside its work or rest window."""
+    now = time.time() if now is None else float(now)
+    cfg = autopilot_schedule()
+    work_s, rest_s = cfg["work_minutes"] * 60, cfg["rest_minutes"] * 60
+    if rest_s == 0:
+        return {**cfg, "mode": "continuous", "working": True, "next_change_at": None}
+    cycle = work_s + rest_s
+    position = (now - cfg["anchor"]) % cycle
+    working = position < work_s
+    remaining = (work_s - position) if working else (cycle - position)
+    return {
+        **cfg,
+        "mode": "cycle",
+        "working": working,
+        "seconds_remaining": int(remaining),
+        "next_change_at": now + remaining,
+    }
+
+
+def set_autopilot_schedule(work_minutes: int, rest_minutes: int) -> dict[str, Any]:
+    """Persist a new duty cycle. The work window starts now."""
+    STORE.set_system_state("agent_autopilot_schedule", {
+        "work_minutes": max(5, min(int(work_minutes), 1440)),
+        "rest_minutes": max(0, min(int(rest_minutes), 1440)),
+        "anchor": time.time(),
+    })
+    return autopilot_phase()
+
+
 def _poll_shared_catalog_once() -> None:
     """Watch the public canonical catalog and enqueue evidence-only employee reviews on change.
 
@@ -1004,6 +1055,8 @@ def _poll_shared_catalog_once() -> None:
     env_default = os.getenv("APPHORYN_AGENT_AUTOPILOT_ENABLED", "true").lower() in {"1", "true", "yes", "on"}
     if not bool(STORE.get_system_state("agent_autopilot_enabled", env_default)):
         return
+    if not autopilot_phase()["working"]:
+        return  # Rest window: the watcher stays idle until the next work window.
     request = Request(
         _catalog_source_url() + "?apphoryn_refresh=" + str(int(time.time() // 300)),
         headers={"User-Agent": "Apphoryn-Catalog-Worker/1.0", "Accept": "application/json"},

@@ -1,12 +1,16 @@
 from __future__ import annotations
 
+import hmac
 import os
-from fastapi import APIRouter, Header, HTTPException, Query
+import threading
+import time
+from fastapi import APIRouter, Header, HTTPException, Query, Request
 from pydantic import BaseModel, Field
 
 from .config import settings
+from .netutil import check_admin_token
 from . import ai_router
-from .agent_system import AGENTS, STORE
+from .agent_system import AGENTS, STORE, autopilot_phase, set_autopilot_schedule
 from .resource_manager import resource_status, dispatch_security_scan
 from .analytics import analytics
 from .discovery_sources import DiscoverySources
@@ -14,12 +18,8 @@ from .discovery_sources import DiscoverySources
 router = APIRouter(prefix="/api/v1/admin/agents", tags=["AI workforce"])
 
 
-def _require_admin(token: str | None) -> None:
-    import hmac
-    if not settings.admin_token:
-        raise HTTPException(503, "Agent administration is disabled until APPHORYN_ADMIN_TOKEN is configured.")
-    if not token or not hmac.compare_digest(token, settings.admin_token):
-        raise HTTPException(401, "A valid Apphoryn admin token is required.")
+def _require_admin(token: str | None, request: Request | None = None) -> None:
+    check_admin_token(token, settings.admin_token, request)
 
 
 class CreateAgentRun(BaseModel):
@@ -37,8 +37,8 @@ class CreateAgentSchedule(BaseModel):
 
 
 @router.get("/dashboard")
-def dashboard(x_apphoryn_admin: str | None = Header(default=None)):
-    _require_admin(x_apphoryn_admin)
+def dashboard(x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
+    _require_admin(x_apphoryn_admin, request)
     return {
         "agents": AGENTS,
         "agent_activity": STORE.agent_activity(),
@@ -59,19 +59,42 @@ def dashboard(x_apphoryn_admin: str | None = Header(default=None)):
             os.getenv("APPHORYN_AGENT_AUTOPILOT_ENABLED", "true").lower() in {"1", "true", "yes", "on"},
         )),
         "shared_catalog_health": STORE.get_system_state("shared_catalog_health", {"status": "starting"}),
+        "automation_schedule": autopilot_phase(),
     }
 
 
+@router.get("/verify")
+def verify_admin(x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
+    """Lightweight password check used by the admin gate before anything is shown."""
+    _require_admin(x_apphoryn_admin, request)
+    return {"ok": True}
+
+
+class AutomationSchedule(BaseModel):
+    work_minutes: int = Field(ge=5, le=1440)
+    rest_minutes: int = Field(ge=0, le=1440)
+
+
+@router.post("/automation/schedule")
+def save_automation_schedule(
+    payload: AutomationSchedule,
+    x_apphoryn_admin: str | None = Header(default=None),
+    request: Request = None,
+):
+    _require_admin(x_apphoryn_admin, request)
+    return set_autopilot_schedule(payload.work_minutes, payload.rest_minutes)
+
+
 @router.post("/tasks")
-def create_task(payload: CreateAgentRun, x_apphoryn_admin: str | None = Header(default=None)):
-    _require_admin(x_apphoryn_admin)
+def create_task(payload: CreateAgentRun, x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
+    _require_admin(x_apphoryn_admin, request)
     return STORE.enqueue(payload.goal, payload.priority, payload.allow_external_actions,
                          payload.max_attempts, payload.allow_code_changes)
 
 
 @router.get("/tasks/{run_id}")
-def get_task(run_id: str, x_apphoryn_admin: str | None = Header(default=None)):
-    _require_admin(x_apphoryn_admin)
+def get_task(run_id: str, x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
+    _require_admin(x_apphoryn_admin, request)
     run = STORE.get_run(run_id)
     if not run:
         raise HTTPException(404, "Agent run not found.")
@@ -79,19 +102,19 @@ def get_task(run_id: str, x_apphoryn_admin: str | None = Header(default=None)):
 
 
 @router.post("/providers/refresh")
-def refresh_providers(x_apphoryn_admin: str | None = Header(default=None)):
-    _require_admin(x_apphoryn_admin)
+def refresh_providers(x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
+    _require_admin(x_apphoryn_admin, request)
     return ai_router.public_model_catalog(force=True)
 
 
 @router.post("/providers/{provider}/test")
-def test_provider(provider: str, x_apphoryn_admin: str | None = Header(default=None)):
-    _require_admin(x_apphoryn_admin)
+def test_provider(provider: str, x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
+    _require_admin(x_apphoryn_admin, request)
     return ai_router.test_provider(provider)
 
 @router.post("/providers/benchmark")
-def benchmark_providers(x_apphoryn_admin: str | None = Header(default=None)):
-    _require_admin(x_apphoryn_admin)
+def benchmark_providers(x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
+    _require_admin(x_apphoryn_admin, request)
     return ai_router.benchmark_models(max_models=3)
 
 
@@ -99,8 +122,9 @@ def benchmark_providers(x_apphoryn_admin: str | None = Header(default=None)):
 def set_automation_enabled(
     enabled: bool = Query(...),
     x_apphoryn_admin: str | None = Header(default=None),
+    request: Request = None,
 ):
-    _require_admin(x_apphoryn_admin)
+    _require_admin(x_apphoryn_admin, request)
     STORE.set_system_state("agent_autopilot_enabled", enabled)
     return {
         "enabled": enabled,
@@ -109,14 +133,14 @@ def set_automation_enabled(
 
 
 @router.post("/schedules")
-def create_schedule(payload: CreateAgentSchedule, x_apphoryn_admin: str | None = Header(default=None)):
-    _require_admin(x_apphoryn_admin)
+def create_schedule(payload: CreateAgentSchedule, x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
+    _require_admin(x_apphoryn_admin, request)
     return STORE.create_schedule(payload.goal, payload.interval_seconds, payload.priority)
 
 
 @router.post("/schedules/{schedule_id}/enabled")
-def set_schedule(schedule_id: str, enabled: bool, x_apphoryn_admin: str | None = Header(default=None)):
-    _require_admin(x_apphoryn_admin)
+def set_schedule(schedule_id: str, enabled: bool, x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
+    _require_admin(x_apphoryn_admin, request)
     if not STORE.set_schedule_enabled(schedule_id, enabled):
         raise HTTPException(404, "Agent schedule not found.")
     return {"id": schedule_id, "enabled": enabled}
@@ -129,14 +153,14 @@ class GitHubScanRequest(BaseModel):
 
 
 @router.get("/resources")
-def resources(x_apphoryn_admin: str | None = Header(default=None)):
-    _require_admin(x_apphoryn_admin)
+def resources(x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
+    _require_admin(x_apphoryn_admin, request)
     return resource_status()
 
 
 @router.post("/resources/github-security-scan")
-def github_security_scan(payload: GitHubScanRequest, x_apphoryn_admin: str | None = Header(default=None)):
-    _require_admin(x_apphoryn_admin)
+def github_security_scan(payload: GitHubScanRequest, x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
+    _require_admin(x_apphoryn_admin, request)
     try:
         return dispatch_security_scan(payload.repository_url, payload.git_ref, payload.approval)
     except PermissionError as exc:
@@ -148,13 +172,13 @@ def github_security_scan(payload: GitHubScanRequest, x_apphoryn_admin: str | Non
 
 
 @router.post("/analytics/sync")
-def sync_analytics(x_apphoryn_admin: str | None = Header(default=None)):
-    _require_admin(x_apphoryn_admin)
+def sync_analytics(x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
+    _require_admin(x_apphoryn_admin, request)
     return analytics.sync_once()
 
 @router.post("/analytics/test")
-def test_analytics_backend(x_apphoryn_admin: str | None = Header(default=None)):
-    _require_admin(x_apphoryn_admin)
+def test_analytics_backend(x_apphoryn_admin: str | None = Header(default=None), request: Request = None):
+    _require_admin(x_apphoryn_admin, request)
     return analytics.test_backend()
 
 
@@ -163,8 +187,9 @@ def search_official_catalogs(
     q: str = Query(..., min_length=2, max_length=180),
     limit: int = Query(10, ge=1, le=20),
     x_apphoryn_admin: str | None = Header(default=None),
+    request: Request = None,
 ):
-    _require_admin(x_apphoryn_admin)
+    _require_admin(x_apphoryn_admin, request)
     try:
         return DiscoverySources().search(q, limit)
     except ValueError as exc:

@@ -2,6 +2,9 @@
   let adminToken = "";
   let refreshHandle = null;
   let lastDashboard = null;
+  let phaseInfo = null;
+  let idleHandle = null;
+  const IDLE_MS = 15 * 60 * 1000;
   const $ = id => document.getElementById(id);
   const esc = value => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const labels = {available:"متاح",paused:"متوقف بإعداد أمان",not_configured:"غير مربوط",unavailable:"غير متاح",queued:"في الانتظار",running:"يعمل",completed:"اكتمل",failed:"فشل",retry:"إعادة محاولة",idle:"خامل",error:"خطأ",interrupted:"توقف بسبب إعادة تشغيل العامل"};
@@ -11,6 +14,7 @@
       body: body ? JSON.stringify(body) : undefined, cache:"no-store"
     });
     const payload = await response.json().catch(()=>({}));
+    if (response.status === 401 && path !== "/verify") { lock("انتهت الجلسة أو كلمة السر غير صحيحة. سجّل الدخول من جديد."); }
     if (!response.ok) throw new Error(payload.detail || payload.message || ("HTTP "+response.status));
     return payload;
   }
@@ -33,6 +37,27 @@
   function renderWorkers(items) {
     $("workersList").innerHTML = (items||[]).map(worker => '<article class="worker-row"><div class="worker-head"><b>'+esc(worker.worker_id)+'</b>'+stateTag(worker.status)+'</div><p class="tiny">آخر نبضة: '+esc(new Date(worker.last_heartbeat_at).toLocaleString())+'</p><p class="tiny">المهمة الحالية: '+esc(worker.current_run_id || "—")+'</p></article>').join("") || '<p class="muted">لم يرسل العامل أول نبضة بعد.</p>';
   }
+  function fmtDuration(seconds) {
+    const total = Math.max(0, Math.round(seconds));
+    const h = Math.floor(total / 3600), m = Math.floor((total % 3600) / 60), sec = total % 60;
+    if (h) return h + " س " + m + " د";
+    if (m) return m + " د " + sec + " ث";
+    return sec + " ث";
+  }
+  function renderPhase() {
+    const el = $("automationPhase");
+    if (!el || !phaseInfo) return;
+    if (phaseInfo.mode === "continuous") {
+      el.textContent = "الوضع الحالي: تشغيل متواصل بدون فترات راحة.";
+      el.className = "notice phase working";
+      return;
+    }
+    const left = phaseInfo.next_change_at ? phaseInfo.next_change_at - Date.now() / 1000 : 0;
+    el.className = "notice phase " + (phaseInfo.working ? "working" : "resting");
+    el.textContent = phaseInfo.working
+      ? "🟢 فترة العمل · تنتهي بعد " + fmtDuration(left) + " ثم يرتاح " + phaseInfo.rest_minutes + " دقيقة."
+      : "😴 فترة الراحة · يستيقظ بعد " + fmtDuration(left) + " ويعمل " + phaseInfo.work_minutes + " دقيقة.";
+  }
   function renderAutomation(data) {
     const enabled = Boolean(data.automation_enabled);
     const health = data.shared_catalog_health || {};
@@ -44,10 +69,16 @@
       error: "تعذر فحص الكتالوج؛ ستتم إعادة المحاولة تلقائيًا"
     };
     $("automationStatus").textContent = enabled
-      ? "التشغيل الذاتي مفعّل دائمًا. العمال جاهزون ويعالجون المهام تلقائيًا."
-      : "مراجعة الكتالوج التلقائية متوقفة. المهام اليدوية تظل متاحة.";
+      ? "المراجعة التلقائية مفعّلة وتعمل حسب الدورة المحددة أدناه."
+      : "المراجعة التلقائية متوقفة. المهام اليدوية تظل متاحة.";
     $("toggleAutomation").textContent = enabled ? "إيقاف المراجعة التلقائية" : "تفعيل المراجعة التلقائية";
     $("toggleAutomation").disabled = false;
+    phaseInfo = data.automation_schedule || null;
+    if (phaseInfo && document.activeElement !== $("workMinutes") && document.activeElement !== $("restMinutes")) {
+      $("workMinutes").value = phaseInfo.work_minutes;
+      if (phaseInfo.mode === "cycle" || phaseInfo.rest_minutes) $("restMinutes").value = phaseInfo.rest_minutes;
+    }
+    renderPhase();
     const checkedAt = health.last_checked_at ? new Date(health.last_checked_at).toLocaleString() : "لم يتم الفحص بعد";
     const changed = Number(health.added_count || 0) + Number(health.updated_count || 0) + Number(health.removed_count || 0);
     const runLabel = health.review_run_id ? " · مهمة المراجعة: " + health.review_run_id : "";
@@ -153,17 +184,39 @@
     renderAutomation(data);
     renderProviders({...data.providers,metrics:data.provider_metrics,model_metrics:data.model_metrics,model_evaluations:data.model_evaluations}); renderResources(data.resources);
     renderAnalytics(data.analytics); renderRuns(data.runs); renderSchedules(data.schedules);
-    $("connectionStatus").textContent="متصل بالـBackend. تم تحديث البيانات: "+new Date().toLocaleTimeString();
+    $("connectionStatus").textContent="متصل. آخر تحديث: "+new Date().toLocaleTimeString();
     $("refreshProviders").disabled=false; $("refreshAll").disabled=false;
   }
-  async function connect() {
-    adminToken=$("adminToken").value.trim();
-    if(!adminToken){$("connectionStatus").textContent="أدخل رمز الإدارة أولًا.";return;}
-    try{
+  function resetIdleTimer() {
+    if (!adminToken) return;
+    clearTimeout(idleHandle);
+    idleHandle = setTimeout(() => lock("تم قفل الإدارة تلقائيًا بسبب عدم النشاط."), IDLE_MS);
+  }
+  function lock(message) {
+    adminToken = "";
+    clearInterval(refreshHandle); clearTimeout(idleHandle);
+    try { sessionStorage.setItem("apphoryn_lock_message", message || ""); } catch (_) {}
+    location.reload(); // wipes every rendered admin value from memory
+  }
+  async function connect(event) {
+    if (event) event.preventDefault();
+    const token = $("adminToken").value.trim();
+    const status = $("connectionStatus"), button = $("connectButton");
+    if (!token) { status.textContent = "أدخل كلمة سر الإدارة أولًا."; return; }
+    adminToken = token; button.disabled = true; status.textContent = "جارٍ التحقق...";
+    try {
+      await api("/verify");
+      $("adminToken").value = "";
+      $("gate").hidden = true; $("adminApp").hidden = false; $("lockButton").hidden = false;
       await refresh();
-      if(refreshHandle)clearInterval(refreshHandle);
-      refreshHandle=setInterval(()=>refresh().catch(error=>$("connectionStatus").textContent=error.message),6000);
-    }catch(error){adminToken="";$("connectionStatus").textContent=error.message;}
+      clearInterval(refreshHandle);
+      refreshHandle = setInterval(() => { if (!document.hidden) refresh().catch(error => { $("connectionStatus").textContent = error.message; }); }, 6000);
+      setInterval(renderPhase, 1000);
+      resetIdleTimer();
+    } catch (error) {
+      adminToken = "";
+      status.textContent = error.message;
+    } finally { button.disabled = false; }
   }
 
   $("sourcesSearchForm").addEventListener("submit",async event=>{
@@ -220,7 +273,27 @@
     }catch(error){alert(error.message);}
   });
 
-  $("connectButton").addEventListener("click",connect);
+  $("gateForm").addEventListener("submit",connect);
+  try { // password already entered on the storefront: unlock without asking twice
+    const handoff = sessionStorage.getItem("apphoryn_admin_handoff");
+    if (handoff) { sessionStorage.removeItem("apphoryn_admin_handoff"); $("adminToken").value = handoff; connect(); }
+  } catch (_) {}
+  $("lockButton").addEventListener("click",()=>lock("تم قفل الإدارة."));
+  ["pointerdown","keydown","touchstart"].forEach(name=>document.addEventListener(name,resetIdleTimer,{passive:true}));
+  try {
+    const note = sessionStorage.getItem("apphoryn_lock_message");
+    if (note) { $("connectionStatus").textContent = note; sessionStorage.removeItem("apphoryn_lock_message"); }
+  } catch (_) {}
+  $("cycleForm").addEventListener("submit",async event=>{
+    event.preventDefault();
+    const work=Number($("workMinutes").value), rest=Number($("restMinutes").value);
+    if(!(work>=5&&work<=1440)||!(rest>=0&&rest<=1440)){$("automationStatus").textContent="مدة العمل من 5 إلى 1440 دقيقة، والراحة من 0 إلى 1440.";return;}
+    try{
+      phaseInfo=await api("/automation/schedule","POST",{work_minutes:work,rest_minutes:rest});
+      renderPhase();await refresh();
+      $("automationStatus").textContent="تم حفظ الدورة: عمل "+work+" دقيقة ثم راحة "+rest+" دقيقة.";
+    }catch(error){$("automationStatus").textContent=error.message;}
+  });
   $("toggleAutomation").addEventListener("click",async()=>{
     const button=$("toggleAutomation");
     const enabled=button.textContent.includes("تفعيل");

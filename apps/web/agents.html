@@ -2,7 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#10151d">
   <title>Apphoryn — AI Workforce</title>
   <link rel="stylesheet" href="/agents.css">
@@ -11,35 +12,47 @@
   <main class="shell">
     <header class="top">
       <a class="brand" href="/"><span class="brand-mark">A</span><span>apphoryn<span class="dot">.</span><small>AI WORKFORCE</small></span></a>
-      <a class="back" href="/">العودة إلى المتجر ↗</a>
+      <div class="top-actions"><button id="lockButton" class="secondary" type="button" hidden>🔒 قفل</button><a class="back" href="/">المتجر ↗</a></div>
     </header>
 
-    <section class="intro">
+    <section id="gate" class="gate" aria-labelledby="gateTitle">
+      <form id="gateForm" class="gate-card" autocomplete="off">
+        <div class="gate-icon" aria-hidden="true">🔐</div>
+        <h1 id="gateTitle">منطقة الإدارة محمية</h1>
+        <p>أدخل كلمة سر الإدارة لفتح مركز قيادة الذكاء الاصطناعي. لا تُحفظ الكلمة في المتصفح ولا في قاعدة البيانات، وتُقفل الجلسة تلقائيًا بعد 15 دقيقة من عدم النشاط.</p>
+        <label for="adminToken">كلمة سر الإدارة</label>
+        <input id="adminToken" type="password" autocomplete="current-password" required placeholder="••••••••">
+        <button id="connectButton" class="primary" type="submit">فتح الإدارة</button>
+        <p id="connectionStatus" class="notice" role="status">لم يتم تسجيل الدخول.</p>
+      </form>
+    </section>
+
+    <div id="adminApp" hidden>
+
+    <section class="intro" id="introSection">
       <span class="eyebrow">NIEBEX · CENTRAL AI BRAIN</span>
       <h1>مركز قيادة الذكاء الاصطناعي</h1>
       <p>إدارة الموظفين والمهام والنماذج والذاكرة والعمال الخلفيين. كل حالة معروضة تأتي من الـBackend وقاعدة البيانات الفعلية.</p>
     </section>
 
     <section class="panel">
-      <div class="panel-head split">
+      <div class="panel-head">
         <div>
-          <span class="eyebrow">ALWAYS-ON WORKFORCE</span>
-          <h2>التشغيل الذاتي الدائم</h2>
-          <p>العمال الخلفيون يظلون مستعدين. عند تغيّر الكتالوج المركزي، يستيقظ Niebex ويوزّع مراجعة موثقة على الموظفين المناسبين. الاكتشاف والاستيراد والبناء يتولاها Global Scout وفق حدود الأمان.</p>
+          <span class="eyebrow">SCHEDULED AUTONOMY</span>
+          <h2>التشغيل الذاتي المنظّم</h2>
+          <p>يراقب Niebex الكتالوج المركزي ويراجع أي تغيير بشكل موثّق. يعمل لفترة محددة ثم يرتاح لفترة محددة بنظام دورة ثابتة، فلا يستهلك موارد طوال الوقت.</p>
         </div>
-        <button id="toggleAutomation" class="secondary" type="button">إيقاف المراجعة التلقائية</button>
       </div>
-      <p id="automationStatus" class="notice">حالة التشغيل الذاتي ستظهر بعد الاتصال بالإدارة.</p>
+      <p id="automationStatus" class="notice" role="status">حالة التشغيل الذاتي ستظهر بعد تحميل البيانات.</p>
+      <p id="automationPhase" class="notice phase">—</p>
+      <form id="cycleForm" class="cycle-form">
+        <label>مدة العمل (دقيقة)<input id="workMinutes" type="number" inputmode="numeric" min="5" max="1440" value="60" required></label>
+        <label>مدة الراحة (دقيقة)<input id="restMinutes" type="number" inputmode="numeric" min="0" max="1440" value="30" required></label>
+        <button type="submit" class="secondary">حفظ الدورة</button>
+      </form>
+      <p class="tiny">اجعل مدة الراحة 0 للتشغيل المتواصل. المهام اليدوية التي ترسلها تعمل دائمًا حتى أثناء الراحة.</p>
+      <div class="form-row"><button id="toggleAutomation" class="secondary" type="button">إيقاف المراجعة التلقائية</button></div>
       <p id="catalogAutomationDetails" class="tiny">مراقبة الكتالوج المشترك ستبدأ عند تشغيل العامل الخلفي.</p>
-    </section>
-
-    <section class="panel auth-panel">
-      <div><h2>اتصال الإدارة</h2><p>أدخل رمز APPHORYN_ADMIN_TOKEN. لا يتم حفظه في المتصفح أو قاعدة البيانات.</p></div>
-      <div class="auth-row">
-        <input id="adminToken" type="password" autocomplete="off" placeholder="رمز الإدارة">
-        <button id="connectButton" class="primary">اتصال وفحص النظام</button>
-      </div>
-      <p id="connectionStatus" class="notice">لم يتم الاتصال بعد.</p>
     </section>
 
     <section class="metrics" id="metrics">
@@ -138,6 +151,8 @@
         <div id="taskDetails" class="stack"><p class="muted">اختر مهمة من السجل لعرض تسليمات الموظفين ونتائجهم.</p></div>
       </section>
     </section>
+
+    </div>
 
     <footer>Apphoryn · جميع الحالات من النظام الحقيقي · لا توجد بيانات تجريبية</footer>
   </main>

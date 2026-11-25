@@ -113,3 +113,49 @@ class CatalogAutomationTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class AutopilotCycleTests(unittest.TestCase):
+    def setUp(self):
+        import app.agent_system as agent_system
+        self.agent_system = agent_system
+        self.tempdir = tempfile.TemporaryDirectory()
+        self.store = agent_system.AgentStore(Path(self.tempdir.name) / "agents.sqlite3")
+        self.patch = patch.object(agent_system, "STORE", self.store)
+        self.patch.start()
+
+    def tearDown(self):
+        self.patch.stop()
+        self.tempdir.cleanup()
+
+    def test_default_is_continuous(self):
+        phase = self.agent_system.autopilot_phase()
+        self.assertTrue(phase["working"])
+        self.assertEqual(phase["mode"], "continuous")
+
+    def test_work_then_rest_cycle(self):
+        self.store.set_system_state("agent_autopilot_schedule", {
+            "work_minutes": 60, "rest_minutes": 30, "anchor": 1000.0,
+        })
+        phase = self.agent_system.autopilot_phase
+        self.assertTrue(phase(1000.0 + 10 * 60)["working"])
+        self.assertEqual(phase(1000.0 + 10 * 60)["seconds_remaining"], 50 * 60)
+        self.assertFalse(phase(1000.0 + 70 * 60)["working"])
+        self.assertEqual(phase(1000.0 + 70 * 60)["seconds_remaining"], 20 * 60)
+        self.assertTrue(phase(1000.0 + 95 * 60)["working"])  # next cycle starts
+
+    def test_saved_schedule_is_clamped_and_persistent(self):
+        result = self.agent_system.set_autopilot_schedule(1, 99999)
+        self.assertEqual(result["work_minutes"], 5)
+        self.assertEqual(result["rest_minutes"], 1440)
+        reopened = self.agent_system.AgentStore(Path(self.tempdir.name) / "agents.sqlite3")
+        self.assertEqual(reopened.get_system_state("agent_autopilot_schedule")["work_minutes"], 5)
+
+    def test_rest_window_skips_catalog_poll(self):
+        self.store.set_system_state("agent_autopilot_enabled", True)
+        self.store.set_system_state("agent_autopilot_schedule", {
+            "work_minutes": 5, "rest_minutes": 1440, "anchor": __import__("time").time() - 600,
+        })
+        with patch.object(self.agent_system, "urlopen") as fake_open:
+            self.agent_system._poll_shared_catalog_once()
+        fake_open.assert_not_called()
