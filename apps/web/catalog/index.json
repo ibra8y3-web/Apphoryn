@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:46:32.865654+00:00",
+  "generated_at": "2026-11-25T22:47:04.379860+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -2444,6 +2444,111 @@
           "signer_certificate_sha256": "e0f24b49c00ff7a02542bae0149c944062b96f307bb595530e951714c82e1cba",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sanuu7-androidharness-v4.1-release/app-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sanuu7-androidharness-v4.1-release"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "aniraku-aniraku-app",
+      "slug": "aniraku-aniraku-app",
+      "name": "Aniraku-App",
+      "summary": "Native Android anime discovery, playback, and library. Visit the app-inspired download site.",
+      "description": "Native Android anime discovery, playback, and library. Visit the app-inspired download site.",
+      "translations": {
+        "en": {
+          "summary": "Native Android anime discovery, playback, and library. Visit the app-inspired download site.",
+          "description": "Native Android anime discovery, playback, and library. Visit the app-inspired download site."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Aniraku/Aniraku-App/main/site/assets/icon.png",
+      "repository_url": "https://github.com/Aniraku/Aniraku-App",
+      "github_repo_id": "1332882258",
+      "source_updated_at": "2026-11-24T15:07:41Z",
+      "homepage_url": "https://aniraku.github.io/Aniraku-App/",
+      "owner": "Aniraku",
+      "default_branch": "main",
+      "source_commit_sha": "d9c8b2053173e396998c940ab65943e19adbe7ce",
+      "license_text": "MIT License\n\nCopyright (c) 2025-2026 Showaib Islam\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "anime-client",
+        "anime-list",
+        "expo",
+        "foss",
+        "open-source",
+        "react-native",
+        "supabase"
+      ],
+      "latest_version": "v5.9.3",
+      "release_url": "https://github.com/Aniraku/Aniraku-App/releases/tag/v5.9.3",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aniraku-aniraku-app-v5.9.3",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aniraku-aniraku-app-v5.9.3/THIRD-PARTY-NOTICE-aniraku-aniraku-app.txt",
+      "artifacts": [
+        {
+          "id": "dd59b4c7a60c7f361a250cbb29493ceeb1df61345bd0f00e853613992c4ed2db",
+          "filename": "aniraku-v5.9.3-arm32.apk",
+          "original_filename": "aniraku-v5.9.3-arm32.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm32",
+          "version": "v5.9.3",
+          "size_bytes": 34262101,
+          "sha256": "dd59b4c7a60c7f361a250cbb29493ceeb1df61345bd0f00e853613992c4ed2db",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "1eb118d07fa72ab7db74463be85e92eb12e0fb59c78d34450993faedc24d49f7",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aniraku-aniraku-app-v5.9.3/aniraku-v5.9.3-arm32.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aniraku-aniraku-app-v5.9.3"
+        },
+        {
+          "id": "795f094ab793fd39d05e115513bd668fb83ede4375262084cb2f926fcdb2fee3",
+          "filename": "aniraku-v5.9.3-arm64.apk",
+          "original_filename": "aniraku-v5.9.3-arm64.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v5.9.3",
+          "size_bytes": 38475951,
+          "sha256": "795f094ab793fd39d05e115513bd668fb83ede4375262084cb2f926fcdb2fee3",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "1eb118d07fa72ab7db74463be85e92eb12e0fb59c78d34450993faedc24d49f7",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aniraku-aniraku-app-v5.9.3/aniraku-v5.9.3-arm64.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aniraku-aniraku-app-v5.9.3"
+        },
+        {
+          "id": "2127a65c0ce216e0afca2ba0b6562909f3b268b2ab98ee86e6f864091b1f4d8c",
+          "filename": "aniraku-v5.9.3-universal.apk",
+          "original_filename": "aniraku-v5.9.3-universal.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "universal",
+          "version": "v5.9.3",
+          "size_bytes": 63654050,
+          "sha256": "2127a65c0ce216e0afca2ba0b6562909f3b268b2ab98ee86e6f864091b1f4d8c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "1eb118d07fa72ab7db74463be85e92eb12e0fb59c78d34450993faedc24d49f7",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aniraku-aniraku-app-v5.9.3/aniraku-v5.9.3-universal.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aniraku-aniraku-app-v5.9.3"
         }
       ],
       "platforms": [
