@@ -27297,7 +27297,17 @@
       "latest_version": "v7.0.0",
       "release_url": "https://github.com/tia8910/Walletlens/releases/tag/v7.0.0",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "0e1d02692ae62349cd1b91203ecb88bb489ccff7",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-25T19:32:17.805940+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "zev-kaapor-wavvy",
