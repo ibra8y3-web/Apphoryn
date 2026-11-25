@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T18:18:29.302119+00:00",
+  "generated_at": "2026-11-25T18:18:40.510640+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -18932,7 +18932,7 @@
         }
       },
       "description_translations": {},
-      "translation_status": "english_only",
+      "translation_status": "pending",
       "ai_provider": null,
       "ai_model": null,
       "icon_url": "https://avatars.githubusercontent.com/u/320134896?v=4",
@@ -18942,7 +18942,7 @@
       "homepage_url": null,
       "owner": "Hostu404",
       "default_branch": "main",
-      "source_commit_sha": "6c7219d2fb04734d686cf653e98dc6eeb87f3b8a",
+      "source_commit_sha": "15a096ab718dbbc49cd76cbb119efc0dcc0c02d0",
       "license_text": "MIT License\n\nCopyright (c) 2026 Hostu404\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
