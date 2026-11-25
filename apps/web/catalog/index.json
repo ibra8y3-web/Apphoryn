@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T05:31:34.155183+00:00",
+  "generated_at": "2026-11-25T05:31:48.043316+00:00",
   "apps": [
     {
       "id": "home-assistant-android",
@@ -2931,6 +2931,105 @@
           ],
           "requested_at": "2026-11-25T04:24:17.031930+00:00"
         }
+      ]
+    },
+    {
+      "id": "parieses-quickdock",
+      "slug": "parieses-quickdock",
+      "name": "quickdock",
+      "summary": "Windows launcher and local dev-environment manager - runtime version switching, AI agent with approvals, MCP server, plugins.",
+      "description": "Windows launcher and local dev-environment manager - runtime version switching, AI agent with approvals, MCP server, plugins.",
+      "translations": {
+        "en": {
+          "summary": "Windows launcher and local dev-environment manager - runtime version switching, AI agent with approvals, MCP server, plugins.",
+          "description": "Windows launcher and local dev-environment manager - runtime version switching, AI agent with approvals, MCP server, plugins."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/parieses/quickdock/main/build/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/parieses/quickdock",
+      "github_repo_id": "1303794051",
+      "source_updated_at": "2026-11-25T01:34:07Z",
+      "homepage_url": "https://parieses.github.io/quickdock/",
+      "owner": "parieses",
+      "default_branch": "main",
+      "source_commit_sha": "2a973f66a9d76f86c2d537d1f66c7537b66e55c9",
+      "license_text": "MIT License\n\nCopyright (c) 2025-2026 王亮亮\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ai-agent",
+        "clipboard-manager",
+        "command-palette",
+        "cron-scheduler",
+        "desktop-app",
+        "dev-environment",
+        "developer-tools",
+        "golang",
+        "local-first",
+        "mcp-server",
+        "password-manager",
+        "plugin-system",
+        "productivity",
+        "runtime-manager",
+        "ssh-client",
+        "uptime-monitor",
+        "vue3",
+        "wails",
+        "window-manager",
+        "windows-launcher"
+      ],
+      "latest_version": "v0.0.57",
+      "release_url": "https://github.com/parieses/quickdock/releases/tag/v0.0.57",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-parieses-quickdock-v0.0.57",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-parieses-quickdock-v0.0.57/THIRD-PARTY-NOTICE-parieses-quickdock.txt",
+      "artifacts": [
+        {
+          "id": "3cd2f57be9703af73ca0c5d50e310b748d0ddefe8b117c0dd47fc5f1b39f5b2a",
+          "filename": "quickdock-amd64-installer.exe",
+          "original_filename": "quickdock-amd64-installer.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.0.57",
+          "size_bytes": 21572069,
+          "sha256": "3cd2f57be9703af73ca0c5d50e310b748d0ddefe8b117c0dd47fc5f1b39f5b2a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-parieses-quickdock-v0.0.57/quickdock-amd64-installer.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-parieses-quickdock-v0.0.57"
+        },
+        {
+          "id": "fb12787b3bb382e454659aae66e318d85b5f04cbde9ab6c2a9c3d3c522a8a673",
+          "filename": "quickdock-amd64.exe",
+          "original_filename": "quickdock-amd64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.0.57",
+          "size_bytes": 51527168,
+          "sha256": "fb12787b3bb382e454659aae66e318d85b5f04cbde9ab6c2a9c3d3c522a8a673",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-parieses-quickdock-v0.0.57/quickdock-amd64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-parieses-quickdock-v0.0.57"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
