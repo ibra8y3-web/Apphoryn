@@ -38,11 +38,18 @@ from app.github_client import GitHubClient
 from app.github_release_mirror import GitHubMirrorError, GitHubReleaseMirror
 from app.services import CatalogService
 from app.storefront_eligibility import has_installable_path
+from app.github_actions_client import call_apphoryn_internal_api
 
 
 def publish_ai_provider_status(mirror: GitHubReleaseMirror) -> dict[str, object]:
     """Discover configured models once per Scout run and publish a credential-free status."""
-    payload = ai_router.public_model_catalog(force=True)
+    if os.getenv("APPHORYN_AI_SERVICE_URL"):
+        payload = call_apphoryn_internal_api(
+            "/api/v1/internal/github-actions/ai-status",
+            method="GET",
+        )
+    else:
+        payload = ai_router.public_model_catalog(force=True)
     providers = []
     discovered_models = payload.get("models") or []
     for item in payload.get("providers", []):

@@ -22,6 +22,8 @@ from typing import Literal
 
 from .config import ROOT, settings
 from .netutil import check_admin_token, client_ip
+from .ai_descriptions import DescriptionGenerator
+from .github_actions_oidc import GitHubActionsOIDCError, verify_github_actions_oidc
 from . import ai_router
 from .agent_api import router as agent_router
 from .agent_system import start_agent_workers, stop_agent_workers
@@ -56,6 +58,39 @@ class BuildRequest(BaseModel):
     repository_url: str
     git_ref: str = "main"
     targets: list[str] = Field(default_factory=lambda: ["linux"])
+
+
+class InternalCatalogDescriptionRequest(BaseModel):
+    name: str = Field(min_length=1, max_length=180)
+    owner: str = Field(default="", max_length=120)
+    repository_description: str = Field(default="", max_length=3000)
+    topics: list[str] = Field(default_factory=list, max_length=25)
+    readme_excerpt: str = Field(default="", max_length=12000)
+    category: str = Field(default="other", max_length=80)
+
+
+_ci_ai_request_counts: dict[tuple[str, int], int] = {}
+
+
+def require_github_actions_workflow(authorization: str | None) -> dict:
+    if not authorization or not authorization.startswith("Bearer "):
+        raise HTTPException(401, "A GitHub Actions identity token is required.")
+    try:
+        claims = verify_github_actions_oidc(authorization[7:].strip())
+    except GitHubActionsOIDCError as exc:
+        raise HTTPException(401, "GitHub Actions identity was not accepted.") from exc
+    run_id = str(claims["run_id"])
+    minute = int(time.time() // 60)
+    key = (run_id, minute)
+    count = _ci_ai_request_counts.get(key, 0)
+    if count >= 90:
+        raise HTTPException(429, "GitHub Actions AI request limit reached for this minute.")
+    _ci_ai_request_counts[key] = count + 1
+    if len(_ci_ai_request_counts) > 20000:
+        for old_key in list(_ci_ai_request_counts):
+            if old_key[1] < minute - 2:
+                _ci_ai_request_counts.pop(old_key, None)
+    return claims
 
 
 def require_admin(token: str | None, request: Request | None = None) -> None:
@@ -115,6 +150,34 @@ def find_mirrored_artifact(artifact_id: str) -> dict | None:
 def health():
     count = sum(1 for item in read_mirror_catalog() if item.get("artifacts")) or len(db.list_apps(limit=200))
     return {"status": "ok", "name": settings.app_name, "version": "0.2.0-alpha", "catalog_count": count}
+
+
+@app.get("/api/v1/internal/github-actions/ai-status")
+def github_actions_ai_status(authorization: str | None = Header(default=None)):
+    """Expose credential-free model status only to approved Apphoryn Actions workflows."""
+    require_github_actions_workflow(authorization)
+    return ai_router.public_model_catalog(force=True)
+
+
+@app.post("/api/v1/internal/github-actions/catalog-description")
+def github_actions_catalog_description(
+    payload: InternalCatalogDescriptionRequest,
+    authorization: str | None = Header(default=None),
+):
+    """Run catalog classification/localization on Railway using its configured AI providers."""
+    require_github_actions_workflow(authorization)
+    try:
+        return DescriptionGenerator().generate(
+            name=payload.name,
+            owner=payload.owner,
+            description=payload.repository_description,
+            topics=payload.topics,
+            readme_excerpt=payload.readme_excerpt,
+            category=payload.category,
+            allow_remote=False,
+        )
+    except Exception as exc:
+        raise HTTPException(502, f"Catalog AI generation failed: {type(exc).__name__}.") from exc
 
 
 @app.get("/api/v1/catalog/apps")

@@ -8,6 +8,7 @@ from typing import Any
 
 from .config import settings
 from . import ai_router
+from .github_actions_client import call_apphoryn_internal_api
 
 PROJECT_KINDS = {"application", "developer_tool", "library", "framework", "service", "documentation", "unknown"}
 SUPPORTED_LANGUAGES = {"en", "ar", "fr", "es", "de", "pt", "tr", "id"}
@@ -120,7 +121,7 @@ class DescriptionGenerator:
     """Generate evidence-based English and Arabic catalog metadata using the shared provider router."""
 
     def generate(self, *, name: str, owner: str, description: str, topics: list[str],
-                 readme_excerpt: str, category: str) -> dict[str, Any]:
+                 readme_excerpt: str, category: str, allow_remote: bool = True) -> dict[str, Any]:
         fallback = fallback_project_classification(
             name=name, description=description, topics=topics, readme_excerpt=readme_excerpt
         )
@@ -147,6 +148,19 @@ class DescriptionGenerator:
             {"role": "user", "content": json.dumps(prompt, ensure_ascii=False)},
         ]
         errors = ""
+        if allow_remote and os.getenv("APPHORYN_AI_SERVICE_URL"):
+            try:
+                remote_result = call_apphoryn_internal_api(
+                    "/api/v1/internal/github-actions/catalog-description",
+                    method="POST",
+                    payload=prompt,
+                )
+                if not remote_result.get("summary") or not remote_result.get("description"):
+                    raise ValueError("Apphoryn AI bridge returned incomplete catalog metadata.")
+                return remote_result
+            except Exception as exc:
+                errors = f"Railway AI bridge: {type(exc).__name__}: {str(exc)[:160]}"
+
         if ai_router.has_configured_ai():
             try:
                 result, route = ai_router.generate_json(messages)
