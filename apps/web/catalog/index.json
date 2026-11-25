@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:39:14.315525+00:00",
+  "generated_at": "2026-11-25T23:39:39.491229+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -231,6 +231,94 @@
           "signer_certificate_sha256": "16166c070b27bbcb7da4b0b17cea21ff6ae6a3690333f41b1a4aaa7bf79db8d7",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rh-id-a-flash-deck-v2.6.0/app-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rh-id-a-flash-deck-v2.6.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "rh-id-a-news-provider",
+      "slug": "rh-id-a-news-provider",
+      "name": "a-news-provider",
+      "summary": "A simple RSS feed android application.",
+      "description": "A simple RSS feed android application.",
+      "translations": {
+        "en": {
+          "summary": "A simple RSS feed android application.",
+          "description": "A simple RSS feed android application."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/rh-id/a-news-provider/master/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/rh-id/a-news-provider",
+      "github_repo_id": "415807208",
+      "source_updated_at": "2026-11-08T10:31:27Z",
+      "homepage_url": null,
+      "owner": "rh-id",
+      "default_branch": "master",
+      "source_commit_sha": "f76cb479f47f48b82695c5a2796e2b43a22b0a4e",
+      "license_text": "The MIT License (MIT)\n\nCopyright © 2021 Ruby Hartono\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "a-navigator",
+        "a-provider",
+        "android",
+        "android-app",
+        "android-application",
+        "rss",
+        "rss-aggregator",
+        "rss-feed",
+        "rss-reader"
+      ],
+      "latest_version": "v2.5.0",
+      "release_url": "https://github.com/rh-id/a-news-provider/releases/tag/v2.5.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rh-id-a-news-provider-v2.5.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rh-id-a-news-provider-v2.5.0/THIRD-PARTY-NOTICE-rh-id-a-news-provider.txt",
+      "artifacts": [
+        {
+          "id": "299f3241d4f94b20e4d622dddcd712cb04033658780e5679dceec6b5e0389883",
+          "filename": "app-debug.apk",
+          "original_filename": "app-debug.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v2.5.0",
+          "size_bytes": 14435708,
+          "sha256": "299f3241d4f94b20e4d622dddcd712cb04033658780e5679dceec6b5e0389883",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "5a4a4b9216734754b313f1805ee58c7d347e28ff8c4dbe22b991e03f0de1a5ff",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rh-id-a-news-provider-v2.5.0/app-debug.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rh-id-a-news-provider-v2.5.0"
+        },
+        {
+          "id": "0f6a241d78378c5a7a4922a6335184e72fe26b914b8871dc88fb3e65862c8b14",
+          "filename": "app-release.apk",
+          "original_filename": "app-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v2.5.0",
+          "size_bytes": 10900898,
+          "sha256": "0f6a241d78378c5a7a4922a6335184e72fe26b914b8871dc88fb3e65862c8b14",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "16166c070b27bbcb7da4b0b17cea21ff6ae6a3690333f41b1a4aaa7bf79db8d7",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rh-id-a-news-provider-v2.5.0/app-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rh-id-a-news-provider-v2.5.0"
         }
       ],
       "platforms": [
