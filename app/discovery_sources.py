@@ -104,7 +104,7 @@ def _flathub_search(query: str, limit: int) -> list[dict[str, Any]]:
             "version": _text(item, "version", "currentReleaseVersion"),
             "license": _text(item, "project_license", "license"),
             "homepage_url": _text(item, "homepage", "url"),
-            "repository_url": "https://github.com/flathub/" + app_id,
+            "repository_url": _text(item, "repository_url", "source_url", "sourceCode", "source_code"),
             "catalog_url": "https://flathub.org/apps/" + urllib.parse.quote(app_id, safe=""),
             "api_url": "https://flathub.org/api/v2/appstream/" + urllib.parse.quote(app_id, safe=""),
             "trust_state": "flathub_catalog_metadata",
