@@ -33,6 +33,8 @@ class BuildSupportTests(unittest.TestCase):
     def test_detects_android_dotnet_and_go_targets_from_real_build_files(self):
         github = FakeGitHub([
             "android/gradlew",
+            "android/build.gradle.kts",
+            "android/app/src/main/AndroidManifest.xml",
             "desktop/App.csproj",
             "tools/go.mod",
         ])
@@ -55,6 +57,31 @@ class BuildSupportTests(unittest.TestCase):
         result = detect_supported_build_targets("owner", "repo", "v1.0.0", github)
         self.assertEqual(set(result), {"windows", "linux", "macos"})
         self.assertTrue(all("Electron" in reason for reason in result.values()))
+
+
+    def test_electron_detection_uses_only_real_platform_scripts(self):
+        github = FakeGitHub(
+            ["desktop/package.json", "frontend/package.json"],
+            {
+                "desktop/package.json": {
+                    "dependencies": {"electron": "^45.0.0"},
+                    "devDependencies": {"electron-builder": "^26.0.0"},
+                    "scripts": {
+                        "build": "node ../frontend/node_modules/vite/bin/vite.js build",
+                        "dist:linux": "npm run build && electron-builder --linux",
+                        "dist:windows": "npm run build && electron-builder --win",
+                    },
+                },
+                "frontend/package.json": {
+                    "dependencies": {"react": "^19.0.0"},
+                    "scripts": {"build": "vite build"},
+                },
+            },
+        )
+        result = detect_supported_build_targets("owner", "repo", "main", github)
+        self.assertEqual(set(result), {"linux", "windows"})
+        self.assertIn("dist:linux", result["linux"])
+        self.assertIn("dist:windows", result["windows"])
 
     def test_go_module_requires_an_executable_package_main_source(self):
         empty_module = FakeGitHub(["tools/go.mod", "tools/README.md"])

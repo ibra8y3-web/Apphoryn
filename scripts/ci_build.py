@@ -20,13 +20,30 @@ sys.path.insert(0, str(ROOT))
 from app.artifact_validation import ArtifactValidationError, validate_artifact
 from app.domain import canonical_repository_url, license_allows_redistribution, valid_git_ref
 from app.github_client import GitHubClient
+from app.build_support import electron_build_script
 
 KNOWN_SUFFIXES = {".apk", ".exe", ".msi", ".msix", ".appx", ".appimage", ".deb", ".rpm", ".dmg", ".pkg", ".jar", ".bin", ".macosbin"}
 
 
+def command_for_runner(
+    command: list[str], *, is_windows: bool | None = None, which=shutil.which
+) -> list[str]:
+    """Run npm/npx reliably on Windows, where executables are .cmd shims."""
+    windows = os.name == "nt" if is_windows is None else is_windows
+    if not command or not windows or command[0].lower() not in {"npm", "npx"}:
+        return command
+    program = command[0].lower()
+    executable = which(program + ".cmd") or which(program)
+    if not executable:
+        raise FileNotFoundError(f"Could not locate Windows {program}.cmd executable.")
+    shell = os.environ.get("COMSPEC", "cmd.exe")
+    return [shell, "/d", "/s", "/c", subprocess.list2cmdline([executable, *command[1:]])]
+
+
 def run(command: list[str], cwd: Path, timeout: int = 2400) -> None:
-    print("+", " ".join(command), flush=True)
-    subprocess.run(command, cwd=cwd, check=True, timeout=timeout)
+    resolved = command_for_runner(command)
+    print("+", " ".join(resolved), flush=True)
+    subprocess.run(resolved, cwd=cwd, check=True, timeout=timeout)
 
 
 def clone_source(repository_url: str, git_ref: str, source_dir: Path) -> None:
@@ -54,7 +71,43 @@ def apk_is_signed(path: Path, apksigner: str | None) -> bool:
         return False
 
 
+def remove_upstream_android_signing_gate(source: Path) -> int:
+    """Remove only an upstream pre-build signing guard in the disposable clone.
+
+    The source build remains keyless. The trusted publisher validates the APK
+    and signs it with Apphoryn's persistent release identity after upload.
+    """
+    removed = 0
+    for gradle_file in source.glob("**/build.gradle*"):
+        if not gradle_file.is_file() or gradle_file.is_symlink():
+            continue
+        content = gradle_file.read_text(encoding="utf-8", errors="replace")
+        if "Release signing is not configured" not in content:
+            continue
+        lines = content.splitlines(keepends=True)
+        start = next((
+            index for index, line in enumerate(lines)
+            if line.startswith("tasks.matching { it.name == \"packageRelease\"")
+        ), None)
+        if start is None:
+            continue
+        end = next((
+            index for index in range(start + 1, len(lines))
+            if lines[index].strip() == "}"
+        ), None)
+        if end is None:
+            raise RuntimeError(f"Could not safely isolate upstream signing guard in {gradle_file}.")
+        block = "".join(lines[start:end + 1])
+        if "packageReleaseBundle" not in block or "CAIMACK_" not in block:
+            raise RuntimeError(f"Unrecognized upstream signing guard in {gradle_file}; refusing to modify it.")
+        gradle_file.write_text("".join(lines[:start] + lines[end + 1:]), encoding="utf-8")
+        removed += 1
+        print(f"Removed upstream-only release-key requirement from disposable source copy: {gradle_file}")
+    return removed
+
+
 def build_android(source: Path, output: Path) -> None:
+    remove_upstream_android_signing_gate(source)
     wrappers = list(source.glob("**/gradlew"))[:10]
     wrappers = [p for p in wrappers if "build" not in p.parts and ".gradle" not in p.parts]
     if not wrappers:
@@ -150,22 +203,75 @@ def build_go(source: Path, output: Path, target: str) -> None:
         )
 
 
-def build_electron(source: Path, output: Path) -> None:
-    package_files = list(source.glob("**/package.json"))[:8]
-    candidates = [p for p in package_files if "electron" in p.read_text(encoding="utf-8", errors="ignore").lower()]
+def build_electron(source: Path, output: Path, target: str) -> None:
+    package_files = sorted(source.glob("**/package.json"), key=lambda path: (len(path.parts), str(path)))[:32]
+    candidates: list[tuple[Path, dict, str]] = []
+    for package_file in package_files:
+        try:
+            package_data = json.loads(package_file.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if not isinstance(package_data, dict):
+            continue
+        dependencies: dict[str, object] = {}
+        for key in ("dependencies", "devDependencies", "optionalDependencies"):
+            value = package_data.get(key)
+            if isinstance(value, dict):
+                dependencies.update(value)
+        scripts = package_data.get("scripts") if isinstance(package_data.get("scripts"), dict) else {}
+        selected_script = electron_build_script(scripts, target)
+        if "electron" in dependencies and "electron-builder" in dependencies and selected_script:
+            candidates.append((package_file, package_data, selected_script))
     if not candidates:
-        raise RuntimeError("No Electron project detected.")
-    for package in candidates:
-        project = package.parent
-        run(["npm", "ci", "--no-audit", "--no-fund"], cwd=project, timeout=1200)
-        data = package.read_text(encoding="utf-8", errors="ignore")
-        if '"dist"' in data or "electron-builder" in data:
-            run(["npm", "run", "dist"], cwd=project, timeout=2400)
-        else:
-            raise RuntimeError("Electron project has no recognized dist script; configure a platform packaging script.")
-        for candidate in (project / "dist").glob("**/*"):
-            if candidate.is_file() and candidate.suffix.lower() in KNOWN_SUFFIXES:
-                shutil.copy2(candidate, output / candidate.name)
+        raise RuntimeError(f"No Electron packaging script for {target} was detected.")
+
+    built_any = False
+    for package_file, package_data, selected_script in candidates:
+        project = package_file.parent
+        build_command = str((package_data.get("scripts") or {}).get("build") or "")
+        frontend = project.parent / "frontend"
+        if (
+            frontend != project
+            and (frontend / "package-lock.json").is_file()
+            and "frontend/node_modules" in build_command.replace("\\", "/")
+        ):
+            run(["npm", "ci", "--no-audit", "--no-fund", "--prefix", str(frontend)], cwd=source, timeout=1800)
+
+        install_command = (
+            ["npm", "ci", "--no-audit", "--no-fund"]
+            if (project / "package-lock.json").is_file()
+            else ["npm", "install", "--no-audit", "--no-fund", "--package-lock=false"]
+        )
+        run(install_command, cwd=project, timeout=1800)
+        run(["npm", "run", selected_script], cwd=project, timeout=3600)
+
+        output_directories = [project / "release", project / "dist", project / "out", project / "build"]
+        build_config = package_data.get("build") if isinstance(package_data.get("build"), dict) else {}
+        configured_output = (build_config.get("directories") or {}).get("output") if isinstance(build_config.get("directories"), dict) else None
+        if isinstance(configured_output, str) and configured_output.strip():
+            output_directories.append((project / configured_output).resolve())
+
+        source_root = source.resolve()
+        seen: set[Path] = set()
+        for directory in output_directories:
+            resolved_directory = directory.resolve()
+            if resolved_directory in seen or source_root not in resolved_directory.parents:
+                continue
+            seen.add(resolved_directory)
+            if not resolved_directory.is_dir():
+                continue
+            for candidate in resolved_directory.rglob("*"):
+                if not candidate.is_file() or candidate.is_symlink():
+                    continue
+                if candidate.suffix.lower() not in KNOWN_SUFFIXES:
+                    continue
+                destination = output / candidate.name
+                if destination.exists():
+                    destination = output / f"{candidate.stem}-{project.name}{candidate.suffix}"
+                shutil.copy2(candidate, destination)
+                built_any = True
+    if not built_any:
+        raise RuntimeError(f"Electron '{target}' build produced no recognized installable artifact.")
 
 
 def main() -> int:
@@ -201,7 +307,7 @@ def main() -> int:
         elif list(source.glob("**/go.mod")):
             build_go(source, output, args.target)
         elif list(source.glob("**/package.json")):
-            build_electron(source, output)
+            build_electron(source, output, args.target)
         else:
             raise RuntimeError(f"No supported {args.target} build adapter detected. Add a reviewed adapter for this project.")
         artifacts = [p for p in output.rglob("*") if p.is_file() and p.suffix.lower() in KNOWN_SUFFIXES]
@@ -210,7 +316,7 @@ def main() -> int:
         validated = []
         for path in artifacts:
             try:
-                details = validate_artifact(path, require_apk_signature=True)
+                details = validate_artifact(path, require_apk_signature=False)
                 validated.append((path, details))
             except ArtifactValidationError as exc:
                 path.unlink(missing_ok=True)

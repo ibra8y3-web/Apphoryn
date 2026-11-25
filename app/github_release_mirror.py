@@ -607,7 +607,7 @@ class GitHubReleaseMirror:
 
     def has_recent_build_attempt(
         self, repository_url: str, git_ref: str, max_age_hours: int = 72,
-        targets: list[str] | None = None,
+        targets: list[str] | None = None, adapter_revision: str | None = None,
     ) -> bool:
         canonical = canonical_repository_url(repository_url)
         manifest, _ = self._read_catalog()
@@ -624,6 +624,8 @@ class GitHubReleaseMirror:
         for attempt in app.get("build_attempts", []):
             if attempt.get("git_ref") != git_ref:
                 continue
+            if adapter_revision and attempt.get("adapter_revision") != adapter_revision:
+                continue
             try:
                 stamp = datetime.fromisoformat(str(attempt.get("requested_at")).replace("Z", "+00:00"))
             except (TypeError, ValueError):
@@ -635,7 +637,10 @@ class GitHubReleaseMirror:
                 return True
         return False
 
-    def dispatch_build(self, repository_url: str, git_ref: str, targets: list[str], app_id: str = "") -> None:
+    def dispatch_build(
+        self, repository_url: str, git_ref: str, targets: list[str], app_id: str = "",
+        adapter_revision: str | None = None,
+    ) -> None:
         canonical = canonical_repository_url(repository_url)
         allowed = {"android", "windows", "linux", "macos"}
         normalized = sorted(set(targets))
@@ -648,7 +653,10 @@ class GitHubReleaseMirror:
         if app is None or not app.get("license_eligible") or not license_allows_redistribution(app.get("license_spdx")):
             raise GitHubMirrorError("Build dispatch requires an existing catalog entry with an approved redistribution license.")
         attempts = app.setdefault("build_attempts", [])
-        attempts.append({"git_ref": git_ref, "targets": normalized, "requested_at": datetime.now(timezone.utc).isoformat()})
+        attempt = {"git_ref": git_ref, "targets": normalized, "requested_at": datetime.now(timezone.utc).isoformat()}
+        if adapter_revision:
+            attempt["adapter_revision"] = adapter_revision
+        attempts.append(attempt)
         app["build_attempts"] = attempts[-50:]
         self._write_catalog(manifest, sha, f"Queue Apphoryn build for {app.get('name') or app_id} ({git_ref})")
         self.request("POST", f"/repos/{self.full_name}/actions/workflows/build-community-app.yml/dispatches", {

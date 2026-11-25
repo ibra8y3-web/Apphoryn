@@ -17,7 +17,7 @@ if not os.environ.get("APPHORYN_GITHUB_TOKEN") and os.environ.get("GITHUB_TOKEN"
     os.environ["APPHORYN_GITHUB_TOKEN"] = os.environ["GITHUB_TOKEN"]
 
 from app.config import settings
-from app.build_support import detect_supported_build_targets
+from app.build_support import build_adapter_revision, detect_supported_build_targets
 from app.github_client import GitHubClient
 from app.github_release_mirror import GitHubReleaseMirror
 from app.repository_crawler import RepositoryCrawler
@@ -99,7 +99,7 @@ def save_retry_queue(path: Path, rows: list[dict[str, Any]]) -> None:
     os.replace(temporary, path)
 
 
-def known_current(candidate: dict[str, Any], by_id: dict[str, dict], by_url: dict[str, dict]) -> bool:
+def known_current(candidate: dict[str, Any], by_id: dict[str, dict], by_url: dict[str, dict], adapter_revision: str | None = None) -> bool:
     repository_id = str(candidate.get("id") or "")
     url = str(candidate.get("html_url") or candidate.get("repository_url") or "")
     existing = by_id.get(repository_id) if repository_id else None
@@ -108,7 +108,35 @@ def known_current(candidate: dict[str, Any], by_id: dict[str, dict], by_url: dic
         return False
     upstream_updated = str(candidate.get("updated_at") or "")
     indexed_updated = str(existing.get("source_updated_at") or "")
-    return not upstream_updated or upstream_updated <= indexed_updated
+    if upstream_updated and upstream_updated > indexed_updated:
+        return False
+    if adapter_revision:
+        attempts = existing.get("build_attempts") or []
+        if attempts:
+            latest = attempts[-1] if isinstance(attempts[-1], dict) else {}
+            requested_targets = {str(value) for value in latest.get("targets", [])}
+            available_targets = {
+                str(item.get("platform")) for item in existing.get("artifacts", [])
+                if isinstance(item, dict) and item.get("platform")
+            }
+            pending_targets = requested_targets - available_targets
+            if pending_targets:
+                if latest.get("adapter_revision") != adapter_revision:
+                    return False
+                try:
+                    requested_at = __import__("datetime").datetime.fromisoformat(
+                        str(latest.get("requested_at") or "").replace("Z", "+00:00")
+                    )
+                    if requested_at.tzinfo is None:
+                        requested_at = requested_at.replace(tzinfo=__import__("datetime").timezone.utc)
+                    age_hours = (
+                        __import__("datetime").datetime.now(__import__("datetime").timezone.utc) - requested_at
+                    ).total_seconds() / 3600
+                    if age_hours >= 72:
+                        return False
+                except (TypeError, ValueError):
+                    return False
+    return True
 
 
 def retry_record(entry: dict[str, Any], now: float, reason: str) -> dict[str, Any]:
@@ -142,6 +170,7 @@ def main() -> None:
     catalog = CatalogService(github=github)
     mirror = GitHubReleaseMirror(token, target_repository, os.getenv("APPHORYN_GITHUB_REF", "main"))
     now = time.time()
+    adapter_revision = build_adapter_revision()
 
     configured_targets = os.getenv("APPHORYN_GLOBAL_SCOUT_BUILD_TARGETS", "off").strip().lower()
     allowed_targets = {"android", "windows", "linux", "macos"}
@@ -273,7 +302,7 @@ def main() -> None:
             )
             if (
                 not entry.get("force_refresh")
-                and known_current(candidate, known_by_id, known_by_url)
+                and known_current(candidate, known_by_id, known_by_url, adapter_revision)
             ):
                 result["status"] = "already_current"
                 results.append(result)
@@ -338,14 +367,14 @@ def main() -> None:
                     result["build_status"] = "no_supported_build_adapter"
                     result["build_targets_missing"] = missing
                     result["unsupported_build_targets"] = missing
-                elif mirror.has_recent_build_attempt(repository_url, git_ref, targets=selected):
+                elif mirror.has_recent_build_attempt(repository_url, git_ref, targets=selected, adapter_revision=adapter_revision):
                     result["build_status"] = "already_queued_or_published"
                     result["build_targets"] = selected
                 elif build_budget <= 0:
                     result["build_status"] = "deferred_by_zero_or_exhausted_budget"
                     result["build_targets"] = selected
                 else:
-                    mirror.dispatch_build(repository_url, git_ref, selected, str(app.get("slug") or app.get("id")))
+                    mirror.dispatch_build(repository_url, git_ref, selected, str(app.get("slug") or app.get("id")), adapter_revision=adapter_revision)
                     build_budget -= 1
                     result["build_status"] = "workflow_dispatched"
                     result["build_targets"] = selected

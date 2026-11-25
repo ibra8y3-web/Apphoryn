@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import base64
+import hashlib
 import json
 import re
 import urllib.parse
@@ -10,6 +11,34 @@ from .github_client import GitHubClient
 
 
 DESKTOP_TARGETS = {"windows", "linux", "macos"}
+
+ELECTRON_SCRIPT_CANDIDATES = {
+    "windows": ("dist:windows", "dist:win", "package:windows", "package:win", "make:windows", "make:win"),
+    "linux": ("dist:linux", "dist:appimage", "package:linux", "make:linux"),
+    "macos": ("dist:macos", "dist:mac", "package:macos", "package:mac", "make:macos", "make:mac"),
+}
+
+
+def electron_build_script(scripts: dict[str, Any], target: str) -> str | None:
+    """Choose only a packaging script explicitly available for this platform."""
+    if target not in DESKTOP_TARGETS:
+        return None
+    for name in (*ELECTRON_SCRIPT_CANDIDATES[target], "dist", "package", "make"):
+        value = scripts.get(name)
+        if isinstance(value, str) and value.strip():
+            return name
+    return None
+
+
+def build_adapter_revision() -> str:
+    """Stable fingerprint used to retry projects after an adapter correction."""
+    root = __import__("pathlib").Path(__file__).resolve().parents[1]
+    digest = hashlib.sha256()
+    for relative in ("app/build_support.py", "scripts/ci_build.py"):
+        path = root / relative
+        digest.update(relative.encode("utf-8"))
+        digest.update(path.read_bytes())
+    return digest.hexdigest()[:20]
 
 
 def detect_supported_build_targets(
@@ -33,8 +62,13 @@ def detect_supported_build_targets(
     ]
 
     supported: dict[str, str] = {}
-    if any(path.rsplit("/", 1)[-1] == "gradlew" for path in paths):
-        supported["android"] = "Gradle wrapper detected."
+    has_gradle_wrapper = any(path.rsplit("/", 1)[-1] == "gradlew" for path in paths)
+    has_android_project = (
+        any(path.lower().endswith("androidmanifest.xml") for path in paths)
+        and any(path.lower().endswith((".gradle", ".gradle.kts")) for path in paths)
+    )
+    if has_gradle_wrapper and has_android_project:
+        supported["android"] = "Gradle wrapper, Android manifest and Gradle project detected."
 
     if any(path.lower().endswith(".csproj") for path in paths):
         for target in DESKTOP_TARGETS:
@@ -82,14 +116,14 @@ def detect_supported_build_targets(
     package_files = [
         path for path in paths
         if path.rsplit("/", 1)[-1].lower() == "package.json"
-    ][:8]
+    ][:16]
     for package_path in package_files:
         encoded_path = urllib.parse.quote(package_path, safe="/")
         try:
             result = client.request(
                 f"/repos/{owner}/{repository}/contents/{encoded_path}?ref={safe_ref}"
             )
-            raw = base64.b64decode(str(result.get("content") or "").replace("\n", ""))
+            raw = base64.b64decode(str(result.get("content") or "").replace("\\n", ""))
             package = json.loads(raw.decode("utf-8"))
         except Exception:
             # A malformed or inaccessible optional package manifest must not
@@ -103,9 +137,15 @@ def detect_supported_build_targets(
             if isinstance(value, dict):
                 deps.update(value)
         scripts = package.get("scripts") if isinstance(package.get("scripts"), dict) else {}
-        if "electron" in deps and ("electron-builder" in deps or "dist" in scripts):
-            for target in DESKTOP_TARGETS:
-                supported.setdefault(target, "Electron project with a packaging script detected.")
-            break
+        if "electron" not in deps or "electron-builder" not in deps:
+            continue
+        for target in DESKTOP_TARGETS:
+            script = electron_build_script(scripts, target)
+            if script:
+                supported.setdefault(
+                    target,
+                    f"Electron packaging script '{script}' detected in {package_path}.",
+                )
+
 
     return supported

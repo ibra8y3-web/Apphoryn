@@ -219,14 +219,16 @@ class GitHubReleaseMirrorTests(unittest.TestCase):
         mirror._read_catalog = Mock(return_value=(manifest, "old-sha"))
         mirror.request = Mock(return_value={})
         ref = "a" * 40
-        mirror.dispatch_build("https://github.com/owner/tool", ref, ["android", "linux"], "owner-tool")
+        mirror.dispatch_build("https://github.com/owner/tool", ref, ["android", "linux"], "owner-tool", adapter_revision="rev-2")
         self.assertEqual(mirror.request.call_count, 2)
         first_call = mirror.request.call_args_list[0]
         self.assertEqual(first_call.args[0], "PUT")
         payload = first_call.args[2]
         updated = json.loads(base64.b64decode(payload["content"]).decode("utf-8"))
         self.assertEqual(updated["apps"][0]["build_attempts"][0]["git_ref"], ref)
-        self.assertTrue(mirror.has_recent_build_attempt("https://github.com/owner/tool", ref))
+        self.assertEqual(updated["apps"][0]["build_attempts"][0]["adapter_revision"], "rev-2")
+        self.assertTrue(mirror.has_recent_build_attempt("https://github.com/owner/tool", ref, adapter_revision="rev-2"))
+        self.assertFalse(mirror.has_recent_build_attempt("https://github.com/owner/tool", ref, adapter_revision="rev-3"))
 
     def test_published_build_ref_is_never_requeued(self):
         manifest = {"schema_version": 1, "apps": [{

@@ -58,6 +58,29 @@ class GlobalScoutTests(unittest.TestCase):
         self.assertFalse(known_current(changed, by_id, by_url))
         self.assertFalse(known_current(changed, {}, {}))
 
+    def test_known_repository_reopens_after_build_adapter_revision_changes(self):
+        existing = {
+            "github_repo_id": "789",
+            "repository_url": "https://github.com/owner/repo",
+            "source_updated_at": "2026-01-01T00:00:00Z",
+            "artifacts": [],
+            "build_attempts": [{
+                "git_ref": "abc123",
+                "targets": ["windows", "linux"],
+                "adapter_revision": "old-revision",
+                "requested_at": "2026-11-25T09:00:00+00:00",
+            }],
+        }
+        candidate = {
+            "id": 789,
+            "html_url": existing["repository_url"],
+            "updated_at": "2026-01-01T00:00:00Z",
+        }
+        by_id = {"789": existing}
+        by_url = {repo_key(existing["repository_url"]): existing}
+        self.assertFalse(known_current(candidate, by_id, by_url, adapter_revision="new-revision"))
+        self.assertTrue(known_current(candidate, by_id, by_url, adapter_revision="old-revision"))
+
     def test_retry_backoff_is_bounded_and_preserves_upstream_candidate(self):
         entry = {
             "repository": "https://github.com/owner/repo",
