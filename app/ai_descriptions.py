@@ -88,6 +88,52 @@ def _with_arabic_translation(result: dict[str, Any], route: dict[str, str]) -> t
     return merged, translation_route
 
 
+def translate_catalog_description(
+    *,
+    summary: str,
+    description: str,
+    translations: dict[str, Any] | None = None,
+    description_translations: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Translate an already-published description without rewriting its source text."""
+    original_summary = str(summary or "").strip()
+    original_description = str(description or "").strip()
+    if not original_description:
+        raise ValueError("A source description is required for Arabic localization.")
+
+    source = {
+        "summary": original_summary or original_description[:240],
+        "description": original_description,
+        "translations": dict(translations or {}),
+        "description_translations": dict(description_translations or {}),
+        "project_kind": "unknown",
+        "build_recommended": False,
+    }
+    if _has_arabic_translation(source):
+        return {
+            "summary": original_summary or original_description[:240],
+            "description": original_description,
+            "translations": source["translations"],
+            "description_translations": source["description_translations"],
+            "translation_status": "complete",
+        }
+
+    localized, route = _with_arabic_translation(source, {})
+    output = _normalise(
+        localized,
+        translation_provider=(route or {}).get("provider", ""),
+        translation_model=(route or {}).get("model", ""),
+    )
+    # The translator may only add localized fields; never replace the published
+    # English/source wording as a side effect of a translation pass.
+    output["summary"] = original_summary or original_description[:240]
+    output["description"] = original_description
+    output["translation_status"] = (
+        "complete" if _has_arabic_translation(output) else "pending"
+    )
+    return output
+
+
 def _normalise(result: dict[str, Any], provider: str = "", model: str = "",
                translation_provider: str = "", translation_model: str = "") -> dict[str, Any]:
     summary = str(result.get("summary") or "").strip()
