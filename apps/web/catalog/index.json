@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T07:29:50.727588+00:00",
+  "generated_at": "2026-11-26T07:30:34.996889+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -60397,6 +60397,66 @@
       "platforms": [
         "linux"
       ]
+    },
+    {
+      "id": "lcajigasm-omega",
+      "slug": "lcajigasm-omega",
+      "artifacts": [],
+      "name": "omega",
+      "summary": "AI-driven maintenance for macOS, Linux and Windows: updates like topgrade, cleans like Mole, and fixes the step that fails. CLI, TUI and desktop app. Anthropic, OpenAI, OpenRouter, Ollama and local models.",
+      "description": "AI-driven maintenance for macOS, Linux and Windows: updates like topgrade, cleans like Mole, and fixes the step that fails. CLI, TUI and desktop app. Anthropic, OpenAI, OpenRouter, Ollama and local models.",
+      "translations": {
+        "en": {
+          "summary": "AI-driven maintenance for macOS, Linux and Windows: updates like topgrade, cleans like Mole, and fixes the step that fails. CLI, TUI and desktop app. Anthropic, OpenAI, OpenRouter, Ollama and local models.",
+          "description": "AI-driven maintenance for macOS, Linux and Windows: updates like topgrade, cleans like Mole, and fixes the step that fails. CLI, TUI and desktop app. Anthropic, OpenAI, OpenRouter, Ollama and local models."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/lcajigasm/omega/main/cmd/omega-gui/icon.png",
+      "repository_url": "https://github.com/lcajigasm/omega",
+      "github_repo_id": "1435390510",
+      "source_updated_at": "2026-11-13T17:32:02Z",
+      "homepage_url": "https://lcajigasm.github.io/omega/",
+      "owner": "lcajigasm",
+      "default_branch": "main",
+      "source_commit_sha": "e7a3b9d7883b4aca818bdf33279113a194f3982d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Luis Cajigas\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "ai",
+      "topics": [
+        "ai",
+        "ai-agent",
+        "anthropic",
+        "cleanup",
+        "cli",
+        "desktop-app",
+        "go",
+        "golang",
+        "homebrew",
+        "linux",
+        "llm",
+        "macos",
+        "maintenance",
+        "mole",
+        "ollama",
+        "openai",
+        "topgrade",
+        "tui",
+        "updater",
+        "windows"
+      ],
+      "latest_version": "v0.34.0",
+      "release_url": "https://github.com/lcajigasm/omega/releases/tag/v0.34.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "vikindor-omnibeat",
