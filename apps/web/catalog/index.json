@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T14:01:15.393191+00:00",
+  "generated_at": "2026-11-26T14:02:11.509869+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -14559,10 +14559,10 @@
         "typescript",
         "windows"
       ],
-      "latest_version": "v0.19.0",
-      "release_url": "https://github.com/CeriumHQ/cerium/releases/tag/v0.19.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ceriumhq-cerium-v0.19.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ceriumhq-cerium-v0.19.0/THIRD-PARTY-NOTICE-ceriumhq-cerium.txt",
+      "latest_version": "v0.20.0",
+      "release_url": "https://github.com/CeriumHQ/cerium/releases/tag/v0.20.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ceriumhq-cerium-v0.20.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ceriumhq-cerium-v0.20.0/THIRD-PARTY-NOTICE-ceriumhq-cerium.txt",
       "artifacts": [
         {
           "id": "ace36149a18cbc52ab724625122da8c99f9d42985be50dd19514b25bf6533843",
@@ -14614,6 +14614,57 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ceriumhq-cerium-v0.19.0/Cerium-Setup-0.19.0-x64.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ceriumhq-cerium-v0.19.0"
+        },
+        {
+          "id": "9d4f6c126b9c83b4bab7f34ba2bb695c3d626b9e0cc563d96f5ea05878cf903b",
+          "filename": "Cerium-0.20.0-arm64.dmg",
+          "original_filename": "Cerium-0.20.0-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.20.0",
+          "size_bytes": 155931603,
+          "sha256": "9d4f6c126b9c83b4bab7f34ba2bb695c3d626b9e0cc563d96f5ea05878cf903b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ceriumhq-cerium-v0.20.0/Cerium-0.20.0-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ceriumhq-cerium-v0.20.0"
+        },
+        {
+          "id": "f95a16bbae7a12dbd0de727fbb1d5dd5da611f5ac4481fc9738f3c09d088d022",
+          "filename": "Cerium-0.20.0-x86_64.AppImage",
+          "original_filename": "Cerium-0.20.0-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.20.0",
+          "size_bytes": 153872430,
+          "sha256": "f95a16bbae7a12dbd0de727fbb1d5dd5da611f5ac4481fc9738f3c09d088d022",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ceriumhq-cerium-v0.20.0/Cerium-0.20.0-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ceriumhq-cerium-v0.20.0"
+        },
+        {
+          "id": "05b7b801a7cf0831203c7234f5284417fc90390104c45b9fb6c88ea6b9f6cc0a",
+          "filename": "Cerium-Setup-0.20.0-x64.exe",
+          "original_filename": "Cerium-Setup-0.20.0-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.20.0",
+          "size_bytes": 147387886,
+          "sha256": "05b7b801a7cf0831203c7234f5284417fc90390104c45b9fb6c88ea6b9f6cc0a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ceriumhq-cerium-v0.20.0/Cerium-Setup-0.20.0-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ceriumhq-cerium-v0.20.0"
         }
       ],
       "platforms": [
