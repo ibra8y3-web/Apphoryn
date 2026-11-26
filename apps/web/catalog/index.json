@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:01:02.941375+00:00",
+  "generated_at": "2026-11-26T06:02:28.285500+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -12994,6 +12994,123 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "zulut30-chronos",
+      "slug": "zulut30-chronos",
+      "name": "Chronos",
+      "summary": "Chronos — десктоп для ИИ-агентов (Claude Code, Codex, OpenRouter): русский интерфейс, тема Olympus, доска задач, Excalidraw, MCP-менеджер. Ставится рядом с T3 Code. Unofficial fork of T3 Code (MIT), not affiliated with T3 Tools.",
+      "description": "Chronos — десктоп для ИИ-агентов (Claude Code, Codex, OpenRouter): русский интерфейс, тема Olympus, доска задач, Excalidraw, MCP-менеджер. Ставится рядом с T3 Code. Unofficial fork of T3 Code (MIT), not affiliated with T3 Tools.",
+      "translations": {
+        "en": {
+          "summary": "Chronos — десктоп для ИИ-агентов (Claude Code, Codex, OpenRouter): русский интерфейс, тема Olympus, доска задач, Excalidraw, MCP-менеджер. Ставится рядом с T3 Code. Unofficial fork of T3 Code (MIT), not affiliated with T3 Tools.",
+          "description": "Chronos — десктоп для ИИ-агентов (Claude Code, Codex, OpenRouter): русский интерфейс, тема Olympus, доска задач, Excalidraw, MCP-менеджер. Ставится рядом с T3 Code. Unofficial fork of T3 Code (MIT), not affiliated with T3 Tools."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Zulut30/Chronos/main/assets/prod/logo.svg",
+      "repository_url": "https://github.com/Zulut30/Chronos",
+      "github_repo_id": "1460690036",
+      "source_updated_at": "2026-11-24T22:57:04Z",
+      "homepage_url": "https://github.com/Zulut30/Chronos/releases/latest",
+      "owner": "Zulut30",
+      "default_branch": "main",
+      "source_commit_sha": "0bc6c9971f229fb7493da00b7cb7b01c9470c70b",
+      "license_text": "MIT License\n\nCopyright (c) 2026 T3 Tools Inc.\nCopyright (c) 2026 Zulut30 and Chronos contributors (modifications in this fork)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "agentic-coding",
+        "ai-agents",
+        "ai-coding",
+        "ai-ide",
+        "claude",
+        "claude-code",
+        "codex",
+        "coding-agents",
+        "desktop-app",
+        "developer-tools",
+        "electron",
+        "excalidraw",
+        "llm",
+        "mcp",
+        "mcp-server",
+        "openrouter",
+        "russian",
+        "russian-localization",
+        "t3-code",
+        "t3code"
+      ],
+      "latest_version": "chronos-v0.1.12-nightly.20261124.5209.chronos.7",
+      "release_url": "https://github.com/Zulut30/Chronos/releases/tag/chronos-v0.1.12-nightly.20261124.5209.chronos.7",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zulut30-chronos-chronos-v0.1.12-nightly.20261124.5209.chronos.7",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zulut30-chronos-chronos-v0.1.12-nightly.20261124.5209.chronos.7/THIRD-PARTY-NOTICE-zulut30-chronos.txt",
+      "artifacts": [
+        {
+          "id": "8857c1efaaecb479d83e9b0b52b008dee55b8cfa70af69c117a56595b9832fb2",
+          "filename": "Chronos-0.1.12-nightly.20261124.5209.chronos.7-arm64.dmg",
+          "original_filename": "Chronos-0.1.12-nightly.20261124.5209.chronos.7-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "chronos-v0.1.12-nightly.20261124.5209.chronos.7",
+          "size_bytes": 266889998,
+          "sha256": "8857c1efaaecb479d83e9b0b52b008dee55b8cfa70af69c117a56595b9832fb2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zulut30-chronos-chronos-v0.1.12-nightly.20261124.5209.chronos.7/Chronos-0.1.12-nightly.20261124.5209.chronos.7-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zulut30-chronos-chronos-v0.1.12-nightly.20261124.5209.chronos.7"
+        },
+        {
+          "id": "e6e1fa3cc2ac4ef88b6d0e2b46519e04dec704c20596ee23218ab9efc3839931",
+          "filename": "Chronos-0.1.12-nightly.20261124.5209.chronos.7-x64.dmg",
+          "original_filename": "Chronos-0.1.12-nightly.20261124.5209.chronos.7-x64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "x86_64",
+          "version": "chronos-v0.1.12-nightly.20261124.5209.chronos.7",
+          "size_bytes": 272689665,
+          "sha256": "e6e1fa3cc2ac4ef88b6d0e2b46519e04dec704c20596ee23218ab9efc3839931",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zulut30-chronos-chronos-v0.1.12-nightly.20261124.5209.chronos.7/Chronos-0.1.12-nightly.20261124.5209.chronos.7-x64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zulut30-chronos-chronos-v0.1.12-nightly.20261124.5209.chronos.7"
+        },
+        {
+          "id": "fd9ca5a8d9af72ad5d1431fc7fbf71efc8bc01f1102fc09b9bb688f361c7e0fb",
+          "filename": "Chronos-0.1.12-nightly.20261124.5209.chronos.7-x64.exe",
+          "original_filename": "Chronos-0.1.12-nightly.20261124.5209.chronos.7-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "chronos-v0.1.12-nightly.20261124.5209.chronos.7",
+          "size_bytes": 421879870,
+          "sha256": "fd9ca5a8d9af72ad5d1431fc7fbf71efc8bc01f1102fc09b9bb688f361c7e0fb",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zulut30-chronos-chronos-v0.1.12-nightly.20261124.5209.chronos.7/Chronos-0.1.12-nightly.20261124.5209.chronos.7-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zulut30-chronos-chronos-v0.1.12-nightly.20261124.5209.chronos.7"
+        }
+      ],
+      "platforms": [
+        "macos",
+        "windows"
       ]
     },
     {
