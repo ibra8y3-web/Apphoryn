@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:32:37.325402+00:00",
+  "generated_at": "2026-11-26T06:33:23.158883+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -25052,6 +25052,136 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "alexdeveop-evex-mpp",
+      "slug": "alexdeveop-evex-mpp",
+      "name": "EvEX-MPP",
+      "summary": "Desktop XMPP client for Windows and Linux, built for EVE Online communities: fleet pings, auto-join rooms, always-on-top alerts, EVE time and themes. English and Spanish.",
+      "description": "Desktop XMPP client for Windows and Linux, built for EVE Online communities: fleet pings, auto-join rooms, always-on-top alerts, EVE time and themes. English and Spanish.",
+      "translations": {
+        "en": {
+          "summary": "Desktop XMPP client for Windows and Linux, built for EVE Online communities: fleet pings, auto-join rooms, always-on-top alerts, EVE time and themes. English and Spanish.",
+          "description": "Desktop XMPP client for Windows and Linux, built for EVE Online communities: fleet pings, auto-join rooms, always-on-top alerts, EVE time and themes. English and Spanish."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/AlexDeveOp/EvEX-MPP/main/src/renderer/assets/logo.svg",
+      "repository_url": "https://github.com/AlexDeveOp/EvEX-MPP",
+      "github_repo_id": "1443191332",
+      "source_updated_at": "2026-11-11T02:33:19Z",
+      "homepage_url": "https://apps.microsoft.com/detail/9P8R73JP3XTD",
+      "owner": "AlexDeveOp",
+      "default_branch": "main",
+      "source_commit_sha": "ce3e44f2982bd51cd5ec1a776e0d716c142915e5",
+      "license_text": "MIT License\n\nCopyright (c) 2026 AlexDeveOp\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "appimage",
+        "chat",
+        "cross-platform",
+        "deb",
+        "desktop-app",
+        "electron",
+        "eve-online",
+        "jabber",
+        "linux",
+        "microsoft-store",
+        "msix",
+        "notifications",
+        "pidgin-alternative",
+        "windows",
+        "xmpp",
+        "xmpp-client"
+      ],
+      "latest_version": "v0.12.1",
+      "release_url": "https://github.com/AlexDeveOp/EvEX-MPP/releases/tag/v0.12.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-alexdeveop-evex-mpp-v0.12.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-alexdeveop-evex-mpp-v0.12.1/THIRD-PARTY-NOTICE-alexdeveop-evex-mpp.txt",
+      "artifacts": [
+        {
+          "id": "a85453df6d6f71946c34d54132cab72aa9b116d69aaf8604bdf704897ebb444d",
+          "filename": "EvEX-MPP-0.12.1-portable.exe",
+          "original_filename": "EvEX-MPP-0.12.1-portable.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.12.1",
+          "size_bytes": 120808685,
+          "sha256": "a85453df6d6f71946c34d54132cab72aa9b116d69aaf8604bdf704897ebb444d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-alexdeveop-evex-mpp-v0.12.1/EvEX-MPP-0.12.1-portable.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-alexdeveop-evex-mpp-v0.12.1"
+        },
+        {
+          "id": "334481efc573dfe8da9f5a8169f4775c2d4c316cc43d93c4e179da7a1f4271e1",
+          "filename": "EvEX-MPP-0.12.1-x86_64.AppImage",
+          "original_filename": "EvEX-MPP-0.12.1-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.12.1",
+          "size_bytes": 142524053,
+          "sha256": "334481efc573dfe8da9f5a8169f4775c2d4c316cc43d93c4e179da7a1f4271e1",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-alexdeveop-evex-mpp-v0.12.1/EvEX-MPP-0.12.1-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-alexdeveop-evex-mpp-v0.12.1"
+        },
+        {
+          "id": "8e0bfb9989225ee8457186eef9dc4ccf59923d172d37faef44cb79bc0fe8affa",
+          "filename": "EvEX-MPP-Setup-0.12.1.exe",
+          "original_filename": "EvEX-MPP-Setup-0.12.1.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.12.1",
+          "size_bytes": 131572038,
+          "sha256": "8e0bfb9989225ee8457186eef9dc4ccf59923d172d37faef44cb79bc0fe8affa",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-alexdeveop-evex-mpp-v0.12.1/EvEX-MPP-Setup-0.12.1.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-alexdeveop-evex-mpp-v0.12.1"
+        },
+        {
+          "id": "b2d260e6df0b52a9aef7caed9686b9981cb0931b6653dd6c4e1e4be03a816420",
+          "filename": "evex-mpp_0.12.1_amd64.deb",
+          "original_filename": "evex-mpp_0.12.1_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.12.1",
+          "size_bytes": 118309568,
+          "sha256": "b2d260e6df0b52a9aef7caed9686b9981cb0931b6653dd6c4e1e4be03a816420",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-alexdeveop-evex-mpp-v0.12.1/evex-mpp_0.12.1_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-alexdeveop-evex-mpp-v0.12.1"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "windows"
       ]
     },
     {
