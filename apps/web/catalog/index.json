@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T14:31:47.027625+00:00",
+  "generated_at": "2026-11-26T14:32:41.714408+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -43585,7 +43585,7 @@
       "icon_url": "https://raw.githubusercontent.com/junkerderprovinz/knightloader/main/mobile/assets/icon.png",
       "repository_url": "https://github.com/junkerderprovinz/knightloader",
       "github_repo_id": "1322263101",
-      "source_updated_at": "2026-11-25T16:22:45Z",
+      "source_updated_at": "2026-11-26T13:01:15Z",
       "homepage_url": "https://junkerderprovinz.github.io/knightloader/",
       "owner": "junkerderprovinz",
       "default_branch": "main",
