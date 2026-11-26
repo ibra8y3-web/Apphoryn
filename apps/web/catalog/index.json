@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T10:36:12.830650+00:00",
+  "generated_at": "2026-11-26T10:36:26.752673+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -48387,7 +48387,7 @@
       "icon_url": "https://raw.githubusercontent.com/lyracode-app/Lyra-Code/main/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
       "repository_url": "https://github.com/lyracode-app/Lyra-Code",
       "github_repo_id": "1259336125",
-      "source_updated_at": "2026-11-17T10:31:02Z",
+      "source_updated_at": "2026-11-26T09:42:16Z",
       "homepage_url": "https://lyracode.app",
       "owner": "lyracode-app",
       "default_branch": "main",
