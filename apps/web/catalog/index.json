@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T15:35:45.692195+00:00",
+  "generated_at": "2026-11-26T15:36:22.587653+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -28253,6 +28253,52 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "samsmith-msft-ez-azfw-manager",
+      "slug": "samsmith-msft-ez-azfw-manager",
+      "artifacts": [],
+      "name": "ez-azfw-manager",
+      "summary": "Desktop app for managing Azure Firewalls, policies, rules and IP groups with a draft, review and commit workflow",
+      "description": "Desktop app for managing Azure Firewalls, policies, rules and IP groups with a draft, review and commit workflow",
+      "translations": {
+        "en": {
+          "summary": "Desktop app for managing Azure Firewalls, policies, rules and IP groups with a draft, review and commit workflow",
+          "description": "Desktop app for managing Azure Firewalls, policies, rules and IP groups with a draft, review and commit workflow"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/samsmith-MSFT/ez-azfw-manager/main/assets/icons/icon.png",
+      "repository_url": "https://github.com/samsmith-MSFT/ez-azfw-manager",
+      "github_repo_id": "1439089828",
+      "source_updated_at": "2026-11-18T22:38:42Z",
+      "homepage_url": null,
+      "owner": "samsmith-MSFT",
+      "default_branch": "main",
+      "source_commit_sha": "3c336507907ee551ce253fef646355546495741d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 samsmith-MSFT\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "security",
+      "topics": [
+        "azure",
+        "azure-firewall",
+        "desktop-app",
+        "electron",
+        "firewall-policy",
+        "network-security"
+      ],
+      "latest_version": "v1.6.2",
+      "release_url": "https://github.com/samsmith-MSFT/ez-azfw-manager/releases/tag/v1.6.2",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "passioncode-ai-fabric-switchboard",
