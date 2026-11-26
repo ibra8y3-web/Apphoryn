@@ -37702,7 +37702,17 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "54651fb24359d5d9a2b1ba234889c529427d1040",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-26T00:07:43.689117+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "thetemirbolatov-noirestore",
