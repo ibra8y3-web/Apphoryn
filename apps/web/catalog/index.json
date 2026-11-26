@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T12:00:20.042213+00:00",
+  "generated_at": "2026-11-26T12:05:08.742452+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -850,7 +850,7 @@
       "icon_url": "https://raw.githubusercontent.com/Shalfey-Predskazatel/Accovell/main/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/Shalfey-Predskazatel/Accovell",
       "github_repo_id": "1471828193",
-      "source_updated_at": "2026-11-25T16:53:55Z",
+      "source_updated_at": "2026-11-26T07:27:11Z",
       "homepage_url": "https://github.com/Shalfey-Predskazatel/Accovell/releases/latest",
       "owner": "Shalfey-Predskazatel",
       "default_branch": "main",
