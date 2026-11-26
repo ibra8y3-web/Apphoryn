@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T10:20:10.137156+00:00",
+  "generated_at": "2026-11-26T10:20:25.813671+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -28519,17 +28519,19 @@
       "id": "lag129-ferret",
       "slug": "lag129-ferret",
       "name": "Ferret",
-      "summary": "Ferret is a lightweight Android client for Mastodon with some Misskey support, showing timelines, profiles, emojis, reactions, and search.",
-      "description": "Ferret is a lightweight Mastodon client application for Android. It targets a simple interface with emoji and reaction display. Implemented features include timeline viewing for Mastodon and Misskey, profile viewing for Mastodon and Misskey, emoji and reaction display for Mastodon, and search for Mastodon. The project is written in Kotlin and uses Jetpack Compose, Material 3, Navigation 3, Koin, Ktor, Room, DataStore, Coil 3, Ksoup, Baseline Profile, Kotest, and MockK. It is distributed under the MIT license and has an Android CI workflow.",
+      "summary": "Lightweight Mastodon Client for Android",
+      "description": "Lightweight Mastodon Client for Android",
       "translations": {
-        "en": "Ferret is a lightweight Android client for Mastodon with some Misskey support, showing timelines, profiles, emojis, reactions, and search.",
-        "ar": "فيريت هو عميل خفيف لMastodon على Android مع دعم بعض عمليات Misskey، ويعرض الخطوط الزمنية والملفات الشخصية والرموز التعبيرية والتفاعلات والبحث."
+        "en": {
+          "summary": "Lightweight Mastodon Client for Android",
+          "description": "Lightweight Mastodon Client for Android"
+        }
       },
       "description_translations": {
         "en": "Ferret is a lightweight Mastodon client application for Android. It targets a simple interface with emoji and reaction display. Implemented features include timeline viewing for Mastodon and Misskey, profile viewing for Mastodon and Misskey, emoji and reaction display for Mastodon, and search for Mastodon. The project is written in Kotlin and uses Jetpack Compose, Material 3, Navigation 3, Koin, Ktor, Room, DataStore, Coil 3, Ksoup, Baseline Profile, Kotest, and MockK. It is distributed under the MIT license and has an Android CI workflow.",
         "ar": "فيريت هو تطبيق عميل خفيف لـ Mastodon على Android. يهدف إلى واجهة بسيطة تعرض الرموز التعبيرية والتفاعلات. تتضمن الميزات المنفذة عرض الخط الزمني لـ Mastodon وMisskey، وعرض الملف الشخصي لـ Mastodon وMisskey، وعرض الرموز التعبيرية والتفاعلات لـ Mastodon، والبحث في Mastodon. المشروع مكتوب بلغة Kotlin ويستخدم Jetpack Compose وMaterial 3 وNavigation 3 وKoin وKtor وRoom وDataStore وCoil 3 وKsoup وBaseline Profile وKotest وMockK. يُوزع المشروع بموجب ترخيص MIT ولديه سير عمل Android CI."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/lag129/Ferret/main/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
@@ -28539,14 +28541,14 @@
       "homepage_url": null,
       "owner": "lag129",
       "default_branch": "main",
-      "source_commit_sha": "95ce8b68ed8c31cb4456724b5e00f35537b821c5",
+      "source_commit_sha": "c0a2828e4f852d9fb2352d7ab22bbdd391c39d44",
       "license_text": "MIT License\n\nCopyright (c) 2026 lag129\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
-      "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "The repository describes a standalone Android end-user application and includes Android CI build evidence.",
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
       "project_status": "installable",
       "category": "other",
       "topics": [
