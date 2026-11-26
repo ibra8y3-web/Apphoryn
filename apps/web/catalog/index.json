@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:38:27.893610+00:00",
+  "generated_at": "2026-11-26T03:42:42.505850+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -5137,6 +5137,75 @@
           "requested_at": "2026-11-26T02:33:27.736201+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
         }
+      ]
+    },
+    {
+      "id": "aolarian-archivatore",
+      "slug": "aolarian-archivatore",
+      "name": "archivatore",
+      "summary": "Multi-threaded Windows desktop archiver and folder encapsulator with commander explorer and parallel queue.",
+      "description": "Multi-threaded Windows desktop archiver and folder encapsulator with commander explorer and parallel queue.",
+      "translations": {
+        "en": {
+          "summary": "Multi-threaded Windows desktop archiver and folder encapsulator with commander explorer and parallel queue.",
+          "description": "Multi-threaded Windows desktop archiver and folder encapsulator with commander explorer and parallel queue."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/aOlarian/archivatore/main/app/build/icon.png",
+      "repository_url": "https://github.com/aOlarian/archivatore",
+      "github_repo_id": "1472091311",
+      "source_updated_at": "2026-11-25T17:05:51Z",
+      "homepage_url": "https://olarian.com/free-projects/archivatore",
+      "owner": "aOlarian",
+      "default_branch": "main",
+      "source_commit_sha": "6012d96bf183e5077d2c62dc45bb8322a7d95b05",
+      "license_text": "MIT License\n\nCopyright (c) 2026 VEROBOTS S.R.L.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "archiver",
+        "compression",
+        "desktop-app",
+        "electron",
+        "golang",
+        "multithreading",
+        "windows"
+      ],
+      "latest_version": "v1.0.0",
+      "release_url": "https://github.com/aOlarian/archivatore/releases/tag/v1.0.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aolarian-archivatore-v1.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aolarian-archivatore-v1.0.0/THIRD-PARTY-NOTICE-aolarian-archivatore.txt",
+      "artifacts": [
+        {
+          "id": "e5cb4b5b3a2b13d7ee73edcd6536f94275c9c639a988f88bc8798b04087ad891",
+          "filename": "archivatore-install.exe",
+          "original_filename": "archivatore-install.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.0.0",
+          "size_bytes": 99226789,
+          "sha256": "e5cb4b5b3a2b13d7ee73edcd6536f94275c9c639a988f88bc8798b04087ad891",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aolarian-archivatore-v1.0.0/archivatore-install.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aolarian-archivatore-v1.0.0"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
