@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:19:29.848195+00:00",
+  "generated_at": "2026-11-26T04:19:46.643780+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -56678,6 +56678,88 @@
           "requested_at": "2026-11-25T21:28:11.491998+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
         }
+      ]
+    },
+    {
+      "id": "3347567186-qdisk",
+      "slug": "3347567186-qdisk",
+      "name": "QDisk",
+      "summary": "Clean messy Windows folders, find what's eating C:, and unzip ad-free — local-only, dry-run preview & 1-click undo. 轻盘：无广告 Windows 文件整理、清理与本地 AI 助手",
+      "description": "Clean messy Windows folders, find what's eating C:, and unzip ad-free — local-only, dry-run preview & 1-click undo. 轻盘：无广告 Windows 文件整理、清理与本地 AI 助手",
+      "translations": {
+        "en": {
+          "summary": "Clean messy Windows folders, find what's eating C:, and unzip ad-free — local-only, dry-run preview & 1-click undo. 轻盘：无广告 Windows 文件整理、清理与本地 AI 助手",
+          "description": "Clean messy Windows folders, find what's eating C:, and unzip ad-free — local-only, dry-run preview & 1-click undo. 轻盘：无广告 Windows 文件整理、清理与本地 AI 助手"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/3347567186/QDisk/main/src/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/3347567186/QDisk",
+      "github_repo_id": "1468879950",
+      "source_updated_at": "2026-11-26T03:43:34Z",
+      "homepage_url": "https://3347567186.github.io/QDisk/",
+      "owner": "3347567186",
+      "default_branch": "main",
+      "source_commit_sha": "5d3032dfde3d4f3e6d4b8c606cdb4ec8802ba82f",
+      "license_text": "MIT License\n\nCopyright (c) 2026 TidyAssistant Contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "7zip",
+        "ai-agent",
+        "ai-assistant",
+        "archive-manager",
+        "desktop-app",
+        "disk-cleaner",
+        "disk-space-analyzer",
+        "file-manager",
+        "file-organizer",
+        "local-ai",
+        "local-first",
+        "open-source",
+        "privacy-first",
+        "productivity",
+        "rust",
+        "tauri",
+        "windows",
+        "windows-11",
+        "windows-utility",
+        "zip"
+      ],
+      "latest_version": "v1.47.2",
+      "release_url": "https://github.com/3347567186/QDisk/releases/tag/v1.47.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-3347567186-qdisk-v1.47.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-3347567186-qdisk-v1.47.2/THIRD-PARTY-NOTICE-3347567186-qdisk.txt",
+      "artifacts": [
+        {
+          "id": "bd5ef6d8132b2323cd0d38e9072fdc1d1d3f4d11f10881947586692e2d22b415",
+          "filename": "QDisk_1.47.2_x64-setup.exe",
+          "original_filename": "QDisk_1.47.2_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.47.2",
+          "size_bytes": 23391090,
+          "sha256": "bd5ef6d8132b2323cd0d38e9072fdc1d1d3f4d11f10881947586692e2d22b415",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-3347567186-qdisk-v1.47.2/QDisk_1.47.2_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-3347567186-qdisk-v1.47.2"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
