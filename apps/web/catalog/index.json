@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T07:20:49.410422+00:00",
+  "generated_at": "2026-11-26T07:21:08.506950+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -37586,6 +37586,63 @@
           "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ]
+    },
+    {
+      "id": "dominikkoenitzer-inkling",
+      "slug": "dominikkoenitzer-inkling",
+      "artifacts": [],
+      "name": "Inkling",
+      "summary": "Notes, tasks and study together in a warm, local-first desktop hub. Electron + React + TypeScript + better-sqlite3.",
+      "description": "Notes, tasks and study together in a warm, local-first desktop hub. Electron + React + TypeScript + better-sqlite3.",
+      "translations": {
+        "en": {
+          "summary": "Notes, tasks and study together in a warm, local-first desktop hub. Electron + React + TypeScript + better-sqlite3.",
+          "description": "Notes, tasks and study together in a warm, local-first desktop hub. Electron + React + TypeScript + better-sqlite3."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/dominikkoenitzer/Inkling/main/resources/icon.png",
+      "repository_url": "https://github.com/dominikkoenitzer/Inkling",
+      "github_repo_id": "1441451237",
+      "source_updated_at": "2026-11-25T16:06:06Z",
+      "homepage_url": "https://portfolio-izanagi.vercel.app/projects/inkling",
+      "owner": "dominikkoenitzer",
+      "default_branch": "main",
+      "source_commit_sha": "e13dd56fb6d04672db83ad5a254f3642f62cf2dc",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Inkling\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "productivity",
+      "topics": [
+        "better-sqlite3",
+        "desktop-app",
+        "electron",
+        "flashcards",
+        "local-first",
+        "notes-app",
+        "pomodoro",
+        "productivity",
+        "react",
+        "spaced-repetition",
+        "sqlite",
+        "student-tools",
+        "tailwindcss",
+        "task-manager",
+        "tiptap",
+        "typescript",
+        "zustand"
+      ],
+      "latest_version": "v0.9.3",
+      "release_url": "https://github.com/dominikkoenitzer/Inkling/releases/tag/v0.9.3",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "radiumcn-inkwell",
