@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:35:05.490928+00:00",
+  "generated_at": "2026-11-26T06:35:34.169443+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -62170,6 +62170,114 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "wxxb789-passquest",
+      "slug": "wxxb789-passquest",
+      "name": "passquest",
+      "summary": "Local-first AI exam coach: adaptive practice, test-taking tactics, BYOK tutor and Anki flashcards for passing a written English exam.",
+      "description": "Local-first AI exam coach: adaptive practice, test-taking tactics, BYOK tutor and Anki flashcards for passing a written English exam.",
+      "translations": {
+        "en": {
+          "summary": "Local-first AI exam coach: adaptive practice, test-taking tactics, BYOK tutor and Anki flashcards for passing a written English exam.",
+          "description": "Local-first AI exam coach: adaptive practice, test-taking tactics, BYOK tutor and Anki flashcards for passing a written English exam."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/49564443?v=4",
+      "repository_url": "https://github.com/wxxb789/passquest",
+      "github_repo_id": "1451275052",
+      "source_updated_at": "2026-11-20T13:07:53Z",
+      "homepage_url": null,
+      "owner": "wxxb789",
+      "default_branch": "main",
+      "source_commit_sha": "7cefe920512afc68715cf78fb0198ae379e2cda2",
+      "license_text": "MIT License\n\nCopyright (c) 2026 wxxb789\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "adaptive-learning",
+        "ai-tutor",
+        "anki",
+        "byok",
+        "deepseek",
+        "desktop-app",
+        "english-learning",
+        "exam-prep",
+        "go",
+        "local-first"
+      ],
+      "latest_version": "v0.15.2",
+      "release_url": "https://github.com/wxxb789/passquest/releases/tag/v0.15.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wxxb789-passquest-v0.15.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wxxb789-passquest-v0.15.2/THIRD-PARTY-NOTICE-wxxb789-passquest.txt",
+      "artifacts": [
+        {
+          "id": "5b91a85082c3dc72482dcb1777935d2ddc01fd5320e8c8dc1b7f330684bd8172",
+          "filename": "pass-quest-0.15.2-arm64.dmg",
+          "original_filename": "pass-quest-0.15.2-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.15.2",
+          "size_bytes": 37251584,
+          "sha256": "5b91a85082c3dc72482dcb1777935d2ddc01fd5320e8c8dc1b7f330684bd8172",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wxxb789-passquest-v0.15.2/pass-quest-0.15.2-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wxxb789-passquest-v0.15.2"
+        },
+        {
+          "id": "ab7c7bdebe1256f64aaa537ca72e07dcb4e1e09d54069ba1667b8b99f6f8e7fa",
+          "filename": "pass-quest-setup-0.15.2-amd64.exe",
+          "original_filename": "pass-quest-setup-0.15.2-amd64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.15.2",
+          "size_bytes": 32773466,
+          "sha256": "ab7c7bdebe1256f64aaa537ca72e07dcb4e1e09d54069ba1667b8b99f6f8e7fa",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wxxb789-passquest-v0.15.2/pass-quest-setup-0.15.2-amd64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wxxb789-passquest-v0.15.2"
+        },
+        {
+          "id": "cfc6ffbd16fe6c5099ea75242669ba704d84eabc59825e4463030a716386f06f",
+          "filename": "Pass_Quest-0.15.2-x86_64.AppImage",
+          "original_filename": "Pass_Quest-0.15.2-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.15.2",
+          "size_bytes": 53647864,
+          "sha256": "cfc6ffbd16fe6c5099ea75242669ba704d84eabc59825e4463030a716386f06f",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wxxb789-passquest-v0.15.2/Pass_Quest-0.15.2-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wxxb789-passquest-v0.15.2"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
       ]
     },
     {
