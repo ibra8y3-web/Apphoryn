@@ -35160,7 +35160,17 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "2f27dd137761a80998faeb71386969e2d091146a",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-26T00:08:48.194390+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "mpv-android-mpv-android",
