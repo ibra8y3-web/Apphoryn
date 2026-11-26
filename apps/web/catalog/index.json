@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T20:11:10.247907+00:00",
+  "generated_at": "2026-11-26T20:11:48.260361+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -64525,7 +64525,7 @@
       "homepage_url": "https://odm.playones.com",
       "owner": "AreChen",
       "default_branch": "main",
-      "source_commit_sha": "633b2e459bc166b6e89ab7284056f1a29bb381f5",
+      "source_commit_sha": "b871a5161c002382f59476df88812489e103a01e",
       "license_text": "MIT License\n\nCopyright (c) 2026 NDM Next contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -64556,10 +64556,10 @@
         "windows",
         "yt-dlp"
       ],
-      "latest_version": "desktop-v0.8.2",
-      "release_url": "https://github.com/AreChen/OnesDM/releases/tag/desktop-v0.8.2",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-arechen-onesdm-desktop-v0.8.2",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-arechen-onesdm-desktop-v0.8.2/THIRD-PARTY-NOTICE-arechen-onesdm.txt",
+      "latest_version": "desktop-v0.9.2",
+      "release_url": "https://github.com/AreChen/OnesDM/releases/tag/desktop-v0.9.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-arechen-onesdm-desktop-v0.9.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-arechen-onesdm-desktop-v0.9.2/THIRD-PARTY-NOTICE-arechen-onesdm.txt",
       "artifacts": [
         {
           "id": "150135ad2da2884b8de4cec3a342bbf85f123e5b71e6a189ea652ae06f0fc609",
@@ -64662,6 +64662,57 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-arechen-onesdm-desktop-v0.8.2/OnesDM.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-arechen-onesdm-desktop-v0.8.2"
+        },
+        {
+          "id": "1b2e1436bf3e63700839a827c3ddde09805f86ec3370f71317493c7ee98ab37a",
+          "filename": "OnesDM-0.9.2-macos-arm64.dmg",
+          "original_filename": "OnesDM-0.9.2-macos-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "desktop-v0.9.2",
+          "size_bytes": 40218234,
+          "sha256": "1b2e1436bf3e63700839a827c3ddde09805f86ec3370f71317493c7ee98ab37a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-arechen-onesdm-desktop-v0.9.2/OnesDM-0.9.2-macos-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-arechen-onesdm-desktop-v0.9.2"
+        },
+        {
+          "id": "440a9ae5654d827947976feb95064eac43ab19fc4b73a1629f4ba18b6a5ce503",
+          "filename": "OnesDM-0.9.2-macos-x64.dmg",
+          "original_filename": "OnesDM-0.9.2-macos-x64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "x86_64",
+          "version": "desktop-v0.9.2",
+          "size_bytes": 43956292,
+          "sha256": "440a9ae5654d827947976feb95064eac43ab19fc4b73a1629f4ba18b6a5ce503",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-arechen-onesdm-desktop-v0.9.2/OnesDM-0.9.2-macos-x64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-arechen-onesdm-desktop-v0.9.2"
+        },
+        {
+          "id": "f8b60ae9d37a6985ec58c3d02dfecaf18f16f433e9e92c9029353c6aa990cd7e",
+          "filename": "OnesDM.exe",
+          "original_filename": "OnesDM.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "desktop-v0.9.2",
+          "size_bytes": 35716586,
+          "sha256": "f8b60ae9d37a6985ec58c3d02dfecaf18f16f433e9e92c9029353c6aa990cd7e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-arechen-onesdm-desktop-v0.9.2/OnesDM.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-arechen-onesdm-desktop-v0.9.2"
         }
       ],
       "platforms": [
