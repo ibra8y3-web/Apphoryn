@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T15:45:33.760077+00:00",
+  "generated_at": "2026-11-26T15:45:59.257132+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -34873,6 +34873,62 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "go7studio-go7-workhorse",
+      "slug": "go7studio-go7-workhorse",
+      "artifacts": [],
+      "name": "Go7-Workhorse",
+      "summary": "One desk for every AI subscription you already pay for — Grok, Claude, Codex, Cursor and your own API keys, each under its own login. A model per chat or auto-routed by task; usage per vendor before the bill. Native desktop app for Windows ",
+      "description": "One desk for every AI subscription you already pay for — Grok, Claude, Codex, Cursor and your own API keys, each under its own login. A model per chat or auto-routed by task; usage per vendor before the bill. Native desktop app for Windows and macOS. MIT.",
+      "translations": {
+        "en": {
+          "summary": "One desk for every AI subscription you already pay for — Grok, Claude, Codex, Cursor and your own API keys, each under its own login. A model per chat or auto-routed by task; usage per vendor before the bill. Native desktop app for Windows ",
+          "description": "One desk for every AI subscription you already pay for — Grok, Claude, Codex, Cursor and your own API keys, each under its own login. A model per chat or auto-routed by task; usage per vendor before the bill. Native desktop app for Windows and macOS. MIT."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/go7studio/Go7-Workhorse/main/docs/media/logo.png",
+      "repository_url": "https://github.com/go7studio/Go7-Workhorse",
+      "github_repo_id": "1332403664",
+      "source_updated_at": "2026-11-06T12:26:36Z",
+      "homepage_url": "https://go7workhorse.com",
+      "owner": "go7studio",
+      "default_branch": "main",
+      "source_commit_sha": "f7ed9eee670efe618f2032add35a89769420d5d4",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Go7 Studio\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "agent-orchestration",
+        "ai",
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "cursor",
+        "desktop-app",
+        "developer-tools",
+        "electron",
+        "grok",
+        "llm",
+        "macos",
+        "model-routing",
+        "multi-model",
+        "openai-compatible",
+        "windows"
+      ],
+      "latest_version": "v0.7.18",
+      "release_url": "https://github.com/go7studio/Go7-Workhorse/releases/tag/v0.7.18",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "goat-si-goat",
