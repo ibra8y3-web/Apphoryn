@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:49:04.366849+00:00",
+  "generated_at": "2026-11-26T03:53:23.733880+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -32986,6 +32986,127 @@
           "requested_at": "2026-11-26T02:13:26.388888+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
         }
+      ]
+    },
+    {
+      "id": "pl0xuee-kvistcode",
+      "slug": "pl0xuee-kvistcode",
+      "name": "kvistcode",
+      "summary": "Command center for AI coding agents: Claude, ChatGPT (Codex) and Grok side by side in one cross-platform desktop app.",
+      "description": "Command center for AI coding agents: Claude, ChatGPT (Codex) and Grok side by side in one cross-platform desktop app.",
+      "translations": {
+        "en": {
+          "summary": "Command center for AI coding agents: Claude, ChatGPT (Codex) and Grok side by side in one cross-platform desktop app.",
+          "description": "Command center for AI coding agents: Claude, ChatGPT (Codex) and Grok side by side in one cross-platform desktop app."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/pl0xuee/kvistcode/main/apps/desktop/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/pl0xuee/kvistcode",
+      "github_repo_id": "1436370899",
+      "source_updated_at": "2026-11-25T21:06:35Z",
+      "homepage_url": "https://kvistcode.com",
+      "owner": "pl0xuee",
+      "default_branch": "main",
+      "source_commit_sha": "9dec1305ef3005fe0b4d4d56fa23f19d352265b9",
+      "license_text": "MIT License\n\nCopyright (c) 2026 pl0xuee\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "agent-client-protocol",
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "desktop-app",
+        "grok",
+        "tauri"
+      ],
+      "latest_version": "v0.9.0",
+      "release_url": "https://github.com/pl0xuee/kvistcode/releases/tag/v0.9.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pl0xuee-kvistcode-v0.9.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pl0xuee-kvistcode-v0.9.0/THIRD-PARTY-NOTICE-pl0xuee-kvistcode.txt",
+      "artifacts": [
+        {
+          "id": "8ed5056802f236642f2cada63090fc2a95d37a40bdc9b1eba5834b4e8e961e65",
+          "filename": "Kvistcode-0.9.0-1.x86_64.rpm",
+          "original_filename": "Kvistcode-0.9.0-1.x86_64.rpm",
+          "platform": "linux",
+          "package_type": "RPM package",
+          "architecture": "x86_64",
+          "version": "v0.9.0",
+          "size_bytes": 18873233,
+          "sha256": "8ed5056802f236642f2cada63090fc2a95d37a40bdc9b1eba5834b4e8e961e65",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pl0xuee-kvistcode-v0.9.0/Kvistcode-0.9.0-1.x86_64.rpm",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pl0xuee-kvistcode-v0.9.0"
+        },
+        {
+          "id": "202a07a6c1683361df08687a51bba4fd9c99f30d71f90ae6098dea26f99d73e7",
+          "filename": "Kvistcode_0.9.0_amd64.AppImage",
+          "original_filename": "Kvistcode_0.9.0_amd64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.9.0",
+          "size_bytes": 95963640,
+          "sha256": "202a07a6c1683361df08687a51bba4fd9c99f30d71f90ae6098dea26f99d73e7",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pl0xuee-kvistcode-v0.9.0/Kvistcode_0.9.0_amd64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pl0xuee-kvistcode-v0.9.0"
+        },
+        {
+          "id": "f45949f289bec242cb87449ebed56f2afe8f066d0b92513277104c75b39d2ca7",
+          "filename": "Kvistcode_0.9.0_amd64.deb",
+          "original_filename": "Kvistcode_0.9.0_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.9.0",
+          "size_bytes": 18867094,
+          "sha256": "f45949f289bec242cb87449ebed56f2afe8f066d0b92513277104c75b39d2ca7",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pl0xuee-kvistcode-v0.9.0/Kvistcode_0.9.0_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pl0xuee-kvistcode-v0.9.0"
+        },
+        {
+          "id": "6cc08496aab576bf135d9b73655ad6d146e88f1aa63235c5e4a077e5a5f9884c",
+          "filename": "Kvistcode_0.9.0_x64-setup.exe",
+          "original_filename": "Kvistcode_0.9.0_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.9.0",
+          "size_bytes": 13363792,
+          "sha256": "6cc08496aab576bf135d9b73655ad6d146e88f1aa63235c5e4a077e5a5f9884c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pl0xuee-kvistcode-v0.9.0/Kvistcode_0.9.0_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pl0xuee-kvistcode-v0.9.0"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "windows"
       ]
     },
     {
