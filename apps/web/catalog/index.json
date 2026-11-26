@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:56:06.458052+00:00",
+  "generated_at": "2026-11-26T06:56:21.213850+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -3521,6 +3521,56 @@
         "macos",
         "windows"
       ]
+    },
+    {
+      "id": "mendematthias-ainode",
+      "slug": "mendematthias-ainode",
+      "artifacts": [],
+      "name": "ainode",
+      "summary": "Open AI models over BTX, running on your computer. No wallet, no account. MIT. Built on upstream BTX's ModelNet.",
+      "description": "Open AI models over BTX, running on your computer. No wallet, no account. MIT. Built on upstream BTX's ModelNet.",
+      "translations": {
+        "en": {
+          "summary": "Open AI models over BTX, running on your computer. No wallet, no account. MIT. Built on upstream BTX's ModelNet.",
+          "description": "Open AI models over BTX, running on your computer. No wallet, no account. MIT. Built on upstream BTX's ModelNet."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/MendeMatthias/ainode/main/app/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/MendeMatthias/ainode",
+      "github_repo_id": "1470306094",
+      "source_updated_at": "2026-11-24T14:47:19Z",
+      "homepage_url": "https://easybtx.com/ai",
+      "owner": "MendeMatthias",
+      "default_branch": "main",
+      "source_commit_sha": "f58fffc3105b4d7fec35ebfa2e29b0c6b52ababa",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Matthias Mende\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "category": "ai",
+      "topics": [
+        "ai",
+        "btx",
+        "desktop-app",
+        "llama-cpp",
+        "local-ai",
+        "open-source",
+        "peer-to-peer",
+        "post-quantum",
+        "rust",
+        "tauri"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "airlyrics-airlyrics",
