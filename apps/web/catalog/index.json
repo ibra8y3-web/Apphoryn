@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T21:33:53.388239+00:00",
+  "generated_at": "2026-11-26T21:34:44.197537+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -74467,21 +74467,21 @@
       "translation_status": "pending",
       "ai_provider": null,
       "ai_model": null,
-      "icon_url": "https://raw.githubusercontent.com/php-programmist/PiWright/main/scripts/icon.png",
+      "icon_url": "https://raw.githubusercontent.com/php-programmist/PiWright/main/build/icon.png",
       "repository_url": "https://github.com/php-programmist/PiWright",
       "github_repo_id": "1466456233",
       "source_updated_at": "2026-11-25T08:26:15Z",
       "homepage_url": null,
       "owner": "php-programmist",
       "default_branch": "main",
-      "source_commit_sha": "dc546c880322d728e4995a06584440d2b77a85ba",
+      "source_commit_sha": "ff556664242f83bbc1e9114702bfab744460f716",
       "license_text": "MIT License\n\nCopyright (c) 2026 php-programmist\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
-      "build_recommended": true,
+      "project_kind": "library",
+      "build_recommended": false,
       "classification_source": "heuristic",
-      "classification_reason": "Standalone application indicated by repository evidence.",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
       "project_status": "installable",
       "category": "developer",
       "topics": [
@@ -74497,10 +74497,10 @@
         "typescript",
         "windows"
       ],
-      "latest_version": "v0.5.0",
-      "release_url": "https://github.com/php-programmist/PiWright/releases/tag/v0.5.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-php-programmist-piwright-v0.5.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-php-programmist-piwright-v0.5.0/THIRD-PARTY-NOTICE-php-programmist-piwright.txt",
+      "latest_version": "v0.6.0",
+      "release_url": "https://github.com/php-programmist/PiWright/releases/tag/v0.6.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-php-programmist-piwright-v0.6.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-php-programmist-piwright-v0.6.0/THIRD-PARTY-NOTICE-php-programmist-piwright.txt",
       "artifacts": [
         {
           "id": "7fb3e72ea90582c100bd75e4c23993caba67f6bc2fe34434738406e58974d0b8",
@@ -74535,9 +74535,61 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-php-programmist-piwright-v0.5.0/PiWright-0.5.0.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-php-programmist-piwright-v0.5.0"
+        },
+        {
+          "id": "e0cdbb95f02ab86636f7e5076fc88c37c9a9cf135f536af4de2db34bea857ee3",
+          "filename": "PiWright-0.6.0.AppImage",
+          "original_filename": "PiWright-0.6.0.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": null,
+          "version": "v0.6.0",
+          "size_bytes": 135295278,
+          "sha256": "e0cdbb95f02ab86636f7e5076fc88c37c9a9cf135f536af4de2db34bea857ee3",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-php-programmist-piwright-v0.6.0/PiWright-0.6.0.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-php-programmist-piwright-v0.6.0"
+        },
+        {
+          "id": "7865bd76a0bc8c1ca36407c9601b2d410bf225135a1760a172a5059a6590c462",
+          "filename": "PiWright-0.6.0.deb",
+          "original_filename": "PiWright-0.6.0.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": null,
+          "version": "v0.6.0",
+          "size_bytes": 109150876,
+          "sha256": "7865bd76a0bc8c1ca36407c9601b2d410bf225135a1760a172a5059a6590c462",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-php-programmist-piwright-v0.6.0/PiWright-0.6.0.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-php-programmist-piwright-v0.6.0"
+        },
+        {
+          "id": "a571a93bf0ce264e27986efc0f41cf82e08c2de9aaa6d176129afc1242ec0f5b",
+          "filename": "PiWright-0.6.0.exe",
+          "original_filename": "PiWright-0.6.0.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.6.0",
+          "size_bytes": 134293672,
+          "sha256": "a571a93bf0ce264e27986efc0f41cf82e08c2de9aaa6d176129afc1242ec0f5b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-php-programmist-piwright-v0.6.0/PiWright-0.6.0.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-php-programmist-piwright-v0.6.0"
         }
       ],
       "platforms": [
+        "linux",
         "windows"
       ],
       "build_attempts": [
