@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T02:32:04.700262+00:00",
+  "generated_at": "2026-11-26T02:32:27.565180+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -10191,6 +10191,76 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "andyld97-chess-net",
+      "slug": "andyld97-chess-net",
+      "name": "Chess.NET",
+      "summary": "A mobile/Desktop .NET Chess Game",
+      "description": "A mobile/Desktop .NET Chess Game",
+      "translations": {
+        "en": {
+          "summary": "A mobile/Desktop .NET Chess Game",
+          "description": "A mobile/Desktop .NET Chess Game"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/andyld97/Chess.NET/main/Chess.NET/resources/images/logo.png",
+      "repository_url": "https://github.com/andyld97/Chess.NET",
+      "github_repo_id": "1135269026",
+      "source_updated_at": "2026-11-14T11:35:37Z",
+      "homepage_url": null,
+      "owner": "andyld97",
+      "default_branch": "main",
+      "source_commit_sha": "7f2b332b0a40aed1f0f7905d254b0c41a10a069d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Code A Software\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "games",
+      "topics": [
+        "android",
+        "android-app",
+        "android-application",
+        "chess",
+        "chess-game",
+        "dotnet",
+        "maui",
+        "wpf"
+      ],
+      "latest_version": "v1.0.7",
+      "release_url": "https://github.com/andyld97/Chess.NET/releases/tag/v1.0.7",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-andyld97-chess-net-v1.0.7",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-andyld97-chess-net-v1.0.7/THIRD-PARTY-NOTICE-andyld97-chess-net.txt",
+      "artifacts": [
+        {
+          "id": "625b8b29a29860e69accf4e1a607f82130056f8330ded4bf7b0fa67ba40ba2c4",
+          "filename": "Chess.NET.Setup.exe",
+          "original_filename": "Chess.NET.Setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.0.7",
+          "size_bytes": 67542671,
+          "sha256": "625b8b29a29860e69accf4e1a607f82130056f8330ded4bf7b0fa67ba40ba2c4",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-andyld97-chess-net-v1.0.7/Chess.NET.Setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-andyld97-chess-net-v1.0.7"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
