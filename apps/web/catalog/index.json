@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T05:01:34.488102+00:00",
+  "generated_at": "2026-11-26T05:01:53.173326+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -60907,6 +60907,87 @@
       "release_url": null,
       "platforms": [],
       "project_status": "source_available"
+    },
+    {
+      "id": "miniklover67-rascals",
+      "slug": "miniklover67-rascals",
+      "name": "Rascals",
+      "summary": "Rascals: private, serverless desktop chat. No accounts, no message server. Friends connect directly over encrypted WebRTC (Tauri, MIT).",
+      "description": "Rascals: private, serverless desktop chat. No accounts, no message server. Friends connect directly over encrypted WebRTC (Tauri, MIT).",
+      "translations": {
+        "en": {
+          "summary": "Rascals: private, serverless desktop chat. No accounts, no message server. Friends connect directly over encrypted WebRTC (Tauri, MIT).",
+          "description": "Rascals: private, serverless desktop chat. No accounts, no message server. Friends connect directly over encrypted WebRTC (Tauri, MIT)."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/MinikLover67/Rascals/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/MinikLover67/Rascals",
+      "github_repo_id": "1377466644",
+      "source_updated_at": "2026-11-24T15:30:49Z",
+      "homepage_url": "https://miniklover67.github.io/Rascals/",
+      "owner": "MinikLover67",
+      "default_branch": "main",
+      "source_commit_sha": "3af143bc0f2bd5c0cee85754109abd0262b310a7",
+      "license_text": "MIT License\n\nCopyright (c) 2026 MinikLover67\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "network",
+      "topics": [
+        "desktop-app",
+        "encrypted-chat",
+        "p2p-chat",
+        "peer-to-peer",
+        "peer-to-peer-chatting",
+        "peer-to-peer-file-sharing",
+        "peer-to-peer-network",
+        "peer-to-peer-windows",
+        "private-messaging",
+        "rascals",
+        "secure-chat",
+        "secure-chat-app",
+        "secure-chat-application",
+        "secure-chat-windows-desktop",
+        "secure-chatroom",
+        "tauri-app",
+        "tauri-apps",
+        "webrtc-chat",
+        "windows-app"
+      ],
+      "latest_version": "v0.1.56",
+      "release_url": "https://github.com/MinikLover67/Rascals/releases/tag/v0.1.56",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-miniklover67-rascals-v0.1.56",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-miniklover67-rascals-v0.1.56/THIRD-PARTY-NOTICE-miniklover67-rascals.txt",
+      "artifacts": [
+        {
+          "id": "89ff6fda884d8c24c605084d759f8b3d753ff32619a486143931b50aa869bbe3",
+          "filename": "Rascals_0.1.56_x64-setup.exe",
+          "original_filename": "Rascals_0.1.56_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.1.56",
+          "size_bytes": 5144245,
+          "sha256": "89ff6fda884d8c24c605084d759f8b3d753ff32619a486143931b50aa869bbe3",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-miniklover67-rascals-v0.1.56/Rascals_0.1.56_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-miniklover67-rascals-v0.1.56"
+        }
+      ],
+      "platforms": [
+        "windows"
+      ]
     },
     {
       "id": "renaudallard-rassh",
