@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T12:17:41.628634+00:00",
+  "generated_at": "2026-11-26T12:18:05.802677+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -36778,7 +36778,7 @@
       "homepage_url": null,
       "owner": "ojbkxc",
       "default_branch": "main",
-      "source_commit_sha": "aa6064e4c1a652920a63e3781dddb9814a450c2a",
+      "source_commit_sha": "b2c6201595c6dd62b2272874a5fd163e1afc0bc9",
       "license_text": "MIT License\n\nCopyright (c) 2026 ojbkxc\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -36799,10 +36799,10 @@
         "wasapi",
         "windows"
       ],
-      "latest_version": "v1.1.27",
-      "release_url": "https://github.com/ojbkxc/hint/releases/tag/v1.1.27",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ojbkxc-hint-v1.1.27",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ojbkxc-hint-v1.1.27/THIRD-PARTY-NOTICE-ojbkxc-hint.txt",
+      "latest_version": "v1.1.37",
+      "release_url": "https://github.com/ojbkxc/hint/releases/tag/v1.1.37",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ojbkxc-hint-v1.1.37",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ojbkxc-hint-v1.1.37/THIRD-PARTY-NOTICE-ojbkxc-hint.txt",
       "artifacts": [
         {
           "id": "cf739c445c94bebda3bb9d08a26524b1abc78c6dad74b39315df3d9230f338b6",
@@ -36837,6 +36837,40 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ojbkxc-hint-v1.1.27/hint_1.1.27_x64-setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ojbkxc-hint-v1.1.27"
+        },
+        {
+          "id": "63af4294414c65231731ad4c2673690678f253b8072f06ebceb8da8f8a259ddc",
+          "filename": "hint.exe",
+          "original_filename": "hint.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.1.37",
+          "size_bytes": 30580736,
+          "sha256": "63af4294414c65231731ad4c2673690678f253b8072f06ebceb8da8f8a259ddc",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ojbkxc-hint-v1.1.37/hint.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ojbkxc-hint-v1.1.37"
+        },
+        {
+          "id": "39bb29e5b8eef0688061cea49bcb118456e12c7ee1103c831dd1cc6f06b4da28",
+          "filename": "hint_1.1.37_x64-setup.exe",
+          "original_filename": "hint_1.1.37_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.1.37",
+          "size_bytes": 8821762,
+          "sha256": "39bb29e5b8eef0688061cea49bcb118456e12c7ee1103c831dd1cc6f06b4da28",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ojbkxc-hint-v1.1.37/hint_1.1.37_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ojbkxc-hint-v1.1.37"
         }
       ],
       "platforms": [
