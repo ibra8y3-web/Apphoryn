@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T10:21:13.004675+00:00",
+  "generated_at": "2026-11-26T10:21:32.730282+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -35917,17 +35917,19 @@
       "id": "jack3344wong-hermes-android-client",
       "slug": "jack3344wong-hermes-android-client",
       "name": "hermes-android-client",
-      "summary": "Android client for a self-hosted Hermes Agent server, offering streaming chat, projects, file transfer, model switching, and skills over Dashboard WebSocket.",
-      "description": "Hermes Android Client is a standalone Android app that connects to a user-deployed Hermes Agent server. It provides streaming chat with Markdown rendering, project-based sessions, file browsing and upload/download (up to 100 MiB per file), server model and thinking-strength selection, installed-skill invocation, and light/dark themes. The app contains no preset server, account, or key; users configure the server URL, Dashboard address, credentials, and working directory. Credentials are stored locally with Android Keystore-backed EncryptedSharedPreferences. Chat uses the Hermes Dashboard WebSocket and requires a compatible Hermes Agent deployment; the README reports verification against Hermes Agent v0.22.5 with basic Dashboard login, HTTPS, and /api/ws access. An optional API server endpoint can be used for connection testing. Source builds require JDK 17, Android SDK Platform 34, Build Tools 34.0.0, and the included Gradle wrapper; debug and unsigned release APKs can be produced. The project is MIT licensed.",
+      "summary": "Hermes Agent 的安卓客户端：连接自己的 Hermes 服务器，聊天、项目、文件与模型切换",
+      "description": "Hermes Agent 的安卓客户端：连接自己的 Hermes 服务器，聊天、项目、文件与模型切换",
       "translations": {
-        "en": "Android client for a self-hosted Hermes Agent server, offering streaming chat, projects, file transfer, model switching, and skills over Dashboard WebSocket.",
-        "ar": "عميل Android مستقل لخادم Hermes Agent مستضاف ذاتيًا، يوفر دردشة متدفقة ومشاريع ونقل ملفات وتبديل النماذج ومهارات عبر WebSocket الخاص بـ Dashboard."
+        "en": {
+          "summary": "Hermes Agent 的安卓客户端：连接自己的 Hermes 服务器，聊天、项目、文件与模型切换",
+          "description": "Hermes Agent 的安卓客户端：连接自己的 Hermes 服务器，聊天、项目、文件与模型切换"
+        }
       },
       "description_translations": {
         "en": "Hermes Android Client is a standalone Android app that connects to a user-deployed Hermes Agent server. It provides streaming chat with Markdown rendering, project-based sessions, file browsing and upload/download (up to 100 MiB per file), server model and thinking-strength selection, installed-skill invocation, and light/dark themes. The app contains no preset server, account, or key; users configure the server URL, Dashboard address, credentials, and working directory. Credentials are stored locally with Android Keystore-backed EncryptedSharedPreferences. Chat uses the Hermes Dashboard WebSocket and requires a compatible Hermes Agent deployment; the README reports verification against Hermes Agent v0.22.5 with basic Dashboard login, HTTPS, and /api/ws access. An optional API server endpoint can be used for connection testing. Source builds require JDK 17, Android SDK Platform 34, Build Tools 34.0.0, and the included Gradle wrapper; debug and unsigned release APKs can be produced. The project is MIT licensed.",
         "ar": "Hermes Android Client هو تطبيق Android مستقل يتصل بخادم Hermes Agent ينشره المستخدم. يوفر دردشة متدفقة مع عرض Markdown، وجلسات قائمة على المشاريع، وتصفح الملفات ورفعها وتنزيلها (بحد أقصى 100 MiB لكل ملف)، واختيار نموذج الخادم وشدة التفكير، واستدعاء المهارات المثبتة، ومظاهر فاتحة وداكنة. لا يحتوي التطبيق على خادم أو حساب أو مفتاح مُعد مسبقًا؛ يقوم المستخدم بتكوين عنوان الخادم وعنوان Dashboard وبيانات الاعتماد ومجلد العمل. يتم تخزين بيانات الاعتماد محليًا باستخدام EncryptedSharedPreferences المدعوم من Android Keystore. تستخدم الدردشة WebSocket الخاص بـ Hermes Dashboard وتتطلب نشر Hermes Agent متوافقًا؛ يذكر ملف README التحقق من Hermes Agent v0.22.5 مع تسجيل الدخول الأساسي إلى Dashboard وHTTPS والوصول إلى /api/ws. يمكن استخدام نقطة نهاية خادم API اختيارية لاختبار الاتصال. تتطلب عمليات البناء من المصدر JDK 17 وAndroid SDK Platform 34 وBuild Tools 34.0.0 وGradle wrapper المرفق؛ ويمكن إنتاج ملفات APK للتصحيح وإصدار غير موقّع. المشروع مرخص بموجب MIT."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/jack3344wong/hermes-android-client/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
@@ -35941,10 +35943,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 Hermes Android contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
-      "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "Standalone Android end-user application with documented Gradle build path producing debug and release APKs.",
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
       "project_status": "installable",
       "category": "ai",
       "topics": [
