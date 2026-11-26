@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T15:15:31.083231+00:00",
+  "generated_at": "2026-11-26T15:16:47.123917+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -40680,6 +40680,88 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "pei-jz-jh-editor",
+      "slug": "pei-jz-jh-editor",
+      "name": "jh-editor",
+      "summary": "Local-first desktop text editor that starts instantly - far faster than VS Code. Excel-like CSV grid editing, Markdown with live preview and a page-turning Book mode, and 100MB+ files that open without freezing.",
+      "description": "Local-first desktop text editor that starts instantly - far faster than VS Code. Excel-like CSV grid editing, Markdown with live preview and a page-turning Book mode, and 100MB+ files that open without freezing.",
+      "translations": {
+        "en": {
+          "summary": "Local-first desktop text editor that starts instantly - far faster than VS Code. Excel-like CSV grid editing, Markdown with live preview and a page-turning Book mode, and 100MB+ files that open without freezing.",
+          "description": "Local-first desktop text editor that starts instantly - far faster than VS Code. Excel-like CSV grid editing, Markdown with live preview and a page-turning Book mode, and 100MB+ files that open without freezing."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/pei-jz/jh-editor/master/public/icons/appIcon.png",
+      "repository_url": "https://github.com/pei-jz/jh-editor",
+      "github_repo_id": "1329397881",
+      "source_updated_at": "2026-11-03T13:19:44Z",
+      "homepage_url": null,
+      "owner": "pei-jz",
+      "default_branch": "master",
+      "source_commit_sha": "ea85cd4e21fa2ef73716e45588170bdcbd22b70a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 J.H Editor Team\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "codemirror",
+        "codemirror-editor",
+        "codemirror6",
+        "csv-editor",
+        "csv-editor-pro",
+        "desktop-app",
+        "large-files",
+        "lightweight",
+        "markdown-editor",
+        "tauri",
+        "tauri-app",
+        "tauri-apps",
+        "tauri-rust",
+        "tauri-v2",
+        "tauri2",
+        "text-editor",
+        "vim",
+        "vim-emulation",
+        "windows",
+        "windows-11"
+      ],
+      "latest_version": "v0.15.0",
+      "release_url": "https://github.com/pei-jz/jh-editor/releases/tag/v0.15.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pei-jz-jh-editor-v0.15.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pei-jz-jh-editor-v0.15.0/THIRD-PARTY-NOTICE-pei-jz-jh-editor.txt",
+      "artifacts": [
+        {
+          "id": "1d146eb50eb9bc7d4c72cbc14363c480e93e79d48022ed10a00376c664973b5f",
+          "filename": "J.H.Editor_0.15.0_x64-setup.exe",
+          "original_filename": "J.H.Editor_0.15.0_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.15.0",
+          "size_bytes": 9730540,
+          "sha256": "1d146eb50eb9bc7d4c72cbc14363c480e93e79d48022ed10a00376c664973b5f",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pei-jz-jh-editor-v0.15.0/J.H.Editor_0.15.0_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pei-jz-jh-editor-v0.15.0"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
