@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T15:34:43.334984+00:00",
+  "generated_at": "2026-11-26T15:35:45.692195+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -35310,6 +35310,56 @@
       "platforms": [
         "macos"
       ]
+    },
+    {
+      "id": "hpagniez-grace",
+      "slug": "hpagniez-grace",
+      "artifacts": [],
+      "name": "grace",
+      "summary": "Free, open-source desktop test runner for Karate v2. Browse, filter and run your API tests, watch them live, inspect every HTTP call. Java and Karate bundled.",
+      "description": "Free, open-source desktop test runner for Karate v2. Browse, filter and run your API tests, watch them live, inspect every HTTP call. Java and Karate bundled.",
+      "translations": {
+        "en": {
+          "summary": "Free, open-source desktop test runner for Karate v2. Browse, filter and run your API tests, watch them live, inspect every HTTP call. Java and Karate bundled.",
+          "description": "Free, open-source desktop test runner for Karate v2. Browse, filter and run your API tests, watch them live, inspect every HTTP call. Java and Karate bundled."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/hpagniez/grace/develop/assets/icon.svg",
+      "repository_url": "https://github.com/hpagniez/grace",
+      "github_repo_id": "1432299180",
+      "source_updated_at": "2026-11-12T16:37:07Z",
+      "homepage_url": null,
+      "owner": "hpagniez",
+      "default_branch": "develop",
+      "source_commit_sha": "177a4c7d5d6e40372ffb81ccf19c51a817d3c413",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Tusquito\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "category": "other",
+      "topics": [
+        "api-testing",
+        "desktop-app",
+        "electron",
+        "karate",
+        "karate-dsl",
+        "solidjs",
+        "test-automation",
+        "test-runner",
+        "testing",
+        "windows"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "rynekryz-graphyte",
