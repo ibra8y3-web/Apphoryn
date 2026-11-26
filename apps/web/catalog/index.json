@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T10:43:33.339546+00:00",
+  "generated_at": "2026-11-26T10:43:54.460584+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -84530,6 +84530,88 @@
       ],
       "platforms": [
         "windows"
+      ]
+    },
+    {
+      "id": "ryckakas-swarmed",
+      "slug": "ryckakas-swarmed",
+      "name": "swarmed",
+      "summary": "Run coding agents side by side, each on its own branch, git worktree and ports. A Rust-based desktop app and CLI for Claude Code, Codex, OpenCode or any ACP agent.",
+      "description": "Run coding agents side by side, each on its own branch, git worktree and ports. A Rust-based desktop app and CLI for Claude Code, Codex, OpenCode or any ACP agent.",
+      "translations": {
+        "en": {
+          "summary": "Run coding agents side by side, each on its own branch, git worktree and ports. A Rust-based desktop app and CLI for Claude Code, Codex, OpenCode or any ACP agent.",
+          "description": "Run coding agents side by side, each on its own branch, git worktree and ports. A Rust-based desktop app and CLI for Claude Code, Codex, OpenCode or any ACP agent."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ryckakas/swarmed/main/crates/app/icons/icon.png",
+      "repository_url": "https://github.com/ryckakas/swarmed",
+      "github_repo_id": "1463972304",
+      "source_updated_at": "2026-11-23T11:39:04Z",
+      "homepage_url": "https://swarmed.kauneckas.dev",
+      "owner": "ryckakas",
+      "default_branch": "main",
+      "source_commit_sha": "11742e377dd539d21760e887274028f01f8f0c4a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Ricardas Kauneckas\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "agent-client-protocol",
+        "agent-orchestration",
+        "ai-agents",
+        "ai-coding",
+        "claude",
+        "claude-code",
+        "cli",
+        "codex",
+        "coding-agents",
+        "desktop-app",
+        "developer-tools",
+        "git",
+        "git-worktree",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "multi-agent",
+        "opencode",
+        "rust",
+        "tauri"
+      ],
+      "latest_version": "v0.4.6",
+      "release_url": "https://github.com/ryckakas/swarmed/releases/tag/v0.4.6",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ryckakas-swarmed-v0.4.6",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ryckakas-swarmed-v0.4.6/THIRD-PARTY-NOTICE-ryckakas-swarmed.txt",
+      "artifacts": [
+        {
+          "id": "40c0b9115593b755974baba6435e2caaa171947db3657a353cb2ce9ff49c5804",
+          "filename": "Swarmed-0.4.6-macos-universal.dmg",
+          "original_filename": "Swarmed-0.4.6-macos-universal.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "universal",
+          "version": "v0.4.6",
+          "size_bytes": 28456405,
+          "sha256": "40c0b9115593b755974baba6435e2caaa171947db3657a353cb2ce9ff49c5804",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ryckakas-swarmed-v0.4.6/Swarmed-0.4.6-macos-universal.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ryckakas-swarmed-v0.4.6"
+        }
+      ],
+      "platforms": [
+        "macos"
       ]
     },
     {
