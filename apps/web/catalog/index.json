@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T14:34:44.968563+00:00",
+  "generated_at": "2026-11-26T14:35:04.368795+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -94453,12 +94453,12 @@
       "id": "davin-x-visto-gallery",
       "slug": "davin-x-visto-gallery",
       "name": "visto-gallery",
-      "summary": "A fast, private photo & video gallery for macOS — local-first, no cloud, no tracking",
-      "description": "A fast, private photo & video gallery for macOS — local-first, no cloud, no tracking",
+      "summary": "VistoGallery is an all-in-one photo viewer, RAW editor, and Mac duplicate cleaner. Organize with Smart Albums, lock private photos behind Touch ID, and browse your folders at native speed—with zero cloud lock-in",
+      "description": "VistoGallery is an all-in-one photo viewer, RAW editor, and Mac duplicate cleaner. Organize with Smart Albums, lock private photos behind Touch ID, and browse your folders at native speed—with zero cloud lock-in",
       "translations": {
         "en": {
-          "summary": "A fast, private photo & video gallery for macOS — local-first, no cloud, no tracking",
-          "description": "A fast, private photo & video gallery for macOS — local-first, no cloud, no tracking"
+          "summary": "VistoGallery is an all-in-one photo viewer, RAW editor, and Mac duplicate cleaner. Organize with Smart Albums, lock private photos behind Touch ID, and browse your folders at native speed—with zero cloud lock-in",
+          "description": "VistoGallery is an all-in-one photo viewer, RAW editor, and Mac duplicate cleaner. Organize with Smart Albums, lock private photos behind Touch ID, and browse your folders at native speed—with zero cloud lock-in"
         }
       },
       "description_translations": {},
@@ -94468,11 +94468,11 @@
       "icon_url": "https://raw.githubusercontent.com/Davin-X/visto-gallery/main/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/Davin-X/visto-gallery",
       "github_repo_id": "1432627080",
-      "source_updated_at": "2026-11-25T11:37:25Z",
+      "source_updated_at": "2026-11-26T09:45:06Z",
       "homepage_url": "https://github.com/Davin-X/visto-gallery/releases",
       "owner": "Davin-X",
       "default_branch": "main",
-      "source_commit_sha": "a0340df47899d65363a0593d1a46ef2632f1c161",
+      "source_commit_sha": "ede9432527621e2e2a6af134a0b93298d2ceefc4",
       "license_text": "MIT License\n\nCopyright (c) 2026 Devendra Kumar\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
