@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T02:11:20.236625+00:00",
+  "generated_at": "2026-11-26T02:11:59.581286+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -50134,6 +50134,67 @@
           "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ]
+    },
+    {
+      "id": "dugmaclean-scrivo",
+      "slug": "dugmaclean-scrivo",
+      "artifacts": [],
+      "name": "scrivo",
+      "summary": "Scrivo is a self-hosted, Whisper-powered voice dictation system for Android and Windows, with a Python server and local or OpenAI-compatible writing models.",
+      "description": "Scrivo is an independent, open-source alternative to Wispr Flow. It runs a self-hosted Python server that uses local Whisper models through faster-whisper to recognize speech, then sends recognized text to a chosen OpenAI-compatible writing model for cleanup, punctuation, and spoken corrections. Android 11+ provides a floating bubble that inserts text into the focused field or copies it to the clipboard. The Windows client uses Ctrl+Windows or Ctrl+Alt+Space and types finished text at the cursor. Users can configure primary and backup recognition and writing models, keep recordings for retries, and share a custom dictionary. Local models keep words on the user's computers; cloud models require an explicit privacy notice. The server requires an access token and should be reached over HTTPS. Build paths are documented for the Android app with Gradle and for the Python server and Windows client.",
+      "translations": {
+        "en": "Scrivo is a self-hosted, Whisper-powered voice dictation system for Android and Windows, with a Python server and local or OpenAI-compatible writing models.",
+        "ar": "Scrivo نظام إملاء صوتي مستضاف ذاتيًا يعتمد على Whisper، مع خادم Python ونماذج كتابة محلية أو متوافقة مع OpenAI."
+      },
+      "description_translations": {
+        "en": "Scrivo is an independent, open-source alternative to Wispr Flow. It runs a self-hosted Python server that uses local Whisper models through faster-whisper to recognize speech, then sends recognized text to a chosen OpenAI-compatible writing model for cleanup, punctuation, and spoken corrections. Android 11+ provides a floating bubble that inserts text into the focused field or copies it to the clipboard. The Windows client uses Ctrl+Windows or Ctrl+Alt+Space and types finished text at the cursor. Users can configure primary and backup recognition and writing models, keep recordings for retries, and share a custom dictionary. Local models keep words on the user's computers; cloud models require an explicit privacy notice. The server requires an access token and should be reached over HTTPS. Build paths are documented for the Android app with Gradle and for the Python server and Windows client.",
+        "ar": "Scrivo بديل مستقل مفتوح المصدر لـ Wispr Flow. يعمل خادم Python مستضاف ذاتيًا يستخدم نماذج Whisper المحلية عبر faster-whisper للتعرف على الكلام، ثم يرسل النص المتعرف عليه إلى نموذج كتابة متوافق مع OpenAI تختاره لتنظيف النص وعلامات الترقيم والتصحيحات المنطوقة. يوفر Android 11+ فقاعة عائمة تُدرج النص في الحقل النشط أو تنسخه إلى الحافظة. يستخدم عميل Windows Ctrl+Windows أو Ctrl+Alt+Space ويكتب النص النهائي عند المؤشر. يمكن للمستخدمين ضبط نماذج التعرف والكتابة الأساسية والاحتياطية، والاحتفاظ بالتسجيلات لإعادة المحاولة، ومشاركة قاموس مخصص. النماذج المحلية تُبقي الكلمات على أجهزة المستخدم؛ وتتطلب النماذج السحابية إشعار خصوصية صريحًا. يتطلب الخادم رمز وصول ويجب الوصول إليه عبر HTTPS. توجد مسارات بناء موثقة لتطبيق Android باستخدام Gradle ولخادم Python وعميل Windows."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://avatars.githubusercontent.com/u/152089526?v=4",
+      "repository_url": "https://github.com/dugmaclean/scrivo",
+      "github_repo_id": "1466145275",
+      "source_updated_at": "2026-11-21T03:41:22Z",
+      "homepage_url": null,
+      "owner": "dugmaclean",
+      "default_branch": "main",
+      "source_commit_sha": "1df8753eca49b910b187dad16c2c6fa179468344",
+      "license_text": "MIT License\n\nCopyright (c) 2026 The Scrivo contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": false,
+      "classification_source": "ai",
+      "classification_reason": "The repository describes an end-user voice dictation application with Android and Windows clients, but it is a multi-component self-hosted system requiring a Python server, so it is not treated as a standalone automatic build target.",
+      "category": "security",
+      "topics": [
+        "ai-dictation",
+        "android",
+        "android-app",
+        "dictation",
+        "faster-whisper",
+        "llm",
+        "local-ai",
+        "offline",
+        "open-source",
+        "privacy",
+        "self-hosted",
+        "speech-recognition",
+        "speech-to-text",
+        "voice-dictation",
+        "voice-to-text",
+        "voice-typing",
+        "whisper",
+        "windows",
+        "wispr-flow",
+        "wispr-flow-alternative"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "duartebarbosadev-scrolless",
