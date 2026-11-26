@@ -14107,7 +14107,19 @@
       "latest_version": "v2.385.2",
       "release_url": "https://github.com/intent-hq/cloudlands-fe/releases/tag/v2.385.2",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "79ad2eac84ea3f8a758c59158ea950b127fe07cf",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-26T04:57:48.774671+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "oaostarboy-clover",
