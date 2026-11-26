@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T21:45:19.174181+00:00",
+  "generated_at": "2026-11-26T21:45:33.064311+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -77231,12 +77231,12 @@
       "id": "3347567186-qdisk",
       "slug": "3347567186-qdisk",
       "name": "QDisk",
-      "summary": "Clean messy Windows folders, find what's eating C:, and unzip ad-free — local-only, dry-run preview & 1-click undo. 轻盘：无广告 Windows 文件整理、清理与本地 AI 助手",
-      "description": "Clean messy Windows folders, find what's eating C:, and unzip ad-free — local-only, dry-run preview & 1-click undo. 轻盘：无广告 Windows 文件整理、清理与本地 AI 助手",
+      "summary": "Local-only Windows file organizer, cache cleaner, archive manager, and disk assistant with dry-run preview and undo. 轻盘：Windows 本地文件整理、缓存清理与压缩包工具",
+      "description": "Local-only Windows file organizer, cache cleaner, archive manager, and disk assistant with dry-run preview and undo. 轻盘：Windows 本地文件整理、缓存清理与压缩包工具",
       "translations": {
         "en": {
-          "summary": "Clean messy Windows folders, find what's eating C:, and unzip ad-free — local-only, dry-run preview & 1-click undo. 轻盘：无广告 Windows 文件整理、清理与本地 AI 助手",
-          "description": "Clean messy Windows folders, find what's eating C:, and unzip ad-free — local-only, dry-run preview & 1-click undo. 轻盘：无广告 Windows 文件整理、清理与本地 AI 助手"
+          "summary": "Local-only Windows file organizer, cache cleaner, archive manager, and disk assistant with dry-run preview and undo. 轻盘：Windows 本地文件整理、缓存清理与压缩包工具",
+          "description": "Local-only Windows file organizer, cache cleaner, archive manager, and disk assistant with dry-run preview and undo. 轻盘：Windows 本地文件整理、缓存清理与压缩包工具"
         }
       },
       "description_translations": {},
@@ -77246,18 +77246,18 @@
       "icon_url": "https://raw.githubusercontent.com/3347567186/QDisk/main/src/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/3347567186/QDisk",
       "github_repo_id": "1468879950",
-      "source_updated_at": "2026-11-26T03:43:34Z",
+      "source_updated_at": "2026-11-26T14:14:12Z",
       "homepage_url": "https://3347567186.github.io/QDisk/",
       "owner": "3347567186",
       "default_branch": "main",
-      "source_commit_sha": "9cf22613a4d080ea41aa9f4311929f5b999f9d53",
+      "source_commit_sha": "c3641fc6a2dd19525e95dde76861a9710393c824",
       "license_text": "MIT License\n\nCopyright (c) 2026 TidyAssistant Contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "library",
+      "project_kind": "unknown",
       "build_recommended": false,
       "classification_source": "heuristic",
-      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
       "project_status": "installable",
       "category": "security",
       "topics": [
