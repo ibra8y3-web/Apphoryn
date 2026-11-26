@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T15:47:44.164297+00:00",
+  "generated_at": "2026-11-26T15:48:02.625276+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -29962,6 +29962,56 @@
       "platforms": [
         "windows"
       ]
+    },
+    {
+      "id": "f4ren-figscribe",
+      "slug": "f4ren-figscribe",
+      "artifacts": [],
+      "name": "figscribe",
+      "summary": "Desktop GUI for publication-ready scientific plots that exports clean, standalone Matplotlib code instead of a proprietary project file. Pixel-identical preview and export, curve fitting, optional AI assistant. An open-source alternative to",
+      "description": "Desktop GUI for publication-ready scientific plots that exports clean, standalone Matplotlib code instead of a proprietary project file. Pixel-identical preview and export, curve fitting, optional AI assistant. An open-source alternative to Origin.",
+      "translations": {
+        "en": {
+          "summary": "Desktop GUI for publication-ready scientific plots that exports clean, standalone Matplotlib code instead of a proprietary project file. Pixel-identical preview and export, curve fitting, optional AI assistant. An open-source alternative to",
+          "description": "Desktop GUI for publication-ready scientific plots that exports clean, standalone Matplotlib code instead of a proprietary project file. Pixel-identical preview and export, curve fitting, optional AI assistant. An open-source alternative to Origin."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/74371331?v=4",
+      "repository_url": "https://github.com/f4ren/figscribe",
+      "github_repo_id": "1415582516",
+      "source_updated_at": "2026-11-09T13:55:12Z",
+      "homepage_url": "https://pypi.org/project/figscribe/",
+      "owner": "f4ren",
+      "default_branch": "develop",
+      "source_commit_sha": "f45ac5b96ba0cd1c4ee0a2ea8149255edd2e2567",
+      "license_text": "MIT License\n\nCopyright (c) 2026 f4ren\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "curve-fitting",
+        "data-visualization",
+        "desktop-app",
+        "matplotlib",
+        "mcp-server",
+        "origin-alternative",
+        "plotting",
+        "pyside6",
+        "python",
+        "scientific-visualization"
+      ],
+      "latest_version": "v0.3.0",
+      "release_url": "https://github.com/f4ren/figscribe/releases/tag/v0.3.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "mrkups-file-tile",
