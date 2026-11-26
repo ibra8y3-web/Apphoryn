@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:19:09.278161+00:00",
+  "generated_at": "2026-11-26T04:19:29.848195+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -5371,6 +5371,91 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "reyansh-varshney-armcheck",
+      "slug": "reyansh-varshney-armcheck",
+      "name": "ArmCheck",
+      "summary": "A native Windows 11 on ARM utility for checking app emulation and executable architecture.",
+      "description": "A native Windows 11 on ARM utility for checking app emulation and executable architecture.",
+      "translations": {
+        "en": {
+          "summary": "A native Windows 11 on ARM utility for checking app emulation and executable architecture.",
+          "description": "A native Windows 11 on ARM utility for checking app emulation and executable architecture."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Reyansh-Varshney/ArmCheck/main/site/assets/icon.png",
+      "repository_url": "https://github.com/Reyansh-Varshney/ArmCheck",
+      "github_repo_id": "1471589873",
+      "source_updated_at": "2026-11-25T16:22:27Z",
+      "homepage_url": "https://armcheck.vercel.app",
+      "owner": "Reyansh-Varshney",
+      "default_branch": "main",
+      "source_commit_sha": "8c03097953dd07cba742c4f07183ca2a68020bac",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Reyansh Varshney\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "system",
+      "topics": [
+        "arm64",
+        "desktop-app",
+        "rust",
+        "tauri",
+        "windows-11",
+        "windows-on-arm"
+      ],
+      "latest_version": "v0.1.0",
+      "release_url": "https://github.com/Reyansh-Varshney/ArmCheck/releases/tag/v0.1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-reyansh-varshney-armcheck-v0.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-reyansh-varshney-armcheck-v0.1.0/THIRD-PARTY-NOTICE-reyansh-varshney-armcheck.txt",
+      "artifacts": [
+        {
+          "id": "c5413f6cfdbcae9bf31a95cac4df45dafbf0b05967d88384dc137f845f0e0d36",
+          "filename": "armcheck.exe",
+          "original_filename": "armcheck.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.1.0",
+          "size_bytes": 8519680,
+          "sha256": "c5413f6cfdbcae9bf31a95cac4df45dafbf0b05967d88384dc137f845f0e0d36",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-reyansh-varshney-armcheck-v0.1.0/armcheck.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-reyansh-varshney-armcheck-v0.1.0"
+        },
+        {
+          "id": "122ff33076a8f9e17e1dd86844adfc18787c71753eacbebb6528b867407b5b46",
+          "filename": "ArmCheck_0.1.0_arm64-setup.exe",
+          "original_filename": "ArmCheck_0.1.0_arm64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "arm64",
+          "version": "v0.1.0",
+          "size_bytes": 2102488,
+          "sha256": "122ff33076a8f9e17e1dd86844adfc18787c71753eacbebb6528b867407b5b46",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-reyansh-varshney-armcheck-v0.1.0/ArmCheck_0.1.0_arm64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-reyansh-varshney-armcheck-v0.1.0"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
