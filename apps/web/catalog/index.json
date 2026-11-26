@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T15:25:33.069868+00:00",
+  "generated_at": "2026-11-26T15:26:05.639973+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -67744,14 +67744,14 @@
       "homepage_url": "https://oxide.cavallinilorenzo.com",
       "owner": "getoxide",
       "default_branch": "main",
-      "source_commit_sha": "be0ddea5d83eddc859029009dc423218d37d8c2a",
+      "source_commit_sha": "4d8e0422d808b8c051ed809d30576177d98d4775",
       "license_text": "MIT License\n\nCopyright (c) 2026 Lorenzo Cavallini\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "developer_tool",
+      "project_kind": "application",
       "build_recommended": true,
       "classification_source": "heuristic",
-      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "classification_reason": "Standalone application indicated by repository evidence.",
       "category": "developer",
       "topics": [
         "agentic-coding",
