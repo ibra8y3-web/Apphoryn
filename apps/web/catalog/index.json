@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T12:52:31.055994+00:00",
+  "generated_at": "2026-11-26T12:52:48.932603+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -49363,14 +49363,14 @@
       "homepage_url": null,
       "owner": "jarx-dev",
       "default_branch": "main",
-      "source_commit_sha": "2b54f2c82be5596d152916b32a3d9cd0b64bc397",
+      "source_commit_sha": "d83ca83d2557ac001810a7cfce313e66d3c526be",
       "license_text": "MIT License\n\nCopyright (c) 2026 Jarosław Hartwich\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "unknown",
-      "build_recommended": false,
+      "project_kind": "application",
+      "build_recommended": true,
       "classification_source": "heuristic",
-      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "classification_reason": "Standalone application indicated by repository evidence.",
       "project_status": "installable",
       "category": "productivity",
       "topics": [
