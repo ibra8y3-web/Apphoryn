@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T14:04:51.554447+00:00",
+  "generated_at": "2026-11-26T14:05:26.020412+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -9005,12 +9005,12 @@
       "id": "eminsk-avito-sdk",
       "slug": "eminsk-avito-sdk",
       "name": "avito-sdk",
-      "summary": "High-performance Pure HTTP Avito scraping SDK & Modern Desktop GUI (Windows .exe) with real-time deal sniping, universal proxy support, price tracking, Telegram bots, and Native MCP Server",
-      "description": "High-performance Pure HTTP Avito scraping SDK & Modern Desktop GUI (Windows .exe) with real-time deal sniping, universal proxy support, price tracking, Telegram bots, and Native MCP Server",
+      "summary": "Высокопроизводительный парсер Авито и Python SDK: чистый HTTP + Chrome TLS, Desktop GUI (Windows .exe), трекинг цен, сбор характеристик, Telegram-бот, CLI и MCP-сервер",
+      "description": "Высокопроизводительный парсер Авито и Python SDK: чистый HTTP + Chrome TLS, Desktop GUI (Windows .exe), трекинг цен, сбор характеристик, Telegram-бот, CLI и MCP-сервер",
       "translations": {
         "en": {
-          "summary": "High-performance Pure HTTP Avito scraping SDK & Modern Desktop GUI (Windows .exe) with real-time deal sniping, universal proxy support, price tracking, Telegram bots, and Native MCP Server",
-          "description": "High-performance Pure HTTP Avito scraping SDK & Modern Desktop GUI (Windows .exe) with real-time deal sniping, universal proxy support, price tracking, Telegram bots, and Native MCP Server"
+          "summary": "Высокопроизводительный парсер Авито и Python SDK: чистый HTTP + Chrome TLS, Desktop GUI (Windows .exe), трекинг цен, сбор характеристик, Telegram-бот, CLI и MCP-сервер",
+          "description": "Высокопроизводительный парсер Авито и Python SDK: чистый HTTP + Chrome TLS, Desktop GUI (Windows .exe), трекинг цен, сбор характеристик, Telegram-бот, CLI и MCP-сервер"
         }
       },
       "description_translations": {},
@@ -9020,11 +9020,11 @@
       "icon_url": "https://raw.githubusercontent.com/eminsk/avito-sdk/main/assets/icon.png",
       "repository_url": "https://github.com/eminsk/avito-sdk",
       "github_repo_id": "1406367954",
-      "source_updated_at": "2026-11-25T19:05:38Z",
+      "source_updated_at": "2026-11-26T10:16:06Z",
       "homepage_url": "https://pypi.org/project/avito-sdk/",
       "owner": "eminsk",
       "default_branch": "main",
-      "source_commit_sha": "c89980a1ed4915f3125a52181ea549cca9584095",
+      "source_commit_sha": "35b826c0fc5d54dbad4a1ec2fd92af98b31f78e4",
       "license_text": "MIT License\n\nCopyright (c) 2026 eminsk (M_N_Nik@yahoo.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -9056,10 +9056,10 @@
         "telegram-bot",
         "windows-exe"
       ],
-      "latest_version": "v0.4.5",
-      "release_url": "https://github.com/eminsk/avito-sdk/releases/tag/v0.4.5",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eminsk-avito-sdk-v0.4.5",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eminsk-avito-sdk-v0.4.5/THIRD-PARTY-NOTICE-eminsk-avito-sdk.txt",
+      "latest_version": "v0.4.6",
+      "release_url": "https://github.com/eminsk/avito-sdk/releases/tag/v0.4.6",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eminsk-avito-sdk-v0.4.6",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eminsk-avito-sdk-v0.4.6/THIRD-PARTY-NOTICE-eminsk-avito-sdk.txt",
       "artifacts": [
         {
           "id": "0ed955ed4c8b4aca70f471d5fd3720b88022d4b09ecfe2a48314ccdf396d88ca",
@@ -9077,6 +9077,23 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eminsk-avito-sdk-v0.4.5/python3-avito-sdk_0.4.4-1_all.deb",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eminsk-avito-sdk-v0.4.5"
+        },
+        {
+          "id": "0618aa4f7d89cf22ad6ef4905d39a8e49611affb00d89940f23ec8bc2983bdd3",
+          "filename": "python3-avito-sdk_0.4.6-1_all.deb",
+          "original_filename": "python3-avito-sdk_0.4.6-1_all.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": null,
+          "version": "v0.4.6",
+          "size_bytes": 448976,
+          "sha256": "0618aa4f7d89cf22ad6ef4905d39a8e49611affb00d89940f23ec8bc2983bdd3",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eminsk-avito-sdk-v0.4.6/python3-avito-sdk_0.4.6-1_all.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eminsk-avito-sdk-v0.4.6"
         }
       ],
       "platforms": [
