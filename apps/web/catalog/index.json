@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:58:24.638027+00:00",
+  "generated_at": "2026-11-26T03:58:49.585110+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -49001,6 +49001,95 @@
       "platforms": [
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "mmmatveyz-openisland",
+      "slug": "mmmatveyz-openisland",
+      "name": "OpenIsland",
+      "summary": "Нативный Dynamic Island для Windows 11: плеер со спектром, таймер, индикаторы системы и локальный AI-хаб OpenCode. C# WPF / .NET 8.",
+      "description": "Нативный Dynamic Island для Windows 11: плеер со спектром, таймер, индикаторы системы и локальный AI-хаб OpenCode. C# WPF / .NET 8.",
+      "translations": {
+        "en": {
+          "summary": "Нативный Dynamic Island для Windows 11: плеер со спектром, таймер, индикаторы системы и локальный AI-хаб OpenCode. C# WPF / .NET 8.",
+          "description": "Нативный Dynamic Island для Windows 11: плеер со спектром, таймер, индикаторы системы и локальный AI-хаб OpenCode. C# WPF / .NET 8."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/219352595?v=4",
+      "repository_url": "https://github.com/mmmatveyz/OpenIsland",
+      "github_repo_id": "1459273754",
+      "source_updated_at": "2026-11-15T23:01:46Z",
+      "homepage_url": "https://github.com/mmmatveyz/OpenIsland/releases",
+      "owner": "mmmatveyz",
+      "default_branch": "master",
+      "source_commit_sha": "91d1241701c506e9a0554397aa34e3ad2681b33a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 OpenIsland\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "ai",
+        "csharp",
+        "desktop-app",
+        "dotnet",
+        "dynamic-island",
+        "opencode",
+        "overlay",
+        "windows",
+        "windows-11",
+        "wpf"
+      ],
+      "latest_version": "v1.3.6",
+      "release_url": "https://github.com/mmmatveyz/OpenIsland/releases/tag/v1.3.6",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mmmatveyz-openisland-v1.3.6",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mmmatveyz-openisland-v1.3.6/THIRD-PARTY-NOTICE-mmmatveyz-openisland.txt",
+      "artifacts": [
+        {
+          "id": "2184cfe0f71e4c1fbc5b368b52f9824e1079894427909382a7a9bf56b2fbec11",
+          "filename": "OpenIsland.exe",
+          "original_filename": "OpenIsland.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.3.6",
+          "size_bytes": 76791186,
+          "sha256": "2184cfe0f71e4c1fbc5b368b52f9824e1079894427909382a7a9bf56b2fbec11",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mmmatveyz-openisland-v1.3.6/OpenIsland.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mmmatveyz-openisland-v1.3.6"
+        },
+        {
+          "id": "fb6f098150b0fe6951d82ee7e1c5846221677ec08d3bd28464bfe678bd6d43ce",
+          "filename": "OpenIslandSetup-1.3.6.exe",
+          "original_filename": "OpenIslandSetup-1.3.6.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.3.6",
+          "size_bytes": 71484087,
+          "sha256": "fb6f098150b0fe6951d82ee7e1c5846221677ec08d3bd28464bfe678bd6d43ce",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mmmatveyz-openisland-v1.3.6/OpenIslandSetup-1.3.6.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mmmatveyz-openisland-v1.3.6"
+        }
+      ],
+      "platforms": [
         "windows"
       ]
     },
