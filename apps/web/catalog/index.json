@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T02:00:00.983456+00:00",
+  "generated_at": "2026-11-26T02:01:03.016765+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -19805,6 +19805,103 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "flulwh-folio",
+      "slug": "flulwh-folio",
+      "name": "folio",
+      "summary": "Folio is a minimalist immersive ebook reader with Electron/React desktop and Kotlin/Compose Android clients, supporting local books, LAN progress sync, and reading marks.",
+      "description": "Folio is a local-first ebook reader for Windows desktop and Android. The desktop client is built with Electron and React; the Android client is native Kotlin with Jetpack Compose. It imports TXT, Markdown, EPUB, PDF, and CBZ/ZIP comics, and provides an immersive reader with virtual scrolling, chapter detection, table of contents, bookmarks, highlights, notes, full-book search, adjustable typography, custom fonts, themes, and auto-scroll. Desktop and Android can synchronize reading progress and marks over a local network; a browser-based LAN panel also allows reading from phones or tablets. Optional Legado-compatible book sources enable cloud-style chapter fetching. The repository includes build instructions for Windows artifacts with npm run build and Android debug APK with ./gradlew assembleDebug. License: MIT.",
+      "translations": {
+        "en": "Folio is a minimalist immersive ebook reader with Electron/React desktop and Kotlin/Compose Android clients, supporting local books, LAN progress sync, and reading marks.",
+        "ar": "Folio قارئ كتب إلكترونية بواجهة بسيطة وتجربة قراءة مغمورة، مع عميلين Electron/React للحاسوب وKotlin/Compose لأندرويد، ومزامنة محلية للتقدم والعلامات."
+      },
+      "description_translations": {
+        "en": "Folio is a local-first ebook reader for Windows desktop and Android. The desktop client is built with Electron and React; the Android client is native Kotlin with Jetpack Compose. It imports TXT, Markdown, EPUB, PDF, and CBZ/ZIP comics, and provides an immersive reader with virtual scrolling, chapter detection, table of contents, bookmarks, highlights, notes, full-book search, adjustable typography, custom fonts, themes, and auto-scroll. Desktop and Android can synchronize reading progress and marks over a local network; a browser-based LAN panel also allows reading from phones or tablets. Optional Legado-compatible book sources enable cloud-style chapter fetching. The repository includes build instructions for Windows artifacts with npm run build and Android debug APK with ./gradlew assembleDebug. License: MIT.",
+        "ar": "Folio قارئ كتب إلكترونية محلي أولاً لويندوز الحاسوب وأندرويد. العميل المكتبي مبني باستخدام Electron وReact، وعميل أندرويد أصلي باستخدام Kotlin وJetpack Compose. يستورد ملفات TXT وMarkdown وEPUB وPDF وملفات CBZ/ZIP المصورة، ويوفر قارئاً مغموراً بتمرير افتراضي، واكتشاف للفصول، وفهرس، وعلامات مرجعية، وتسطير، وملاحظات، وبحث في كامل الكتاب، وتنسيق طباعي قابل للتعديل، وخطوط مخصصة، وسمات، وتمرير تلقائي. يمكن لعميل سطح المكتب وأندرويد مزامنة تقدم القراءة والعلامات عبر شبكة محلية؛ كما تتيح لوحة LAN في المتصفح القراءة من الهواتف أو الأجهزة اللوحية. تتيح مصادر الكتب المتوافقة مع Legado جلب الفصول بنمط سحابي. يتضمن المستودع تعليمات البناء لمخرجات Windows عبر npm run build، ولملف APK تصحيح Android عبر ./gradlew assembleDebug. الترخيص: MIT."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://raw.githubusercontent.com/flulwh/folio/main/build/icon.png",
+      "repository_url": "https://github.com/flulwh/folio",
+      "github_repo_id": "1456178504",
+      "source_updated_at": "2026-11-15T18:25:19Z",
+      "homepage_url": null,
+      "owner": "flulwh",
+      "default_branch": "main",
+      "source_commit_sha": "f172cb9b6a9265066f7e46499f0505b4f752a76d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Folio contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "The repository describes standalone end-user ebook reader applications for Windows desktop and Android, with explicit supported build paths: npm run build for Windows artifacts and ./gradlew assembleDebug for an Android debug APK.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "desktop-app",
+        "ebook",
+        "ebook-reader",
+        "electron",
+        "immersive",
+        "jetpack-compose",
+        "kotlin",
+        "legado",
+        "local-first",
+        "markdown",
+        "offline-reader",
+        "react",
+        "txt-reader",
+        "vite",
+        "windows"
+      ],
+      "latest_version": "v2.18.0",
+      "release_url": "https://github.com/flulwh/folio/releases/tag/v2.18.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-flulwh-folio-v2.18.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-flulwh-folio-v2.18.0/THIRD-PARTY-NOTICE-flulwh-folio.txt",
+      "artifacts": [
+        {
+          "id": "f54a6130dc4c81592ce66e5da476253d0411c05a08feec2196283c62d4946f68",
+          "filename": "Folio-Portable-2.18.0.exe",
+          "original_filename": "Folio-Portable-2.18.0.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v2.18.0",
+          "size_bytes": 130174387,
+          "sha256": "f54a6130dc4c81592ce66e5da476253d0411c05a08feec2196283c62d4946f68",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-flulwh-folio-v2.18.0/Folio-Portable-2.18.0.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-flulwh-folio-v2.18.0"
+        },
+        {
+          "id": "d344ebc0bc6340abec4b27ec74e1bb9055c7dd53425bfbdb8e3ea62dc320b73c",
+          "filename": "Folio-Setup-2.18.0.exe",
+          "original_filename": "Folio-Setup-2.18.0.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v2.18.0",
+          "size_bytes": 130390022,
+          "sha256": "d344ebc0bc6340abec4b27ec74e1bb9055c7dd53425bfbdb8e3ea62dc320b73c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-flulwh-folio-v2.18.0/Folio-Setup-2.18.0.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-flulwh-folio-v2.18.0"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
