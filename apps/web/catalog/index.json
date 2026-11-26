@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T07:05:44.476982+00:00",
+  "generated_at": "2026-11-26T07:06:03.219085+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -30852,6 +30852,79 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "ashcroft08-gentle-desk",
+      "slug": "ashcroft08-gentle-desk",
+      "name": "gentle-desk",
+      "summary": "Gentle Shell Desktop: a desktop app for gentle-shell (Tauri 2 + Svelte), your pi-based coding agent. Windows installer in Releases.",
+      "description": "Gentle Shell Desktop: a desktop app for gentle-shell (Tauri 2 + Svelte), your pi-based coding agent. Windows installer in Releases.",
+      "translations": {
+        "en": {
+          "summary": "Gentle Shell Desktop: a desktop app for gentle-shell (Tauri 2 + Svelte), your pi-based coding agent. Windows installer in Releases.",
+          "description": "Gentle Shell Desktop: a desktop app for gentle-shell (Tauri 2 + Svelte), your pi-based coding agent. Windows installer in Releases."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ashcroft08/gentle-desk/main/apps/desktop/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/ashcroft08/gentle-desk",
+      "github_repo_id": "1449071946",
+      "source_updated_at": "2026-11-25T02:10:22Z",
+      "homepage_url": "https://github.com/ashcroft08/gentle-desk/releases/latest",
+      "owner": "ashcroft08",
+      "default_branch": "main",
+      "source_commit_sha": "573eaabc4114988cfa44fb8032cf7df6afec30c7",
+      "license_text": "MIT License\n\nCopyright (c) 2025 Mario Zechner\nCopyright (c) 2026 Gentleman Programming\nCopyright (c) 2026 ashcroft08\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "ai-agent",
+        "coding-agent",
+        "desktop-app",
+        "gentle-hub-project",
+        "gentle-shell",
+        "pi",
+        "rust",
+        "svelte",
+        "tauri",
+        "typescript",
+        "windows"
+      ],
+      "latest_version": "v0.9.0",
+      "release_url": "https://github.com/ashcroft08/gentle-desk/releases/tag/v0.9.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ashcroft08-gentle-desk-v0.9.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ashcroft08-gentle-desk-v0.9.0/THIRD-PARTY-NOTICE-ashcroft08-gentle-desk.txt",
+      "artifacts": [
+        {
+          "id": "3a2db17676b2c54da240755850a43d9bdc1fe4f35ed7c543d8bc343c18ccb1b1",
+          "filename": "Gentle.Shell.Desktop_0.9.0_x64-setup.exe",
+          "original_filename": "Gentle.Shell.Desktop_0.9.0_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.9.0",
+          "size_bytes": 4255229,
+          "sha256": "3a2db17676b2c54da240755850a43d9bdc1fe4f35ed7c543d8bc343c18ccb1b1",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ashcroft08-gentle-desk-v0.9.0/Gentle.Shell.Desktop_0.9.0_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ashcroft08-gentle-desk-v0.9.0"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
