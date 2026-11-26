@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T02:51:17.138515+00:00",
+  "generated_at": "2026-11-26T02:51:56.864353+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -11869,6 +11869,113 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "bellocccyt-cleanmusic",
+      "slug": "bellocccyt-cleanmusic",
+      "name": "cleanmusic",
+      "summary": "Music Launcher für Windows & Linux: Streaming-Dienste im offiziellen Web-Player, lokale Musik, Live-Radio, Favoriten & Playlists, Cutter-Modus mit frei lizenzierter Musik & Soundeffekten, Vollbild-Player mit Visualizer.",
+      "description": "Music Launcher für Windows & Linux: Streaming-Dienste im offiziellen Web-Player, lokale Musik, Live-Radio, Favoriten & Playlists, Cutter-Modus mit frei lizenzierter Musik & Soundeffekten, Vollbild-Player mit Visualizer.",
+      "translations": {
+        "en": {
+          "summary": "Music Launcher für Windows & Linux: Streaming-Dienste im offiziellen Web-Player, lokale Musik, Live-Radio, Favoriten & Playlists, Cutter-Modus mit frei lizenzierter Musik & Soundeffekten, Vollbild-Player mit Visualizer.",
+          "description": "Music Launcher für Windows & Linux: Streaming-Dienste im offiziellen Web-Player, lokale Musik, Live-Radio, Favoriten & Playlists, Cutter-Modus mit frei lizenzierter Musik & Soundeffekten, Vollbild-Player mit Visualizer."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/BellocccYT/cleanmusic/master/renderer/assets/icon.png",
+      "repository_url": "https://github.com/BellocccYT/cleanmusic",
+      "github_repo_id": "1465945912",
+      "source_updated_at": "2026-11-20T23:07:15Z",
+      "homepage_url": null,
+      "owner": "BellocccYT",
+      "default_branch": "master",
+      "source_commit_sha": "af7c7d27a7993113f50ec204cc43bf4b4a76196a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 CleanMusic contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "audio-visualizer",
+        "creative-commons",
+        "desktop-app",
+        "discord-rich-presence",
+        "electron",
+        "internet-radio",
+        "music-launcher",
+        "music-player",
+        "royalty-free-music",
+        "sound-effects"
+      ],
+      "latest_version": "v2.1.0",
+      "release_url": "https://github.com/BellocccYT/cleanmusic/releases/tag/v2.1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bellocccyt-cleanmusic-v2.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bellocccyt-cleanmusic-v2.1.0/THIRD-PARTY-NOTICE-bellocccyt-cleanmusic.txt",
+      "artifacts": [
+        {
+          "id": "a5766c477badea49d360fef16497681b63e98375671c7f03ddbf54c6da419df7",
+          "filename": "CleanMusic-2.1.0-portable.exe",
+          "original_filename": "CleanMusic-2.1.0-portable.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v2.1.0",
+          "size_bytes": 81735182,
+          "sha256": "a5766c477badea49d360fef16497681b63e98375671c7f03ddbf54c6da419df7",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bellocccyt-cleanmusic-v2.1.0/CleanMusic-2.1.0-portable.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bellocccyt-cleanmusic-v2.1.0"
+        },
+        {
+          "id": "013687dbb76b445b2163bc39e00fd3b373a508ae527a313f60eff34c48d8f4aa",
+          "filename": "CleanMusic-2.1.0-setup.exe",
+          "original_filename": "CleanMusic-2.1.0-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v2.1.0",
+          "size_bytes": 89148843,
+          "sha256": "013687dbb76b445b2163bc39e00fd3b373a508ae527a313f60eff34c48d8f4aa",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bellocccyt-cleanmusic-v2.1.0/CleanMusic-2.1.0-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bellocccyt-cleanmusic-v2.1.0"
+        },
+        {
+          "id": "e5f9d266666a872f6d46b60ea49074eb0ba8b9d362ae128f31056007c5cec3c9",
+          "filename": "CleanMusic-2.1.0.AppImage",
+          "original_filename": "CleanMusic-2.1.0.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": null,
+          "version": "v2.1.0",
+          "size_bytes": 110184372,
+          "sha256": "e5f9d266666a872f6d46b60ea49074eb0ba8b9d362ae128f31056007c5cec3c9",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bellocccyt-cleanmusic-v2.1.0/CleanMusic-2.1.0.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bellocccyt-cleanmusic-v2.1.0"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "windows"
       ]
     },
     {
