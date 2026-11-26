@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T02:29:22.248411+00:00",
+  "generated_at": "2026-11-26T02:29:49.251766+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -34071,6 +34071,105 @@
           "signer_certificate_sha256": "641797138357ebfb02fd637cf2409ddb7c9825785205ce66dffeef80a2bb763a",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-1window2-medbuddy-v1.0.1/MedBuddy-v1.0.1-arm64.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-1window2-medbuddy-v1.0.1"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "aiixibear-media-control",
+      "slug": "aiixibear-media-control",
+      "name": "media_control",
+      "summary": "一個Android App。可用WebUI控制手機媒體，也提供API",
+      "description": "一個Android App。可用WebUI控制手機媒體，也提供API",
+      "translations": {
+        "en": {
+          "summary": "一個Android App。可用WebUI控制手機媒體，也提供API",
+          "description": "一個Android App。可用WebUI控制手機媒體，也提供API"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/AiixiBear/media_control/master/assets/images/icon.png",
+      "repository_url": "https://github.com/AiixiBear/media_control",
+      "github_repo_id": "1294875222",
+      "source_updated_at": "2026-11-10T11:37:58Z",
+      "homepage_url": null,
+      "owner": "AiixiBear",
+      "default_branch": "master",
+      "source_commit_sha": "d76353f556380f7cf1862f5eb9f04f600d669c47",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Aiixi Bear\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "android-app",
+        "flutter",
+        "media"
+      ],
+      "latest_version": "v1.11.0",
+      "release_url": "https://github.com/AiixiBear/media_control/releases/tag/v1.11.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aiixibear-media-control-v1.11.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aiixibear-media-control-v1.11.0/THIRD-PARTY-NOTICE-aiixibear-media-control.txt",
+      "artifacts": [
+        {
+          "id": "731f663d232d35241cf1bdff30190b7115d81f0f8cb203e4e4f279f97017abf5",
+          "filename": "app-arm64-v8a-release.apk",
+          "original_filename": "app-arm64-v8a-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v1.11.0",
+          "size_bytes": 21992880,
+          "sha256": "731f663d232d35241cf1bdff30190b7115d81f0f8cb203e4e4f279f97017abf5",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "97432bf4ca4182479c111966ad29292b3ce2af7c663013aa51316ab87854df9f",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aiixibear-media-control-v1.11.0/app-arm64-v8a-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aiixibear-media-control-v1.11.0"
+        },
+        {
+          "id": "8f364d5edfb2db90680570fdf545a9733dbcdd22f43c2a00b828367734dca723",
+          "filename": "app-armeabi-v7a-release.apk",
+          "original_filename": "app-armeabi-v7a-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.11.0",
+          "size_bytes": 19580072,
+          "sha256": "8f364d5edfb2db90680570fdf545a9733dbcdd22f43c2a00b828367734dca723",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "97432bf4ca4182479c111966ad29292b3ce2af7c663013aa51316ab87854df9f",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aiixibear-media-control-v1.11.0/app-armeabi-v7a-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aiixibear-media-control-v1.11.0"
+        },
+        {
+          "id": "f2f29f7b5b106324928bb80dad0b155695127a540d5a42410e57eaf48e85a714",
+          "filename": "app-x86_64-release.apk",
+          "original_filename": "app-x86_64-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "x86_64",
+          "version": "v1.11.0",
+          "size_bytes": 23228292,
+          "sha256": "f2f29f7b5b106324928bb80dad0b155695127a540d5a42410e57eaf48e85a714",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "97432bf4ca4182479c111966ad29292b3ce2af7c663013aa51316ab87854df9f",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aiixibear-media-control-v1.11.0/app-x86_64-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aiixibear-media-control-v1.11.0"
         }
       ],
       "platforms": [
