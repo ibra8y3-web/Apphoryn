@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T02:23:03.530159+00:00",
+  "generated_at": "2026-11-26T02:23:19.374800+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -34891,6 +34891,79 @@
           "signer_certificate_sha256": "33ae143cfc9936fa5a6f8663a1b94e5e99388c4d94c3e36b0471e695568a3e8e",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ibt-si-mibt-v1.2.0-4/mibt-1.2.0-4-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ibt-si-mibt-v1.2.0-4"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "robin19666-midipult-android",
+      "slug": "robin19666-midipult-android",
+      "name": "midipult-android",
+      "summary": "Android-оболочка MidiPult для Яндекс Станции Миди: поиск станций по UDP, WebView-панель, переименование и обновления APK.",
+      "description": "Android-оболочка MidiPult для Яндекс Станции Миди: поиск станций по UDP, WebView-панель, переименование и обновления APK.",
+      "translations": {
+        "en": {
+          "summary": "Android-оболочка MidiPult для Яндекс Станции Миди: поиск станций по UDP, WebView-панель, переименование и обновления APK.",
+          "description": "Android-оболочка MidiPult для Яндекс Станции Миди: поиск станций по UDP, WebView-панель, переименование и обновления APK."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/RoBiN19666/midipult-android/main/app/src/main/res/drawable/ic_launcher.png",
+      "repository_url": "https://github.com/RoBiN19666/midipult-android",
+      "github_repo_id": "1445525946",
+      "source_updated_at": "2026-11-19T15:30:12Z",
+      "homepage_url": "https://github.com/RoBiN19666/midipult",
+      "owner": "RoBiN19666",
+      "default_branch": "main",
+      "source_commit_sha": "102f4be94e3a1efd07b5dada108f563fbedc75f8",
+      "license_text": "MIT License\n\nCopyright (c) 2026 MidiPult contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "network",
+      "topics": [
+        "android",
+        "android-app",
+        "local-network",
+        "midipult",
+        "self-hosted",
+        "smart-home",
+        "udp-discovery",
+        "webview",
+        "yandex-alice",
+        "yandex-station",
+        "yandex-station-midi"
+      ],
+      "latest_version": "android-v1.1.4",
+      "release_url": "https://github.com/RoBiN19666/midipult-android/releases/tag/android-v1.1.4",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-robin19666-midipult-android-android-v1.1.4",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-robin19666-midipult-android-android-v1.1.4/THIRD-PARTY-NOTICE-robin19666-midipult-android.txt",
+      "artifacts": [
+        {
+          "id": "2e1b9a152651ae30a49de96d2a653036a4d99dd1b1d79955c8582703930913dd",
+          "filename": "midipult-android-1.1.4.apk",
+          "original_filename": "midipult-android-1.1.4.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "android-v1.1.4",
+          "size_bytes": 142942,
+          "sha256": "2e1b9a152651ae30a49de96d2a653036a4d99dd1b1d79955c8582703930913dd",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "82cc7cea30f163d0b82fc431b771557bf38043b9f6bc8ca539f45d80eec548a2",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-robin19666-midipult-android-android-v1.1.4/midipult-android-1.1.4.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-robin19666-midipult-android-android-v1.1.4"
         }
       ],
       "platforms": [
