@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:52:08.619493+00:00",
+  "generated_at": "2026-11-26T06:52:31.902729+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -83617,6 +83617,80 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "01uncledog01-tokentracker-plus",
+      "slug": "01uncledog01-tokentracker-plus",
+      "name": "TokenTracker-Plus",
+      "summary": "Windows/Mac 本地优先的 AI Token 用量追踪桌面端工具：59 款 AI 工具一键挂账、实时 tok/s 生成速率、会话拓扑下钻、8 阶热力图、35 家限额卡、65 枚离线成就+17 大称号羁绊、87 家福利指南——100% 本地运行，无需账号与 API Key。MIT 开源。Local-first AI token usage tracker for Windows & macOS.",
+      "description": "Windows/Mac 本地优先的 AI Token 用量追踪桌面端工具：59 款 AI 工具一键挂账、实时 tok/s 生成速率、会话拓扑下钻、8 阶热力图、35 家限额卡、65 枚离线成就+17 大称号羁绊、87 家福利指南——100% 本地运行，无需账号与 API Key。MIT 开源。Local-first AI token usage tracker for Windows & macOS.",
+      "translations": {
+        "en": {
+          "summary": "Windows/Mac 本地优先的 AI Token 用量追踪桌面端工具：59 款 AI 工具一键挂账、实时 tok/s 生成速率、会话拓扑下钻、8 阶热力图、35 家限额卡、65 枚离线成就+17 大称号羁绊、87 家福利指南——100% 本地运行，无需账号与 API Key。MIT 开源。Local-first AI token usage tracker for Windows & macOS.",
+          "description": "Windows/Mac 本地优先的 AI Token 用量追踪桌面端工具：59 款 AI 工具一键挂账、实时 tok/s 生成速率、会话拓扑下钻、8 阶热力图、35 家限额卡、65 枚离线成就+17 大称号羁绊、87 家福利指南——100% 本地运行，无需账号与 API Key。MIT 开源。Local-first AI token usage tracker for Windows & macOS."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/01UNCLEDOG01/TokenTracker-Plus/main/dashboard/public/app-icon.png",
+      "repository_url": "https://github.com/01UNCLEDOG01/TokenTracker-Plus",
+      "github_repo_id": "1442117570",
+      "source_updated_at": "2026-11-25T17:26:49Z",
+      "homepage_url": null,
+      "owner": "01UNCLEDOG01",
+      "default_branch": "main",
+      "source_commit_sha": "1e9912b376b0aa15eef532549ca1a8af0a5165b8",
+      "license_text": "MIT License\n\nCopyright (c) 2026 xiufengsun\nCopyright (c) 2026 01UNCLEDOG01 (TokenTracker-plus fork)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ai-agent",
+        "ai-usage",
+        "claude-code",
+        "codex",
+        "desktop-app",
+        "developer-tools",
+        "junie",
+        "macos",
+        "token-tracker",
+        "usage-dashboard",
+        "windows",
+        "zhipu"
+      ],
+      "latest_version": "v1.46.1",
+      "release_url": "https://github.com/01UNCLEDOG01/TokenTracker-Plus/releases/tag/v1.46.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-01uncledog01-tokentracker-plus-v1.46.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-01uncledog01-tokentracker-plus-v1.46.1/THIRD-PARTY-NOTICE-01uncledog01-tokentracker-plus.txt",
+      "artifacts": [
+        {
+          "id": "3a7ad164a1a443bdae702026d5db8dfdbd5008a3b649872e5bf0b897cada9466",
+          "filename": "TokenTracker-plus-Setup-v1.46.1.exe",
+          "original_filename": "TokenTracker-plus-Setup-v1.46.1.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.46.1",
+          "size_bytes": 89437258,
+          "sha256": "3a7ad164a1a443bdae702026d5db8dfdbd5008a3b649872e5bf0b897cada9466",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-01uncledog01-tokentracker-plus-v1.46.1/TokenTracker-plus-Setup-v1.46.1.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-01uncledog01-tokentracker-plus-v1.46.1"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
