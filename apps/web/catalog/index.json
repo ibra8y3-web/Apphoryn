@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T02:13:17.439635+00:00",
+  "generated_at": "2026-11-26T02:13:58.783651+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -59464,6 +59464,87 @@
           "signer_certificate_sha256": "b31b8119bd065cdb7a51ad2ee7f71f17f1eb154e2a7c3007de644b4c14d6a85e",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-thoser666-vivid-v0.5.49-beta/app-standard-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-thoser666-vivid-v0.5.49-beta"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "username-1234567-voice-note-ai-tutor",
+      "slug": "username-1234567-voice-note-ai-tutor",
+      "name": "voice-note-ai-tutor",
+      "summary": "Android app for recording lectures, taking photo markers, and using AI to explain each photo after class with DeepSeek streaming, Markdown and LaTeX.",
+      "description": "随堂录 (voice-note-ai-tutor) is an Android 10+ Kotlin/Jetpack Compose app for students. It records lectures in the background, lets users mark moments with photos or time-only notes, and after class sends selected images and context to an OpenAI-compatible AI endpoint, defaulting to DeepSeek, for per-photo explanations, follow-up questions, merged explanations, and lecture outlines. It supports local storage of recordings and photos, Room database migrations, ExoPlayer playback, CameraX capture, offline Markdown/KaTeX rendering, backup/import/export with SHA-256 checks, and a built-in chat demo. An API key is required for AI explanations; explanations depend on a cloud model and are unavailable offline. The interface is currently Chinese. MIT licensed.",
+      "translations": {
+        "en": "Android app for recording lectures, taking photo markers, and using AI to explain each photo after class with DeepSeek streaming, Markdown and LaTeX.",
+        "ar": "تطبيق أندرويد لتسجيل المحاضرات ووضع علامات بالصور، ثم شرح كل صورة بالذكاء الاصطناعي بعد الدرس عبر DeepSeek مع Markdown وLaTeX."
+      },
+      "description_translations": {
+        "en": "随堂录 (voice-note-ai-tutor) is an Android 10+ Kotlin/Jetpack Compose app for students. It records lectures in the background, lets users mark moments with photos or time-only notes, and after class sends selected images and context to an OpenAI-compatible AI endpoint, defaulting to DeepSeek, for per-photo explanations, follow-up questions, merged explanations, and lecture outlines. It supports local storage of recordings and photos, Room database migrations, ExoPlayer playback, CameraX capture, offline Markdown/KaTeX rendering, backup/import/export with SHA-256 checks, and a built-in chat demo. An API key is required for AI explanations; explanations depend on a cloud model and are unavailable offline. The interface is currently Chinese. MIT licensed.",
+        "ar": "随堂录 (voice-note-ai-tutor) هو تطبيق أندرويد 10+ مبني بـ Kotlin وJetpack Compose للطلاب. يسجل المحاضرات في الخلفية، ويتيح وضع علامات بصور أو ملاحظات زمنية، ثم يرسل الصور المختارة والسياق إلى خدمة ذكاء اصطناعي متوافقة مع OpenAI، افتراضيًا DeepSeek، للحصول على شرح لكل صورة وأسئلة متابعة وخطوط عريضة للمحاضرة. يدعم التخزين المحلي للتسجيلات والصور، وقاعدة Room، والتشغيل عبر ExoPlayer، والتقاط الكاميرا، وعرض Markdown وKaTeX دون اتصال، والنسخ الاحتياطي والاستيراد والتصدير. يلزم مفتاح API للشرح، وتعتمد الشروح على نموذج سحابي وغير متاحة دون اتصال. الواجهة حاليًا بالصينية. الترخيص MIT."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://avatars.githubusercontent.com/u/221795699?v=4",
+      "repository_url": "https://github.com/username-1234567/voice-note-ai-tutor",
+      "github_repo_id": "1413371087",
+      "source_updated_at": "2026-11-04T09:30:46Z",
+      "homepage_url": "https://github.com/username-1234567/voice-note-ai-tutor/releases",
+      "owner": "username-1234567",
+      "default_branch": "main",
+      "source_commit_sha": "81a1c2f62e06f44dd53e6a95a5e3328df8503553",
+      "license_text": "MIT License\n\nCopyright (c) 2026 username-1234567\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Standalone Android end-user application with a release APK and documented Gradle build path.",
+      "project_status": "installable",
+      "category": "ai",
+      "topics": [
+        "ai",
+        "android",
+        "android-app",
+        "camera",
+        "deepseek",
+        "education",
+        "jetpack-compose",
+        "kotlin",
+        "latex",
+        "lecture",
+        "llm",
+        "markdown",
+        "material3",
+        "note-taking",
+        "offline-first",
+        "room",
+        "student",
+        "study-tools"
+      ],
+      "latest_version": "v1.6.0",
+      "release_url": "https://github.com/username-1234567/voice-note-ai-tutor/releases/tag/v1.6.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-username-1234567-voice-note-ai-tutor-v1.6.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-username-1234567-voice-note-ai-tutor-v1.6.0/THIRD-PARTY-NOTICE-username-1234567-voice-note-ai-tutor.txt",
+      "artifacts": [
+        {
+          "id": "dcf918ecd7bf9a3b7a15e16af6313e55599e495894beee7c4704b024fe5b3d13",
+          "filename": "record-v1.6.0.apk",
+          "original_filename": "record-v1.6.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.6.0",
+          "size_bytes": 8844731,
+          "sha256": "dcf918ecd7bf9a3b7a15e16af6313e55599e495894beee7c4704b024fe5b3d13",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "4c7486f99e99c832d8d60cb5c25b1ee660b5c2b328752db1b791ac2398aa80b9",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-username-1234567-voice-note-ai-tutor-v1.6.0/record-v1.6.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-username-1234567-voice-note-ai-tutor-v1.6.0"
         }
       ],
       "platforms": [
