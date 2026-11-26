@@ -4529,7 +4529,17 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "7eb2329d2a60d270f62eb3e07554d265b78b3fb0",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-26T02:33:27.736201+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "rae-ark-arkster",
