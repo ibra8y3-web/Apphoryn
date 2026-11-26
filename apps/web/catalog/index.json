@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T13:30:45.839408+00:00",
+  "generated_at": "2026-11-26T13:30:59.983077+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -37304,12 +37304,12 @@
       "id": "kele551-hotnews",
       "slug": "kele551-hotnews",
       "name": "hotnews",
-      "summary": "热点新闻聚合：网页形式的国内 / 国际热榜图库，单文件 exe 双击即用。中文检索：热点新闻 / 今日热榜 / 微博热搜 / 知乎热榜 / 新闻聚合 / 国际新闻 / 实时热点。Hot news aggregator (single-file exe): China & global trending lists in a web UI.",
-      "description": "热点新闻聚合：网页形式的国内 / 国际热榜图库，单文件 exe 双击即用。中文检索：热点新闻 / 今日热榜 / 微博热搜 / 知乎热榜 / 新闻聚合 / 国际新闻 / 实时热点。Hot news aggregator (single-file exe): China & global trending lists in a web UI.",
+      "summary": "热点新闻聚合：网页形式的国内 / 国际热榜图库，单文件 exe 双击即用。中文检索：热点新闻 / 今日热榜 / 微博热搜 / 知乎热榜 / 新闻聚合 / 国际新闻 / 实时热点。Hot news aggregator & trending-topics reader (single-file exe): China & global hot lists in a web UI.",
+      "description": "热点新闻聚合：网页形式的国内 / 国际热榜图库，单文件 exe 双击即用。中文检索：热点新闻 / 今日热榜 / 微博热搜 / 知乎热榜 / 新闻聚合 / 国际新闻 / 实时热点。Hot news aggregator & trending-topics reader (single-file exe): China & global hot lists in a web UI.",
       "translations": {
         "en": {
-          "summary": "热点新闻聚合：网页形式的国内 / 国际热榜图库，单文件 exe 双击即用。中文检索：热点新闻 / 今日热榜 / 微博热搜 / 知乎热榜 / 新闻聚合 / 国际新闻 / 实时热点。Hot news aggregator (single-file exe): China & global trending lists in a web UI.",
-          "description": "热点新闻聚合：网页形式的国内 / 国际热榜图库，单文件 exe 双击即用。中文检索：热点新闻 / 今日热榜 / 微博热搜 / 知乎热榜 / 新闻聚合 / 国际新闻 / 实时热点。Hot news aggregator (single-file exe): China & global trending lists in a web UI."
+          "summary": "热点新闻聚合：网页形式的国内 / 国际热榜图库，单文件 exe 双击即用。中文检索：热点新闻 / 今日热榜 / 微博热搜 / 知乎热榜 / 新闻聚合 / 国际新闻 / 实时热点。Hot news aggregator & trending-topics reader (single-file exe): China & global hot lists in a web UI.",
+          "description": "热点新闻聚合：网页形式的国内 / 国际热榜图库，单文件 exe 双击即用。中文检索：热点新闻 / 今日热榜 / 微博热搜 / 知乎热榜 / 新闻聚合 / 国际新闻 / 实时热点。Hot news aggregator & trending-topics reader (single-file exe): China & global hot lists in a web UI."
         }
       },
       "description_translations": {},
@@ -37319,11 +37319,11 @@
       "icon_url": "https://raw.githubusercontent.com/kele551/hotnews/main/docs/icon.png",
       "repository_url": "https://github.com/kele551/hotnews",
       "github_repo_id": "1406685466",
-      "source_updated_at": "2026-11-24T06:30:49Z",
+      "source_updated_at": "2026-11-26T10:22:10Z",
       "homepage_url": "https://kele551.github.io/hotnews/",
       "owner": "kele551",
       "default_branch": "main",
-      "source_commit_sha": "33b90ffad09c39ca4cf08be358d77d2f5d5431dc",
+      "source_commit_sha": "c0bd0418ab1a4f2fb9e7c81b2b279df6503589fe",
       "license_text": "MIT License\n\nCopyright (C) 2026 HaiFeng (kele551)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -37342,11 +37342,13 @@
         "hot-news",
         "news",
         "news-aggregator",
+        "news-reader",
         "open-source",
         "portable",
         "python",
         "toutiao",
         "trending",
+        "trending-topics",
         "web-app",
         "weibo",
         "windows",
