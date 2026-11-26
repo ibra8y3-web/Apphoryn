@@ -19902,6 +19902,16 @@
       ],
       "platforms": [
         "windows"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "f172cb9b6a9265066f7e46499f0505b4f752a76d",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-26T02:01:12.973860+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
       ]
     },
     {
