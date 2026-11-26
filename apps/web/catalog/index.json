@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:07:29.985689+00:00",
+  "generated_at": "2026-11-26T04:08:23.149478+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -74362,6 +74362,113 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-grapedjuice-ytm-rs-v2.0.3/ytm-rs_2.0.3_amd64.deb",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-grapedjuice-ytm-rs-v2.0.3"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "loerei-yumeshelf",
+      "slug": "loerei-yumeshelf",
+      "name": "YumeShelf",
+      "summary": "A minimalist desktop game library launcher and save editor for VN-type-of-games, rescuing you from drowning in File Explorer.",
+      "description": "A minimalist desktop game library launcher and save editor for VN-type-of-games, rescuing you from drowning in File Explorer.",
+      "translations": {
+        "en": {
+          "summary": "A minimalist desktop game library launcher and save editor for VN-type-of-games, rescuing you from drowning in File Explorer.",
+          "description": "A minimalist desktop game library launcher and save editor for VN-type-of-games, rescuing you from drowning in File Explorer."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/loerei/YumeShelf/main/assets/yumeshelf_wordmark_refined_icon.svg",
+      "repository_url": "https://github.com/loerei/YumeShelf",
+      "github_repo_id": "1220574867",
+      "source_updated_at": "2026-11-21T00:10:23Z",
+      "homepage_url": null,
+      "owner": "loerei",
+      "default_branch": "main",
+      "source_commit_sha": "9eff41f355618ec412a4945424c4fb7bb332f4ec",
+      "license_text": "MIT License\n\nCopyright (c) 2026 loerei\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "desktop-app",
+        "electron",
+        "game-launcher",
+        "game-library",
+        "linux",
+        "minimalist",
+        "save-editor",
+        "savegame-editor",
+        "windows"
+      ],
+      "latest_version": "v2.2.9",
+      "release_url": "https://github.com/loerei/YumeShelf/releases/tag/v2.2.9",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-loerei-yumeshelf-v2.2.9",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-loerei-yumeshelf-v2.2.9/THIRD-PARTY-NOTICE-loerei-yumeshelf.txt",
+      "artifacts": [
+        {
+          "id": "98feee1fa38936a9f41f71b670b230d1c85e13463942d0db616d3f547f1fddcf",
+          "filename": "YumeShelf-2.2.9.AppImage",
+          "original_filename": "YumeShelf-2.2.9.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": null,
+          "version": "v2.2.9",
+          "size_bytes": 126327596,
+          "sha256": "98feee1fa38936a9f41f71b670b230d1c85e13463942d0db616d3f547f1fddcf",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-loerei-yumeshelf-v2.2.9/YumeShelf-2.2.9.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-loerei-yumeshelf-v2.2.9"
+        },
+        {
+          "id": "cbbddee0413d4c9aa158a09dda298bca24893b4a49db0693c48d607899b3c189",
+          "filename": "YumeShelf-2.2.9.dmg",
+          "original_filename": "YumeShelf-2.2.9.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": null,
+          "version": "v2.2.9",
+          "size_bytes": 193778112,
+          "sha256": "cbbddee0413d4c9aa158a09dda298bca24893b4a49db0693c48d607899b3c189",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-loerei-yumeshelf-v2.2.9/YumeShelf-2.2.9.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-loerei-yumeshelf-v2.2.9"
+        },
+        {
+          "id": "6ec89a7f7d1275597811206af400305bbf93a0979c88e443770dea535cf3e7b5",
+          "filename": "YumeShelf-Setup-2.2.9.exe",
+          "original_filename": "YumeShelf-Setup-2.2.9.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v2.2.9",
+          "size_bytes": 163755858,
+          "sha256": "6ec89a7f7d1275597811206af400305bbf93a0979c88e443770dea535cf3e7b5",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-loerei-yumeshelf-v2.2.9/YumeShelf-Setup-2.2.9.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-loerei-yumeshelf-v2.2.9"
         }
       ],
       "platforms": [
