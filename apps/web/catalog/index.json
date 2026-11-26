@@ -86775,7 +86775,19 @@
       "latest_version": "v0.2.0",
       "release_url": "https://github.com/perplexingpasta/spyder/releases/tag/v0.2.0",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "cd4a0af80c44284db3cfbe60e464ffcd254c06bd",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-26T15:47:21.297526+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "cheburek4535-stackpilot",
