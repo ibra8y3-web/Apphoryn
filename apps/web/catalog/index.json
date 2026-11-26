@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T00:09:24.183184+00:00",
+  "generated_at": "2026-11-26T00:09:49.796051+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -53822,6 +53822,78 @@
           "signer_certificate_sha256": "4d7f05e24afd70917963ad213ab382b6b0ac913f00933d1f526f23e3b5819790",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zero6689-tailnet-byok-v0.4.7/tailnet-byok-arm64.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zero6689-tailnet-byok-v0.4.7"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "iamandelib-tally-android",
+      "slug": "iamandelib-tally-android",
+      "name": "Tally-android",
+      "summary": "Tally is an offline Android expense tracker with multi-currency accounts, loans, backups, CSV export, and no ads, tracking, or internet permission.",
+      "description": "Tally is a standalone Android personal-finance app that works like a pocket notebook. It records expenses with one tap, keeps separate accounts in their own currencies, and supports transfers, balance fixes, loans and lendings, spending summaries, history search, archiving, reminders, a home-screen widget, and Material You theming. Data stays on the phone, with JSON backup and restore plus CSV export. The README states no ads, no analytics, no network requests, and no internet permission. Tally requires Android 7.0 or newer and Android System WebView 87 or newer. It is distributed through F-Droid and GitHub releases, and the repository includes a GitHub Actions build-apk workflow.",
+      "translations": {
+        "en": "Tally is an offline Android expense tracker with multi-currency accounts, loans, backups, CSV export, and no ads, tracking, or internet permission.",
+        "ar": "Tally تطبيق أندرويد لتتبع المصروفات يعمل دون اتصال، ويدعم حسابات متعددة العملات والقروض والنسخ الاحتياطي والتصدير إلى CSV، من دون إعلانات أو تتبع أو إذن إنترنت."
+      },
+      "description_translations": {
+        "en": "Tally is a standalone Android personal-finance app that works like a pocket notebook. It records expenses with one tap, keeps separate accounts in their own currencies, and supports transfers, balance fixes, loans and lendings, spending summaries, history search, archiving, reminders, a home-screen widget, and Material You theming. Data stays on the phone, with JSON backup and restore plus CSV export. The README states no ads, no analytics, no network requests, and no internet permission. Tally requires Android 7.0 or newer and Android System WebView 87 or newer. It is distributed through F-Droid and GitHub releases, and the repository includes a GitHub Actions build-apk workflow.",
+        "ar": "Tally تطبيق مستقل لإدارة المال الشخصي على أندرويد، يعمل كدفتر جيب. يسجّل المصروفات بنقرة واحدة، ويحتفظ بحسابات منفصلة كل منها بعملتها، ويدعم التحويلات وتصحيح الأرصدة والقروض والإقراض وملخصات الإنفاق والبحث في السجل والأرشفة والتذكيرات وودجت الشاشة الرئيسية وتنسيق Material You. تبقى البيانات على الهاتف، مع نسخ احتياطي واستعادة بصيغة JSON وتصدير CSV. يذكر ملف README عدم وجود إعلانات أو تحليلات أو طلبات شبكة أو إذن إنترنت. يتطلب Tally أندرويد 7.0 أو أحدث وAndroid System WebView 87 أو أحدث. وهو متاح عبر F-Droid وإصدارات GitHub، ويتضمن المستودع سير عمل build-apk في GitHub Actions."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "particle-ai/particle-1:free",
+      "icon_url": "https://raw.githubusercontent.com/IamAndelib/Tally-android/main/fastlane/metadata/android/en-US/images/icon.png",
+      "repository_url": "https://github.com/IamAndelib/Tally-android",
+      "github_repo_id": "1381162334",
+      "source_updated_at": "2026-11-24T05:57:09Z",
+      "homepage_url": null,
+      "owner": "IamAndelib",
+      "default_branch": "main",
+      "source_commit_sha": "9fa59f674605c164cd9b4db6be2ad3bf6313df04",
+      "license_text": "MIT License\n\nCopyright (c) 2026 IamAndelib\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Standalone Android end-user expense tracker; README documents Android 7.0+ support, F-Droid and GitHub APK releases, and a GitHub Actions build-apk workflow, so a supported source build path is evidenced.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "android-app",
+        "expense-tracker",
+        "fdroid",
+        "material-you",
+        "money-manager",
+        "offline-first",
+        "open-source",
+        "personal-finance",
+        "privacy"
+      ],
+      "latest_version": "v1.5.1",
+      "release_url": "https://github.com/IamAndelib/Tally-android/releases/tag/v1.5.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-iamandelib-tally-android-v1.5.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-iamandelib-tally-android-v1.5.1/THIRD-PARTY-NOTICE-iamandelib-tally-android.txt",
+      "artifacts": [
+        {
+          "id": "78f436a26745228546e604b6eda6b57c5bf937ccd2ed20d7842247889a620b72",
+          "filename": "Tally-v1.5.1.apk",
+          "original_filename": "Tally-v1.5.1.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.5.1",
+          "size_bytes": 855121,
+          "sha256": "78f436a26745228546e604b6eda6b57c5bf937ccd2ed20d7842247889a620b72",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "9db8c89c59480ed9c673d9b96ec3f082b2836b1ced0e07a7dd418bd18d2fac88",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-iamandelib-tally-android-v1.5.1/Tally-v1.5.1.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-iamandelib-tally-android-v1.5.1"
         }
       ],
       "platforms": [
