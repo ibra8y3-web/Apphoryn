@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:26:15.165175+00:00",
+  "generated_at": "2026-11-26T04:26:46.066615+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -62897,6 +62897,136 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "solutionscay-skiff",
+      "slug": "solutionscay-skiff",
+      "name": "skiff",
+      "summary": "The multi-agent coding terminal. Run Claude Code, Codex and other agents in parallel on Linux and macOS. They send each other tasks and report back.",
+      "description": "The multi-agent coding terminal. Run Claude Code, Codex and other agents in parallel on Linux and macOS. They send each other tasks and report back.",
+      "translations": {
+        "en": {
+          "summary": "The multi-agent coding terminal. Run Claude Code, Codex and other agents in parallel on Linux and macOS. They send each other tasks and report back.",
+          "description": "The multi-agent coding terminal. Run Claude Code, Codex and other agents in parallel on Linux and macOS. They send each other tasks and report back."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/solutionscay/skiff/main/apps/desktop/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/solutionscay/skiff",
+      "github_repo_id": "1393897946",
+      "source_updated_at": "2026-11-13T04:34:35Z",
+      "homepage_url": "https://skiff.solutionscay.com",
+      "owner": "solutionscay",
+      "default_branch": "main",
+      "source_commit_sha": "1c3027cc26e52ec8e786b7bc3c4407c55886d132",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Solutions Cay LLC\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE. \n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "agentic-coding",
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "coding-agents",
+        "desktop-app",
+        "developer-tools",
+        "gemini-cli",
+        "git-worktree",
+        "linux",
+        "macos",
+        "opencode",
+        "parallel-agents",
+        "rust",
+        "tauri",
+        "terminal"
+      ],
+      "latest_version": "v2.2.32",
+      "release_url": "https://github.com/solutionscay/skiff/releases/tag/v2.2.32",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-solutionscay-skiff-v2.2.32",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-solutionscay-skiff-v2.2.32/THIRD-PARTY-NOTICE-solutionscay-skiff.txt",
+      "artifacts": [
+        {
+          "id": "cc490ef9f1205cc2341445c2044ff0c2cc2cef775e6dc85eadb441c909cbbc18",
+          "filename": "Skiff-2.2.32-1.x86_64.rpm",
+          "original_filename": "Skiff-2.2.32-1.x86_64.rpm",
+          "platform": "linux",
+          "package_type": "RPM package",
+          "architecture": "x86_64",
+          "version": "v2.2.32",
+          "size_bytes": 12131503,
+          "sha256": "cc490ef9f1205cc2341445c2044ff0c2cc2cef775e6dc85eadb441c909cbbc18",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-solutionscay-skiff-v2.2.32/Skiff-2.2.32-1.x86_64.rpm",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-solutionscay-skiff-v2.2.32"
+        },
+        {
+          "id": "4f76a8aebd1d8a20f582d1f4c5f0c21be59535883dbb3ae5adadf9adaae45516",
+          "filename": "Skiff_2.2.32_aarch64.dmg",
+          "original_filename": "Skiff_2.2.32_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v2.2.32",
+          "size_bytes": 12808867,
+          "sha256": "4f76a8aebd1d8a20f582d1f4c5f0c21be59535883dbb3ae5adadf9adaae45516",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-solutionscay-skiff-v2.2.32/Skiff_2.2.32_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-solutionscay-skiff-v2.2.32"
+        },
+        {
+          "id": "ffd5528893788641195b10e1b1856ee5d310c47866680f94df74ba02d82f9990",
+          "filename": "Skiff_2.2.32_amd64.AppImage",
+          "original_filename": "Skiff_2.2.32_amd64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v2.2.32",
+          "size_bytes": 83495416,
+          "sha256": "ffd5528893788641195b10e1b1856ee5d310c47866680f94df74ba02d82f9990",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-solutionscay-skiff-v2.2.32/Skiff_2.2.32_amd64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-solutionscay-skiff-v2.2.32"
+        },
+        {
+          "id": "1629cd774ea4930ba5d57d78955493fdacfa867eacc26e0c6631826b2f8d543f",
+          "filename": "Skiff_2.2.32_amd64.deb",
+          "original_filename": "Skiff_2.2.32_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v2.2.32",
+          "size_bytes": 12130492,
+          "sha256": "1629cd774ea4930ba5d57d78955493fdacfa867eacc26e0c6631826b2f8d543f",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-solutionscay-skiff-v2.2.32/Skiff_2.2.32_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-solutionscay-skiff-v2.2.32"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos"
       ]
     },
     {
