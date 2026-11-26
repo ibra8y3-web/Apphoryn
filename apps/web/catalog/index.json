@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:39:02.880141+00:00",
+  "generated_at": "2026-11-26T04:39:30.076600+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -43638,6 +43638,95 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "eiaao-mousetroke",
+      "slug": "eiaao-mousetroke",
+      "name": "mousetroke",
+      "summary": "Free, open-source mouse gestures for Windows: hold right-click and draw, hot corners, 50+ built-in gestures, ~19 MB RAM. Rust + Tauri.",
+      "description": "Free, open-source mouse gestures for Windows: hold right-click and draw, hot corners, 50+ built-in gestures, ~19 MB RAM. Rust + Tauri.",
+      "translations": {
+        "en": {
+          "summary": "Free, open-source mouse gestures for Windows: hold right-click and draw, hot corners, 50+ built-in gestures, ~19 MB RAM. Rust + Tauri.",
+          "description": "Free, open-source mouse gestures for Windows: hold right-click and draw, hot corners, 50+ built-in gestures, ~19 MB RAM. Rust + Tauri."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/eiaao/mousetroke/main/crates/mousetroke-settings/icons/icon.png",
+      "repository_url": "https://github.com/eiaao/mousetroke",
+      "github_repo_id": "1424078752",
+      "source_updated_at": "2026-11-25T07:04:25Z",
+      "homepage_url": "https://mousetroke.com/",
+      "owner": "eiaao",
+      "default_branch": "main",
+      "source_commit_sha": "ce457632b6bdb45d90d593fddb15f104fca18253",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Mousetroke contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "desktop-app",
+        "gestures",
+        "hot-corners",
+        "mouse-gesture",
+        "mouse-gestures",
+        "productivity",
+        "rust",
+        "tauri",
+        "windows"
+      ],
+      "latest_version": "v0.3.7",
+      "release_url": "https://github.com/eiaao/mousetroke/releases/tag/v0.3.7",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eiaao-mousetroke-v0.3.7",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eiaao-mousetroke-v0.3.7/THIRD-PARTY-NOTICE-eiaao-mousetroke.txt",
+      "artifacts": [
+        {
+          "id": "dd63b42ceab70ab49d4a97dae760b423f7984ebdccf0ba521af3a34f1d461aa1",
+          "filename": "Mousetroke.dmg",
+          "original_filename": "Mousetroke.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": null,
+          "version": "v0.3.7",
+          "size_bytes": 11017994,
+          "sha256": "dd63b42ceab70ab49d4a97dae760b423f7984ebdccf0ba521af3a34f1d461aa1",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eiaao-mousetroke-v0.3.7/Mousetroke.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eiaao-mousetroke-v0.3.7"
+        },
+        {
+          "id": "a9a5dba5aa30324d776f1411d6bb3d641bdb3b81be59403861db9e7326f067fa",
+          "filename": "mousetroke.exe",
+          "original_filename": "mousetroke.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.3.7",
+          "size_bytes": 15554560,
+          "sha256": "a9a5dba5aa30324d776f1411d6bb3d641bdb3b81be59403861db9e7326f067fa",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eiaao-mousetroke-v0.3.7/mousetroke.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eiaao-mousetroke-v0.3.7"
+        }
+      ],
+      "platforms": [
+        "macos",
+        "windows"
       ]
     },
     {
