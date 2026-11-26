@@ -45160,6 +45160,19 @@
         "android",
         "linux",
         "windows"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "8dadb6d98f9c60771bca3a9c5b5755cd177bed64",
+          "targets": [
+            "android",
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-26T02:39:48.273472+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
       ]
     },
     {
