@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T07:17:23.623466+00:00",
+  "generated_at": "2026-11-26T07:18:03.075003+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -28371,7 +28371,7 @@
         }
       },
       "description_translations": {},
-      "translation_status": "english_only",
+      "translation_status": "pending",
       "ai_provider": null,
       "ai_model": null,
       "icon_url": "https://avatars.githubusercontent.com/u/282561433?v=4",
@@ -28381,7 +28381,7 @@
       "homepage_url": "https://yim2412.github.io/fifa-match-tracker/",
       "owner": "yim2412",
       "default_branch": "master",
-      "source_commit_sha": "5497c7620283044ee3573f5a16f12d5a1bfe1200",
+      "source_commit_sha": "16dc639e604bac7a5020b2ae8c95dbf99719089c",
       "license_text": "MIT License\n\nCopyright (c) 2026 준\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -28401,10 +28401,10 @@
         "python",
         "sqlite"
       ],
-      "latest_version": "v3.14.1",
-      "release_url": "https://github.com/yim2412/fifa-match-tracker/releases/tag/v3.14.1",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yim2412-fifa-match-tracker-v3.14.1",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yim2412-fifa-match-tracker-v3.14.1/THIRD-PARTY-NOTICE-yim2412-fifa-match-tracker.txt",
+      "latest_version": "v3.15.1",
+      "release_url": "https://github.com/yim2412/fifa-match-tracker/releases/tag/v3.15.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yim2412-fifa-match-tracker-v3.15.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yim2412-fifa-match-tracker-v3.15.1/THIRD-PARTY-NOTICE-yim2412-fifa-match-tracker.txt",
       "artifacts": [
         {
           "id": "49cf00743447a35a6321019eacf4b55f624f69b5519c20b3028b9404603c93d5",
@@ -28422,6 +28422,23 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yim2412-fifa-match-tracker-v3.14.1/FifaMatchTracker-Setup-v3.14.1.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yim2412-fifa-match-tracker-v3.14.1"
+        },
+        {
+          "id": "90dd5d222978139b3939561fb96a1212bcdea3c22864698a46d5b678a741de97",
+          "filename": "FifaMatchTracker-Setup-v3.15.1.exe",
+          "original_filename": "FifaMatchTracker-Setup-v3.15.1.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v3.15.1",
+          "size_bytes": 35668737,
+          "sha256": "90dd5d222978139b3939561fb96a1212bcdea3c22864698a46d5b678a741de97",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yim2412-fifa-match-tracker-v3.15.1/FifaMatchTracker-Setup-v3.15.1.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yim2412-fifa-match-tracker-v3.15.1"
         }
       ],
       "platforms": [
