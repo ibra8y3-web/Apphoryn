@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T15:24:34.936296+00:00",
+  "generated_at": "2026-11-26T15:24:53.675998+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -57053,6 +57053,80 @@
         "android",
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "projectgloria-mutatio",
+      "slug": "projectgloria-mutatio",
+      "name": "Mutatio",
+      "summary": "Windows 11 & 10 taskbar appearance daemon in Rust with smooth transitions, tray flyout UI, CLI control, and sub-15 MB RAM.",
+      "description": "Windows 11 & 10 taskbar appearance daemon in Rust with smooth transitions, tray flyout UI, CLI control, and sub-15 MB RAM.",
+      "translations": {
+        "en": {
+          "summary": "Windows 11 & 10 taskbar appearance daemon in Rust with smooth transitions, tray flyout UI, CLI control, and sub-15 MB RAM.",
+          "description": "Windows 11 & 10 taskbar appearance daemon in Rust with smooth transitions, tray flyout UI, CLI control, and sub-15 MB RAM."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/projectGloria/Mutatio/main/docs/assets/icon.png",
+      "repository_url": "https://github.com/projectGloria/Mutatio",
+      "github_repo_id": "1449841222",
+      "source_updated_at": "2026-11-19T07:50:04Z",
+      "homepage_url": "https://github.com/projectGloria/Mutatio/releases",
+      "owner": "projectGloria",
+      "default_branch": "main",
+      "source_commit_sha": "f983166a30c2ed441d2de77af44c855629745c0d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Mutatio Contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "cli",
+        "desktop-app",
+        "fluent-design",
+        "rust",
+        "system-tray",
+        "taskbar",
+        "win32",
+        "windows",
+        "windows-10",
+        "windows-11",
+        "windows-customization",
+        "windows-rs"
+      ],
+      "latest_version": "v1.1.3",
+      "release_url": "https://github.com/projectGloria/Mutatio/releases/tag/v1.1.3",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-projectgloria-mutatio-v1.1.3",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-projectgloria-mutatio-v1.1.3/THIRD-PARTY-NOTICE-projectgloria-mutatio.txt",
+      "artifacts": [
+        {
+          "id": "b7e4fb270e972bde97f2d069a544f3c3d454b8536f96824adc0f4d0c8e4e8f4d",
+          "filename": "Mutatio_1.1.3_x64-setup.exe",
+          "original_filename": "Mutatio_1.1.3_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.1.3",
+          "size_bytes": 2755912,
+          "sha256": "b7e4fb270e972bde97f2d069a544f3c3d454b8536f96824adc0f4d0c8e4e8f4d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-projectgloria-mutatio-v1.1.3/Mutatio_1.1.3_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-projectgloria-mutatio-v1.1.3"
+        }
+      ],
+      "platforms": [
         "windows"
       ]
     },
