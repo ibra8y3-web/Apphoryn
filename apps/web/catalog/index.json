@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T05:30:27.084880+00:00",
+  "generated_at": "2026-11-26T05:31:23.509607+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -80332,6 +80332,123 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "boromanx386-voidcast",
+      "slug": "boromanx386-voidcast",
+      "name": "Voidcast",
+      "summary": "Desktop AI coding agent for Windows & Linux that runs on your own keys: shell, git, a built-in browser it drives, web/YouTube/PDF tools, image & music generation. OpenRouter, DeepSeek, OpenCode Go, NVIDIA NIM, Ollama or any endpoint. No acc",
+      "description": "Desktop AI coding agent for Windows & Linux that runs on your own keys: shell, git, a built-in browser it drives, web/YouTube/PDF tools, image & music generation. OpenRouter, DeepSeek, OpenCode Go, NVIDIA NIM, Ollama or any endpoint. No account, no markup.",
+      "translations": {
+        "en": {
+          "summary": "Desktop AI coding agent for Windows & Linux that runs on your own keys: shell, git, a built-in browser it drives, web/YouTube/PDF tools, image & music generation. OpenRouter, DeepSeek, OpenCode Go, NVIDIA NIM, Ollama or any endpoint. No acc",
+          "description": "Desktop AI coding agent for Windows & Linux that runs on your own keys: shell, git, a built-in browser it drives, web/YouTube/PDF tools, image & music generation. OpenRouter, DeepSeek, OpenCode Go, NVIDIA NIM, Ollama or any endpoint. No account, no markup."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/boromanx386/Voidcast/main/electron-app/build/icon.png",
+      "repository_url": "https://github.com/boromanx386/Voidcast",
+      "github_repo_id": "1204167636",
+      "source_updated_at": "2026-11-25T13:53:30Z",
+      "homepage_url": "https://boromanx386.github.io/Voidcast/",
+      "owner": "boromanx386",
+      "default_branch": "main",
+      "source_commit_sha": "b26c9745eeb400deb89fb731d2b1db1d56038562",
+      "license_text": "MIT License\n\nCopyright (c) 2026 boromanx386 and Voidcast contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "agentic-coding",
+        "ai-agent",
+        "ai-coding",
+        "byok",
+        "chatbot",
+        "claude-code",
+        "coding-agent",
+        "deepseek",
+        "desktop-app",
+        "electron",
+        "harness",
+        "linux",
+        "llm",
+        "local-llm",
+        "mcp",
+        "ollama",
+        "opencode",
+        "openrouter",
+        "tts",
+        "windows"
+      ],
+      "latest_version": "v2.14.0",
+      "release_url": "https://github.com/boromanx386/Voidcast/releases/tag/v2.14.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-boromanx386-voidcast-v2.14.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-boromanx386-voidcast-v2.14.0/THIRD-PARTY-NOTICE-boromanx386-voidcast.txt",
+      "artifacts": [
+        {
+          "id": "c5bf3faa71f4b86d9632d0c21711b5117c4911c415cb2826d6fc6cf40ad12db1",
+          "filename": "Voidcast_2.14.0.AppImage",
+          "original_filename": "Voidcast_2.14.0.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": null,
+          "version": "v2.14.0",
+          "size_bytes": 250072712,
+          "sha256": "c5bf3faa71f4b86d9632d0c21711b5117c4911c415cb2826d6fc6cf40ad12db1",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-boromanx386-voidcast-v2.14.0/Voidcast_2.14.0.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-boromanx386-voidcast-v2.14.0"
+        },
+        {
+          "id": "fb33c354546f9fc674506f4424aaa2bc53c970364b52880e2c37103c20de7454",
+          "filename": "Voidcast_2.14.0.deb",
+          "original_filename": "Voidcast_2.14.0.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": null,
+          "version": "v2.14.0",
+          "size_bytes": 211832272,
+          "sha256": "fb33c354546f9fc674506f4424aaa2bc53c970364b52880e2c37103c20de7454",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-boromanx386-voidcast-v2.14.0/Voidcast_2.14.0.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-boromanx386-voidcast-v2.14.0"
+        },
+        {
+          "id": "70729f42eab5213f1b140840019b47efe707d5f9e05640d6fc12b06f33e52f4d",
+          "filename": "Voidcast_2.14.0_Setup.exe",
+          "original_filename": "Voidcast_2.14.0_Setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v2.14.0",
+          "size_bytes": 198141288,
+          "sha256": "70729f42eab5213f1b140840019b47efe707d5f9e05640d6fc12b06f33e52f4d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-boromanx386-voidcast-v2.14.0/Voidcast_2.14.0_Setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-boromanx386-voidcast-v2.14.0"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "windows"
       ]
     },
     {
