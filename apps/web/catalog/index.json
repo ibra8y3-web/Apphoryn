@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:34:45.187485+00:00",
+  "generated_at": "2026-11-26T06:35:05.490928+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -79458,6 +79458,52 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "selvakumaresra-superwhatsapp",
+      "slug": "selvakumaresra-superwhatsapp",
+      "artifacts": [],
+      "name": "superwhatsapp",
+      "summary": "SuperWhatsapp: a fast desktop WhatsApp app with Znga, a proactive AI agent that spots what needs you, briefs you and drafts replies in your voice. macOS, Windows, Linux.",
+      "description": "SuperWhatsapp: a fast desktop WhatsApp app with Znga, a proactive AI agent that spots what needs you, briefs you and drafts replies in your voice. macOS, Windows, Linux.",
+      "translations": {
+        "en": {
+          "summary": "SuperWhatsapp: a fast desktop WhatsApp app with Znga, a proactive AI agent that spots what needs you, briefs you and drafts replies in your voice. macOS, Windows, Linux.",
+          "description": "SuperWhatsapp: a fast desktop WhatsApp app with Znga, a proactive AI agent that spots what needs you, briefs you and drafts replies in your voice. macOS, Windows, Linux."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/selvakumarEsra/superwhatsapp/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/selvakumarEsra/superwhatsapp",
+      "github_repo_id": "1471699800",
+      "source_updated_at": "2026-11-25T12:28:03Z",
+      "homepage_url": "https://selvakumaresra.github.io/superwhatsapp/",
+      "owner": "selvakumarEsra",
+      "default_branch": "main",
+      "source_commit_sha": "bdad2d037b6c0bdf9548f713868444e727eacd6b",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Selvakumar Esra\nCopyright (c) 2026 Carmine Paolino\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "productivity",
+      "topics": [
+        "ai-agent",
+        "ai-assistant",
+        "desktop-app",
+        "productivity",
+        "rust",
+        "whatsapp"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "ixinortyan-suzuemojy-android",
