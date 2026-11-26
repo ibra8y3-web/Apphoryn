@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T05:49:20.241945+00:00",
+  "generated_at": "2026-11-26T05:50:06.665587+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -2827,6 +2827,115 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "capthvnsen-alans-way",
+      "slug": "capthvnsen-alans-way",
+      "name": "alans-way",
+      "summary": "Alan's Way: a Mac app where your Hermes bots drive their own browser tabs on your Mac and a cloud VPS, with Telegram alongside and handoff between the two.",
+      "description": "Alan's Way: a Mac app where your Hermes bots drive their own browser tabs on your Mac and a cloud VPS, with Telegram alongside and handoff between the two.",
+      "translations": {
+        "en": {
+          "summary": "Alan's Way: a Mac app where your Hermes bots drive their own browser tabs on your Mac and a cloud VPS, with Telegram alongside and handoff between the two.",
+          "description": "Alan's Way: a Mac app where your Hermes bots drive their own browser tabs on your Mac and a cloud VPS, with Telegram alongside and handoff between the two."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/capthvnsen/alans-way/main/ios/AlanWorkspace/Resources/Assets.xcassets/AppIcon.appiconset/Icon.png",
+      "repository_url": "https://github.com/capthvnsen/alans-way",
+      "github_repo_id": "1403360762",
+      "source_updated_at": "2026-11-21T18:43:21Z",
+      "homepage_url": "https://openalan.com",
+      "owner": "capthvnsen",
+      "default_branch": "main",
+      "source_commit_sha": "c3867d372e953e95fb405f25f39e48bd03fc48f3",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Alex Hansen\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "agentic",
+        "ai-agents",
+        "automation",
+        "browser-automation",
+        "desktop-app",
+        "electron",
+        "hermes",
+        "mac",
+        "self-hosted",
+        "telegram",
+        "vps"
+      ],
+      "latest_version": "v0.21.14",
+      "release_url": "https://github.com/capthvnsen/alans-way/releases/tag/v0.21.14",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-capthvnsen-alans-way-v0.21.14",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-capthvnsen-alans-way-v0.21.14/THIRD-PARTY-NOTICE-capthvnsen-alans-way.txt",
+      "artifacts": [
+        {
+          "id": "9194f130bc7e430715daf9d69a07afdfbc756f4a6bc0fe63fea6332e92319f5e",
+          "filename": "OpenAlan-linux.AppImage",
+          "original_filename": "OpenAlan-linux.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": null,
+          "version": "v0.21.14",
+          "size_bytes": 145051803,
+          "sha256": "9194f130bc7e430715daf9d69a07afdfbc756f4a6bc0fe63fea6332e92319f5e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-capthvnsen-alans-way-v0.21.14/OpenAlan-linux.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-capthvnsen-alans-way-v0.21.14"
+        },
+        {
+          "id": "75dae3d1cca632efe874ad8523677ab4d38cdae979892b7c2e961a7250dcf204",
+          "filename": "OpenAlan-mac.dmg",
+          "original_filename": "OpenAlan-mac.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": null,
+          "version": "v0.21.14",
+          "size_bytes": 151327735,
+          "sha256": "75dae3d1cca632efe874ad8523677ab4d38cdae979892b7c2e961a7250dcf204",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-capthvnsen-alans-way-v0.21.14/OpenAlan-mac.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-capthvnsen-alans-way-v0.21.14"
+        },
+        {
+          "id": "3504e1193a0e1bd920fbf2805db9c5462fd4ecc9a5006eac4ff10add0c7c24f9",
+          "filename": "OpenAlan-windows-setup.exe",
+          "original_filename": "OpenAlan-windows-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.21.14",
+          "size_bytes": 141594861,
+          "sha256": "3504e1193a0e1bd920fbf2805db9c5462fd4ecc9a5006eac4ff10add0c7c24f9",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-capthvnsen-alans-way-v0.21.14/OpenAlan-windows-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-capthvnsen-alans-way-v0.21.14"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
       ]
     },
     {
