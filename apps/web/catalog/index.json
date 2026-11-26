@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:43:50.600260+00:00",
+  "generated_at": "2026-11-26T03:44:13.215589+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -13325,6 +13325,150 @@
         }
       ],
       "platforms": [
+        "windows"
+      ]
+    },
+    {
+      "id": "oaostarboy-clover",
+      "slug": "oaostarboy-clover",
+      "name": "clover",
+      "summary": "🍀 Make your own luck. Clover is a self-hosted AI agent with four leaves: it remembers, it plans, it acts, and it lives on your desktop, terminal and phone.",
+      "description": "🍀 Make your own luck. Clover is a self-hosted AI agent with four leaves: it remembers, it plans, it acts, and it lives on your desktop, terminal and phone.",
+      "translations": {
+        "en": {
+          "summary": "🍀 Make your own luck. Clover is a self-hosted AI agent with four leaves: it remembers, it plans, it acts, and it lives on your desktop, terminal and phone.",
+          "description": "🍀 Make your own luck. Clover is a self-hosted AI agent with four leaves: it remembers, it plans, it acts, and it lives on your desktop, terminal and phone."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/oaostarboy/clover/main/apps/desktop/assets/icon.png",
+      "repository_url": "https://github.com/oaostarboy/clover",
+      "github_repo_id": "1344250431",
+      "source_updated_at": "2026-11-12T01:15:52Z",
+      "homepage_url": null,
+      "owner": "oaostarboy",
+      "default_branch": "main",
+      "source_commit_sha": "c9ff5ecce408739cefdb36d9903a7ee76de3d1e9",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Anthony Nguyen / SILAS STUDIOS Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "ai",
+      "topics": [
+        "agent-framework",
+        "ai-agent",
+        "ai-assistant",
+        "autonomous-agents",
+        "cli",
+        "desktop-app",
+        "llm",
+        "mcp",
+        "personal-assistant",
+        "python",
+        "self-hosted",
+        "telegram-bot"
+      ],
+      "latest_version": "v2.1.14",
+      "release_url": "https://github.com/oaostarboy/clover/releases/tag/v2.1.14",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-oaostarboy-clover-v2.1.14",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-oaostarboy-clover-v2.1.14/THIRD-PARTY-NOTICE-oaostarboy-clover.txt",
+      "artifacts": [
+        {
+          "id": "f81dc5daa344b269c977a25401d80142ae05e7c049063c60440ab75b3f5f7103",
+          "filename": "clover-2.1.14-1.x86_64.rpm",
+          "original_filename": "clover-2.1.14-1.x86_64.rpm",
+          "platform": "linux",
+          "package_type": "RPM package",
+          "architecture": "x86_64",
+          "version": "v2.1.14",
+          "size_bytes": 92676,
+          "sha256": "f81dc5daa344b269c977a25401d80142ae05e7c049063c60440ab75b3f5f7103",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-oaostarboy-clover-v2.1.14/clover-2.1.14-1.x86_64.rpm",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-oaostarboy-clover-v2.1.14"
+        },
+        {
+          "id": "2777a9b9571eab4de3c244e0e35270ba55b24b46cd8790c2197fbfd4ab862249",
+          "filename": "Clover-2.1.14-macos.pkg",
+          "original_filename": "Clover-2.1.14-macos.pkg",
+          "platform": "macos",
+          "package_type": "macOS installer",
+          "architecture": null,
+          "version": "v2.1.14",
+          "size_bytes": 206303,
+          "sha256": "2777a9b9571eab4de3c244e0e35270ba55b24b46cd8790c2197fbfd4ab862249",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-oaostarboy-clover-v2.1.14/Clover-2.1.14-macos.pkg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-oaostarboy-clover-v2.1.14"
+        },
+        {
+          "id": "6fcb1b1321a83df551f894dcadda2e2f3e6b67ffc3c27384ec489b365b46b1a1",
+          "filename": "Clover-2.1.14-x86_64.AppImage",
+          "original_filename": "Clover-2.1.14-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v2.1.14",
+          "size_bytes": 1030648,
+          "sha256": "6fcb1b1321a83df551f894dcadda2e2f3e6b67ffc3c27384ec489b365b46b1a1",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-oaostarboy-clover-v2.1.14/Clover-2.1.14-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-oaostarboy-clover-v2.1.14"
+        },
+        {
+          "id": "56e244dba961a825336cd53e85ffcd72de306e9328ad9461c2e66fdadf8b6e75",
+          "filename": "Clover-Setup-2.1.14-windows-x64.exe",
+          "original_filename": "Clover-Setup-2.1.14-windows-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v2.1.14",
+          "size_bytes": 435721,
+          "sha256": "56e244dba961a825336cd53e85ffcd72de306e9328ad9461c2e66fdadf8b6e75",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-oaostarboy-clover-v2.1.14/Clover-Setup-2.1.14-windows-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-oaostarboy-clover-v2.1.14"
+        },
+        {
+          "id": "56eb834f8442a04a4fadee1c6bac11962205db89b05817af86bd5aa8ccff3efd",
+          "filename": "clover_2.1.14_amd64.deb",
+          "original_filename": "clover_2.1.14_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v2.1.14",
+          "size_bytes": 78620,
+          "sha256": "56eb834f8442a04a4fadee1c6bac11962205db89b05817af86bd5aa8ccff3efd",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-oaostarboy-clover-v2.1.14/clover_2.1.14_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-oaostarboy-clover-v2.1.14"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
         "windows"
       ]
     },
