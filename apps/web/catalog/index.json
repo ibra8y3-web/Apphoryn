@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T07:06:03.219085+00:00",
+  "generated_at": "2026-11-26T07:06:15.691675+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -54957,6 +54957,53 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "leidian-fw-ncm-helper-windows",
+      "slug": "leidian-fw-ncm-helper-windows",
+      "artifacts": [],
+      "name": "ncm-helper-windows",
+      "summary": "Windows desktop app: batch-convert NetEase NCM files into original FLAC/MP3, organize by artist/album, embed covers and fetch lyrics.",
+      "description": "Windows desktop app: batch-convert NetEase NCM files into original FLAC/MP3, organize by artist/album, embed covers and fetch lyrics.",
+      "translations": {
+        "en": {
+          "summary": "Windows desktop app: batch-convert NetEase NCM files into original FLAC/MP3, organize by artist/album, embed covers and fetch lyrics.",
+          "description": "Windows desktop app: batch-convert NetEase NCM files into original FLAC/MP3, organize by artist/album, embed covers and fetch lyrics."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/LeiDian-FW/ncm-helper-windows/main/assets/icon.png",
+      "repository_url": "https://github.com/LeiDian-FW/ncm-helper-windows",
+      "github_repo_id": "1471994131",
+      "source_updated_at": "2026-11-25T15:35:47Z",
+      "homepage_url": null,
+      "owner": "LeiDian-FW",
+      "default_branch": "main",
+      "source_commit_sha": "f49576992c4226957e09a852b8a89cbbb03b7ec3",
+      "license_text": "MIT License\n\nCopyright (c) 2026 spwncm contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "other",
+      "topics": [
+        "desktop-app",
+        "flac",
+        "java",
+        "music-library",
+        "ncm",
+        "netease-cloud-music",
+        "windows"
+      ],
+      "latest_version": "v1.0.0",
+      "release_url": "https://github.com/LeiDian-FW/ncm-helper-windows/releases/tag/v1.0.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "purveshshinde-neko-music",
