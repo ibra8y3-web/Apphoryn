@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:03:46.174269+00:00",
+  "generated_at": "2026-11-26T03:04:58.081906+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -57792,6 +57792,140 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "anton-abyzov-specwithcode",
+      "slug": "anton-abyzov-specwithcode",
+      "name": "specwithcode",
+      "summary": "Run Claude Code, Codex, Copilot and other coding agents side by side on all your machines. When one hits its limit, another continues the thread. Free desktop app, MIT.",
+      "description": "Run Claude Code, Codex, Copilot and other coding agents side by side on all your machines. When one hits its limit, another continues the thread. Free desktop app, MIT.",
+      "translations": {
+        "en": {
+          "summary": "Run Claude Code, Codex, Copilot and other coding agents side by side on all your machines. When one hits its limit, another continues the thread. Free desktop app, MIT.",
+          "description": "Run Claude Code, Codex, Copilot and other coding agents side by side on all your machines. When one hits its limit, another continues the thread. Free desktop app, MIT."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/anton-abyzov/specwithcode/main/assets/prod/logo.svg",
+      "repository_url": "https://github.com/anton-abyzov/specwithcode",
+      "github_repo_id": "1434606433",
+      "source_updated_at": "2026-11-25T17:34:15Z",
+      "homepage_url": "https://specwithcode.com",
+      "owner": "anton-abyzov",
+      "default_branch": "main",
+      "source_commit_sha": "4712523d6ca3f19f70c1eb57bbccba69eee89395",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Anton Abyzov\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "agentic-coding",
+        "ai-agents",
+        "ai-coding-agents",
+        "claude",
+        "claude-code",
+        "codex",
+        "coding-agents",
+        "cursor",
+        "desktop-app",
+        "developer-tools",
+        "electron",
+        "git-worktree",
+        "github-copilot",
+        "llm",
+        "macos",
+        "mcp",
+        "multi-agent",
+        "opencode",
+        "orchestration",
+        "spec-driven-development"
+      ],
+      "latest_version": "v1.0.442",
+      "release_url": "https://github.com/anton-abyzov/specwithcode/releases/tag/v1.0.442",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-anton-abyzov-specwithcode-v1.0.442",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-anton-abyzov-specwithcode-v1.0.442/THIRD-PARTY-NOTICE-anton-abyzov-specwithcode.txt",
+      "artifacts": [
+        {
+          "id": "ea4899182fff3c7b76259331366193436d3726814d809865a8b3e7ae9fdd5aa4",
+          "filename": "SpecWithCode-1.0.442-arm64.dmg",
+          "original_filename": "SpecWithCode-1.0.442-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v1.0.442",
+          "size_bytes": 183703623,
+          "sha256": "ea4899182fff3c7b76259331366193436d3726814d809865a8b3e7ae9fdd5aa4",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-anton-abyzov-specwithcode-v1.0.442/SpecWithCode-1.0.442-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-anton-abyzov-specwithcode-v1.0.442"
+        },
+        {
+          "id": "d3b608baccaccf301ff4ea5b5facf9dd8970a488c2540fbeff920f15886e269c",
+          "filename": "SpecWithCode-1.0.442-amd64.deb",
+          "original_filename": "SpecWithCode-1.0.442-amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v1.0.442",
+          "size_bytes": 160320488,
+          "sha256": "d3b608baccaccf301ff4ea5b5facf9dd8970a488c2540fbeff920f15886e269c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-anton-abyzov-specwithcode-v1.0.442/SpecWithCode-1.0.442-amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-anton-abyzov-specwithcode-v1.0.442"
+        },
+        {
+          "id": "20aeaf53c17857350df7453b323787cb947d8d4d2c169a3cdcd69be6be7ed50f",
+          "filename": "SpecWithCode-1.0.442-arm64.AppImage",
+          "original_filename": "SpecWithCode-1.0.442-arm64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "arm64",
+          "version": "v1.0.442",
+          "size_bytes": 186858351,
+          "sha256": "20aeaf53c17857350df7453b323787cb947d8d4d2c169a3cdcd69be6be7ed50f",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-anton-abyzov-specwithcode-v1.0.442/SpecWithCode-1.0.442-arm64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-anton-abyzov-specwithcode-v1.0.442"
+        },
+        {
+          "id": "4f8f0b1aa26f4b34f160c4d5441f5ea82ac4e45d69ba19180210c51c2dce45c8",
+          "filename": "SpecWithCode-1.0.442-arm64.deb",
+          "original_filename": "SpecWithCode-1.0.442-arm64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "arm64",
+          "version": "v1.0.442",
+          "size_bytes": 155158288,
+          "sha256": "4f8f0b1aa26f4b34f160c4d5441f5ea82ac4e45d69ba19180210c51c2dce45c8",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-anton-abyzov-specwithcode-v1.0.442/SpecWithCode-1.0.442-arm64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-anton-abyzov-specwithcode-v1.0.442"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos"
       ]
     },
     {
