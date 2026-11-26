@@ -28298,7 +28298,19 @@
       "latest_version": "v1.6.2",
       "release_url": "https://github.com/samsmith-MSFT/ez-azfw-manager/releases/tag/v1.6.2",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "3c336507907ee551ce253fef646355546495741d",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-26T15:36:33.332858+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "passioncode-ai-fabric-switchboard",
