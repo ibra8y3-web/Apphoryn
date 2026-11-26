@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:53:23.733880+00:00",
+  "generated_at": "2026-11-26T03:53:49.909658+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -16125,6 +16125,73 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "alexandramoldovan95-desktop-buddy",
+      "slug": "alexandramoldovan95-desktop-buddy",
+      "name": "desktop-buddy",
+      "summary": "Offline Windows desktop companion (Electron): focus timer, window recorder with clips, notes, screenshots and a clipboard history that skips secrets. 294 unit tests, CI on Windows.",
+      "description": "Offline Windows desktop companion (Electron): focus timer, window recorder with clips, notes, screenshots and a clipboard history that skips secrets. 294 unit tests, CI on Windows.",
+      "translations": {
+        "en": {
+          "summary": "Offline Windows desktop companion (Electron): focus timer, window recorder with clips, notes, screenshots and a clipboard history that skips secrets. 294 unit tests, CI on Windows.",
+          "description": "Offline Windows desktop companion (Electron): focus timer, window recorder with clips, notes, screenshots and a clipboard history that skips secrets. 294 unit tests, CI on Windows."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/AlexandraMoldovan95/desktop-buddy/main/src/assets/icon.png",
+      "repository_url": "https://github.com/AlexandraMoldovan95/desktop-buddy",
+      "github_repo_id": "1405869702",
+      "source_updated_at": "2026-11-24T20:02:54Z",
+      "homepage_url": "https://desktop-buddy-demo.netlify.app/",
+      "owner": "AlexandraMoldovan95",
+      "default_branch": "main",
+      "source_commit_sha": "4713020441dd53ce0e9edc20a404788eabe89588",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Alexandra Moldovan\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "desktop-app",
+        "electron",
+        "javascript",
+        "productivity",
+        "windows"
+      ],
+      "latest_version": "v1.16.1",
+      "release_url": "https://github.com/AlexandraMoldovan95/desktop-buddy/releases/tag/v1.16.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-alexandramoldovan95-desktop-buddy-v1.16.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-alexandramoldovan95-desktop-buddy-v1.16.1/THIRD-PARTY-NOTICE-alexandramoldovan95-desktop-buddy.txt",
+      "artifacts": [
+        {
+          "id": "649bea2677bd54c37373bf3c223447bdb1fbcf8ec31206150ade071e8b4db81f",
+          "filename": "Desktop.Buddy.Portfolio.Setup.1.16.1.exe",
+          "original_filename": "Desktop.Buddy.Portfolio.Setup.1.16.1.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.16.1",
+          "size_bytes": 111956427,
+          "sha256": "649bea2677bd54c37373bf3c223447bdb1fbcf8ec31206150ade071e8b4db81f",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-alexandramoldovan95-desktop-buddy-v1.16.1/Desktop.Buddy.Portfolio.Setup.1.16.1.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-alexandramoldovan95-desktop-buddy-v1.16.1"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
