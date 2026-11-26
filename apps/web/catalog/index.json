@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T07:28:44.875551+00:00",
+  "generated_at": "2026-11-26T07:29:14.243346+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -64431,6 +64431,55 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "getoxide-oxide",
+      "slug": "getoxide-oxide",
+      "artifacts": [],
+      "name": "oxide",
+      "summary": "Oxide is a free, open-source desktop app for agentic coding that drives Claude Code, Codex and Antigravity CLI in one window and shows what each change touched and what was actually checked, so you can merge with confidence.",
+      "description": "Oxide is a free, open-source desktop app for agentic coding that drives Claude Code, Codex and Antigravity CLI in one window and shows what each change touched and what was actually checked, so you can merge with confidence.",
+      "translations": {
+        "en": {
+          "summary": "Oxide is a free, open-source desktop app for agentic coding that drives Claude Code, Codex and Antigravity CLI in one window and shows what each change touched and what was actually checked, so you can merge with confidence.",
+          "description": "Oxide is a free, open-source desktop app for agentic coding that drives Claude Code, Codex and Antigravity CLI in one window and shows what each change touched and what was actually checked, so you can merge with confidence."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/getoxide/oxide/main/crates/oxide-app/icons/icon.png",
+      "repository_url": "https://github.com/getoxide/oxide",
+      "github_repo_id": "1428478697",
+      "source_updated_at": "2026-11-18T21:16:52Z",
+      "homepage_url": "https://oxide.cavallinilorenzo.com",
+      "owner": "getoxide",
+      "default_branch": "main",
+      "source_commit_sha": "be0ddea5d83eddc859029009dc423218d37d8c2a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Lorenzo Cavallini\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "agentic-coding",
+        "ai",
+        "ai-coding-agent",
+        "coding-agents",
+        "desktop-app",
+        "developer-tools",
+        "gui",
+        "rust",
+        "tauri"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "pachli-pachli-android",
