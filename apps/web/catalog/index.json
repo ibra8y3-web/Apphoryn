@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:58:43.224813+00:00",
+  "generated_at": "2026-11-26T04:59:25.024511+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -61451,6 +61451,116 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "borco-rehuco",
+      "slug": "borco-rehuco",
+      "name": "rehuco",
+      "summary": "Keep track of the tutorials, courses and reference images you collect, without a database or an account. Cross-platform desktop app (Windows, macOS, Linux).",
+      "description": "Keep track of the tutorials, courses and reference images you collect, without a database or an account. Cross-platform desktop app (Windows, macOS, Linux).",
+      "translations": {
+        "en": {
+          "summary": "Keep track of the tutorials, courses and reference images you collect, without a database or an account. Cross-platform desktop app (Windows, macOS, Linux).",
+          "description": "Keep track of the tutorials, courses and reference images you collect, without a database or an account. Cross-platform desktop app (Windows, macOS, Linux)."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/borco/rehuco/master/design/icons/favicon.svg",
+      "repository_url": "https://github.com/borco/rehuco",
+      "github_repo_id": "1284321144",
+      "source_updated_at": "2026-11-12T17:24:14Z",
+      "homepage_url": "https://borco.github.io/rehuco/",
+      "owner": "borco",
+      "default_branch": "master",
+      "source_commit_sha": "cecb5313b9ae612472d4f758d8fc93548ad2be1a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Ioan Calin B\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "cross-platform",
+        "desktop-app",
+        "digital-asset-management",
+        "media-catalog",
+        "media-library",
+        "metadata-editor",
+        "offline-library",
+        "organizer",
+        "reference-images",
+        "resource-management",
+        "tutorial-manager",
+        "tutorials"
+      ],
+      "latest_version": "rehuco-agent-0.4.0",
+      "release_url": "https://github.com/borco/rehuco/releases/tag/rehuco-agent-0.4.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-borco-rehuco-rehuco-agent-0.4.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-borco-rehuco-rehuco-agent-0.4.0/THIRD-PARTY-NOTICE-borco-rehuco.txt",
+      "artifacts": [
+        {
+          "id": "6143ff25d97e3bc8dac48b4bd1de6a0f542a9467afc2f31dd32d03fbd1bd75a6",
+          "filename": "Rehuco-0.4.0.dmg",
+          "original_filename": "Rehuco-0.4.0.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": null,
+          "version": "rehuco-agent-0.4.0",
+          "size_bytes": 117972542,
+          "sha256": "6143ff25d97e3bc8dac48b4bd1de6a0f542a9467afc2f31dd32d03fbd1bd75a6",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-borco-rehuco-rehuco-agent-0.4.0/Rehuco-0.4.0.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-borco-rehuco-rehuco-agent-0.4.0"
+        },
+        {
+          "id": "647394336bbc0990e528c5d685392c036d7de30c527d42693ce77f0d6df98908",
+          "filename": "Rehuco-0.4.0.msi",
+          "original_filename": "Rehuco-0.4.0.msi",
+          "platform": "windows",
+          "package_type": "Windows installer",
+          "architecture": null,
+          "version": "rehuco-agent-0.4.0",
+          "size_bytes": 117215580,
+          "sha256": "647394336bbc0990e528c5d685392c036d7de30c527d42693ce77f0d6df98908",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-borco-rehuco-rehuco-agent-0.4.0/Rehuco-0.4.0.msi",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-borco-rehuco-rehuco-agent-0.4.0"
+        },
+        {
+          "id": "ad3c82e7abf9a25ea98aa6bd6f4d0b2d37bd1d4b759502883868ef547bd5f55e",
+          "filename": "rehuco-agent-x86_64.AppImage",
+          "original_filename": "rehuco-agent-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "rehuco-agent-0.4.0",
+          "size_bytes": 179599864,
+          "sha256": "ad3c82e7abf9a25ea98aa6bd6f4d0b2d37bd1d4b759502883868ef547bd5f55e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-borco-rehuco-rehuco-agent-0.4.0/rehuco-agent-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-borco-rehuco-rehuco-agent-0.4.0"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
       ]
     },
     {
