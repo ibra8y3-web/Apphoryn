@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T21:57:47.561332+00:00",
+  "generated_at": "2026-11-26T21:58:52.084709+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -37500,7 +37500,7 @@
       "homepage_url": null,
       "owner": "derivo",
       "default_branch": "main",
-      "source_commit_sha": "08ffabf33633a6bb3c61a27fb8481e123c3ce004",
+      "source_commit_sha": "1d5cba7c7324008027391ac48b2bde71faa7e641",
       "license_text": "MIT License\n\nCopyright (c) 2026 Derivo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -37518,10 +37518,10 @@
         "mcp",
         "typescript"
       ],
-      "latest_version": "v0.9.0",
-      "release_url": "https://github.com/derivo/hangar/releases/tag/v0.9.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-derivo-hangar-v0.9.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-derivo-hangar-v0.9.0/THIRD-PARTY-NOTICE-derivo-hangar.txt",
+      "latest_version": "v0.9.1",
+      "release_url": "https://github.com/derivo/hangar/releases/tag/v0.9.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-derivo-hangar-v0.9.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-derivo-hangar-v0.9.1/THIRD-PARTY-NOTICE-derivo-hangar.txt",
       "artifacts": [
         {
           "id": "0035a0289b98c49250ffbb967217721c01ef55cda4598ca88170a85de9a21fce",
@@ -37573,6 +37573,57 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-derivo-hangar-v0.9.0/Hangar-Setup-0.9.0.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-derivo-hangar-v0.9.0"
+        },
+        {
+          "id": "a7d34ffce9b4349f2d39d1d5920b6043ad08e6cf8c9c153a9996a4d203e74d35",
+          "filename": "Hangar-0.9.1-arm64.dmg",
+          "original_filename": "Hangar-0.9.1-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.9.1",
+          "size_bytes": 215154617,
+          "sha256": "a7d34ffce9b4349f2d39d1d5920b6043ad08e6cf8c9c153a9996a4d203e74d35",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-derivo-hangar-v0.9.1/Hangar-0.9.1-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-derivo-hangar-v0.9.1"
+        },
+        {
+          "id": "71150f5afb4fb9190bd0860b064a92c47c992f5f386d5ab111536a8e6b8594e7",
+          "filename": "Hangar-0.9.1.AppImage",
+          "original_filename": "Hangar-0.9.1.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": null,
+          "version": "v0.9.1",
+          "size_bytes": 221101690,
+          "sha256": "71150f5afb4fb9190bd0860b064a92c47c992f5f386d5ab111536a8e6b8594e7",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-derivo-hangar-v0.9.1/Hangar-0.9.1.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-derivo-hangar-v0.9.1"
+        },
+        {
+          "id": "1c8bc86b3beeecdd1ab73ae7875a0100526a11ff995118564f198120ce0b8107",
+          "filename": "Hangar-Setup-0.9.1.exe",
+          "original_filename": "Hangar-Setup-0.9.1.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.9.1",
+          "size_bytes": 217261623,
+          "sha256": "1c8bc86b3beeecdd1ab73ae7875a0100526a11ff995118564f198120ce0b8107",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-derivo-hangar-v0.9.1/Hangar-Setup-0.9.1.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-derivo-hangar-v0.9.1"
         }
       ],
       "platforms": [
