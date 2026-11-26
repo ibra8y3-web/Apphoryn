@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T14:45:32.369215+00:00",
+  "generated_at": "2026-11-26T14:45:56.027388+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -78176,11 +78176,11 @@
       "icon_url": "https://raw.githubusercontent.com/yicheng47/runner/main/assets/icon.png",
       "repository_url": "https://github.com/yicheng47/runner",
       "github_repo_id": "1216634387",
-      "source_updated_at": "2026-11-26T06:28:25Z",
+      "source_updated_at": "2026-11-26T13:31:30Z",
       "homepage_url": "https://runnersh.dev/",
       "owner": "yicheng47",
       "default_branch": "main",
-      "source_commit_sha": "f0a12e165dd59d2cd107feabcb4225443cfe945a",
+      "source_commit_sha": "6ae678d7feeb99395263091086b7d0a60e0afb73",
       "license_text": "MIT License\n\nCopyright (c) 2026 Yicheng Wang (Jason Wang)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
