@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T11:28:36.204618+00:00",
+  "generated_at": "2026-11-26T11:33:37.854772+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -81079,7 +81079,7 @@
       "homepage_url": null,
       "owner": "OpenSkye-Labs",
       "default_branch": "main",
-      "source_commit_sha": "17631b161d7b7c2d4a43c3d99fbaf1897f546faf",
+      "source_commit_sha": "9f626d9d73ff5f1772e699628b16e6a188a62a12",
       "license_text": "MIT License\n\nCopyright (c) 2026 OpenSkye Labs\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -81100,10 +81100,10 @@
         "rust",
         "tailscale"
       ],
-      "latest_version": "v0.1.6",
-      "release_url": "https://github.com/OpenSkye-Labs/skyelab/releases/tag/v0.1.6",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-openskye-labs-skyelab-v0.1.6",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-openskye-labs-skyelab-v0.1.6/THIRD-PARTY-NOTICE-openskye-labs-skyelab.txt",
+      "latest_version": "v0.1.7",
+      "release_url": "https://github.com/OpenSkye-Labs/skyelab/releases/tag/v0.1.7",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-openskye-labs-skyelab-v0.1.7",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-openskye-labs-skyelab-v0.1.7/THIRD-PARTY-NOTICE-openskye-labs-skyelab.txt",
       "artifacts": [
         {
           "id": "7cbb176633392963e83b72c7c050d551e79295247b0fe2417356c82fb9a8dab2",
@@ -81172,6 +81172,74 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-openskye-labs-skyelab-v0.1.6/skyelab_0.1.6_x86_64.AppImage",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-openskye-labs-skyelab-v0.1.6"
+        },
+        {
+          "id": "be42aeab7d36129e0021caac243177c40dbf4a3e0d69fb92a9d03b21b1527476",
+          "filename": "SkyeLab_0.1.7_aarch64.dmg",
+          "original_filename": "SkyeLab_0.1.7_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.1.7",
+          "size_bytes": 21183956,
+          "sha256": "be42aeab7d36129e0021caac243177c40dbf4a3e0d69fb92a9d03b21b1527476",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-openskye-labs-skyelab-v0.1.7/SkyeLab_0.1.7_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-openskye-labs-skyelab-v0.1.7"
+        },
+        {
+          "id": "e9ed08677cf0fe647a982b98cbd1c35ac00628b821807e974a8f4437c95c9a7a",
+          "filename": "skyelab_0.1.7_amd64.deb",
+          "original_filename": "skyelab_0.1.7_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.1.7",
+          "size_bytes": 29575684,
+          "sha256": "e9ed08677cf0fe647a982b98cbd1c35ac00628b821807e974a8f4437c95c9a7a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-openskye-labs-skyelab-v0.1.7/skyelab_0.1.7_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-openskye-labs-skyelab-v0.1.7"
+        },
+        {
+          "id": "46f8d2f1666600ba7a506bddb4ae3c24b0dc6b643ce3b763e9e1dcb68fda7b29",
+          "filename": "skyelab_0.1.7_x64-setup.exe",
+          "original_filename": "skyelab_0.1.7_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.1.7",
+          "size_bytes": 18243465,
+          "sha256": "46f8d2f1666600ba7a506bddb4ae3c24b0dc6b643ce3b763e9e1dcb68fda7b29",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-openskye-labs-skyelab-v0.1.7/skyelab_0.1.7_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-openskye-labs-skyelab-v0.1.7"
+        },
+        {
+          "id": "c23709d035ab79bd63abe38d69a042e2cc335e114c76884bd6b891fe304ab321",
+          "filename": "skyelab_0.1.7_x86_64.AppImage",
+          "original_filename": "skyelab_0.1.7_x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.1.7",
+          "size_bytes": 97446392,
+          "sha256": "c23709d035ab79bd63abe38d69a042e2cc335e114c76884bd6b891fe304ab321",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-openskye-labs-skyelab-v0.1.7/skyelab_0.1.7_x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-openskye-labs-skyelab-v0.1.7"
         }
       ],
       "platforms": [
