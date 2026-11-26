@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T07:27:34.989606+00:00",
+  "generated_at": "2026-11-26T07:28:09.053957+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -44784,6 +44784,56 @@
         "linux",
         "windows"
       ]
+    },
+    {
+      "id": "josel120-light-md",
+      "slug": "josel120-light-md",
+      "artifacts": [],
+      "name": "light_md",
+      "summary": "Lightweight Markdown editor in C++ and Qt 6, for everyone: format with buttons or type Markdown directly, and see the result instantly.",
+      "description": "Lightweight Markdown editor in C++ and Qt 6, for everyone: format with buttons or type Markdown directly, and see the result instantly.",
+      "translations": {
+        "en": {
+          "summary": "Lightweight Markdown editor in C++ and Qt 6, for everyone: format with buttons or type Markdown directly, and see the result instantly.",
+          "description": "Lightweight Markdown editor in C++ and Qt 6, for everyone: format with buttons or type Markdown directly, and see the result instantly."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/12243367?v=4",
+      "repository_url": "https://github.com/josel120/light_md",
+      "github_repo_id": "1469277231",
+      "source_updated_at": "2026-11-25T14:54:21Z",
+      "homepage_url": "https://github.com/josel120/light_md/releases/latest",
+      "owner": "josel120",
+      "default_branch": "main",
+      "source_commit_sha": "a5457730957ce794e66bf4e73c85b0670e826e47",
+      "license_text": "MIT License\n\nCopyright (c) 2026 josel120\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "beginner-friendly",
+        "cpp",
+        "desktop-app",
+        "editor",
+        "markdown",
+        "markdown-editor",
+        "open-source",
+        "qt",
+        "qt6",
+        "windows"
+      ],
+      "latest_version": "v1.3.0",
+      "release_url": "https://github.com/josel120/light_md/releases/tag/v1.3.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "dmzz-yyhyy-lightnovelreader",
