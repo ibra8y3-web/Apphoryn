@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T10:18:53.398543+00:00",
+  "generated_at": "2026-11-26T10:19:14.120327+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -33707,17 +33707,19 @@
       "id": "eggplants-godlo",
       "slug": "eggplants-godlo",
       "name": "godlo",
-      "summary": "Godlo is an Android app that runs yt-dlp, gallery-dl, and getjmanga to download media, with library, reader, and player features.",
-      "description": "Godlo is an Android application that runs yt-dlp, gallery-dl, and getjmanga on the device. Users can paste or share a URL, and the app detects supported tools and media type, then queues downloads in the background with progress notifications. It supports video and audio downloads with selectable quality or format, playlists, image downloads, and manga episodes with optional CBZ output and patrol for new episodes. The library groups saved images, audio, and video by site and title, user, or playlist. It includes a reader with multiple reading directions and page layouts, an audio player with background playback, and a video player with picture-in-picture. The app can update yt-dlp, gallery-dl, and getjmanga without a new APK. It provides English and Japanese UI, light and dark themes, and dynamic color. Build instructions use mise tasks.",
+      "summary": "A downloader using yt-dlp / gallery-dl / getjmanga for Android",
+      "description": "A downloader using yt-dlp / gallery-dl / getjmanga for Android",
       "translations": {
-        "en": "Godlo is an Android app that runs yt-dlp, gallery-dl, and getjmanga to download media, with library, reader, and player features.",
-        "ar": "Godlo هو تطبيق Android يشغّل yt-dlp وgallery-dl وgetjmanga لتنزيل الوسائط، مع ميزات المكتبة والقارئ والمشغّل."
+        "en": {
+          "summary": "A downloader using yt-dlp / gallery-dl / getjmanga for Android",
+          "description": "A downloader using yt-dlp / gallery-dl / getjmanga for Android"
+        }
       },
       "description_translations": {
         "en": "Godlo is an Android application that runs yt-dlp, gallery-dl, and getjmanga on the device. Users can paste or share a URL, and the app detects supported tools and media type, then queues downloads in the background with progress notifications. It supports video and audio downloads with selectable quality or format, playlists, image downloads, and manga episodes with optional CBZ output and patrol for new episodes. The library groups saved images, audio, and video by site and title, user, or playlist. It includes a reader with multiple reading directions and page layouts, an audio player with background playback, and a video player with picture-in-picture. The app can update yt-dlp, gallery-dl, and getjmanga without a new APK. It provides English and Japanese UI, light and dark themes, and dynamic color. Build instructions use mise tasks.",
         "ar": "Godlo هو تطبيق Android يعمل على الجهاز باستخدام yt-dlp وgallery-dl وgetjmanga. يمكن للمستخدمين لصق رابط أو مشاركته، ويكتشف التطبيق الأدوات المدعومة ونوع الوسائط، ثم يضع التنزيلات في قائمة الانتظار ويعمل عليها في الخلفية مع إشعارات التقدم. يدعم تنزيلات الفيديو والصوت مع اختيار الجودة أو الصيغة، وقوائم التشغيل، وتنزيلات الصور، وحلقات المانجا مع إخراج CBZ اختياري وميزة patrol لجلب الحلقات الجديدة. تُجمع المكتبة الصور والصوت والفيديو المحفوظة حسب الموقع ثم العنوان أو المستخدم أو قائمة التشغيل. يتضمن قارئًا بترتيبات قراءة متعددة وتخطيطات صفحات، ومشغل صوت يعمل في الخلفية، ومشغل فيديو مع صورة داخل صورة. يمكن للتطبيق تحديث yt-dlp وgallery-dl وgetjmanga دون APK جديد. يوفر واجهة إنجليزية ويابانية، وسمات فاتحة وداكنة، وألوان ديناميكية. تستخدم تعليمات البناء مهام mise."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/eggplants/godlo/master/fastlane/metadata/android/en-US/images/icon.png",
@@ -33733,8 +33735,8 @@
       "license_eligible": true,
       "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "Standalone Android end-user application with documented build and release instructions.",
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
       "project_status": "installable",
       "category": "other",
       "topics": [
