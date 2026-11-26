@@ -53850,6 +53850,14 @@
           ],
           "requested_at": "2026-11-26T06:15:17.003719+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
+        },
+        {
+          "git_ref": "b594d621d6a114be96e1f3d1a7a7e8ff4780c0ca",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-26T14:05:02.739714+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ]
     },
