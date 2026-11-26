@@ -34928,7 +34928,18 @@
       "latest_version": "v0.7.18",
       "release_url": "https://github.com/go7studio/Go7-Workhorse/releases/tag/v0.7.18",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "f7ed9eee670efe618f2032add35a89769420d5d4",
+          "targets": [
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-26T15:46:11.657199+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "goat-si-goat",
