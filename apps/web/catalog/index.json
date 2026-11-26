@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:22:45.785988+00:00",
+  "generated_at": "2026-11-26T03:23:06.219503+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -63984,6 +63984,57 @@
         "macos",
         "windows"
       ]
+    },
+    {
+      "id": "paulo-raoni-trunks-graph",
+      "slug": "paulo-raoni-trunks-graph",
+      "artifacts": [],
+      "name": "trunks-graph",
+      "summary": "A standalone desktop app reproducing the behaviour of the Git Graph VS Code extension. Clean-room, MIT, pre-alpha.",
+      "description": "A standalone desktop app reproducing the behaviour of the Git Graph VS Code extension. Clean-room, MIT, pre-alpha.",
+      "translations": {
+        "en": {
+          "summary": "A standalone desktop app reproducing the behaviour of the Git Graph VS Code extension. Clean-room, MIT, pre-alpha.",
+          "description": "A standalone desktop app reproducing the behaviour of the Git Graph VS Code extension. Clean-room, MIT, pre-alpha."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/paulo-raoni/trunks-graph/main/resources/icon.png",
+      "repository_url": "https://github.com/paulo-raoni/trunks-graph",
+      "github_repo_id": "1366723471",
+      "source_updated_at": "2026-11-16T20:45:07Z",
+      "homepage_url": null,
+      "owner": "paulo-raoni",
+      "default_branch": "main",
+      "source_commit_sha": "eb4aa9030074b5950ece2bfd41b76e9c5804a4e5",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Paulo Raoni\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "commit-graph",
+        "desktop-app",
+        "developer-tools",
+        "electron",
+        "git",
+        "git-client",
+        "git-graph",
+        "git-gui",
+        "typescript",
+        "version-control",
+        "visualization"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "thunderrabbit-tswa",
