@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T02:41:18.403309+00:00",
+  "generated_at": "2026-11-26T02:41:42.631181+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -58232,6 +58232,83 @@
           "signer_certificate_sha256": "4d7f05e24afd70917963ad213ab382b6b0ac913f00933d1f526f23e3b5819790",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zero6689-tailnet-byok-v0.4.7/tailnet-byok-arm64.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zero6689-tailnet-byok-v0.4.7"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "bilalfarukozdemir-takipci-analiz",
+      "slug": "bilalfarukozdemir-takipci-analiz",
+      "name": "takipci-analiz",
+      "summary": "Instagram takipçi listelerini karşılaştıran Android uygulaması; React Native/Expo, reklamlı sürüm ve reklam kaldırma seçeneği.",
+      "description": "Instagram takipçi listelerini karşılaştıran Android uygulaması; React Native/Expo, reklamlı sürüm ve reklam kaldırma seçeneği.",
+      "translations": {
+        "en": {
+          "summary": "Instagram takipçi listelerini karşılaştıran Android uygulaması; React Native/Expo, reklamlı sürüm ve reklam kaldırma seçeneği.",
+          "description": "Instagram takipçi listelerini karşılaştıran Android uygulaması; React Native/Expo, reklamlı sürüm ve reklam kaldırma seçeneği."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/bilalfarukozdemir/takipci-analiz/main/assets/icon.png",
+      "repository_url": "https://github.com/bilalfarukozdemir/takipci-analiz",
+      "github_repo_id": "1334079386",
+      "source_updated_at": "2026-11-09T21:11:47Z",
+      "homepage_url": "https://vitrincim.com",
+      "owner": "bilalfarukozdemir",
+      "default_branch": "main",
+      "source_commit_sha": "f90b4f5d14e3c8b0f2c8b407cbccfad98ec687f4",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Bilal Faruk Özdemir (vitrincim.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "android",
+        "android-app",
+        "apk",
+        "expo",
+        "followers-tracker",
+        "instagram",
+        "instagram-followers",
+        "no-tracking",
+        "offline-first",
+        "privacy-first",
+        "react-native",
+        "turkish",
+        "typescript",
+        "unfollow-tracker",
+        "unfollowers"
+      ],
+      "latest_version": "v1.3.11",
+      "release_url": "https://github.com/bilalfarukozdemir/takipci-analiz/releases/tag/v1.3.11",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bilalfarukozdemir-takipci-analiz-v1.3.11",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bilalfarukozdemir-takipci-analiz-v1.3.11/THIRD-PARTY-NOTICE-bilalfarukozdemir-takipci-analiz.txt",
+      "artifacts": [
+        {
+          "id": "a79d38195d048872baffa33d4b75c7ef9bce467984de162dc942a47577c3a088",
+          "filename": "takipci-analiz-v1.3.11.apk",
+          "original_filename": "takipci-analiz-v1.3.11.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.3.11",
+          "size_bytes": 39435856,
+          "sha256": "a79d38195d048872baffa33d4b75c7ef9bce467984de162dc942a47577c3a088",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "97534be995f8107290805243891c524282d6eeceeb827c622d3e484919703b39",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bilalfarukozdemir-takipci-analiz-v1.3.11/takipci-analiz-v1.3.11.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bilalfarukozdemir-takipci-analiz-v1.3.11"
         }
       ],
       "platforms": [
