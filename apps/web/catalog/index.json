@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T15:56:14.961508+00:00",
+  "generated_at": "2026-11-26T15:57:29.963592+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -35082,7 +35082,116 @@
     {
       "id": "go7studio-go7-workhorse",
       "slug": "go7studio-go7-workhorse",
-      "artifacts": [],
+      "artifacts": [
+        {
+          "id": "427843491db61949ba46731dcb545ec2045c0b089cfdd213d03e0525fc22060f",
+          "filename": "windows-windows-dictation-source.exe",
+          "original_filename": "windows-dictation-source.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "f7ed9eee670efe618f2032add35a89769420d5d4",
+          "size_bytes": 41472,
+          "sha256": "427843491db61949ba46731dcb545ec2045c0b089cfdd213d03e0525fc22060f",
+          "upstream_digest_verified": false,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-go7studio-go7-workhorse-build-f7ed9eee670efe618f2032add35a89769420d5d4/windows-windows-dictation-source.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-go7studio-go7-workhorse-build-f7ed9eee670efe618f2032add35a89769420d5d4",
+          "build_ref": "f7ed9eee670efe618f2032add35a89769420d5d4"
+        },
+        {
+          "id": "9b1fbf0c11c520ae714af8aa9af12cfd48503eedecd7398d8992ee94d1b4dc37",
+          "filename": "windows-elevate.exe",
+          "original_filename": "elevate.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "f7ed9eee670efe618f2032add35a89769420d5d4",
+          "size_bytes": 107520,
+          "sha256": "9b1fbf0c11c520ae714af8aa9af12cfd48503eedecd7398d8992ee94d1b4dc37",
+          "upstream_digest_verified": false,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-go7studio-go7-workhorse-build-f7ed9eee670efe618f2032add35a89769420d5d4/windows-elevate.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-go7studio-go7-workhorse-build-f7ed9eee670efe618f2032add35a89769420d5d4",
+          "build_ref": "f7ed9eee670efe618f2032add35a89769420d5d4"
+        },
+        {
+          "id": "1b4f9edad8eda759ec6e06b39ab83c5acaa5c6df946743a1391c9b72c6f3c22c",
+          "filename": "windows-Go7_Workhorse.exe",
+          "original_filename": "Go7 Workhorse.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "f7ed9eee670efe618f2032add35a89769420d5d4",
+          "size_bytes": 239422976,
+          "sha256": "1b4f9edad8eda759ec6e06b39ab83c5acaa5c6df946743a1391c9b72c6f3c22c",
+          "upstream_digest_verified": false,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-go7studio-go7-workhorse-build-f7ed9eee670efe618f2032add35a89769420d5d4/windows-Go7_Workhorse.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-go7studio-go7-workhorse-build-f7ed9eee670efe618f2032add35a89769420d5d4",
+          "build_ref": "f7ed9eee670efe618f2032add35a89769420d5d4"
+        },
+        {
+          "id": "9c2e9128fc096a185357b748377a300b9c77f6d03ccf20cf137852cc11a8d752",
+          "filename": "windows-Go7-Workhorse-Setup-0.7.18.exe",
+          "original_filename": "Go7-Workhorse-Setup-0.7.18.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "f7ed9eee670efe618f2032add35a89769420d5d4",
+          "size_bytes": 117767182,
+          "sha256": "9c2e9128fc096a185357b748377a300b9c77f6d03ccf20cf137852cc11a8d752",
+          "upstream_digest_verified": false,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-go7studio-go7-workhorse-build-f7ed9eee670efe618f2032add35a89769420d5d4/windows-Go7-Workhorse-Setup-0.7.18.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-go7studio-go7-workhorse-build-f7ed9eee670efe618f2032add35a89769420d5d4",
+          "build_ref": "f7ed9eee670efe618f2032add35a89769420d5d4"
+        },
+        {
+          "id": "9cf43a2e37fe4bd64b6e9ea3a715200e6d0ecffdffac6a0ba7fa80b79c6968db",
+          "filename": "macos-Go7-Workhorse-0.7.18-mac-arm64.dmg",
+          "original_filename": "Go7-Workhorse-0.7.18-mac-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "f7ed9eee670efe618f2032add35a89769420d5d4",
+          "size_bytes": 140564969,
+          "sha256": "9cf43a2e37fe4bd64b6e9ea3a715200e6d0ecffdffac6a0ba7fa80b79c6968db",
+          "upstream_digest_verified": false,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-go7studio-go7-workhorse-build-f7ed9eee670efe618f2032add35a89769420d5d4/macos-Go7-Workhorse-0.7.18-mac-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-go7studio-go7-workhorse-build-f7ed9eee670efe618f2032add35a89769420d5d4",
+          "build_ref": "f7ed9eee670efe618f2032add35a89769420d5d4"
+        },
+        {
+          "id": "a30bf34482b389fa719560dc1fc516819c9b7651f5039e4e1b6814239b2a3697",
+          "filename": "macos-Go7-Workhorse-0.7.18-mac-x64.dmg",
+          "original_filename": "Go7-Workhorse-0.7.18-mac-x64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "x86_64",
+          "version": "f7ed9eee670efe618f2032add35a89769420d5d4",
+          "size_bytes": 147180829,
+          "sha256": "a30bf34482b389fa719560dc1fc516819c9b7651f5039e4e1b6814239b2a3697",
+          "upstream_digest_verified": false,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-go7studio-go7-workhorse-build-f7ed9eee670efe618f2032add35a89769420d5d4/macos-Go7-Workhorse-0.7.18-mac-x64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-go7studio-go7-workhorse-build-f7ed9eee670efe618f2032add35a89769420d5d4",
+          "build_ref": "f7ed9eee670efe618f2032add35a89769420d5d4"
+        }
+      ],
       "name": "Go7-Workhorse",
       "summary": "One desk for every AI subscription you already pay for — Grok, Claude, Codex, Cursor and your own API keys, each under its own login. A model per chat or auto-routed by task; usage per vendor before the bill. Native desktop app for Windows ",
       "description": "One desk for every AI subscription you already pay for — Grok, Claude, Codex, Cursor and your own API keys, each under its own login. A model per chat or auto-routed by task; usage per vendor before the bill. Native desktop app for Windows and macOS. MIT.",
@@ -35132,7 +35241,10 @@
       ],
       "latest_version": "v0.7.18",
       "release_url": "https://github.com/go7studio/Go7-Workhorse/releases/tag/v0.7.18",
-      "platforms": [],
+      "platforms": [
+        "macos",
+        "windows"
+      ],
       "project_status": "source_available",
       "build_attempts": [
         {
@@ -35144,6 +35256,10 @@
           "requested_at": "2026-11-26T15:46:11.657199+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
         }
+      ],
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-go7studio-go7-workhorse-build-f7ed9eee670efe618f2032add35a89769420d5d4/THIRD-PARTY-NOTICE-go7studio-go7-workhorse.txt",
+      "build_refs": [
+        "f7ed9eee670efe618f2032add35a89769420d5d4"
       ]
     },
     {
