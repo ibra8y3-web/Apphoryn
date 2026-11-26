@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T02:23:36.656886+00:00",
+  "generated_at": "2026-11-26T02:24:05.831225+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -17515,6 +17515,113 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "mayusi-emuhelper",
+      "slug": "mayusi-emuhelper",
+      "name": "EmuHelper",
+      "summary": "Android download manager for browsing and retrieving files from user-configured HTTP endpoints. Ships with no sources or content.",
+      "description": "Android download manager for browsing and retrieving files from user-configured HTTP endpoints. Ships with no sources or content.",
+      "translations": {
+        "en": {
+          "summary": "Android download manager for browsing and retrieving files from user-configured HTTP endpoints. Ships with no sources or content.",
+          "description": "Android download manager for browsing and retrieving files from user-configured HTTP endpoints. Ships with no sources or content."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/mayusi/EmuHelper/main/docs/logo.png",
+      "repository_url": "https://github.com/mayusi/EmuHelper",
+      "github_repo_id": "1260845346",
+      "source_updated_at": "2026-11-22T00:30:46Z",
+      "homepage_url": "https://github.com/mayusi/EmuHelper/releases",
+      "owner": "mayusi",
+      "default_branch": "main",
+      "source_commit_sha": "732b0548d659d21d49dc8f4c3ad803c9400ec11d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 mayusi\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "download-manager",
+        "hilt",
+        "jetpack-compose",
+        "kotlin",
+        "kotlin-coroutines",
+        "material3",
+        "okhttp"
+      ],
+      "latest_version": "v1.0.0",
+      "release_url": "https://github.com/mayusi/EmuHelper/releases/tag/v1.0.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mayusi-emuhelper-v1.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mayusi-emuhelper-v1.0.0/THIRD-PARTY-NOTICE-mayusi-emuhelper.txt",
+      "artifacts": [
+        {
+          "id": "dc4dd99f787ab1c2ef2ef5beb03b878a06c1b0ca697fc211f8787153c5f40caf",
+          "filename": "app-debug.apk",
+          "original_filename": "app-debug.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.0",
+          "size_bytes": 67590516,
+          "sha256": "dc4dd99f787ab1c2ef2ef5beb03b878a06c1b0ca697fc211f8787153c5f40caf",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "21e5163f21a1bde5b9a22ba2da263c2806d8e265f50495b70b5dd0dc1cf7701c",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mayusi-emuhelper-v1.0.0/app-debug.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mayusi-emuhelper-v1.0.0"
+        },
+        {
+          "id": "c56de0c14738a8abbab9aa99379dd0bb0211d77c1d1fbe22eb8c82d96076f963",
+          "filename": "EmuHelper-1.0.0.msi",
+          "original_filename": "EmuHelper-1.0.0.msi",
+          "platform": "windows",
+          "package_type": "Windows installer",
+          "architecture": null,
+          "version": "v1.0.0",
+          "size_bytes": 50063592,
+          "sha256": "c56de0c14738a8abbab9aa99379dd0bb0211d77c1d1fbe22eb8c82d96076f963",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mayusi-emuhelper-v1.0.0/EmuHelper-1.0.0.msi",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mayusi-emuhelper-v1.0.0"
+        },
+        {
+          "id": "1e740c8a4732038e4cee72ed152ecb33c7f8064d33ecc65bb6b9c4eb5369a377",
+          "filename": "emuhelper_1.0.0-1_amd64.deb",
+          "original_filename": "emuhelper_1.0.0-1_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v1.0.0",
+          "size_bytes": 43674112,
+          "sha256": "1e740c8a4732038e4cee72ed152ecb33c7f8064d33ecc65bb6b9c4eb5369a377",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mayusi-emuhelper-v1.0.0/emuhelper_1.0.0-1_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mayusi-emuhelper-v1.0.0"
+        }
+      ],
+      "platforms": [
+        "android",
+        "linux",
+        "windows"
       ]
     },
     {
