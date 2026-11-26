@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:56:39.795134+00:00",
+  "generated_at": "2026-11-26T04:57:06.313249+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -58842,6 +58842,100 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "prometeucorp-prometeu",
+      "slug": "prometeucorp-prometeu",
+      "name": "prometeu",
+      "summary": "Free, open-source desktop app to run Claude Code, Codex, Cursor CLI and Antigravity agents in parallel with git worktrees and diff review.",
+      "description": "Free, open-source desktop app to run Claude Code, Codex, Cursor CLI and Antigravity agents in parallel with git worktrees and diff review.",
+      "translations": {
+        "en": {
+          "summary": "Free, open-source desktop app to run Claude Code, Codex, Cursor CLI and Antigravity agents in parallel with git worktrees and diff review.",
+          "description": "Free, open-source desktop app to run Claude Code, Codex, Cursor CLI and Antigravity agents in parallel with git worktrees and diff review."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/prometeucorp/prometeu/main/docs/icon.png",
+      "repository_url": "https://github.com/prometeucorp/prometeu",
+      "github_repo_id": "1356633685",
+      "source_updated_at": "2026-11-20T10:55:07Z",
+      "homepage_url": "https://prometeu.co",
+      "owner": "prometeucorp",
+      "default_branch": "main",
+      "source_commit_sha": "e54675cfb7f74ae3b15b647c751ab5650a1c6550",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Gustavo Brancaglione\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ai-agents",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "coding-agents",
+        "cursor",
+        "cursor-cli",
+        "desktop-app",
+        "developer-tools",
+        "git-worktree",
+        "llm",
+        "open-source",
+        "tauri",
+        "worktrees"
+      ],
+      "latest_version": "v0.49.0",
+      "release_url": "https://github.com/prometeucorp/prometeu/releases/tag/v0.49.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-prometeucorp-prometeu-v0.49.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-prometeucorp-prometeu-v0.49.0/THIRD-PARTY-NOTICE-prometeucorp-prometeu.txt",
+      "artifacts": [
+        {
+          "id": "b18ffaf9a847a9ec8190580220539d42772580e675b01483d7d36cc10f0efa0b",
+          "filename": "Prometeu_aarch64.dmg",
+          "original_filename": "Prometeu_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.49.0",
+          "size_bytes": 49928154,
+          "sha256": "b18ffaf9a847a9ec8190580220539d42772580e675b01483d7d36cc10f0efa0b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-prometeucorp-prometeu-v0.49.0/Prometeu_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-prometeucorp-prometeu-v0.49.0"
+        },
+        {
+          "id": "6505f096da59aafd6f2b763478e95ac47dd4018b36a1d8bc2acee461dbbbeece",
+          "filename": "Prometeu_x86_64.AppImage",
+          "original_filename": "Prometeu_x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.49.0",
+          "size_bytes": 89487864,
+          "sha256": "6505f096da59aafd6f2b763478e95ac47dd4018b36a1d8bc2acee461dbbbeece",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-prometeucorp-prometeu-v0.49.0/Prometeu_x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-prometeucorp-prometeu-v0.49.0"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos"
       ]
     },
     {
