@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:52:50.823990+00:00",
+  "generated_at": "2026-11-26T06:53:14.980650+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -27085,6 +27085,74 @@
       ],
       "platforms": [
         "windows"
+      ]
+    },
+    {
+      "id": "mrkups-file-tile",
+      "slug": "mrkups-file-tile",
+      "name": "file-tile",
+      "summary": "A file manager built for working across multiple folders at once.",
+      "description": "A file manager built for working across multiple folders at once.",
+      "translations": {
+        "en": {
+          "summary": "A file manager built for working across multiple folders at once.",
+          "description": "A file manager built for working across multiple folders at once."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/MRKups/file-tile/main/assets/icons/app/icon.png",
+      "repository_url": "https://github.com/MRKups/file-tile",
+      "github_repo_id": "1444732459",
+      "source_updated_at": "2026-11-03T22:57:03Z",
+      "homepage_url": null,
+      "owner": "MRKups",
+      "default_branch": "main",
+      "source_commit_sha": "8cb5fd784c77f6cc08c55c2faa123290b2851895",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Michał Kupś\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "desktop-app",
+        "file-explorer",
+        "file-manager",
+        "iced",
+        "productivity",
+        "rust"
+      ],
+      "latest_version": "v0.2.0",
+      "release_url": "https://github.com/MRKups/file-tile/releases/tag/v0.2.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mrkups-file-tile-v0.2.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mrkups-file-tile-v0.2.0/THIRD-PARTY-NOTICE-mrkups-file-tile.txt",
+      "artifacts": [
+        {
+          "id": "f810d213b775d2c6b5a3e8bfab1be7ac5a9b649cb8ec8575363ef6d022ec8026",
+          "filename": "file-tile_0.2.0_aarch64.dmg",
+          "original_filename": "file-tile_0.2.0_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.2.0",
+          "size_bytes": 9662768,
+          "sha256": "f810d213b775d2c6b5a3e8bfab1be7ac5a9b649cb8ec8575363ef6d022ec8026",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mrkups-file-tile-v0.2.0/file-tile_0.2.0_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mrkups-file-tile-v0.2.0"
+        }
+      ],
+      "platforms": [
+        "macos"
       ]
     },
     {
