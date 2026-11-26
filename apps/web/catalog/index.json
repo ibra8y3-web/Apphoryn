@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:20:13.285858+00:00",
+  "generated_at": "2026-11-26T06:20:48.530326+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -38816,6 +38816,79 @@
       ],
       "platforms": [
         "macos"
+      ]
+    },
+    {
+      "id": "projectgloria-kintsugi",
+      "slug": "projectgloria-kintsugi",
+      "name": "Kintsugi",
+      "summary": "A refined, telemetry-free personal Git desktop client for Windows built with Electron, React, and TypeScript",
+      "description": "A refined, telemetry-free personal Git desktop client for Windows built with Electron, React, and TypeScript",
+      "translations": {
+        "en": {
+          "summary": "A refined, telemetry-free personal Git desktop client for Windows built with Electron, React, and TypeScript",
+          "description": "A refined, telemetry-free personal Git desktop client for Windows built with Electron, React, and TypeScript"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/projectGloria/Kintsugi/main/app/static/linux/icon-logo.png",
+      "repository_url": "https://github.com/projectGloria/Kintsugi",
+      "github_repo_id": "1433904324",
+      "source_updated_at": "2026-11-07T23:30:07Z",
+      "homepage_url": null,
+      "owner": "projectGloria",
+      "default_branch": "main",
+      "source_commit_sha": "c0776736e50675f45892490d05b0e8d02e2b3e92",
+      "license_text": "Copyright (c) GitHub, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "desktop-app",
+        "electron",
+        "git",
+        "git-client",
+        "git-gui",
+        "github-desktop",
+        "kintsugi",
+        "privacy",
+        "react",
+        "typescript",
+        "windows"
+      ],
+      "latest_version": "v1.3.0",
+      "release_url": "https://github.com/projectGloria/Kintsugi/releases/tag/v1.3.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-projectgloria-kintsugi-v1.3.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-projectgloria-kintsugi-v1.3.0/THIRD-PARTY-NOTICE-projectgloria-kintsugi.txt",
+      "artifacts": [
+        {
+          "id": "647979e5dec33f013dc538b97c3ec3e666ecef37a306242edc69b54d4f174948",
+          "filename": "Kintsugi_1.3.0_x64-setup.exe",
+          "original_filename": "Kintsugi_1.3.0_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.3.0",
+          "size_bytes": 210875496,
+          "sha256": "647979e5dec33f013dc538b97c3ec3e666ecef37a306242edc69b54d4f174948",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-projectgloria-kintsugi-v1.3.0/Kintsugi_1.3.0_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-projectgloria-kintsugi-v1.3.0"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
