@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:47:24.996291+00:00",
+  "generated_at": "2026-11-26T03:47:46.893715+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -48846,6 +48846,97 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "chenbstack-otter",
+      "slug": "chenbstack-otter",
+      "name": "otter",
+      "summary": "Open-source network project maintained by chenbstack.",
+      "description": "Open-source network project maintained by chenbstack.",
+      "translations": {
+        "en": {
+          "summary": "Open-source network project maintained by chenbstack.",
+          "description": "Open-source network project maintained by chenbstack."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/27947708?v=4",
+      "repository_url": "https://github.com/chenbstack/otter",
+      "github_repo_id": "1469851630",
+      "source_updated_at": "2026-11-25T01:51:33Z",
+      "homepage_url": null,
+      "owner": "chenbstack",
+      "default_branch": "main",
+      "source_commit_sha": "a51b47ad9f8836fd10a7a31691caa453836bd637",
+      "license_text": "MIT License\n\nCopyright (c) 2026 chenbstack\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "network",
+      "topics": [
+        "agentless",
+        "desktop-app",
+        "docker",
+        "gpui",
+        "macos",
+        "rust",
+        "server-management",
+        "sftp",
+        "ssh",
+        "ssh-client",
+        "terminal"
+      ],
+      "latest_version": "v0.5.0",
+      "release_url": "https://github.com/chenbstack/otter/releases/tag/v0.5.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-chenbstack-otter-v0.5.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-chenbstack-otter-v0.5.0/THIRD-PARTY-NOTICE-chenbstack-otter.txt",
+      "artifacts": [
+        {
+          "id": "b0f441dc109dd0cd87d4a3de9f3f593247a5736bef142a83abf3db7431f19d9d",
+          "filename": "Otter-0.5.0-arm64.dmg",
+          "original_filename": "Otter-0.5.0-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.5.0",
+          "size_bytes": 19213768,
+          "sha256": "b0f441dc109dd0cd87d4a3de9f3f593247a5736bef142a83abf3db7431f19d9d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-chenbstack-otter-v0.5.0/Otter-0.5.0-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-chenbstack-otter-v0.5.0"
+        },
+        {
+          "id": "7505d471c64f25f0938a13cc441f8dcc94d71f5499cd8b43ac3b2ca629dcaf95",
+          "filename": "Otter-0.5.0-windows-x86_64-setup.exe",
+          "original_filename": "Otter-0.5.0-windows-x86_64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.5.0",
+          "size_bytes": 39549440,
+          "sha256": "7505d471c64f25f0938a13cc441f8dcc94d71f5499cd8b43ac3b2ca629dcaf95",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-chenbstack-otter-v0.5.0/Otter-0.5.0-windows-x86_64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-chenbstack-otter-v0.5.0"
+        }
+      ],
+      "platforms": [
+        "macos",
+        "windows"
       ]
     },
     {
