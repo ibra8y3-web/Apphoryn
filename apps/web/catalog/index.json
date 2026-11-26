@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T10:18:24.771807+00:00",
+  "generated_at": "2026-11-26T10:18:53.398543+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -49548,17 +49548,19 @@
       "id": "eggplants-maydo",
       "slug": "eggplants-maydo",
       "name": "maydo",
-      "summary": "Maydo is an Android video player built on mpv with yt-dlp built in, so it can open local files, web page URLs, search results, shared links, and playlists, with a Material Design interface.",
-      "description": "Maydo is an Android video player built on mpv with yt-dlp integrated. Open a local file, paste a web page URL, type search words (yt-dlp plays the first YouTube result), or share a link from another app, and yt-dlp finds the stream that mpv plays.\n\nIt supports playlists: .m3u/.m3u8 files and HLS streams; playlists on video sites through yt-dlp (a playlist link plays all of it, and a video link with a playlist in it plays the playlist from that video); a folder picked with the system's folder picker, in natural order; previous/next and a playlist list to jump anywhere.\n\nThe player offers a quality limit, hardware decoding, video, audio and subtitle tracks, playback speed, and picture-in-picture. Swipe to seek and adjust brightness or volume; double-tap to skip or pause. mpv.conf and yt-dlp's config can be edited in the app. There is history, English and Japanese UI, and dynamic color.\n\nDevelopment requires mise and the Android SDK with NDK r28c; mise run build, test, lint and format tasks are provided. Release builds produce per-ABI APKs plus a universal APK; the in-app updater picks the one for the device's ABI. License: MIT, with ytdl_hook.lua under LGPL-2.1-or-later.",
+      "summary": "An Android video player built on mpv with yt-dlp inside",
+      "description": "An Android video player built on mpv with yt-dlp inside",
       "translations": {
-        "en": "Maydo is an Android video player built on mpv with yt-dlp built in, so it can open local files, web page URLs, search results, shared links, and playlists, with a Material Design interface.",
-        "ar": "مايدو مشغّل فيديو لأندرويد مبني على mpv مع yt-dlp مدمجًا، لذا يمكنه فتح الملفات المحلية وروابط صفحات الويب ونتائج البحث والروابط المشتركة وقوائم التشغيل، بواجهة تصميم مادي."
+        "en": {
+          "summary": "An Android video player built on mpv with yt-dlp inside",
+          "description": "An Android video player built on mpv with yt-dlp inside"
+        }
       },
       "description_translations": {
         "en": "Maydo is an Android video player built on mpv with yt-dlp integrated. Open a local file, paste a web page URL, type search words (yt-dlp plays the first YouTube result), or share a link from another app, and yt-dlp finds the stream that mpv plays.\n\nIt supports playlists: .m3u/.m3u8 files and HLS streams; playlists on video sites through yt-dlp (a playlist link plays all of it, and a video link with a playlist in it plays the playlist from that video); a folder picked with the system's folder picker, in natural order; previous/next and a playlist list to jump anywhere.\n\nThe player offers a quality limit, hardware decoding, video, audio and subtitle tracks, playback speed, and picture-in-picture. Swipe to seek and adjust brightness or volume; double-tap to skip or pause. mpv.conf and yt-dlp's config can be edited in the app. There is history, English and Japanese UI, and dynamic color.\n\nDevelopment requires mise and the Android SDK with NDK r28c; mise run build, test, lint and format tasks are provided. Release builds produce per-ABI APKs plus a universal APK; the in-app updater picks the one for the device's ABI. License: MIT, with ytdl_hook.lua under LGPL-2.1-or-later.",
         "ar": "مايدو مشغّل فيديو لأندرويد مبني على mpv مع yt-dlp مدمجًا. افتح ملفًا محليًا، أو ألصق رابط صفحة ويب، أو اكتب كلمات بحث (يشغّل yt-dlp أول نتيجة على YouTube)، أو شارك رابطًا من تطبيق آخر، فيجد yt-dlp البثّ الذي يشغّله mpv.\n\nيدعم قوائم التشغيل: ملفات .m3u/.m3u8 وبثّ HLS؛ وقوائم التشغيل على مواقع الفيديو عبر yt-dlp (رابط قائمة تشغيل يشغّلها كاملة، ورابط فيديو يتضمّن قائمة تشغيل يشغّل القائمة من ذلك الفيديو)؛ ومجلدًا يُختار بمُنتقي المجلدات في النظام، بترتيب طبيعي؛ وزرّي السابق والتالي، وقائمة بالقائمة للانتقال إلى أي موضع فيها.\n\nيوفّر المشغّل حدًّا للجودة، وفكّ ترميز عتاديًّا، ومسارات الفيديو والصوت والترجمة، وسرعة التشغيل، والصورة داخل الصورة. اسحب للبحث عن الموضع، واضبط السطوع أو مستوى الصوت؛ وانقر نقرًا مزدوجًا للتخطّي أو الإيقاف المؤقت. يمكن تحرير mpv.conf وملف إعدادات yt-dlp داخل التطبيق. يتضمّن سجلًّا، وواجهة بالإنجليزية واليابانية، ولونًا ديناميكيًّا.\n\nيتطلّب التطوير mise وAndroid SDK مع NDK r28c؛ وتتوفر مهام mise run build وtest وlint وformat. تُنتج إصدارات التوزيع ملفات APK لكل بنية (ABI) إضافةً إلى APK شامل، ويختار محدِّث التطبيق الملف المناسب لبنية الجهاز. الترخيص MIT، مع ytdl_hook.lua المنسوخ والمعدَّل من mpv بموجب LGPL-2.1-or-later."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/eggplants/maydo/master/fastlane/metadata/android/en-US/images/icon.png",
@@ -49572,10 +49574,10 @@
       "license_text": "Copyright 2026 eggplants\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
-      "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "Standalone Android end-user application (Kotlin, Material Design) distributed as APKs through GitHub Releases; the README documents a supported build path (mise, Android SDK with NDK r28c, mise run build) and a release workflow producing per-ABI and universal APKs, so project_kind is application and build_recommended is true.",
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
       "project_status": "installable",
       "category": "developer",
       "topics": [
