@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T05:31:53.285483+00:00",
+  "generated_at": "2026-11-26T05:32:16.117525+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -42371,6 +42371,138 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "ifer47-markeron",
+      "slug": "ifer47-markeron",
+      "name": "markeron",
+      "summary": "Lightweight (~1.5 MB) open-source screen annotation with click-through mode and keyboard-first shortcuts. For demos, teaching, meetings & screen recording. Windows, macOS.",
+      "description": "Lightweight (~1.5 MB) open-source screen annotation with click-through mode and keyboard-first shortcuts. For demos, teaching, meetings & screen recording. Windows, macOS.",
+      "translations": {
+        "en": {
+          "summary": "Lightweight (~1.5 MB) open-source screen annotation with click-through mode and keyboard-first shortcuts. For demos, teaching, meetings & screen recording. Windows, macOS.",
+          "description": "Lightweight (~1.5 MB) open-source screen annotation with click-through mode and keyboard-first shortcuts. For demos, teaching, meetings & screen recording. Windows, macOS."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ifer47/markeron/master/.github/assets/icon.png",
+      "repository_url": "https://github.com/ifer47/markeron",
+      "github_repo_id": "1183931176",
+      "source_updated_at": "2026-11-25T17:13:36Z",
+      "homepage_url": "https://markeron.cn/",
+      "owner": "ifer47",
+      "default_branch": "master",
+      "source_commit_sha": "4ad9dfb564638346193a18c325ba8d72db86be5a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 MarkerOn\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "canvas",
+        "desktop-annotation",
+        "desktop-app",
+        "drawing",
+        "macos",
+        "productivity",
+        "rust",
+        "screen-annotation",
+        "tailwindcss",
+        "tauri",
+        "tauri-app",
+        "typescript",
+        "vite",
+        "vue",
+        "vue3",
+        "vue3-typescript",
+        "whiteboard",
+        "windows"
+      ],
+      "latest_version": "v2.35.3",
+      "release_url": "https://github.com/ifer47/markeron/releases/tag/v2.35.3",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ifer47-markeron-v2.35.3",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ifer47-markeron-v2.35.3/THIRD-PARTY-NOTICE-ifer47-markeron.txt",
+      "artifacts": [
+        {
+          "id": "c0e3fd20b92abff21eec4965ab337380f39d71ad1e86a2a32810187e08ef0025",
+          "filename": "MarkerOn_2.35.3_aarch64.dmg",
+          "original_filename": "MarkerOn_2.35.3_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v2.35.3",
+          "size_bytes": 3988007,
+          "sha256": "c0e3fd20b92abff21eec4965ab337380f39d71ad1e86a2a32810187e08ef0025",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ifer47-markeron-v2.35.3/MarkerOn_2.35.3_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ifer47-markeron-v2.35.3"
+        },
+        {
+          "id": "d3185e499f8f950b75ae24b3d8e679f4ae51961c0874676c2f1060161bd6af37",
+          "filename": "MarkerOn_2.35.3_x64-setup.exe",
+          "original_filename": "MarkerOn_2.35.3_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v2.35.3",
+          "size_bytes": 3180728,
+          "sha256": "d3185e499f8f950b75ae24b3d8e679f4ae51961c0874676c2f1060161bd6af37",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ifer47-markeron-v2.35.3/MarkerOn_2.35.3_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ifer47-markeron-v2.35.3"
+        },
+        {
+          "id": "07cf701efda07da559fe79ba1957e2781dffd9240ae1f977adaa3bb333717dbe",
+          "filename": "MarkerOn_2.35.3_x64.dmg",
+          "original_filename": "MarkerOn_2.35.3_x64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "x86_64",
+          "version": "v2.35.3",
+          "size_bytes": 4386076,
+          "sha256": "07cf701efda07da559fe79ba1957e2781dffd9240ae1f977adaa3bb333717dbe",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ifer47-markeron-v2.35.3/MarkerOn_2.35.3_x64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ifer47-markeron-v2.35.3"
+        },
+        {
+          "id": "2fab62b6389415cf6d8e8431a2a3b4b47abe4cf1f3a321f813ce3cbc5967d9db",
+          "filename": "MarkerOn_2.35.3_x64_zh-CN.msi",
+          "original_filename": "MarkerOn_2.35.3_x64_zh-CN.msi",
+          "platform": "windows",
+          "package_type": "Windows installer",
+          "architecture": "x86_64",
+          "version": "v2.35.3",
+          "size_bytes": 4747264,
+          "sha256": "2fab62b6389415cf6d8e8431a2a3b4b47abe4cf1f3a321f813ce3cbc5967d9db",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ifer47-markeron-v2.35.3/MarkerOn_2.35.3_x64_zh-CN.msi",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ifer47-markeron-v2.35.3"
+        }
+      ],
+      "platforms": [
+        "macos",
+        "windows"
       ]
     },
     {
