@@ -58136,6 +58136,16 @@
         "linux",
         "macos",
         "windows"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "17631b161d7b7c2d4a43c3d99fbaf1897f546faf",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-26T03:25:04.173627+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
       ]
     },
     {
