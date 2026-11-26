@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T05:07:55.583192+00:00",
+  "generated_at": "2026-11-26T05:08:22.441275+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -37971,6 +37971,123 @@
       ],
       "platforms": [
         "android",
+        "windows"
+      ]
+    },
+    {
+      "id": "fmadore-live-translation",
+      "slug": "fmadore-live-translation",
+      "name": "Live-translation",
+      "summary": "Offline Whisper captions and cloud translation in a transparent overlay for Windows and macOS: meetings, calls and presentations. Bilingual captions, cloud subtitles, transcript export; native x64, ARM64 and Apple silicon.",
+      "description": "Offline Whisper captions and cloud translation in a transparent overlay for Windows and macOS: meetings, calls and presentations. Bilingual captions, cloud subtitles, transcript export; native x64, ARM64 and Apple silicon.",
+      "translations": {
+        "en": {
+          "summary": "Offline Whisper captions and cloud translation in a transparent overlay for Windows and macOS: meetings, calls and presentations. Bilingual captions, cloud subtitles, transcript export; native x64, ARM64 and Apple silicon.",
+          "description": "Offline Whisper captions and cloud translation in a transparent overlay for Windows and macOS: meetings, calls and presentations. Bilingual captions, cloud subtitles, transcript export; native x64, ARM64 and Apple silicon."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/fmadore/Live-translation/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/fmadore/Live-translation",
+      "github_repo_id": "1268310160",
+      "source_updated_at": "2026-11-23T16:25:40Z",
+      "homepage_url": "https://fmadore.github.io/Live-translation/",
+      "owner": "fmadore",
+      "default_branch": "main",
+      "source_commit_sha": "c3166b1a3d2802025e144ca1f801c975c2a1523a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Frédérick Madore\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "accessibility",
+        "african-studies",
+        "arm64",
+        "desktop-app",
+        "digital-humanities",
+        "gemini",
+        "live-captions",
+        "macos",
+        "mistral",
+        "offline-speech-recognition",
+        "openai",
+        "rust",
+        "speech-to-text",
+        "speech-translation",
+        "subtitles",
+        "sveltekit",
+        "tauri",
+        "wasapi",
+        "whisper",
+        "windows"
+      ],
+      "latest_version": "v1.16.1",
+      "release_url": "https://github.com/fmadore/Live-translation/releases/tag/v1.16.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fmadore-live-translation-v1.16.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fmadore-live-translation-v1.16.1/THIRD-PARTY-NOTICE-fmadore-live-translation.txt",
+      "artifacts": [
+        {
+          "id": "3b52fdcb1d7647771d6780ae9122edc5fe798f8aff222b447fcafefdc934bb1b",
+          "filename": "Live.Translation_1.16.1_aarch64.dmg",
+          "original_filename": "Live.Translation_1.16.1_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v1.16.1",
+          "size_bytes": 6556869,
+          "sha256": "3b52fdcb1d7647771d6780ae9122edc5fe798f8aff222b447fcafefdc934bb1b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fmadore-live-translation-v1.16.1/Live.Translation_1.16.1_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fmadore-live-translation-v1.16.1"
+        },
+        {
+          "id": "478dda576d9b57d40174f2f50dfd2faa3680ee52622ca80d521f808ed5d2a2fe",
+          "filename": "Live.Translation_1.16.1_x64-setup.exe",
+          "original_filename": "Live.Translation_1.16.1_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.16.1",
+          "size_bytes": 10970998,
+          "sha256": "478dda576d9b57d40174f2f50dfd2faa3680ee52622ca80d521f808ed5d2a2fe",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fmadore-live-translation-v1.16.1/Live.Translation_1.16.1_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fmadore-live-translation-v1.16.1"
+        },
+        {
+          "id": "0402253854501296909aeb9200d57186e1b87e75f867b385c184d2d0441cbacd",
+          "filename": "Live.Translation_1.16.1_x64_en-US.msi",
+          "original_filename": "Live.Translation_1.16.1_x64_en-US.msi",
+          "platform": "windows",
+          "package_type": "Windows installer",
+          "architecture": "x86_64",
+          "version": "v1.16.1",
+          "size_bytes": 24248320,
+          "sha256": "0402253854501296909aeb9200d57186e1b87e75f867b385c184d2d0441cbacd",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fmadore-live-translation-v1.16.1/Live.Translation_1.16.1_x64_en-US.msi",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fmadore-live-translation-v1.16.1"
+        }
+      ],
+      "platforms": [
+        "macos",
         "windows"
       ]
     },
