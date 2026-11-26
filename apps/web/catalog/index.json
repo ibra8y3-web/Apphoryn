@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:10:53.874388+00:00",
+  "generated_at": "2026-11-26T06:11:25.402825+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -10837,6 +10837,80 @@
         "android",
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "kyuukyuustone-cadre-heihei",
+      "slug": "kyuukyuustone-cadre-heihei",
+      "name": "cadre-heihei",
+      "summary": "Multi-agent AI collaboration for Windows. Your supervisor agent breaks the work down, dispatches it to specialist agents, reviews what comes back, and hands you a conclusion with evidence — the builder and the reviewer are never the same ag",
+      "description": "Multi-agent AI collaboration for Windows. Your supervisor agent breaks the work down, dispatches it to specialist agents, reviews what comes back, and hands you a conclusion with evidence — the builder and the reviewer are never the same agent.",
+      "translations": {
+        "en": {
+          "summary": "Multi-agent AI collaboration for Windows. Your supervisor agent breaks the work down, dispatches it to specialist agents, reviews what comes back, and hands you a conclusion with evidence — the builder and the reviewer are never the same ag",
+          "description": "Multi-agent AI collaboration for Windows. Your supervisor agent breaks the work down, dispatches it to specialist agents, reviews what comes back, and hands you a conclusion with evidence — the builder and the reviewer are never the same agent."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/KyuuKyuuStone/cadre-heihei/master/desktop/apps/desktop/resources/icon.png",
+      "repository_url": "https://github.com/KyuuKyuuStone/cadre-heihei",
+      "github_repo_id": "1427146036",
+      "source_updated_at": "2026-11-06T03:54:49Z",
+      "homepage_url": null,
+      "owner": "KyuuKyuuStone",
+      "default_branch": "master",
+      "source_commit_sha": "5fe9f62a84da8d99ef2da98eeda98bbffdab3caf",
+      "license_text": "MIT License\n\nCopyright (c) 2026 DeepSeek (DeepSeek Harness)\nCopyright (c) 2026 KyuuKyuuStone (Cadre Heihei)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "deepseek",
+        "desktop-app",
+        "developer-tools",
+        "electron",
+        "llm",
+        "multi-agent",
+        "productivity",
+        "typescript",
+        "windows"
+      ],
+      "latest_version": "v1.7.0",
+      "release_url": "https://github.com/KyuuKyuuStone/cadre-heihei/releases/tag/v1.7.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kyuukyuustone-cadre-heihei-v1.7.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kyuukyuustone-cadre-heihei-v1.7.0/THIRD-PARTY-NOTICE-kyuukyuustone-cadre-heihei.txt",
+      "artifacts": [
+        {
+          "id": "a3ebc72c176c78b087633b2d77f186ea807544e7cf3e8c1684c530b87dcca5c0",
+          "filename": "cadre-heihei-1.7.0-win-x64-unsigned.exe",
+          "original_filename": "cadre-heihei-1.7.0-win-x64-unsigned.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.7.0",
+          "size_bytes": 288759965,
+          "sha256": "a3ebc72c176c78b087633b2d77f186ea807544e7cf3e8c1684c530b87dcca5c0",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kyuukyuustone-cadre-heihei-v1.7.0/cadre-heihei-1.7.0-win-x64-unsigned.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kyuukyuustone-cadre-heihei-v1.7.0"
+        }
+      ],
+      "platforms": [
         "windows"
       ]
     },
