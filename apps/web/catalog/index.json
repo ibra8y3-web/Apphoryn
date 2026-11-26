@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:42:31.345932+00:00",
+  "generated_at": "2026-11-26T06:43:22.211669+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -66926,6 +66926,102 @@
       ],
       "platforms": [
         "linux",
+        "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "huggon1-postrove",
+      "slug": "huggon1-postrove",
+      "name": "postrove",
+      "summary": "Search social platforms with their own AI. Save interesting posts and articles for later, with summaries ready.",
+      "description": "Search social platforms with their own AI. Save interesting posts and articles for later, with summaries ready.",
+      "translations": {
+        "en": {
+          "summary": "Search social platforms with their own AI. Save interesting posts and articles for later, with summaries ready.",
+          "description": "Search social platforms with their own AI. Save interesting posts and articles for later, with summaries ready."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/huggon1/postrove/dev/assets/postrove-icon.svg",
+      "repository_url": "https://github.com/huggon1/postrove",
+      "github_repo_id": "1362846364",
+      "source_updated_at": "2026-11-11T17:06:38Z",
+      "homepage_url": "https://huggon1.github.io/postrove/",
+      "owner": "huggon1",
+      "default_branch": "dev",
+      "source_commit_sha": "ea3682ac57a0787913172d044b0875ae9bd1eb43",
+      "license_text": "MIT License\n\nCopyright (c) 2026 huggon1\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "ai-agents",
+        "ai-search",
+        "desktop-app",
+        "electron",
+        "feishu",
+        "gemini",
+        "grok",
+        "knowledge-management",
+        "read-it-later",
+        "reddit",
+        "social-media",
+        "summarization",
+        "telegram-bot",
+        "translation",
+        "typescript",
+        "xiaohongshu"
+      ],
+      "latest_version": "v0.2.5",
+      "release_url": "https://github.com/huggon1/postrove/releases/tag/v0.2.5",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-huggon1-postrove-v0.2.5",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-huggon1-postrove-v0.2.5/THIRD-PARTY-NOTICE-huggon1-postrove.txt",
+      "artifacts": [
+        {
+          "id": "0de2c22dce56dcba6e4404b0eeda8d3c5ac6b3669e56185d944d2428550b5c61",
+          "filename": "Postrove-0.2.5-mac-arm64.dmg",
+          "original_filename": "Postrove-0.2.5-mac-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.2.5",
+          "size_bytes": 304316744,
+          "sha256": "0de2c22dce56dcba6e4404b0eeda8d3c5ac6b3669e56185d944d2428550b5c61",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-huggon1-postrove-v0.2.5/Postrove-0.2.5-mac-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-huggon1-postrove-v0.2.5"
+        },
+        {
+          "id": "e1093a0477e9d2871ae93472e5596ff51a96cf5297e319ed8bb7304aff2231b0",
+          "filename": "Postrove-0.2.5-win-x64.exe",
+          "original_filename": "Postrove-0.2.5-win-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.2.5",
+          "size_bytes": 266171866,
+          "sha256": "e1093a0477e9d2871ae93472e5596ff51a96cf5297e319ed8bb7304aff2231b0",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-huggon1-postrove-v0.2.5/Postrove-0.2.5-win-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-huggon1-postrove-v0.2.5"
+        }
+      ],
+      "platforms": [
         "macos",
         "windows"
       ]
