@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T22:10:31.727368+00:00",
+  "generated_at": "2026-11-26T22:11:03.945205+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -76956,7 +76956,7 @@
       "homepage_url": "https://prometeu.co",
       "owner": "prometeucorp",
       "default_branch": "main",
-      "source_commit_sha": "1a9e36cee24f27695ed394408c7823c375066ce0",
+      "source_commit_sha": "2246f9b2d186833c89068726b1dc7c09b6cbf9a9",
       "license_text": "MIT License\n\nCopyright (c) 2026 Gustavo Brancaglione\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -76982,10 +76982,10 @@
         "tauri",
         "worktrees"
       ],
-      "latest_version": "v0.49.0",
-      "release_url": "https://github.com/prometeucorp/prometeu/releases/tag/v0.49.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-prometeucorp-prometeu-v0.49.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-prometeucorp-prometeu-v0.49.0/THIRD-PARTY-NOTICE-prometeucorp-prometeu.txt",
+      "latest_version": "v0.51.1",
+      "release_url": "https://github.com/prometeucorp/prometeu/releases/tag/v0.51.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-prometeucorp-prometeu-v0.51.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-prometeucorp-prometeu-v0.51.1/THIRD-PARTY-NOTICE-prometeucorp-prometeu.txt",
       "artifacts": [
         {
           "id": "b18ffaf9a847a9ec8190580220539d42772580e675b01483d7d36cc10f0efa0b",
@@ -77020,6 +77020,40 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-prometeucorp-prometeu-v0.49.0/Prometeu_x86_64.AppImage",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-prometeucorp-prometeu-v0.49.0"
+        },
+        {
+          "id": "0ebe754d12e61dbc1ca1a20fd73ec73468bac7d45f72012fc17d18880d0c0cfa",
+          "filename": "Prometeu_aarch64.dmg",
+          "original_filename": "Prometeu_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.51.1",
+          "size_bytes": 51875386,
+          "sha256": "0ebe754d12e61dbc1ca1a20fd73ec73468bac7d45f72012fc17d18880d0c0cfa",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-prometeucorp-prometeu-v0.51.1/Prometeu_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-prometeucorp-prometeu-v0.51.1"
+        },
+        {
+          "id": "ad3a056433c0745086bf68e303fbe5f161d651795b090c78a4d59791c42d017b",
+          "filename": "Prometeu_x86_64.AppImage",
+          "original_filename": "Prometeu_x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.51.1",
+          "size_bytes": 89594360,
+          "sha256": "ad3a056433c0745086bf68e303fbe5f161d651795b090c78a4d59791c42d017b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-prometeucorp-prometeu-v0.51.1/Prometeu_x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-prometeucorp-prometeu-v0.51.1"
         }
       ],
       "platforms": [
