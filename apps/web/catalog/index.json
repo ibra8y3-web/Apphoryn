@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T00:05:38.325499+00:00",
+  "generated_at": "2026-11-26T00:05:59.049483+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -3970,6 +3970,54 @@
       "platforms": [
         "windows"
       ]
+    },
+    {
+      "id": "jfmbr-app-aura",
+      "slug": "jfmbr-app-aura",
+      "artifacts": [],
+      "name": "App_Aura",
+      "summary": "AutoOS is an offline Android app in Java and SQLite for small auto repair shops to create, view, edit, and delete service orders with field validation and Material 3 UI.",
+      "description": "AutoOS is an Android application for small auto repair shops to manage service orders offline. It provides full CRUD for service orders stored locally in SQLite via SQLiteOpenHelper, without an ORM. The list displays cards with license plate, status colors, and newest first. Create/edit forms include 11 fields and field-by-field validation for Mercosul/legacy plates, phone, year, mileage, and value. Deletion requires confirmation. The UI uses Material 3 components and a custom design system. Built with Java 11, Android minSdk 24, Gradle Kotlin DSL, and Android Gradle Plugin 9.5. Tests include JUnit validator tests and architecture tests; lint is reported clean. Build with Android Studio or ./gradlew installDebug; debug APK path is app/build/outputs/apk/debug/AutoOS-debug.apk. Documentation covers product, architecture, design, quality, onboarding, and setup. MIT licensed.",
+      "translations": {
+        "en": "AutoOS is an offline Android app in Java and SQLite for small auto repair shops to create, view, edit, and delete service orders with field validation and Material 3 UI.",
+        "ar": "AutoOS تطبيق أندرويد يعمل دون اتصال، مكتوب بلغة Java ويستخدم SQLite، لورش السيارات الصغيرة لإدارة أوامر الخدمة عبر الإنشاء والعرض والتعديل والحذف مع التحقق من الحقول وواجهة Material 3."
+      },
+      "description_translations": {
+        "en": "AutoOS is an Android application for small auto repair shops to manage service orders offline. It provides full CRUD for service orders stored locally in SQLite via SQLiteOpenHelper, without an ORM. The list displays cards with license plate, status colors, and newest first. Create/edit forms include 11 fields and field-by-field validation for Mercosul/legacy plates, phone, year, mileage, and value. Deletion requires confirmation. The UI uses Material 3 components and a custom design system. Built with Java 11, Android minSdk 24, Gradle Kotlin DSL, and Android Gradle Plugin 9.5. Tests include JUnit validator tests and architecture tests; lint is reported clean. Build with Android Studio or ./gradlew installDebug; debug APK path is app/build/outputs/apk/debug/AutoOS-debug.apk. Documentation covers product, architecture, design, quality, onboarding, and setup. MIT licensed.",
+        "ar": "AutoOS تطبيق أندرويد لورش السيارات الصغيرة لإدارة أوامر الخدمة دون اتصال بالإنترنت. يوفر عمليات إنشاء وقراءة وتعديل وحذف كاملة لأوامر الخدمة المخزنة محليًا في SQLite عبر SQLiteOpenHelper، دون ORM. تعرض القائمة بطاقات تتضمن لوحة المركبة وحالة ملونة، مع الأحدث أولًا. تتضمن نماذج الإنشاء والتعديل 11 حقلًا وتحققًا حقلًا بحقل من لوحات Mercosul واللوحات القديمة، والهاتف، والسنة، والمسافة المقطوعة، والقيمة. يتطلب الحذف تأكيدًا. تستخدم الواجهة مكونات Material 3 ونظام تصميم مخصص. بُني التطبيق بلغة Java 11، وAndroid minSdk 24، وGradle Kotlin DSL، وAndroid Gradle Plugin 9.5. تشمل الاختبارات اختبارات JUnit للمدقق واختبارات للبنية؛ ويُذكر أن Lint خالٍ من الأخطاء. يمكن البناء عبر Android Studio أو ./gradlew installDebug، ومسار APK للتصحيح هو app/build/outputs/apk/debug/AutoOS-debug.apk. وتغطي الوثائق المنتج والبنية والتصميم والجودة والإعداد. مرخص بموجب MIT."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "particle-ai/particle-1:free",
+      "icon_url": "https://avatars.githubusercontent.com/u/226577094?v=4",
+      "repository_url": "https://github.com/JfmBR/App_Aura",
+      "github_repo_id": "1455536907",
+      "source_updated_at": "2026-11-16T23:28:13Z",
+      "homepage_url": null,
+      "owner": "JfmBR",
+      "default_branch": "main",
+      "source_commit_sha": "d3f3fc1a6dfe714e14404fefc18fff4ee5fc5c0e",
+      "license_text": "MIT License\n\nCopyright (c) 2026 João Francisco da Silva Malaquias\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Standalone Android end-user application with a documented Gradle build path and debug APK output.",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "crud",
+        "java",
+        "material-design",
+        "portfolio",
+        "sqlite"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "wikimedia-apps-android-wikipedia",
