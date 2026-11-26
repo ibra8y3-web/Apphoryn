@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T19:46:32.856322+00:00",
+  "generated_at": "2026-11-26T19:46:50.988967+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -92101,11 +92101,11 @@
       "icon_url": "https://raw.githubusercontent.com/denissteinhorst/thor-back-button-hero/main/site/assets/icon.png",
       "repository_url": "https://github.com/denissteinhorst/thor-back-button-hero",
       "github_repo_id": "1432131409",
-      "source_updated_at": "2026-11-24T04:00:46Z",
+      "source_updated_at": "2026-11-26T13:50:07Z",
       "homepage_url": null,
       "owner": "denissteinhorst",
       "default_branch": "main",
-      "source_commit_sha": "e4637f75f7dc3040cf186a52ca822fb2fe973cb2",
+      "source_commit_sha": "b68b7fad4f479487c3d2b8dc0a0dcbf278528329",
       "license_text": "BSD Zero Clause License\n\nCopyright (c) 2026 Denis Steinhorst\n\nPermission to use, copy, modify, and/or distribute this software for any\npurpose with or without fee is hereby granted.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES\nWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR\nANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES\nWHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN\nACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF\nOR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n",
       "license_spdx": "0BSD",
       "license_eligible": true,
