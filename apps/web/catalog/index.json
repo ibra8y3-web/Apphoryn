@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:14:12.268790+00:00",
+  "generated_at": "2026-11-26T03:14:25.793344+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -54242,6 +54242,53 @@
         "macos",
         "windows"
       ]
+    },
+    {
+      "id": "sunerpy-router-tools",
+      "slug": "sunerpy-router-tools",
+      "artifacts": [],
+      "name": "router-tools",
+      "summary": "Go CLI and Wails desktop app for exact-profile, safety-gated router management. First adapter: Xiaomi BE6500 Pro (RD08) firmware 1.1.96.",
+      "description": "Go CLI and Wails desktop app for exact-profile, safety-gated router management. First adapter: Xiaomi BE6500 Pro (RD08) firmware 1.1.96.",
+      "translations": {
+        "en": {
+          "summary": "Go CLI and Wails desktop app for exact-profile, safety-gated router management. First adapter: Xiaomi BE6500 Pro (RD08) firmware 1.1.96.",
+          "description": "Go CLI and Wails desktop app for exact-profile, safety-gated router management. First adapter: Xiaomi BE6500 Pro (RD08) firmware 1.1.96."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/30691040?v=4",
+      "repository_url": "https://github.com/sunerpy/router-tools",
+      "github_repo_id": "1471703434",
+      "source_updated_at": "2026-11-25T11:49:38Z",
+      "homepage_url": null,
+      "owner": "sunerpy",
+      "default_branch": "main",
+      "source_commit_sha": "8cee26ca1d808baa7e3a3fcae62d1e464720b096",
+      "license_text": "MIT License\n\nCopyright (c) 2026 router-tools contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "category": "other",
+      "topics": [
+        "cli",
+        "desktop-app",
+        "go",
+        "router",
+        "ssh",
+        "wails",
+        "xiaomi"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "niedev-rtranslator",
