@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:57:46.024888+00:00",
+  "generated_at": "2026-11-26T03:58:03.407232+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -555,6 +555,83 @@
       ],
       "platforms": [
         "linux"
+      ]
+    },
+    {
+      "id": "shalfey-predskazatel-accovell",
+      "slug": "shalfey-predskazatel-accovell",
+      "name": "Accovell",
+      "summary": "Local Windows dashboard for Codex profiles, usage, and settings.",
+      "description": "Local Windows dashboard for Codex profiles, usage, and settings.",
+      "translations": {
+        "en": {
+          "summary": "Local Windows dashboard for Codex profiles, usage, and settings.",
+          "description": "Local Windows dashboard for Codex profiles, usage, and settings."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Shalfey-Predskazatel/Accovell/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/Shalfey-Predskazatel/Accovell",
+      "github_repo_id": "1471828193",
+      "source_updated_at": "2026-11-25T16:53:55Z",
+      "homepage_url": "https://github.com/Shalfey-Predskazatel/Accovell/releases/latest",
+      "owner": "Shalfey-Predskazatel",
+      "default_branch": "main",
+      "source_commit_sha": "895563972b1bd350865a0627b554f242083b65aa",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Shalfey Predskazatel\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "account-manager",
+        "account-switcher",
+        "codex",
+        "codex-cli",
+        "codex-usage",
+        "desktop-app",
+        "local-first",
+        "profile-manager",
+        "profile-switcher",
+        "rust",
+        "tauri",
+        "tauri-app",
+        "usage-dashboard",
+        "windows",
+        "windows-apps"
+      ],
+      "latest_version": "v0.1.0",
+      "release_url": "https://github.com/Shalfey-Predskazatel/Accovell/releases/tag/v0.1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shalfey-predskazatel-accovell-v0.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shalfey-predskazatel-accovell-v0.1.0/THIRD-PARTY-NOTICE-shalfey-predskazatel-accovell.txt",
+      "artifacts": [
+        {
+          "id": "23452c1c948f78bb559cd1a1f71e05c830dcb8d3e33c3c43e01e0c23faca1f17",
+          "filename": "Accovell-0.1.0-Setup-x64.exe",
+          "original_filename": "Accovell-0.1.0-Setup-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.1.0",
+          "size_bytes": 6415814,
+          "sha256": "23452c1c948f78bb559cd1a1f71e05c830dcb8d3e33c3c43e01e0c23faca1f17",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shalfey-predskazatel-accovell-v0.1.0/Accovell-0.1.0-Setup-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shalfey-predskazatel-accovell-v0.1.0"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
