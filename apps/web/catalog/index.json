@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T23:10:36.324984+00:00",
+  "generated_at": "2026-11-26T23:11:19.261460+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -61535,12 +61535,12 @@
       "id": "guimaraeslucas-netzac",
       "slug": "guimaraeslucas-netzac",
       "name": "netzac",
-      "summary": "Netzac Navigator is a native C++17/Qt 6 WebEngine browser for ZacOS 9 and Linux. It recreates classic Navigator 4.0 with ZacOS 9's Platinum look and adds tabbed browsing and Calm Mode, with no trackers. For the old and the new Web.",
-      "description": "Netzac Navigator is a native C++17/Qt 6 WebEngine browser for ZacOS 9 and Linux. It recreates classic Navigator 4.0 with ZacOS 9's Platinum look and adds tabbed browsing and Calm Mode, with no trackers. For the old and the new Web.",
+      "summary": "Netzac Navigator is a native C++17/Qt 6 WebEngine browser for ZacOS 9, Linux and Windows. It recreates classic Navigator 4.0 with ZacOS 9's Platinum look and adds tabbed browsing and Calm Mode, with no trackers. For the old and the new Web.",
+      "description": "Netzac Navigator is a native C++17/Qt 6 WebEngine browser for ZacOS 9, Linux and Windows. It recreates classic Navigator 4.0 with ZacOS 9's Platinum look and adds tabbed browsing and Calm Mode, with no trackers. For the old and the new Web.",
       "translations": {
         "en": {
-          "summary": "Netzac Navigator is a native C++17/Qt 6 WebEngine browser for ZacOS 9 and Linux. It recreates classic Navigator 4.0 with ZacOS 9's Platinum look and adds tabbed browsing and Calm Mode, with no trackers. For the old and the new Web.",
-          "description": "Netzac Navigator is a native C++17/Qt 6 WebEngine browser for ZacOS 9 and Linux. It recreates classic Navigator 4.0 with ZacOS 9's Platinum look and adds tabbed browsing and Calm Mode, with no trackers. For the old and the new Web."
+          "summary": "Netzac Navigator is a native C++17/Qt 6 WebEngine browser for ZacOS 9, Linux and Windows. It recreates classic Navigator 4.0 with ZacOS 9's Platinum look and adds tabbed browsing and Calm Mode, with no trackers. For the old and the new Web.",
+          "description": "Netzac Navigator is a native C++17/Qt 6 WebEngine browser for ZacOS 9, Linux and Windows. It recreates classic Navigator 4.0 with ZacOS 9's Platinum look and adds tabbed browsing and Calm Mode, with no trackers. For the old and the new Web."
         }
       },
       "description_translations": {},
@@ -61550,7 +61550,7 @@
       "icon_url": "https://avatars.githubusercontent.com/u/3381884?v=4",
       "repository_url": "https://github.com/guimaraeslucas/netzac",
       "github_repo_id": "1467081885",
-      "source_updated_at": "2026-11-25T01:28:09Z",
+      "source_updated_at": "2026-11-26T21:57:53Z",
       "homepage_url": null,
       "owner": "guimaraeslucas",
       "default_branch": "main",
@@ -61566,9 +61566,8 @@
       "category": "security",
       "topics": [
         "cpp",
-        "debia",
-        "deskt",
-        "desktop-app",
+        "debian",
+        "desktop",
         "linux",
         "navigator",
         "open-source",
@@ -61578,6 +61577,7 @@
         "qtwebengine",
         "tabs",
         "web-browser",
+        "windows",
         "zacos",
         "zacos9"
       ],
