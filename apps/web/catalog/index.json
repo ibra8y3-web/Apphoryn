@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:49:34.613830+00:00",
+  "generated_at": "2026-11-26T04:50:21.627578+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -31667,6 +31667,122 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "mmabdelhay-jarvis",
+      "slug": "mmabdelhay-jarvis",
+      "name": "jarvis",
+      "summary": "A desktop workspace for running coding agents by voice",
+      "description": "A desktop workspace for running coding agents by voice",
+      "translations": {
+        "en": {
+          "summary": "A desktop workspace for running coding agents by voice",
+          "description": "A desktop workspace for running coding agents by voice"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/mmAbdelhay/jarvis/master/apps/mobile/assets/icon.png",
+      "repository_url": "https://github.com/mmAbdelhay/jarvis",
+      "github_repo_id": "1364416878",
+      "source_updated_at": "2026-11-05T00:49:00Z",
+      "homepage_url": "https://mmabdelhay.github.io/jarvis/",
+      "owner": "mmAbdelhay",
+      "default_branch": "master",
+      "source_commit_sha": "9f215c80940ef4e39f6c5d51e705f400a573aa75",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Muhammad AbdElHay\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "agentic-ai",
+        "ai-agents",
+        "api-client",
+        "arabic",
+        "claude-code",
+        "coding-agents",
+        "cross-platform",
+        "desktop-app",
+        "developer-tools",
+        "electron",
+        "github-copilot",
+        "node-pty",
+        "speech-to-text",
+        "terminal",
+        "terminal-emulator",
+        "typescript",
+        "voice-assistant",
+        "xterm"
+      ],
+      "latest_version": "v0.1.19",
+      "release_url": "https://github.com/mmAbdelhay/jarvis/releases/tag/v0.1.19",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mmabdelhay-jarvis-v0.1.19",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mmabdelhay-jarvis-v0.1.19/THIRD-PARTY-NOTICE-mmabdelhay-jarvis.txt",
+      "artifacts": [
+        {
+          "id": "a381381086d1e5f7238680d9efba2ec69d5b1e1ee8231933bc273812f81ddaea",
+          "filename": "Jarvis-0.1.19-arm64.dmg",
+          "original_filename": "Jarvis-0.1.19-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.1.19",
+          "size_bytes": 224777339,
+          "sha256": "a381381086d1e5f7238680d9efba2ec69d5b1e1ee8231933bc273812f81ddaea",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mmabdelhay-jarvis-v0.1.19/Jarvis-0.1.19-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mmabdelhay-jarvis-v0.1.19"
+        },
+        {
+          "id": "a5cb863b38ca3a0a258548f0004e6cc4c5932adfcf34c6154a49cb4be4db2cab",
+          "filename": "Jarvis-0.1.19.AppImage",
+          "original_filename": "Jarvis-0.1.19.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": null,
+          "version": "v0.1.19",
+          "size_bytes": 233488968,
+          "sha256": "a5cb863b38ca3a0a258548f0004e6cc4c5932adfcf34c6154a49cb4be4db2cab",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mmabdelhay-jarvis-v0.1.19/Jarvis-0.1.19.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mmabdelhay-jarvis-v0.1.19"
+        },
+        {
+          "id": "3a1c6b1a36b444a9a20c3b6829baf6bb6ffe5e95c4dfd0e69a381a1bec5960b2",
+          "filename": "jarvis-mobile-0.1.19.apk",
+          "original_filename": "jarvis-mobile-0.1.19.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.1.19",
+          "size_bytes": 135853333,
+          "sha256": "3a1c6b1a36b444a9a20c3b6829baf6bb6ffe5e95c4dfd0e69a381a1bec5960b2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "faf79249d2a9f2d8a1b7ba3b5d183a756887628f0decb7a54b4c10a8e593aaa3",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-mmabdelhay-jarvis-v0.1.19/jarvis-mobile-0.1.19.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-mmabdelhay-jarvis-v0.1.19"
+        }
+      ],
+      "platforms": [
+        "android",
+        "linux",
+        "macos"
       ]
     },
     {
