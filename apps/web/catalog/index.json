@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T10:56:26.831783+00:00",
+  "generated_at": "2026-11-26T10:56:50.702315+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -84727,7 +84727,7 @@
       "homepage_url": null,
       "owner": "qusielh",
       "default_branch": "main",
-      "source_commit_sha": "2babbbab9e1d7c93cfa26734001a75ef1334de8e",
+      "source_commit_sha": "98f84799a56377bb9ab99fea6622a3c6eac76531",
       "license_text": "MIT License\n\nCopyright (c) 2026 Qusie\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -84768,6 +84768,23 @@
           "signature_status": "not_checked",
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-qusielh-svu-sessions-launcher-v3.0.0-beta.1/SVU-Sessions-Launcher-3.0.0-beta.1-win-x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-qusielh-svu-sessions-launcher-v3.0.0-beta.1"
+        },
+        {
+          "id": "7705968fbef2591638233ce24697385a579bfa80d2eb9c6bbc8884fcf105ae34",
+          "filename": "7705968fbef2591638233ce24697385a579bfa80d2eb9c6bbc8884fcf105ae34-7705968fbef2.exe",
+          "original_filename": "SVU-Sessions-Launcher-3.0.0-beta.1-win-x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v3.0.0-beta.1",
+          "size_bytes": 2851721,
+          "sha256": "7705968fbef2591638233ce24697385a579bfa80d2eb9c6bbc8884fcf105ae34",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-qusielh-svu-sessions-launcher-v3.0.0-beta.1/7705968fbef2591638233ce24697385a579bfa80d2eb9c6bbc8884fcf105ae34-7705968fbef2.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-qusielh-svu-sessions-launcher-v3.0.0-beta.1"
         }
       ],
