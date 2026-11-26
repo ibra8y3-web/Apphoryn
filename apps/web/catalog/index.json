@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:08:58.512089+00:00",
+  "generated_at": "2026-11-26T06:09:34.587082+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -50782,6 +50782,78 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "elvanparthasarathy-nammil",
+      "slug": "elvanparthasarathy-nammil",
+      "name": "Nammil",
+      "summary": "A beautifully crafted, privacy-focused desktop companion for WhatsApp featuring multi-account sessions, automated media organization, and native notifications. By Elvan Navil.",
+      "description": "A beautifully crafted, privacy-focused desktop companion for WhatsApp featuring multi-account sessions, automated media organization, and native notifications. By Elvan Navil.",
+      "translations": {
+        "en": {
+          "summary": "A beautifully crafted, privacy-focused desktop companion for WhatsApp featuring multi-account sessions, automated media organization, and native notifications. By Elvan Navil.",
+          "description": "A beautifully crafted, privacy-focused desktop companion for WhatsApp featuring multi-account sessions, automated media organization, and native notifications. By Elvan Navil."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ElvanParthasarathy/Nammil/main/src/assets/app_icon.png",
+      "repository_url": "https://github.com/ElvanParthasarathy/Nammil",
+      "github_repo_id": "1299056165",
+      "source_updated_at": "2026-09-14T15:49:28Z",
+      "homepage_url": "https://elvannavil.vercel.app",
+      "owner": "ElvanParthasarathy",
+      "default_branch": "main",
+      "source_commit_sha": "00e3690a4d602079d416cce7a30b0e9762bce644",
+      "license_text": "﻿MIT License\n\nCopyright (c) 2026 Elvan Navil (https://elvannavil.vercel.app)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "desktop-app",
+        "electron",
+        "elvan-navil",
+        "inno-setup",
+        "multi-account",
+        "privacy",
+        "react",
+        "whatsapp",
+        "whatsapp-client",
+        "windows-11"
+      ],
+      "latest_version": "v1.3.2",
+      "release_url": "https://github.com/ElvanParthasarathy/Nammil/releases/tag/v1.3.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-elvanparthasarathy-nammil-v1.3.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-elvanparthasarathy-nammil-v1.3.2/THIRD-PARTY-NOTICE-elvanparthasarathy-nammil.txt",
+      "artifacts": [
+        {
+          "id": "601cb50fefe06f54c905c69afffbd37d8a5c02571e0bfac09c34ef256a88752a",
+          "filename": "Nammil-Setup.exe",
+          "original_filename": "Nammil-Setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.3.2",
+          "size_bytes": 119848190,
+          "sha256": "601cb50fefe06f54c905c69afffbd37d8a5c02571e0bfac09c34ef256a88752a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-elvanparthasarathy-nammil-v1.3.2/Nammil-Setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-elvanparthasarathy-nammil-v1.3.2"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
