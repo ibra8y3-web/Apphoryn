@@ -28652,7 +28652,17 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "df872763b921a943274f5f48066ec12382c73fca",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-26T02:13:26.388888+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "giton22-kyllene",
