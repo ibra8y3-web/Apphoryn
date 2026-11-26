@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T07:18:40.872206+00:00",
+  "generated_at": "2026-11-26T07:18:57.469740+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -51655,6 +51655,61 @@
       ],
       "latest_version": "1.3.2",
       "release_url": "https://github.com/minimo-pro/minimo_video/releases/tag/1.3.2",
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "cklaus1-minotes",
+      "slug": "cklaus1-minotes",
+      "artifacts": [],
+      "name": "MiNotes",
+      "summary": "Local-first outliner and notes app: linked pages, journals, tabs, encrypted notebooks, git sync between devices, and import from Evernote and Obsidian. Rust + Tauri, for Windows and Linux.",
+      "description": "Local-first outliner and notes app: linked pages, journals, tabs, encrypted notebooks, git sync between devices, and import from Evernote and Obsidian. Rust + Tauri, for Windows and Linux.",
+      "translations": {
+        "en": {
+          "summary": "Local-first outliner and notes app: linked pages, journals, tabs, encrypted notebooks, git sync between devices, and import from Evernote and Obsidian. Rust + Tauri, for Windows and Linux.",
+          "description": "Local-first outliner and notes app: linked pages, journals, tabs, encrypted notebooks, git sync between devices, and import from Evernote and Obsidian. Rust + Tauri, for Windows and Linux."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Cklaus1/MiNotes/main/crates/minotes-app/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/Cklaus1/MiNotes",
+      "github_repo_id": "1189819339",
+      "source_updated_at": "2026-11-17T23:09:16Z",
+      "homepage_url": null,
+      "owner": "Cklaus1",
+      "default_branch": "main",
+      "source_commit_sha": "8fed413bfc113acb50a7aac94b9aee48db5d527d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Fusen World\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "category": "productivity",
+      "topics": [
+        "desktop-app",
+        "encryption",
+        "evernote-alternative",
+        "git-sync",
+        "knowledge-management",
+        "local-first",
+        "logseq-alternative",
+        "markdown",
+        "note-taking",
+        "obsidian-alternative",
+        "offline-first",
+        "outliner",
+        "personal-knowledge-management",
+        "rust",
+        "tauri"
+      ],
+      "latest_version": null,
+      "release_url": null,
       "platforms": [],
       "project_status": "source_available"
     },
