@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T02:52:50.122947+00:00",
+  "generated_at": "2026-11-26T02:53:25.085725+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -25686,6 +25686,97 @@
         "android",
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "hfanes-hops",
+      "slug": "hfanes-hops",
+      "name": "hops",
+      "summary": "Hops is a lightweight Windows tray app that routes external links to the right browser based on your rules.",
+      "description": "Hops is a lightweight Windows tray app that routes external links to the right browser based on your rules.",
+      "translations": {
+        "en": {
+          "summary": "Hops is a lightweight Windows tray app that routes external links to the right browser based on your rules.",
+          "description": "Hops is a lightweight Windows tray app that routes external links to the right browser based on your rules."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Hfanes/hops/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/Hfanes/hops",
+      "github_repo_id": "1229966248",
+      "source_updated_at": "2026-11-01T12:28:44Z",
+      "homepage_url": "https://hops.hfanes.com/",
+      "owner": "Hfanes",
+      "default_branch": "main",
+      "source_commit_sha": "f598929b82c7bd3d45b07fa537af4eb1c5bd0a55",
+      "license_text": "MIT License\n\nCopyright (c) 2026 hfa\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "network",
+      "topics": [
+        "browser-router",
+        "bun",
+        "default-browser",
+        "desktop-app",
+        "link-router",
+        "react",
+        "rust",
+        "tauri",
+        "tauri-app",
+        "tray-app",
+        "url-handler",
+        "windows"
+      ],
+      "latest_version": "v0.1.6",
+      "release_url": "https://github.com/Hfanes/hops/releases/tag/v0.1.6",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hfanes-hops-v0.1.6",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hfanes-hops-v0.1.6/THIRD-PARTY-NOTICE-hfanes-hops.txt",
+      "artifacts": [
+        {
+          "id": "df62561f9fdecd700866e9082887ee9e5935b37dde79ba1f7d41036775fbc9c1",
+          "filename": "hops.exe",
+          "original_filename": "hops.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.1.6",
+          "size_bytes": 2337847,
+          "sha256": "df62561f9fdecd700866e9082887ee9e5935b37dde79ba1f7d41036775fbc9c1",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hfanes-hops-v0.1.6/hops.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hfanes-hops-v0.1.6"
+        },
+        {
+          "id": "8d29c89eb45bfd72c0f6d787a50c153bfde095d5292757bbb8ba5691e42409ab",
+          "filename": "hops.msi",
+          "original_filename": "hops.msi",
+          "platform": "windows",
+          "package_type": "Windows installer",
+          "architecture": null,
+          "version": "v0.1.6",
+          "size_bytes": 3166208,
+          "sha256": "8d29c89eb45bfd72c0f6d787a50c153bfde095d5292757bbb8ba5691e42409ab",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hfanes-hops-v0.1.6/hops.msi",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hfanes-hops-v0.1.6"
+        }
+      ],
+      "platforms": [
         "windows"
       ]
     },
