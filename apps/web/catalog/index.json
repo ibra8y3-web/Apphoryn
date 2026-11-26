@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T14:42:19.991605+00:00",
+  "generated_at": "2026-11-26T14:42:34.894572+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -80216,7 +80216,7 @@
       "icon_url": "https://avatars.githubusercontent.com/u/359634762?v=4",
       "repository_url": "https://github.com/Shelfrip/ShelfRip",
       "github_repo_id": "1462240908",
-      "source_updated_at": "2026-11-26T04:25:17Z",
+      "source_updated_at": "2026-11-26T11:07:10Z",
       "homepage_url": "https://shelfrip.com/",
       "owner": "Shelfrip",
       "default_branch": "main",
