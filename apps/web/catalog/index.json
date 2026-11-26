@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T10:17:39.352171+00:00",
+  "generated_at": "2026-11-26T10:18:08.856871+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -86644,17 +86644,19 @@
       "id": "denissteinhorst-thor-back-button-hero",
       "slug": "denissteinhorst-thor-back-button-hero",
       "name": "thor-back-button-hero",
-      "summary": "Customizable Android utility for AYN Thor that remaps Back gestures and controller buttons to app switching, screenshots, macros, gyro, and system controls without root.",
-      "description": "Back Button Hero is a free and open-source Android app for the AYN Thor handheld. It lets users assign single tap, double tap, tap-then-hold, and hold gestures on the Back button, plus shortcuts on shoulder buttons, face buttons, D-pad, and stick directions. Actions include app switching, launching apps, screenshots, video recording, macros, gyro control, volume and brightness, media control, controller focus, app management, power menu, status overlay, and AYN hardware controls. It uses an accessibility service and AYN's existing root service for some controller-level functions; the device itself does not need rooting. Settings are optional, and unassigned gestures do nothing. The project is written in Kotlin and provides CI and release links.",
+      "summary": "Back Button Hero - a customizable back-button utility for the AYN Thor Android handheld.",
+      "description": "Back Button Hero - a customizable back-button utility for the AYN Thor Android handheld.",
       "translations": {
-        "en": "Customizable Android utility for AYN Thor that remaps Back gestures and controller buttons to app switching, screenshots, macros, gyro, and system controls without root.",
-        "ar": "أداة أندرويد قابلة للتخصيص لجهاز AYN Thor تعيد تعيين إيماءات زر الرجوع وأزرار وحدة التحكم لتبديل التطبيقات ولقطات الشاشة والماكرو والجيروسكوب وعناصر تحكم النظام دون روت."
+        "en": {
+          "summary": "Back Button Hero - a customizable back-button utility for the AYN Thor Android handheld.",
+          "description": "Back Button Hero - a customizable back-button utility for the AYN Thor Android handheld."
+        }
       },
       "description_translations": {
         "en": "Back Button Hero is a free and open-source Android app for the AYN Thor handheld. It lets users assign single tap, double tap, tap-then-hold, and hold gestures on the Back button, plus shortcuts on shoulder buttons, face buttons, D-pad, and stick directions. Actions include app switching, launching apps, screenshots, video recording, macros, gyro control, volume and brightness, media control, controller focus, app management, power menu, status overlay, and AYN hardware controls. It uses an accessibility service and AYN's existing root service for some controller-level functions; the device itself does not need rooting. Settings are optional, and unassigned gestures do nothing. The project is written in Kotlin and provides CI and release links.",
         "ar": "Back Button Hero تطبيق أندرويد مجاني ومفتوح المصدر لجهاز AYN Thor المحمول. يتيح للمستخدمين تعيين إيماءات النقر المفرد والنقر المزدوج والنقر ثم الاستمرار والاستمرار على زر الرجوع، بالإضافة إلى اختصارات على أزرار الكتف وأزرار الوجه وأزرار الاتجاهات واتجاهات العصا. تشمل الإجراءات تبديل التطبيقات وفتح التطبيقات ولقطات الشاشة وتسجيل الفيديو والماكرو والتحكم بالجيروسكوب ومستوى الصوت والسطوع والتحكم بالوسائط وتركيز وحدة التحكم وإدارة التطبيقات وقائمة الطاقة وطبقة الحالة وعناصر التحكم في عتاد AYN. يستخدم التطبيق خدمة إمكانية الوصول وخدمة root الموجودة في AYN لبعض وظائف وحدة التحكم؛ ولا يلزم عمل روت للجهاز. الإعدادات اختيارية، والإيماءات غير المعينة لا تفعل شيئًا. المشروع مكتوب بلغة Kotlin ويتضمن روابط التكامل المستمر والإصدارات."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "particle-ai/particle-1:free",
       "icon_url": "https://raw.githubusercontent.com/denissteinhorst/thor-back-button-hero/main/site/assets/icon.png",
@@ -86664,14 +86666,14 @@
       "homepage_url": null,
       "owner": "denissteinhorst",
       "default_branch": "main",
-      "source_commit_sha": "369e356d78eecb4feb2d044883927f05a5fbd04a",
+      "source_commit_sha": "e4637f75f7dc3040cf186a52ca822fb2fe973cb2",
       "license_text": "BSD Zero Clause License\n\nCopyright (c) 2026 Denis Steinhorst\n\nPermission to use, copy, modify, and/or distribute this software for any\npurpose with or without fee is hereby granted.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES\nWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR\nANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES\nWHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN\nACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF\nOR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n",
       "license_spdx": "0BSD",
       "license_eligible": true,
-      "project_kind": "application",
-      "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "Standalone Android end-user application for AYN Thor; README shows a Kotlin app with CI and release links, indicating a supported build path.",
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
       "project_status": "installable",
       "category": "system",
       "topics": [
