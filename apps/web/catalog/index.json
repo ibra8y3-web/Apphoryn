@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T15:26:20.864480+00:00",
+  "generated_at": "2026-11-26T15:26:47.122424+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -34785,11 +34785,11 @@
       "icon_url": "https://raw.githubusercontent.com/goat-si/goat/dev/assets/prod/logo.svg",
       "repository_url": "https://github.com/goat-si/goat",
       "github_repo_id": "1413248431",
-      "source_updated_at": "2026-11-26T02:47:03Z",
+      "source_updated_at": "2026-11-26T12:45:21Z",
       "homepage_url": "https://trygoat.ai",
       "owner": "goat-si",
       "default_branch": "dev",
-      "source_commit_sha": "7405f5280874d4105665cb1eb4b615e625c5fd18",
+      "source_commit_sha": "96a4a706bd73d4876a2fa4480ae37e9ea4a7f73b",
       "license_text": "MIT License\n\nCopyright (c) 2026 T3 Tools Inc.\nCopyright (c) 2026 goat-si contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
