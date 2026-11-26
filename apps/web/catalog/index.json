@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T02:50:16.753971+00:00",
+  "generated_at": "2026-11-26T02:51:17.138515+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -48142,6 +48142,116 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "t-chen-cn-pi-workbench",
+      "slug": "t-chen-cn-pi-workbench",
+      "name": "pi-workbench",
+      "summary": "本地优先的 Agent 开发工作台：Agent 在主进程里改你的真实文件，权限模式决定它能动什么 · Local-first workbench with a real coding agent — session worktrees, plan mode, PDF/Office reading, detachable panels.",
+      "description": "本地优先的 Agent 开发工作台：Agent 在主进程里改你的真实文件，权限模式决定它能动什么 · Local-first workbench with a real coding agent — session worktrees, plan mode, PDF/Office reading, detachable panels.",
+      "translations": {
+        "en": {
+          "summary": "本地优先的 Agent 开发工作台：Agent 在主进程里改你的真实文件，权限模式决定它能动什么 · Local-first workbench with a real coding agent — session worktrees, plan mode, PDF/Office reading, detachable panels.",
+          "description": "本地优先的 Agent 开发工作台：Agent 在主进程里改你的真实文件，权限模式决定它能动什么 · Local-first workbench with a real coding agent — session worktrees, plan mode, PDF/Office reading, detachable panels."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/T-Chen-CN/pi-workbench/main/app-icon.png",
+      "repository_url": "https://github.com/T-Chen-CN/pi-workbench",
+      "github_repo_id": "1426161824",
+      "source_updated_at": "2026-11-11T09:54:04Z",
+      "homepage_url": "https://github.com/T-Chen-CN/pi-workbench/releases/latest",
+      "owner": "T-Chen-CN",
+      "default_branch": "main",
+      "source_commit_sha": "0e54898441f81a3423af940ac0414eb76477a428",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Pi Workbench Team\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "agent",
+        "ai",
+        "coding-agent",
+        "desktop-app",
+        "developer-tools",
+        "editor",
+        "electron",
+        "git-worktree",
+        "local-first",
+        "monaco-editor",
+        "react",
+        "typescript"
+      ],
+      "latest_version": "v0.11.1",
+      "release_url": "https://github.com/T-Chen-CN/pi-workbench/releases/tag/v0.11.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-t-chen-cn-pi-workbench-v0.11.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-t-chen-cn-pi-workbench-v0.11.1/THIRD-PARTY-NOTICE-t-chen-cn-pi-workbench.txt",
+      "artifacts": [
+        {
+          "id": "f4b5a6d9604df2ea939d2ace4ab13abc5664fdda4a6280b1ef7e4e5d461c0baf",
+          "filename": "Pi-Workbench-0.11.1-universal.dmg",
+          "original_filename": "Pi-Workbench-0.11.1-universal.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "universal",
+          "version": "v0.11.1",
+          "size_bytes": 291673197,
+          "sha256": "f4b5a6d9604df2ea939d2ace4ab13abc5664fdda4a6280b1ef7e4e5d461c0baf",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-t-chen-cn-pi-workbench-v0.11.1/Pi-Workbench-0.11.1-universal.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-t-chen-cn-pi-workbench-v0.11.1"
+        },
+        {
+          "id": "85d5795669a7ad1cc75ab9a12a95654f20bd36de75eee609a6764af6819a8b02",
+          "filename": "Pi-Workbench-0.11.1.AppImage",
+          "original_filename": "Pi-Workbench-0.11.1.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": null,
+          "version": "v0.11.1",
+          "size_bytes": 201767587,
+          "sha256": "85d5795669a7ad1cc75ab9a12a95654f20bd36de75eee609a6764af6819a8b02",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-t-chen-cn-pi-workbench-v0.11.1/Pi-Workbench-0.11.1.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-t-chen-cn-pi-workbench-v0.11.1"
+        },
+        {
+          "id": "8cca9fbf210e8b65b2bdf6bc9257c8b5f2de0308bb42233c5a0be0ff6385a2ac",
+          "filename": "Pi-Workbench-Setup-0.11.1.exe",
+          "original_filename": "Pi-Workbench-Setup-0.11.1.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.11.1",
+          "size_bytes": 165177242,
+          "sha256": "8cca9fbf210e8b65b2bdf6bc9257c8b5f2de0308bb42233c5a0be0ff6385a2ac",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-t-chen-cn-pi-workbench-v0.11.1/Pi-Workbench-Setup-0.11.1.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-t-chen-cn-pi-workbench-v0.11.1"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
       ]
     },
     {
