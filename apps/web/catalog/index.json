@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T23:59:54.848198+00:00",
+  "generated_at": "2026-11-26T00:00:13.175042+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -3815,6 +3815,79 @@
           "signer_certificate_sha256": "8e9b512371ee965afc7cc91f23490d3a514623b90d483e638bba8a070a2170b4",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-durcheins-apkup-v1.46.0/ApkUp-v1.46.0-231.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-durcheins-apkup-v1.46.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "hafij-deu-app-hub-android",
+      "slug": "hafij-deu-app-hub-android",
+      "name": "app-hub-android",
+      "summary": "Install and update all my Android apps from their GitHub releases",
+      "description": "Install and update all my Android apps from their GitHub releases",
+      "translations": {
+        "en": {
+          "summary": "Install and update all my Android apps from their GitHub releases",
+          "description": "Install and update all my Android apps from their GitHub releases"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Hafij-DEU/app-hub-android/main/app/src/main/res/drawable-nodpi/icon_markd.png",
+      "repository_url": "https://github.com/Hafij-DEU/app-hub-android",
+      "github_repo_id": "1427684318",
+      "source_updated_at": "2026-10-26T20:43:53Z",
+      "homepage_url": "https://github.com/Hafij-DEU/app-hub-android/releases/latest",
+      "owner": "Hafij-DEU",
+      "default_branch": "main",
+      "source_commit_sha": "102a40c704c9f0773496ce615a47a504929ef8a7",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Md. Hafijur Rahman\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "apk-installer",
+        "app-manager",
+        "app-store",
+        "f-droid-alternative",
+        "github-releases",
+        "java",
+        "package-installer",
+        "self-hosted",
+        "updater"
+      ],
+      "latest_version": "v1.0.8",
+      "release_url": "https://github.com/Hafij-DEU/app-hub-android/releases/tag/v1.0.8",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hafij-deu-app-hub-android-v1.0.8",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hafij-deu-app-hub-android-v1.0.8/THIRD-PARTY-NOTICE-hafij-deu-app-hub-android.txt",
+      "artifacts": [
+        {
+          "id": "b3ba6ab4c5a4fa4f63e8a99cd3a13a3b41f0c6f25f4b20fa5c38116717ee425d",
+          "filename": "AppHub-1.0.8.apk",
+          "original_filename": "AppHub-1.0.8.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.8",
+          "size_bytes": 58909,
+          "sha256": "b3ba6ab4c5a4fa4f63e8a99cd3a13a3b41f0c6f25f4b20fa5c38116717ee425d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "9bf782c20ef1205a7cc6c835abca5f1fec0c1c8a7cab3ec102a8eb986e744aa9",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hafij-deu-app-hub-android-v1.0.8/AppHub-1.0.8.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hafij-deu-app-hub-android-v1.0.8"
         }
       ],
       "platforms": [
