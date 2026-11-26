@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T05:43:23.875884+00:00",
+  "generated_at": "2026-11-26T05:43:46.529915+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -1767,6 +1767,113 @@
       ],
       "platforms": [
         "macos"
+      ]
+    },
+    {
+      "id": "aprazdnikov-agent-hub-rs",
+      "slug": "aprazdnikov-agent-hub-rs",
+      "name": "agent-hub-rs",
+      "summary": "Каждая тема Telegram-группы - сессия Claude Code, Codex, Qwen или Hermes на вашем компьютере",
+      "description": "Каждая тема Telegram-группы - сессия Claude Code, Codex, Qwen или Hermes на вашем компьютере",
+      "translations": {
+        "en": {
+          "summary": "Каждая тема Telegram-группы - сессия Claude Code, Codex, Qwen или Hermes на вашем компьютере",
+          "description": "Каждая тема Telegram-группы - сессия Claude Code, Codex, Qwen или Hermes на вашем компьютере"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/31470767?v=4",
+      "repository_url": "https://github.com/aprazdnikov/agent-hub-rs",
+      "github_repo_id": "1401968336",
+      "source_updated_at": "2026-11-22T10:42:33Z",
+      "homepage_url": "https://aprazdnikov.github.io/agent-hub-rs/",
+      "owner": "aprazdnikov",
+      "default_branch": "main",
+      "source_commit_sha": "53048e87612f2ff7c4f799530a85b57c2096dfca",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Aleksandr\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "acp",
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "coding-agents",
+        "desktop-app",
+        "egui",
+        "qwen-code",
+        "rust",
+        "telegram-bot-2026"
+      ],
+      "latest_version": "v1.1.2",
+      "release_url": "https://github.com/aprazdnikov/agent-hub-rs/releases/tag/v1.1.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aprazdnikov-agent-hub-rs-v1.1.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aprazdnikov-agent-hub-rs-v1.1.2/THIRD-PARTY-NOTICE-aprazdnikov-agent-hub-rs.txt",
+      "artifacts": [
+        {
+          "id": "1aadc1d22f55c0335644936fc052c281b62a671d5bdfb3c67bdc9842e91edf64",
+          "filename": "agent-hub-x86_64-pc-windows-msvc-setup.exe",
+          "original_filename": "agent-hub-x86_64-pc-windows-msvc-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.1.2",
+          "size_bytes": 12396041,
+          "sha256": "1aadc1d22f55c0335644936fc052c281b62a671d5bdfb3c67bdc9842e91edf64",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aprazdnikov-agent-hub-rs-v1.1.2/agent-hub-x86_64-pc-windows-msvc-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aprazdnikov-agent-hub-rs-v1.1.2"
+        },
+        {
+          "id": "6438bf35b1c89f2b8760d23901f9eaebffbe5f7bc084b33f9b143dd7a5c75d3b",
+          "filename": "agent-hub-x86_64-pc-windows-msvc.exe",
+          "original_filename": "agent-hub-x86_64-pc-windows-msvc.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.1.2",
+          "size_bytes": 32927232,
+          "sha256": "6438bf35b1c89f2b8760d23901f9eaebffbe5f7bc084b33f9b143dd7a5c75d3b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aprazdnikov-agent-hub-rs-v1.1.2/agent-hub-x86_64-pc-windows-msvc.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aprazdnikov-agent-hub-rs-v1.1.2"
+        },
+        {
+          "id": "813e9c7257e5c8a1674c9ef26abe6a801449187b0bf5da4a84801400c37569f1",
+          "filename": "agent-hub-x86_64-unknown-linux-gnu.deb",
+          "original_filename": "agent-hub-x86_64-unknown-linux-gnu.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v1.1.2",
+          "size_bytes": 12154374,
+          "sha256": "813e9c7257e5c8a1674c9ef26abe6a801449187b0bf5da4a84801400c37569f1",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aprazdnikov-agent-hub-rs-v1.1.2/agent-hub-x86_64-unknown-linux-gnu.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aprazdnikov-agent-hub-rs-v1.1.2"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "windows"
       ]
     },
     {
