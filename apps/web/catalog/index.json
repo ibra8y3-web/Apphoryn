@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T10:25:35.855601+00:00",
+  "generated_at": "2026-11-26T10:25:51.103258+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -67819,7 +67819,7 @@
       "icon_url": "https://raw.githubusercontent.com/leonlatsch/Photok/main/app/src/main/res/mipmap-hdpi/ic_launcher.png",
       "repository_url": "https://github.com/leonlatsch/Photok",
       "github_repo_id": "287088448",
-      "source_updated_at": "2026-11-25T20:06:28Z",
+      "source_updated_at": "2026-11-26T09:48:07Z",
       "homepage_url": "https://photok.app",
       "owner": "leonlatsch",
       "default_branch": "main",
