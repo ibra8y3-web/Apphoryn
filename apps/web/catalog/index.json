@@ -85281,7 +85281,18 @@
       "latest_version": "v0.15.0",
       "release_url": "https://github.com/pideoh/twinscript/releases/tag/v0.15.0",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "67dd0d03a26f3924c48eb3fa6c448d0d99a5f632",
+          "targets": [
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-26T06:45:58.188348+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "madhav-manchanda-udham",
