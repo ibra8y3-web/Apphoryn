@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T21:03:14.637395+00:00",
+  "generated_at": "2026-11-26T21:04:52.747386+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -22996,11 +22996,11 @@
       "icon_url": "https://raw.githubusercontent.com/Dodaios/Dodaios/main/dodaios/ui/web/frontend/public/m/icon-192.png",
       "repository_url": "https://github.com/Dodaios/Dodaios",
       "github_repo_id": "1255092568",
-      "source_updated_at": "2026-11-24T18:15:02Z",
+      "source_updated_at": "2026-11-26T17:21:38Z",
       "homepage_url": "https://dodaios.ai",
       "owner": "Dodaios",
       "default_branch": "main",
-      "source_commit_sha": "d96e23f0ea1dd092048a114ae9a62c1e8240dbf3",
+      "source_commit_sha": "9d4eec00fe331c5b8b676c0ed55fd6091124b316",
       "license_text": "MIT License\n\nCopyright (c) 2026 Dodaios\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
