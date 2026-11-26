@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:56:37.830581+00:00",
+  "generated_at": "2026-11-26T06:56:58.575606+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -9036,6 +9036,85 @@
       "platforms": [
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "artemna-backseat",
+      "slug": "artemna-backseat",
+      "name": "backseat",
+      "summary": "P2P game streaming and voice chat in rooms for Windows: Discord-like UI, hardware encoding, no media server",
+      "description": "P2P game streaming and voice chat in rooms for Windows: Discord-like UI, hardware encoding, no media server",
+      "translations": {
+        "en": {
+          "summary": "P2P game streaming and voice chat in rooms for Windows: Discord-like UI, hardware encoding, no media server",
+          "description": "P2P game streaming and voice chat in rooms for Windows: Discord-like UI, hardware encoding, no media server"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ArtemNA/backseat/main/crates/app/icons/icon.png",
+      "repository_url": "https://github.com/ArtemNA/backseat",
+      "github_repo_id": "1448619232",
+      "source_updated_at": "2026-11-12T17:04:10Z",
+      "homepage_url": null,
+      "owner": "ArtemNA",
+      "default_branch": "main",
+      "source_commit_sha": "0b2606943e22188c51b77722d30c3814b25e79da",
+      "license_text": "MIT License\n\nCopyright (c) 2026 ArtemNA\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "av1",
+        "desktop-app",
+        "game-streaming",
+        "gpui",
+        "gstreamer",
+        "hevc",
+        "low-latency",
+        "native-app",
+        "nvenc",
+        "p2p",
+        "peer-to-peer",
+        "rust",
+        "screen-sharing",
+        "streaming",
+        "voice-chat",
+        "webrtc",
+        "windows"
+      ],
+      "latest_version": "v0.2.26",
+      "release_url": "https://github.com/ArtemNA/backseat/releases/tag/v0.2.26",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-artemna-backseat-v0.2.26",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-artemna-backseat-v0.2.26/THIRD-PARTY-NOTICE-artemna-backseat.txt",
+      "artifacts": [
+        {
+          "id": "1e0949745ea6df51f3b239d45c6b7ad15af35b7f59377ce9881abb7409a416a9",
+          "filename": "backseat-setup-0.2.26.exe",
+          "original_filename": "backseat-setup-0.2.26.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.2.26",
+          "size_bytes": 30675373,
+          "sha256": "1e0949745ea6df51f3b239d45c6b7ad15af35b7f59377ce9881abb7409a416a9",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-artemna-backseat-v0.2.26/backseat-setup-0.2.26.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-artemna-backseat-v0.2.26"
+        }
+      ],
+      "platforms": [
         "windows"
       ]
     },
