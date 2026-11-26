@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:46:43.580744+00:00",
+  "generated_at": "2026-11-26T03:47:24.996291+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -6319,6 +6319,101 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "zhouxiaoka-autoclip",
+      "slug": "zhouxiaoka-autoclip",
+      "name": "autoclip",
+      "summary": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+      "description": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+      "translations": {
+        "en": {
+          "summary": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+          "description": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/zhouxiaoka/autoclip/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/zhouxiaoka/autoclip",
+      "github_repo_id": "1015815983",
+      "source_updated_at": "2026-11-26T03:45:30Z",
+      "homepage_url": "https://zhouxiaoka.github.io/autoclip_intro/",
+      "owner": "zhouxiaoka",
+      "default_branch": "main",
+      "source_commit_sha": "2f511907a72cbfbb8d86639f6441967b826acb6a",
+      "license_text": "MIT License\n\nCopyright (c) 2024 AutoClip Team\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ai-agent",
+        "ai-video-editor",
+        "content-repurposing",
+        "desktop-app",
+        "douyin",
+        "instagram-reels",
+        "mcp",
+        "open-source",
+        "podcast",
+        "subtitles",
+        "tiktok",
+        "video-clipping",
+        "video-editing-software",
+        "xiaohongshu",
+        "youtube-shorts"
+      ],
+      "latest_version": "v1.6.1",
+      "release_url": "https://github.com/zhouxiaoka/autoclip/releases/tag/v1.6.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zhouxiaoka-autoclip-v1.6.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zhouxiaoka-autoclip-v1.6.1/THIRD-PARTY-NOTICE-zhouxiaoka-autoclip.txt",
+      "artifacts": [
+        {
+          "id": "ba7205426133eb4bd6557e70cc096e9afcca62a174843be789783389c45b3262",
+          "filename": "AutoClip.Desktop_1.6.1_aarch64.dmg",
+          "original_filename": "AutoClip.Desktop_1.6.1_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v1.6.1",
+          "size_bytes": 343122437,
+          "sha256": "ba7205426133eb4bd6557e70cc096e9afcca62a174843be789783389c45b3262",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zhouxiaoka-autoclip-v1.6.1/AutoClip.Desktop_1.6.1_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zhouxiaoka-autoclip-v1.6.1"
+        },
+        {
+          "id": "8912a25fb4e6e58c4ef8920a567d227c44c5a274ee049195b35c15d6ce9aac82",
+          "filename": "AutoClip.Desktop_1.6.1_x64-setup.exe",
+          "original_filename": "AutoClip.Desktop_1.6.1_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.6.1",
+          "size_bytes": 208463420,
+          "sha256": "8912a25fb4e6e58c4ef8920a567d227c44c5a274ee049195b35c15d6ce9aac82",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zhouxiaoka-autoclip-v1.6.1/AutoClip.Desktop_1.6.1_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zhouxiaoka-autoclip-v1.6.1"
+        }
+      ],
+      "platforms": [
+        "macos",
+        "windows"
       ]
     },
     {
