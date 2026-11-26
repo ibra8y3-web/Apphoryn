@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T21:13:44.561887+00:00",
+  "generated_at": "2026-11-26T21:14:10.463170+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -68966,26 +68966,26 @@
       "id": "chenbstack-otter",
       "slug": "chenbstack-otter",
       "name": "otter",
-      "summary": "Open-source network project maintained by chenbstack.",
-      "description": "Open-source network project maintained by chenbstack.",
+      "summary": "原生 SSH 客户端:终端、SFTP、Docker、数据库、网站管理,服务器上不装任何东西 · Native agentless SSH client (Rust + GPUI)",
+      "description": "原生 SSH 客户端:终端、SFTP、Docker、数据库、网站管理,服务器上不装任何东西 · Native agentless SSH client (Rust + GPUI)",
       "translations": {
         "en": {
-          "summary": "Open-source network project maintained by chenbstack.",
-          "description": "Open-source network project maintained by chenbstack."
+          "summary": "原生 SSH 客户端:终端、SFTP、Docker、数据库、网站管理,服务器上不装任何东西 · Native agentless SSH client (Rust + GPUI)",
+          "description": "原生 SSH 客户端:终端、SFTP、Docker、数据库、网站管理,服务器上不装任何东西 · Native agentless SSH client (Rust + GPUI)"
         }
       },
       "description_translations": {},
       "translation_status": "pending",
       "ai_provider": null,
       "ai_model": null,
-      "icon_url": "https://avatars.githubusercontent.com/u/27947708?v=4",
+      "icon_url": "https://raw.githubusercontent.com/chenbstack/otter/main/site/img/logo.png",
       "repository_url": "https://github.com/chenbstack/otter",
       "github_repo_id": "1469851630",
-      "source_updated_at": "2026-11-25T01:51:33Z",
-      "homepage_url": null,
+      "source_updated_at": "2026-11-26T13:14:39Z",
+      "homepage_url": "https://chenbstack.github.io/otter/",
       "owner": "chenbstack",
       "default_branch": "main",
-      "source_commit_sha": "1f41fbd0c8529070c87c16c329183495e482ae49",
+      "source_commit_sha": "325321095861110ad329f1b79351b334de631f4a",
       "license_text": "MIT License\n\nCopyright (c) 2026 chenbstack\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -69008,10 +69008,10 @@
         "ssh-client",
         "terminal"
       ],
-      "latest_version": "v0.5.0",
-      "release_url": "https://github.com/chenbstack/otter/releases/tag/v0.5.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-chenbstack-otter-v0.5.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-chenbstack-otter-v0.5.0/THIRD-PARTY-NOTICE-chenbstack-otter.txt",
+      "latest_version": "v0.6.0",
+      "release_url": "https://github.com/chenbstack/otter/releases/tag/v0.6.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-chenbstack-otter-v0.6.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-chenbstack-otter-v0.6.0/THIRD-PARTY-NOTICE-chenbstack-otter.txt",
       "artifacts": [
         {
           "id": "b0f441dc109dd0cd87d4a3de9f3f593247a5736bef142a83abf3db7431f19d9d",
@@ -69046,6 +69046,40 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-chenbstack-otter-v0.5.0/Otter-0.5.0-windows-x86_64-setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-chenbstack-otter-v0.5.0"
+        },
+        {
+          "id": "63fac3dad92a66919fa9b0966c1cb5bfdb80c26289e7e51059e1a528b5edbbef",
+          "filename": "Otter-0.6.0-arm64.dmg",
+          "original_filename": "Otter-0.6.0-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.6.0",
+          "size_bytes": 21390194,
+          "sha256": "63fac3dad92a66919fa9b0966c1cb5bfdb80c26289e7e51059e1a528b5edbbef",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-chenbstack-otter-v0.6.0/Otter-0.6.0-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-chenbstack-otter-v0.6.0"
+        },
+        {
+          "id": "3792dedece33b51410f304fcca261dc0a8b8acbebf985da3b04257c7846d1d99",
+          "filename": "Otter-0.6.0-windows-x86_64-setup.exe",
+          "original_filename": "Otter-0.6.0-windows-x86_64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.6.0",
+          "size_bytes": 42244608,
+          "sha256": "3792dedece33b51410f304fcca261dc0a8b8acbebf985da3b04257c7846d1d99",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-chenbstack-otter-v0.6.0/Otter-0.6.0-windows-x86_64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-chenbstack-otter-v0.6.0"
         }
       ],
       "platforms": [
