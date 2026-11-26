@@ -66379,7 +66379,17 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "8f69a9edcbc8bb0c8d6cfbd5f2e8c93f468cce4d",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-26T10:17:51.977332+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "colgecen-pchome",
