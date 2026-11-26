@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:52:06.475621+00:00",
+  "generated_at": "2026-11-26T04:56:21.935641+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -40202,6 +40202,86 @@
         "android",
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "jarx-dev-mailsrust",
+      "slug": "jarx-dev-mailsrust",
+      "name": "MailsRust",
+      "summary": "Fast native email client for Windows in Rust (egui): mail, calendar and contacts in one window, starts in a fraction of a second, keyword and semantic search.",
+      "description": "Fast native email client for Windows in Rust (egui): mail, calendar and contacts in one window, starts in a fraction of a second, keyword and semantic search.",
+      "translations": {
+        "en": {
+          "summary": "Fast native email client for Windows in Rust (egui): mail, calendar and contacts in one window, starts in a fraction of a second, keyword and semantic search.",
+          "description": "Fast native email client for Windows in Rust (egui): mail, calendar and contacts in one window, starts in a fraction of a second, keyword and semantic search."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/323902779?v=4",
+      "repository_url": "https://github.com/jarx-dev/MailsRust",
+      "github_repo_id": "1451203510",
+      "source_updated_at": "2026-11-12T13:38:19Z",
+      "homepage_url": null,
+      "owner": "jarx-dev",
+      "default_branch": "main",
+      "source_commit_sha": "2b54f2c82be5596d152916b32a3d9cd0b64bc397",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Jarosław Hartwich\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "calendar",
+        "contacts",
+        "desktop-app",
+        "egui",
+        "email-client",
+        "full-text-search",
+        "gmail",
+        "imap",
+        "imap-idle",
+        "mail-client",
+        "native",
+        "oauth2",
+        "rust",
+        "semantic-search",
+        "smtp",
+        "webview2",
+        "windows",
+        "windows-11"
+      ],
+      "latest_version": "v26.1125.2309",
+      "release_url": "https://github.com/jarx-dev/MailsRust/releases/tag/v26.1125.2309",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jarx-dev-mailsrust-v26.1125.2309",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jarx-dev-mailsrust-v26.1125.2309/THIRD-PARTY-NOTICE-jarx-dev-mailsrust.txt",
+      "artifacts": [
+        {
+          "id": "2701739b45d637b503e556b12937542299308a1963516c6631c1bb176c3aa78b",
+          "filename": "Poczta-2b54f2c-1795644567.exe",
+          "original_filename": "Poczta-2b54f2c-1795644567.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v26.1125.2309",
+          "size_bytes": 34269184,
+          "sha256": "2701739b45d637b503e556b12937542299308a1963516c6631c1bb176c3aa78b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jarx-dev-mailsrust-v26.1125.2309/Poczta-2b54f2c-1795644567.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jarx-dev-mailsrust-v26.1125.2309"
+        }
+      ],
+      "platforms": [
         "windows"
       ]
     },
