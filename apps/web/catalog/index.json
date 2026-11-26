@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T14:15:08.148655+00:00",
+  "generated_at": "2026-11-26T14:16:20.045325+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -89747,7 +89747,7 @@
       "homepage_url": "https://www.threadlines.dev",
       "owner": "Threadlines",
       "default_branch": "main",
-      "source_commit_sha": "402f25fb17513b7d8cc7b44d11d3d2231936df3a",
+      "source_commit_sha": "45d293bf356e746e0bc59f3343fcf00a7b99ad4f",
       "license_text": "MIT License\n\nCopyright (c) 2026 T3 Tools Inc.\nCopyright (c) 2026 Wilfredo Leon and Threadlines contributors.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -89771,10 +89771,10 @@
         "opencode",
         "self-hosted"
       ],
-      "latest_version": "v0.11.1",
-      "release_url": "https://github.com/Threadlines/threadlines/releases/tag/v0.11.1",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-threadlines-threadlines-v0.11.1",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-threadlines-threadlines-v0.11.1/THIRD-PARTY-NOTICE-threadlines-threadlines.txt",
+      "latest_version": "v0.11.2",
+      "release_url": "https://github.com/Threadlines/threadlines/releases/tag/v0.11.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-threadlines-threadlines-v0.11.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-threadlines-threadlines-v0.11.2/THIRD-PARTY-NOTICE-threadlines-threadlines.txt",
       "artifacts": [
         {
           "id": "dcb40154f77f3c5c2f060681ea7cea45664cbc0806e130e8e9a57698216afa30",
@@ -89843,6 +89843,74 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-threadlines-threadlines-v0.11.1/Threadlines-0.11.1-win-x64.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-threadlines-threadlines-v0.11.1"
+        },
+        {
+          "id": "0efd402bfe0a30c3855c8e1f349a7072529272607c2964d654f3eda6c66279d2",
+          "filename": "Threadlines-0.11.2-linux-x86_64.AppImage",
+          "original_filename": "Threadlines-0.11.2-linux-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.11.2",
+          "size_bytes": 186646012,
+          "sha256": "0efd402bfe0a30c3855c8e1f349a7072529272607c2964d654f3eda6c66279d2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-threadlines-threadlines-v0.11.2/Threadlines-0.11.2-linux-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-threadlines-threadlines-v0.11.2"
+        },
+        {
+          "id": "416b616e1e9b0f0a0f489be45f16b4de2f0851ec2a77b2ca7de4b33dbdbb9f44",
+          "filename": "Threadlines-0.11.2-mac-arm64.dmg",
+          "original_filename": "Threadlines-0.11.2-mac-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.11.2",
+          "size_bytes": 181429954,
+          "sha256": "416b616e1e9b0f0a0f489be45f16b4de2f0851ec2a77b2ca7de4b33dbdbb9f44",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-threadlines-threadlines-v0.11.2/Threadlines-0.11.2-mac-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-threadlines-threadlines-v0.11.2"
+        },
+        {
+          "id": "3a06da1d32f3316103158f184e357bacd38a8fd70cc5d2c9c0849ff6a6163802",
+          "filename": "Threadlines-0.11.2-mac-x64.dmg",
+          "original_filename": "Threadlines-0.11.2-mac-x64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "x86_64",
+          "version": "v0.11.2",
+          "size_bytes": 187173918,
+          "sha256": "3a06da1d32f3316103158f184e357bacd38a8fd70cc5d2c9c0849ff6a6163802",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-threadlines-threadlines-v0.11.2/Threadlines-0.11.2-mac-x64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-threadlines-threadlines-v0.11.2"
+        },
+        {
+          "id": "a2cb1220ced87c5bde0090269ee1b1cac129616d6d6b7a434370ff616de50690",
+          "filename": "Threadlines-0.11.2-win-x64.exe",
+          "original_filename": "Threadlines-0.11.2-win-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.11.2",
+          "size_bytes": 166100936,
+          "sha256": "a2cb1220ced87c5bde0090269ee1b1cac129616d6d6b7a434370ff616de50690",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-threadlines-threadlines-v0.11.2/Threadlines-0.11.2-win-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-threadlines-threadlines-v0.11.2"
         }
       ],
       "platforms": [
