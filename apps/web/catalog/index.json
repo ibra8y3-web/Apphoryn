@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T21:28:57.859212+00:00",
+  "generated_at": "2026-11-26T21:29:15.155974+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -11942,7 +11942,7 @@
       "homepage_url": "https://github.com/2019xiaopeng/BookReading/releases",
       "owner": "2019xiaopeng",
       "default_branch": "main",
-      "source_commit_sha": "714a0fb5065bb48dbff06decbed05b853b07f28d",
+      "source_commit_sha": "76a16d850beeb919963d3826a2cc3d86aae3c029",
       "license_text": "MIT License\n\nCopyright (c) 2026 2019xiaopeng\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -11965,10 +11965,10 @@
         "typescript",
         "windows"
       ],
-      "latest_version": "v3.2.0",
-      "release_url": "https://github.com/2019xiaopeng/BookReading/releases/tag/v3.2.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-2019xiaopeng-bookreading-v3.2.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-2019xiaopeng-bookreading-v3.2.0/THIRD-PARTY-NOTICE-2019xiaopeng-bookreading.txt",
+      "latest_version": "v3.2.1",
+      "release_url": "https://github.com/2019xiaopeng/BookReading/releases/tag/v3.2.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-2019xiaopeng-bookreading-v3.2.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-2019xiaopeng-bookreading-v3.2.1/THIRD-PARTY-NOTICE-2019xiaopeng-bookreading.txt",
       "artifacts": [
         {
           "id": "11197dabca48e9fa3df978d56e9903948d3e76173d4c26ddd9520a23fb48247c",
@@ -12003,6 +12003,23 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-2019xiaopeng-bookreading-v3.2.0/bookreading_3.2.0_x64-setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-2019xiaopeng-bookreading-v3.2.0"
+        },
+        {
+          "id": "061509f5f0bdc34c49a01d6f9127528602c2ff276dc7a89f628ec45fcff17f23",
+          "filename": "bookreading_3.2.1_x64-setup.exe",
+          "original_filename": "bookreading_3.2.1_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v3.2.1",
+          "size_bytes": 6259213,
+          "sha256": "061509f5f0bdc34c49a01d6f9127528602c2ff276dc7a89f628ec45fcff17f23",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-2019xiaopeng-bookreading-v3.2.1/bookreading_3.2.1_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-2019xiaopeng-bookreading-v3.2.1"
         }
       ],
       "platforms": [
