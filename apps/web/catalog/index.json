@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:56:21.935641+00:00",
+  "generated_at": "2026-11-26T04:56:39.795134+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -26216,6 +26216,76 @@
       ],
       "platforms": [
         "windows"
+      ]
+    },
+    {
+      "id": "chenzizhen237-crypto-git-graph",
+      "slug": "chenzizhen237-crypto-git-graph",
+      "name": "git-graph",
+      "summary": "A desktop commit graph for Git and GitHub — history, changes, stashes and pull requests in one window. Tauri + React + Tailwind.",
+      "description": "A desktop commit graph for Git and GitHub — history, changes, stashes and pull requests in one window. Tauri + React + Tailwind.",
+      "translations": {
+        "en": {
+          "summary": "A desktop commit graph for Git and GitHub — history, changes, stashes and pull requests in one window. Tauri + React + Tailwind.",
+          "description": "A desktop commit graph for Git and GitHub — history, changes, stashes and pull requests in one window. Tauri + React + Tailwind."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/chenzizhen237-crypto/git-graph/main/assets/icon/app-icon.png",
+      "repository_url": "https://github.com/chenzizhen237-crypto/git-graph",
+      "github_repo_id": "1432241814",
+      "source_updated_at": "2026-10-31T07:14:00Z",
+      "homepage_url": "https://github.com/chenzizhen237-crypto/git-graph/releases",
+      "owner": "chenzizhen237-crypto",
+      "default_branch": "main",
+      "source_commit_sha": "d14eacce71104d7d3ec67b777c9f44cbc07e038f",
+      "license_text": "MIT License\n\nCopyright (c) 2026 chenzizhen237-crypto\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "desktop-app",
+        "git",
+        "git-gui",
+        "github",
+        "pull-requests",
+        "react",
+        "tailwindcss",
+        "tauri"
+      ],
+      "latest_version": "v0.7.0",
+      "release_url": "https://github.com/chenzizhen237-crypto/git-graph/releases/tag/v0.7.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-chenzizhen237-crypto-git-graph-v0.7.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-chenzizhen237-crypto-git-graph-v0.7.0/THIRD-PARTY-NOTICE-chenzizhen237-crypto-git-graph.txt",
+      "artifacts": [
+        {
+          "id": "3845398b95e34fa6294fb16d7912db682649e3c3014633e44b38b127e26dbe05",
+          "filename": "Git.Graph_0.7.0_aarch64.dmg",
+          "original_filename": "Git.Graph_0.7.0_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.7.0",
+          "size_bytes": 7024205,
+          "sha256": "3845398b95e34fa6294fb16d7912db682649e3c3014633e44b38b127e26dbe05",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-chenzizhen237-crypto-git-graph-v0.7.0/Git.Graph_0.7.0_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-chenzizhen237-crypto-git-graph-v0.7.0"
+        }
+      ],
+      "platforms": [
+        "macos"
       ]
     },
     {
