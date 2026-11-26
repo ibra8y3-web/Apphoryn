@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T13:39:52.681149+00:00",
+  "generated_at": "2026-11-26T13:40:20.288698+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -2477,7 +2477,7 @@
       "homepage_url": "https://aprazdnikov.github.io/agent-hub-rs/",
       "owner": "aprazdnikov",
       "default_branch": "main",
-      "source_commit_sha": "53048e87612f2ff7c4f799530a85b57c2096dfca",
+      "source_commit_sha": "aa8632aa401845134594da1fb87b43799e830991",
       "license_text": "MIT License\n\nCopyright (c) 2026 Aleksandr\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -2499,10 +2499,10 @@
         "rust",
         "telegram-bot-2026"
       ],
-      "latest_version": "v1.1.2",
-      "release_url": "https://github.com/aprazdnikov/agent-hub-rs/releases/tag/v1.1.2",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aprazdnikov-agent-hub-rs-v1.1.2",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aprazdnikov-agent-hub-rs-v1.1.2/THIRD-PARTY-NOTICE-aprazdnikov-agent-hub-rs.txt",
+      "latest_version": "v1.2.0",
+      "release_url": "https://github.com/aprazdnikov/agent-hub-rs/releases/tag/v1.2.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aprazdnikov-agent-hub-rs-v1.2.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aprazdnikov-agent-hub-rs-v1.2.0/THIRD-PARTY-NOTICE-aprazdnikov-agent-hub-rs.txt",
       "artifacts": [
         {
           "id": "1aadc1d22f55c0335644936fc052c281b62a671d5bdfb3c67bdc9842e91edf64",
@@ -2554,6 +2554,57 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aprazdnikov-agent-hub-rs-v1.1.2/agent-hub-x86_64-unknown-linux-gnu.deb",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aprazdnikov-agent-hub-rs-v1.1.2"
+        },
+        {
+          "id": "33e5cd63a22b8e7134002433f196910baff3f5fbbc10dc6b819d143e3757365b",
+          "filename": "agent-hub-x86_64-pc-windows-msvc-setup.exe",
+          "original_filename": "agent-hub-x86_64-pc-windows-msvc-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.2.0",
+          "size_bytes": 12573417,
+          "sha256": "33e5cd63a22b8e7134002433f196910baff3f5fbbc10dc6b819d143e3757365b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aprazdnikov-agent-hub-rs-v1.2.0/agent-hub-x86_64-pc-windows-msvc-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aprazdnikov-agent-hub-rs-v1.2.0"
+        },
+        {
+          "id": "3777a9b4340cdce3b58c16087334ff01eac37c46e84c9ae965bd509e846de733",
+          "filename": "agent-hub-x86_64-pc-windows-msvc.exe",
+          "original_filename": "agent-hub-x86_64-pc-windows-msvc.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.2.0",
+          "size_bytes": 33421312,
+          "sha256": "3777a9b4340cdce3b58c16087334ff01eac37c46e84c9ae965bd509e846de733",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aprazdnikov-agent-hub-rs-v1.2.0/agent-hub-x86_64-pc-windows-msvc.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aprazdnikov-agent-hub-rs-v1.2.0"
+        },
+        {
+          "id": "b712559972605bd1f0621fc9d4b430cdab8fea7fb2d32a9a45db7adebd4f1da4",
+          "filename": "agent-hub-x86_64-unknown-linux-gnu.deb",
+          "original_filename": "agent-hub-x86_64-unknown-linux-gnu.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v1.2.0",
+          "size_bytes": 12232456,
+          "sha256": "b712559972605bd1f0621fc9d4b430cdab8fea7fb2d32a9a45db7adebd4f1da4",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aprazdnikov-agent-hub-rs-v1.2.0/agent-hub-x86_64-unknown-linux-gnu.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aprazdnikov-agent-hub-rs-v1.2.0"
         }
       ],
       "platforms": [
