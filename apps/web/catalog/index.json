@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T07:29:29.210434+00:00",
+  "generated_at": "2026-11-26T07:29:50.727588+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -33580,6 +33580,56 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "goat-si-goat",
+      "slug": "goat-si-goat",
+      "artifacts": [],
+      "name": "goat",
+      "summary": "GOAT: one control surface for Claude Code, Codex, Cursor and more, across your machines. Fork of T3 Code.",
+      "description": "GOAT: one control surface for Claude Code, Codex, Cursor and more, across your machines. Fork of T3 Code.",
+      "translations": {
+        "en": {
+          "summary": "GOAT: one control surface for Claude Code, Codex, Cursor and more, across your machines. Fork of T3 Code.",
+          "description": "GOAT: one control surface for Claude Code, Codex, Cursor and more, across your machines. Fork of T3 Code."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/goat-si/goat/dev/assets/prod/logo.svg",
+      "repository_url": "https://github.com/goat-si/goat",
+      "github_repo_id": "1413248431",
+      "source_updated_at": "2026-11-26T02:47:03Z",
+      "homepage_url": "https://trygoat.ai",
+      "owner": "goat-si",
+      "default_branch": "dev",
+      "source_commit_sha": "7405f5280874d4105665cb1eb4b615e625c5fd18",
+      "license_text": "MIT License\n\nCopyright (c) 2026 T3 Tools Inc.\nCopyright (c) 2026 goat-si contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "coding-agents",
+        "cursor",
+        "desktop-app",
+        "developer-tools",
+        "mcp",
+        "remote-development",
+        "t3code"
+      ],
+      "latest_version": "v0.1.13",
+      "release_url": "https://github.com/goat-si/goat/releases/tag/v0.1.13",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "eggplants-godlo",
