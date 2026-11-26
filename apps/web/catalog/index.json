@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T10:32:37.809781+00:00",
+  "generated_at": "2026-11-26T10:32:52.971516+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -1701,7 +1701,7 @@
       "icon_url": "https://raw.githubusercontent.com/aether-aiagent/aether/main/app/src/nightly/res/mipmap-hdpi/ic_launcher_nightly.png",
       "repository_url": "https://github.com/aether-aiagent/aether",
       "github_repo_id": "1464339831",
-      "source_updated_at": "2026-11-23T08:14:42Z",
+      "source_updated_at": "2026-11-26T05:47:34Z",
       "homepage_url": "https://aether-aiagent.github.io/aether/",
       "owner": "aether-aiagent",
       "default_branch": "main",
