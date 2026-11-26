@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:15:21.248052+00:00",
+  "generated_at": "2026-11-26T03:15:34.221031+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -19604,6 +19604,57 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "d8bp8ags-etiknivo",
+      "slug": "d8bp8ags-etiknivo",
+      "artifacts": [],
+      "name": "Etiknivo",
+      "summary": "Desktop label designer and printer manager for the Fichero 5836 thermal label printer. Design labels with text, QR codes, barcodes and symbols, and print over Bluetooth. Built with Python and PySide6.",
+      "description": "Desktop label designer and printer manager for the Fichero 5836 thermal label printer. Design labels with text, QR codes, barcodes and symbols, and print over Bluetooth. Built with Python and PySide6.",
+      "translations": {
+        "en": {
+          "summary": "Desktop label designer and printer manager for the Fichero 5836 thermal label printer. Design labels with text, QR codes, barcodes and symbols, and print over Bluetooth. Built with Python and PySide6.",
+          "description": "Desktop label designer and printer manager for the Fichero 5836 thermal label printer. Design labels with text, QR codes, barcodes and symbols, and print over Bluetooth. Built with Python and PySide6."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/83901401?v=4",
+      "repository_url": "https://github.com/D8bp8Ags/Etiknivo",
+      "github_repo_id": "1432429520",
+      "source_updated_at": "2026-11-16T08:26:31Z",
+      "homepage_url": null,
+      "owner": "D8bp8Ags",
+      "default_branch": "main",
+      "source_commit_sha": "b040d5781562aebfdfd2d4907d942631d5a46645",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Etiknivo contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "barcode",
+        "bluetooth-low-energy",
+        "desktop-app",
+        "fichero",
+        "label-designer",
+        "label-printer",
+        "pyside6",
+        "python",
+        "qr-code",
+        "qt6",
+        "thermal-printer"
+      ],
+      "latest_version": "v0.1.0",
+      "release_url": "https://github.com/D8bp8Ags/Etiknivo/releases/tag/v0.1.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "huidoudour-event",
