@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T11:57:29.968802+00:00",
+  "generated_at": "2026-11-26T11:58:58.828958+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -22970,6 +22970,114 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "fatihdogmus-dromon",
+      "slug": "fatihdogmus-dromon",
+      "name": "dromon",
+      "summary": "⛵ Browse remote machines over SSH like a local folder. A small, fast, beautiful SFTP file browser for macOS, Windows & Linux, in Rust on Rune.",
+      "description": "⛵ Browse remote machines over SSH like a local folder. A small, fast, beautiful SFTP file browser for macOS, Windows & Linux, in Rust on Rune.",
+      "translations": {
+        "en": {
+          "summary": "⛵ Browse remote machines over SSH like a local folder. A small, fast, beautiful SFTP file browser for macOS, Windows & Linux, in Rust on Rune.",
+          "description": "⛵ Browse remote machines over SSH like a local folder. A small, fast, beautiful SFTP file browser for macOS, Windows & Linux, in Rust on Rune."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/fatihdogmus/dromon/main/tests/goldens/icons-dark%402x.png",
+      "repository_url": "https://github.com/fatihdogmus/dromon",
+      "github_repo_id": "1471642935",
+      "source_updated_at": "2026-11-25T14:08:55Z",
+      "homepage_url": null,
+      "owner": "fatihdogmus",
+      "default_branch": "main",
+      "source_commit_sha": "cf98fb5817cb3ab045327419a9d0ddbc62bad1c7",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Muhammed Fatih Doğmuş\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "network",
+      "topics": [
+        "desktop-app",
+        "file-browser",
+        "file-manager",
+        "gpu-ui",
+        "linux",
+        "macos",
+        "rust",
+        "sftp",
+        "ssh",
+        "windows"
+      ],
+      "latest_version": "0.1.0",
+      "release_url": "https://github.com/fatihdogmus/dromon/releases/tag/0.1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fatihdogmus-dromon-0.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fatihdogmus-dromon-0.1.0/THIRD-PARTY-NOTICE-fatihdogmus-dromon.txt",
+      "artifacts": [
+        {
+          "id": "646711b7c1dedcb3e567916dbb909f2c1cb55a678de3a9f5b58d6aeffa205a27",
+          "filename": "Dromon-0.1.0-linux-x64.deb",
+          "original_filename": "Dromon-0.1.0-linux-x64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "0.1.0",
+          "size_bytes": 14100720,
+          "sha256": "646711b7c1dedcb3e567916dbb909f2c1cb55a678de3a9f5b58d6aeffa205a27",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fatihdogmus-dromon-0.1.0/Dromon-0.1.0-linux-x64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fatihdogmus-dromon-0.1.0"
+        },
+        {
+          "id": "940660768030e09a810a4431f8af46596aaea6a5d3ce73bce61ebe3692a651c0",
+          "filename": "Dromon-0.1.0-macos-arm64.dmg",
+          "original_filename": "Dromon-0.1.0-macos-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "0.1.0",
+          "size_bytes": 18259258,
+          "sha256": "940660768030e09a810a4431f8af46596aaea6a5d3ce73bce61ebe3692a651c0",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fatihdogmus-dromon-0.1.0/Dromon-0.1.0-macos-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fatihdogmus-dromon-0.1.0"
+        },
+        {
+          "id": "7112ee101676fb10d50337e89d2943a6af5ca17a708e0adcb14adabc27e7d798",
+          "filename": "Dromon-0.1.0-windows-x64.msi",
+          "original_filename": "Dromon-0.1.0-windows-x64.msi",
+          "platform": "windows",
+          "package_type": "Windows installer",
+          "architecture": "x86_64",
+          "version": "0.1.0",
+          "size_bytes": 11403264,
+          "sha256": "7112ee101676fb10d50337e89d2943a6af5ca17a708e0adcb14adabc27e7d798",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fatihdogmus-dromon-0.1.0/Dromon-0.1.0-windows-x64.msi",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fatihdogmus-dromon-0.1.0"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
       ]
     },
     {
