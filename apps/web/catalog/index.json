@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T15:17:42.536871+00:00",
+  "generated_at": "2026-11-26T15:18:04.314649+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -8983,6 +8983,93 @@
       "release_url": "https://github.com/MattiaPARRINELLO/autologin/releases/tag/watcher-v0.6.6",
       "platforms": [],
       "project_status": "source_available"
+    },
+    {
+      "id": "242neguev-automat-pdf",
+      "slug": "242neguev-automat-pdf",
+      "name": "Automat-PDF",
+      "summary": "Application Windows pour fusionner, séparer, organiser, protéger et diffuser des PDF : bulletins de paie séparés par personne et envoyés à chacun, conversions Office et Word. Logiciel libre, licence MIT.",
+      "description": "Application Windows pour fusionner, séparer, organiser, protéger et diffuser des PDF : bulletins de paie séparés par personne et envoyés à chacun, conversions Office et Word. Logiciel libre, licence MIT.",
+      "translations": {
+        "en": {
+          "summary": "Application Windows pour fusionner, séparer, organiser, protéger et diffuser des PDF : bulletins de paie séparés par personne et envoyés à chacun, conversions Office et Word. Logiciel libre, licence MIT.",
+          "description": "Application Windows pour fusionner, séparer, organiser, protéger et diffuser des PDF : bulletins de paie séparés par personne et envoyés à chacun, conversions Office et Word. Logiciel libre, licence MIT."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/242Neguev/Automat-PDF/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/242Neguev/Automat-PDF",
+      "github_repo_id": "1447263778",
+      "source_updated_at": "2026-11-11T11:44:06Z",
+      "homepage_url": null,
+      "owner": "242Neguev",
+      "default_branch": "main",
+      "source_commit_sha": "64d25355e1f407704746b182c4d8d78b7a5e0396",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Eau sèche\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "desktop-app",
+        "french",
+        "pdf",
+        "pdf-tools",
+        "rust",
+        "tauri",
+        "windows"
+      ],
+      "latest_version": "v0.7.0",
+      "release_url": "https://github.com/242Neguev/Automat-PDF/releases/tag/v0.7.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-242neguev-automat-pdf-v0.7.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-242neguev-automat-pdf-v0.7.0/THIRD-PARTY-NOTICE-242neguev-automat-pdf.txt",
+      "artifacts": [
+        {
+          "id": "637cdc9ad550943417001d5fdf0ca2d528076d147d07e6ad121117bddc0e994c",
+          "filename": "Automat-PDF_0.7.0_universal.dmg",
+          "original_filename": "Automat-PDF_0.7.0_universal.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "universal",
+          "version": "v0.7.0",
+          "size_bytes": 13370467,
+          "sha256": "637cdc9ad550943417001d5fdf0ca2d528076d147d07e6ad121117bddc0e994c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-242neguev-automat-pdf-v0.7.0/Automat-PDF_0.7.0_universal.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-242neguev-automat-pdf-v0.7.0"
+        },
+        {
+          "id": "e98118c329f3faca9dc1f982b8423e7c7b9ba7a91cdcc433076ef4a77d6b65ac",
+          "filename": "Automat-PDF_0.7.0_x64-setup.exe",
+          "original_filename": "Automat-PDF_0.7.0_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.7.0",
+          "size_bytes": 5265209,
+          "sha256": "e98118c329f3faca9dc1f982b8423e7c7b9ba7a91cdcc433076ef4a77d6b65ac",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-242neguev-automat-pdf-v0.7.0/Automat-PDF_0.7.0_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-242neguev-automat-pdf-v0.7.0"
+        }
+      ],
+      "platforms": [
+        "macos",
+        "windows"
+      ]
     },
     {
       "id": "shishir-ip-automatrix",
