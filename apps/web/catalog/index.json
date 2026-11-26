@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T12:38:45.068503+00:00",
+  "generated_at": "2026-11-26T12:39:10.096340+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -98266,6 +98266,78 @@
       "platforms": [
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "ariellaureanorosas-yt-clipper",
+      "slug": "ariellaureanorosas-yt-clipper",
+      "name": "yt-clipper",
+      "summary": "App desktop para Windows que baixa videos do YouTube, corta trechos e converte para vertical (9:16) ou horizontal (16:9). Deteccao de hardware com aceleracao GPU (NVENC/QuickSync/VAAPI) e fallback CPU, com modo de economia de memoria para P",
+      "description": "App desktop para Windows que baixa videos do YouTube, corta trechos e converte para vertical (9:16) ou horizontal (16:9). Deteccao de hardware com aceleracao GPU (NVENC/QuickSync/VAAPI) e fallback CPU, com modo de economia de memoria para PCs de 8 GB de RAM.",
+      "translations": {
+        "en": {
+          "summary": "App desktop para Windows que baixa videos do YouTube, corta trechos e converte para vertical (9:16) ou horizontal (16:9). Deteccao de hardware com aceleracao GPU (NVENC/QuickSync/VAAPI) e fallback CPU, com modo de economia de memoria para P",
+          "description": "App desktop para Windows que baixa videos do YouTube, corta trechos e converte para vertical (9:16) ou horizontal (16:9). Deteccao de hardware com aceleracao GPU (NVENC/QuickSync/VAAPI) e fallback CPU, com modo de economia de memoria para PCs de 8 GB de RAM."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/272345339?v=4",
+      "repository_url": "https://github.com/ariellaureanorosas/yt-clipper",
+      "github_repo_id": "1393204346",
+      "source_updated_at": "2026-11-11T14:48:44Z",
+      "homepage_url": null,
+      "owner": "ariellaureanorosas",
+      "default_branch": "main",
+      "source_commit_sha": "ca0d666aff634d2c1740164a5be9bef590619286",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Ariel Laureano Rosas\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "customtkinter",
+        "desktop-app",
+        "ffmpeg",
+        "python",
+        "shorts",
+        "tiktok",
+        "video-clipper",
+        "youtube",
+        "youtube-downloader",
+        "yt-dlp"
+      ],
+      "latest_version": "v1.3.1",
+      "release_url": "https://github.com/ariellaureanorosas/yt-clipper/releases/tag/v1.3.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ariellaureanorosas-yt-clipper-v1.3.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ariellaureanorosas-yt-clipper-v1.3.1/THIRD-PARTY-NOTICE-ariellaureanorosas-yt-clipper.txt",
+      "artifacts": [
+        {
+          "id": "ef3a0c0c3407ab1a1013670fe0b4dbf97c1c1768c884f06e1465a44f81e4096c",
+          "filename": "YouTubeClipper-Setup-1.3.1.exe",
+          "original_filename": "YouTubeClipper-Setup-1.3.1.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.3.1",
+          "size_bytes": 88267028,
+          "sha256": "ef3a0c0c3407ab1a1013670fe0b4dbf97c1c1768c884f06e1465a44f81e4096c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ariellaureanorosas-yt-clipper-v1.3.1/YouTubeClipper-Setup-1.3.1.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ariellaureanorosas-yt-clipper-v1.3.1"
+        }
+      ],
+      "platforms": [
         "windows"
       ]
     },
