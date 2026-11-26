@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T02:31:44.216159+00:00",
+  "generated_at": "2026-11-26T02:32:04.700262+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -15628,6 +15628,86 @@
           "signer_certificate_sha256": "f8bc57207fdc4c067ce39677b6ff1fdf5ecb119129726aafa3bcc1e2387ac7b4",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-clarklevis1995-dsh-mobile-1.8.6/DshMobile-android-v1.8.6.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-clarklevis1995-dsh-mobile-1.8.6"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "uchiha086-dshremote",
+      "slug": "uchiha086-dshremote",
+      "name": "dshremote",
+      "summary": "用手机（鸿蒙 NEXT / 安卓）远程指挥电脑上的 DeepSeek Harness：全屏 WebView + 回合完成通知，局域网直连或 Cloudflare 隧道。只发源码，鸿蒙包需用自己的账号签名。",
+      "description": "用手机（鸿蒙 NEXT / 安卓）远程指挥电脑上的 DeepSeek Harness：全屏 WebView + 回合完成通知，局域网直连或 Cloudflare 隧道。只发源码，鸿蒙包需用自己的账号签名。",
+      "translations": {
+        "en": {
+          "summary": "用手机（鸿蒙 NEXT / 安卓）远程指挥电脑上的 DeepSeek Harness：全屏 WebView + 回合完成通知，局域网直连或 Cloudflare 隧道。只发源码，鸿蒙包需用自己的账号签名。",
+          "description": "用手机（鸿蒙 NEXT / 安卓）远程指挥电脑上的 DeepSeek Harness：全屏 WebView + 回合完成通知，局域网直连或 Cloudflare 隧道。只发源码，鸿蒙包需用自己的账号签名。"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/uchiha086/dshremote/main/android/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "repository_url": "https://github.com/uchiha086/dshremote",
+      "github_repo_id": "1465041585",
+      "source_updated_at": "2026-11-22T16:51:57Z",
+      "homepage_url": "https://github.com/uchiha086/dshremote",
+      "owner": "uchiha086",
+      "default_branch": "main",
+      "source_commit_sha": "36574fb8bcd93ac483ee834c7cad83547ac26181",
+      "license_text": "MIT License\n\nCopyright (c) 2026 uchiha086\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "arkts",
+        "cloudflare-tunnel",
+        "coding-agent",
+        "deepseek",
+        "deepseek-harness",
+        "deepseek-harness-plugin",
+        "dsh-plugin",
+        "harmonyos",
+        "harmonyos-next",
+        "java",
+        "mobile",
+        "notification",
+        "plugin",
+        "remote-control",
+        "self-hosted",
+        "webview"
+      ],
+      "latest_version": "v0.2.2-android",
+      "release_url": "https://github.com/uchiha086/dshremote/releases/tag/v0.2.2-android",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-uchiha086-dshremote-v0.2.2-android",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-uchiha086-dshremote-v0.2.2-android/THIRD-PARTY-NOTICE-uchiha086-dshremote.txt",
+      "artifacts": [
+        {
+          "id": "8f588831b5b01af5de586aa7926047c4b1a463a1ae896c6bc5d98e2875390a7c",
+          "filename": "dshremote-android-0.2.2.apk",
+          "original_filename": "dshremote-android-0.2.2.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.2.2-android",
+          "size_bytes": 41446,
+          "sha256": "8f588831b5b01af5de586aa7926047c4b1a463a1ae896c6bc5d98e2875390a7c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "df513c5ef95bb344fe072a651d6cf0ba85f85f9def69b184c3d8898f9452976a",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-uchiha086-dshremote-v0.2.2-android/dshremote-android-0.2.2.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-uchiha086-dshremote-v0.2.2-android"
         }
       ],
       "platforms": [
