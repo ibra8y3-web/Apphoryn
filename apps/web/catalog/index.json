@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T10:19:14.120327+00:00",
+  "generated_at": "2026-11-26T10:19:29.622241+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -63856,17 +63856,19 @@
       "id": "yamato3010-orbit",
       "slug": "yamato3010-orbit",
       "name": "Orbit",
-      "summary": "Orbit is an unofficial Android app for VRChat that shows where your friends are, groups them by instance, and lets you search and bookmark worlds.",
-      "description": "Orbit is an unofficial Android app for VRChat, built with Kotlin and Jetpack Compose using Material 3. It lets you check your friends' online status and current location, group friends who share an instance, search for worlds and bookmark interesting ones on your device, view notifications and send invites or invite requests in-app, change your own status with saved presets, and track friends' status and location changes in an activity feed. On first launch you can log in to VRChat or explore with demo data. The app connects directly to the VRChat API over HTTPS; passwords and 2FA codes are not persisted, and the authentication cookie is encrypted with an Android Keystore key and removed on logout. Favorites, world bookmarks, and activity history are stored per account on-device and remain after logout. Supports Android 7.0+. Distributed as an APK via GitHub Releases. Note: login and API communication with a real account are unverified. Licensed under MIT.",
+      "summary": "Orbit is an unofficial Android app that lets you check where your VRChat friends are and discover interesting worlds.",
+      "description": "Orbit is an unofficial Android app that lets you check where your VRChat friends are and discover interesting worlds.",
       "translations": {
-        "en": "Orbit is an unofficial Android app for VRChat that shows where your friends are, groups them by instance, and lets you search and bookmark worlds.",
-        "ar": "Orbit هو تطبيق أندرويد غير رسمي لمنصة VRChat يعرض مكان أصدقائك، ويجمعهم حسب النسخة (instance)، ويتيح لك البحث عن العوالم وحفظها."
+        "en": {
+          "summary": "Orbit is an unofficial Android app that lets you check where your VRChat friends are and discover interesting worlds.",
+          "description": "Orbit is an unofficial Android app that lets you check where your VRChat friends are and discover interesting worlds."
+        }
       },
       "description_translations": {
         "en": "Orbit is an unofficial Android app for VRChat, built with Kotlin and Jetpack Compose using Material 3. It lets you check your friends' online status and current location, group friends who share an instance, search for worlds and bookmark interesting ones on your device, view notifications and send invites or invite requests in-app, change your own status with saved presets, and track friends' status and location changes in an activity feed. On first launch you can log in to VRChat or explore with demo data. The app connects directly to the VRChat API over HTTPS; passwords and 2FA codes are not persisted, and the authentication cookie is encrypted with an Android Keystore key and removed on logout. Favorites, world bookmarks, and activity history are stored per account on-device and remain after logout. Supports Android 7.0+. Distributed as an APK via GitHub Releases. Note: login and API communication with a real account are unverified. Licensed under MIT.",
         "ar": "Orbit هو تطبيق أندرويد غير رسمي لمنصة VRChat، مبني باستخدام Kotlin وJetpack Compose مع Material 3. يتيح لك التحقق من حالة أصدقائك على الإنترنت وموقعهم الحالي، وتجميع الأصدقاء المتواجدين في النسخة نفسها، والبحث عن العوالم وحفظ العوالم المهمة على جهازك، وعرض الإشعارات وإرسال الدعوات وطلبات الدعوة من داخل التطبيق، وتغيير حالتك الخاصة مع حفظ الإعدادات الشائعة كإعدادات مسبقة، وتتبع تغيّرات حالة الأصدقاء وموقعهم عبر سجل النشاط. عند التشغيل الأول يمكنك تسجيل الدخول إلى VRChat أو التجربة باستخدام بيانات تجريبية. يتصل التطبيق مباشرةً بواجهة برمجة تطبيقات VRChat عبر HTTPS؛ ولا يتم الاحتفاظ بكلمات المرور ورموز المصادقة الثنائية، ويُشفَّر ملف تعريف المصادقة بمفتاح من Android Keystore ويُحذف عند تسجيل الخروج. تُحفظ المفضلة وعلامات العوالم المرجعية وسجل النشاط لكل حساب على الجهاز وتبقى بعد تسجيل الخروج. يدعم Android 7.0 فأحدث. يُوزَّع كملف APK عبر GitHub Releases. ملاحظة: تسجيل الدخول والتواصل مع واجهة البرمجة باستخدام حساب حقيقي غير مُتحقَّق منه. الترخيص بموجب MIT."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/yamato3010/Orbit/main/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
@@ -63880,10 +63882,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 yamato3010\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
-      "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "Orbit is a standalone end-user Android application (Kotlin/Jetpack Compose) distributed as an APK. The README documents a supported build path (JDK 25, Android SDK 37, './gradlew :app:assembleDebug' producing app/build/outputs/apk/debug/app-debug.apk), so automatic source-build is recommended. The note that real-account API communication is unverified concerns runtime functionality, not the build ",
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
       "project_status": "installable",
       "category": "other",
       "topics": [
