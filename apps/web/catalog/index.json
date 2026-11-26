@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T13:03:37.168465+00:00",
+  "generated_at": "2026-11-26T13:08:43.228404+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -46184,7 +46184,7 @@
       "icon_url": "https://raw.githubusercontent.com/fmadore/Live-translation/main/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/fmadore/Live-translation",
       "github_repo_id": "1268310160",
-      "source_updated_at": "2026-11-23T16:25:40Z",
+      "source_updated_at": "2026-11-26T05:46:37Z",
       "homepage_url": "https://fmadore.github.io/Live-translation/",
       "owner": "fmadore",
       "default_branch": "main",
