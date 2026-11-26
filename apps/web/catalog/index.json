@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:00:19.256601+00:00",
+  "generated_at": "2026-11-26T03:00:48.571865+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -6086,6 +6086,100 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "battery-hub-battery-hub",
+      "slug": "battery-hub-battery-hub",
+      "name": "battery-hub",
+      "summary": "Live battery monitor for wireless HID devices (mouse, keyboard, headset, controller) on Windows",
+      "description": "Live battery monitor for wireless HID devices (mouse, keyboard, headset, controller) on Windows",
+      "translations": {
+        "en": {
+          "summary": "Live battery monitor for wireless HID devices (mouse, keyboard, headset, controller) on Windows",
+          "description": "Live battery monitor for wireless HID devices (mouse, keyboard, headset, controller) on Windows"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/battery-hub/battery-hub/main/assets/icon.png",
+      "repository_url": "https://github.com/battery-hub/battery-hub",
+      "github_repo_id": "1289316835",
+      "source_updated_at": "2026-11-26T00:02:08Z",
+      "homepage_url": "https://battery-hub.github.io/battery-hub/",
+      "owner": "battery-hub",
+      "default_branch": "main",
+      "source_commit_sha": "aff030007f6cd217803e552cc0a0b60d17bd7bc9",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Battery Hub contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "system",
+      "topics": [
+        "battery",
+        "battery-monitor",
+        "bluetooth",
+        "desktop-app",
+        "electron",
+        "gaming-peripherals",
+        "headset",
+        "hid",
+        "keyboard",
+        "mouse",
+        "node-hid",
+        "peripherals",
+        "system-tray",
+        "windows",
+        "wireless"
+      ],
+      "latest_version": "v2.0.7",
+      "release_url": "https://github.com/battery-hub/battery-hub/releases/tag/v2.0.7",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-battery-hub-battery-hub-v2.0.7",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-battery-hub-battery-hub-v2.0.7/THIRD-PARTY-NOTICE-battery-hub-battery-hub.txt",
+      "artifacts": [
+        {
+          "id": "75c37161e417fcf38eb5af952db2ef71c9bb98e66c4f13fa1bfdb55340e2942a",
+          "filename": "Battery-Hub-Installer-2.0.7.exe",
+          "original_filename": "Battery-Hub-Installer-2.0.7.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v2.0.7",
+          "size_bytes": 112336384,
+          "sha256": "75c37161e417fcf38eb5af952db2ef71c9bb98e66c4f13fa1bfdb55340e2942a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-battery-hub-battery-hub-v2.0.7/Battery-Hub-Installer-2.0.7.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-battery-hub-battery-hub-v2.0.7"
+        },
+        {
+          "id": "29c7a9bd16d7536a90e9970698c47b4dcef3f48f70861b4bd6dff1605c2c9909",
+          "filename": "Battery-Hub-Update-2.0.7.exe",
+          "original_filename": "Battery-Hub-Update-2.0.7.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v2.0.7",
+          "size_bytes": 112170653,
+          "sha256": "29c7a9bd16d7536a90e9970698c47b4dcef3f48f70861b4bd6dff1605c2c9909",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-battery-hub-battery-hub-v2.0.7/Battery-Hub-Update-2.0.7.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-battery-hub-battery-hub-v2.0.7"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
