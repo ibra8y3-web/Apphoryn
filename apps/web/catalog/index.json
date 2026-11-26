@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T23:33:00.314067+00:00",
+  "generated_at": "2026-11-26T23:34:19.243972+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -66841,7 +66841,7 @@
       "icon_url": "https://raw.githubusercontent.com/aipoch/open-science/main/resources/icon.png",
       "repository_url": "https://github.com/aipoch/open-science",
       "github_repo_id": "1287804060",
-      "source_updated_at": "2026-11-26T08:22:42Z",
+      "source_updated_at": "2026-11-26T19:32:30Z",
       "homepage_url": "https://aipoch.com/open-science",
       "owner": "aipoch",
       "default_branch": "main",
