@@ -4017,7 +4017,17 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "d3f3fc1a6dfe714e14404fefc18fff4ee5fc5c0e",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-26T00:06:11.913367+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "wikimedia-apps-android-wikipedia",
