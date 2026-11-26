@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T07:08:35.601942+00:00",
+  "generated_at": "2026-11-26T07:09:05.428740+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -91823,6 +91823,97 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "jeremy-jud-whatsup",
+      "slug": "jeremy-jud-whatsup",
+      "name": "whatsup",
+      "summary": "💬 WhatsUp: kleine Desktop-Chat-App. Freunde per Code adden, Gruppenchats, Bilder & GIFs, Emojis, Erfolge und Profilbilder. Direkt Peer-to-Peer, ohne Konto und ohne Server.",
+      "description": "💬 WhatsUp: kleine Desktop-Chat-App. Freunde per Code adden, Gruppenchats, Bilder & GIFs, Emojis, Erfolge und Profilbilder. Direkt Peer-to-Peer, ohne Konto und ohne Server.",
+      "translations": {
+        "en": {
+          "summary": "💬 WhatsUp: kleine Desktop-Chat-App. Freunde per Code adden, Gruppenchats, Bilder & GIFs, Emojis, Erfolge und Profilbilder. Direkt Peer-to-Peer, ohne Konto und ohne Server.",
+          "description": "💬 WhatsUp: kleine Desktop-Chat-App. Freunde per Code adden, Gruppenchats, Bilder & GIFs, Emojis, Erfolge und Profilbilder. Direkt Peer-to-Peer, ohne Konto und ohne Server."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Jeremy-Jud/whatsup/main/src/assets/logo.png",
+      "repository_url": "https://github.com/Jeremy-Jud/whatsup",
+      "github_repo_id": "1452508991",
+      "source_updated_at": "2026-11-20T11:20:47Z",
+      "homepage_url": "https://jeremy-jud.github.io/whatsup/about/",
+      "owner": "Jeremy-Jud",
+      "default_branch": "main",
+      "source_commit_sha": "83c28e3fc72d633e59c5e42b72de140cf6fc3691",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Jeremy-Jud\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "network",
+      "topics": [
+        "achievements",
+        "chat",
+        "chat-app",
+        "desktop-app",
+        "electron",
+        "emoji",
+        "group-chat",
+        "messenger",
+        "peer-to-peer",
+        "peerjs",
+        "webrtc",
+        "windows"
+      ],
+      "latest_version": "v1.39.1",
+      "release_url": "https://github.com/Jeremy-Jud/whatsup/releases/tag/v1.39.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jeremy-jud-whatsup-v1.39.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jeremy-jud-whatsup-v1.39.1/THIRD-PARTY-NOTICE-jeremy-jud-whatsup.txt",
+      "artifacts": [
+        {
+          "id": "8b7ca7eb327567ea7fecffbc3964871e79076e4677ef2ff89e1801893dac5e2d",
+          "filename": "WhatsUp-Setup.exe",
+          "original_filename": "WhatsUp-Setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.39.1",
+          "size_bytes": 122416366,
+          "sha256": "8b7ca7eb327567ea7fecffbc3964871e79076e4677ef2ff89e1801893dac5e2d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jeremy-jud-whatsup-v1.39.1/WhatsUp-Setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jeremy-jud-whatsup-v1.39.1"
+        },
+        {
+          "id": "68c05bb21437fd11555ab133a8e5170410d56190a6418faf33bb68790a34b192",
+          "filename": "WhatsUp.exe",
+          "original_filename": "WhatsUp.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.39.1",
+          "size_bytes": 111326322,
+          "sha256": "68c05bb21437fd11555ab133a8e5170410d56190a6418faf33bb68790a34b192",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jeremy-jud-whatsup-v1.39.1/WhatsUp.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jeremy-jud-whatsup-v1.39.1"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
