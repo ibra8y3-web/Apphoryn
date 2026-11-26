@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:30:02.335916+00:00",
+  "generated_at": "2026-11-26T04:30:26.627611+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -13129,6 +13129,94 @@
       ],
       "build_refs": [
         "31ed0d603dee956eb2a50c11d9eb42070c3c9e20"
+      ]
+    },
+    {
+      "id": "themechanic-dev-claude-proxmox-controller",
+      "slug": "themechanic-dev-claude-proxmox-controller",
+      "name": "claude-proxmox-controller",
+      "summary": "Your Proxmox VE hosts in one window — and Claude, working on them as far as you let it. Desktop app for Windows and Linux.",
+      "description": "Your Proxmox VE hosts in one window — and Claude, working on them as far as you let it. Desktop app for Windows and Linux.",
+      "translations": {
+        "en": {
+          "summary": "Your Proxmox VE hosts in one window — and Claude, working on them as far as you let it. Desktop app for Windows and Linux.",
+          "description": "Your Proxmox VE hosts in one window — and Claude, working on them as far as you let it. Desktop app for Windows and Linux."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/themechanic-dev/claude-proxmox-controller/main/tests/data/boot-logo.png",
+      "repository_url": "https://github.com/themechanic-dev/claude-proxmox-controller",
+      "github_repo_id": "1434996615",
+      "source_updated_at": "2026-11-10T22:09:50Z",
+      "homepage_url": "https://themechanic.store/controller",
+      "owner": "themechanic-dev",
+      "default_branch": "main",
+      "source_commit_sha": "3eaf246edbb64b4a752133b484d41e2651639a1d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 the mechanic\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "claude",
+        "desktop-app",
+        "homelab",
+        "mcp",
+        "proxmox",
+        "proxmox-ve",
+        "pyside6",
+        "virtualization"
+      ],
+      "latest_version": "v1.2.0",
+      "release_url": "https://github.com/themechanic-dev/claude-proxmox-controller/releases/tag/v1.2.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-themechanic-dev-claude-proxmox-controller-v1.2.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-themechanic-dev-claude-proxmox-controller-v1.2.0/THIRD-PARTY-NOTICE-themechanic-dev-claude-proxmox-controller.txt",
+      "artifacts": [
+        {
+          "id": "b588f0b035f8c1cf617a011557776726e42c2221595776dc1c67b4fc1861b22c",
+          "filename": "proxmox-controller_1.2.0_amd64.deb",
+          "original_filename": "proxmox-controller_1.2.0_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v1.2.0",
+          "size_bytes": 41417596,
+          "sha256": "b588f0b035f8c1cf617a011557776726e42c2221595776dc1c67b4fc1861b22c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-themechanic-dev-claude-proxmox-controller-v1.2.0/proxmox-controller_1.2.0_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-themechanic-dev-claude-proxmox-controller-v1.2.0"
+        },
+        {
+          "id": "7c5df89645540d0a7a69d4d206cabc2a829f0159b9bc9476a9511ffa850a57ed",
+          "filename": "ProxmoxController-1.2.0-setup.exe",
+          "original_filename": "ProxmoxController-1.2.0-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.2.0",
+          "size_bytes": 31040204,
+          "sha256": "7c5df89645540d0a7a69d4d206cabc2a829f0159b9bc9476a9511ffa850a57ed",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-themechanic-dev-claude-proxmox-controller-v1.2.0/ProxmoxController-1.2.0-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-themechanic-dev-claude-proxmox-controller-v1.2.0"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "windows"
       ]
     },
     {
