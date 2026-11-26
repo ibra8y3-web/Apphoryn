@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:45:48.313741+00:00",
+  "generated_at": "2026-11-26T06:46:20.218352+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -87007,6 +87007,88 @@
         "linux",
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "davin-x-visto-gallery",
+      "slug": "davin-x-visto-gallery",
+      "name": "visto-gallery",
+      "summary": "A fast, private photo & video gallery for macOS — local-first, no cloud, no tracking",
+      "description": "A fast, private photo & video gallery for macOS — local-first, no cloud, no tracking",
+      "translations": {
+        "en": {
+          "summary": "A fast, private photo & video gallery for macOS — local-first, no cloud, no tracking",
+          "description": "A fast, private photo & video gallery for macOS — local-first, no cloud, no tracking"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Davin-X/visto-gallery/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/Davin-X/visto-gallery",
+      "github_repo_id": "1432627080",
+      "source_updated_at": "2026-11-25T11:37:25Z",
+      "homepage_url": "https://github.com/Davin-X/visto-gallery/releases",
+      "owner": "Davin-X",
+      "default_branch": "main",
+      "source_commit_sha": "a0340df47899d65363a0593d1a46ef2632f1c161",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Devendra Kumar\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "apple-photos-alternative",
+        "apple-silicon",
+        "desktop-app",
+        "duplicate-finder",
+        "exif",
+        "ffmpeg",
+        "local-first",
+        "macos",
+        "media-library",
+        "offline",
+        "photo-gallery",
+        "photo-viewer",
+        "privacy",
+        "react",
+        "rust",
+        "sqlite",
+        "tauri",
+        "typescript",
+        "video-gallery",
+        "vite"
+      ],
+      "latest_version": "v0.6.0",
+      "release_url": "https://github.com/Davin-X/visto-gallery/releases/tag/v0.6.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-davin-x-visto-gallery-v0.6.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-davin-x-visto-gallery-v0.6.0/THIRD-PARTY-NOTICE-davin-x-visto-gallery.txt",
+      "artifacts": [
+        {
+          "id": "72305da2be96c12536b336bfb0b56d948482a375893739487870a29d6324af34",
+          "filename": "VistoGallery_0.6.0_aarch64.dmg",
+          "original_filename": "VistoGallery_0.6.0_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.6.0",
+          "size_bytes": 18783910,
+          "sha256": "72305da2be96c12536b336bfb0b56d948482a375893739487870a29d6324af34",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-davin-x-visto-gallery-v0.6.0/VistoGallery_0.6.0_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-davin-x-visto-gallery-v0.6.0"
+        }
+      ],
+      "platforms": [
+        "macos"
       ]
     },
     {
