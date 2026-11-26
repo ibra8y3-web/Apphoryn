@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T10:19:46.389396+00:00",
+  "generated_at": "2026-11-26T10:20:10.137156+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -29790,17 +29790,19 @@
       "id": "flulwh-folio",
       "slug": "flulwh-folio",
       "name": "folio",
-      "summary": "Folio is a minimalist immersive ebook reader with Electron/React desktop and Kotlin/Compose Android clients, supporting local books, LAN progress sync, and reading marks.",
-      "description": "Folio is a local-first ebook reader for Windows desktop and Android. The desktop client is built with Electron and React; the Android client is native Kotlin with Jetpack Compose. It imports TXT, Markdown, EPUB, PDF, and CBZ/ZIP comics, and provides an immersive reader with virtual scrolling, chapter detection, table of contents, bookmarks, highlights, notes, full-book search, adjustable typography, custom fonts, themes, and auto-scroll. Desktop and Android can synchronize reading progress and marks over a local network; a browser-based LAN panel also allows reading from phones or tablets. Optional Legado-compatible book sources enable cloud-style chapter fetching. The repository includes build instructions for Windows artifacts with npm run build and Android debug APK with ./gradlew assembleDebug. License: MIT.",
+      "summary": "极简沉浸式电子书阅读器：Electron + React 桌面端 + Kotlin/Compose Android 客户端，局域网同步阅读进度与痕迹",
+      "description": "极简沉浸式电子书阅读器：Electron + React 桌面端 + Kotlin/Compose Android 客户端，局域网同步阅读进度与痕迹",
       "translations": {
-        "en": "Folio is a minimalist immersive ebook reader with Electron/React desktop and Kotlin/Compose Android clients, supporting local books, LAN progress sync, and reading marks.",
-        "ar": "Folio قارئ كتب إلكترونية بواجهة بسيطة وتجربة قراءة مغمورة، مع عميلين Electron/React للحاسوب وKotlin/Compose لأندرويد، ومزامنة محلية للتقدم والعلامات."
+        "en": {
+          "summary": "极简沉浸式电子书阅读器：Electron + React 桌面端 + Kotlin/Compose Android 客户端，局域网同步阅读进度与痕迹",
+          "description": "极简沉浸式电子书阅读器：Electron + React 桌面端 + Kotlin/Compose Android 客户端，局域网同步阅读进度与痕迹"
+        }
       },
       "description_translations": {
         "en": "Folio is a local-first ebook reader for Windows desktop and Android. The desktop client is built with Electron and React; the Android client is native Kotlin with Jetpack Compose. It imports TXT, Markdown, EPUB, PDF, and CBZ/ZIP comics, and provides an immersive reader with virtual scrolling, chapter detection, table of contents, bookmarks, highlights, notes, full-book search, adjustable typography, custom fonts, themes, and auto-scroll. Desktop and Android can synchronize reading progress and marks over a local network; a browser-based LAN panel also allows reading from phones or tablets. Optional Legado-compatible book sources enable cloud-style chapter fetching. The repository includes build instructions for Windows artifacts with npm run build and Android debug APK with ./gradlew assembleDebug. License: MIT.",
         "ar": "Folio قارئ كتب إلكترونية محلي أولاً لويندوز الحاسوب وأندرويد. العميل المكتبي مبني باستخدام Electron وReact، وعميل أندرويد أصلي باستخدام Kotlin وJetpack Compose. يستورد ملفات TXT وMarkdown وEPUB وPDF وملفات CBZ/ZIP المصورة، ويوفر قارئاً مغموراً بتمرير افتراضي، واكتشاف للفصول، وفهرس، وعلامات مرجعية، وتسطير، وملاحظات، وبحث في كامل الكتاب، وتنسيق طباعي قابل للتعديل، وخطوط مخصصة، وسمات، وتمرير تلقائي. يمكن لعميل سطح المكتب وأندرويد مزامنة تقدم القراءة والعلامات عبر شبكة محلية؛ كما تتيح لوحة LAN في المتصفح القراءة من الهواتف أو الأجهزة اللوحية. تتيح مصادر الكتب المتوافقة مع Legado جلب الفصول بنمط سحابي. يتضمن المستودع تعليمات البناء لمخرجات Windows عبر npm run build، ولملف APK تصحيح Android عبر ./gradlew assembleDebug. الترخيص: MIT."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/flulwh/folio/main/build/icon.png",
@@ -29814,10 +29816,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 Folio contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
-      "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "The repository describes standalone end-user ebook reader applications for Windows desktop and Android, with explicit supported build paths: npm run build for Windows artifacts and ./gradlew assembleDebug for an Android debug APK.",
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
       "project_status": "installable",
       "category": "other",
       "topics": [
