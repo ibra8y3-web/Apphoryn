@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:57:06.313249+00:00",
+  "generated_at": "2026-11-26T04:57:25.268019+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -67555,6 +67555,96 @@
       "platforms": [
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "ashwinkrpi-somaari-disk",
+      "slug": "ashwinkrpi-somaari-disk",
+      "name": "somaari-disk",
+      "summary": "Fast, read-only disk usage explorer for Raspberry Pi, Linux and Windows. Treemap + list, external drives, Move to Trash.",
+      "description": "Fast, read-only disk usage explorer for Raspberry Pi, Linux and Windows. Treemap + list, external drives, Move to Trash.",
+      "translations": {
+        "en": {
+          "summary": "Fast, read-only disk usage explorer for Raspberry Pi, Linux and Windows. Treemap + list, external drives, Move to Trash.",
+          "description": "Fast, read-only disk usage explorer for Raspberry Pi, Linux and Windows. Treemap + list, external drives, Move to Trash."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ashwinkrpi/somaari-disk/main/src/somaari_disk/ui/icon.png",
+      "repository_url": "https://github.com/ashwinkrpi/somaari-disk",
+      "github_repo_id": "1399396966",
+      "source_updated_at": "2026-11-10T09:36:50Z",
+      "homepage_url": null,
+      "owner": "ashwinkrpi",
+      "default_branch": "main",
+      "source_commit_sha": "dca2023f3c47694766972d42faf3e5dca946ed39",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Ashwin Koppam Raghavendra\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "system",
+      "topics": [
+        "desktop-app",
+        "disk-space",
+        "disk-usage",
+        "linux",
+        "python",
+        "pywebview",
+        "raspberry-pi",
+        "storage",
+        "treemap",
+        "windows"
+      ],
+      "latest_version": "v0.1.15",
+      "release_url": "https://github.com/ashwinkrpi/somaari-disk/releases/tag/v0.1.15",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ashwinkrpi-somaari-disk-v0.1.15",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ashwinkrpi-somaari-disk-v0.1.15/THIRD-PARTY-NOTICE-ashwinkrpi-somaari-disk.txt",
+      "artifacts": [
+        {
+          "id": "cf4fa47cc5316c8ab8ffbf8d2ecc254b6ccc7daf91f83e0c5faf67c516d1128d",
+          "filename": "somaari-disk-0.1.15-setup.exe",
+          "original_filename": "somaari-disk-0.1.15-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.1.15",
+          "size_bytes": 12580606,
+          "sha256": "cf4fa47cc5316c8ab8ffbf8d2ecc254b6ccc7daf91f83e0c5faf67c516d1128d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ashwinkrpi-somaari-disk-v0.1.15/somaari-disk-0.1.15-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ashwinkrpi-somaari-disk-v0.1.15"
+        },
+        {
+          "id": "ddcfc1f62c50190c9c31848bc541f57bf99ccf4ca1efd3e65b41241fe2a11d1b",
+          "filename": "somaari-disk_0.1.15_all.deb",
+          "original_filename": "somaari-disk_0.1.15_all.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": null,
+          "version": "v0.1.15",
+          "size_bytes": 517252,
+          "sha256": "ddcfc1f62c50190c9c31848bc541f57bf99ccf4ca1efd3e65b41241fe2a11d1b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ashwinkrpi-somaari-disk-v0.1.15/somaari-disk_0.1.15_all.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ashwinkrpi-somaari-disk-v0.1.15"
+        }
+      ],
+      "platforms": [
+        "linux",
         "windows"
       ]
     },
