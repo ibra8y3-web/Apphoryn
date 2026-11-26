@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T11:24:47.691769+00:00",
+  "generated_at": "2026-11-26T11:25:31.293835+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -5731,7 +5731,7 @@
       "homepage_url": "https://apkstart.edgeone.dev",
       "owner": "yuchen0x1",
       "default_branch": "main",
-      "source_commit_sha": "2c2df2832f6b7ae63426fa0afbf529e24f461d68",
+      "source_commit_sha": "fef3bc7a2da81102eec2ee43def1121275639bea",
       "license_text": "MIT License\n\nCopyright (c) 2026 ApkStart contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -5752,10 +5752,10 @@
         "linux",
         "windows"
       ],
-      "latest_version": "v0.11.8",
-      "release_url": "https://github.com/yuchen0x1/apkstart/releases/tag/v0.11.8",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yuchen0x1-apkstart-v0.11.8",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yuchen0x1-apkstart-v0.11.8/THIRD-PARTY-NOTICE-yuchen0x1-apkstart.txt",
+      "latest_version": "v0.11.9",
+      "release_url": "https://github.com/yuchen0x1/apkstart/releases/tag/v0.11.9",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yuchen0x1-apkstart-v0.11.9",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yuchen0x1-apkstart-v0.11.9/THIRD-PARTY-NOTICE-yuchen0x1-apkstart.txt",
       "artifacts": [
         {
           "id": "f260a8b5c22cfdb4c3ef4e13e96ca777033b9386f621c9c6cfa15a34c2c1be1b",
@@ -5807,6 +5807,57 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yuchen0x1-apkstart-v0.11.8/ApkStart-0.11.8-x86_64.AppImage",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yuchen0x1-apkstart-v0.11.8"
+        },
+        {
+          "id": "6b86022363b4c782ced2875b2f8b227a065b0cdd3484709f832523b8644dbcef",
+          "filename": "ApkStart-0.11.9-amd64.deb",
+          "original_filename": "ApkStart-0.11.9-amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.11.9",
+          "size_bytes": 109052400,
+          "sha256": "6b86022363b4c782ced2875b2f8b227a065b0cdd3484709f832523b8644dbcef",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yuchen0x1-apkstart-v0.11.9/ApkStart-0.11.9-amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yuchen0x1-apkstart-v0.11.9"
+        },
+        {
+          "id": "7cb38515cc64a896806ebda08ab410b9bd4737c90f7d90927ddb3bd6b0c157d6",
+          "filename": "ApkStart-0.11.9-Setup.exe",
+          "original_filename": "ApkStart-0.11.9-Setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.11.9",
+          "size_bytes": 121408422,
+          "sha256": "7cb38515cc64a896806ebda08ab410b9bd4737c90f7d90927ddb3bd6b0c157d6",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yuchen0x1-apkstart-v0.11.9/ApkStart-0.11.9-Setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yuchen0x1-apkstart-v0.11.9"
+        },
+        {
+          "id": "16330cac5e91715d4d01b723fe26fde7279bd7c2bbd2497fc44e6285dd521448",
+          "filename": "ApkStart-0.11.9-x86_64.AppImage",
+          "original_filename": "ApkStart-0.11.9-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.11.9",
+          "size_bytes": 135209118,
+          "sha256": "16330cac5e91715d4d01b723fe26fde7279bd7c2bbd2497fc44e6285dd521448",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yuchen0x1-apkstart-v0.11.9/ApkStart-0.11.9-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yuchen0x1-apkstart-v0.11.9"
         }
       ],
       "platforms": [
