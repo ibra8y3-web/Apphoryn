@@ -5816,6 +5816,16 @@
       ],
       "platforms": [
         "macos"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "f72e16fe818115d187ea74f9fe8d36656abe496d",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-26T06:09:08.562053+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
       ]
     },
     {
