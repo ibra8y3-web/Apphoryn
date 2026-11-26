@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T15:07:47.017148+00:00",
+  "generated_at": "2026-11-26T15:08:20.930836+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -55762,7 +55762,42 @@
     {
       "id": "d8349565-multitool-office-next",
       "slug": "d8349565-multitool-office-next",
-      "artifacts": [],
+      "artifacts": [
+        {
+          "id": "f65c725e3e9ac1f882fcb04b26bd23aa1072ad27a9603821557e8ea88d80a191",
+          "filename": "MultiTool.Office.Next_2026.1125.2301_x64-portable.exe",
+          "original_filename": "MultiTool.Office.Next_2026.1125.2301_x64-portable.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.6.0",
+          "size_bytes": 61949078,
+          "sha256": "f65c725e3e9ac1f882fcb04b26bd23aa1072ad27a9603821557e8ea88d80a191",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-d8349565-multitool-office-next-v0.6.0/MultiTool.Office.Next_2026.1125.2301_x64-portable.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-d8349565-multitool-office-next-v0.6.0"
+        },
+        {
+          "id": "4ebd04e47785086f45ba563e19c21fddf8e6918d8ef1bf9d10a8d82dc9fba4b9",
+          "filename": "MultiTool.Office.Next_2026.1125.2301_x64-setup.exe",
+          "original_filename": "MultiTool.Office.Next_2026.1125.2301_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.6.0",
+          "size_bytes": 61869866,
+          "sha256": "4ebd04e47785086f45ba563e19c21fddf8e6918d8ef1bf9d10a8d82dc9fba4b9",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-d8349565-multitool-office-next-v0.6.0/MultiTool.Office.Next_2026.1125.2301_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-d8349565-multitool-office-next-v0.6.0"
+        }
+      ],
       "name": "MultiTool-Office-Next",
       "summary": "Free, open-source Windows desktop toolbox for local file search, document previews, OCR batch renaming, and an optional AI assistant.",
       "description": "Free, open-source Windows desktop toolbox for local file search, document previews, OCR batch renaming, and an optional AI assistant.",
@@ -55806,8 +55841,12 @@
       ],
       "latest_version": "v0.6.0",
       "release_url": "https://github.com/d8349565/MultiTool-Office-Next/releases/tag/v0.6.0",
-      "platforms": [],
-      "project_status": "source_available"
+      "platforms": [
+        "windows"
+      ],
+      "project_status": "installable",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-d8349565-multitool-office-next-v0.6.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-d8349565-multitool-office-next-v0.6.0/THIRD-PARTY-NOTICE-d8349565-multitool-office-next.txt"
     },
     {
       "id": "harnessmd-munder-difflin",
