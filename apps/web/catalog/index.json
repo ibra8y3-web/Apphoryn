@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T12:40:33.478431+00:00",
+  "generated_at": "2026-11-26T12:41:03.381628+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -54488,7 +54488,7 @@
       "homepage_url": "https://mousetroke.com/",
       "owner": "eiaao",
       "default_branch": "main",
-      "source_commit_sha": "ce457632b6bdb45d90d593fddb15f104fca18253",
+      "source_commit_sha": "e2f841085c50e0c6397629be77ea123c3a0c7c8a",
       "license_text": "MIT License\n\nCopyright (c) 2026 Mousetroke contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -54509,10 +54509,10 @@
         "tauri",
         "windows"
       ],
-      "latest_version": "v0.3.7",
-      "release_url": "https://github.com/eiaao/mousetroke/releases/tag/v0.3.7",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eiaao-mousetroke-v0.3.7",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eiaao-mousetroke-v0.3.7/THIRD-PARTY-NOTICE-eiaao-mousetroke.txt",
+      "latest_version": "v0.3.8",
+      "release_url": "https://github.com/eiaao/mousetroke/releases/tag/v0.3.8",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eiaao-mousetroke-v0.3.8",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eiaao-mousetroke-v0.3.8/THIRD-PARTY-NOTICE-eiaao-mousetroke.txt",
       "artifacts": [
         {
           "id": "dd63b42ceab70ab49d4a97dae760b423f7984ebdccf0ba521af3a34f1d461aa1",
@@ -54547,6 +54547,40 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eiaao-mousetroke-v0.3.7/mousetroke.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eiaao-mousetroke-v0.3.7"
+        },
+        {
+          "id": "ad579d4c39246931329b6a46c52c0a9846617898836bfd02e4a426cfd11d6eda",
+          "filename": "Mousetroke.dmg",
+          "original_filename": "Mousetroke.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": null,
+          "version": "v0.3.8",
+          "size_bytes": 11017729,
+          "sha256": "ad579d4c39246931329b6a46c52c0a9846617898836bfd02e4a426cfd11d6eda",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eiaao-mousetroke-v0.3.8/Mousetroke.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eiaao-mousetroke-v0.3.8"
+        },
+        {
+          "id": "d57607920bd757d928ba7749eebbc0c00ab7d0105ec524781121599dc49955cb",
+          "filename": "mousetroke.exe",
+          "original_filename": "mousetroke.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.3.8",
+          "size_bytes": 15565824,
+          "sha256": "d57607920bd757d928ba7749eebbc0c00ab7d0105ec524781121599dc49955cb",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eiaao-mousetroke-v0.3.8/mousetroke.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eiaao-mousetroke-v0.3.8"
         }
       ],
       "platforms": [
