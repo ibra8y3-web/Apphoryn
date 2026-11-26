@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:16:16.167944+00:00",
+  "generated_at": "2026-11-26T04:16:28.861926+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -58637,6 +58637,59 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "aisquare-studio-rlxapp",
+      "slug": "aisquare-studio-rlxapp",
+      "artifacts": [],
+      "name": "rlxapp",
+      "summary": "A desktop app that runs rlx agents in the background, with a friendly face for people who don't live in a terminal.",
+      "description": "A desktop app that runs rlx agents in the background, with a friendly face for people who don't live in a terminal.",
+      "translations": {
+        "en": {
+          "summary": "A desktop app that runs rlx agents in the background, with a friendly face for people who don't live in a terminal.",
+          "description": "A desktop app that runs rlx agents in the background, with a friendly face for people who don't live in a terminal."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/142174177?v=4",
+      "repository_url": "https://github.com/AISquare-Studio/rlxapp",
+      "github_repo_id": "1471849971",
+      "source_updated_at": "2026-11-25T16:45:46Z",
+      "homepage_url": null,
+      "owner": "AISquare-Studio",
+      "default_branch": "main",
+      "source_commit_sha": "685ccc7bdd2a5a237d687394fd45dbfce0f08784",
+      "license_text": "MIT License\n\nCopyright (c) 2026 AISquare\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "ai-agents",
+        "ai-coding-agents",
+        "claude",
+        "claude-code",
+        "codex",
+        "coding-agents",
+        "desktop-app",
+        "developer-tools",
+        "react",
+        "rlx",
+        "rust",
+        "tauri",
+        "typescript"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "hikariatama-room237",
