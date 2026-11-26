@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T15:36:22.587653+00:00",
+  "generated_at": "2026-11-26T15:37:17.899214+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -35499,6 +35499,75 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "kitsupanic-grapplehook",
+      "slug": "kitsupanic-grapplehook",
+      "name": "Grapplehook",
+      "summary": "Desktop app to download and transcode videos with yt-dlp and ffmpeg. Built with Tauri 2 and Svelte 5.",
+      "description": "Desktop app to download and transcode videos with yt-dlp and ffmpeg. Built with Tauri 2 and Svelte 5.",
+      "translations": {
+        "en": {
+          "summary": "Desktop app to download and transcode videos with yt-dlp and ffmpeg. Built with Tauri 2 and Svelte 5.",
+          "description": "Desktop app to download and transcode videos with yt-dlp and ffmpeg. Built with Tauri 2 and Svelte 5."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/kitsupanic/Grapplehook/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/kitsupanic/Grapplehook",
+      "github_repo_id": "1464484116",
+      "source_updated_at": "2026-11-22T17:06:46Z",
+      "homepage_url": "https://grapplehook.app",
+      "owner": "kitsupanic",
+      "default_branch": "main",
+      "source_commit_sha": "3f5e8c95426e81be55bc17680b8c861c57373c1f",
+      "license_text": "MIT License\n\nCopyright (c) 2026 kitsupanic\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "desktop-app",
+        "ffmpeg",
+        "svelte",
+        "tauri",
+        "video-downloader",
+        "yt-dlp",
+        "yt-dlp-gui"
+      ],
+      "latest_version": "v0.3.1",
+      "release_url": "https://github.com/kitsupanic/Grapplehook/releases/tag/v0.3.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kitsupanic-grapplehook-v0.3.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kitsupanic-grapplehook-v0.3.1/THIRD-PARTY-NOTICE-kitsupanic-grapplehook.txt",
+      "artifacts": [
+        {
+          "id": "b8fd2dae143975ffb8c0d26f22e1cc71aec3c845495455350e5f397f476932f0",
+          "filename": "Grapplehook_0.3.1_aarch64.dmg",
+          "original_filename": "Grapplehook_0.3.1_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.3.1",
+          "size_bytes": 5485373,
+          "sha256": "b8fd2dae143975ffb8c0d26f22e1cc71aec3c845495455350e5f397f476932f0",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kitsupanic-grapplehook-v0.3.1/Grapplehook_0.3.1_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kitsupanic-grapplehook-v0.3.1"
+        }
+      ],
+      "platforms": [
+        "macos"
       ]
     },
     {
