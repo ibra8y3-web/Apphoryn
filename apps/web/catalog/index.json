@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T02:30:43.698184+00:00",
+  "generated_at": "2026-11-26T02:31:02.851078+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -49879,6 +49879,74 @@
           "signer_certificate_sha256": "dbddc76bf7056f3cfde555c3859c3bbfc31a6f38da89764be9a7633c7e64ce25",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-samyak2403-repostore-v1.0.22/app-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-samyak2403-repostore-v1.0.22"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "jaypsmall-resonantia",
+      "slug": "jaypsmall-resonantia",
+      "name": "Resonantia",
+      "summary": "🌌 Resonantia App viene con el propósito de proporcionar una herramienta interactiva de exploración vibracional y espectro simbólico, relacionando frecuencias sonoras (Hz) con geometría sagrada/armónica, estados de conciencia y perfiles emoc",
+      "description": "🌌 Resonantia App viene con el propósito de proporcionar una herramienta interactiva de exploración vibracional y espectro simbólico, relacionando frecuencias sonoras (Hz) con geometría sagrada/armónica, estados de conciencia y perfiles emocionales/mentales.",
+      "translations": {
+        "en": {
+          "summary": "🌌 Resonantia App viene con el propósito de proporcionar una herramienta interactiva de exploración vibracional y espectro simbólico, relacionando frecuencias sonoras (Hz) con geometría sagrada/armónica, estados de conciencia y perfiles emoc",
+          "description": "🌌 Resonantia App viene con el propósito de proporcionar una herramienta interactiva de exploración vibracional y espectro simbólico, relacionando frecuencias sonoras (Hz) con geometría sagrada/armónica, estados de conciencia y perfiles emocionales/mentales."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Jaypsmall/Resonantia/rama-1/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "repository_url": "https://github.com/Jaypsmall/Resonantia",
+      "github_repo_id": "1345500139",
+      "source_updated_at": "2026-11-06T06:01:17Z",
+      "homepage_url": "https://jaypsmall.github.io/Resonantia/",
+      "owner": "Jaypsmall",
+      "default_branch": "rama-1",
+      "source_commit_sha": "d94b47ae10fafbd7aa35f369d1296a64218417ac",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Architect_D4d\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "kotlin",
+        "kotlin-android",
+        "resonance",
+        "resonantia"
+      ],
+      "latest_version": "android-app",
+      "release_url": "https://github.com/Jaypsmall/Resonantia/releases/tag/android-app",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jaypsmall-resonantia-android-app",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jaypsmall-resonantia-android-app/THIRD-PARTY-NOTICE-jaypsmall-resonantia.txt",
+      "artifacts": [
+        {
+          "id": "ae56447f2b84311029b19065c33c7427025b6422a4f2fd1247fce9ce9a894d5a",
+          "filename": "Resonantia_v1.0.4.apk",
+          "original_filename": "Resonantia_v1.0.4.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "android-app",
+          "size_bytes": 19449939,
+          "sha256": "ae56447f2b84311029b19065c33c7427025b6422a4f2fd1247fce9ce9a894d5a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "16183930a773982f2f5d5d86461658d4c7cae8771ea92c9278fd328fca73b70f",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jaypsmall-resonantia-android-app/Resonantia_v1.0.4.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jaypsmall-resonantia-android-app"
         }
       ],
       "platforms": [
