@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:56:58.575606+00:00",
+  "generated_at": "2026-11-26T06:57:23.739738+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -36234,6 +36234,75 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sunkenintime-icarus-desktop-stable-v5.2.1-112/icarus-setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sunkenintime-icarus-desktop-stable-v5.2.1-112"
+        }
+      ],
+      "platforms": [
+        "windows"
+      ]
+    },
+    {
+      "id": "taylorivanoff-icloud-calendar-windows",
+      "slug": "taylorivanoff-icloud-calendar-windows",
+      "name": "icloud-calendar-windows",
+      "summary": "iCloud Calendar desktop app for Windows",
+      "description": "iCloud Calendar desktop app for Windows",
+      "translations": {
+        "en": {
+          "summary": "iCloud Calendar desktop app for Windows",
+          "description": "iCloud Calendar desktop app for Windows"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/taylorivanoff/icloud-calendar-windows/master/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/taylorivanoff/icloud-calendar-windows",
+      "github_repo_id": "1143557668",
+      "source_updated_at": "2026-11-24T18:28:42Z",
+      "homepage_url": null,
+      "owner": "taylorivanoff",
+      "default_branch": "master",
+      "source_commit_sha": "1f8f61c9fa1d2d46cc6735090bbc98dab1e1d603",
+      "license_text": "MIT License\n\nCopyright (c) 2020 Max Maeder\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "productivity",
+      "topics": [
+        "apple",
+        "desktop-app",
+        "electron",
+        "icloud",
+        "icloud-calendar",
+        "icloud-calendars",
+        "windows"
+      ],
+      "latest_version": "v2.0.7",
+      "release_url": "https://github.com/taylorivanoff/icloud-calendar-windows/releases/tag/v2.0.7",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-taylorivanoff-icloud-calendar-windows-v2.0.7",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-taylorivanoff-icloud-calendar-windows-v2.0.7/THIRD-PARTY-NOTICE-taylorivanoff-icloud-calendar-windows.txt",
+      "artifacts": [
+        {
+          "id": "8b6c5a76ef4facc5926232d8296237def2ba417e0efecb48aa9c625928c16d77",
+          "filename": "iCloud.Calendar_2.0.7_x64-setup.exe",
+          "original_filename": "iCloud.Calendar_2.0.7_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v2.0.7",
+          "size_bytes": 3365346,
+          "sha256": "8b6c5a76ef4facc5926232d8296237def2ba417e0efecb48aa9c625928c16d77",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-taylorivanoff-icloud-calendar-windows-v2.0.7/iCloud.Calendar_2.0.7_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-taylorivanoff-icloud-calendar-windows-v2.0.7"
         }
       ],
       "platforms": [
