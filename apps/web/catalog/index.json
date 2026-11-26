@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T22:31:05.285405+00:00",
+  "generated_at": "2026-11-26T22:31:37.378157+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -77962,7 +77962,7 @@
       "homepage_url": "https://qiyaa.kanstancin.net",
       "owner": "Kickoman",
       "default_branch": "master",
-      "source_commit_sha": "2fb149ca3426f7e33b8bcdc4739b9423a0393865",
+      "source_commit_sha": "d270cb99fe41b6e172d9c697e6dd6ed1f0f06eb1",
       "license_text": "MIT License\n\nCopyright (c) 2026 QiYaa contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -77994,10 +77994,10 @@
         "yandex-music",
         "yandex-music-client"
       ],
-      "latest_version": "v0.10.0",
-      "release_url": "https://github.com/Kickoman/QiYaa/releases/tag/v0.10.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kickoman-qiyaa-v0.10.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kickoman-qiyaa-v0.10.0/THIRD-PARTY-NOTICE-kickoman-qiyaa.txt",
+      "latest_version": "v0.11.0",
+      "release_url": "https://github.com/Kickoman/QiYaa/releases/tag/v0.11.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kickoman-qiyaa-v0.11.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kickoman-qiyaa-v0.11.0/THIRD-PARTY-NOTICE-kickoman-qiyaa.txt",
       "artifacts": [
         {
           "id": "a9de0fcc66e3bbfad50825417add17fce0ccfc16645c7d7a7dcf7d3c6ae2bfa0",
@@ -78066,6 +78066,74 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kickoman-qiyaa-v0.10.0/qiyaa_0.10.0_amd64.deb",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kickoman-qiyaa-v0.10.0"
+        },
+        {
+          "id": "32655951acc9186c239f08969305ac41d6adaa1bf45946d31675d9b364936456",
+          "filename": "QiYaa-0.11.0-macos-arm64.dmg",
+          "original_filename": "QiYaa-0.11.0-macos-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.11.0",
+          "size_bytes": 29950358,
+          "sha256": "32655951acc9186c239f08969305ac41d6adaa1bf45946d31675d9b364936456",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kickoman-qiyaa-v0.11.0/QiYaa-0.11.0-macos-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kickoman-qiyaa-v0.11.0"
+        },
+        {
+          "id": "7ea7fcb0e60304def1d7019970500420d58a15cfdfaedab40de57c1653c2ab0a",
+          "filename": "QiYaa-0.11.0-windows-x64-setup.exe",
+          "original_filename": "QiYaa-0.11.0-windows-x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.11.0",
+          "size_bytes": 33846408,
+          "sha256": "7ea7fcb0e60304def1d7019970500420d58a15cfdfaedab40de57c1653c2ab0a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kickoman-qiyaa-v0.11.0/QiYaa-0.11.0-windows-x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kickoman-qiyaa-v0.11.0"
+        },
+        {
+          "id": "1aaae914d85785f74f4b7f21938cc97cab276c2ca0f3536ad03e983a18f568cb",
+          "filename": "QiYaa-0.11.0-x86_64.AppImage",
+          "original_filename": "QiYaa-0.11.0-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.11.0",
+          "size_bytes": 37718520,
+          "sha256": "1aaae914d85785f74f4b7f21938cc97cab276c2ca0f3536ad03e983a18f568cb",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kickoman-qiyaa-v0.11.0/QiYaa-0.11.0-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kickoman-qiyaa-v0.11.0"
+        },
+        {
+          "id": "f009ec86bd076b202ba26488505ac806b8fa59ebbfbe53a3da384fbc8e16c27d",
+          "filename": "qiyaa_0.11.0_amd64.deb",
+          "original_filename": "qiyaa_0.11.0_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.11.0",
+          "size_bytes": 5060412,
+          "sha256": "f009ec86bd076b202ba26488505ac806b8fa59ebbfbe53a3da384fbc8e16c27d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kickoman-qiyaa-v0.11.0/qiyaa_0.11.0_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kickoman-qiyaa-v0.11.0"
         }
       ],
       "platforms": [
