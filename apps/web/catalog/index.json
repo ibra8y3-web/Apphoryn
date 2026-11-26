@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T05:09:42.687056+00:00",
+  "generated_at": "2026-11-26T05:10:57.632608+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -37792,6 +37792,147 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "yusufdinc974-linguareader",
+      "slug": "yusufdinc974-linguareader",
+      "name": "LinguaReader",
+      "summary": "A powerful, modern PDF reader designed for language learners.",
+      "description": "A powerful, modern PDF reader designed for language learners.",
+      "translations": {
+        "en": {
+          "summary": "A powerful, modern PDF reader designed for language learners.",
+          "description": "A powerful, modern PDF reader designed for language learners."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/yusufdinc974/LinguaReader/main/assets/logo.svg",
+      "repository_url": "https://github.com/yusufdinc974/LinguaReader",
+      "github_repo_id": "952174336",
+      "source_updated_at": "2026-11-24T20:47:47Z",
+      "homepage_url": "https://lingua-reader-web.vercel.app/",
+      "owner": "yusufdinc974",
+      "default_branch": "main",
+      "source_commit_sha": "ea483e24fa581f6be4ed1215c6c4aef8c1884f78",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Yusuf Dinc\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "desktop-app",
+        "electron-app",
+        "language",
+        "language-learning",
+        "pdf",
+        "pdf-viewer",
+        "study",
+        "study-tool",
+        "typescript"
+      ],
+      "latest_version": "v1.2.2",
+      "release_url": "https://github.com/yusufdinc974/LinguaReader/releases/tag/v1.2.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yusufdinc974-linguareader-v1.2.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yusufdinc974-linguareader-v1.2.2/THIRD-PARTY-NOTICE-yusufdinc974-linguareader.txt",
+      "artifacts": [
+        {
+          "id": "e564d0c3ad9614e0988065a8740b94516ed4e601cc2976b7881e8fada4f9dcec",
+          "filename": "LinguaReader-1.2.2-arm64.dmg",
+          "original_filename": "LinguaReader-1.2.2-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v1.2.2",
+          "size_bytes": 263935530,
+          "sha256": "e564d0c3ad9614e0988065a8740b94516ed4e601cc2976b7881e8fada4f9dcec",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yusufdinc974-linguareader-v1.2.2/LinguaReader-1.2.2-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yusufdinc974-linguareader-v1.2.2"
+        },
+        {
+          "id": "a48c9c1d45b253e4f2c80f25cb1f09b408269c04dd561c12611803476715a3de",
+          "filename": "LinguaReader-1.2.2-portable.exe",
+          "original_filename": "LinguaReader-1.2.2-portable.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.2.2",
+          "size_bytes": 233513300,
+          "sha256": "a48c9c1d45b253e4f2c80f25cb1f09b408269c04dd561c12611803476715a3de",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yusufdinc974-linguareader-v1.2.2/LinguaReader-1.2.2-portable.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yusufdinc974-linguareader-v1.2.2"
+        },
+        {
+          "id": "e88fea757f6d776293615839f965f4e44003313989abcaddb063542a168eca95",
+          "filename": "LinguaReader-1.2.2.AppImage",
+          "original_filename": "LinguaReader-1.2.2.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": null,
+          "version": "v1.2.2",
+          "size_bytes": 292657429,
+          "sha256": "e88fea757f6d776293615839f965f4e44003313989abcaddb063542a168eca95",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yusufdinc974-linguareader-v1.2.2/LinguaReader-1.2.2.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yusufdinc974-linguareader-v1.2.2"
+        },
+        {
+          "id": "03077cf56de435aba923aeaf3eb6316e020a301c90530a398804eaacc4bb57d4",
+          "filename": "LinguaReader-Setup-1.2.2.exe",
+          "original_filename": "LinguaReader-Setup-1.2.2.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.2.2",
+          "size_bytes": 252581047,
+          "sha256": "03077cf56de435aba923aeaf3eb6316e020a301c90530a398804eaacc4bb57d4",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yusufdinc974-linguareader-v1.2.2/LinguaReader-Setup-1.2.2.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yusufdinc974-linguareader-v1.2.2"
+        },
+        {
+          "id": "27f319980a32a4ee9e9320b335a5ae4857116cff0e9cf62a231198afd8ceeac8",
+          "filename": "linguareader_1.2.2_amd64.deb",
+          "original_filename": "linguareader_1.2.2_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v1.2.2",
+          "size_bytes": 248840464,
+          "sha256": "27f319980a32a4ee9e9320b335a5ae4857116cff0e9cf62a231198afd8ceeac8",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yusufdinc974-linguareader-v1.2.2/linguareader_1.2.2_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yusufdinc974-linguareader-v1.2.2"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
       ]
     },
     {
