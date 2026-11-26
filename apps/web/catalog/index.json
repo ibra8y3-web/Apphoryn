@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:23:06.219503+00:00",
+  "generated_at": "2026-11-26T03:23:37.789097+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -59513,6 +59513,106 @@
           ],
           "requested_at": "2026-11-25T05:33:05.663896+00:00"
         }
+      ]
+    },
+    {
+      "id": "statscrafthq-statscraft",
+      "slug": "statscrafthq-statscraft",
+      "name": "statscraft",
+      "summary": "Free, open-source statistics package for the social sciences. Reads .sav files, runs syntax, custom tables with significance tests. AI-native: work in the window or hand it to your agent. Windows, macOS, Linux.",
+      "description": "Free, open-source statistics package for the social sciences. Reads .sav files, runs syntax, custom tables with significance tests. AI-native: work in the window or hand it to your agent. Windows, macOS, Linux.",
+      "translations": {
+        "en": {
+          "summary": "Free, open-source statistics package for the social sciences. Reads .sav files, runs syntax, custom tables with significance tests. AI-native: work in the window or hand it to your agent. Windows, macOS, Linux.",
+          "description": "Free, open-source statistics package for the social sciences. Reads .sav files, runs syntax, custom tables with significance tests. AI-native: work in the window or hand it to your agent. Windows, macOS, Linux."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/354390347?v=4",
+      "repository_url": "https://github.com/statscrafthq/statscraft",
+      "github_repo_id": "1451213539",
+      "source_updated_at": "2026-11-12T16:09:48Z",
+      "homepage_url": "https://statscraft.org",
+      "owner": "statscrafthq",
+      "default_branch": "main",
+      "source_commit_sha": "11314cb5250dd5147acbfa536218b1796e64e547",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Tõnis Ormisson\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "ai",
+      "topics": [
+        "ai-agents",
+        "anova",
+        "cli",
+        "crosstabs",
+        "data-analysis",
+        "desktop-app",
+        "llm-tools",
+        "market-research",
+        "psychometrics",
+        "quantitative-research",
+        "regression",
+        "research-tools",
+        "rust",
+        "sav-file",
+        "social-science",
+        "spss",
+        "statistical-analysis",
+        "statistical-software",
+        "statistics",
+        "survey-analysis"
+      ],
+      "latest_version": "v0.49.0",
+      "release_url": "https://github.com/statscrafthq/statscraft/releases/tag/v0.49.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-statscrafthq-statscraft-v0.49.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-statscrafthq-statscraft-v0.49.0/THIRD-PARTY-NOTICE-statscrafthq-statscraft.txt",
+      "artifacts": [
+        {
+          "id": "cf6dabfd281030942793b5de105c55d25cf9a287e2b62650de41b21dc8ee161e",
+          "filename": "statscraft-0.49.0-windows-x86_64-setup.exe",
+          "original_filename": "statscraft-0.49.0-windows-x86_64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.49.0",
+          "size_bytes": 32388268,
+          "sha256": "cf6dabfd281030942793b5de105c55d25cf9a287e2b62650de41b21dc8ee161e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-statscrafthq-statscraft-v0.49.0/statscraft-0.49.0-windows-x86_64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-statscrafthq-statscraft-v0.49.0"
+        },
+        {
+          "id": "2d548a53ad18a2644d041fde300e7b2fa913c1936677806a9105fd2206c78ff6",
+          "filename": "statscraft_0.49.0_amd64.deb",
+          "original_filename": "statscraft_0.49.0_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.49.0",
+          "size_bytes": 39279618,
+          "sha256": "2d548a53ad18a2644d041fde300e7b2fa913c1936677806a9105fd2206c78ff6",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-statscrafthq-statscraft-v0.49.0/statscraft_0.49.0_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-statscrafthq-statscraft-v0.49.0"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "windows"
       ]
     },
     {
