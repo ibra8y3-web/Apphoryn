@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T15:18:31.422475+00:00",
+  "generated_at": "2026-11-26T15:23:45.226493+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -43697,7 +43697,25 @@
     {
       "id": "x-t-e-r-kiki",
       "slug": "x-t-e-r-kiki",
-      "artifacts": [],
+      "artifacts": [
+        {
+          "id": "79dd8e8cce83dd4d7d4f26137d5eaf3a02c375f9bfdf8c4af8c33d81bbcdc2f5",
+          "filename": "Kiki_0.6.2_android-release.apk",
+          "original_filename": "Kiki_0.6.2_android-release.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "kiki-v0.6.2",
+          "size_bytes": 3292612,
+          "sha256": "79dd8e8cce83dd4d7d4f26137d5eaf3a02c375f9bfdf8c4af8c33d81bbcdc2f5",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "194d9ff77197db9fcf82f9f7f04fd401b1f31f2cf4f1cd5804078d57bfff0a04",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-x-t-e-r-kiki-kiki-v0.6.2/Kiki_0.6.2_android-release.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-x-t-e-r-kiki-kiki-v0.6.2"
+        }
+      ],
       "name": "kiki",
       "summary": "Open-source multi-model AI agent workbench (Desktop GUI, TUI & Web) — dispatch subagents across Claude, GPT, Gemini & Kimi, bridge WeChat/QQ, and run locally.",
       "description": "Open-source multi-model AI agent workbench (Desktop GUI, TUI & Web) — dispatch subagents across Claude, GPT, Gemini & Kimi, bridge WeChat/QQ, and run locally.",
@@ -43718,7 +43736,7 @@
       "homepage_url": "https://x-t-e-r.github.io/kiki/",
       "owner": "X-T-E-R",
       "default_branch": "kiki",
-      "source_commit_sha": "e5014b00dc1629d4465eb94c833489228cd5bbc4",
+      "source_commit_sha": "59b64a11679d7c858e88c5c5e754d279ee1cd8dd",
       "license_text": "MIT License\n\nCopyright (c) 2026 Moonshot AI\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -43744,10 +43762,12 @@
         "tauri",
         "terminal-ui"
       ],
-      "latest_version": "kiki-v0.6.1",
-      "release_url": "https://github.com/X-T-E-R/kiki/releases/tag/kiki-v0.6.1",
-      "platforms": [],
-      "project_status": "source_available",
+      "latest_version": "kiki-v0.6.2",
+      "release_url": "https://github.com/X-T-E-R/kiki/releases/tag/kiki-v0.6.2",
+      "platforms": [
+        "android"
+      ],
+      "project_status": "installable",
       "build_attempts": [
         {
           "git_ref": "e5014b00dc1629d4465eb94c833489228cd5bbc4",
@@ -43757,7 +43777,9 @@
           "requested_at": "2026-11-26T07:27:44.854026+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
         }
-      ]
+      ],
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-x-t-e-r-kiki-kiki-v0.6.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-x-t-e-r-kiki-kiki-v0.6.2/THIRD-PARTY-NOTICE-x-t-e-r-kiki.txt"
     },
     {
       "id": "involvex-kiln",
