@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T05:28:24.056341+00:00",
+  "generated_at": "2026-11-26T05:28:46.619825+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -62718,6 +62718,98 @@
       "platforms": [
         "android",
         "linux"
+      ]
+    },
+    {
+      "id": "matheusafreitas-radlog",
+      "slug": "matheusafreitas-radlog",
+      "name": "radlog",
+      "summary": "Desktop app (Windows/Linux) for logging and analyzing ionizing radiation data from GQ GMC-800 Geiger counters and Radiacode 102 dosimeters/spectrometers. Features live dose rates, cumulative dose, alerts, spectra and PDF reports.",
+      "description": "Desktop app (Windows/Linux) for logging and analyzing ionizing radiation data from GQ GMC-800 Geiger counters and Radiacode 102 dosimeters/spectrometers. Features live dose rates, cumulative dose, alerts, spectra and PDF reports.",
+      "translations": {
+        "en": {
+          "summary": "Desktop app (Windows/Linux) for logging and analyzing ionizing radiation data from GQ GMC-800 Geiger counters and Radiacode 102 dosimeters/spectrometers. Features live dose rates, cumulative dose, alerts, spectra and PDF reports.",
+          "description": "Desktop app (Windows/Linux) for logging and analyzing ionizing radiation data from GQ GMC-800 Geiger counters and Radiacode 102 dosimeters/spectrometers. Features live dose rates, cumulative dose, alerts, spectra and PDF reports."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/matheusAFreitas/radlog/main/build/windows/icon.png",
+      "repository_url": "https://github.com/matheusAFreitas/radlog",
+      "github_repo_id": "1446084530",
+      "source_updated_at": "2026-11-18T02:10:24Z",
+      "homepage_url": null,
+      "owner": "matheusAFreitas",
+      "default_branch": "main",
+      "source_commit_sha": "7659d36422634b36f5a4c5b4b0df31dd6b8ccdc9",
+      "license_text": "MIT License\n\nCopyright (c) 2026 matheusAFreitas\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "desktop-app",
+        "dosimeter",
+        "gamma-spectroscopy",
+        "geiger-counter",
+        "go",
+        "gq-gmc",
+        "linux",
+        "radiacode",
+        "radiation",
+        "radiation-monitoring",
+        "wails",
+        "windows"
+      ],
+      "latest_version": "v2.106.4",
+      "release_url": "https://github.com/matheusAFreitas/radlog/releases/tag/v2.106.4",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-matheusafreitas-radlog-v2.106.4",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-matheusafreitas-radlog-v2.106.4/THIRD-PARTY-NOTICE-matheusafreitas-radlog.txt",
+      "artifacts": [
+        {
+          "id": "d7e74c7e8cd2ccbea985625969da249735e8190ab76b5a45bbb8b5e8b5a945ec",
+          "filename": "RadLog-v2.106.4-x86_64.AppImage",
+          "original_filename": "RadLog-v2.106.4-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v2.106.4",
+          "size_bytes": 7674360,
+          "sha256": "d7e74c7e8cd2ccbea985625969da249735e8190ab76b5a45bbb8b5e8b5a945ec",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-matheusafreitas-radlog-v2.106.4/RadLog-v2.106.4-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-matheusafreitas-radlog-v2.106.4"
+        },
+        {
+          "id": "6b43a91441af9aa3f7a7edc9bb348515d332c475143e1cabcf320c7237ae3fbc",
+          "filename": "RadLog-v2.106.4.exe",
+          "original_filename": "RadLog-v2.106.4.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v2.106.4",
+          "size_bytes": 20386816,
+          "sha256": "6b43a91441af9aa3f7a7edc9bb348515d332c475143e1cabcf320c7237ae3fbc",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-matheusafreitas-radlog-v2.106.4/RadLog-v2.106.4.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-matheusafreitas-radlog-v2.106.4"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "windows"
       ]
     },
     {
