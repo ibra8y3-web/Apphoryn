@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T23:41:21.839583+00:00",
+  "generated_at": "2026-11-26T23:42:10.652583+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -6964,7 +6964,7 @@
       "icon_url": "https://raw.githubusercontent.com/sarthakguptadev/AppuBot/main/assets/icon.png",
       "repository_url": "https://github.com/sarthakguptadev/AppuBot",
       "github_repo_id": "1423435354",
-      "source_updated_at": "2026-11-26T14:13:12Z",
+      "source_updated_at": "2026-11-26T20:08:29Z",
       "homepage_url": "https://appubot.com",
       "owner": "sarthakguptadev",
       "default_branch": "main",
