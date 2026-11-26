@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:23:47.150176+00:00",
+  "generated_at": "2026-11-26T06:24:12.981599+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -78,6 +78,103 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-tiledesk-github-v1.0.0/default.github-x64-Windows-MSVC.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-tiledesk-github-v1.0.0"
+        }
+      ],
+      "platforms": [
+        "windows"
+      ]
+    },
+    {
+      "id": "pathetixx-190x4-ninety",
+      "slug": "pathetixx-190x4-ninety",
+      "name": "190x4-Ninety",
+      "summary": "A Windows networking client built with Tauri 2 and Rust: sing-box, WARP, TUN mode, routing rules, DPI tools and connection diagnostics.",
+      "description": "A Windows networking client built with Tauri 2 and Rust: sing-box, WARP, TUN mode, routing rules, DPI tools and connection diagnostics.",
+      "translations": {
+        "en": {
+          "summary": "A Windows networking client built with Tauri 2 and Rust: sing-box, WARP, TUN mode, routing rules, DPI tools and connection diagnostics.",
+          "description": "A Windows networking client built with Tauri 2 and Rust: sing-box, WARP, TUN mode, routing rules, DPI tools and connection diagnostics."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/pathetixx/190x4-Ninety/main/site/assets/icon.png",
+      "repository_url": "https://github.com/pathetixx/190x4-Ninety",
+      "github_repo_id": "1245858991",
+      "source_updated_at": "2026-11-24T19:37:56Z",
+      "homepage_url": "https://pathetixx.github.io/190x4-Ninety/",
+      "owner": "pathetixx",
+      "default_branch": "main",
+      "source_commit_sha": "ac6c5a1e15a3c5a75990c75f99f4f6d3457601bd",
+      "license_text": "MIT License\n\nCopyright (c) 2026 pathetixx (190x4.pw)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "network",
+      "topics": [
+        "desktop-app",
+        "dpi-bypass",
+        "networking",
+        "proxy",
+        "proxy-client",
+        "reality",
+        "routing",
+        "rust",
+        "sing-box",
+        "tauri",
+        "tauri-app",
+        "tun",
+        "vless",
+        "warp",
+        "webview2",
+        "windows",
+        "wireguard",
+        "xray"
+      ],
+      "latest_version": "v0.19.0",
+      "release_url": "https://github.com/pathetixx/190x4-Ninety/releases/tag/v0.19.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pathetixx-190x4-ninety-v0.19.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pathetixx-190x4-ninety-v0.19.0/THIRD-PARTY-NOTICE-pathetixx-190x4-ninety.txt",
+      "artifacts": [
+        {
+          "id": "0e0a1895332a199b871bd841d27cb530aba2c7cfdcab84656e9f14e2ab6b74a1",
+          "filename": "Ninety_0.19.0_x64-setup.exe",
+          "original_filename": "Ninety_0.19.0_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.19.0",
+          "size_bytes": 51255533,
+          "sha256": "0e0a1895332a199b871bd841d27cb530aba2c7cfdcab84656e9f14e2ab6b74a1",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pathetixx-190x4-ninety-v0.19.0/Ninety_0.19.0_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pathetixx-190x4-ninety-v0.19.0"
+        },
+        {
+          "id": "a41e84b32de0008d91441e03bbd33b60f364db46be5171281671e0a1d96d69a3",
+          "filename": "Ninety_0.19.0_x64_en-US.msi",
+          "original_filename": "Ninety_0.19.0_x64_en-US.msi",
+          "platform": "windows",
+          "package_type": "Windows installer",
+          "architecture": "x86_64",
+          "version": "v0.19.0",
+          "size_bytes": 66412800,
+          "sha256": "a41e84b32de0008d91441e03bbd33b60f364db46be5171281671e0a1d96d69a3",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pathetixx-190x4-ninety-v0.19.0/Ninety_0.19.0_x64_en-US.msi",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pathetixx-190x4-ninety-v0.19.0"
         }
       ],
       "platforms": [
