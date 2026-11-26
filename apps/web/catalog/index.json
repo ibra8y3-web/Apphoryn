@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T05:21:13.027319+00:00",
+  "generated_at": "2026-11-26T05:21:43.854561+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -8285,6 +8285,96 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "regdilikun-bilisummary",
+      "slug": "regdilikun-bilisummary",
+      "name": "BiliSummary",
+      "summary": "Bilibili video summarizer (Electron desktop app): fetches subtitles or transcribes audio, then generates timestamped structured summaries. · B站视频总结工具：自动获取字幕/转写并生成带时间戳的结构化摘要",
+      "description": "Bilibili video summarizer (Electron desktop app): fetches subtitles or transcribes audio, then generates timestamped structured summaries. · B站视频总结工具：自动获取字幕/转写并生成带时间戳的结构化摘要",
+      "translations": {
+        "en": {
+          "summary": "Bilibili video summarizer (Electron desktop app): fetches subtitles or transcribes audio, then generates timestamped structured summaries. · B站视频总结工具：自动获取字幕/转写并生成带时间戳的结构化摘要",
+          "description": "Bilibili video summarizer (Electron desktop app): fetches subtitles or transcribes audio, then generates timestamped structured summaries. · B站视频总结工具：自动获取字幕/转写并生成带时间戳的结构化摘要"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/regdiliKUN/BiliSummary/main/resources/icon.png",
+      "repository_url": "https://github.com/regdiliKUN/BiliSummary",
+      "github_repo_id": "1426823332",
+      "source_updated_at": "2026-11-25T14:51:07Z",
+      "homepage_url": null,
+      "owner": "regdiliKUN",
+      "default_branch": "main",
+      "source_commit_sha": "74b2ab1720d5e09856b637c6f92fbdc89abba0ad",
+      "license_text": "MIT License\n\nCopyright (c) 2026 regdiliKUN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ai-summary",
+        "bilibili",
+        "desktop-app",
+        "electron",
+        "llm",
+        "subtitles",
+        "summary",
+        "transcription",
+        "typescript",
+        "video-summary",
+        "whisper"
+      ],
+      "latest_version": "v0.4.5",
+      "release_url": "https://github.com/regdiliKUN/BiliSummary/releases/tag/v0.4.5",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-regdilikun-bilisummary-v0.4.5",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-regdilikun-bilisummary-v0.4.5/THIRD-PARTY-NOTICE-regdilikun-bilisummary.txt",
+      "artifacts": [
+        {
+          "id": "1919cd0d194bd4b93682cc1a9e253b5adc620cb0e38ce12e1213701a312ec745",
+          "filename": "BiliSummary-0.4.5-x64-portable.exe",
+          "original_filename": "BiliSummary-0.4.5-x64-portable.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.4.5",
+          "size_bytes": 95929636,
+          "sha256": "1919cd0d194bd4b93682cc1a9e253b5adc620cb0e38ce12e1213701a312ec745",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-regdilikun-bilisummary-v0.4.5/BiliSummary-0.4.5-x64-portable.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-regdilikun-bilisummary-v0.4.5"
+        },
+        {
+          "id": "9daa9f83e8993d33b4610bec1f41683ca402eb2e6cf95e7a9a8b7fe895975f90",
+          "filename": "BiliSummary-0.4.5-x64-setup.exe",
+          "original_filename": "BiliSummary-0.4.5-x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.4.5",
+          "size_bytes": 96145803,
+          "sha256": "9daa9f83e8993d33b4610bec1f41683ca402eb2e6cf95e7a9a8b7fe895975f90",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-regdilikun-bilisummary-v0.4.5/BiliSummary-0.4.5-x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-regdilikun-bilisummary-v0.4.5"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
