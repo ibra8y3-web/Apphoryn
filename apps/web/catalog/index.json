@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T02:31:22.544120+00:00",
+  "generated_at": "2026-11-26T02:31:44.216159+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -27953,6 +27953,78 @@
           "signer_certificate_sha256": "1b84b65210ed03da0f8761ec7b2d88ace8fe4bf498c2880aa331830f86c78a29",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-inonvation-juwphub-3.5.0/JUWPHub-3.5.0.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-inonvation-juwphub-3.5.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "baix-sudo-juzipi-downloader",
+      "slug": "baix-sudo-juzipi-downloader",
+      "name": "juzipi-downloader",
+      "summary": "桔子皮下载器：支持 56 种下载协议、短视频解析、磁力/种子、资源嗅探与媒体工具箱的 Android 下载应用。",
+      "description": "桔子皮下载器：支持 56 种下载协议、短视频解析、磁力/种子、资源嗅探与媒体工具箱的 Android 下载应用。",
+      "translations": {
+        "en": {
+          "summary": "桔子皮下载器：支持 56 种下载协议、短视频解析、磁力/种子、资源嗅探与媒体工具箱的 Android 下载应用。",
+          "description": "桔子皮下载器：支持 56 种下载协议、短视频解析、磁力/种子、资源嗅探与媒体工具箱的 Android 下载应用。"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/BaiX-sudo/juzipi-downloader/main/docs/icon.png",
+      "repository_url": "https://github.com/BaiX-sudo/juzipi-downloader",
+      "github_repo_id": "1466536863",
+      "source_updated_at": "2026-11-22T23:47:28Z",
+      "homepage_url": null,
+      "owner": "BaiX-sudo",
+      "default_branch": "main",
+      "source_commit_sha": "3f4b7004085a286943f0b130d71952824a9ef090",
+      "license_text": "MIT License\n\nCopyright (c) 2026 桔子皮下载器 Contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android",
+        "android-app",
+        "apk",
+        "downloader",
+        "kotlin",
+        "magnet",
+        "material-you",
+        "short-video",
+        "torrent",
+        "video-downloader"
+      ],
+      "latest_version": "v1314520",
+      "release_url": "https://github.com/BaiX-sudo/juzipi-downloader/releases/tag/v1314520",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-baix-sudo-juzipi-downloader-v1314520",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-baix-sudo-juzipi-downloader-v1314520/THIRD-PARTY-NOTICE-baix-sudo-juzipi-downloader.txt",
+      "artifacts": [
+        {
+          "id": "ec56e54061db523c6c9ecaf339993820a1ec9c24464824ac3542808fb31c0f2e",
+          "filename": "juzipi-1314520.apk",
+          "original_filename": "juzipi-1314520.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1314520",
+          "size_bytes": 45541495,
+          "sha256": "ec56e54061db523c6c9ecaf339993820a1ec9c24464824ac3542808fb31c0f2e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "ac28378812c5281543ec6c2c155da61b12b18d17d73ec02309a38084c894f376",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-baix-sudo-juzipi-downloader-v1314520/juzipi-1314520.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-baix-sudo-juzipi-downloader-v1314520"
         }
       ],
       "platforms": [
