@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T07:21:08.506950+00:00",
+  "generated_at": "2026-11-26T07:26:19.275193+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -57227,6 +57227,59 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "moreih29-nexus-code",
+      "slug": "moreih29-nexus-code",
+      "artifacts": [],
+      "name": "nexus-code",
+      "summary": "Multi-workspace VSCode-style code editor for macOS — Monaco editor + integrated terminal in one window, with SSH remote workspaces.",
+      "description": "Multi-workspace VSCode-style code editor for macOS — Monaco editor + integrated terminal in one window, with SSH remote workspaces.",
+      "translations": {
+        "en": {
+          "summary": "Multi-workspace VSCode-style code editor for macOS — Monaco editor + integrated terminal in one window, with SSH remote workspaces.",
+          "description": "Multi-workspace VSCode-style code editor for macOS — Monaco editor + integrated terminal in one window, with SSH remote workspaces."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/moreih29/nexus-code/main/src/renderer/assets/icons/material/favicon.svg",
+      "repository_url": "https://github.com/moreih29/nexus-code",
+      "github_repo_id": "1192635219",
+      "source_updated_at": "2026-11-12T11:51:53Z",
+      "homepage_url": null,
+      "owner": "moreih29",
+      "default_branch": "main",
+      "source_commit_sha": "330ba8c7d08f9e6abaa0a7ddaedc07ba90120dda",
+      "license_text": "MIT License\n\nCopyright (c) 2026 moreih29\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "code-editor",
+        "desktop-app",
+        "developer-tools",
+        "electron",
+        "ide",
+        "macos",
+        "monaco-editor",
+        "multi-workspace",
+        "react",
+        "ssh",
+        "terminal",
+        "typescript",
+        "xterm"
+      ],
+      "latest_version": "v0.45.0",
+      "release_url": "https://github.com/moreih29/nexus-code/releases/tag/v0.45.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "roma1231jjj-cpu-nexus-lawyer",
