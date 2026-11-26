@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:19:40.971322+00:00",
+  "generated_at": "2026-11-26T06:20:13.285858+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -17619,6 +17619,81 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "dacredev-dacre",
+      "slug": "dacredev-dacre",
+      "name": "Dacre",
+      "summary": "Local-first workspace for Claude Code, Codex, Cursor, and OpenCode. Run AI coding agents in parallel and review their changes in one app.",
+      "description": "Local-first workspace for Claude Code, Codex, Cursor, and OpenCode. Run AI coding agents in parallel and review their changes in one app.",
+      "translations": {
+        "en": {
+          "summary": "Local-first workspace for Claude Code, Codex, Cursor, and OpenCode. Run AI coding agents in parallel and review their changes in one app.",
+          "description": "Local-first workspace for Claude Code, Codex, Cursor, and OpenCode. Run AI coding agents in parallel and review their changes in one app."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/DacreDev/Dacre/main/assets/prod/logo.svg",
+      "repository_url": "https://github.com/DacreDev/Dacre",
+      "github_repo_id": "1470693784",
+      "source_updated_at": "2026-11-24T20:28:01Z",
+      "homepage_url": null,
+      "owner": "DacreDev",
+      "default_branch": "main",
+      "source_commit_sha": "1f4d2bc9f7ff685f5a315f7f685d99e71568e0fb",
+      "license_text": "MIT License\n\nCopyright (c) 2026 T3 Tools Inc.\nCopyright (c) 2026 Dacre contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "agent-client-protocol",
+        "agent-orchestration",
+        "ai-agents",
+        "ai-coding-agent",
+        "claude-code",
+        "codex",
+        "desktop-app",
+        "developer-tools",
+        "electron",
+        "git-worktree",
+        "local-first",
+        "model-context-protocol",
+        "opencode"
+      ],
+      "latest_version": "v0.0.2",
+      "release_url": "https://github.com/DacreDev/Dacre/releases/tag/v0.0.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-dacredev-dacre-v0.0.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-dacredev-dacre-v0.0.2/THIRD-PARTY-NOTICE-dacredev-dacre.txt",
+      "artifacts": [
+        {
+          "id": "6048fef6e1c1b5b426b60f0ff0d4b7b9e901f2eac84ab889473f3a5eb03351ff",
+          "filename": "Dacre-0.0.2-x64.exe",
+          "original_filename": "Dacre-0.0.2-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.0.2",
+          "size_bytes": 211945712,
+          "sha256": "6048fef6e1c1b5b426b60f0ff0d4b7b9e901f2eac84ab889473f3a5eb03351ff",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-dacredev-dacre-v0.0.2/Dacre-0.0.2-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-dacredev-dacre-v0.0.2"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
