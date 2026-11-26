@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T07:06:15.691675+00:00",
+  "generated_at": "2026-11-26T07:07:23.385705+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -88948,6 +88948,81 @@
       "platforms": [
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "a21-devs-virtual-machine-manager",
+      "slug": "a21-devs-virtual-machine-manager",
+      "name": "Virtual-Machine-Manager",
+      "summary": "Fast, free VM manager for Windows. QEMU + WHPX with an Electron/React UI.",
+      "description": "Fast, free VM manager for Windows. QEMU + WHPX with an Electron/React UI.",
+      "translations": {
+        "en": {
+          "summary": "Fast, free VM manager for Windows. QEMU + WHPX with an Electron/React UI.",
+          "description": "Fast, free VM manager for Windows. QEMU + WHPX with an Electron/React UI."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/A21-devs/Virtual-Machine-Manager/main/resources/icon.png",
+      "repository_url": "https://github.com/A21-devs/Virtual-Machine-Manager",
+      "github_repo_id": "1468889046",
+      "source_updated_at": "2026-11-25T15:09:00Z",
+      "homepage_url": "https://github.com/A21-devs/Virtual-Machine-Manager/wiki",
+      "owner": "A21-devs",
+      "default_branch": "main",
+      "source_commit_sha": "a47b0560012f0a02e9c2e6727447d95e25cf6bfd",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Ari\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "desktop-app",
+        "electron",
+        "hyper-v",
+        "qemu",
+        "qemu-gui",
+        "react",
+        "typescript",
+        "virtual-machine",
+        "virtualbox-alternative",
+        "virtualization",
+        "vmware-alternative",
+        "whpx",
+        "windows"
+      ],
+      "latest_version": "v0.2.0",
+      "release_url": "https://github.com/A21-devs/Virtual-Machine-Manager/releases/tag/v0.2.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-a21-devs-virtual-machine-manager-v0.2.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-a21-devs-virtual-machine-manager-v0.2.0/THIRD-PARTY-NOTICE-a21-devs-virtual-machine-manager.txt",
+      "artifacts": [
+        {
+          "id": "fb789a0936584ac2fd454d499c6fb6bf5cb16cc96c8970fcf8021a5fe10edc4f",
+          "filename": "Virtual-Machine-Manager-Setup-0.2.0.exe",
+          "original_filename": "Virtual-Machine-Manager-Setup-0.2.0.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.2.0",
+          "size_bytes": 123839105,
+          "sha256": "fb789a0936584ac2fd454d499c6fb6bf5cb16cc96c8970fcf8021a5fe10edc4f",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-a21-devs-virtual-machine-manager-v0.2.0/Virtual-Machine-Manager-Setup-0.2.0.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-a21-devs-virtual-machine-manager-v0.2.0"
+        }
+      ],
+      "platforms": [
         "windows"
       ]
     },
