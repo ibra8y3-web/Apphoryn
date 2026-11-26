@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:43:20.005955+00:00",
+  "generated_at": "2026-11-26T03:43:33.046991+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -39607,6 +39607,66 @@
         "macos",
         "windows"
       ]
+    },
+    {
+      "id": "sodre90-mirador",
+      "slug": "sodre90-mirador",
+      "artifacts": [],
+      "name": "mirador",
+      "summary": "A canvas for your coding agent. It draws what it means, asks you with pictures, and walks you through its changes and reviews, right beside the conversation. Desktop app for macOS, Linux and Windows.",
+      "description": "A canvas for your coding agent. It draws what it means, asks you with pictures, and walks you through its changes and reviews, right beside the conversation. Desktop app for macOS, Linux and Windows.",
+      "translations": {
+        "en": {
+          "summary": "A canvas for your coding agent. It draws what it means, asks you with pictures, and walks you through its changes and reviews, right beside the conversation. Desktop app for macOS, Linux and Windows.",
+          "description": "A canvas for your coding agent. It draws what it means, asks you with pictures, and walks you through its changes and reviews, right beside the conversation. Desktop app for macOS, Linux and Windows."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/sodre90/mirador/main/desktop/assets/app-icon.svg",
+      "repository_url": "https://github.com/sodre90/mirador",
+      "github_repo_id": "1398646478",
+      "source_updated_at": "2026-11-24T19:50:06Z",
+      "homepage_url": "https://mirador.sodre90.com/",
+      "owner": "sodre90",
+      "default_branch": "main",
+      "source_commit_sha": "3f6526c41fafec20345412e9d810e1815441c4ac",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Péter Erdős\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "acp",
+        "agent-client-protocol",
+        "ai-agents",
+        "ai-coding",
+        "bun",
+        "canvas",
+        "claude-code",
+        "code-review",
+        "coding-agent",
+        "desktop-app",
+        "developer-tools",
+        "electrobun",
+        "linux",
+        "macos",
+        "mcp",
+        "mermaid",
+        "opencode",
+        "pi-coding-agent",
+        "typescript",
+        "windows"
+      ],
+      "latest_version": "v0.15.5",
+      "release_url": "https://github.com/sodre90/mirador/releases/tag/v0.15.5",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "oraziog-miraglio",
