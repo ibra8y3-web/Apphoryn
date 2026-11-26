@@ -40238,6 +40238,16 @@
           ],
           "requested_at": "2026-11-26T04:03:50.735772+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
+        },
+        {
+          "git_ref": "be1f0bed26162878e42e047f4810ca2eedd1618a",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-26T21:26:19.612256+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ]
     },
