@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:26:02.143953+00:00",
+  "generated_at": "2026-11-26T06:30:28.991438+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -7011,6 +7011,80 @@
       "platforms": [
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "d4v1k1ngg-augpt",
+      "slug": "d4v1k1ngg-augpt",
+      "name": "augpt",
+      "summary": "Assistente de IA local em português: pesquisa com fontes, preços nas lojas, arquivos, voz e dia a dia. Roda no seu PC com Ollama. · Private local AI assistant (PT/EN).",
+      "description": "Assistente de IA local em português: pesquisa com fontes, preços nas lojas, arquivos, voz e dia a dia. Roda no seu PC com Ollama. · Private local AI assistant (PT/EN).",
+      "translations": {
+        "en": {
+          "summary": "Assistente de IA local em português: pesquisa com fontes, preços nas lojas, arquivos, voz e dia a dia. Roda no seu PC com Ollama. · Private local AI assistant (PT/EN).",
+          "description": "Assistente de IA local em português: pesquisa com fontes, preços nas lojas, arquivos, voz e dia a dia. Roda no seu PC com Ollama. · Private local AI assistant (PT/EN)."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/D4v1K1ngg/augpt/main/build/icon.png",
+      "repository_url": "https://github.com/D4v1K1ngg/augpt",
+      "github_repo_id": "1414439697",
+      "source_updated_at": "2026-11-12T15:24:22Z",
+      "homepage_url": null,
+      "owner": "D4v1K1ngg",
+      "default_branch": "main",
+      "source_commit_sha": "7cd88cf8234a693a4d4a8f207962b465e43cbaba",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Davi\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "ai-agent",
+        "ai-assistant",
+        "brasil",
+        "desktop-app",
+        "electron",
+        "local-llm",
+        "ollama",
+        "portuguese",
+        "privacy",
+        "qwen",
+        "web-search",
+        "windows"
+      ],
+      "latest_version": "v0.46.0",
+      "release_url": "https://github.com/D4v1K1ngg/augpt/releases/tag/v0.46.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-d4v1k1ngg-augpt-v0.46.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-d4v1k1ngg-augpt-v0.46.0/THIRD-PARTY-NOTICE-d4v1k1ngg-augpt.txt",
+      "artifacts": [
+        {
+          "id": "ba3c7390d6d842837c3e109a5a6c9ce7a4dec616ca934b47c75c543a1e2f68ab",
+          "filename": "AuGPT-Setup-0.46.0.exe",
+          "original_filename": "AuGPT-Setup-0.46.0.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.46.0",
+          "size_bytes": 122753765,
+          "sha256": "ba3c7390d6d842837c3e109a5a6c9ce7a4dec616ca934b47c75c543a1e2f68ab",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-d4v1k1ngg-augpt-v0.46.0/AuGPT-Setup-0.46.0.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-d4v1k1ngg-augpt-v0.46.0"
+        }
+      ],
+      "platforms": [
         "windows"
       ]
     },
