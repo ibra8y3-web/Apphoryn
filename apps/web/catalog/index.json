@@ -23121,6 +23121,16 @@
         "linux",
         "macos",
         "windows"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "df7458c17265f974a3e67a4b90d77723c469f490",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-26T05:02:41.391158+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
       ]
     },
     {
