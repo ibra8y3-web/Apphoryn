@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T14:54:44.391372+00:00",
+  "generated_at": "2026-11-26T14:55:12.009878+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -39544,6 +39544,134 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "ioriapp-iori",
+      "slug": "ioriapp-iori",
+      "name": "iori",
+      "summary": "AI agent integrated development environment — keep using Claude Code, Codex and other CLI agents in their own terminal, from your PC or phone.",
+      "description": "AI agent integrated development environment — keep using Claude Code, Codex and other CLI agents in their own terminal, from your PC or phone.",
+      "translations": {
+        "en": {
+          "summary": "AI agent integrated development environment — keep using Claude Code, Codex and other CLI agents in their own terminal, from your PC or phone.",
+          "description": "AI agent integrated development environment — keep using Claude Code, Codex and other CLI agents in their own terminal, from your PC or phone."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ioriapp/iori/main/apps/client/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/ioriapp/iori",
+      "github_repo_id": "1444337069",
+      "source_updated_at": "2026-11-12T03:46:56Z",
+      "homepage_url": null,
+      "owner": "ioriapp",
+      "default_branch": "main",
+      "source_commit_sha": "d7b8de7ff58bf28b29f2a234265f37750daf0509",
+      "license_text": "MIT License\n\nCopyright (c) 2026 The iori Authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "ai-agents",
+        "ai-coding",
+        "android",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "desktop-app",
+        "git-worktree",
+        "multi-agent",
+        "opencode",
+        "pi-agent",
+        "tauri"
+      ],
+      "latest_version": "v0.1.146",
+      "release_url": "https://github.com/ioriapp/iori/releases/tag/v0.1.146",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ioriapp-iori-v0.1.146",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ioriapp-iori-v0.1.146/THIRD-PARTY-NOTICE-ioriapp-iori.txt",
+      "artifacts": [
+        {
+          "id": "6f6e287d52ee3cffb50f2913d152e1180f0b50a0b0908a0f94afafa3680098a0",
+          "filename": "iori-android-arm64.apk",
+          "original_filename": "iori-android-arm64.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v0.1.146",
+          "size_bytes": 48690503,
+          "sha256": "6f6e287d52ee3cffb50f2913d152e1180f0b50a0b0908a0f94afafa3680098a0",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "52fb58be8709736c127a2c909634c8f0418b4b2d8d6e93947d7c6fd39c892b22",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ioriapp-iori-v0.1.146/iori-android-arm64.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ioriapp-iori-v0.1.146"
+        },
+        {
+          "id": "c8f42b288c56f7ec58017b113e244b6f26c249fa50071bacc6955bde9e082d62",
+          "filename": "iori-linux-x64.AppImage",
+          "original_filename": "iori-linux-x64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.1.146",
+          "size_bytes": 102853112,
+          "sha256": "c8f42b288c56f7ec58017b113e244b6f26c249fa50071bacc6955bde9e082d62",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ioriapp-iori-v0.1.146/iori-linux-x64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ioriapp-iori-v0.1.146"
+        },
+        {
+          "id": "0c5226603dd0ffdec349c3342f61a49dd66c2ad9ee08f4d8bc9c35b184e9025b",
+          "filename": "iori-linux-x64.deb",
+          "original_filename": "iori-linux-x64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.1.146",
+          "size_bytes": 25921078,
+          "sha256": "0c5226603dd0ffdec349c3342f61a49dd66c2ad9ee08f4d8bc9c35b184e9025b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ioriapp-iori-v0.1.146/iori-linux-x64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ioriapp-iori-v0.1.146"
+        },
+        {
+          "id": "6e81cdaae184fd03443233fd198ae3bcea9a32e7947eee8ba84c255aae0733bc",
+          "filename": "iori-setup-windows-x64.exe",
+          "original_filename": "iori-setup-windows-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.1.146",
+          "size_bytes": 16444166,
+          "sha256": "6e81cdaae184fd03443233fd198ae3bcea9a32e7947eee8ba84c255aae0733bc",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ioriapp-iori-v0.1.146/iori-setup-windows-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ioriapp-iori-v0.1.146"
+        }
+      ],
+      "platforms": [
+        "android",
+        "linux",
+        "windows"
       ]
     },
     {
