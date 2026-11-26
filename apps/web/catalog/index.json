@@ -33629,7 +33629,19 @@
       "latest_version": "v0.1.13",
       "release_url": "https://github.com/goat-si/goat/releases/tag/v0.1.13",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "7405f5280874d4105665cb1eb4b615e625c5fd18",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-26T07:30:03.052797+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "eggplants-godlo",
