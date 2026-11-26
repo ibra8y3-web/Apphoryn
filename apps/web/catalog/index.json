@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:41:30.868554+00:00",
+  "generated_at": "2026-11-26T04:45:54.292313+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -66556,6 +66556,119 @@
       "platforms": [
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "ai-animation-tools-songframe",
+      "slug": "ai-animation-tools-songframe",
+      "name": "songframe",
+      "summary": "Настольное приложение для производства музыкальных клипов с ИИ: разметка песни, сценарий и планы, генерация опорных кадров и видео с согласованием платных отправок, приёмка, аниматик, монтаж и экспорт для монтажёра. Go + Wails 3, React/MUI.",
+      "description": "Настольное приложение для производства музыкальных клипов с ИИ: разметка песни, сценарий и планы, генерация опорных кадров и видео с согласованием платных отправок, приёмка, аниматик, монтаж и экспорт для монтажёра. Go + Wails 3, React/MUI. Linux и Windows.",
+      "translations": {
+        "en": {
+          "summary": "Настольное приложение для производства музыкальных клипов с ИИ: разметка песни, сценарий и планы, генерация опорных кадров и видео с согласованием платных отправок, приёмка, аниматик, монтаж и экспорт для монтажёра. Go + Wails 3, React/MUI.",
+          "description": "Настольное приложение для производства музыкальных клипов с ИИ: разметка песни, сценарий и планы, генерация опорных кадров и видео с согласованием платных отправок, приёмка, аниматик, монтаж и экспорт для монтажёра. Go + Wails 3, React/MUI. Linux и Windows."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ai-animation-tools/songframe/main/resources/icon.png",
+      "repository_url": "https://github.com/ai-animation-tools/songframe",
+      "github_repo_id": "1435700620",
+      "source_updated_at": "2026-11-14T08:49:01Z",
+      "homepage_url": "https://ai-animation-tools.github.io/songframe/",
+      "owner": "ai-animation-tools",
+      "default_branch": "main",
+      "source_commit_sha": "3d2b049fbc2f0ad006d9d5fc3947f2f4bd25dcb3",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Yarkov Aleksey\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "ai-agents",
+        "ai-video",
+        "animatic",
+        "desktop-app",
+        "generative-ai",
+        "go",
+        "linux",
+        "material-ui",
+        "music",
+        "music-video",
+        "react",
+        "typescript",
+        "video-editing",
+        "video-generation",
+        "wails",
+        "windows"
+      ],
+      "latest_version": "v1.1.0",
+      "release_url": "https://github.com/ai-animation-tools/songframe/releases/tag/v1.1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ai-animation-tools-songframe-v1.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ai-animation-tools-songframe-v1.1.0/THIRD-PARTY-NOTICE-ai-animation-tools-songframe.txt",
+      "artifacts": [
+        {
+          "id": "e896541579d942566294bb7cbbfe37826b8193d0b3336a09d8019d6b56aee700",
+          "filename": "songframe-1.1.0-linux-amd64.deb",
+          "original_filename": "songframe-1.1.0-linux-amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v1.1.0",
+          "size_bytes": 7578260,
+          "sha256": "e896541579d942566294bb7cbbfe37826b8193d0b3336a09d8019d6b56aee700",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ai-animation-tools-songframe-v1.1.0/songframe-1.1.0-linux-amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ai-animation-tools-songframe-v1.1.0"
+        },
+        {
+          "id": "5f2f4024ed090bf26258ce9b1a7acacf762fe36bdfd993869c91b5c8c110510d",
+          "filename": "songframe-1.1.0-linux-x86_64.AppImage",
+          "original_filename": "songframe-1.1.0-linux-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v1.1.0",
+          "size_bytes": 87529976,
+          "sha256": "5f2f4024ed090bf26258ce9b1a7acacf762fe36bdfd993869c91b5c8c110510d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ai-animation-tools-songframe-v1.1.0/songframe-1.1.0-linux-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ai-animation-tools-songframe-v1.1.0"
+        },
+        {
+          "id": "4be0773d5784ebc09e02b258c2cfd36845c79312c55b6026ef1492d8229bab32",
+          "filename": "songframe-1.1.0-win-x64-setup.exe",
+          "original_filename": "songframe-1.1.0-win-x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.1.0",
+          "size_bytes": 9673067,
+          "sha256": "4be0773d5784ebc09e02b258c2cfd36845c79312c55b6026ef1492d8229bab32",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ai-animation-tools-songframe-v1.1.0/songframe-1.1.0-win-x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ai-animation-tools-songframe-v1.1.0"
+        }
+      ],
+      "platforms": [
+        "linux",
         "windows"
       ]
     },
