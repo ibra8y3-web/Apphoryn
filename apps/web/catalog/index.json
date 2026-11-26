@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T10:20:58.259110+00:00",
+  "generated_at": "2026-11-26T10:21:13.004675+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -56439,17 +56439,19 @@
       "id": "krelinnbios-neodblite",
       "slug": "krelinnbios-neodblite",
       "name": "NeoDBLite",
-      "summary": "Unofficial Android client for NeoDB and compatible instances to browse, search, and mark books, films, music, and games.",
-      "description": "NeoDBLite is an unofficial Android client for NeoDB and compatible instances. It supports instance login through the browser, category-based discovery of trending books, films, music, and games, cross-category or category-limited search with recent history, item details, and marking with collection status, rating, short reviews, tags, visibility, and dates. It includes a personal bookshelf with filtering, editing, deletion, and calendar view, a profile page with statistics and collections, and settings for theme, language, update checks, and logout. It requires Android 7.0 (API 24) or newer; APK releases are provided for arm64-v8a and armeabi-v7a. The project is unofficial, is not affiliated with NeoDB or instance operators, and is released under the MIT License.",
+      "summary": "面向 NeoDB 与兼容实例的非官方 Android 标记客户端。",
+      "description": "面向 NeoDB 与兼容实例的非官方 Android 标记客户端。",
       "translations": {
-        "en": "Unofficial Android client for NeoDB and compatible instances to browse, search, and mark books, films, music, and games.",
-        "ar": "عميل Android غير رسمي لـ NeoDB والأنظمة المتوافقة معه لتصفح الكتب والأفلام والموسيقى والألعاب والبحث عنها ووضع علامات عليها."
+        "en": {
+          "summary": "面向 NeoDB 与兼容实例的非官方 Android 标记客户端。",
+          "description": "面向 NeoDB 与兼容实例的非官方 Android 标记客户端。"
+        }
       },
       "description_translations": {
         "en": "NeoDBLite is an unofficial Android client for NeoDB and compatible instances. It supports instance login through the browser, category-based discovery of trending books, films, music, and games, cross-category or category-limited search with recent history, item details, and marking with collection status, rating, short reviews, tags, visibility, and dates. It includes a personal bookshelf with filtering, editing, deletion, and calendar view, a profile page with statistics and collections, and settings for theme, language, update checks, and logout. It requires Android 7.0 (API 24) or newer; APK releases are provided for arm64-v8a and armeabi-v7a. The project is unofficial, is not affiliated with NeoDB or instance operators, and is released under the MIT License.",
         "ar": "NeoDBLite هو عميل Android غير رسمي لـ NeoDB والأنظمة المتوافقة معه. يتيح تسجيل الدخول إلى مثيل عبر المتصفح، وتصفح المحتوى الشائع حسب الفئة، والبحث عبر الفئات أو ضمن فئة محددة مع سجل الاستعلامات، وعرض تفاصيل العنصر، وإدارة حالة الإعجاب والتقييم والمراجعات القصيرة والوسوم والظهور وتاريخ العلامة. يتضمن رفّ الكتب الشخصي مع التصفية والتعديل والحذف وعرض التقويم، وصفحة الملف الشخصي مع الإحصاءات والمجموعات، وإعدادات السمة واللغة والتحقق من التحديثات وتسجيل الخروج. يتطلب Android 7.0 (API 24) أو أحدث، وتتوفر نسخ APK لبنية arm64-v8a وarmeabi-v7a. المشروع غير رسمي وغير تابع لـ NeoDB أو مشغلي الأنظمة، ويُوزع بموجب ترخيص MIT."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/KrelinnBios/NeoDBLite/main/icon/icon.svg",
@@ -56463,10 +56465,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 KrelinnBios\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
+      "project_kind": "unknown",
       "build_recommended": false,
-      "classification_source": "ai",
-      "classification_reason": "Android end-user application built with Kotlin and Jetpack Compose for NeoDB. The supplied README documents APK installation and Android requirements but does not provide an explicit source build path, so build_recommended is false.",
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
       "project_status": "installable",
       "category": "multimedia",
       "topics": [
