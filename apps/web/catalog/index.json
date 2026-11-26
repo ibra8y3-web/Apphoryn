@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T06:52:31.902729+00:00",
+  "generated_at": "2026-11-26T06:52:50.823990+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -74297,6 +74297,88 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "shelfrip-shelfrip",
+      "slug": "shelfrip-shelfrip",
+      "name": "ShelfRip",
+      "summary": "Rip DVDs, Blu-rays and 4K discs with MakeMKV, then name movies, episodes and extras automatically for Plex, Jellyfin, Emby or Kodi.",
+      "description": "Rip DVDs, Blu-rays and 4K discs with MakeMKV, then name movies, episodes and extras automatically for Plex, Jellyfin, Emby or Kodi.",
+      "translations": {
+        "en": {
+          "summary": "Rip DVDs, Blu-rays and 4K discs with MakeMKV, then name movies, episodes and extras automatically for Plex, Jellyfin, Emby or Kodi.",
+          "description": "Rip DVDs, Blu-rays and 4K discs with MakeMKV, then name movies, episodes and extras automatically for Plex, Jellyfin, Emby or Kodi."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/359634762?v=4",
+      "repository_url": "https://github.com/Shelfrip/ShelfRip",
+      "github_repo_id": "1462240908",
+      "source_updated_at": "2026-11-26T04:25:17Z",
+      "homepage_url": "https://shelfrip.com/",
+      "owner": "Shelfrip",
+      "default_branch": "main",
+      "source_commit_sha": "7eda2f16a95290b31430a839e9c569b33890e673",
+      "license_text": "MIT License\n\nCopyright (c) 2026 the Shelfrip authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "4k-uhd",
+        "blu-ray",
+        "cd-ripper",
+        "desktop-app",
+        "disc-ripping",
+        "dvd",
+        "emby",
+        "flac",
+        "home-media",
+        "jellyfin",
+        "kodi",
+        "makemkv",
+        "media-organizer",
+        "media-server",
+        "plex",
+        "plex-media-server",
+        "python",
+        "thediscdb",
+        "tmdb",
+        "windows"
+      ],
+      "latest_version": "v1.1.0",
+      "release_url": "https://github.com/Shelfrip/ShelfRip/releases/tag/v1.1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shelfrip-shelfrip-v1.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shelfrip-shelfrip-v1.1.0/THIRD-PARTY-NOTICE-shelfrip-shelfrip.txt",
+      "artifacts": [
+        {
+          "id": "bb92544946d87f5625fdbddedd5435e93abb8ce70890722f10f52940057e83ed",
+          "filename": "Shelfrip.Setup.1.1.0.exe",
+          "original_filename": "Shelfrip.Setup.1.1.0.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.1.0",
+          "size_bytes": 11542053,
+          "sha256": "bb92544946d87f5625fdbddedd5435e93abb8ce70890722f10f52940057e83ed",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shelfrip-shelfrip-v1.1.0/Shelfrip.Setup.1.1.0.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shelfrip-shelfrip-v1.1.0"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
