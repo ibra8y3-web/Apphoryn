@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T23:55:20.226031+00:00",
+  "generated_at": "2026-11-26T23:55:35.066842+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -31048,7 +31048,7 @@
       "homepage_url": "https://yim2412.github.io/fifa-match-tracker/",
       "owner": "yim2412",
       "default_branch": "master",
-      "source_commit_sha": "16dc639e604bac7a5020b2ae8c95dbf99719089c",
+      "source_commit_sha": "a189e37833abe6432dcbc29b415fee5a89b61488",
       "license_text": "MIT License\n\nCopyright (c) 2026 준\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -31068,8 +31068,8 @@
         "python",
         "sqlite"
       ],
-      "latest_version": "v3.15.1",
-      "release_url": "https://github.com/yim2412/fifa-match-tracker/releases/tag/v3.15.1",
+      "latest_version": "v3.15.2",
+      "release_url": "https://github.com/yim2412/fifa-match-tracker/releases/tag/v3.15.2",
       "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yim2412-fifa-match-tracker-v3.15.1",
       "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yim2412-fifa-match-tracker-v3.15.1/THIRD-PARTY-NOTICE-yim2412-fifa-match-tracker.txt",
       "artifacts": [
