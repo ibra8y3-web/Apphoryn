@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T00:11:01.422595+00:00",
+  "generated_at": "2026-11-26T00:12:26.539252+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -44699,6 +44699,101 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "ispikers-plaivo",
+      "slug": "ispikers-plaivo",
+      "name": "plaivo",
+      "summary": "Native Plex and Jellyfin client for Windows, macOS, Android and Android TV, built in Rust with GPUI and mpv.",
+      "description": "Native Plex and Jellyfin client for Windows, macOS, Android and Android TV, built in Rust with GPUI and mpv.",
+      "translations": {
+        "en": {
+          "summary": "Native Plex and Jellyfin client for Windows, macOS, Android and Android TV, built in Rust with GPUI and mpv.",
+          "description": "Native Plex and Jellyfin client for Windows, macOS, Android and Android TV, built in Rust with GPUI and mpv."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "english_only",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/37247310?v=4",
+      "repository_url": "https://github.com/ispikers/plaivo",
+      "github_repo_id": "1450353288",
+      "source_updated_at": "2026-11-14T03:23:04Z",
+      "homepage_url": "https://plaivo.app",
+      "owner": "ispikers",
+      "default_branch": "main",
+      "source_commit_sha": "c00ea767bd9f0f5c1cfb476cab6615296326c1a5",
+      "license_text": "Copyright (c) 2026 spikers\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "android",
+        "android-app",
+        "android-tv",
+        "gpui",
+        "jellyfin",
+        "jellyfin-client",
+        "macos",
+        "macos-app",
+        "media-player",
+        "mpv",
+        "plex",
+        "plex-client",
+        "rust",
+        "windows",
+        "windows-app"
+      ],
+      "latest_version": "v0.2.1",
+      "release_url": "https://github.com/ispikers/plaivo/releases/tag/v0.2.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ispikers-plaivo-v0.2.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ispikers-plaivo-v0.2.1/THIRD-PARTY-NOTICE-ispikers-plaivo.txt",
+      "artifacts": [
+        {
+          "id": "2ef33902bf953930189e1f299db0aab36e0dc9a8de8f87c1b0bd1144aa7f525f",
+          "filename": "Plaivo-osx-Setup.pkg",
+          "original_filename": "Plaivo-osx-Setup.pkg",
+          "platform": "macos",
+          "package_type": "macOS installer",
+          "architecture": null,
+          "version": "v0.2.1",
+          "size_bytes": 30043505,
+          "sha256": "2ef33902bf953930189e1f299db0aab36e0dc9a8de8f87c1b0bd1144aa7f525f",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ispikers-plaivo-v0.2.1/Plaivo-osx-Setup.pkg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ispikers-plaivo-v0.2.1"
+        },
+        {
+          "id": "825d71992db5067c17693c94da599e58d2f5d337c86265e9b314995e0763400d",
+          "filename": "Plaivo-win-Setup.exe",
+          "original_filename": "Plaivo-win-Setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.2.1",
+          "size_bytes": 45398980,
+          "sha256": "825d71992db5067c17693c94da599e58d2f5d337c86265e9b314995e0763400d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ispikers-plaivo-v0.2.1/Plaivo-win-Setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ispikers-plaivo-v0.2.1"
+        }
+      ],
+      "platforms": [
+        "macos",
+        "windows"
       ]
     },
     {
