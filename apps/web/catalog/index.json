@@ -62810,6 +62810,18 @@
       "platforms": [
         "linux",
         "windows"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "7659d36422634b36f5a4c5b4b0df31dd6b8ccdc9",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-26T05:28:57.255103+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
       ]
     },
     {
