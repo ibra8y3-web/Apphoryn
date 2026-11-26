@@ -54749,7 +54749,17 @@
       "latest_version": "v3.0",
       "release_url": "https://github.com/toby-gamez/TKOlympApp/releases/tag/v3.0",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "88e4708d21b33c570bbade78b643749d06bfd2f2",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-26T00:07:06.221745+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "aoxiuy-token-monitor-for-android",
