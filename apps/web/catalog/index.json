@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T12:30:04.210830+00:00",
+  "generated_at": "2026-11-26T12:31:04.674168+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -69179,7 +69179,7 @@
       "icon_url": "https://raw.githubusercontent.com/wangmiaozero/pi-harness/main/build/icon.png",
       "repository_url": "https://github.com/wangmiaozero/pi-harness",
       "github_repo_id": "1340676550",
-      "source_updated_at": "2026-11-25T14:21:51Z",
+      "source_updated_at": "2026-11-26T06:22:03Z",
       "homepage_url": "https://wangmiaozero.github.io/pi-harness-website/",
       "owner": "wangmiaozero",
       "default_branch": "main",
