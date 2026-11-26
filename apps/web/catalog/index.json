@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T12:21:42.294668+00:00",
+  "generated_at": "2026-11-26T12:22:22.520705+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -90233,11 +90233,11 @@
       "icon_url": "https://raw.githubusercontent.com/gnoviawan/troupe/dev/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/gnoviawan/troupe",
       "github_repo_id": "1133241492",
-      "source_updated_at": "2026-11-26T04:18:46Z",
+      "source_updated_at": "2026-11-26T11:21:18Z",
       "homepage_url": "https://usetroupe.dev",
       "owner": "gnoviawan",
       "default_branch": "dev",
-      "source_commit_sha": "522363ed2e8474ccab7effce1260bea13e8b162d",
+      "source_commit_sha": "8c8a8d82cd909af466954519ff60899be4223780",
       "license_text": "MIT License\n\nCopyright (c) 2025 gnoviawan\nCopyright (c) 2026 mannnrachman (Tauri porting contributions)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
