@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T14:11:51.618322+00:00",
+  "generated_at": "2026-11-26T14:12:23.310735+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -46070,7 +46070,7 @@
       "icon_url": "https://raw.githubusercontent.com/SimoHypers/limusic/master/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/SimoHypers/limusic",
       "github_repo_id": "1288394548",
-      "source_updated_at": "2026-11-26T05:04:12Z",
+      "source_updated_at": "2026-11-26T13:48:44Z",
       "homepage_url": "https://limusic.app",
       "owner": "SimoHypers",
       "default_branch": "master",
