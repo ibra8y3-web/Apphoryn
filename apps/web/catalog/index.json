@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T10:22:08.841243+00:00",
+  "generated_at": "2026-11-26T10:22:31.250432+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -66023,17 +66023,19 @@
       "id": "jksalcedo-passvault",
       "slug": "jksalcedo-passvault",
       "name": "PassVault",
-      "summary": "PassVault is a secure, lightweight, offline password manager for Android, built in Kotlin with AES-256 encryption, biometric login, and encrypted backups.",
-      "description": "PassVault is a secure, lightweight, and completely offline password manager for Android, written in Kotlin. It stores credentials locally in an encrypted database using AES-256, with Argon2Kt for file encryption and Android Keystore integration, so data never leaves the device; the app requests no internet permission. Users unlock the vault with a PIN or fingerprint (biometric) login, and can add, view, edit, and delete passwords, organize them with categories and labels, generate strong passwords in-app, and see password strength scores and custom field templates. Backups and transfers use encrypted import/export, including automatic encrypted backups, and the app can import data from KeePass (CSV/KDBX) and Bitwarden (JSON). The interface follows Material Design and the code uses MVVM with Room, ViewModel, Repository, and LiveData. It requires Android 8.0 (Oreo) or higher and is distributed via GitHub Releases, SourceForge, F-Droid, and IzzyOnDroid. Planned features include a desktop version, QR code password sharing, and a TOTP generator.",
+      "summary": "A secure, lightweight, & offline password manager for Android",
+      "description": "A secure, lightweight, & offline password manager for Android",
       "translations": {
-        "en": "PassVault is a secure, lightweight, offline password manager for Android, built in Kotlin with AES-256 encryption, biometric login, and encrypted backups.",
-        "ar": "PassVault مدير كلمات مرور آمن وخفيف يعمل دون اتصال بالإنترنت على أندرويد، مبني بلغة Kotlin مع تشفير AES-256 وتسجيل دخول بالبصمة ونسخ احتياطية مشفّرة."
+        "en": {
+          "summary": "A secure, lightweight, & offline password manager for Android",
+          "description": "A secure, lightweight, & offline password manager for Android"
+        }
       },
       "description_translations": {
         "en": "PassVault is a secure, lightweight, and completely offline password manager for Android, written in Kotlin. It stores credentials locally in an encrypted database using AES-256, with Argon2Kt for file encryption and Android Keystore integration, so data never leaves the device; the app requests no internet permission. Users unlock the vault with a PIN or fingerprint (biometric) login, and can add, view, edit, and delete passwords, organize them with categories and labels, generate strong passwords in-app, and see password strength scores and custom field templates. Backups and transfers use encrypted import/export, including automatic encrypted backups, and the app can import data from KeePass (CSV/KDBX) and Bitwarden (JSON). The interface follows Material Design and the code uses MVVM with Room, ViewModel, Repository, and LiveData. It requires Android 8.0 (Oreo) or higher and is distributed via GitHub Releases, SourceForge, F-Droid, and IzzyOnDroid. Planned features include a desktop version, QR code password sharing, and a TOTP generator.",
         "ar": "PassVault هو مدير كلمات مرور آمن وخفيف الوزن يعمل بالكامل دون اتصال بالإنترنت على نظام أندرويد، ومكتوب بلغة Kotlin. يخزّن بيانات الاعتماد محليًا في قاعدة بيانات مشفّرة باستخدام AES-256، مع Argon2Kt لتشفير الملفات وتكامل مع Android Keystore، بحيث لا تغادر البيانات الجهاز أبدًا؛ ولا يطلب التطبيق أي إذن يسمح بالاتصال بالإنترنت. يمكن للمستخدمين فتح الخزنة باستخدام رمز PIN أو تسجيل الدخول بالبصمة (المصادقة البيومترية)، وإضافة كلمات المرور وعرضها وتعديلها وحذفها، وتنظيمها ضمن فئات ووسوم، وتوليد كلمات مرور قوية داخل التطبيق، والاطلاع على درجة قوة كلمة المرور واستخدام قوالب حقول مخصّصة. وتتم النسخ الاحتياطية والنقل عبر استيراد وتصدير مشفّرين، بما في ذلك النسخ الاحتياطية المشفّرة التلقائية، مع إمكانية استيراد البيانات من KeePass (CSV/KDBX) وBitwarden (JSON). تتبع الواجهة تصميم Material، ويعتمد الكود بنية MVVM مع Room وViewModel وRepository وLiveData. يتطلب التطبيق أندرويد 8.0 (Oreo) أو أحدث، ويتوفر عبر GitHub Releases وSourceForge وF-Droid وIzzyOnDroid. ومن الميزات المخطط لها إصدار سطح مكتب، ومشاركة كلمات المرور عبر رمز QR، ومولّد رموز TOTP."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/jksalcedo/PassVault/master/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
@@ -66047,10 +66049,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2025 Jaressen Kyle Salcedo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
-      "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "PassVault is a standalone end-user Android application (Kotlin, Android 8.0+, distributed as installable builds on GitHub Releases, SourceForge, F-Droid, and IzzyOnDroid), not a library, framework, or service. build_recommended is true because it is a self-contained end-user app with a conventional Android source layout (Kotlin, Room, MVVM, XML layouts with ViewBinding, Material Design Components)",
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
       "project_status": "installable",
       "category": "security",
       "topics": [
