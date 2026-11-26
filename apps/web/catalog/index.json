@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T00:09:49.796051+00:00",
+  "generated_at": "2026-11-26T00:10:24.042032+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -52166,6 +52166,78 @@
       "platforms": [
         "macos",
         "windows"
+      ]
+    },
+    {
+      "id": "asptechinc-steerwise",
+      "slug": "asptechinc-steerwise",
+      "name": "SteerWise",
+      "summary": "SteerWise is a Flutter Android app for learner drivers, offering voice-guided practice, a simulated UK road, camera preview, and Show Me/Tell Me questions.",
+      "description": "SteerWise is an open-source Flutter application for Android that helps learner drivers practise steering and road awareness. It provides spoken instructions, a simulated UK left-hand-traffic road with traffic lights, pedestrians, scoring and collision retry, a live front/rear camera preview, and UK Show Me/Tell Me vehicle safety questions. The app includes light, dark and system themes, built-in help, offline privacy information, and local-only settings. It is designed for practice with a steering-wheel prop and does not record camera footage. The repository includes Flutter build instructions, tests, release workflows, and F-Droid metadata.",
+      "translations": {
+        "en": "SteerWise is a Flutter Android app for learner drivers, offering voice-guided practice, a simulated UK road, camera preview, and Show Me/Tell Me questions.",
+        "ar": "SteerWise هو تطبيق Flutter لجهاز Android لمساعدة متعلمي القيادة، ويوفر إرشادات صوتية ومحاكاة طريق بريطاني ومعاينة كاميرا وأسئلة Show Me/Tell Me."
+      },
+      "description_translations": {
+        "en": "SteerWise is an open-source Flutter application for Android that helps learner drivers practise steering and road awareness. It provides spoken instructions, a simulated UK left-hand-traffic road with traffic lights, pedestrians, scoring and collision retry, a live front/rear camera preview, and UK Show Me/Tell Me vehicle safety questions. The app includes light, dark and system themes, built-in help, offline privacy information, and local-only settings. It is designed for practice with a steering-wheel prop and does not record camera footage. The repository includes Flutter build instructions, tests, release workflows, and F-Droid metadata.",
+        "ar": "SteerWise هو تطبيق Flutter مفتوح المصدر لجهاز Android يساعد متعلمي القيادة على تحسين التحكم بعجلة القيادة والوعي بالطريق. يوفر تعليمات صوتية، وطريقًا بريطانيًا محاكى بحركة مرور يسارية، وإشارات مرور ومشاة ونظام نقاط وإعادة محاولة عند الاصطدام، ومعاينة كاميرا أمامية أو خلفية، وأسئلة Show Me/Tell Me الخاصة بسلامة المركبة في اختبار القيادة البريطاني. يتضمن التطبيق سمات فاتحة وداكنة وسمات النظام، ومساعدة مدمجة، ومعلومات خصوصية تعمل دون اتصال، وإعدادات محفوظة على الجهاز فقط. وهو مصمم للتدرب باستخدام عجلة قيادة وهمية، ولا يسجل لقطات الكاميرا. يحتوي المستودع على تعليمات بناء Flutter واختبارات وسير عمل للإصدار وبيانات F-Droid."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://raw.githubusercontent.com/ASPTechInc/SteerWise/main/assets/images/app_icon.png",
+      "repository_url": "https://github.com/ASPTechInc/SteerWise",
+      "github_repo_id": "984391079",
+      "source_updated_at": "2026-10-29T07:19:56Z",
+      "homepage_url": null,
+      "owner": "ASPTechInc",
+      "default_branch": "main",
+      "source_commit_sha": "be0831549d154a4126643e11d28038061889a875",
+      "license_text": "MIT License\n\nCopyright (c) 2026 ASPTechnologies Incorporation\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Standalone end-user Android Flutter application with documented build, test, and release paths.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "android-app",
+        "driver-education",
+        "driving-app",
+        "driving-simulator",
+        "flutter",
+        "flutter-tts",
+        "learner-driver",
+        "road-visualisation",
+        "smart-driving"
+      ],
+      "latest_version": "v1.0.0",
+      "release_url": "https://github.com/ASPTechInc/SteerWise/releases/tag/v1.0.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-asptechinc-steerwise-v1.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-asptechinc-steerwise-v1.0.0/THIRD-PARTY-NOTICE-asptechinc-steerwise.txt",
+      "artifacts": [
+        {
+          "id": "7cf3fd92bb299b26bafd714cc1d9aaef1b7091717ed1c9b5d5b1c6f8f0336f48",
+          "filename": "SteerWise-v1.0.0.apk",
+          "original_filename": "SteerWise-v1.0.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.0",
+          "size_bytes": 56317406,
+          "sha256": "7cf3fd92bb299b26bafd714cc1d9aaef1b7091717ed1c9b5d5b1c6f8f0336f48",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "da3d17bd4955a484faff0b3ee83342f03f5c2e3a13f617be0e45c54a0285a6f0",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-asptechinc-steerwise-v1.0.0/SteerWise-v1.0.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-asptechinc-steerwise-v1.0.0"
+        }
+      ],
+      "platforms": [
+        "android"
       ]
     },
     {
