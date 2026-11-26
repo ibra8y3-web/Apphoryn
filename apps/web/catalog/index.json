@@ -57279,7 +57279,19 @@
       "latest_version": "v0.45.0",
       "release_url": "https://github.com/moreih29/nexus-code/releases/tag/v0.45.0",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "330ba8c7d08f9e6abaa0a7ddaedc07ba90120dda",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-26T07:26:31.289097+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "roma1231jjj-cpu-nexus-lawyer",
