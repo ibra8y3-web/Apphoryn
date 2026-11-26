@@ -8459,6 +8459,16 @@
           ],
           "requested_at": "2026-11-26T03:54:32.789193+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
+        },
+        {
+          "git_ref": "8abc5f411a57e35f95be7687fdfd668af20def78",
+          "targets": [
+            "android",
+            "linux",
+            "macos"
+          ],
+          "requested_at": "2026-11-26T21:17:31.484500+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ]
     },
