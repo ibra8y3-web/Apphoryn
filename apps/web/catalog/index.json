@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T05:48:57.910548+00:00",
+  "generated_at": "2026-11-26T05:49:20.241945+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -79284,6 +79284,101 @@
       "platforms": [
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "arslaneren-dev-truck-tms",
+      "slug": "arslaneren-dev-truck-tms",
+      "name": "truck-tms",
+      "summary": "Open-source desktop TMS for US trucking: loads, weekly statements, invoices & receivables, IFTA, compliance reminders, maintenance - English & Turkish",
+      "description": "Open-source desktop TMS for US trucking: loads, weekly statements, invoices & receivables, IFTA, compliance reminders, maintenance - English & Turkish",
+      "translations": {
+        "en": {
+          "summary": "Open-source desktop TMS for US trucking: loads, weekly statements, invoices & receivables, IFTA, compliance reminders, maintenance - English & Turkish",
+          "description": "Open-source desktop TMS for US trucking: loads, weekly statements, invoices & receivables, IFTA, compliance reminders, maintenance - English & Turkish"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ArslanEren-Dev/truck-tms/main/truck_tms/assets/logo.svg",
+      "repository_url": "https://github.com/ArslanEren-Dev/truck-tms",
+      "github_repo_id": "1465042525",
+      "source_updated_at": "2026-11-20T08:03:10Z",
+      "homepage_url": "https://arslaneren-dev.github.io/truck-tms/",
+      "owner": "ArslanEren-Dev",
+      "default_branch": "main",
+      "source_commit_sha": "ae2ea2291d632bc02867d4e0ba5fb6c841e96124",
+      "license_text": "MIT License\n\nCopyright (c) 2026 ArslanEren-Dev (https://github.com/ArslanEren-Dev) and Truck TMS contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "desktop-app",
+        "dispatch",
+        "fleet-compliance",
+        "fleet-management",
+        "ifta",
+        "invoicing",
+        "logistics",
+        "open-source",
+        "owner-operator",
+        "pyside6",
+        "python",
+        "sqlite",
+        "tms",
+        "trucking",
+        "trucking-software",
+        "windows"
+      ],
+      "latest_version": "v0.7.0",
+      "release_url": "https://github.com/ArslanEren-Dev/truck-tms/releases/tag/v0.7.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-arslaneren-dev-truck-tms-v0.7.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-arslaneren-dev-truck-tms-v0.7.0/THIRD-PARTY-NOTICE-arslaneren-dev-truck-tms.txt",
+      "artifacts": [
+        {
+          "id": "0c02ad372e72737e06ea19b9b757b9bc7937cdb0b9fd1c94c36f059cfff0b313",
+          "filename": "TruckTMS-Setup.exe",
+          "original_filename": "TruckTMS-Setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.7.0",
+          "size_bytes": 28279524,
+          "sha256": "0c02ad372e72737e06ea19b9b757b9bc7937cdb0b9fd1c94c36f059cfff0b313",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-arslaneren-dev-truck-tms-v0.7.0/TruckTMS-Setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-arslaneren-dev-truck-tms-v0.7.0"
+        },
+        {
+          "id": "0590544f43b3458baaba5f60bb2af7ed9742a3268675103a55ce8fd1a1431445",
+          "filename": "TruckTMS.exe",
+          "original_filename": "TruckTMS.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.7.0",
+          "size_bytes": 26516737,
+          "sha256": "0590544f43b3458baaba5f60bb2af7ed9742a3268675103a55ce8fd1a1431445",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-arslaneren-dev-truck-tms-v0.7.0/TruckTMS.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-arslaneren-dev-truck-tms-v0.7.0"
+        }
+      ],
+      "platforms": [
         "windows"
       ]
     },
