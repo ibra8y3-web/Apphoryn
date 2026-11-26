@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T05:19:37.867411+00:00",
+  "generated_at": "2026-11-26T05:20:07.125957+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -34925,6 +34925,75 @@
           "signer_certificate_sha256": "131b3899e1160941018c6ad717faca2a608729013e85af4ae870273bdac1919a",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ronynn-karui-2.3/karui-release.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ronynn-karui-2.3"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "kunlunmeta-dev-kcoder",
+      "slug": "kunlunmeta-dev-kcoder",
+      "name": "Kcoder",
+      "summary": "KCoder — agentic AI coding platform by KunlunMeta: model providers, tool system, permissions & sandbox, long-term memory, skills, MCP, sub-agents, terminal TUI and KCoder Studio desktop app. Source snapshots and Windows installers are publi",
+      "description": "KCoder — agentic AI coding platform by KunlunMeta: model providers, tool system, permissions & sandbox, long-term memory, skills, MCP, sub-agents, terminal TUI and KCoder Studio desktop app. Source snapshots and Windows installers are published under Releases.",
+      "translations": {
+        "en": {
+          "summary": "KCoder — agentic AI coding platform by KunlunMeta: model providers, tool system, permissions & sandbox, long-term memory, skills, MCP, sub-agents, terminal TUI and KCoder Studio desktop app. Source snapshots and Windows installers are publi",
+          "description": "KCoder — agentic AI coding platform by KunlunMeta: model providers, tool system, permissions & sandbox, long-term memory, skills, MCP, sub-agents, terminal TUI and KCoder Studio desktop app. Source snapshots and Windows installers are published under Releases."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/KunlunMeta-dev/Kcoder/main/apps/kcoder-studio/desktop/icons/icon.png",
+      "repository_url": "https://github.com/KunlunMeta-dev/Kcoder",
+      "github_repo_id": "1375339440",
+      "source_updated_at": "2026-11-22T13:01:15Z",
+      "homepage_url": "https://github.com/KunlunMeta-dev/Kcoder/releases",
+      "owner": "KunlunMeta-dev",
+      "default_branch": "main",
+      "source_commit_sha": "8de99d4c2e65d4fc8b79374c585e73080a04a2ee",
+      "license_text": "MIT License\n\nCopyright (c) 2026 KCoder contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "agent-runtime",
+        "ai-coding-agent",
+        "desktop-app",
+        "llm",
+        "mcp",
+        "rust",
+        "tui"
+      ],
+      "latest_version": "KCoderStudio-2.0.9",
+      "release_url": "https://github.com/KunlunMeta-dev/Kcoder/releases/tag/KCoderStudio-2.0.9",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kunlunmeta-dev-kcoder-KCoderStudio-2.0.9",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kunlunmeta-dev-kcoder-KCoderStudio-2.0.9/THIRD-PARTY-NOTICE-kunlunmeta-dev-kcoder.txt",
+      "artifacts": [
+        {
+          "id": "571d7b2f19fc00cfe1374fa208a8ca79fa855a3ce5e0afcebfa994a22602bef9",
+          "filename": "kcoder-studio-mobile-2.0.9-android-arm64-v8a-v31.apk",
+          "original_filename": "kcoder-studio-mobile-2.0.9-android-arm64-v8a-v31.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "KCoderStudio-2.0.9",
+          "size_bytes": 71159284,
+          "sha256": "571d7b2f19fc00cfe1374fa208a8ca79fa855a3ce5e0afcebfa994a22602bef9",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "4f8b7708719f0134f0881a61deba8fef0cb22f1be34885924f9b4d9f263c344c",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kunlunmeta-dev-kcoder-KCoderStudio-2.0.9/kcoder-studio-mobile-2.0.9-android-arm64-v8a-v31.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kunlunmeta-dev-kcoder-KCoderStudio-2.0.9"
         }
       ],
       "platforms": [
