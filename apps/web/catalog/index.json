@@ -54065,6 +54065,15 @@
             "windows"
           ],
           "requested_at": "2026-11-25T09:38:22.499796+00:00"
+        },
+        {
+          "git_ref": "dc546c880322d728e4995a06584440d2b77a85ba",
+          "targets": [
+            "linux",
+            "macos"
+          ],
+          "requested_at": "2026-11-26T04:07:38.757634+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ]
     },
