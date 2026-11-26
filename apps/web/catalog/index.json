@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T05:48:37.781571+00:00",
+  "generated_at": "2026-11-26T05:48:57.910548+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -83374,6 +83374,77 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "pianonic-webox",
+      "slug": "pianonic-webox",
+      "name": "Webox",
+      "summary": "A fast, native, unofficial Webex desktop client for Windows and Linux, written in Rust.",
+      "description": "A fast, native, unofficial Webex desktop client for Windows and Linux, written in Rust.",
+      "translations": {
+        "en": {
+          "summary": "A fast, native, unofficial Webex desktop client for Windows and Linux, written in Rust.",
+          "description": "A fast, native, unofficial Webex desktop client for Windows and Linux, written in Rust."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/PianoNic/Webox/main/assets/icons/emoticons_16.svg",
+      "repository_url": "https://github.com/PianoNic/Webox",
+      "github_repo_id": "1465245145",
+      "source_updated_at": "2026-11-24T16:00:12Z",
+      "homepage_url": null,
+      "owner": "PianoNic",
+      "default_branch": "main",
+      "source_commit_sha": "93e21e94145e99bf33119380a202fc176e40b982",
+      "license_text": "MIT License\n\nCopyright (c) 2026 PianoNic\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "chat",
+        "desktop-app",
+        "egui",
+        "linux",
+        "messaging",
+        "nix",
+        "rust",
+        "webex",
+        "windows"
+      ],
+      "latest_version": "v0.3.11",
+      "release_url": "https://github.com/PianoNic/Webox/releases/tag/v0.3.11",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pianonic-webox-v0.3.11",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pianonic-webox-v0.3.11/THIRD-PARTY-NOTICE-pianonic-webox.txt",
+      "artifacts": [
+        {
+          "id": "193a39b9a991dddcbfef091b6df763a61f801295f89188736df653e343b78360",
+          "filename": "Webox-Setup-0.3.11-x64.exe",
+          "original_filename": "Webox-Setup-0.3.11-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.3.11",
+          "size_bytes": 31755672,
+          "sha256": "193a39b9a991dddcbfef091b6df763a61f801295f89188736df653e343b78360",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pianonic-webox-v0.3.11/Webox-Setup-0.3.11-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pianonic-webox-v0.3.11"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
