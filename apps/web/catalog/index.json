@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T22:37:26.042802+00:00",
+  "generated_at": "2026-11-26T22:37:51.482912+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -78972,7 +78972,7 @@
       "homepage_url": null,
       "owner": "matheusAFreitas",
       "default_branch": "main",
-      "source_commit_sha": "7659d36422634b36f5a4c5b4b0df31dd6b8ccdc9",
+      "source_commit_sha": "d122637be48123bd199aefd435f510bbab71d913",
       "license_text": "MIT License\n\nCopyright (c) 2026 matheusAFreitas\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -78996,10 +78996,10 @@
         "wails",
         "windows"
       ],
-      "latest_version": "v2.106.4",
-      "release_url": "https://github.com/matheusAFreitas/radlog/releases/tag/v2.106.4",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-matheusafreitas-radlog-v2.106.4",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-matheusafreitas-radlog-v2.106.4/THIRD-PARTY-NOTICE-matheusafreitas-radlog.txt",
+      "latest_version": "v2.106.5",
+      "release_url": "https://github.com/matheusAFreitas/radlog/releases/tag/v2.106.5",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-matheusafreitas-radlog-v2.106.5",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-matheusafreitas-radlog-v2.106.5/THIRD-PARTY-NOTICE-matheusafreitas-radlog.txt",
       "artifacts": [
         {
           "id": "d7e74c7e8cd2ccbea985625969da249735e8190ab76b5a45bbb8b5e8b5a945ec",
@@ -79034,6 +79034,40 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-matheusafreitas-radlog-v2.106.4/RadLog-v2.106.4.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-matheusafreitas-radlog-v2.106.4"
+        },
+        {
+          "id": "dc3cad8beceb18df000a981d18b4a4dec2096d33265effdd816682243d4f7f3a",
+          "filename": "RadLog-v2.106.5-x86_64.AppImage",
+          "original_filename": "RadLog-v2.106.5-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v2.106.5",
+          "size_bytes": 7682552,
+          "sha256": "dc3cad8beceb18df000a981d18b4a4dec2096d33265effdd816682243d4f7f3a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-matheusafreitas-radlog-v2.106.5/RadLog-v2.106.5-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-matheusafreitas-radlog-v2.106.5"
+        },
+        {
+          "id": "f4ed8222d975319bdae1e7d3c8a97d677cf494704d9960ed105cec1065114884",
+          "filename": "RadLog-v2.106.5.exe",
+          "original_filename": "RadLog-v2.106.5.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v2.106.5",
+          "size_bytes": 20398592,
+          "sha256": "f4ed8222d975319bdae1e7d3c8a97d677cf494704d9960ed105cec1065114884",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-matheusafreitas-radlog-v2.106.5/RadLog-v2.106.5.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-matheusafreitas-radlog-v2.106.5"
         }
       ],
       "platforms": [
