@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T22:38:43.736094+00:00",
+  "generated_at": "2026-11-26T22:38:58.645250+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -72818,7 +72818,7 @@
       "icon_url": "https://raw.githubusercontent.com/ad-si/Perspec/main/images/icon.svg",
       "repository_url": "https://github.com/ad-si/Perspec",
       "github_repo_id": "242412549",
-      "source_updated_at": "2026-11-25T13:14:06Z",
+      "source_updated_at": "2026-11-26T21:49:35Z",
       "homepage_url": "https://feram.gumroad.com/l/perspec",
       "owner": "ad-si",
       "default_branch": "main",
