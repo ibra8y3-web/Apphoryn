@@ -41940,7 +41940,17 @@
       "latest_version": "kiki-v0.6.1",
       "release_url": "https://github.com/X-T-E-R/kiki/releases/tag/kiki-v0.6.1",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "e5014b00dc1629d4465eb94c833489228cd5bbc4",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-26T07:27:44.854026+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "involvex-kiln",
