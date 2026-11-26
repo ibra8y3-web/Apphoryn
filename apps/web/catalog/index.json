@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:17:42.909119+00:00",
+  "generated_at": "2026-11-26T04:19:09.278161+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -60238,6 +60238,124 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "scientfactory-scient-desktop",
+      "slug": "scientfactory-scient-desktop",
+      "name": "scient-desktop",
+      "summary": "Scient Desktop — the active local-first scientific workspace and runtime.",
+      "description": "Scient Desktop — the active local-first scientific workspace and runtime.",
+      "translations": {
+        "en": {
+          "summary": "Scient Desktop — the active local-first scientific workspace and runtime.",
+          "description": "Scient Desktop — the active local-first scientific workspace and runtime."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ScientFactory/scient-desktop/main/assets/prod/logo.svg",
+      "repository_url": "https://github.com/ScientFactory/scient-desktop",
+      "github_repo_id": "1324862203",
+      "source_updated_at": "2026-11-12T12:43:02Z",
+      "homepage_url": "https://scientfactory.com",
+      "owner": "ScientFactory",
+      "default_branch": "main",
+      "source_commit_sha": "3171e4e1286c30b219d278be68ceeea24c750f8d",
+      "license_text": "MIT License\n\nCopyright (c) 2026 T3 Tools Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "desktop-app",
+        "scient",
+        "scientific-workspace"
+      ],
+      "latest_version": "v0.6.34",
+      "release_url": "https://github.com/ScientFactory/scient-desktop/releases/tag/v0.6.34",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-scientfactory-scient-desktop-v0.6.34",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-scientfactory-scient-desktop-v0.6.34/THIRD-PARTY-NOTICE-scientfactory-scient-desktop.txt",
+      "artifacts": [
+        {
+          "id": "22500bddf1fce010c875f6b6d47896e3a67ae4c3a8969ceb474289d7ba3aef65",
+          "filename": "Scient-0.6.34-arm64.dmg",
+          "original_filename": "Scient-0.6.34-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.6.34",
+          "size_bytes": 277514563,
+          "sha256": "22500bddf1fce010c875f6b6d47896e3a67ae4c3a8969ceb474289d7ba3aef65",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-scientfactory-scient-desktop-v0.6.34/Scient-0.6.34-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-scientfactory-scient-desktop-v0.6.34"
+        },
+        {
+          "id": "397997d146b22597ecbb1777b9bfdee7da383d7917d5afcead8f215303d03105",
+          "filename": "Scient-0.6.34-x64.dmg",
+          "original_filename": "Scient-0.6.34-x64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "x86_64",
+          "version": "v0.6.34",
+          "size_bytes": 287900732,
+          "sha256": "397997d146b22597ecbb1777b9bfdee7da383d7917d5afcead8f215303d03105",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-scientfactory-scient-desktop-v0.6.34/Scient-0.6.34-x64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-scientfactory-scient-desktop-v0.6.34"
+        },
+        {
+          "id": "a59fd5445feebc26c4d93e1b357a82efc5742595cb252615b7848a86176ff3c0",
+          "filename": "Scient-0.6.34-x64.exe",
+          "original_filename": "Scient-0.6.34-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.6.34",
+          "size_bytes": 434570873,
+          "sha256": "a59fd5445feebc26c4d93e1b357a82efc5742595cb252615b7848a86176ff3c0",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-scientfactory-scient-desktop-v0.6.34/Scient-0.6.34-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-scientfactory-scient-desktop-v0.6.34"
+        },
+        {
+          "id": "b9241f944efdfc6e2871fbf7de4dc94fd778135d91d208f920a8e59922ff9b6b",
+          "filename": "Scient-0.6.34-x86_64.AppImage",
+          "original_filename": "Scient-0.6.34-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.6.34",
+          "size_bytes": 292689204,
+          "sha256": "b9241f944efdfc6e2871fbf7de4dc94fd778135d91d208f920a8e59922ff9b6b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-scientfactory-scient-desktop-v0.6.34/Scient-0.6.34-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-scientfactory-scient-desktop-v0.6.34"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
       ]
     },
     {
