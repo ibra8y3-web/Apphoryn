@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T02:32:27.565180+00:00",
+  "generated_at": "2026-11-26T02:32:56.699845+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -43157,6 +43157,93 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "leepresident-openfxpedia",
+      "slug": "leepresident-openfxpedia",
+      "name": "openfxpedia",
+      "summary": "Real-time currency converter with encyclopedia for global currencies",
+      "description": "Real-time currency converter with encyclopedia for global currencies",
+      "translations": {
+        "en": {
+          "summary": "Real-time currency converter with encyclopedia for global currencies",
+          "description": "Real-time currency converter with encyclopedia for global currencies"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/LeePresident/openfxpedia/master/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/LeePresident/openfxpedia",
+      "github_repo_id": "1178780269",
+      "source_updated_at": "2026-11-07T15:06:18Z",
+      "homepage_url": null,
+      "owner": "LeePresident",
+      "default_branch": "master",
+      "source_commit_sha": "bda7fc9ba50212d2c3bd8c721fd8295dd96de918",
+      "license_text": "MIT License\n\nCopyright (c) 2026 LeePresident\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android-app",
+        "currency",
+        "currency-converter",
+        "dart",
+        "encyclopedia",
+        "flutter",
+        "windows-app"
+      ],
+      "latest_version": "v1.0.8",
+      "release_url": "https://github.com/LeePresident/openfxpedia/releases/tag/v1.0.8",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-leepresident-openfxpedia-v1.0.8",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-leepresident-openfxpedia-v1.0.8/THIRD-PARTY-NOTICE-leepresident-openfxpedia.txt",
+      "artifacts": [
+        {
+          "id": "798defd37370ea5e37df7997c8386356c7121c751804c3e7fd57e547835c465d",
+          "filename": "openfxpedia_1.0.8.apk",
+          "original_filename": "openfxpedia_1.0.8.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.8",
+          "size_bytes": 73194042,
+          "sha256": "798defd37370ea5e37df7997c8386356c7121c751804c3e7fd57e547835c465d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "909259f9921c6c5bca01fca841253f34aafef27cf327070c04bb74286670ce9a",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-leepresident-openfxpedia-v1.0.8/openfxpedia_1.0.8.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-leepresident-openfxpedia-v1.0.8"
+        },
+        {
+          "id": "894ee7353e1587761d398cfc0b08dd135e89a019b0dcf43520b875d94efb3c2e",
+          "filename": "openfxpedia_1.0.8_setup.exe",
+          "original_filename": "openfxpedia_1.0.8_setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.0.8",
+          "size_bytes": 32817313,
+          "sha256": "894ee7353e1587761d398cfc0b08dd135e89a019b0dcf43520b875d94efb3c2e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-leepresident-openfxpedia-v1.0.8/openfxpedia_1.0.8_setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-leepresident-openfxpedia-v1.0.8"
+        }
+      ],
+      "platforms": [
+        "android",
+        "windows"
       ]
     },
     {
