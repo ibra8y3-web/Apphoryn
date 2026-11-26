@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T02:03:02.853991+00:00",
+  "generated_at": "2026-11-26T02:03:31.842166+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -37292,6 +37292,82 @@
           "signer_certificate_sha256": "7c4a2d940be15f5a058d13bc0904d773fd04937f3947b521011671572b415f0b",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-purveshshinde-neko-music-v0.0.5/nekomusic-v0.0.5-universal.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-purveshshinde-neko-music-v0.0.5"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "krelinnbios-neodblite",
+      "slug": "krelinnbios-neodblite",
+      "name": "NeoDBLite",
+      "summary": "Unofficial Android client for NeoDB and compatible instances to browse, search, and mark books, films, music, and games.",
+      "description": "NeoDBLite is an unofficial Android client for NeoDB and compatible instances. It supports instance login through the browser, category-based discovery of trending books, films, music, and games, cross-category or category-limited search with recent history, item details, and marking with collection status, rating, short reviews, tags, visibility, and dates. It includes a personal bookshelf with filtering, editing, deletion, and calendar view, a profile page with statistics and collections, and settings for theme, language, update checks, and logout. It requires Android 7.0 (API 24) or newer; APK releases are provided for arm64-v8a and armeabi-v7a. The project is unofficial, is not affiliated with NeoDB or instance operators, and is released under the MIT License.",
+      "translations": {
+        "en": "Unofficial Android client for NeoDB and compatible instances to browse, search, and mark books, films, music, and games.",
+        "ar": "عميل Android غير رسمي لـ NeoDB والأنظمة المتوافقة معه لتصفح الكتب والأفلام والموسيقى والألعاب والبحث عنها ووضع علامات عليها."
+      },
+      "description_translations": {
+        "en": "NeoDBLite is an unofficial Android client for NeoDB and compatible instances. It supports instance login through the browser, category-based discovery of trending books, films, music, and games, cross-category or category-limited search with recent history, item details, and marking with collection status, rating, short reviews, tags, visibility, and dates. It includes a personal bookshelf with filtering, editing, deletion, and calendar view, a profile page with statistics and collections, and settings for theme, language, update checks, and logout. It requires Android 7.0 (API 24) or newer; APK releases are provided for arm64-v8a and armeabi-v7a. The project is unofficial, is not affiliated with NeoDB or instance operators, and is released under the MIT License.",
+        "ar": "NeoDBLite هو عميل Android غير رسمي لـ NeoDB والأنظمة المتوافقة معه. يتيح تسجيل الدخول إلى مثيل عبر المتصفح، وتصفح المحتوى الشائع حسب الفئة، والبحث عبر الفئات أو ضمن فئة محددة مع سجل الاستعلامات، وعرض تفاصيل العنصر، وإدارة حالة الإعجاب والتقييم والمراجعات القصيرة والوسوم والظهور وتاريخ العلامة. يتضمن رفّ الكتب الشخصي مع التصفية والتعديل والحذف وعرض التقويم، وصفحة الملف الشخصي مع الإحصاءات والمجموعات، وإعدادات السمة واللغة والتحقق من التحديثات وتسجيل الخروج. يتطلب Android 7.0 (API 24) أو أحدث، وتتوفر نسخ APK لبنية arm64-v8a وarmeabi-v7a. المشروع غير رسمي وغير تابع لـ NeoDB أو مشغلي الأنظمة، ويُوزع بموجب ترخيص MIT."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://raw.githubusercontent.com/KrelinnBios/NeoDBLite/main/icon/icon.svg",
+      "repository_url": "https://github.com/KrelinnBios/NeoDBLite",
+      "github_repo_id": "1284024487",
+      "source_updated_at": "2026-11-16T21:19:21Z",
+      "homepage_url": null,
+      "owner": "KrelinnBios",
+      "default_branch": "main",
+      "source_commit_sha": "26ec79a7bf0eed7deca6a0cbd6cde1e383fe7346",
+      "license_text": "MIT License\n\nCopyright (c) 2026 KrelinnBios\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": false,
+      "classification_source": "ai",
+      "classification_reason": "Android end-user application built with Kotlin and Jetpack Compose for NeoDB. The supplied README documents APK installation and Android requirements but does not provide an explicit source build path, so build_recommended is false.",
+      "project_status": "installable",
+      "category": "multimedia",
+      "topics": [
+        "activitypub",
+        "android",
+        "android-app",
+        "book-tracker",
+        "fediverse",
+        "jetpack-compose",
+        "kotlin",
+        "material3",
+        "media-tracker",
+        "movie-tracker",
+        "neodb",
+        "okhttp",
+        "retrofit"
+      ],
+      "latest_version": "v1.2.8",
+      "release_url": "https://github.com/KrelinnBios/NeoDBLite/releases/tag/v1.2.8",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-krelinnbios-neodblite-v1.2.8",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-krelinnbios-neodblite-v1.2.8/THIRD-PARTY-NOTICE-krelinnbios-neodblite.txt",
+      "artifacts": [
+        {
+          "id": "8aec358344e5360fd4cfd4d6f4536d3752f52f2a6f7fb2f200b430e92c8ab58d",
+          "filename": "NeoDB-Lite.apk",
+          "original_filename": "NeoDB-Lite.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.2.8",
+          "size_bytes": 12396452,
+          "sha256": "8aec358344e5360fd4cfd4d6f4536d3752f52f2a6f7fb2f200b430e92c8ab58d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "3452265c55270d2d497f8a0367e1dd60ac8f9a47ad35e9b5b9b5a5937040820d",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-krelinnbios-neodblite-v1.2.8/NeoDB-Lite.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-krelinnbios-neodblite-v1.2.8"
         }
       ],
       "platforms": [
