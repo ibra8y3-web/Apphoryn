@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T20:53:43.475422+00:00",
+  "generated_at": "2026-11-26T20:54:16.512112+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -88466,7 +88466,7 @@
       "homepage_url": "https://statscraft.org",
       "owner": "statscrafthq",
       "default_branch": "main",
-      "source_commit_sha": "efa3ac4673fdf75353bb2137294f2edc7208ae2a",
+      "source_commit_sha": "28f29397a75636172d2ecb68599366649e972211",
       "license_text": "MIT License\n\nCopyright (c) 2026 Tõnis Ormisson\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -88498,10 +88498,10 @@
         "statistics",
         "survey-analysis"
       ],
-      "latest_version": "v0.52.0",
-      "release_url": "https://github.com/statscrafthq/statscraft/releases/tag/v0.52.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-statscrafthq-statscraft-v0.52.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-statscrafthq-statscraft-v0.52.0/THIRD-PARTY-NOTICE-statscrafthq-statscraft.txt",
+      "latest_version": "v0.53.0",
+      "release_url": "https://github.com/statscrafthq/statscraft/releases/tag/v0.53.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-statscrafthq-statscraft-v0.53.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-statscrafthq-statscraft-v0.53.0/THIRD-PARTY-NOTICE-statscrafthq-statscraft.txt",
       "artifacts": [
         {
           "id": "cf6dabfd281030942793b5de105c55d25cf9a287e2b62650de41b21dc8ee161e",
@@ -88570,6 +88570,40 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-statscrafthq-statscraft-v0.52.0/statscraft_0.52.0_amd64.deb",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-statscrafthq-statscraft-v0.52.0"
+        },
+        {
+          "id": "62169f0935ea423d609f47d4c0029011b47153bfdc6147cb4f57169d5e954c03",
+          "filename": "statscraft-0.53.0-windows-x86_64-setup.exe",
+          "original_filename": "statscraft-0.53.0-windows-x86_64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.53.0",
+          "size_bytes": 33034215,
+          "sha256": "62169f0935ea423d609f47d4c0029011b47153bfdc6147cb4f57169d5e954c03",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-statscrafthq-statscraft-v0.53.0/statscraft-0.53.0-windows-x86_64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-statscrafthq-statscraft-v0.53.0"
+        },
+        {
+          "id": "1bff2f74ececab26f5ddcdb1281db1f9580878b27a9b269c8efa0ce3f65f704c",
+          "filename": "statscraft_0.53.0_amd64.deb",
+          "original_filename": "statscraft_0.53.0_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.53.0",
+          "size_bytes": 39983130,
+          "sha256": "1bff2f74ececab26f5ddcdb1281db1f9580878b27a9b269c8efa0ce3f65f704c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-statscrafthq-statscraft-v0.53.0/statscraft_0.53.0_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-statscrafthq-statscraft-v0.53.0"
         }
       ],
       "platforms": [
