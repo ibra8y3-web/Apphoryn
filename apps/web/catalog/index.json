@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:30:48.344908+00:00",
+  "generated_at": "2026-11-26T04:31:15.840336+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -31753,6 +31753,148 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "lin037-jotiva",
+      "slug": "lin037-jotiva",
+      "name": "jotiva",
+      "summary": "A Markdown editor for macOS, Windows and Linux, with quick notes that stay with the window you opened them for.",
+      "description": "A Markdown editor for macOS, Windows and Linux, with quick notes that stay with the window you opened them for.",
+      "translations": {
+        "en": {
+          "summary": "A Markdown editor for macOS, Windows and Linux, with quick notes that stay with the window you opened them for.",
+          "description": "A Markdown editor for macOS, Windows and Linux, with quick notes that stay with the window you opened them for."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/lin037/jotiva/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/lin037/jotiva",
+      "github_repo_id": "1468959612",
+      "source_updated_at": "2026-11-25T17:27:58Z",
+      "homepage_url": "https://github.com/lin037/jotiva/releases",
+      "owner": "lin037",
+      "default_branch": "main",
+      "source_commit_sha": "83e916bacd961c71dcfae6d0e6497b8c5432759a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Jot contributors\nCopyright (c) 2026 Jot Markdown Engine contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "desktop-app",
+        "linux",
+        "local-first",
+        "macos",
+        "markdown",
+        "markdown-editor",
+        "note-taking",
+        "rust",
+        "tauri",
+        "windows"
+      ],
+      "latest_version": "v0.1.1",
+      "release_url": "https://github.com/lin037/jotiva/releases/tag/v0.1.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lin037-jotiva-v0.1.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lin037-jotiva-v0.1.1/THIRD-PARTY-NOTICE-lin037-jotiva.txt",
+      "artifacts": [
+        {
+          "id": "6b5d2010ba14b685f46fb381dda1421c149bbbbb5198303dbe52c4bdd9b07680",
+          "filename": "Jotiva_0.1.1_amd64.AppImage",
+          "original_filename": "Jotiva_0.1.1_amd64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.1.1",
+          "size_bytes": 85445112,
+          "sha256": "6b5d2010ba14b685f46fb381dda1421c149bbbbb5198303dbe52c4bdd9b07680",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lin037-jotiva-v0.1.1/Jotiva_0.1.1_amd64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lin037-jotiva-v0.1.1"
+        },
+        {
+          "id": "c6e059cd78fe0b5d05a9bb36a850c85d289866f2d9786880f5fd123cbaeb3831",
+          "filename": "Jotiva_0.1.1_amd64.deb",
+          "original_filename": "Jotiva_0.1.1_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.1.1",
+          "size_bytes": 6390598,
+          "sha256": "c6e059cd78fe0b5d05a9bb36a850c85d289866f2d9786880f5fd123cbaeb3831",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lin037-jotiva-v0.1.1/Jotiva_0.1.1_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lin037-jotiva-v0.1.1"
+        },
+        {
+          "id": "26ebf52daff4fd0199da164893b5c12f9376c4800db6459232a2be107d8f9cca",
+          "filename": "Jotiva_0.1.1_universal.dmg",
+          "original_filename": "Jotiva_0.1.1_universal.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "universal",
+          "version": "v0.1.1",
+          "size_bytes": 10368512,
+          "sha256": "26ebf52daff4fd0199da164893b5c12f9376c4800db6459232a2be107d8f9cca",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lin037-jotiva-v0.1.1/Jotiva_0.1.1_universal.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lin037-jotiva-v0.1.1"
+        },
+        {
+          "id": "ff20bddadd42ac6c3eac1ffde87ebf36e1cd68c88d46c450e52987520667a275",
+          "filename": "Jotiva_0.1.1_universal.pkg",
+          "original_filename": "Jotiva_0.1.1_universal.pkg",
+          "platform": "macos",
+          "package_type": "macOS installer",
+          "architecture": "universal",
+          "version": "v0.1.1",
+          "size_bytes": 9846196,
+          "sha256": "ff20bddadd42ac6c3eac1ffde87ebf36e1cd68c88d46c450e52987520667a275",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lin037-jotiva-v0.1.1/Jotiva_0.1.1_universal.pkg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lin037-jotiva-v0.1.1"
+        },
+        {
+          "id": "fa334b41d2d0f4346332c661d4943f48de39f010e5a7a9ff73d99fb7da7db566",
+          "filename": "Jotiva_0.1.1_x64-setup.exe",
+          "original_filename": "Jotiva_0.1.1_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.1.1",
+          "size_bytes": 4596638,
+          "sha256": "fa334b41d2d0f4346332c661d4943f48de39f010e5a7a9ff73d99fb7da7db566",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-lin037-jotiva-v0.1.1/Jotiva_0.1.1_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-lin037-jotiva-v0.1.1"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
       ]
     },
     {
