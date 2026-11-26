@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:42:42.505850+00:00",
+  "generated_at": "2026-11-26T03:43:20.005955+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -56444,6 +56444,123 @@
       ],
       "platforms": [
         "linux",
+        "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "gelenmedya-rustyfiles",
+      "slug": "gelenmedya-rustyfiles",
+      "name": "rustyfiles",
+      "summary": "A fast file manager for Windows and macOS that never freezes: tabs, dual panes, archives as folders, Quick Look-style previews. A File Explorer and Finder alternative written in Rust.",
+      "description": "A fast file manager for Windows and macOS that never freezes: tabs, dual panes, archives as folders, Quick Look-style previews. A File Explorer and Finder alternative written in Rust.",
+      "translations": {
+        "en": {
+          "summary": "A fast file manager for Windows and macOS that never freezes: tabs, dual panes, archives as folders, Quick Look-style previews. A File Explorer and Finder alternative written in Rust.",
+          "description": "A fast file manager for Windows and macOS that never freezes: tabs, dual panes, archives as folders, Quick Look-style previews. A File Explorer and Finder alternative written in Rust."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://avatars.githubusercontent.com/u/193025872?v=4",
+      "repository_url": "https://github.com/gelenmedya/rustyfiles",
+      "github_repo_id": "1449695486",
+      "source_updated_at": "2026-11-26T02:52:46Z",
+      "homepage_url": "https://rustyfiles.com",
+      "owner": "gelenmedya",
+      "default_branch": "main",
+      "source_commit_sha": "38bf3a7dc8aa816e513063c954861b945957db91",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Özer Güzel (gelenmedya)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "network",
+      "topics": [
+        "archive-manager",
+        "desktop-app",
+        "dual-pane",
+        "explorer-alternative",
+        "file-browser",
+        "file-explorer",
+        "file-manager",
+        "fluent-design",
+        "gpu-accelerated",
+        "gpui",
+        "macos",
+        "mica",
+        "productivity",
+        "quick-look",
+        "rust",
+        "rust-gui",
+        "tabs",
+        "windows",
+        "windows-11",
+        "windows-explorer"
+      ],
+      "latest_version": "v1.0.0",
+      "release_url": "https://github.com/gelenmedya/rustyfiles/releases/tag/v1.0.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gelenmedya-rustyfiles-v1.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gelenmedya-rustyfiles-v1.0.0/THIRD-PARTY-NOTICE-gelenmedya-rustyfiles.txt",
+      "artifacts": [
+        {
+          "id": "ca92a2c76423af9bce442316eae561565761f3243ddba566c3cf1a5a798da179",
+          "filename": "rustyfiles-mac-arm64.dmg",
+          "original_filename": "rustyfiles-mac-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v1.0.0",
+          "size_bytes": 10947656,
+          "sha256": "ca92a2c76423af9bce442316eae561565761f3243ddba566c3cf1a5a798da179",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gelenmedya-rustyfiles-v1.0.0/rustyfiles-mac-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gelenmedya-rustyfiles-v1.0.0"
+        },
+        {
+          "id": "458a1611c5e3a22b51536b40308d3feaa4e516b8f8c4b1f0a3ffd9e741fe69ab",
+          "filename": "rustyfiles-win-arm64-Setup.exe",
+          "original_filename": "rustyfiles-win-arm64-Setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "arm64",
+          "version": "v1.0.0",
+          "size_bytes": 46851856,
+          "sha256": "458a1611c5e3a22b51536b40308d3feaa4e516b8f8c4b1f0a3ffd9e741fe69ab",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gelenmedya-rustyfiles-v1.0.0/rustyfiles-win-arm64-Setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gelenmedya-rustyfiles-v1.0.0"
+        },
+        {
+          "id": "a74b02f79e761539a197e935ce6827ba822cedf2b8ba9dabdda88e7fbccd4d81",
+          "filename": "rustyfiles-win-Setup.exe",
+          "original_filename": "rustyfiles-win-Setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.0.0",
+          "size_bytes": 49847303,
+          "sha256": "a74b02f79e761539a197e935ce6827ba822cedf2b8ba9dabdda88e7fbccd4d81",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gelenmedya-rustyfiles-v1.0.0/rustyfiles-win-Setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gelenmedya-rustyfiles-v1.0.0"
+        }
+      ],
+      "platforms": [
         "macos",
         "windows"
       ]
