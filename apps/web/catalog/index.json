@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T04:17:06.796008+00:00",
+  "generated_at": "2026-11-26T04:17:29.243711+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -26200,6 +26200,97 @@
       "platforms": [
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "i-ayushsingh-gitoutbox",
+      "slug": "i-ayushsingh-gitoutbox",
+      "name": "gitoutbox",
+      "summary": "Schedule Git commits safely. Queue commits, automate pushes, and preserve Git safety with a local-first desktop app.",
+      "description": "Schedule Git commits safely. Queue commits, automate pushes, and preserve Git safety with a local-first desktop app.",
+      "translations": {
+        "en": {
+          "summary": "Schedule Git commits safely. Queue commits, automate pushes, and preserve Git safety with a local-first desktop app.",
+          "description": "Schedule Git commits safely. Queue commits, automate pushes, and preserve Git safety with a local-first desktop app."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/i-ayushsingh/gitoutbox/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/i-ayushsingh/gitoutbox",
+      "github_repo_id": "1300983879",
+      "source_updated_at": "2026-08-19T01:02:44Z",
+      "homepage_url": null,
+      "owner": "i-ayushsingh",
+      "default_branch": "main",
+      "source_commit_sha": "eec6bd6506f4a85f6a1f6e760e079ade8e3116fc",
+      "license_text": "MIT License\n\nCopyright (c) 2026 GitOutbox\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "framework",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_status": "installable",
+      "category": "developer",
+      "topics": [
+        "desktop-app",
+        "developer-tools",
+        "git",
+        "git-clie",
+        "git-commit",
+        "git-tools",
+        "github",
+        "productivity",
+        "rust",
+        "scheduler",
+        "tauri",
+        "windows"
+      ],
+      "latest_version": "v0.2.2",
+      "release_url": "https://github.com/i-ayushsingh/gitoutbox/releases/tag/v0.2.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-i-ayushsingh-gitoutbox-v0.2.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-i-ayushsingh-gitoutbox-v0.2.2/THIRD-PARTY-NOTICE-i-ayushsingh-gitoutbox.txt",
+      "artifacts": [
+        {
+          "id": "d01e40446803c8b2232b944be46530b70445e454431a32589f0d1b32019b1826",
+          "filename": "GitOutbox_0.2.2_x64-setup.exe",
+          "original_filename": "GitOutbox_0.2.2_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.2.2",
+          "size_bytes": 6764496,
+          "sha256": "d01e40446803c8b2232b944be46530b70445e454431a32589f0d1b32019b1826",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-i-ayushsingh-gitoutbox-v0.2.2/GitOutbox_0.2.2_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-i-ayushsingh-gitoutbox-v0.2.2"
+        },
+        {
+          "id": "d99b8c90a69f1f46484ea3fdb2903a0c2ef1a53f38d57775308577b50ad7b66c",
+          "filename": "GitOutbox_0.2.2_x64_en-US.msi",
+          "original_filename": "GitOutbox_0.2.2_x64_en-US.msi",
+          "platform": "windows",
+          "package_type": "Windows installer",
+          "architecture": "x86_64",
+          "version": "v0.2.2",
+          "size_bytes": 10035200,
+          "sha256": "d99b8c90a69f1f46484ea3fdb2903a0c2ef1a53f38d57775308577b50ad7b66c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-i-ayushsingh-gitoutbox-v0.2.2/GitOutbox_0.2.2_x64_en-US.msi",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-i-ayushsingh-gitoutbox-v0.2.2"
+        }
+      ],
+      "platforms": [
         "windows"
       ]
     },
