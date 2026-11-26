@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T01:58:17.982831+00:00",
+  "generated_at": "2026-11-26T01:58:57.965854+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -22056,6 +22056,83 @@
           "signer_certificate_sha256": "faf6852e31bff2da5c1e928555e771f5d4c1340ec56de1e96bc3445311e4054c",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-boredace-gnoseis-android-v0.4.0/Gnoseis-v0.4.0.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-boredace-gnoseis-android-v0.4.0"
+        }
+      ],
+      "platforms": [
+        "android"
+      ]
+    },
+    {
+      "id": "eggplants-godlo",
+      "slug": "eggplants-godlo",
+      "name": "godlo",
+      "summary": "Godlo is an Android app that runs yt-dlp, gallery-dl, and getjmanga to download media, with library, reader, and player features.",
+      "description": "Godlo is an Android application that runs yt-dlp, gallery-dl, and getjmanga on the device. Users can paste or share a URL, and the app detects supported tools and media type, then queues downloads in the background with progress notifications. It supports video and audio downloads with selectable quality or format, playlists, image downloads, and manga episodes with optional CBZ output and patrol for new episodes. The library groups saved images, audio, and video by site and title, user, or playlist. It includes a reader with multiple reading directions and page layouts, an audio player with background playback, and a video player with picture-in-picture. The app can update yt-dlp, gallery-dl, and getjmanga without a new APK. It provides English and Japanese UI, light and dark themes, and dynamic color. Build instructions use mise tasks.",
+      "translations": {
+        "en": "Godlo is an Android app that runs yt-dlp, gallery-dl, and getjmanga to download media, with library, reader, and player features.",
+        "ar": "Godlo هو تطبيق Android يشغّل yt-dlp وgallery-dl وgetjmanga لتنزيل الوسائط، مع ميزات المكتبة والقارئ والمشغّل."
+      },
+      "description_translations": {
+        "en": "Godlo is an Android application that runs yt-dlp, gallery-dl, and getjmanga on the device. Users can paste or share a URL, and the app detects supported tools and media type, then queues downloads in the background with progress notifications. It supports video and audio downloads with selectable quality or format, playlists, image downloads, and manga episodes with optional CBZ output and patrol for new episodes. The library groups saved images, audio, and video by site and title, user, or playlist. It includes a reader with multiple reading directions and page layouts, an audio player with background playback, and a video player with picture-in-picture. The app can update yt-dlp, gallery-dl, and getjmanga without a new APK. It provides English and Japanese UI, light and dark themes, and dynamic color. Build instructions use mise tasks.",
+        "ar": "Godlo هو تطبيق Android يعمل على الجهاز باستخدام yt-dlp وgallery-dl وgetjmanga. يمكن للمستخدمين لصق رابط أو مشاركته، ويكتشف التطبيق الأدوات المدعومة ونوع الوسائط، ثم يضع التنزيلات في قائمة الانتظار ويعمل عليها في الخلفية مع إشعارات التقدم. يدعم تنزيلات الفيديو والصوت مع اختيار الجودة أو الصيغة، وقوائم التشغيل، وتنزيلات الصور، وحلقات المانجا مع إخراج CBZ اختياري وميزة patrol لجلب الحلقات الجديدة. تُجمع المكتبة الصور والصوت والفيديو المحفوظة حسب الموقع ثم العنوان أو المستخدم أو قائمة التشغيل. يتضمن قارئًا بترتيبات قراءة متعددة وتخطيطات صفحات، ومشغل صوت يعمل في الخلفية، ومشغل فيديو مع صورة داخل صورة. يمكن للتطبيق تحديث yt-dlp وgallery-dl وgetjmanga دون APK جديد. يوفر واجهة إنجليزية ويابانية، وسمات فاتحة وداكنة، وألوان ديناميكية. تستخدم تعليمات البناء مهام mise."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://raw.githubusercontent.com/eggplants/godlo/master/fastlane/metadata/android/en-US/images/icon.png",
+      "repository_url": "https://github.com/eggplants/godlo",
+      "github_repo_id": "1386293339",
+      "source_updated_at": "2026-11-22T03:51:01Z",
+      "homepage_url": "http://egpl.dev/godlo/",
+      "owner": "eggplants",
+      "default_branch": "master",
+      "source_commit_sha": "2b4eeac2ff55b626008ea1ad3e6a9770a3093924",
+      "license_text": "Copyright 2026 eggplants\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Standalone Android end-user application with documented build and release instructions.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "chaquopy",
+        "downloader",
+        "gallery-dl",
+        "gallery-dl-downloader",
+        "gallery-dl-gui",
+        "gallery-dl-wrapper",
+        "getjmanga",
+        "kotlin",
+        "material-design",
+        "yt-dlp",
+        "yt-dlp-gui",
+        "yt-dlp-wrapper"
+      ],
+      "latest_version": "v0.2.0-6",
+      "release_url": "https://github.com/eggplants/godlo/releases/tag/v0.2.0-6",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eggplants-godlo-v0.2.0-6",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eggplants-godlo-v0.2.0-6/THIRD-PARTY-NOTICE-eggplants-godlo.txt",
+      "artifacts": [
+        {
+          "id": "63047be7411c34e3ba37ec013294bdcfbaf956a06cfa736f5ddc6d3e52aa54cc",
+          "filename": "godlo-0.2.0.apk",
+          "original_filename": "godlo-0.2.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.2.0-6",
+          "size_bytes": 151128502,
+          "sha256": "63047be7411c34e3ba37ec013294bdcfbaf956a06cfa736f5ddc6d3e52aa54cc",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "555d27a1550f3fa8d55ebf8285366b5f3ca7154b55e8fd3055c12f8e1bdd371e",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-eggplants-godlo-v0.2.0-6/godlo-0.2.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-eggplants-godlo-v0.2.0-6"
         }
       ],
       "platforms": [
