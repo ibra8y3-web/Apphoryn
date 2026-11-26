@@ -55250,6 +55250,18 @@
       "platforms": [
         "linux",
         "windows"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "216151a7712859d40a929c6ada9c217aa2d5c13d",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-26T04:28:56.467211+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
       ]
     },
     {
