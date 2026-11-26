@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T03:44:13.215589+00:00",
+  "generated_at": "2026-11-26T03:44:33.796826+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -50362,6 +50362,78 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-tomermayost-pdf2musescore-v0.4.5/pdf2musescore-setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-tomermayost-pdf2musescore-v0.4.5"
+        }
+      ],
+      "platforms": [
+        "windows"
+      ]
+    },
+    {
+      "id": "furcy75-pdf-fonts-detector",
+      "slug": "furcy75-pdf-fonts-detector",
+      "name": "PDF_Fonts_Detector",
+      "summary": "Standalone cross-platform Rust app (Windows & Linux) to detect every font in a PDF, verify installed PC fonts, download or extract missing fonts, and install them in one click.",
+      "description": "Standalone cross-platform Rust app (Windows & Linux) to detect every font in a PDF, verify installed PC fonts, download or extract missing fonts, and install them in one click.",
+      "translations": {
+        "en": {
+          "summary": "Standalone cross-platform Rust app (Windows & Linux) to detect every font in a PDF, verify installed PC fonts, download or extract missing fonts, and install them in one click.",
+          "description": "Standalone cross-platform Rust app (Windows & Linux) to detect every font in a PDF, verify installed PC fonts, download or extract missing fonts, and install them in one click."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/furcy75/PDF_Fonts_Detector/main/assets/app_icon.png",
+      "repository_url": "https://github.com/furcy75/PDF_Fonts_Detector",
+      "github_repo_id": "1471504993",
+      "source_updated_at": "2026-11-25T17:30:37Z",
+      "homepage_url": null,
+      "owner": "furcy75",
+      "default_branch": "main",
+      "source_commit_sha": "6a3ae62d89266eb7f8bf75109f39b40f063e0a16",
+      "license_text": "MIT License\n\nCopyright (c) 2026 furcy75\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "cross-platform",
+        "desktop-app",
+        "egui",
+        "fonts",
+        "google-fonts",
+        "linux",
+        "pdf",
+        "rust",
+        "typography",
+        "windows"
+      ],
+      "latest_version": "v1.2.0",
+      "release_url": "https://github.com/furcy75/PDF_Fonts_Detector/releases/tag/v1.2.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-furcy75-pdf-fonts-detector-v1.2.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-furcy75-pdf-fonts-detector-v1.2.0/THIRD-PARTY-NOTICE-furcy75-pdf-fonts-detector.txt",
+      "artifacts": [
+        {
+          "id": "72440bc756637e2e2403b42abbebdb628ed0986c0eded4a82c5bcf13c22a6b30",
+          "filename": "PDF-Fonts-Detector-Windows-x64.exe",
+          "original_filename": "PDF-Fonts-Detector-Windows-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.2.0",
+          "size_bytes": 7994368,
+          "sha256": "72440bc756637e2e2403b42abbebdb628ed0986c0eded4a82c5bcf13c22a6b30",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-furcy75-pdf-fonts-detector-v1.2.0/PDF-Fonts-Detector-Windows-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-furcy75-pdf-fonts-detector-v1.2.0"
         }
       ],
       "platforms": [
