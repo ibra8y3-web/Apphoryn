@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:31:55.494030+00:00",
+  "generated_at": "2026-11-27T00:32:33.397554+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -99300,18 +99300,19 @@
       "id": "drednight-tvinoferma",
       "slug": "drednight-tvinoferma",
       "name": "Tvinoferma",
-      "summary": "Твиноферма — десктопный кабинет для Perfect World: аккаунты, пати, марафоны, календарь ивентов, запуск окон игры",
-      "description": "Твиноферма — десктопный кабинет для Perfect World: аккаунты, пати, марафоны, календарь ивентов, запуск окон игры",
+      "summary": "Tvinoferma is a Windows desktop cabinet for Perfect World players to manage accounts, parties, marathons, event calendars, game windows, and routine automation.",
+      "description": "Tvinoferma is a Windows desktop application for Perfect World players. It provides account and character management, party grouping, marathon tracking, event calendars, game-window launching, and tools for promo codes, item transfers, gift activation, and limited manual key sequences. The README states it is a local manager: it does not directly interact with the game server or bypass game protection. Browser-related actions open official pages, read data, and send user-initiated requests. It includes data reliability safeguards, protected Windows storage, logs, hotkeys, and a command palette. The project is identified as a Rust/Tauri desktop app for Windows.",
       "translations": {
-        "en": {
-          "summary": "Твиноферма — десктопный кабинет для Perfect World: аккаунты, пати, марафоны, календарь ивентов, запуск окон игры",
-          "description": "Твиноферма — десктопный кабинет для Perfect World: аккаунты, пати, марафоны, календарь ивентов, запуск окон игры"
-        }
+        "en": "Tvinoferma is a Windows desktop cabinet for Perfect World players to manage accounts, parties, marathons, event calendars, game windows, and routine automation.",
+        "ar": "Tvinoferma تطبيق مكتبي على Windows للاعبين Perfect World لإدارة الحسابات والمجموعات والماراثونات وتقويم الفعاليات ونوافذ اللعبة."
       },
-      "description_translations": {},
-      "translation_status": "pending",
-      "ai_provider": null,
-      "ai_model": null,
+      "description_translations": {
+        "en": "Tvinoferma is a Windows desktop application for Perfect World players. It provides account and character management, party grouping, marathon tracking, event calendars, game-window launching, and tools for promo codes, item transfers, gift activation, and limited manual key sequences. The README states it is a local manager: it does not directly interact with the game server or bypass game protection. Browser-related actions open official pages, read data, and send user-initiated requests. It includes data reliability safeguards, protected Windows storage, logs, hotkeys, and a command palette. The project is identified as a Rust/Tauri desktop app for Windows.",
+        "ar": "Tvinoferma تطبيق مكتبي على نظام Windows للاعبين Perfect World. يوفر إدارة الحسابات والشخصيات، وتجميع المجموعات، وتتبع الماراثونات، وتقويم الفعاليات، وتشغيل نوافذ اللعبة، وأدوات للرموز الترويجية ونقل العناصر وتفعيل الهدايا وتسلسلات محدودة من ضغطات المفاتيح تُنفذ يدوياً. يذكر ملف README أنه مدير محلي فقط: لا يتفاعل مباشرة مع خادم اللعبة ولا يتجاوز حماية اللعبة. إجراءات المتصفح تفتح صفحات رسمية وتقرأ البيانات وترسل طلبات بناءً على أمر المستخدم. يتضمن التطبيق ميزات تتعلق بموثوقية البيانات، وتخزين Windows محمي، وسجلات، واختصارات لوحة المفاتيح، ولوحة أوامر. المشروع مُعرّف كتطبيق مكتبي يستخدم Rust وTauri على Windows."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/drednight/Tvinoferma/main/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/drednight/Tvinoferma",
       "github_repo_id": "1391399236",
@@ -99323,10 +99324,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 drednight\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "unknown",
-      "build_recommended": false,
-      "classification_source": "heuristic",
-      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Repository metadata and README describe a standalone Windows desktop end-user application for Perfect World, with account management, calendars, launch tools, Rust/Tauri desktop-app indicators, and installation/developer sections.",
       "project_status": "installable",
       "category": "other",
       "topics": [
