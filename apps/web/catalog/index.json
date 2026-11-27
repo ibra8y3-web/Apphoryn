@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:23:01.651326+00:00",
+  "generated_at": "2026-11-27T00:24:48.877258+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -71342,33 +71342,34 @@
       "slug": "getoxide-oxide",
       "artifacts": [],
       "name": "oxide",
-      "summary": "Oxide is a free, open-source desktop app for agentic coding that drives Claude Code, Codex and Antigravity CLI in one window and shows what each change touched and what was actually checked, so you can merge with confidence.",
-      "description": "Oxide is a free, open-source desktop app for agentic coding that drives Claude Code, Codex and Antigravity CLI in one window and shows what each change touched and what was actually checked, so you can merge with confidence.",
+      "summary": "Free, open-source desktop terminal app for GitHub Projects with multiple terminals, GitHub issues and pull requests, file browsing, and a built-in code editor.",
+      "description": "Oxide is a free, open-source desktop terminal app that organizes work around GitHub Projects. It lets you open a project folder, create multiple terminals, and keep each terminal’s scrollback, working directory, and running process while switching. Command blocks group commands, output, and exit status. GitHub integration provides issues and pull request workflows through the GitHub CLI, plus file browsing and a built-in Monaco editor with language servers for Rust, TypeScript/JavaScript, Python, and C/C++. Oxide is pre-release software built with Rust and Tauri 2, with installers for macOS on Apple Silicon, Windows x64/arm64, and Linux x64/arm64. It does not interpret terminal commands; command-line tools, including agent CLIs, can be run as ordinary shell commands.",
       "translations": {
-        "en": {
-          "summary": "Oxide is a free, open-source desktop app for agentic coding that drives Claude Code, Codex and Antigravity CLI in one window and shows what each change touched and what was actually checked, so you can merge with confidence.",
-          "description": "Oxide is a free, open-source desktop app for agentic coding that drives Claude Code, Codex and Antigravity CLI in one window and shows what each change touched and what was actually checked, so you can merge with confidence."
-        }
+        "en": "Free, open-source desktop terminal app for GitHub Projects with multiple terminals, GitHub issues and pull requests, file browsing, and a built-in code editor.",
+        "ar": "تطبيق طرفية مكتبي مجاني ومفتوح المصدر لمشاريع GitHub، مع طرفيات متعددة وطلبات سحب ومشكلات ومحرر مدمج."
       },
-      "description_translations": {},
-      "translation_status": "pending",
-      "ai_provider": null,
-      "ai_model": null,
+      "description_translations": {
+        "en": "Oxide is a free, open-source desktop terminal app that organizes work around GitHub Projects. It lets you open a project folder, create multiple terminals, and keep each terminal’s scrollback, working directory, and running process while switching. Command blocks group commands, output, and exit status. GitHub integration provides issues and pull request workflows through the GitHub CLI, plus file browsing and a built-in Monaco editor with language servers for Rust, TypeScript/JavaScript, Python, and C/C++. Oxide is pre-release software built with Rust and Tauri 2, with installers for macOS on Apple Silicon, Windows x64/arm64, and Linux x64/arm64. It does not interpret terminal commands; command-line tools, including agent CLIs, can be run as ordinary shell commands.",
+        "ar": "Oxide تطبيق طرفية مكتبي مجاني ومفتوح المصدر ينظم العمل حول مشاريع GitHub. يتيح فتح مجلد مشروع وإنشاء طرفيات متعددة، مع الاحتفاظ لكل طرفية بسجل التمرير ومجلد العمل والعملية الجارية عند التبديل. تجمع كتل الأوامر الأمر والمخرجات وحالة الخروج. يوفر التكامل مع GitHub سير عمل المشكلات وطلبات السحب عبر GitHub CLI، إضافة إلى تصفح الملفات ومحرر Monaco مدمج مع خوادم لغات لـ Rust وTypeScript/JavaScript وPython وC/C++. Oxide برنامج إصدار تجريبي مبني بـ Rust وTauri 2، ويتوفر بملفات تثبيت لـ macOS على Apple Silicon وWindows x64/arm64 وLinux x64/arm64. لا يفسر التطبيق أوامر الطرفية؛ يمكن تشغيل أدوات سطر الأوامر، بما في ذلك وكلاء البرمجة، كأوامر shell عادية."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/getoxide/oxide/main/crates/oxide-app/icons/icon.png",
       "repository_url": "https://github.com/getoxide/oxide",
       "github_repo_id": "1428478697",
-      "source_updated_at": "2026-11-18T21:16:52Z",
-      "homepage_url": "https://oxide.cavallinilorenzo.com",
+      "source_updated_at": "2026-11-26T20:32:58Z",
+      "homepage_url": "https://getoxide.dev",
       "owner": "getoxide",
       "default_branch": "main",
-      "source_commit_sha": "4d8e0422d808b8c051ed809d30576177d98d4775",
+      "source_commit_sha": "bde44719aa209de11c829d41ef0028cb63b23752",
       "license_text": "MIT License\n\nCopyright (c) 2026 Lorenzo Cavallini\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
       "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "heuristic",
-      "classification_reason": "Standalone application indicated by repository evidence.",
+      "classification_source": "ai",
+      "classification_reason": "Standalone end-user desktop application with documented installers and a build-from-source path; Rust/Tauri project with CI evidence.",
       "category": "developer",
       "topics": [
         "agentic-coding",
