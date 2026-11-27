@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:13:14.416848+00:00",
+  "generated_at": "2026-11-27T00:13:41.942870+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -40795,6 +40795,61 @@
           "adapter_revision": "ee84e73f7c3f876a8ded"
         }
       ]
+    },
+    {
+      "id": "paultyng-ideate",
+      "slug": "paultyng-ideate",
+      "artifacts": [],
+      "name": "ideate",
+      "summary": "Local-first macOS desktop app for organizing ideas with linked repo worktrees, context files, external resources, and AI agent sessions.",
+      "description": "Ideate is a local-first macOS desktop app that treats each idea as a directory. It can link repositories as worktrees, store context files and external resources, and run AI agent sessions across linked repos on a shared branch. Agents can request diff or markdown reviews through MCP, with inline responses in the app. The project is a v0.1 preview, macOS only, with a documented source build using Go, Node, go-task, buf, and Wails.",
+      "translations": {
+        "en": "Local-first macOS desktop app for organizing ideas with linked repo worktrees, context files, external resources, and AI agent sessions.",
+        "ar": "تطبيق سطح مكتب محلي أولاً على macOS لتنظيم الأفكار مع مستودعات مرتبطة كأشجار عمل، وملفات سياق، وموارد خارجية، وجلسات وكيل ذكاء اصطناعي."
+      },
+      "description_translations": {
+        "en": "Ideate is a local-first macOS desktop app that treats each idea as a directory. It can link repositories as worktrees, store context files and external resources, and run AI agent sessions across linked repos on a shared branch. Agents can request diff or markdown reviews through MCP, with inline responses in the app. The project is a v0.1 preview, macOS only, with a documented source build using Go, Node, go-task, buf, and Wails.",
+        "ar": "Ideate تطبيق سطح مكتب محلي أولاً على macOS يعامل كل فكرة كمجلد. يمكنه ربط المستودعات كأشجار عمل، وتخزين ملفات السياق والموارد الخارجية، وتشغيل جلسات وكيل ذكاء اصطناعي عبر مستودعات مرتبطة على فرع مشترك. يمكن للوكلاء طلب مراجعات diff أو Markdown عبر MCP، مع الرد مباشرة داخل التطبيق. المشروع إصدار معاينة v0.1، لنظام macOS فقط، مع بناء من المصدر موثق باستخدام Go وNode وgo-task وbuf وWails."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://raw.githubusercontent.com/paultyng/ideate/main/cmd/ideate/build/appicon.png",
+      "repository_url": "https://github.com/paultyng/ideate",
+      "github_repo_id": "1256451054",
+      "source_updated_at": "2026-11-15T13:41:18Z",
+      "homepage_url": null,
+      "owner": "paultyng",
+      "default_branch": "main",
+      "source_commit_sha": "d0c7798df66d13ab310a7d2546106c65825e1f7f",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Paul Tyng\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Standalone macOS desktop application with a documented source build that produces an .app bundle.",
+      "category": "developer",
+      "topics": [
+        "agent-orchestration",
+        "ai-agent",
+        "claude-code",
+        "desktop-app",
+        "go",
+        "idea-management",
+        "local-first",
+        "macos",
+        "mcp",
+        "model-context-protocol",
+        "personal-knowledge-management",
+        "productivity",
+        "react",
+        "wails"
+      ],
+      "latest_version": "v0.1.7",
+      "release_url": "https://github.com/paultyng/ideate/releases/tag/v0.1.7",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "nikosavola-immich-wear",
