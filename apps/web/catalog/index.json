@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T22:38:21.524744+00:00",
+  "generated_at": "2026-11-27T22:38:40.221105+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -65766,10 +65766,10 @@
         "zacos",
         "zacos9"
       ],
-      "latest_version": "v1.0.3",
-      "release_url": "https://github.com/guimaraeslucas/netzac/releases/tag/v1.0.3",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-guimaraeslucas-netzac-v1.0.3",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-guimaraeslucas-netzac-v1.0.3/THIRD-PARTY-NOTICE-guimaraeslucas-netzac.txt",
+      "latest_version": "v1.0.4",
+      "release_url": "https://github.com/guimaraeslucas/netzac/releases/tag/v1.0.4",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-guimaraeslucas-netzac-v1.0.4",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-guimaraeslucas-netzac-v1.0.4/THIRD-PARTY-NOTICE-guimaraeslucas-netzac.txt",
       "artifacts": [
         {
           "id": "f57c083f66f404538880a73681ce5684863e1ddaf394a0d16db23f4848fc5ace",
@@ -65838,6 +65838,40 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-guimaraeslucas-netzac-v1.0.3/zacos9-extra-netzac_1.0.3_arm64.deb",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-guimaraeslucas-netzac-v1.0.3"
+        },
+        {
+          "id": "478af1a9f518de7eb52d6bcf6bcb843a14a59c7aa1382d94fc2793cef80622de",
+          "filename": "zacos9-extra-netzac_1.0.4_amd64.deb",
+          "original_filename": "zacos9-extra-netzac_1.0.4_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v1.0.4",
+          "size_bytes": 385964,
+          "sha256": "478af1a9f518de7eb52d6bcf6bcb843a14a59c7aa1382d94fc2793cef80622de",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-guimaraeslucas-netzac-v1.0.4/zacos9-extra-netzac_1.0.4_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-guimaraeslucas-netzac-v1.0.4"
+        },
+        {
+          "id": "edbc8913f33c77775ea0f65ee9883c548ae843e8537f96bf325af2b35e03b92c",
+          "filename": "zacos9-extra-netzac_1.0.4_arm64.deb",
+          "original_filename": "zacos9-extra-netzac_1.0.4_arm64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "arm64",
+          "version": "v1.0.4",
+          "size_bytes": 340580,
+          "sha256": "edbc8913f33c77775ea0f65ee9883c548ae843e8537f96bf325af2b35e03b92c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-guimaraeslucas-netzac-v1.0.4/zacos9-extra-netzac_1.0.4_arm64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-guimaraeslucas-netzac-v1.0.4"
         }
       ],
       "platforms": [
