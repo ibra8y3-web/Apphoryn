@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T21:09:57.686825+00:00",
+  "generated_at": "2026-11-27T21:10:39.846035+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -88690,11 +88690,11 @@
       "icon_url": "https://avatars.githubusercontent.com/u/193025872?v=4",
       "repository_url": "https://github.com/gelenmedya/rustyfiles",
       "github_repo_id": "1449695486",
-      "source_updated_at": "2026-11-27T12:54:01Z",
+      "source_updated_at": "2026-11-27T21:05:16Z",
       "homepage_url": "https://rustyfiles.com",
       "owner": "gelenmedya",
       "default_branch": "main",
-      "source_commit_sha": "d73a49486c1a10ad865ead685628c53546493bb2",
+      "source_commit_sha": "7886d9d5df1011e3c0a579cb7e20bff681d8467b",
       "license_text": "MIT License\n\nCopyright (c) 2026 Özer Güzel (gelenmedya)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -88726,10 +88726,10 @@
         "windows-11",
         "windows-explorer"
       ],
-      "latest_version": "v1.0.1",
-      "release_url": "https://github.com/gelenmedya/rustyfiles/releases/tag/v1.0.1",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gelenmedya-rustyfiles-v1.0.1",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gelenmedya-rustyfiles-v1.0.1/THIRD-PARTY-NOTICE-gelenmedya-rustyfiles.txt",
+      "latest_version": "v1.0.2",
+      "release_url": "https://github.com/gelenmedya/rustyfiles/releases/tag/v1.0.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gelenmedya-rustyfiles-v1.0.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gelenmedya-rustyfiles-v1.0.2/THIRD-PARTY-NOTICE-gelenmedya-rustyfiles.txt",
       "artifacts": [
         {
           "id": "ca92a2c76423af9bce442316eae561565761f3243ddba566c3cf1a5a798da179",
@@ -88832,6 +88832,57 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gelenmedya-rustyfiles-v1.0.1/rustyfiles-win-Setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gelenmedya-rustyfiles-v1.0.1"
+        },
+        {
+          "id": "7380d8d762beaab4e50d858cdc0b1cb4c4434e4cdb4bab180386880dd2e60b72",
+          "filename": "rustyfiles-mac-arm64.dmg",
+          "original_filename": "rustyfiles-mac-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v1.0.2",
+          "size_bytes": 18119112,
+          "sha256": "7380d8d762beaab4e50d858cdc0b1cb4c4434e4cdb4bab180386880dd2e60b72",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gelenmedya-rustyfiles-v1.0.2/rustyfiles-mac-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gelenmedya-rustyfiles-v1.0.2"
+        },
+        {
+          "id": "07085a2fad94302f5d61a8b27686315204728149145f09d912989e6b03f4c697",
+          "filename": "rustyfiles-win-arm64-Setup.exe",
+          "original_filename": "rustyfiles-win-arm64-Setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "arm64",
+          "version": "v1.0.2",
+          "size_bytes": 46982523,
+          "sha256": "07085a2fad94302f5d61a8b27686315204728149145f09d912989e6b03f4c697",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gelenmedya-rustyfiles-v1.0.2/rustyfiles-win-arm64-Setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gelenmedya-rustyfiles-v1.0.2"
+        },
+        {
+          "id": "2b36ab1eb0de783a9316065b20af8407c4cb05d9cb33b77730d4bb0373c04cf8",
+          "filename": "rustyfiles-win-Setup.exe",
+          "original_filename": "rustyfiles-win-Setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.0.2",
+          "size_bytes": 49959516,
+          "sha256": "2b36ab1eb0de783a9316065b20af8407c4cb05d9cb33b77730d4bb0373c04cf8",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gelenmedya-rustyfiles-v1.0.2/rustyfiles-win-Setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gelenmedya-rustyfiles-v1.0.2"
         }
       ],
       "platforms": [
