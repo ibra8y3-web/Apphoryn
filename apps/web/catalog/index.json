@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:32:59.092080+00:00",
+  "generated_at": "2026-11-27T00:34:07.064800+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -10157,6 +10157,66 @@
       "platforms": [
         "windows"
       ]
+    },
+    {
+      "id": "subtitulos-castellano-bajar-subtitulos-esp-app",
+      "slug": "subtitulos-castellano-bajar-subtitulos-esp-app",
+      "artifacts": [],
+      "name": "bajar-subtitulos-esp-app",
+      "summary": "Desktop app for Windows 10/11 and Linux that downloads Spanish (Spain) subtitles for videos and folders via drag-and-drop or the file manager context menu.",
+      "description": "Bajar Subtítulos ESP is a desktop app for Windows 10/11 and Linux that downloads Spanish (Spain) subtitles. Drop videos or a folder on the window, or use the right-click menu in Explorer or the Linux file manager; it runs unattended.\n\nIt first extracts an embedded Spanish track from .mkv/.mp4 without ffmpeg, unless extraction would take over 15 seconds. Otherwise it searches opensubtitles.org, Addic7ed, Gestdown, Subtitulamos and opensubtitles.com, then picks the best by vocabulary checks (vosotros, vale, móvil vs. ustedes, celular, computadora), as site language tags are unreliable, and rejects wrong-episode or wrong-duration files. It prefers castellano > latino > English, never downgrades an existing subtitle, saves <video>.srt with a backup, and respects provider limits (40 videos per batch, 5 subtitles each, 3s pause; the rest stays Pending).\n\nSettings allow English only or castellano auto-translated from English locally and offline. UI in Spanish or English. Python/PySide6/Qt6, based on the bajar-subtitulos-esp skill. Releases provide Windows installer/portable zip and Linux .deb, .rpm, AppImage and tar.gz, with SHA256SUMS and GitHub provenance attestations.",
+      "translations": {
+        "en": "Desktop app for Windows 10/11 and Linux that downloads Spanish (Spain) subtitles for videos and folders via drag-and-drop or the file manager context menu.",
+        "ar": "تطبيق مكتبي لأنظمة Windows 10/11 وLinux ينزّل ترجمات إسبانية (إسبانيا) للفيديوهات والمجلدات بالسحب والإفلات أو من قائمة السياق في مدير الملفات."
+      },
+      "description_translations": {
+        "en": "Bajar Subtítulos ESP is a desktop app for Windows 10/11 and Linux that downloads Spanish (Spain) subtitles. Drop videos or a folder on the window, or use the right-click menu in Explorer or the Linux file manager; it runs unattended.\n\nIt first extracts an embedded Spanish track from .mkv/.mp4 without ffmpeg, unless extraction would take over 15 seconds. Otherwise it searches opensubtitles.org, Addic7ed, Gestdown, Subtitulamos and opensubtitles.com, then picks the best by vocabulary checks (vosotros, vale, móvil vs. ustedes, celular, computadora), as site language tags are unreliable, and rejects wrong-episode or wrong-duration files. It prefers castellano > latino > English, never downgrades an existing subtitle, saves <video>.srt with a backup, and respects provider limits (40 videos per batch, 5 subtitles each, 3s pause; the rest stays Pending).\n\nSettings allow English only or castellano auto-translated from English locally and offline. UI in Spanish or English. Python/PySide6/Qt6, based on the bajar-subtitulos-esp skill. Releases provide Windows installer/portable zip and Linux .deb, .rpm, AppImage and tar.gz, with SHA256SUMS and GitHub provenance attestations.",
+        "ar": "«Bajar Subtítulos ESP» تطبيق مكتبي لأنظمة Windows 10/11 وLinux ينزّل ترجمات إسبانية (إسبانيا) للأفلام والمسلسلات. اسحب مقاطع الفيديو أو مجلدًا إلى النافذة، أو استخدم قائمة النقر بالزر الأيمن في مستكشف Windows أو مدير الملفات في Linux، وسيعمل دون تدخل.\n\nيستخرج أولًا مسار ترجمة إسبانية مدمجًا من ملفات .mkv/.mp4 دون ffmpeg، إلا إذا كان الاستخراج سيستغرق أكثر من 15 ثانية. وإلا فإنه يبحث في opensubtitles.org وAddic7ed وGestdown وSubtitulamos وopensubtitles.com، ثم يختار أفضل مرشح عبر فحص المفردات (vosotros وvale وmóvil مقابل ustedes وcelular وcomputadora)، لأن وسوم اللغة في المواقع غير موثوقة، ويرفض الملفات التي تخص حلقة أخرى أو لا تطابق مدتها. يفضّل castellano ثم latino ثم الإنجليزية، ولا يستبدل ترجمة موجودة بأخرى أسوأ، ويحفظ الملف باسم <video>.srt مع نسخة احتياطية، ويحترم حدود المزوّدين (40 فيديو لكل دفعة، و5 ترجمات لكل فيديو، واستراحة 3 ثوانٍ؛ والباقي يبقى قيد الانتظار).\n\nتتيح الإعدادات الإنجليزية فقط، أو castellano مترجمة آليًا من الإنجليزية محليًا ودون اتصال. الواجهة بالإسبانية أو الإنجليزية. مكتوب بـ Python وPySide6 وQt6، ومبني على مهارة bajar-subtitulos-esp. توفر الإصدارات حزمة تثبيت ونسخة محمولة لويندوز، وحزم .deb و.rpm وAppImage وtar.gz للينكس، مع SHA256SUMS وإثباتات مصدر من Gi"
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://avatars.githubusercontent.com/u/356959579?v=4",
+      "repository_url": "https://github.com/subtitulos-castellano/bajar-subtitulos-esp-app",
+      "github_repo_id": "1466357391",
+      "source_updated_at": "2026-11-25T05:04:08Z",
+      "homepage_url": null,
+      "owner": "subtitulos-castellano",
+      "default_branch": "main",
+      "source_commit_sha": "84f19cb86ae8e1029c2cbf25ee0b6503fd223708",
+      "license_text": "MIT License\n\nCopyright (c) 2026 bajar-subtitulos-esp contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Standalone end-user desktop application with a PySide6/Qt6 GUI, not a library or CLI tool: the README documents drag-and-drop, Windows Explorer and Linux file-manager context-menu integration, and a Settings screen. A supported build path is evidenced by Releases containing a Windows installer and portable zip plus Linux .deb, .rpm, AppImage and tar.gz, built by GitHub Actions with provenance atte",
+      "category": "developer",
+      "topics": [
+        "addic7ed",
+        "castellano",
+        "claude",
+        "desktop-app",
+        "drag-and-drop",
+        "mkv",
+        "opensubtitles",
+        "pyside6",
+        "python",
+        "qt6",
+        "spain",
+        "spanish",
+        "srt",
+        "subliminal",
+        "subtitle-downloader",
+        "subtitles",
+        "subtitulos",
+        "windows",
+        "windows-app"
+      ],
+      "latest_version": "v3.0.0",
+      "release_url": "https://github.com/subtitulos-castellano/bajar-subtitulos-esp-app/releases/tag/v3.0.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "bananaflow-media-bananaflow",
