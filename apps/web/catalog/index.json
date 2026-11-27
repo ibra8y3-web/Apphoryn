@@ -21513,7 +21513,17 @@
       "latest_version": "v7.0.0",
       "release_url": "https://github.com/miskatul-anwar/dbflow/releases/tag/v7.0.0",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "29f9bcc62b1d90f75e5a1381ed7413e7c5ecbb7e",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-27T00:04:51.135571+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "deliciousdiamond-deepexplorer-delicious",
