@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T21:18:35.362496+00:00",
+  "generated_at": "2026-11-27T21:18:50.725648+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -105784,6 +105784,63 @@
       ],
       "latest_version": "v0.1.1",
       "release_url": "https://github.com/TunneldeDev/TunneldeDebugger/releases/tag/v0.1.1",
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "talaatmagdyx-tuplenest",
+      "slug": "talaatmagdyx-tuplenest",
+      "artifacts": [],
+      "name": "TupleNest",
+      "summary": "The safety-first database workspace for PostgreSQL and SQLite. Local-first, open-source desktop app for macOS, Windows and Linux, built with Rust and Tauri.",
+      "description": "The safety-first database workspace for PostgreSQL and SQLite. Local-first, open-source desktop app for macOS, Windows and Linux, built with Rust and Tauri.",
+      "translations": {
+        "en": {
+          "summary": "The safety-first database workspace for PostgreSQL and SQLite. Local-first, open-source desktop app for macOS, Windows and Linux, built with Rust and Tauri.",
+          "description": "The safety-first database workspace for PostgreSQL and SQLite. Local-first, open-source desktop app for macOS, Windows and Linux, built with Rust and Tauri."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/talaatmagdyx/TupleNest/main/apps/desktop/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/talaatmagdyx/TupleNest",
+      "github_repo_id": "1303586399",
+      "source_updated_at": "2026-11-27T19:40:35Z",
+      "homepage_url": "https://talaatmagdyx.github.io/TupleNest/",
+      "owner": "talaatmagdyx",
+      "default_branch": "main",
+      "source_commit_sha": "fc5d7b707a6db4232ebfb223666e7a2dcfaea1d3",
+      "license_text": "MIT License\n\nCopyright (c) 2026 TupleNest contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "cross-platform",
+        "database",
+        "database-client",
+        "database-gui",
+        "desktop-app",
+        "developer-tools",
+        "local-first",
+        "mcp",
+        "postgres",
+        "postgresql",
+        "react",
+        "rust",
+        "sql",
+        "sql-editor",
+        "sqlite",
+        "tauri",
+        "typescript"
+      ],
+      "latest_version": null,
+      "release_url": null,
       "platforms": [],
       "project_status": "source_available"
     },
