@@ -15256,6 +15256,15 @@
           ],
           "requested_at": "2026-11-26T21:19:29.796769+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
+        },
+        {
+          "git_ref": "b476e0ad4a974480d04e4f88b8fa01c8c26bbd46",
+          "targets": [
+            "linux",
+            "macos"
+          ],
+          "requested_at": "2026-11-27T04:02:23.002293+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ]
     },
