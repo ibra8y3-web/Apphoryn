@@ -107739,7 +107739,19 @@
       "latest_version": "v0.2.9",
       "release_url": "https://github.com/LukasKH/tutortop/releases/tag/v0.2.9",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "949124203eab3c315aca12ba66403c5e33e3e5d8",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-27T23:41:48.392623+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "darknamatv-tv",
