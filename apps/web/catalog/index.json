@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T22:42:52.264896+00:00",
+  "generated_at": "2026-11-27T22:43:20.746677+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -103904,11 +103904,11 @@
       "icon_url": "https://raw.githubusercontent.com/Threadlines/threadlines/main/apps/desktop/resources/icon.png",
       "repository_url": "https://github.com/Threadlines/threadlines",
       "github_repo_id": "1248761022",
-      "source_updated_at": "2026-11-27T13:53:26Z",
+      "source_updated_at": "2026-11-27T18:18:35Z",
       "homepage_url": "https://www.threadlines.dev",
       "owner": "Threadlines",
       "default_branch": "main",
-      "source_commit_sha": "45d293bf356e746e0bc59f3343fcf00a7b99ad4f",
+      "source_commit_sha": "fcbd66a7fbc8ecfe8b396840ea3261b54371976d",
       "license_text": "MIT License\n\nCopyright (c) 2026 T3 Tools Inc.\nCopyright (c) 2026 Wilfredo Leon and Threadlines contributors.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
