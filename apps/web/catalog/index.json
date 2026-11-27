@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:31:24.438751+00:00",
+  "generated_at": "2026-11-27T00:31:55.494030+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -78299,6 +78299,63 @@
       ],
       "latest_version": null,
       "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "fish-under-sea-prismux",
+      "slug": "fish-under-sea-prismux",
+      "artifacts": [],
+      "name": "Prismux",
+      "summary": "Prismux is a local-first Electron desktop AI workbench for managing multiple coding agents, with liquid-glass UI, SQLite memory, plugins, and Windows x64 releases.",
+      "description": "Prismux is an Electron 44, TypeScript, and React 19 desktop application described as a local, zero-telemetry AI super workbench and 24-hour secretary system. It aims to unify multiple coding agents, including Claude Code, Codex, Antigravity, DeepSeek Harness (dsh), Pi, and OpenCode, in one workspace. The interface features an eight-zone liquid-glass visual system, Orca-style sidebar, recursive split panes, model and reasoning controls, and dynamic wallpaper support. Memory is stored in a single SQLite database with WAL, FTS5, and sqlite-vec, while a plugin system is on-demand and not preinstalled by default. The project provides a Windows x64 installer release and states that macOS and Linux channels are reserved.",
+      "translations": {
+        "en": "Prismux is a local-first Electron desktop AI workbench for managing multiple coding agents, with liquid-glass UI, SQLite memory, plugins, and Windows x64 releases.",
+        "ar": "Prismux هو مساحة عمل ذكية لسطح المكتب مبنية على Electron، مخصصة لإدارة وكلاء برمجة متعددين، مع واجهة زجاجية سائلة وذاكرة SQLite ودعم الإضافات وإصدارات Windows x64."
+      },
+      "description_translations": {
+        "en": "Prismux is an Electron 44, TypeScript, and React 19 desktop application described as a local, zero-telemetry AI super workbench and 24-hour secretary system. It aims to unify multiple coding agents, including Claude Code, Codex, Antigravity, DeepSeek Harness (dsh), Pi, and OpenCode, in one workspace. The interface features an eight-zone liquid-glass visual system, Orca-style sidebar, recursive split panes, model and reasoning controls, and dynamic wallpaper support. Memory is stored in a single SQLite database with WAL, FTS5, and sqlite-vec, while a plugin system is on-demand and not preinstalled by default. The project provides a Windows x64 installer release and states that macOS and Linux channels are reserved.",
+        "ar": "Prismux تطبيق سطح مكتب مبني على Electron 44 وTypeScript وReact 19، ويُوصَف بأنه مساحة عمل ذكية محلية بالكامل وخالية من القياس البعيد، ونظام سكرتارية دائم على مدار الساعة. يهدف إلى توحيد عدة وكلاء برمجة، من بينهم Claude Code وCodex وAntigravity وDeepSeek Harness (dsh) وPi وOpenCode، في مساحة واحدة. تتضمن الواجهة نظامًا بصريًا زجاجيًا سائلًا من ثماني مناطق، وشريطًا جانبيًا على طراز Orca، وتقسيمات متداخلة، وتحكمًا في النماذج ومستوى الاستدلال، ودعمًا لخلفيات ديناميكية. تُخزَّن الذاكرة في قاعدة SQLite واحدة مع WAL وFTS5 وsqlite-vec، بينما نظام الإضافات يُحمَّل عند الطلب وغير مثبت مسبقًا افتراضيًا. يوفر المشروع مُثبتًا لإصدار Windows x64، مع الإشارة إلى حجز قنوات macOS وLinux."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://raw.githubusercontent.com/Fish-under-sea/Prismux/main/apps/web/public/icon-192x192.png",
+      "repository_url": "https://github.com/Fish-under-sea/Prismux",
+      "github_repo_id": "1467530110",
+      "source_updated_at": "2026-11-26T13:17:36Z",
+      "homepage_url": "https://github.com/Fish-under-sea/Prismux#readme",
+      "owner": "Fish-under-sea",
+      "default_branch": "main",
+      "source_commit_sha": "9b5434b1f5a417717a850611c880b934760d8850",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Fish-under-sea / Prismux Contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": false,
+      "classification_source": "ai",
+      "classification_reason": "Standalone Electron desktop application for end users; however, the supplied evidence does not include explicit source-build instructions, so automatic source build is not recommended.",
+      "category": "system",
+      "topics": [
+        "ai-agent",
+        "ai-workbench",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "desktop-app",
+        "electron",
+        "liquid-glass",
+        "orca",
+        "plugin-system",
+        "prismux",
+        "react",
+        "sqlite",
+        "typescript",
+        "wallpaper-engine",
+        "windows"
+      ],
+      "latest_version": "v0.2.4-rc.1",
+      "release_url": "https://github.com/Fish-under-sea/Prismux/releases/tag/v0.2.4-rc.1",
       "platforms": [],
       "project_status": "source_available"
     },
