@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T21:08:08.527042+00:00",
+  "generated_at": "2026-11-27T21:08:28.394017+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -36829,7 +36829,7 @@
       "homepage_url": null,
       "owner": "gianclaudioapp",
       "default_branch": "main",
-      "source_commit_sha": "f2a8800223e3732f678b6dea1f3aa6e853cf9fd0",
+      "source_commit_sha": "07bb668422063858d95270750cfd2eaf60b7774a",
       "license_text": "MIT License\n\nCopyright (c) 2026 DazornSama\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -36851,10 +36851,10 @@
         "typescript",
         "windows"
       ],
-      "latest_version": "v0.2.0",
-      "release_url": "https://github.com/gianclaudioapp/gian-claudio/releases/tag/v0.2.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gianclaudioapp-gian-claudio-v0.2.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gianclaudioapp-gian-claudio-v0.2.0/THIRD-PARTY-NOTICE-gianclaudioapp-gian-claudio.txt",
+      "latest_version": "v0.2.1",
+      "release_url": "https://github.com/gianclaudioapp/gian-claudio/releases/tag/v0.2.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gianclaudioapp-gian-claudio-v0.2.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gianclaudioapp-gian-claudio-v0.2.1/THIRD-PARTY-NOTICE-gianclaudioapp-gian-claudio.txt",
       "artifacts": [
         {
           "id": "bf4ee30e4959eb0189efadc5ee442f09006231dbf30fd8b4ec6438701c248e1e",
@@ -36889,6 +36889,23 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gianclaudioapp-gian-claudio-v0.2.0/Gian.Claudio_0.2.0_x64-setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gianclaudioapp-gian-claudio-v0.2.0"
+        },
+        {
+          "id": "a53fd671a26f8192932f5eac46fc5603eaf3956fb23a68da60eb55b40060c8be",
+          "filename": "Gian.Claudio_0.2.1_x64-setup.exe",
+          "original_filename": "Gian.Claudio_0.2.1_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.2.1",
+          "size_bytes": 3592174,
+          "sha256": "a53fd671a26f8192932f5eac46fc5603eaf3956fb23a68da60eb55b40060c8be",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-gianclaudioapp-gian-claudio-v0.2.1/Gian.Claudio_0.2.1_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-gianclaudioapp-gian-claudio-v0.2.1"
         }
       ],
       "platforms": [
