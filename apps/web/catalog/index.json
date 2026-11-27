@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T06:29:19.796575+00:00",
+  "generated_at": "2026-11-27T06:30:13.762891+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -98972,7 +98972,7 @@
       "homepage_url": null,
       "owner": "01UNCLEDOG01",
       "default_branch": "main",
-      "source_commit_sha": "e237da0cb14ca7b88d4a61bcbb7bf0743333e2cc",
+      "source_commit_sha": "7619ffe6f0cde4855c4521a0853ef39e48aa2105",
       "license_text": "MIT License\n\nCopyright (c) 2026 xiufengsun\nCopyright (c) 2026 01UNCLEDOG01 (TokenTracker-plus fork)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -98996,10 +98996,10 @@
         "windows",
         "zhipu"
       ],
-      "latest_version": "v1.46.1",
-      "release_url": "https://github.com/01UNCLEDOG01/TokenTracker-Plus/releases/tag/v1.46.1",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-01uncledog01-tokentracker-plus-v1.46.1",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-01uncledog01-tokentracker-plus-v1.46.1/THIRD-PARTY-NOTICE-01uncledog01-tokentracker-plus.txt",
+      "latest_version": "v1.47.1",
+      "release_url": "https://github.com/01UNCLEDOG01/TokenTracker-Plus/releases/tag/v1.47.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-01uncledog01-tokentracker-plus-v1.47.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-01uncledog01-tokentracker-plus-v1.47.1/THIRD-PARTY-NOTICE-01uncledog01-tokentracker-plus.txt",
       "artifacts": [
         {
           "id": "3a7ad164a1a443bdae702026d5db8dfdbd5008a3b649872e5bf0b897cada9466",
@@ -99017,6 +99017,23 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-01uncledog01-tokentracker-plus-v1.46.1/TokenTracker-plus-Setup-v1.46.1.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-01uncledog01-tokentracker-plus-v1.46.1"
+        },
+        {
+          "id": "760b622a97324de074901013ad92619db591d9c6b584c600c975b55663d7ed9d",
+          "filename": "TokenTracker-plus-Setup-v1.47.1.exe",
+          "original_filename": "TokenTracker-plus-Setup-v1.47.1.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.47.1",
+          "size_bytes": 89454984,
+          "sha256": "760b622a97324de074901013ad92619db591d9c6b584c600c975b55663d7ed9d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-01uncledog01-tokentracker-plus-v1.47.1/TokenTracker-plus-Setup-v1.47.1.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-01uncledog01-tokentracker-plus-v1.47.1"
         }
       ],
       "platforms": [
