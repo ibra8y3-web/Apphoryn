@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T23:48:50.717297+00:00",
+  "generated_at": "2026-11-27T23:49:51.379989+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -62013,6 +62013,58 @@
       ],
       "latest_version": "V1.74.0",
       "release_url": "https://github.com/tw93/Mole/releases/tag/V1.74.0",
+      "platforms": [],
+      "project_status": "source_available"
+    },
+    {
+      "id": "nirajkhetre-mondegreen",
+      "slug": "nirajkhetre-mondegreen",
+      "artifacts": [],
+      "name": "mondegreen",
+      "summary": "Free synced lyrics overlay for Spotify on Windows: word-by-word karaoke lyrics on top of your screen, moving with the beat, plus a full-screen lyrics visualizer.",
+      "description": "Free synced lyrics overlay for Spotify on Windows: word-by-word karaoke lyrics on top of your screen, moving with the beat, plus a full-screen lyrics visualizer.",
+      "translations": {
+        "en": {
+          "summary": "Free synced lyrics overlay for Spotify on Windows: word-by-word karaoke lyrics on top of your screen, moving with the beat, plus a full-screen lyrics visualizer.",
+          "description": "Free synced lyrics overlay for Spotify on Windows: word-by-word karaoke lyrics on top of your screen, moving with the beat, plus a full-screen lyrics visualizer."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/nirajkhetre/mondegreen/main/assets/logo.svg",
+      "repository_url": "https://github.com/nirajkhetre/mondegreen",
+      "github_repo_id": "1471896587",
+      "source_updated_at": "2026-11-25T18:29:55Z",
+      "homepage_url": "https://nirajkhetre.github.io/mondegreen/",
+      "owner": "nirajkhetre",
+      "default_branch": "main",
+      "source_commit_sha": "7ba46d21e4eab6955ea9f972f41ccd8d5bd03b55",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Niraj Khetre\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "other",
+      "topics": [
+        "beat-detection",
+        "desktop-app",
+        "electron",
+        "karaoke",
+        "lyrics",
+        "lyrics-overlay",
+        "music-visualizer",
+        "spotify",
+        "spotify-lyrics",
+        "synced-lyrics",
+        "windows",
+        "youtube"
+      ],
+      "latest_version": "v0.5.0",
+      "release_url": "https://github.com/nirajkhetre/mondegreen/releases/tag/v0.5.0",
       "platforms": [],
       "project_status": "source_available"
     },
