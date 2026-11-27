@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T21:29:21.549763+00:00",
+  "generated_at": "2026-11-27T21:30:20.098775+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -71552,7 +71552,7 @@
       "icon_url": "https://raw.githubusercontent.com/openvetta/open-vetta/main/packages/plugins/externals/chinese-chess/assets/logo.svg",
       "repository_url": "https://github.com/openvetta/open-vetta",
       "github_repo_id": "1321544757",
-      "source_updated_at": "2026-11-27T10:16:21Z",
+      "source_updated_at": "2026-11-27T18:17:46Z",
       "homepage_url": "https://www.openvetta.com",
       "owner": "openvetta",
       "default_branch": "main",
