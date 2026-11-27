@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T13:52:49.797815+00:00",
+  "generated_at": "2026-11-27T13:54:41.070121+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -77954,10 +77954,10 @@
         "typescript",
         "vue3"
       ],
-      "latest_version": "v2.4.18",
-      "release_url": "https://github.com/wangmiaozero/pi-harness/releases/tag/v2.4.18",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wangmiaozero-pi-harness-v2.4.18",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wangmiaozero-pi-harness-v2.4.18/THIRD-PARTY-NOTICE-wangmiaozero-pi-harness.txt",
+      "latest_version": "v2.4.19",
+      "release_url": "https://github.com/wangmiaozero/pi-harness/releases/tag/v2.4.19",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wangmiaozero-pi-harness-v2.4.19",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wangmiaozero-pi-harness-v2.4.19/THIRD-PARTY-NOTICE-wangmiaozero-pi-harness.txt",
       "artifacts": [
         {
           "id": "21aeeee7f39bc42b0fda08d3a127d2ff56318cc83361255eeec5a786df7c92fe",
@@ -78026,6 +78026,74 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wangmiaozero-pi-harness-v2.4.18/Pi-Harness-Setup-2.4.18.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wangmiaozero-pi-harness-v2.4.18"
+        },
+        {
+          "id": "05b291b997fb20f00987c7e023b61447fce4cb43a99ec3ce076873e348b344cc",
+          "filename": "Pi-Harness-2.4.19-arm64.dmg",
+          "original_filename": "Pi-Harness-2.4.19-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v2.4.19",
+          "size_bytes": 275344772,
+          "sha256": "05b291b997fb20f00987c7e023b61447fce4cb43a99ec3ce076873e348b344cc",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wangmiaozero-pi-harness-v2.4.19/Pi-Harness-2.4.19-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wangmiaozero-pi-harness-v2.4.19"
+        },
+        {
+          "id": "ac7d41f4e91b23c67790a410fed27e66135888811b3ca37ae80d2d2f03c5c1bc",
+          "filename": "Pi-Harness-2.4.19.AppImage",
+          "original_filename": "Pi-Harness-2.4.19.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": null,
+          "version": "v2.4.19",
+          "size_bytes": 280008787,
+          "sha256": "ac7d41f4e91b23c67790a410fed27e66135888811b3ca37ae80d2d2f03c5c1bc",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wangmiaozero-pi-harness-v2.4.19/Pi-Harness-2.4.19.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wangmiaozero-pi-harness-v2.4.19"
+        },
+        {
+          "id": "3f41d2dc4121303f7a75e399a39819435365d5cd3ed5b210f55803b2a813db2d",
+          "filename": "Pi-Harness-2.4.19.dmg",
+          "original_filename": "Pi-Harness-2.4.19.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": null,
+          "version": "v2.4.19",
+          "size_bytes": 284747277,
+          "sha256": "3f41d2dc4121303f7a75e399a39819435365d5cd3ed5b210f55803b2a813db2d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wangmiaozero-pi-harness-v2.4.19/Pi-Harness-2.4.19.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wangmiaozero-pi-harness-v2.4.19"
+        },
+        {
+          "id": "5687873ec3b00dd4004f2e07c47ccea7bc855bcf79ecf09ddf4cdad62a4438fa",
+          "filename": "Pi-Harness-Setup-2.4.19.exe",
+          "original_filename": "Pi-Harness-Setup-2.4.19.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v2.4.19",
+          "size_bytes": 229658273,
+          "sha256": "5687873ec3b00dd4004f2e07c47ccea7bc855bcf79ecf09ddf4cdad62a4438fa",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-wangmiaozero-pi-harness-v2.4.19/Pi-Harness-Setup-2.4.19.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-wangmiaozero-pi-harness-v2.4.19"
         }
       ],
       "platforms": [
