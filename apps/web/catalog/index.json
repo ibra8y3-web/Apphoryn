@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T15:49:14.308324+00:00",
+  "generated_at": "2026-11-27T15:49:55.350858+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -101589,7 +101589,7 @@
       "icon_url": "https://raw.githubusercontent.com/Threadlines/threadlines/main/apps/desktop/resources/icon.png",
       "repository_url": "https://github.com/Threadlines/threadlines",
       "github_repo_id": "1248761022",
-      "source_updated_at": "2026-11-26T14:44:40Z",
+      "source_updated_at": "2026-11-27T13:53:26Z",
       "homepage_url": "https://www.threadlines.dev",
       "owner": "Threadlines",
       "default_branch": "main",
