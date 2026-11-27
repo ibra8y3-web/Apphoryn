@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:04:02.595946+00:00",
+  "generated_at": "2026-11-27T00:04:39.782415+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -21453,6 +21453,67 @@
         "macos",
         "windows"
       ]
+    },
+    {
+      "id": "miskatul-anwar-dbflow",
+      "slug": "miskatul-anwar-dbflow",
+      "artifacts": [],
+      "name": "dbflow",
+      "summary": "DBFlow is a free, open-source local-first desktop app that converts CSV and spreadsheet files into normalized relational schemas, Mermaid ERDs, SQL DDL, and reports.",
+      "description": "DBFlow is a free, open-source desktop application for Windows, macOS, and Linux (with an Android APK) that turns raw CSV and spreadsheet files into a verified relational database design. It cleans and profiles data, mines functional and multivalued dependencies, discovers keys and foreign keys, and normalizes to 1NF, 2NF, 3NF, BCNF, or 4NF. Every decomposition is checked for lossless join and dependency preservation. Outputs include Mermaid/Graphviz ER diagrams, SQL DDL for PostgreSQL, MySQL, SQLite, or standard SQL, normalized CSV data, INSERT scripts, and Markdown/PDF reports. The app is local-first and makes no network requests; small AI models ship inside the installer. Built with Tauri 2, Rust, React, and TypeScript, with source build instructions using Bun and Rust.",
+      "translations": {
+        "en": "DBFlow is a free, open-source local-first desktop app that converts CSV and spreadsheet files into normalized relational schemas, Mermaid ERDs, SQL DDL, and reports.",
+        "ar": "DBFlow تطبيق سطح مكتب حر ومفتوح المصدر يعمل محلياً لتحويل ملفات CSV والجداول إلى مخططات علائقية مُطبّعة، ومخططات ERD بصيغة Mermaid، وأوامر SQL DDL، وتقارير."
+      },
+      "description_translations": {
+        "en": "DBFlow is a free, open-source desktop application for Windows, macOS, and Linux (with an Android APK) that turns raw CSV and spreadsheet files into a verified relational database design. It cleans and profiles data, mines functional and multivalued dependencies, discovers keys and foreign keys, and normalizes to 1NF, 2NF, 3NF, BCNF, or 4NF. Every decomposition is checked for lossless join and dependency preservation. Outputs include Mermaid/Graphviz ER diagrams, SQL DDL for PostgreSQL, MySQL, SQLite, or standard SQL, normalized CSV data, INSERT scripts, and Markdown/PDF reports. The app is local-first and makes no network requests; small AI models ship inside the installer. Built with Tauri 2, Rust, React, and TypeScript, with source build instructions using Bun and Rust.",
+        "ar": "DBFlow تطبيق سطح مكتب حر ومفتوح المصدر لنظامي التشغيل Windows وmacOS وLinux (مع حزمة APK لنظام Android) يحوّل ملفات CSV والجداول الخام إلى تصميم قاعدة بيانات علائقية مُتحقَّق منه. ينظّف البيانات ويحلّلها، ويستخرج التبعيات الوظيفية ومتعددة القيم، ويكتشف المفاتيح والمفاتيح الأجنبية، ويطبّع المخطط إلى 1NF أو 2NF أو 3NF أو BCNF أو 4NF. ويُتحقّق من كل تفكيك عبر اختبار الربط غير الفاقد والحفاظ على التبعيات. تشمل المخرجات مخططات ERD بصيغة Mermaid/Graphviz، وأوامر SQL DDL لـ PostgreSQL أو MySQL أو SQLite أو SQL القياسي، وبيانات CSV مُطبّعة، وسكربتات INSERT، وتقارير Markdown/PDF. يعمل التطبيق محلياً ولا يجري طلبات شبكة، وتُشحن نماذج AI صغيرة داخل المثبّت. بُني باستخدام Tauri 2 وRust وReact وTypeScript، مع تعليمات بناء من المصدر باستخدام Bun وRust."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "particle-ai/particle-1:free",
+      "icon_url": "https://raw.githubusercontent.com/miskatul-anwar/dbflow/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/miskatul-anwar/dbflow",
+      "github_repo_id": "1457363799",
+      "source_updated_at": "2026-11-14T14:33:05Z",
+      "homepage_url": "https://github.com/miskatul-anwar/dbflow/releases/latest",
+      "owner": "miskatul-anwar",
+      "default_branch": "main",
+      "source_commit_sha": "29f9bcc62b1d90f75e5a1381ed7413e7c5ecbb7e",
+      "license_text": "MIT License\n\nCopyright (c) 2025 Miskatul Anwar\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Standalone end-user desktop application with documented Tauri/Rust/Bun build path and release artifacts.",
+      "category": "other",
+      "topics": [
+        "3nf",
+        "bcnf",
+        "csv",
+        "csv-to-sql",
+        "data-engineering",
+        "database-design",
+        "database-normalization",
+        "dbflow",
+        "desktop-app",
+        "erd",
+        "functional-dependencies",
+        "local-first",
+        "mermaid",
+        "normalization",
+        "react",
+        "rust",
+        "sql",
+        "sql-generator",
+        "tauri",
+        "typescript"
+      ],
+      "latest_version": "v7.0.0",
+      "release_url": "https://github.com/miskatul-anwar/dbflow/releases/tag/v7.0.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "deliciousdiamond-deepexplorer-delicious",
