@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T12:59:41.403258+00:00",
+  "generated_at": "2026-11-27T13:06:19.482104+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -38152,7 +38152,7 @@
       "homepage_url": null,
       "owner": "sword-demon",
       "default_branch": "main",
-      "source_commit_sha": "86605dfbc65a317efff2edcc958cbdc7e552d53b",
+      "source_commit_sha": "33b150f0743a2d63dc6bea9081d5921cf4bfb36c",
       "license_text": "MIT License\n\nCopyright (c) 2026 sword-demon\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -38176,10 +38176,10 @@
         "tauri",
         "vue"
       ],
-      "latest_version": "v0.1.3",
-      "release_url": "https://github.com/sword-demon/gorm-generate/releases/tag/v0.1.3",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sword-demon-gorm-generate-v0.1.3",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sword-demon-gorm-generate-v0.1.3/THIRD-PARTY-NOTICE-sword-demon-gorm-generate.txt",
+      "latest_version": "v0.2.0",
+      "release_url": "https://github.com/sword-demon/gorm-generate/releases/tag/v0.2.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sword-demon-gorm-generate-v0.2.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sword-demon-gorm-generate-v0.2.0/THIRD-PARTY-NOTICE-sword-demon-gorm-generate.txt",
       "artifacts": [
         {
           "id": "b745fee08c5ece5e8593c29da4fc863012bb14b6f3041034edbe9aff86af52b2",
@@ -38248,6 +38248,40 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sword-demon-gorm-generate-v0.1.3/gorm-generate_0.1.3_x64.dmg",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sword-demon-gorm-generate-v0.1.3"
+        },
+        {
+          "id": "1ea152a0ffcdef11c4b85bb8ecc1334bc043ef57ca6a0645442d3a7e47fa65e0",
+          "filename": "gorm-generate_0.2.0_aarch64.dmg",
+          "original_filename": "gorm-generate_0.2.0_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.2.0",
+          "size_bytes": 6456344,
+          "sha256": "1ea152a0ffcdef11c4b85bb8ecc1334bc043ef57ca6a0645442d3a7e47fa65e0",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sword-demon-gorm-generate-v0.2.0/gorm-generate_0.2.0_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sword-demon-gorm-generate-v0.2.0"
+        },
+        {
+          "id": "c15391f39351f26e8e759daaa9f734ad66f87a2a15cff3f763cb303725b6c86c",
+          "filename": "gorm-generate_0.2.0_x64.dmg",
+          "original_filename": "gorm-generate_0.2.0_x64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "x86_64",
+          "version": "v0.2.0",
+          "size_bytes": 6820392,
+          "sha256": "c15391f39351f26e8e759daaa9f734ad66f87a2a15cff3f763cb303725b6c86c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sword-demon-gorm-generate-v0.2.0/gorm-generate_0.2.0_x64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sword-demon-gorm-generate-v0.2.0"
         }
       ],
       "platforms": [
