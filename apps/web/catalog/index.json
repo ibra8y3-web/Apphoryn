@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T23:19:35.265112+00:00",
+  "generated_at": "2026-11-27T23:19:51.863519+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -49370,11 +49370,11 @@
       "icon_url": "https://raw.githubusercontent.com/X-T-E-R/kiki/kiki/apps/kiki-desktop/icons/icon.png",
       "repository_url": "https://github.com/X-T-E-R/kiki",
       "github_repo_id": "1371343428",
-      "source_updated_at": "2026-11-27T14:21:09Z",
+      "source_updated_at": "2026-11-27T18:40:38Z",
       "homepage_url": "https://x-t-e-r.github.io/kiki/",
       "owner": "X-T-E-R",
       "default_branch": "kiki",
-      "source_commit_sha": "e7a4a45904e8adb58b02013cb9f27b1f2cc59486",
+      "source_commit_sha": "1af2a417c4ef42045281870557d485248404bb59",
       "license_text": "MIT License\n\nCopyright (c) 2026 Moonshot AI\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -49385,20 +49385,19 @@
       "category": "developer",
       "topics": [
         "agent-workbench",
-        "ai-agent",
-        "claude-code",
+        "ai-agents",
+        "android",
         "cli",
-        "codex",
         "coding-agent",
         "desktop-app",
         "developer-tools",
+        "electron",
         "kimi",
-        "llm",
         "local-first",
         "mcp",
         "multi-agent",
-        "tauri",
-        "terminal-ui"
+        "terminal-ui",
+        "typescript"
       ],
       "latest_version": "kiki-v0.6.2",
       "release_url": "https://github.com/X-T-E-R/kiki/releases/tag/kiki-v0.6.2",
