@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T04:04:43.888682+00:00",
+  "generated_at": "2026-11-27T04:09:24.851850+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -101910,7 +101910,7 @@
       "icon_url": "https://raw.githubusercontent.com/fcopensource/veyraeditor/main/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/fcopensource/veyraeditor",
       "github_repo_id": "1378387747",
-      "source_updated_at": "2026-11-25T00:00:37Z",
+      "source_updated_at": "2026-11-26T04:32:25Z",
       "homepage_url": "https://veyraeditor.com",
       "owner": "fcopensource",
       "default_branch": "main",
