@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T15:08:09.463085+00:00",
+  "generated_at": "2026-11-27T15:08:33.331281+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -109086,7 +109086,7 @@
       "homepage_url": null,
       "owner": "PianoNic",
       "default_branch": "main",
-      "source_commit_sha": "93e21e94145e99bf33119380a202fc176e40b982",
+      "source_commit_sha": "f97d4875be6d1970d818a7faa0435cf015b28fe2",
       "license_text": "MIT License\n\nCopyright (c) 2026 PianoNic\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -109107,10 +109107,10 @@
         "webex",
         "windows"
       ],
-      "latest_version": "v0.3.11",
-      "release_url": "https://github.com/PianoNic/Webox/releases/tag/v0.3.11",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pianonic-webox-v0.3.11",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pianonic-webox-v0.3.11/THIRD-PARTY-NOTICE-pianonic-webox.txt",
+      "latest_version": "v0.3.12",
+      "release_url": "https://github.com/PianoNic/Webox/releases/tag/v0.3.12",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pianonic-webox-v0.3.12",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pianonic-webox-v0.3.12/THIRD-PARTY-NOTICE-pianonic-webox.txt",
       "artifacts": [
         {
           "id": "193a39b9a991dddcbfef091b6df763a61f801295f89188736df653e343b78360",
@@ -109128,6 +109128,23 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pianonic-webox-v0.3.11/Webox-Setup-0.3.11-x64.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pianonic-webox-v0.3.11"
+        },
+        {
+          "id": "f7975da152a9bc7e1af98523b0cecf77d26c2af39e81dd92f3a24f92add5b5e2",
+          "filename": "Webox-Setup-0.3.12-x64.exe",
+          "original_filename": "Webox-Setup-0.3.12-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.3.12",
+          "size_bytes": 32069270,
+          "sha256": "f7975da152a9bc7e1af98523b0cecf77d26c2af39e81dd92f3a24f92add5b5e2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pianonic-webox-v0.3.12/Webox-Setup-0.3.12-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pianonic-webox-v0.3.12"
         }
       ],
       "platforms": [
