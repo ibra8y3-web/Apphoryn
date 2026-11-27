@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:10:46.091322+00:00",
+  "generated_at": "2026-11-27T00:11:08.258739+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -9384,18 +9384,19 @@
       "id": "242neguev-automat-pdf",
       "slug": "242neguev-automat-pdf",
       "name": "Automat-PDF",
-      "summary": "Application Windows pour fusionner, séparer, organiser, protéger et diffuser des PDF : bulletins de paie séparés par personne et envoyés à chacun, conversions Office et Word. Logiciel libre, licence MIT.",
-      "description": "Application Windows pour fusionner, séparer, organiser, protéger et diffuser des PDF : bulletins de paie séparés par personne et envoyés à chacun, conversions Office et Word. Logiciel libre, licence MIT.",
+      "summary": "Automat-PDF is a free, MIT-licensed desktop app for Windows and Mac that merges, splits, organizes, protects, compresses, and distributes PDFs, with payroll splitting and Office/Word conversion.",
+      "description": "Automat-PDF is a free, MIT-licensed desktop application for Windows and macOS, built with Rust and Tauri. It provides PDF workflows: merge, split by page or Excel-named lists, organize pages, interleave scans, convert images/PDFs, add page numbers/stamps/signatures, redact content, password-protect with AES-256, compress, split payroll PDFs by person, email individual files via Outlook or SMTP, and convert Office documents to PDF or PDF to editable Word. The README documents Windows/macOS installers, a build/test script, and an unsigned-code warning.",
       "translations": {
-        "en": {
-          "summary": "Application Windows pour fusionner, séparer, organiser, protéger et diffuser des PDF : bulletins de paie séparés par personne et envoyés à chacun, conversions Office et Word. Logiciel libre, licence MIT.",
-          "description": "Application Windows pour fusionner, séparer, organiser, protéger et diffuser des PDF : bulletins de paie séparés par personne et envoyés à chacun, conversions Office et Word. Logiciel libre, licence MIT."
-        }
+        "en": "Automat-PDF is a free, MIT-licensed desktop app for Windows and Mac that merges, splits, organizes, protects, compresses, and distributes PDFs, with payroll splitting and Office/Word conversion.",
+        "ar": "Automat-PDF تطبيق سطح مكتب مجاني برخصة MIT لنظامي Windows وmacOS، يدمج ملفات PDF ويقسّمها وينظّمها ويحميها ويضغطها ويوزّعها، مع تقسيم كشوف الرواتب وتحويل Office/Word."
       },
-      "description_translations": {},
-      "translation_status": "pending",
-      "ai_provider": null,
-      "ai_model": null,
+      "description_translations": {
+        "en": "Automat-PDF is a free, MIT-licensed desktop application for Windows and macOS, built with Rust and Tauri. It provides PDF workflows: merge, split by page or Excel-named lists, organize pages, interleave scans, convert images/PDFs, add page numbers/stamps/signatures, redact content, password-protect with AES-256, compress, split payroll PDFs by person, email individual files via Outlook or SMTP, and convert Office documents to PDF or PDF to editable Word. The README documents Windows/macOS installers, a build/test script, and an unsigned-code warning.",
+        "ar": "Automat-PDF تطبيق سطح مكتب مجاني برخصة MIT لنظامي Windows وmacOS، مبني باستخدام Rust وTauri. يوفّر أدوات PDF: الدمج، والتقسيم حسب الصفحة أو قوائم Excel، وتنظيم الصفحات، وإدراج المسوحات بالتناوب، وتحويل الصور وملفات PDF، وإضافة أرقام الصفحات والأختام والتوقيعات، وحجب المحتوى، وحماية الملفات بكلمة مرور AES-256، والضغط، وتقسيم كشوف الرواتب حسب الشخص، وإرسال الملفات فرديًا عبر Outlook أو SMTP، وتحويل مستندات Office إلى PDF أو PDF إلى Word قابل للتحرير. يوثّق README مثبّتات Windows/macOS وسكربت بناء واختبار وتحذيرًا بشأن عدم توقيع الشيفرة."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "particle-ai/particle-1:free",
       "icon_url": "https://raw.githubusercontent.com/242Neguev/Automat-PDF/main/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/242Neguev/Automat-PDF",
       "github_repo_id": "1447263778",
@@ -9403,14 +9404,14 @@
       "homepage_url": null,
       "owner": "242Neguev",
       "default_branch": "main",
-      "source_commit_sha": "64d25355e1f407704746b182c4d8d78b7a5e0396",
+      "source_commit_sha": "3c74cdf6a9695672d69b50a97539671e2933a9b3",
       "license_text": "MIT License\n\nCopyright (c) 2026 Eau sèche\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "unknown",
-      "build_recommended": false,
-      "classification_source": "heuristic",
-      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Standalone desktop end-user application with documented Windows/macOS installers and a build/test script; the Tauri/Rust stack supports source builds.",
       "project_status": "installable",
       "category": "productivity",
       "topics": [
