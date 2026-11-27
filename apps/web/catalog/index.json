@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T04:48:21.227904+00:00",
+  "generated_at": "2026-11-27T04:53:25.997099+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -102392,7 +102392,7 @@
       "homepage_url": "https://theshellx.com/vibework",
       "owner": "martinsbrezauckis",
       "default_branch": "main",
-      "source_commit_sha": "e17b5d8d065dfdd829f816f6c7568a11c00ff046",
+      "source_commit_sha": "ddcb964871839987335dbcbea360048bb8668b3b",
       "license_text": "MIT License\n\nCopyright (c) 2026 Martins Brezauckis\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -102416,10 +102416,10 @@
         "tauri",
         "typescript"
       ],
-      "latest_version": "v0.1.18",
-      "release_url": "https://github.com/martinsbrezauckis/vibe-work/releases/tag/v0.1.18",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-martinsbrezauckis-vibe-work-v0.1.18",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-martinsbrezauckis-vibe-work-v0.1.18/THIRD-PARTY-NOTICE-martinsbrezauckis-vibe-work.txt",
+      "latest_version": "v0.1.19",
+      "release_url": "https://github.com/martinsbrezauckis/vibe-work/releases/tag/v0.1.19",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-martinsbrezauckis-vibe-work-v0.1.19",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-martinsbrezauckis-vibe-work-v0.1.19/THIRD-PARTY-NOTICE-martinsbrezauckis-vibe-work.txt",
       "artifacts": [
         {
           "id": "d1acccfcd4dbe53a82275cb483ba08349df5dbba1e9771039a3ed26c07d235ea",
@@ -102488,6 +102488,74 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-martinsbrezauckis-vibe-work-v0.1.18/Vibe_Work_0.1.18_arm64.dmg",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-martinsbrezauckis-vibe-work-v0.1.18"
+        },
+        {
+          "id": "5f412710df3c272e040a84e144b9f6b27e91c19fd9fca1acd5d294ec5d74f73c",
+          "filename": "Vibe-Work_0.1.19_amd64.AppImage",
+          "original_filename": "Vibe-Work_0.1.19_amd64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.1.19",
+          "size_bytes": 136579576,
+          "sha256": "5f412710df3c272e040a84e144b9f6b27e91c19fd9fca1acd5d294ec5d74f73c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-martinsbrezauckis-vibe-work-v0.1.19/Vibe-Work_0.1.19_amd64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-martinsbrezauckis-vibe-work-v0.1.19"
+        },
+        {
+          "id": "6b7aff4b2f23698ff21d26072469c768a27ccb7988353bd5a58b89a843c03d32",
+          "filename": "Vibe-Work_0.1.19_amd64.deb",
+          "original_filename": "Vibe-Work_0.1.19_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.1.19",
+          "size_bytes": 80791960,
+          "sha256": "6b7aff4b2f23698ff21d26072469c768a27ccb7988353bd5a58b89a843c03d32",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-martinsbrezauckis-vibe-work-v0.1.19/Vibe-Work_0.1.19_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-martinsbrezauckis-vibe-work-v0.1.19"
+        },
+        {
+          "id": "eaae33645649fd4043db0a16777f90b3aeac75a699c7eda9932792d9ef0384c2",
+          "filename": "Vibe-Work_0.1.19_x64-setup.exe",
+          "original_filename": "Vibe-Work_0.1.19_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.1.19",
+          "size_bytes": 37146232,
+          "sha256": "eaae33645649fd4043db0a16777f90b3aeac75a699c7eda9932792d9ef0384c2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-martinsbrezauckis-vibe-work-v0.1.19/Vibe-Work_0.1.19_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-martinsbrezauckis-vibe-work-v0.1.19"
+        },
+        {
+          "id": "9252a1e5fbca076a47a817adb354eaa05a14e354d64c0659a2b3326a25769c39",
+          "filename": "Vibe_Work_0.1.19_arm64.dmg",
+          "original_filename": "Vibe_Work_0.1.19_arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.1.19",
+          "size_bytes": 57046059,
+          "sha256": "9252a1e5fbca076a47a817adb354eaa05a14e354d64c0659a2b3326a25769c39",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-martinsbrezauckis-vibe-work-v0.1.19/Vibe_Work_0.1.19_arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-martinsbrezauckis-vibe-work-v0.1.19"
         }
       ],
       "platforms": [
