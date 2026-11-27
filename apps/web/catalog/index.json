@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T06:51:43.068340+00:00",
+  "generated_at": "2026-11-27T06:52:03.500193+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -59926,17 +59926,19 @@
         }
       ],
       "name": "MultiTool-Office-Next",
-      "summary": "Free, open-source Windows desktop toolbox for local file search, document previews, offline OCR batch renaming, and an optional AI assistant.",
-      "description": "MultiTool Office Next (MTO) is a free, open-source Windows x64 desktop toolbox built with Tauri and licensed under Apache-2.0. It combines column-based file browsing, local filename search with filters, and document previews for PDF, images, text, Markdown, CSV, Word, Excel, and PowerPoint. An offline OCR workflow extracts fields from scanned PDFs and images and batch-renames files using configurable profiles, with review, export, and undo. Browsing, search, preview, and default OCR run locally without an account or AI API key; an optional AI assistant connects to a model service you choose (for example DeepSeek or another OpenAI-compatible endpoint) and can draft OCR profiles, search files, and create documents. It also includes a quick panel and task reminders. The current app and installer language is Simplified Chinese. Downloads include a Windows installer and a portable executable; both require Windows x64 and Microsoft Edge WebView2 and bundle offline OCR models.",
+      "summary": "Free, open-source Windows desktop toolbox for local file search, document previews, OCR batch renaming, and an optional AI assistant.",
+      "description": "Free, open-source Windows desktop toolbox for local file search, document previews, OCR batch renaming, and an optional AI assistant.",
       "translations": {
-        "en": "Free, open-source Windows desktop toolbox for local file search, document previews, offline OCR batch renaming, and an optional AI assistant.",
-        "ar": "مجموعة أدوات مكتبية مجانية ومفتوحة المصدر لنظام Windows تتيح البحث المحلي عن الملفات ومعاينة المستندات وإعادة تسمية الملفات الممسوحة ضوئياً عبر OCR دون اتصال، مع مساعد ذكاء اصطناعي اختياري."
+        "en": {
+          "summary": "Free, open-source Windows desktop toolbox for local file search, document previews, OCR batch renaming, and an optional AI assistant.",
+          "description": "Free, open-source Windows desktop toolbox for local file search, document previews, OCR batch renaming, and an optional AI assistant."
+        }
       },
       "description_translations": {
         "en": "MultiTool Office Next (MTO) is a free, open-source Windows x64 desktop toolbox built with Tauri and licensed under Apache-2.0. It combines column-based file browsing, local filename search with filters, and document previews for PDF, images, text, Markdown, CSV, Word, Excel, and PowerPoint. An offline OCR workflow extracts fields from scanned PDFs and images and batch-renames files using configurable profiles, with review, export, and undo. Browsing, search, preview, and default OCR run locally without an account or AI API key; an optional AI assistant connects to a model service you choose (for example DeepSeek or another OpenAI-compatible endpoint) and can draft OCR profiles, search files, and create documents. It also includes a quick panel and task reminders. The current app and installer language is Simplified Chinese. Downloads include a Windows installer and a portable executable; both require Windows x64 and Microsoft Edge WebView2 and bundle offline OCR models.",
         "ar": "MultiTool Office Next (MTO) تطبيق مكتبي مجاني ومفتوح المصدر لنظام Windows x64 مبني باستخدام Tauri ومرخّص بموجب Apache-2.0. يجمع بين تصفح الملفات بنظام الأعمدة، والبحث المحلي عن أسماء الملفات مع عوامل تصفية، ومعاينة المستندات بصيغ PDF والصور والنصوص وMarkdown وCSV وWord وExcel وPowerPoint. تتيح سير عمل OCR دون اتصال استخراج الحقول من ملفات PDF الممسوحة ضوئياً والصور، وإعادة تسمية الملفات دفعةً واحدة باستخدام ملفات تعريف قابلة للتكوين، مع المراجعة والتصدير والتراجع. يعمل التصفح والبحث والمعاينة وOCR الافتراضي محلياً دون حساب أو مفتاح API للذكاء الاصطناعي؛ أما المساعد الاختياري للذكاء الاصطناعي فيتصل بخدمة نموذج تختارها (مثل DeepSeek أو أي نقطة نهاية متوافقة مع OpenAI) ويمكنه صياغة ملفات تعريف OCR والبحث عن الملفات وإنشاء المستندات. يتضمن أيضاً لوحة سريعة وتذكيرات بالمهام. لغة التطبيق والمثبت الحالية هي الصينية المبسطة. تتضمن التنزيلات مثبتاً لنظام Windows وملفاً تنفيذياً محمولاً؛ ويتطلب كلاهما Windows x64 وMicrosoft Edge WebView2، ويضم نماذج OCR دون اتصال."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://avatars.githubusercontent.com/u/69998062?v=4",
@@ -59952,8 +59954,8 @@
       "license_eligible": true,
       "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "Standalone end-user Windows desktop application (Tauri) distributed as an installer and portable executable via GitHub Releases, with documented Windows x64 and Microsoft Edge WebView2 requirements; this supports project_kind application and build_recommended true.",
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
       "category": "productivity",
       "topics": [
         "ai-assistant",
