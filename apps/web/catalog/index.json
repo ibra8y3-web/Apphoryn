@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:04:39.782415+00:00",
+  "generated_at": "2026-11-27T00:05:23.489595+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -42676,18 +42676,19 @@
       "id": "pei-jz-jh-editor",
       "slug": "pei-jz-jh-editor",
       "name": "jh-editor",
-      "summary": "Local-first desktop text editor that starts instantly - far faster than VS Code. Excel-like CSV grid editing, Markdown with live preview and a page-turning Book mode, and 100MB+ files that open without freezing.",
-      "description": "Local-first desktop text editor that starts instantly - far faster than VS Code. Excel-like CSV grid editing, Markdown with live preview and a page-turning Book mode, and 100MB+ files that open without freezing.",
+      "summary": "J.H Editor is a local-first Tauri desktop text editor with CSV grid editing, Markdown live preview, Book mode, and large-file support.",
+      "description": "J.H Editor is a local-first desktop text editor built with Tauri 2, vanilla JavaScript, and CodeMirror 6. It opens files quickly and provides text editing, CSV/TSV grid editing, Markdown block editing with live preview, a page-turning Book mode, diff and merge views, file search, and large-file handling. It also includes Office previews, Mermaid diagrams, and Git conflict support. The repository topics indicate Windows and Windows 11 support.",
       "translations": {
-        "en": {
-          "summary": "Local-first desktop text editor that starts instantly - far faster than VS Code. Excel-like CSV grid editing, Markdown with live preview and a page-turning Book mode, and 100MB+ files that open without freezing.",
-          "description": "Local-first desktop text editor that starts instantly - far faster than VS Code. Excel-like CSV grid editing, Markdown with live preview and a page-turning Book mode, and 100MB+ files that open without freezing."
-        }
+        "en": "J.H Editor is a local-first Tauri desktop text editor with CSV grid editing, Markdown live preview, Book mode, and large-file support.",
+        "ar": "J.H Editor هو محرر نصوص محلي أولًا على سطح المكتب باستخدام Tauri، مع تحرير CSV كجدول، ومعاينة Markdown مباشرة، ووضع Book، ودعم الملفات الكبيرة."
       },
-      "description_translations": {},
-      "translation_status": "pending",
-      "ai_provider": null,
-      "ai_model": null,
+      "description_translations": {
+        "en": "J.H Editor is a local-first desktop text editor built with Tauri 2, vanilla JavaScript, and CodeMirror 6. It opens files quickly and provides text editing, CSV/TSV grid editing, Markdown block editing with live preview, a page-turning Book mode, diff and merge views, file search, and large-file handling. It also includes Office previews, Mermaid diagrams, and Git conflict support. The repository topics indicate Windows and Windows 11 support.",
+        "ar": "J.H Editor هو محرر نصوص محلي أولًا على سطح المكتب، مبني باستخدام Tauri 2 وJavaScript Vanilla وCodeMirror 6. يفتح الملفات بسرعة ويوفر تحرير النصوص، وتحرير CSV/TSV كجدول، وتحرير Markdown على شكل كتل مع معاينة مباشرة، ووضع Book لقراءة الصفحات، وعروض المقارنة والدمج، والبحث في الملفات، والتعامل مع الملفات الكبيرة. يتضمن أيضًا معاينة ملفات Office ومخططات Mermaid ودعم تعارضات Git. تشير موضوعات المستودع إلى دعم Windows وWindows 11."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/pei-jz/jh-editor/master/public/icons/appIcon.png",
       "repository_url": "https://github.com/pei-jz/jh-editor",
       "github_repo_id": "1329397881",
@@ -42699,10 +42700,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 J.H Editor Team\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "unknown",
-      "build_recommended": false,
-      "classification_source": "heuristic",
-      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "The supplied evidence describes a standalone desktop text editor built with Tauri 2. Topics including desktop-app, tauri, tauri-v2, windows, and windows-11 support classifying it as an application with a plausible source-build path.",
       "project_status": "installable",
       "category": "developer",
       "topics": [
