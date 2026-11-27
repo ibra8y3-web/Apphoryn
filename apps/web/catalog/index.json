@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T16:28:21.647955+00:00",
+  "generated_at": "2026-11-27T16:28:38.929257+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -64018,7 +64018,7 @@
       "homepage_url": null,
       "owner": "LeiDian-FW",
       "default_branch": "main",
-      "source_commit_sha": "f49576992c4226957e09a852b8a89cbbb03b7ec3",
+      "source_commit_sha": "c37196bb6f906309500e9ddc8b72a14467a63902",
       "license_text": "MIT License\n\nCopyright (c) 2026 spwncm contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -64036,8 +64036,8 @@
         "netease-cloud-music",
         "windows"
       ],
-      "latest_version": "v1.0.0",
-      "release_url": "https://github.com/LeiDian-FW/ncm-helper-windows/releases/tag/v1.0.0",
+      "latest_version": "v1.1.1",
+      "release_url": "https://github.com/LeiDian-FW/ncm-helper-windows/releases/tag/v1.1.1",
       "platforms": [],
       "project_status": "source_available"
     },
