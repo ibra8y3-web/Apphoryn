@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:05:59.909360+00:00",
+  "generated_at": "2026-11-27T00:10:46.091322+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -38506,33 +38506,34 @@
       "id": "hatchlight-hatchlight",
       "slug": "hatchlight-hatchlight",
       "name": "hatchlight",
-      "summary": "Make pictures and videos with many AI models side by side, on your own GPU or your own API keys. Desktop app, CLI, Docker server and MCP server. Open source, no account.",
-      "description": "Make pictures and videos with many AI models side by side, on your own GPU or your own API keys. Desktop app, CLI, Docker server and MCP server. Open source, no account.",
+      "summary": "Open-source desktop app, CLI, Docker server and MCP server for generating and editing images and videos with local or cloud AI models, side by side.",
+      "description": "Hatchlight is an open-source, account-free application for making pictures and videos with many AI models side by side. It runs models on your own GPU or calls cloud services with your own API keys, showing each result's time and cost. Features include model comparison and ranking, saved characters and styles, LoRA loading and SDXL LoRA training, image editing and upscaling, a searchable local gallery, and a chat assistant that selects models and writes prompts. The same program provides a CLI and an MCP server for AI agents, plus a Docker server for self-hosting with per-person accounts and galleries. It runs on Windows, macOS and Linux; local model support varies by platform and GPU. Source builds use Bun 1.4+ with bun install, bun run build and bun run start.",
       "translations": {
-        "en": {
-          "summary": "Make pictures and videos with many AI models side by side, on your own GPU or your own API keys. Desktop app, CLI, Docker server and MCP server. Open source, no account.",
-          "description": "Make pictures and videos with many AI models side by side, on your own GPU or your own API keys. Desktop app, CLI, Docker server and MCP server. Open source, no account."
-        }
+        "en": "Open-source desktop app, CLI, Docker server and MCP server for generating and editing images and videos with local or cloud AI models, side by side.",
+        "ar": "تطبيق مفتوح المصدر لسطح المكتب وواجهة سطر أوامر وخادم Docker وخادم MCP لإنشاء الصور والفيديوهات وتحريرها بنماذج ذكاء اصطناعي محلية أو سحابية، جنبًا إلى جنب."
       },
-      "description_translations": {},
-      "translation_status": "pending",
-      "ai_provider": null,
-      "ai_model": null,
+      "description_translations": {
+        "en": "Hatchlight is an open-source, account-free application for making pictures and videos with many AI models side by side. It runs models on your own GPU or calls cloud services with your own API keys, showing each result's time and cost. Features include model comparison and ranking, saved characters and styles, LoRA loading and SDXL LoRA training, image editing and upscaling, a searchable local gallery, and a chat assistant that selects models and writes prompts. The same program provides a CLI and an MCP server for AI agents, plus a Docker server for self-hosting with per-person accounts and galleries. It runs on Windows, macOS and Linux; local model support varies by platform and GPU. Source builds use Bun 1.4+ with bun install, bun run build and bun run start.",
+        "ar": "Hatchlight تطبيق مفتوح المصدر لا يتطلب حسابًا لإنشاء الصور والفيديوهات باستخدام نماذج ذكاء اصطناعي متعددة جنبًا إلى جنب. يشغّل النماذج على وحدة معالجة الرسومات لديك أو يستدعي خدمات سحابية بمفاتيح API الخاصة بك، ويعرض زمن كل نتيجة وتكلفتها. تشمل الميزات مقارنة النماذج وترتيبها، وحفظ الشخصيات والأنماط، وتحميل LoRA وتدريب SDXL LoRA، وتحرير الصور وتحسين دقتها، ومعرضًا محليًا قابلًا للبحث، ومساعد محادثة يختار النماذج ويكتب المطالبات. يوفر البرنامج نفسه واجهة سطر أوامر وخادم MCP لوكلاء الذكاء الاصطناعي، إضافة إلى خادم Docker للاستضافة الذاتية بحسابات ومعارض لكل شخص. يعمل على Windows وmacOS وLinux، ويختلف دعم النماذج المحلية حسب المنصة ووحدة معالجة الرسومات. تتطلب البناء من المصدر Bun 1.4 أو أحدث عبر bun install وbun run build وbun run start."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "particle-ai/particle-1:free",
       "icon_url": "https://raw.githubusercontent.com/hatchlight/hatchlight/main/apps/desktop/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/hatchlight/hatchlight",
       "github_repo_id": "1460790620",
-      "source_updated_at": "2026-11-26T06:19:43Z",
+      "source_updated_at": "2026-11-26T19:00:38Z",
       "homepage_url": "https://hatchlight.app/",
       "owner": "hatchlight",
       "default_branch": "main",
-      "source_commit_sha": "365733e7408553278428aa69f890c5047a1c5173",
+      "source_commit_sha": "07ba0aec8202b7dab4b1e3b21b1acb326ff3a7fe",
       "license_text": "MIT License\n\nCopyright (c) 2026 Hatchlight contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
       "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "heuristic",
-      "classification_reason": "Standalone application indicated by repository evidence.",
+      "classification_source": "ai",
+      "classification_reason": "Standalone desktop application and CLI with a documented Bun source build; it also provides Docker and MCP server modes.",
       "project_status": "installable",
       "category": "developer",
       "topics": [
@@ -38556,8 +38557,8 @@
         "text-to-image",
         "video-generation"
       ],
-      "latest_version": "v0.5.0",
-      "release_url": "https://github.com/hatchlight/hatchlight/releases/tag/v0.5.0",
+      "latest_version": "v0.7.0",
+      "release_url": "https://github.com/hatchlight/hatchlight/releases/tag/v0.7.0",
       "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hatchlight-hatchlight-v0.5.0",
       "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hatchlight-hatchlight-v0.5.0/THIRD-PARTY-NOTICE-hatchlight-hatchlight.txt",
       "artifacts": [
