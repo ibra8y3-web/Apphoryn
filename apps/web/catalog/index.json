@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T03:23:07.526745+00:00",
+  "generated_at": "2026-11-27T03:27:47.820647+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -83526,14 +83526,32 @@
     {
       "id": "sunerpy-router-tools",
       "slug": "sunerpy-router-tools",
-      "artifacts": [],
+      "artifacts": [
+        {
+          "id": "1067590310b293568814284a673824d4f57408d1051e6d3e8e0f8c7c61a127b2",
+          "filename": "router-tools_0.1.0_windows_amd64_setup.exe",
+          "original_filename": "router-tools_0.1.0_windows_amd64_setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.1.0",
+          "size_bytes": 13085515,
+          "sha256": "1067590310b293568814284a673824d4f57408d1051e6d3e8e0f8c7c61a127b2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sunerpy-router-tools-v0.1.0/router-tools_0.1.0_windows_amd64_setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sunerpy-router-tools-v0.1.0"
+        }
+      ],
       "name": "router-tools",
-      "summary": "Go CLI and Wails desktop app for exact-profile, safety-gated router management. First adapter: Xiaomi BE6500 Pro (RD08) firmware 1.1.96.",
-      "description": "Go CLI and Wails desktop app for exact-profile, safety-gated router management. First adapter: Xiaomi BE6500 Pro (RD08) firmware 1.1.96.",
+      "summary": "路由器自定义设置工具，内置供 AI Agent 使用的 MCP 服务。首个适配：小米 BE6500 Pro（RD08）1.1.96。Safety-gated, exact-profile router CLI and desktop app with an MCP server for AI agents.",
+      "description": "路由器自定义设置工具，内置供 AI Agent 使用的 MCP 服务。首个适配：小米 BE6500 Pro（RD08）1.1.96。Safety-gated, exact-profile router CLI and desktop app with an MCP server for AI agents.",
       "translations": {
         "en": {
-          "summary": "Go CLI and Wails desktop app for exact-profile, safety-gated router management. First adapter: Xiaomi BE6500 Pro (RD08) firmware 1.1.96.",
-          "description": "Go CLI and Wails desktop app for exact-profile, safety-gated router management. First adapter: Xiaomi BE6500 Pro (RD08) firmware 1.1.96."
+          "summary": "路由器自定义设置工具，内置供 AI Agent 使用的 MCP 服务。首个适配：小米 BE6500 Pro（RD08）1.1.96。Safety-gated, exact-profile router CLI and desktop app with an MCP server for AI agents.",
+          "description": "路由器自定义设置工具，内置供 AI Agent 使用的 MCP 服务。首个适配：小米 BE6500 Pro（RD08）1.1.96。Safety-gated, exact-profile router CLI and desktop app with an MCP server for AI agents."
         }
       },
       "description_translations": {},
@@ -83543,32 +83561,42 @@
       "icon_url": "https://avatars.githubusercontent.com/u/30691040?v=4",
       "repository_url": "https://github.com/sunerpy/router-tools",
       "github_repo_id": "1471703434",
-      "source_updated_at": "2026-11-25T11:49:38Z",
+      "source_updated_at": "2026-11-27T03:03:51Z",
       "homepage_url": null,
       "owner": "sunerpy",
       "default_branch": "main",
-      "source_commit_sha": "a6421de50e38228dd29d05504833056bb89c7773",
+      "source_commit_sha": "d4ab8249056c4ff09075cf9d7f04c67f9bba79f8",
       "license_text": "MIT License\n\nCopyright (c) 2026 router-tools contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "developer_tool",
+      "project_kind": "application",
       "build_recommended": true,
       "classification_source": "heuristic",
-      "classification_reason": "Executable developer tool indicated by repository evidence.",
-      "category": "other",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "network",
       "topics": [
+        "ai-agents",
+        "be6500-pro",
+        "chinese",
         "cli",
         "desktop-app",
         "go",
+        "mcp",
+        "mcp-server",
+        "model-context-protocol",
+        "rd08",
         "router",
         "ssh",
         "wails",
-        "xiaomi"
+        "xiaomi",
+        "xiaomi-router"
       ],
-      "latest_version": null,
-      "release_url": null,
-      "platforms": [],
-      "project_status": "source_available",
+      "latest_version": "v0.1.0",
+      "release_url": "https://github.com/sunerpy/router-tools/releases/tag/v0.1.0",
+      "platforms": [
+        "windows"
+      ],
+      "project_status": "installable",
       "build_attempts": [
         {
           "git_ref": "8cee26ca1d808baa7e3a3fcae62d1e464720b096",
@@ -83600,7 +83628,9 @@
           "requested_at": "2026-11-26T20:44:08.578926+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
         }
-      ]
+      ],
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sunerpy-router-tools-v0.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sunerpy-router-tools-v0.1.0/THIRD-PARTY-NOTICE-sunerpy-router-tools.txt"
     },
     {
       "id": "niedev-rtranslator",
