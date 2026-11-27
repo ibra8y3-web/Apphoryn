@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T11:45:27.070040+00:00",
+  "generated_at": "2026-11-27T11:50:33.012091+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -32062,7 +32062,7 @@
       "icon_url": "https://raw.githubusercontent.com/Z1xus/fidont/main/icon.svg",
       "repository_url": "https://github.com/Z1xus/fidont",
       "github_repo_id": "1404586273",
-      "source_updated_at": "2026-11-25T14:42:24Z",
+      "source_updated_at": "2026-11-27T09:05:43Z",
       "homepage_url": "https://z1xus.github.io/fidont/",
       "owner": "Z1xus",
       "default_branch": "main",
