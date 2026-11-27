@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T21:41:24.164087+00:00",
+  "generated_at": "2026-11-27T21:42:06.239669+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -61205,7 +61205,7 @@
       "icon_url": "https://raw.githubusercontent.com/sebastienpiconnier/MondoWrite/main/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/sebastienpiconnier/MondoWrite",
       "github_repo_id": "1408595429",
-      "source_updated_at": "2026-11-25T16:45:19Z",
+      "source_updated_at": "2026-11-27T16:43:56Z",
       "homepage_url": "https://mondowrite.app",
       "owner": "sebastienpiconnier",
       "default_branch": "main",
