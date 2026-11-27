@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:32:33.397554+00:00",
+  "generated_at": "2026-11-27T00:32:59.092080+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -66115,18 +66115,19 @@
       "slug": "lcajigasm-omega",
       "artifacts": [],
       "name": "omega",
-      "summary": "AI-driven maintenance for macOS, Linux and Windows: updates like topgrade, cleans like Mole, and fixes the step that fails. CLI, TUI and desktop app. Anthropic, OpenAI, OpenRouter, Ollama and local models.",
-      "description": "AI-driven maintenance for macOS, Linux and Windows: updates like topgrade, cleans like Mole, and fixes the step that fails. CLI, TUI and desktop app. Anthropic, OpenAI, OpenRouter, Ollama and local models.",
+      "summary": "AI-driven maintenance for macOS, Linux and Windows: updates software, cleans disk space, and diagnoses and fixes failed steps. Available as CLI, TUI and desktop app.",
+      "description": "omega is a Go-based, AI-driven maintenance tool for macOS, Linux and Windows. It updates software (Homebrew, App Store, apt, dnf, pacman, winget, Scoop, npm, pipx, uv, rustup and more), cleans caches and disk space, and when a step fails it reads the error, diagnoses the cause and applies the smallest fix after your approval. It runs as a CLI, a TUI and a desktop app, and works with Anthropic, OpenAI, OpenRouter, Ollama and local models, or fully offline with --no-ai/--offline. Commands cover updates, cleanup, health checks, repair, tuning, developer setup, git hygiene, AI agent skills and leftovers, disk limits, security and privacy audits, uninstalling apps, scheduling, snapshots/rollback, Docker, and an MCP server for AI agents. omega analyze is read-only, and omega ultra audits before changing anything. Install via the Homebrew tap, release binaries for Windows and Linux, a Docker image, or go install. MIT licensed.",
       "translations": {
-        "en": {
-          "summary": "AI-driven maintenance for macOS, Linux and Windows: updates like topgrade, cleans like Mole, and fixes the step that fails. CLI, TUI and desktop app. Anthropic, OpenAI, OpenRouter, Ollama and local models.",
-          "description": "AI-driven maintenance for macOS, Linux and Windows: updates like topgrade, cleans like Mole, and fixes the step that fails. CLI, TUI and desktop app. Anthropic, OpenAI, OpenRouter, Ollama and local models."
-        }
+        "en": "AI-driven maintenance for macOS, Linux and Windows: updates software, cleans disk space, and diagnoses and fixes failed steps. Available as CLI, TUI and desktop app.",
+        "ar": "omega أداة صيانة مدعومة بالذكاء الاصطناعي لأنظمة macOS وLinux وWindows: تحدّث البرامج، وتنظّف مساحة القرص، وتشخّص أخطاء الخطوات الفاشلة وتصلحها. متاحة كواجهة سطر أوامر وواجهة طرفية وتطبيق مكتبي."
       },
-      "description_translations": {},
-      "translation_status": "pending",
-      "ai_provider": null,
-      "ai_model": null,
+      "description_translations": {
+        "en": "omega is a Go-based, AI-driven maintenance tool for macOS, Linux and Windows. It updates software (Homebrew, App Store, apt, dnf, pacman, winget, Scoop, npm, pipx, uv, rustup and more), cleans caches and disk space, and when a step fails it reads the error, diagnoses the cause and applies the smallest fix after your approval. It runs as a CLI, a TUI and a desktop app, and works with Anthropic, OpenAI, OpenRouter, Ollama and local models, or fully offline with --no-ai/--offline. Commands cover updates, cleanup, health checks, repair, tuning, developer setup, git hygiene, AI agent skills and leftovers, disk limits, security and privacy audits, uninstalling apps, scheduling, snapshots/rollback, Docker, and an MCP server for AI agents. omega analyze is read-only, and omega ultra audits before changing anything. Install via the Homebrew tap, release binaries for Windows and Linux, a Docker image, or go install. MIT licensed.",
+        "ar": "omega أداة صيانة مدعومة بالذكاء الاصطناعي ومكتوبة بلغة Go لأنظمة macOS وLinux وWindows. تحدّث البرامج (Homebrew وApp Store وapt وdnf وpacman وwinget وScoop وnpm وpipx وuv وrustup وغيرها)، وتنظّف الذاكرة المؤقتة ومساحة القرص، وعند فشل إحدى الخطوات تقرأ الخطأ وتحدّد سببه وتطبّق أصغر إصلاح ممكن بعد موافقتك. تعمل كواجهة سطر أوامر وواجهة طرفية وتطبيق مكتبي، وتدعم Anthropic وOpenAI وOpenRouter وOllama والنماذج المحلية، أو تعمل دون اتصال كليًا باستخدام --no-ai/--offline. تشمل الأوامر التحديث والتنظيف وفحوص الصحة والإصلاح والضبط وإعداد بيئة المطور ونظافة Git ومهارات وكلاء الذكاء الاصطناعي وبقاياهم وحدود القرص وعمليات تدقيق الأمان والخصوصية وإلغاء تثبيت التطبيقات والجدولة واللقطات والاستعادة وDocker وخادم MCP لوكلاء الذكاء الاصطناعي. الأمر omega analyze للقراءة فقط، والأمر omega ultra يدقّق قبل تغيير أي شيء. التثبيت عبر Homebrew tap أو ملفات الإصدارات لأنظمة Windows وLinux أو صورة Docker أو go install. الترخيص MIT."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/lcajigasm/omega/main/cmd/omega-gui/icon.png",
       "repository_url": "https://github.com/lcajigasm/omega",
       "github_repo_id": "1435390510",
@@ -66134,14 +66135,14 @@
       "homepage_url": "https://lcajigasm.github.io/omega/",
       "owner": "lcajigasm",
       "default_branch": "main",
-      "source_commit_sha": "a62ee0d957911dc3d4b8aab47b6aacca5bd593a1",
+      "source_commit_sha": "55426317fa423a1a32b7d5b24815907eab90ca45",
       "license_text": "MIT License\n\nCopyright (c) 2026 Luis Cajigas\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
       "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "heuristic",
-      "classification_reason": "Standalone application indicated by repository evidence.",
+      "classification_source": "ai",
+      "classification_reason": "Repository evidence shows a standalone end-user application: a Go CLI/TUI plus a desktop app (cmd/omega-gui), with documented install paths (Homebrew tap, Windows/Linux release binaries, Docker image, go install github.com/lcajigasm/omega/cmd/omega@latest), CI and releases. It is not a library or framework, so project_kind is application and build_recommended is true.",
       "category": "ai",
       "topics": [
         "ai",
@@ -66165,8 +66166,8 @@
         "updater",
         "windows"
       ],
-      "latest_version": "v0.35.0",
-      "release_url": "https://github.com/lcajigasm/omega/releases/tag/v0.35.0",
+      "latest_version": "v0.36.0",
+      "release_url": "https://github.com/lcajigasm/omega/releases/tag/v0.36.0",
       "platforms": [],
       "project_status": "source_available",
       "build_attempts": [
