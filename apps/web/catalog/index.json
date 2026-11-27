@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T07:00:37.095730+00:00",
+  "generated_at": "2026-11-27T07:01:04.748283+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -50395,17 +50395,19 @@
       "slug": "josel120-light-md",
       "artifacts": [],
       "name": "light_md",
-      "summary": "Lightweight Markdown editor in C++ and Qt 6 with live preview, formatting buttons, tabs, themes, spell check, and PDF, HTML and ODT export.",
-      "description": "light_md is a lightweight desktop Markdown editor written in C++ with Qt 6. A writing pane sits beside a live formatted preview, and toolbar buttons let users format text without typing Markdown. Features include an outline panel, distraction-free mode, reader mode, tabbed documents with per-tab undo history, find and replace, recent files, checklists, image/table/code insertion, screenshot paste saved to an images folder, PDF, HTML and ODT export, printing, word count, crash-recovery autosave, syntax-highlighted editing, Hunspell spell checking in five languages, zoom controls, themes (System, Minimal, Dark, Omarchy), and a UI in English, Spanish, Portuguese, French and German. It builds with CMake on Windows (MinGW), macOS and Linux, with Qt Test unit tests, and is released under the MIT license.",
+      "summary": "Lightweight Markdown editor in C++ and Qt 6, for everyone: format with buttons or type Markdown directly, and see the result instantly.",
+      "description": "Lightweight Markdown editor in C++ and Qt 6, for everyone: format with buttons or type Markdown directly, and see the result instantly.",
       "translations": {
-        "en": "Lightweight Markdown editor in C++ and Qt 6 with live preview, formatting buttons, tabs, themes, spell check, and PDF, HTML and ODT export.",
-        "ar": "محرر Markdown خفيف مكتوب بلغة C++ مع Qt 6، يوفر معاينة حية وأزرار تنسيق وعلامات تبويب وسمات وفحصًا إملائيًا وتصديرًا إلى PDF وHTML وODT."
+        "en": {
+          "summary": "Lightweight Markdown editor in C++ and Qt 6, for everyone: format with buttons or type Markdown directly, and see the result instantly.",
+          "description": "Lightweight Markdown editor in C++ and Qt 6, for everyone: format with buttons or type Markdown directly, and see the result instantly."
+        }
       },
       "description_translations": {
         "en": "light_md is a lightweight desktop Markdown editor written in C++ with Qt 6. A writing pane sits beside a live formatted preview, and toolbar buttons let users format text without typing Markdown. Features include an outline panel, distraction-free mode, reader mode, tabbed documents with per-tab undo history, find and replace, recent files, checklists, image/table/code insertion, screenshot paste saved to an images folder, PDF, HTML and ODT export, printing, word count, crash-recovery autosave, syntax-highlighted editing, Hunspell spell checking in five languages, zoom controls, themes (System, Minimal, Dark, Omarchy), and a UI in English, Spanish, Portuguese, French and German. It builds with CMake on Windows (MinGW), macOS and Linux, with Qt Test unit tests, and is released under the MIT license.",
         "ar": "light_md محرر Markdown خفيف لأجهزة الكمبيوتر مكتوب بلغة C++ مع إطار العمل Qt 6. تظهر لوحة الكتابة بجوار معاينة حية للنص المنسّق، وتتيح أزرار التنسيق تنسيق النص دون الحاجة إلى كتابة صيغ Markdown. من ميزاته: لوحة مخطط، ووضع بلا مشتتات، ووضع قراءة، ومستندات في علامات تبويب لكل منها سجل تراجع خاص، والبحث والاستبدال، والمستندات الأخيرة، وقوائم الاختيار، وإدراج الصور والجداول وأكواد البرمجة، وحفظ لقطات الشاشة الملصقة في مجلد images، والتصدير إلى PDF وHTML وODT، والطباعة، وعدّ الكلمات، واستعادة تلقائية بعد التعطل، وتمييز الصيغة في لوحة الكتابة، وفحص إملائي عبر Hunspell بخمس لغات، وتحكم في التكبير، وسمات (النظام، البسيط، الداكن، Omarchy)، وواجهة بالإنجليزية والإسبانية والبرتغالية والفرنسية والألمانية. يُبنى بأمر CMake على ويندوز وmacOS ولينكس، مع اختبارات Qt Test، ومرخّص تحت رخصة MIT."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "inclusionai/ling-3.2-flash:free",
       "icon_url": "https://avatars.githubusercontent.com/u/12243367?v=4",
@@ -50419,10 +50421,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 josel120\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
+      "project_kind": "developer_tool",
       "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "Standalone end-user desktop application (Markdown editor) written in C++ with Qt 6, with documented CMake build instructions for Windows (MinGW), macOS and Linux, CI-built release packages, and Qt Test unit tests; a supported build path is clearly evidenced.",
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
       "category": "developer",
       "topics": [
         "beginner-friendly",
