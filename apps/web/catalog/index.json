@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:14:54.031320+00:00",
+  "generated_at": "2026-11-27T00:16:10.849845+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -39598,6 +39598,66 @@
       "platforms": [
         "windows"
       ]
+    },
+    {
+      "id": "tthheusalmeida-homelab",
+      "slug": "tthheusalmeida-homelab",
+      "artifacts": [],
+      "name": "homelab",
+      "summary": "HomeLab is a Windows/Linux desktop app that turns videos, lectures and PDFs into organized knowledge: local transcription, AI summaries, mind maps, infographics and a searchable Markdown library.",
+      "description": "HomeLab is a Windows/Linux desktop app that turns videos, lectures and PDFs into organized, searchable knowledge. Paste a video link or open a PDF; the app downloads the media, transcribes it locally (Whisper), splits the text into parts and summarizes it with the AI provider you choose. Scanned PDFs work via on-device OCR with automatic language detection, and failed tasks resume where they stopped.\n\nEach summary becomes an editable mind map and an infographic, exportable as PNG (infographics also as SVG or PDF). Everything is stored as Markdown pages in a library with categories, tags, full-text search and reading mode. You can chat with the AI in saved conversations, customize prompts, and track requests and cost.\n\nAI options are Gemini, Anthropic (Claude), Groq (your key stored encrypted) or local Ollama, with automatic fallback to the cheapest model when overloaded. Only text goes to the configured AI; audio never leaves the machine, and there is no HomeLab server or account.\n\nInstallers for Windows and Linux are on GitHub Releases (the Linux AppImage may need FUSE 2). Built with Electron, React and TypeScript, with a NestJS dependency-injection backend. MIT licensed.",
+      "translations": {
+        "en": "HomeLab is a Windows/Linux desktop app that turns videos, lectures and PDFs into organized knowledge: local transcription, AI summaries, mind maps, infographics and a searchable Markdown library.",
+        "ar": "HomeLab تطبيق سطح مكتب لويندوز ولينكس يحوّل الفيديوهات والدروس وملفات PDF إلى معرفة منظمة: تفريغ محلي، وملخصات بالذكاء الاصطناعي، وخرائط ذهنية، وإنفوجرافيك، ومكتبة Markdown قابلة للبحث."
+      },
+      "description_translations": {
+        "en": "HomeLab is a Windows/Linux desktop app that turns videos, lectures and PDFs into organized, searchable knowledge. Paste a video link or open a PDF; the app downloads the media, transcribes it locally (Whisper), splits the text into parts and summarizes it with the AI provider you choose. Scanned PDFs work via on-device OCR with automatic language detection, and failed tasks resume where they stopped.\n\nEach summary becomes an editable mind map and an infographic, exportable as PNG (infographics also as SVG or PDF). Everything is stored as Markdown pages in a library with categories, tags, full-text search and reading mode. You can chat with the AI in saved conversations, customize prompts, and track requests and cost.\n\nAI options are Gemini, Anthropic (Claude), Groq (your key stored encrypted) or local Ollama, with automatic fallback to the cheapest model when overloaded. Only text goes to the configured AI; audio never leaves the machine, and there is no HomeLab server or account.\n\nInstallers for Windows and Linux are on GitHub Releases (the Linux AppImage may need FUSE 2). Built with Electron, React and TypeScript, with a NestJS dependency-injection backend. MIT licensed.",
+        "ar": "HomeLab تطبيق سطح مكتب لويندوز ولينكس يحوّل الفيديوهات والدروس وملفات PDF إلى معرفة منظمة قابلة للبحث. ألصق رابط فيديو أو افتح ملف PDF؛ فيقوم التطبيق بتنزيل الوسائط وتفريغها محليًا (Whisper) وتقسيم النص إلى أجزاء وتلخيصه باستخدام مزوّد الذكاء الاصطناعي الذي تختاره. تعمل ملفات PDF الممسوحة ضوئيًا عبر التعرّف الضوئي على الحروف محليًا مع اكتشاف تلقائي للغة، وتستأنف المهام الفاشلة من حيث توقفت.\n\nيصبح كل ملخص خريطة ذهنية قابلة للتحرير وإنفوجرافيك قابلًا للتصدير بصيغة PNG (والإنفوجرافيك أيضًا بصيغتي SVG وPDF). يُخزَّن كل شيء في صفحات Markdown داخل مكتبة تضم فئات ووسومًا وبحثًا في النص الكامل ووضع قراءة. يمكنك الدردشة مع الذكاء الاصطناعي في محادثات محفوظة، وتخصيص المطالبات، وتتبّع الطلبات والتكلفة.\n\nخيارات الذكاء الاصطناعي هي Gemini وAnthropic (Claude) وGroq (مع تخزين مفتاحك مشفّرًا) أو Ollama المحلي، مع الرجوع التلقائي إلى النموذج الأرخص عند الحمل الزائد. يُرسَل النص فقط إلى الذكاء الاصطناعي المُعدّ، والصوت لا يغادر الجهاز، ولا يوجد خادم أو حساب لـ HomeLab.\n\nيتوفر مثبِّت لويندوز ولينكس على GitHub Releases (قد يحتاج ملف AppImage على لينكس إلى FUSE 2). التطبيق مبني باستخدام Electron وReact وTypeScript، مع خلفية NestJS تعتمد على حقن التبعيات. الترخيص MIT."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://raw.githubusercontent.com/tthheusalmeida/homelab/main/build/icon.png",
+      "repository_url": "https://github.com/tthheusalmeida/homelab",
+      "github_repo_id": "1458801698",
+      "source_updated_at": "2026-11-22T23:16:33Z",
+      "homepage_url": null,
+      "owner": "tthheusalmeida",
+      "default_branch": "main",
+      "source_commit_sha": "0da6cc4f353b94904ab5270a8c4969f040e9168e",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Matheus Almeida\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Standalone end-user desktop application (Electron + React + TypeScript) for Windows and Linux, distributed through GitHub Releases as a Windows installer and a Linux AppImage; the README documents a supported development and packaging path (npm install, npm run dev, tests, lint), so automatic source-build attempts are appropriate.",
+      "category": "multimedia",
+      "topics": [
+        "artificial-intelligence",
+        "desktop-app",
+        "education",
+        "electron",
+        "gemini",
+        "infographics",
+        "knowledge-management",
+        "local-ai",
+        "markdown",
+        "mind-mapping",
+        "nestjs",
+        "ollama",
+        "pdf",
+        "react",
+        "speech-to-text",
+        "summarization",
+        "transcription",
+        "typescript",
+        "whisper"
+      ],
+      "latest_version": "v0.22.0",
+      "release_url": "https://github.com/tthheusalmeida/homelab/releases/tag/v0.22.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "leon-ning-san-homurareader",
