@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T15:39:16.411506+00:00",
+  "generated_at": "2026-11-27T15:40:02.208269+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -10364,7 +10364,7 @@
       "icon_url": "https://raw.githubusercontent.com/eminsk/avito-sdk/main/assets/icon.png",
       "repository_url": "https://github.com/eminsk/avito-sdk",
       "github_repo_id": "1406367954",
-      "source_updated_at": "2026-11-26T10:16:06Z",
+      "source_updated_at": "2026-11-27T13:44:04Z",
       "homepage_url": "https://pypi.org/project/avito-sdk/",
       "owner": "eminsk",
       "default_branch": "main",
