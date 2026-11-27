@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T21:30:52.323025+00:00",
+  "generated_at": "2026-11-27T21:31:04.026909+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -42091,7 +42091,7 @@
       "homepage_url": null,
       "owner": "ojbkxc",
       "default_branch": "main",
-      "source_commit_sha": "be76505df5010f28c9815033143f700c3bff9c08",
+      "source_commit_sha": "e60ce8c2f12b49bdce3d058788adb178cb11ea0e",
       "license_text": "MIT License\n\nCopyright (c) 2026 ojbkxc\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -42112,8 +42112,8 @@
         "wasapi",
         "windows"
       ],
-      "latest_version": "v1.1.72",
-      "release_url": "https://github.com/ojbkxc/hint/releases/tag/v1.1.72",
+      "latest_version": null,
+      "release_url": null,
       "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ojbkxc-hint-v1.1.72",
       "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ojbkxc-hint-v1.1.72/THIRD-PARTY-NOTICE-ojbkxc-hint.txt",
       "artifacts": [
