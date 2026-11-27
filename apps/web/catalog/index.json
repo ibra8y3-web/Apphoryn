@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T20:36:27.180365+00:00",
+  "generated_at": "2026-11-27T20:37:03.953983+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -19480,7 +19480,7 @@
       "homepage_url": null,
       "owner": "BellocccYT",
       "default_branch": "master",
-      "source_commit_sha": "edcecd87c962ec898591f31ee5b81edb08feae4e",
+      "source_commit_sha": "aff78ecf99f21e060e22d9eb5200407380406bdb",
       "license_text": "MIT License\n\nCopyright (c) 2026 CleanMusic contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -19502,10 +19502,10 @@
         "royalty-free-music",
         "sound-effects"
       ],
-      "latest_version": "v2.3.0",
-      "release_url": "https://github.com/BellocccYT/cleanmusic/releases/tag/v2.3.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bellocccyt-cleanmusic-v2.3.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bellocccyt-cleanmusic-v2.3.0/THIRD-PARTY-NOTICE-bellocccyt-cleanmusic.txt",
+      "latest_version": "v2.3.1",
+      "release_url": "https://github.com/BellocccYT/cleanmusic/releases/tag/v2.3.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bellocccyt-cleanmusic-v2.3.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bellocccyt-cleanmusic-v2.3.1/THIRD-PARTY-NOTICE-bellocccyt-cleanmusic.txt",
       "artifacts": [
         {
           "id": "a5766c477badea49d360fef16497681b63e98375671c7f03ddbf54c6da419df7",
@@ -19608,6 +19608,57 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bellocccyt-cleanmusic-v2.3.0/CleanMusic-2.3.0.AppImage",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bellocccyt-cleanmusic-v2.3.0"
+        },
+        {
+          "id": "2bb0056b85953be43213f1196dee3f41f5f8aebbc3ec95cb7b90a0f67a704fe5",
+          "filename": "CleanMusic-2.3.1-portable.exe",
+          "original_filename": "CleanMusic-2.3.1-portable.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v2.3.1",
+          "size_bytes": 83380627,
+          "sha256": "2bb0056b85953be43213f1196dee3f41f5f8aebbc3ec95cb7b90a0f67a704fe5",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bellocccyt-cleanmusic-v2.3.1/CleanMusic-2.3.1-portable.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bellocccyt-cleanmusic-v2.3.1"
+        },
+        {
+          "id": "e5a1c4209f00a783407c5469f98224ec4e32d98fc47be31a56c66e7556ffdc65",
+          "filename": "CleanMusic-2.3.1-setup.exe",
+          "original_filename": "CleanMusic-2.3.1-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v2.3.1",
+          "size_bytes": 90782781,
+          "sha256": "e5a1c4209f00a783407c5469f98224ec4e32d98fc47be31a56c66e7556ffdc65",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bellocccyt-cleanmusic-v2.3.1/CleanMusic-2.3.1-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bellocccyt-cleanmusic-v2.3.1"
+        },
+        {
+          "id": "322c1cc4b86e46ab33d0ce5feee663cbddc0fb5135e00ee0ca69c85365804b0f",
+          "filename": "CleanMusic-2.3.1.AppImage",
+          "original_filename": "CleanMusic-2.3.1.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": null,
+          "version": "v2.3.1",
+          "size_bytes": 111844808,
+          "sha256": "322c1cc4b86e46ab33d0ce5feee663cbddc0fb5135e00ee0ca69c85365804b0f",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bellocccyt-cleanmusic-v2.3.1/CleanMusic-2.3.1.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bellocccyt-cleanmusic-v2.3.1"
         }
       ],
       "platforms": [
