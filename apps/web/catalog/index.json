@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T22:29:23.490071+00:00",
+  "generated_at": "2026-11-27T22:31:27.883036+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -17776,7 +17776,7 @@
       "homepage_url": "https://github.com/Zulut30/Chronos/releases/latest",
       "owner": "Zulut30",
       "default_branch": "main",
-      "source_commit_sha": "724ce2bfb2306f8068d869874e65c882e21f521d",
+      "source_commit_sha": "3c20a0f9453c9b545465477162800f1180c681f5",
       "license_text": "MIT License\n\nCopyright (c) 2026 T3 Tools Inc.\nCopyright (c) 2026 Zulut30 and Chronos contributors (modifications in this fork)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -17808,10 +17808,10 @@
         "t3-code",
         "t3code"
       ],
-      "latest_version": "chronos-v0.1.14-nightly.20261127.5319.chronos.17",
-      "release_url": "https://github.com/Zulut30/Chronos/releases/tag/chronos-v0.1.14-nightly.20261127.5319.chronos.17",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zulut30-chronos-chronos-v0.1.14-nightly.20261127.5319.chronos.17",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zulut30-chronos-chronos-v0.1.14-nightly.20261127.5319.chronos.17/THIRD-PARTY-NOTICE-zulut30-chronos.txt",
+      "latest_version": "chronos-v0.1.14-nightly.20261127.5319.chronos.22",
+      "release_url": "https://github.com/Zulut30/Chronos/releases/tag/chronos-v0.1.14-nightly.20261127.5319.chronos.22",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zulut30-chronos-chronos-v0.1.14-nightly.20261127.5319.chronos.22",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zulut30-chronos-chronos-v0.1.14-nightly.20261127.5319.chronos.22/THIRD-PARTY-NOTICE-zulut30-chronos.txt",
       "artifacts": [
         {
           "id": "8857c1efaaecb479d83e9b0b52b008dee55b8cfa70af69c117a56595b9832fb2",
@@ -18016,6 +18016,57 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zulut30-chronos-chronos-v0.1.14-nightly.20261127.5319.chronos.17/Chronos-0.1.14-nightly.20261127.5319.chronos.17-x64.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zulut30-chronos-chronos-v0.1.14-nightly.20261127.5319.chronos.17"
+        },
+        {
+          "id": "b0aa3b44f90819044361753816380ffd28e0376931f5465ce071727bd2119de0",
+          "filename": "Chronos-0.1.14-nightly.20261127.5319.chronos.22-arm64.dmg",
+          "original_filename": "Chronos-0.1.14-nightly.20261127.5319.chronos.22-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "chronos-v0.1.14-nightly.20261127.5319.chronos.22",
+          "size_bytes": 270731645,
+          "sha256": "b0aa3b44f90819044361753816380ffd28e0376931f5465ce071727bd2119de0",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zulut30-chronos-chronos-v0.1.14-nightly.20261127.5319.chronos.22/Chronos-0.1.14-nightly.20261127.5319.chronos.22-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zulut30-chronos-chronos-v0.1.14-nightly.20261127.5319.chronos.22"
+        },
+        {
+          "id": "b3e54f54f3962b9f23c9122ba449fd8ad71fc301e7c05eede1f270ad29e7380e",
+          "filename": "Chronos-0.1.14-nightly.20261127.5319.chronos.22-x64.dmg",
+          "original_filename": "Chronos-0.1.14-nightly.20261127.5319.chronos.22-x64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "x86_64",
+          "version": "chronos-v0.1.14-nightly.20261127.5319.chronos.22",
+          "size_bytes": 279948753,
+          "sha256": "b3e54f54f3962b9f23c9122ba449fd8ad71fc301e7c05eede1f270ad29e7380e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zulut30-chronos-chronos-v0.1.14-nightly.20261127.5319.chronos.22/Chronos-0.1.14-nightly.20261127.5319.chronos.22-x64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zulut30-chronos-chronos-v0.1.14-nightly.20261127.5319.chronos.22"
+        },
+        {
+          "id": "18366eaf06ab4421d617c9999f10c2a4ca223c22f47becaa3cc7aa30470d4586",
+          "filename": "Chronos-0.1.14-nightly.20261127.5319.chronos.22-x64.exe",
+          "original_filename": "Chronos-0.1.14-nightly.20261127.5319.chronos.22-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "chronos-v0.1.14-nightly.20261127.5319.chronos.22",
+          "size_bytes": 417789138,
+          "sha256": "18366eaf06ab4421d617c9999f10c2a4ca223c22f47becaa3cc7aa30470d4586",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zulut30-chronos-chronos-v0.1.14-nightly.20261127.5319.chronos.22/Chronos-0.1.14-nightly.20261127.5319.chronos.22-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zulut30-chronos-chronos-v0.1.14-nightly.20261127.5319.chronos.22"
         }
       ],
       "platforms": [
