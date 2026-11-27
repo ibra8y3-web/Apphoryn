@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T23:08:40.687288+00:00",
+  "generated_at": "2026-11-27T23:09:08.637503+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -110038,7 +110038,7 @@
       "homepage_url": "https://github.com/A21-devs/Virtual-Machine-Manager/wiki",
       "owner": "A21-devs",
       "default_branch": "main",
-      "source_commit_sha": "5870099e1d1be287aef68f35616198b9d6e0a538",
+      "source_commit_sha": "853ce3ed51d34c076f5de3411edd44ed94fa1013",
       "license_text": "MIT License\n\nCopyright (c) 2026 Ari\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -110063,10 +110063,10 @@
         "whpx",
         "windows"
       ],
-      "latest_version": "v0.2.0",
-      "release_url": "https://github.com/A21-devs/Virtual-Machine-Manager/releases/tag/v0.2.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-a21-devs-virtual-machine-manager-v0.2.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-a21-devs-virtual-machine-manager-v0.2.0/THIRD-PARTY-NOTICE-a21-devs-virtual-machine-manager.txt",
+      "latest_version": "v0.3.0",
+      "release_url": "https://github.com/A21-devs/Virtual-Machine-Manager/releases/tag/v0.3.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-a21-devs-virtual-machine-manager-v0.3.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-a21-devs-virtual-machine-manager-v0.3.0/THIRD-PARTY-NOTICE-a21-devs-virtual-machine-manager.txt",
       "artifacts": [
         {
           "id": "fb789a0936584ac2fd454d499c6fb6bf5cb16cc96c8970fcf8021a5fe10edc4f",
@@ -110084,6 +110084,23 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-a21-devs-virtual-machine-manager-v0.2.0/Virtual-Machine-Manager-Setup-0.2.0.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-a21-devs-virtual-machine-manager-v0.2.0"
+        },
+        {
+          "id": "715eb1efd50c5664ca6ce7eecf136a5058b397a36b6dca1df0d2d6ec8c722beb",
+          "filename": "Virtual-Machine-Manager-Setup-0.3.0.exe",
+          "original_filename": "Virtual-Machine-Manager-Setup-0.3.0.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.3.0",
+          "size_bytes": 123847187,
+          "sha256": "715eb1efd50c5664ca6ce7eecf136a5058b397a36b6dca1df0d2d6ec8c722beb",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-a21-devs-virtual-machine-manager-v0.3.0/Virtual-Machine-Manager-Setup-0.3.0.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-a21-devs-virtual-machine-manager-v0.3.0"
         }
       ],
       "platforms": [
