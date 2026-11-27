@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T11:54:25.997627+00:00",
+  "generated_at": "2026-11-27T11:54:48.620345+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -19963,7 +19963,7 @@
       "homepage_url": "https://neuralnomadsai.github.io/CodeNomad/",
       "owner": "NeuralNomadsAI",
       "default_branch": "dev",
-      "source_commit_sha": "2acbd0b3a7b907122e515a52843896f9f67f8dcb",
+      "source_commit_sha": "5848f3f51af8a1572ac5dcf388954de1cac5835b",
       "license_text": "MIT License\n\nCopyright (c) 2025-2026 CodeNomad contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
