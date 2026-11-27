@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T04:34:55.579422+00:00",
+  "generated_at": "2026-11-27T04:35:16.393673+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -43877,7 +43877,7 @@
       "icon_url": "https://raw.githubusercontent.com/lin037/jotiva/main/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/lin037/jotiva",
       "github_repo_id": "1468959612",
-      "source_updated_at": "2026-11-26T17:53:30Z",
+      "source_updated_at": "2026-11-27T02:42:36Z",
       "homepage_url": "https://github.com/lin037/jotiva/releases",
       "owner": "lin037",
       "default_branch": "main",
