@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:42:28.844109+00:00",
+  "generated_at": "2026-11-27T00:43:26.091379+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -10264,8 +10264,8 @@
         "youtube",
         "yt-dlp"
       ],
-      "latest_version": "v1.2.3",
-      "release_url": "https://github.com/BananaFlow-Media/BananaFlow/releases/tag/v1.2.3",
+      "latest_version": "v1.3.0",
+      "release_url": "https://github.com/BananaFlow-Media/BananaFlow/releases/tag/v1.3.0",
       "platforms": [],
       "project_status": "source_available"
     },
