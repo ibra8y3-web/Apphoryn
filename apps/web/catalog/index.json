@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T23:01:14.262001+00:00",
+  "generated_at": "2026-11-27T23:01:30.362875+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -89466,7 +89466,7 @@
       "icon_url": "https://raw.githubusercontent.com/yicheng47/runner/main/assets/icon.png",
       "repository_url": "https://github.com/yicheng47/runner",
       "github_repo_id": "1216634387",
-      "source_updated_at": "2026-11-27T15:23:42Z",
+      "source_updated_at": "2026-11-27T16:51:15Z",
       "homepage_url": "https://runnersh.dev/",
       "owner": "yicheng47",
       "default_branch": "main",
