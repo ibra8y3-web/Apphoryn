@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T21:16:22.712149+00:00",
+  "generated_at": "2026-11-27T21:16:44.301611+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -10209,7 +10209,7 @@
       "icon_url": "https://raw.githubusercontent.com/zhouxiaoka/autoclip/main/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/zhouxiaoka/autoclip",
       "github_repo_id": "1015815983",
-      "source_updated_at": "2026-11-27T13:06:18Z",
+      "source_updated_at": "2026-11-27T21:14:29Z",
       "homepage_url": "https://zhouxiaoka.github.io/autoclip_intro/",
       "owner": "zhouxiaoka",
       "default_branch": "main",
