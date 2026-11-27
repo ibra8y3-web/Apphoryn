@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T20:50:51.671681+00:00",
+  "generated_at": "2026-11-27T20:51:12.093344+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -87663,6 +87663,23 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sunerpy-router-tools-v0.1.0/router-tools_0.1.0_windows_amd64_setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sunerpy-router-tools-v0.1.0"
+        },
+        {
+          "id": "5015385652b0738bf458fefa4d0e69aeaca7ae8c8b3e988ba150824f267ed288",
+          "filename": "router-tools_0.1.1_windows_amd64_setup.exe",
+          "original_filename": "router-tools_0.1.1_windows_amd64_setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.1.1",
+          "size_bytes": 13086349,
+          "sha256": "5015385652b0738bf458fefa4d0e69aeaca7ae8c8b3e988ba150824f267ed288",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sunerpy-router-tools-v0.1.1/router-tools_0.1.1_windows_amd64_setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sunerpy-router-tools-v0.1.1"
         }
       ],
       "name": "router-tools",
@@ -87685,7 +87702,7 @@
       "homepage_url": null,
       "owner": "sunerpy",
       "default_branch": "main",
-      "source_commit_sha": "d4ab8249056c4ff09075cf9d7f04c67f9bba79f8",
+      "source_commit_sha": "58600e3d7293320d867e05fce22ba6873c3186ab",
       "license_text": "MIT License\n\nCopyright (c) 2026 router-tools contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -87711,8 +87728,8 @@
         "xiaomi",
         "xiaomi-router"
       ],
-      "latest_version": "v0.1.0",
-      "release_url": "https://github.com/sunerpy/router-tools/releases/tag/v0.1.0",
+      "latest_version": "v0.1.1",
+      "release_url": "https://github.com/sunerpy/router-tools/releases/tag/v0.1.1",
       "platforms": [
         "windows"
       ],
@@ -87759,8 +87776,8 @@
           "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ],
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sunerpy-router-tools-v0.1.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sunerpy-router-tools-v0.1.0/THIRD-PARTY-NOTICE-sunerpy-router-tools.txt"
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sunerpy-router-tools-v0.1.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sunerpy-router-tools-v0.1.1/THIRD-PARTY-NOTICE-sunerpy-router-tools.txt"
     },
     {
       "id": "niedev-rtranslator",
