@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T07:22:38.433533+00:00",
+  "generated_at": "2026-11-27T11:26:04.335372+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -17774,11 +17774,11 @@
       "icon_url": "https://raw.githubusercontent.com/mumu-lhl/Ciyue/main/assets/icon.png",
       "repository_url": "https://github.com/mumu-lhl/Ciyue",
       "github_repo_id": "842757506",
-      "source_updated_at": "2026-11-26T05:31:22Z",
+      "source_updated_at": "2026-11-27T04:08:31Z",
       "homepage_url": "https://mumulhl.eu.org/Ciyue/",
       "owner": "mumu-lhl",
       "default_branch": "main",
-      "source_commit_sha": "3aea30901691ae33f9149560e5e7a218d053bfc5",
+      "source_commit_sha": "3404b5edeecc889b9008e051cd313e683ccc7315",
       "license_text": "Copyright 2024 Mumulhl\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
