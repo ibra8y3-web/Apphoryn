@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:02:58.584982+00:00",
+  "generated_at": "2026-11-27T00:03:25.921597+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -40842,18 +40842,19 @@
       "slug": "dominikkoenitzer-inkling",
       "artifacts": [],
       "name": "Inkling",
-      "summary": "Notes, tasks and study together in a warm, local-first desktop hub. Electron + React + TypeScript + better-sqlite3.",
-      "description": "Notes, tasks and study together in a warm, local-first desktop hub. Electron + React + TypeScript + better-sqlite3.",
+      "summary": "Inkling is a local-first Electron desktop app for notes, to-dos, and flashcards, with a Today page, FSRS-6 spaced repetition, search, themes, and an MCP server for AI assistants.",
+      "description": "Inkling is a desktop application built with Electron, React, TypeScript, Tailwind CSS, TipTap, Zustand, and better-sqlite3. It stores notes, to-dos, flashcards, and backups locally in a SQLite database. Notes support headings, lists, and to-dos; open to-dos and due flashcard decks appear on a Today page. Flashcards can be created from Term :: Definition or cloze lines, and reviews use an FSRS-6 scheduler. The app includes Ctrl+K search, light and dark themes, keyboard shortcuts, Markdown export, and an MCP server that lets a local AI assistant search, edit, and quiz notes with backups and trash protection. It provides Windows, macOS, and Linux installation options and source-build instructions using Git, Bun, and Node.js.",
       "translations": {
-        "en": {
-          "summary": "Notes, tasks and study together in a warm, local-first desktop hub. Electron + React + TypeScript + better-sqlite3.",
-          "description": "Notes, tasks and study together in a warm, local-first desktop hub. Electron + React + TypeScript + better-sqlite3."
-        }
+        "en": "Inkling is a local-first Electron desktop app for notes, to-dos, and flashcards, with a Today page, FSRS-6 spaced repetition, search, themes, and an MCP server for AI assistants.",
+        "ar": "Inkling هو تطبيق سطح مكتب من Electron يحفظ البيانات محليًا للملاحظات والمهام والبطاقات التعليمية، مع صفحة Today ومراجعة متباعدة FSRS-6 وبحث وسمات وخادم MCP لمساعدي الذكاء الاصطناعي."
       },
-      "description_translations": {},
-      "translation_status": "pending",
-      "ai_provider": null,
-      "ai_model": null,
+      "description_translations": {
+        "en": "Inkling is a desktop application built with Electron, React, TypeScript, Tailwind CSS, TipTap, Zustand, and better-sqlite3. It stores notes, to-dos, flashcards, and backups locally in a SQLite database. Notes support headings, lists, and to-dos; open to-dos and due flashcard decks appear on a Today page. Flashcards can be created from Term :: Definition or cloze lines, and reviews use an FSRS-6 scheduler. The app includes Ctrl+K search, light and dark themes, keyboard shortcuts, Markdown export, and an MCP server that lets a local AI assistant search, edit, and quiz notes with backups and trash protection. It provides Windows, macOS, and Linux installation options and source-build instructions using Git, Bun, and Node.js.",
+        "ar": "Inkling تطبيق سطح مكتب مبني باستخدام Electron وReact وTypeScript وTailwind CSS وTipTap وZustand وbetter-sqlite3. يخزن الملاحظات والمهام والبطاقات التعليمية والنسخ الاحتياطية محليًا في قاعدة بيانات SQLite. تدعم الملاحظات العناوين والقوائم والمهام؛ وتظهر المهام المفتوحة ومجموعات البطاقات المستحقة في صفحة Today. يمكن إنشاء البطاقات من أسطر Term :: Definition أو أسطر Cloze، وتستخدم المراجعات مجدول FSRS-6. يتضمن التطبيق بحث Ctrl+K، وسمات فاتحة وداكنة، واختصارات لوحة المفاتيح، وتصدير Markdown، وخادم MCP يتيح لمساعد ذكاء اصطناعي محلي البحث في الملاحظات وتحريرها واختبارك، مع النسخ الاحتياطية وحماية سلة المحذوفات. يوفر خيارات تثبيت لـ Windows وmacOS وLinux وتعليمات بناء من المصدر باستخدام Git وBun وNode.js."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/dominikkoenitzer/Inkling/main/resources/icon.png",
       "repository_url": "https://github.com/dominikkoenitzer/Inkling",
       "github_repo_id": "1441451237",
@@ -40867,8 +40868,8 @@
       "license_eligible": true,
       "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "heuristic",
-      "classification_reason": "Standalone application indicated by repository evidence.",
+      "classification_source": "ai",
+      "classification_reason": "The repository describes a standalone Electron desktop end-user application with Windows, macOS, and Linux installation options and documented source-build instructions using Git, Bun, and Node.js.",
       "category": "productivity",
       "topics": [
         "better-sqlite3",
