@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:11:08.258739+00:00",
+  "generated_at": "2026-11-27T00:12:02.046433+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -65511,18 +65511,19 @@
         }
       ],
       "name": "Oculus",
-      "summary": "Lean, high-performance Windows screen recorder and screenshot tool built with Tauri 2, Rust, Direct3D 11, and Media Foundation.",
-      "description": "Lean, high-performance Windows screen recorder and screenshot tool built with Tauri 2, Rust, Direct3D 11, and Media Foundation.",
+      "summary": "Oculus is a lean Windows screen recorder and screenshot tool using Tauri 2, Rust, Direct3D 11, and Media Foundation for hardware-accelerated capture and encoding.",
+      "description": "Oculus is a local-first Windows 10/11 screen recorder and screenshot application built with Tauri 2, Rust, React 19, Direct3D 11, Windows Graphics Capture, and Media Foundation. It records desktops, windows, or selected regions with hardware H.264/HEVC encoding, system and microphone audio, global hotkeys, PNG screenshots, and a floating preview. It uses fragmented MP4 for crash resilience and includes disk-space safeguards. Source builds are documented with Node.js, Rust, Visual Studio C++ Build Tools, npm ci, npm run tauri dev, and npm run tauri build.",
       "translations": {
-        "en": {
-          "summary": "Lean, high-performance Windows screen recorder and screenshot tool built with Tauri 2, Rust, Direct3D 11, and Media Foundation.",
-          "description": "Lean, high-performance Windows screen recorder and screenshot tool built with Tauri 2, Rust, Direct3D 11, and Media Foundation."
-        }
+        "en": "Oculus is a lean Windows screen recorder and screenshot tool using Tauri 2, Rust, Direct3D 11, and Media Foundation for hardware-accelerated capture and encoding.",
+        "ar": "Oculus هو تطبيق خفيف لتسجيل الشاشة وأخذ لقطات الشاشة على Windows، مبني باستخدام Tauri 2 وRust وDirect3D 11 وMedia Foundation لتسجيل وترميز مسرّعين بالأجهزة."
       },
-      "description_translations": {},
-      "translation_status": "pending",
-      "ai_provider": null,
-      "ai_model": null,
+      "description_translations": {
+        "en": "Oculus is a local-first Windows 10/11 screen recorder and screenshot application built with Tauri 2, Rust, React 19, Direct3D 11, Windows Graphics Capture, and Media Foundation. It records desktops, windows, or selected regions with hardware H.264/HEVC encoding, system and microphone audio, global hotkeys, PNG screenshots, and a floating preview. It uses fragmented MP4 for crash resilience and includes disk-space safeguards. Source builds are documented with Node.js, Rust, Visual Studio C++ Build Tools, npm ci, npm run tauri dev, and npm run tauri build.",
+        "ar": "Oculus هو تطبيق محلي الخصوصية لتسجيل الشاشة وأخذ لقطات الشاشة على Windows 10/11، مبني باستخدام Tauri 2 وRust وReact 19 وDirect3D 11 وWindows Graphics Capture وMedia Foundation. يسجل سطح المكتب أو النوافذ أو مناطق محددة بترميز عتادي H.264/HEVC، مع التقاط صوت النظام والميكروفون، واختصارات لوحة المفاتيح، ولقطات PNG، ومعاينة عائمة. يستخدم حاويات MP4 مجزأة لتحسين الصمود أمام الأعطال، ويتضمن حمايات لمساحة القرص. توثيق البناء من المصدر يتطلب Node.js وRust وVisual Studio C++ Build Tools، مع أوامر npm ci وnpm run tauri dev وnpm run tauri build."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/projectGloria/Oculus/main/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/projectGloria/Oculus",
       "github_repo_id": "1436100663",
@@ -65536,8 +65537,8 @@
       "license_eligible": true,
       "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "heuristic",
-      "classification_reason": "Standalone application indicated by repository evidence.",
+      "classification_source": "ai",
+      "classification_reason": "Standalone Windows end-user desktop application with documented source build commands and prerequisites.",
       "category": "multimedia",
       "topics": [
         "desktop-app",
