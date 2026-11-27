@@ -62668,6 +62668,16 @@
           ],
           "requested_at": "2026-11-26T07:26:31.289097+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
+        },
+        {
+          "git_ref": "9bf299d3bef0fec08c299de8275ffae12224e49a",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-27T00:06:13.875225+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ]
     },
