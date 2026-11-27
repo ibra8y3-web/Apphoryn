@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T16:16:45.713904+00:00",
+  "generated_at": "2026-11-27T16:17:20.031849+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -102589,9 +102589,27 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-01uncledog01-tokentracker-plus-v1.47.1/TokenTracker-plus-Setup-v1.47.1.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-01uncledog01-tokentracker-plus-v1.47.1"
+        },
+        {
+          "id": "c81d10ef0029d641aa381e4bafb1670ea3fd3f2da6190a7b2dda0d5ec0a09795",
+          "filename": "TokenTracker-plus-1.47.1.dmg",
+          "original_filename": "TokenTracker-plus-1.47.1.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": null,
+          "version": "v1.47.1",
+          "size_bytes": 124265984,
+          "sha256": "c81d10ef0029d641aa381e4bafb1670ea3fd3f2da6190a7b2dda0d5ec0a09795",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-01uncledog01-tokentracker-plus-v1.47.1/TokenTracker-plus-1.47.1.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-01uncledog01-tokentracker-plus-v1.47.1"
         }
       ],
       "platforms": [
+        "macos",
         "windows"
       ]
     },
