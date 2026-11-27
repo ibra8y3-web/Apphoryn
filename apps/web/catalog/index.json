@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:12:40.889930+00:00",
+  "generated_at": "2026-11-27T00:13:14.416848+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -11210,6 +11210,59 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "zimpoi9527-creator-bigfish-unzip",
+      "slug": "zimpoi9527-creator-bigfish-unzip",
+      "artifacts": [],
+      "name": "bigfish-unzip",
+      "summary": "Windows GUI tool for recursively extracting disguised, renamed, split, nested, and password-protected archives using 7-Zip.",
+      "description": "BigFish Unzip is a Windows GUI utility for extracting archives disguised with arbitrary extensions, renamed split volumes, nested archives, or password protection. It detects formats by file-header magic, reassembles renamed volumes into .001/.002 sequences, recursively extracts nested archives, tries passwords from passwords/*.txt, and generates failure reports. It uses hard-link shadow directories for split sets so original archives are not copied, renamed, or modified. The package includes a GUI and a command-line executable, with options for output directory, separate folders, source deletion, and recursive extraction. It can be run from source with Python dependencies or packaged with PyInstaller. It targets Windows 10/11 64-bit and supports formats recognized by the bundled 7-Zip engine.",
+      "translations": {
+        "en": "Windows GUI tool for recursively extracting disguised, renamed, split, nested, and password-protected archives using 7-Zip.",
+        "ar": "BigFish Unzip أداة واجهة رسومية لنظام Windows لفك ضغط الأرشيفات المقنعة أو المعاد تسميتها أو المقسمة أو المتداخلة أو المحمية بكلمة مرور باستخدام 7-Zip."
+      },
+      "description_translations": {
+        "en": "BigFish Unzip is a Windows GUI utility for extracting archives disguised with arbitrary extensions, renamed split volumes, nested archives, or password protection. It detects formats by file-header magic, reassembles renamed volumes into .001/.002 sequences, recursively extracts nested archives, tries passwords from passwords/*.txt, and generates failure reports. It uses hard-link shadow directories for split sets so original archives are not copied, renamed, or modified. The package includes a GUI and a command-line executable, with options for output directory, separate folders, source deletion, and recursive extraction. It can be run from source with Python dependencies or packaged with PyInstaller. It targets Windows 10/11 64-bit and supports formats recognized by the bundled 7-Zip engine.",
+        "ar": "BigFish Unzip أداة واجهة رسومية لنظام Windows لفك ضغط الأرشيفات المقنعة بامتدادات مختلفة، والأجزاء المقسمة المعاد تسميتها، والأرشيفات المتداخلة، أو المحمية بكلمة مرور. تكتشف الصيغ عبر البصمة السحرية في رأس الملف، وتعيد تجميع الأجزاء المعاد تسميتها إلى تسلسل .001/.002، وتفك الأرشيفات المتداخلة تلقائيًا، وتجرب كلمات المرور من passwords/*.txt، وتنشيء تقارير أسباب الفشل. تستخدم أدلة ظل بروابط صلبة لمجموعات الأجزاء كي لا تُنسخ الأرشيفات الأصلية أو تُعاد تسميتها أو تُعدل. تتضمن الحزمة واجهة رسومية وملفًا تنفيذيًا لسطر الأوامر، مع خيارات لمجلد الإخراج، والمجلدات المنفصلة، وحذف المصدر، وفك الضغط التكراري. يمكن تشغيلها من المصدر باستخدام تبعيات Python أو حزمها باستخدام PyInstaller. تستهدف Windows 10/11 64 بت، وتدعم الصيغ التي يتعرف عليها محرك 7-Zip المرفق."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://raw.githubusercontent.com/zimpoi9527-creator/bigfish-unzip/master/assets/icon.png",
+      "repository_url": "https://github.com/zimpoi9527-creator/bigfish-unzip",
+      "github_repo_id": "1471908332",
+      "source_updated_at": "2026-11-25T14:42:58Z",
+      "homepage_url": null,
+      "owner": "zimpoi9527-creator",
+      "default_branch": "master",
+      "source_commit_sha": "9e4e4985a68b5572d398c323131bc1878de29863",
+      "license_text": "MIT License\n\nCopyright (c) 2025 TR-Supowe (original Complex-Unzip-Tool)\nCopyright (c) 2026 碧蓝解压 contributors (modifications)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Standalone Windows end-user GUI application with documented source-run and PyInstaller packaging path.",
+      "category": "other",
+      "topics": [
+        "7zip",
+        "archive",
+        "chinese",
+        "compression",
+        "desktop-app",
+        "gui",
+        "python",
+        "rar",
+        "tkinter",
+        "unzip",
+        "windows",
+        "zip"
+      ],
+      "latest_version": "v1.2.4",
+      "release_url": "https://github.com/zimpoi9527-creator/bigfish-unzip/releases/tag/v1.2.4",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "regdilikun-bilisummary",
