@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T06:41:23.694158+00:00",
+  "generated_at": "2026-11-27T06:41:47.403613+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -103791,12 +103791,12 @@
       "id": "a21-devs-virtual-machine-manager",
       "slug": "a21-devs-virtual-machine-manager",
       "name": "Virtual-Machine-Manager",
-      "summary": "Fast, free VM manager for Windows. QEMU + WHPX with an Electron/React UI.",
-      "description": "Fast, free VM manager for Windows. QEMU + WHPX with an Electron/React UI.",
+      "summary": "Fast, free VM manager for Windows. QEMU + WHPX with an Electron/React UI. - Kronwed",
+      "description": "Fast, free VM manager for Windows. QEMU + WHPX with an Electron/React UI. - Kronwed",
       "translations": {
         "en": {
-          "summary": "Fast, free VM manager for Windows. QEMU + WHPX with an Electron/React UI.",
-          "description": "Fast, free VM manager for Windows. QEMU + WHPX with an Electron/React UI."
+          "summary": "Fast, free VM manager for Windows. QEMU + WHPX with an Electron/React UI. - Kronwed",
+          "description": "Fast, free VM manager for Windows. QEMU + WHPX with an Electron/React UI. - Kronwed"
         }
       },
       "description_translations": {},
@@ -103806,7 +103806,7 @@
       "icon_url": "https://raw.githubusercontent.com/A21-devs/Virtual-Machine-Manager/main/resources/icon.png",
       "repository_url": "https://github.com/A21-devs/Virtual-Machine-Manager",
       "github_repo_id": "1468889046",
-      "source_updated_at": "2026-11-25T15:09:00Z",
+      "source_updated_at": "2026-11-27T04:16:35Z",
       "homepage_url": "https://github.com/A21-devs/Virtual-Machine-Manager/wiki",
       "owner": "A21-devs",
       "default_branch": "main",
