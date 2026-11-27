@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T23:42:18.106932+00:00",
+  "generated_at": "2026-11-27T23:42:39.560805+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -89509,6 +89509,54 @@
       ],
       "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sunerpy-router-tools-v0.1.1",
       "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-sunerpy-router-tools-v0.1.1/THIRD-PARTY-NOTICE-sunerpy-router-tools.txt"
+    },
+    {
+      "id": "byht1-rowveil",
+      "slug": "byht1-rowveil",
+      "artifacts": [],
+      "name": "rowveil",
+      "summary": "Rowveil — explore, query, understand. A free desktop database explorer for PostgreSQL, MySQL, SQLite, Redis and BigQuery (Windows, macOS, Linux) + web/Docker.",
+      "description": "Rowveil — explore, query, understand. A free desktop database explorer for PostgreSQL, MySQL, SQLite, Redis and BigQuery (Windows, macOS, Linux) + web/Docker.",
+      "translations": {
+        "en": {
+          "summary": "Rowveil — explore, query, understand. A free desktop database explorer for PostgreSQL, MySQL, SQLite, Redis and BigQuery (Windows, macOS, Linux) + web/Docker.",
+          "description": "Rowveil — explore, query, understand. A free desktop database explorer for PostgreSQL, MySQL, SQLite, Redis and BigQuery (Windows, macOS, Linux) + web/Docker."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/byht1/rowveil/main/static/favicon.svg",
+      "repository_url": "https://github.com/byht1/rowveil",
+      "github_repo_id": "1444814116",
+      "source_updated_at": "2026-11-12T11:49:41Z",
+      "homepage_url": "https://byht1.github.io/rowveil/",
+      "owner": "byht1",
+      "default_branch": "main",
+      "source_commit_sha": "c4d88a440f2df7e2f134d482f03c0795ec41d0e8",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Vitalii Dykhal\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "other",
+      "topics": [
+        "database",
+        "database-gui",
+        "desktop-app",
+        "mysql",
+        "postgresql",
+        "rust",
+        "sql",
+        "sqlite"
+      ],
+      "latest_version": "v0.5.1",
+      "release_url": "https://github.com/byht1/rowveil/releases/tag/v0.5.1",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "niedev-rtranslator",
