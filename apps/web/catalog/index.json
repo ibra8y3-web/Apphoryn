@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T23:11:00.558326+00:00",
+  "generated_at": "2026-11-27T23:11:22.532035+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -78069,11 +78069,11 @@
       "icon_url": "https://raw.githubusercontent.com/colgecen/PCHome/master/assets/icon.png",
       "repository_url": "https://github.com/colgecen/PCHome",
       "github_repo_id": "1339862224",
-      "source_updated_at": "2026-10-11T19:53:22Z",
+      "source_updated_at": "2026-11-27T18:38:23Z",
       "homepage_url": null,
       "owner": "colgecen",
       "default_branch": "master",
-      "source_commit_sha": "fd9cb447f98852e29b1fd18f67708c5c28e57f1e",
+      "source_commit_sha": "ae5280e6d3f59e6bb76b537c8c2b5f088d9f460c",
       "license_text": "MIT License\n\nCopyright (c) 2026 colgecen\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -78101,10 +78101,10 @@
         "touch-controls",
         "webrtc"
       ],
-      "latest_version": "v0.9.3",
-      "release_url": "https://github.com/colgecen/PCHome/releases/tag/v0.9.3",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-colgecen-pchome-v0.9.3",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-colgecen-pchome-v0.9.3/THIRD-PARTY-NOTICE-colgecen-pchome.txt",
+      "latest_version": "v0.9.4",
+      "release_url": "https://github.com/colgecen/PCHome/releases/tag/v0.9.4",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-colgecen-pchome-v0.9.4",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-colgecen-pchome-v0.9.4/THIRD-PARTY-NOTICE-colgecen-pchome.txt",
       "artifacts": [
         {
           "id": "6383d0625be07acbd4a70118d21944d0c814de7e7a938d75b7cfbeca527b15d0",
@@ -78156,6 +78156,40 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-colgecen-pchome-v0.9.3/PCHome-v0.9.3-x86_64.AppImage",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-colgecen-pchome-v0.9.3"
+        },
+        {
+          "id": "b53ce608391af4e8e370f4e49ea14ba066bca5634e32433a174d5c1df01320b9",
+          "filename": "PCHome-desktop-0.9.4-x86_64.rpm",
+          "original_filename": "PCHome-desktop-0.9.4-x86_64.rpm",
+          "platform": "linux",
+          "package_type": "RPM package",
+          "architecture": "x86_64",
+          "version": "v0.9.4",
+          "size_bytes": 9412636,
+          "sha256": "b53ce608391af4e8e370f4e49ea14ba066bca5634e32433a174d5c1df01320b9",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-colgecen-pchome-v0.9.4/PCHome-desktop-0.9.4-x86_64.rpm",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-colgecen-pchome-v0.9.4"
+        },
+        {
+          "id": "dff926053e09ad895cbd801d07c30aa270d8ae6fa311098fb0e8bc5cd5178047",
+          "filename": "PCHome-v0.9.4-x86_64.AppImage",
+          "original_filename": "PCHome-v0.9.4-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.9.4",
+          "size_bytes": 13720056,
+          "sha256": "dff926053e09ad895cbd801d07c30aa270d8ae6fa311098fb0e8bc5cd5178047",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-colgecen-pchome-v0.9.4/PCHome-v0.9.4-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-colgecen-pchome-v0.9.4"
         }
       ],
       "platforms": [
