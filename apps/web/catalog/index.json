@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T21:18:10.329387+00:00",
+  "generated_at": "2026-11-27T21:18:35.362496+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -9693,10 +9693,10 @@
         "windows",
         "youtube-music"
       ],
-      "latest_version": "v1.0.2-linux.3",
-      "release_url": "https://github.com/Rahuldhundhara/auralis/releases/tag/v1.0.2-linux.3",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rahuldhundhara-auralis-v1.0.2-linux.3",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rahuldhundhara-auralis-v1.0.2-linux.3/THIRD-PARTY-NOTICE-rahuldhundhara-auralis.txt",
+      "latest_version": "v1.0.4-android",
+      "release_url": "https://github.com/Rahuldhundhara/auralis/releases/tag/v1.0.4-android",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rahuldhundhara-auralis-v1.0.4-android",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rahuldhundhara-auralis-v1.0.4-android/THIRD-PARTY-NOTICE-rahuldhundhara-auralis.txt",
       "artifacts": [
         {
           "id": "04af540abeb6ebe701a0afd73f0aa9b3811c8897c9ac62d04b95b77211c993c6",
@@ -9765,9 +9765,27 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rahuldhundhara-auralis-v1.0.2-linux.3/Auralis-1.0.2-x86_64.AppImage",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rahuldhundhara-auralis-v1.0.2-linux.3"
+        },
+        {
+          "id": "8ac59f0aac8d81f834b5c032741425e5fe7ff7e91c6003c1856c73036a585388",
+          "filename": "Auralis-1.0.4-android.apk",
+          "original_filename": "Auralis-1.0.4-android.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v1.0.4-android",
+          "size_bytes": 105303027,
+          "sha256": "8ac59f0aac8d81f834b5c032741425e5fe7ff7e91c6003c1856c73036a585388",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "5ce12bd4bc70bca6e7f1bf455b597ddebd1da7499c079dde354b02765264b875",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-rahuldhundhara-auralis-v1.0.4-android/Auralis-1.0.4-android.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-rahuldhundhara-auralis-v1.0.4-android"
         }
       ],
       "platforms": [
+        "android",
         "linux",
         "windows"
       ],
