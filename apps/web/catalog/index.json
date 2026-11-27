@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T16:30:18.346721+00:00",
+  "generated_at": "2026-11-27T16:31:04.073343+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -110338,7 +110338,7 @@
       "homepage_url": "https://jeremy-jud.github.io/whatsup/about/",
       "owner": "Jeremy-Jud",
       "default_branch": "main",
-      "source_commit_sha": "25194d1115876365f437713acd32cb811da1a30f",
+      "source_commit_sha": "6ab84b7083dd1cef2f1b907514e3e9b82046ec40",
       "license_text": "MIT License\n\nCopyright (c) 2026 Jeremy-Jud\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -110362,10 +110362,10 @@
         "webrtc",
         "windows"
       ],
-      "latest_version": "v1.39.4",
-      "release_url": "https://github.com/Jeremy-Jud/whatsup/releases/tag/v1.39.4",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jeremy-jud-whatsup-v1.39.4",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jeremy-jud-whatsup-v1.39.4/THIRD-PARTY-NOTICE-jeremy-jud-whatsup.txt",
+      "latest_version": "v1.44.0",
+      "release_url": "https://github.com/Jeremy-Jud/whatsup/releases/tag/v1.44.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jeremy-jud-whatsup-v1.44.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jeremy-jud-whatsup-v1.44.0/THIRD-PARTY-NOTICE-jeremy-jud-whatsup.txt",
       "artifacts": [
         {
           "id": "8b7ca7eb327567ea7fecffbc3964871e79076e4677ef2ff89e1801893dac5e2d",
@@ -110434,6 +110434,40 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jeremy-jud-whatsup-v1.39.4/WhatsUp.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jeremy-jud-whatsup-v1.39.4"
+        },
+        {
+          "id": "ebee7382749ab2a780e7953d15c75bcfca292282bf1b4db4e52606450ebc5bc8",
+          "filename": "WhatsUp-Setup.exe",
+          "original_filename": "WhatsUp-Setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.44.0",
+          "size_bytes": 122511545,
+          "sha256": "ebee7382749ab2a780e7953d15c75bcfca292282bf1b4db4e52606450ebc5bc8",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jeremy-jud-whatsup-v1.44.0/WhatsUp-Setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jeremy-jud-whatsup-v1.44.0"
+        },
+        {
+          "id": "09de47bced93ebdf258f2294f7251773570109f7e23cd6906883b1ac74c74f6d",
+          "filename": "WhatsUp.exe",
+          "original_filename": "WhatsUp.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.44.0",
+          "size_bytes": 111393127,
+          "sha256": "09de47bced93ebdf258f2294f7251773570109f7e23cd6906883b1ac74c74f6d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-jeremy-jud-whatsup-v1.44.0/WhatsUp.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-jeremy-jud-whatsup-v1.44.0"
         }
       ],
       "platforms": [
