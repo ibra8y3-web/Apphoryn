@@ -87774,6 +87774,15 @@
           ],
           "requested_at": "2026-11-27T03:27:59.331435+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
+        },
+        {
+          "git_ref": "58600e3d7293320d867e05fce22ba6873c3186ab",
+          "targets": [
+            "linux",
+            "macos"
+          ],
+          "requested_at": "2026-11-27T20:51:25.056447+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ],
       "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-sunerpy-router-tools-v0.1.1",
