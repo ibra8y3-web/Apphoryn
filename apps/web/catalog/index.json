@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T23:43:03.213296+00:00",
+  "generated_at": "2026-11-27T23:43:32.459160+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -102728,6 +102728,54 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "researchforumonline-talktoai-code",
+      "slug": "researchforumonline-talktoai-code",
+      "artifacts": [],
+      "name": "TalkToAi-Code",
+      "summary": "Local AI for conversations, coding, and games on Windows, macOS, and Linux. Use Ollama or your own AI provider.",
+      "description": "Local AI for conversations, coding, and games on Windows, macOS, and Linux. Use Ollama or your own AI provider.",
+      "translations": {
+        "en": {
+          "summary": "Local AI for conversations, coding, and games on Windows, macOS, and Linux. Use Ollama or your own AI provider.",
+          "description": "Local AI for conversations, coding, and games on Windows, macOS, and Linux. Use Ollama or your own AI provider."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/ResearchForumOnline/TalkToAi-Code/main/assets/store/icon-44.png",
+      "repository_url": "https://github.com/ResearchForumOnline/TalkToAi-Code",
+      "github_repo_id": "1379822346",
+      "source_updated_at": "2026-11-25T23:58:30Z",
+      "homepage_url": "https://github.com/ResearchForumOnline/TalkToAi-Code/releases/latest",
+      "owner": "ResearchForumOnline",
+      "default_branch": "main",
+      "source_commit_sha": "34735479b687b9dfe4a01c340dc5cbae9ca570ad",
+      "license_text": "MIT License\n\nCopyright (c) 2026 TalkToAI contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "blender",
+        "coding-agent",
+        "computer-use",
+        "desktop-app",
+        "godot",
+        "local-ai",
+        "ollama",
+        "python"
+      ],
+      "latest_version": "v9.1.2",
+      "release_url": "https://github.com/ResearchForumOnline/TalkToAi-Code/releases/tag/v9.1.2",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "iamandelib-tally-android",
