@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T23:41:24.807505+00:00",
+  "generated_at": "2026-11-27T23:41:37.933071+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -107691,6 +107691,55 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "lukaskh-tutortop",
+      "slug": "lukaskh-tutortop",
+      "artifacts": [],
+      "name": "tutortop",
+      "summary": "Structured coding practice for any topic, powered by your own coding agent. Sandboxed tests grade your code, never the AI.",
+      "description": "Structured coding practice for any topic, powered by your own coding agent. Sandboxed tests grade your code, never the AI.",
+      "translations": {
+        "en": {
+          "summary": "Structured coding practice for any topic, powered by your own coding agent. Sandboxed tests grade your code, never the AI.",
+          "description": "Structured coding practice for any topic, powered by your own coding agent. Sandboxed tests grade your code, never the AI."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/LukasKH/tutortop/main/build/logo.svg",
+      "repository_url": "https://github.com/LukasKH/tutortop",
+      "github_repo_id": "1442264387",
+      "source_updated_at": "2026-11-25T12:48:23Z",
+      "homepage_url": null,
+      "owner": "LukasKH",
+      "default_branch": "main",
+      "source_commit_sha": "949124203eab3c315aca12ba66403c5e33e3e5d8",
+      "license_text": "MIT License\n\nCopyright (c) 2026 LukasKH\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "developer_tool",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "category": "other",
+      "topics": [
+        "ai-tutor",
+        "claude-code",
+        "codex",
+        "coding-exercises",
+        "desktop-app",
+        "education",
+        "golang",
+        "learning-platform",
+        "wails3"
+      ],
+      "latest_version": "v0.2.9",
+      "release_url": "https://github.com/LukasKH/tutortop/releases/tag/v0.2.9",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "darknamatv-tv",
