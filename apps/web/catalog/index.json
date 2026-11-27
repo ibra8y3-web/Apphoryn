@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T21:21:57.387129+00:00",
+  "generated_at": "2026-11-27T21:22:12.073702+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -74014,14 +74014,14 @@
       "homepage_url": "https://github.com/mmmatveyz/OpenIsland/releases",
       "owner": "mmmatveyz",
       "default_branch": "master",
-      "source_commit_sha": "91d1241701c506e9a0554397aa34e3ad2681b33a",
+      "source_commit_sha": "39842c23131e95668e6874cedd46dcf08d0047ca",
       "license_text": "MIT License\n\nCopyright (c) 2026 OpenIsland\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "unknown",
+      "project_kind": "library",
       "build_recommended": false,
       "classification_source": "heuristic",
-      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
       "project_status": "installable",
       "category": "other",
       "topics": [
