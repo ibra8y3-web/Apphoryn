@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T15:06:07.181615+00:00",
+  "generated_at": "2026-11-27T15:06:41.222439+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -36364,7 +36364,7 @@
       "icon_url": "https://raw.githubusercontent.com/Auto-Explore/GitComet/dev/crates/gitcomet-extension-example/assets/brand/logo.svg",
       "repository_url": "https://github.com/Auto-Explore/GitComet",
       "github_repo_id": "1138555358",
-      "source_updated_at": "2026-11-27T05:28:07Z",
+      "source_updated_at": "2026-11-27T14:56:16Z",
       "homepage_url": "https://gitcomet.dev",
       "owner": "Auto-Explore",
       "default_branch": "dev",
