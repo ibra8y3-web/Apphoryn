@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T21:29:01.385201+00:00",
+  "generated_at": "2026-11-27T21:29:21.549763+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -114285,7 +114285,7 @@
       "homepage_url": null,
       "owner": "loerei",
       "default_branch": "main",
-      "source_commit_sha": "d2569075743dfe91ecbdaa6226a1682600ccd7ed",
+      "source_commit_sha": "94b495823510be06379f53f53daa1c5a6d7b4f56",
       "license_text": "MIT License\n\nCopyright (c) 2026 loerei\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
       "license_spdx": "MIT",
       "license_eligible": true,
