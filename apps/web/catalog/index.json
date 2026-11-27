@@ -62066,7 +62066,19 @@
       "latest_version": "v0.5.0",
       "release_url": "https://github.com/nirajkhetre/mondegreen/releases/tag/v0.5.0",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "7ba46d21e4eab6955ea9f972f41ccd8d5bd03b55",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-27T23:50:01.302217+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "sebastienpiconnier-mondowrite",
