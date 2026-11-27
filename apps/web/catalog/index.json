@@ -13321,7 +13321,19 @@
       "latest_version": "v1.3.4",
       "release_url": "https://github.com/rchrp/Blame/releases/tag/v1.3.4",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "66920b1f4acf1f07ee82f96c9b76fbdc7bf281f5",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-27T23:40:09.448996+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "shell-ninja-blocker-app",
