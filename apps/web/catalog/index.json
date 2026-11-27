@@ -5802,7 +5802,19 @@
       "latest_version": "v0.22.0",
       "release_url": "https://github.com/flyhero/antumi/releases/tag/v0.22.0",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "f5519e7dc79b0cbdd823806ea9c7471f532edf14",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-27T00:04:14.795573+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "shamrat05-anything",
