@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T23:39:04.524807+00:00",
+  "generated_at": "2026-11-27T23:39:26.586269+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -108145,12 +108145,12 @@
         }
       ],
       "name": "Twitch-Drops-Sentinel",
-      "summary": "Farm Twitch Drops in the background on Windows, without playing the video.",
-      "description": "Farm Twitch Drops in the background on Windows, without playing the video.",
+      "summary": "Hell Harvest: farms Twitch Drops, Steam trading cards and free game giveaways in the background on Windows.",
+      "description": "Hell Harvest: farms Twitch Drops, Steam trading cards and free game giveaways in the background on Windows.",
       "translations": {
         "en": {
-          "summary": "Farm Twitch Drops in the background on Windows, without playing the video.",
-          "description": "Farm Twitch Drops in the background on Windows, without playing the video."
+          "summary": "Hell Harvest: farms Twitch Drops, Steam trading cards and free game giveaways in the background on Windows.",
+          "description": "Hell Harvest: farms Twitch Drops, Steam trading cards and free game giveaways in the background on Windows."
         }
       },
       "description_translations": {},
@@ -108160,11 +108160,11 @@
       "icon_url": "https://raw.githubusercontent.com/MortuisVMain/Twitch-Drops-Sentinel/main/assets/app_icon.png",
       "repository_url": "https://github.com/MortuisVMain/Twitch-Drops-Sentinel",
       "github_repo_id": "1422370886",
-      "source_updated_at": "2026-11-08T19:18:40Z",
+      "source_updated_at": "2026-11-27T04:23:10Z",
       "homepage_url": "https://github.com/MortuisVMain/Twitch-Drops-Sentinel/releases/latest",
       "owner": "MortuisVMain",
       "default_branch": "main",
-      "source_commit_sha": "35c665a02a09c948de357732f687ae2a90f7921b",
+      "source_commit_sha": "bd1631cfce4065a5504ad8927ddc42f5d79f04cb",
       "license_text": "MIT License\n\nCopyright (c) 2026 Mortuis_V / Mortuis_V_Studio\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -108172,18 +108172,21 @@
       "build_recommended": true,
       "classification_source": "heuristic",
       "classification_reason": "Standalone application indicated by repository evidence.",
-      "category": "developer",
+      "category": "games",
       "topics": [
         "desktop-app",
+        "giveaways",
         "python",
         "react",
+        "steam",
+        "steam-cards",
         "twitch",
         "twitch-drops",
         "webview2",
         "windows"
       ],
-      "latest_version": "v4.2.1",
-      "release_url": "https://github.com/MortuisVMain/Twitch-Drops-Sentinel/releases/tag/v4.2.1",
+      "latest_version": "v4.4.2",
+      "release_url": "https://github.com/MortuisVMain/Twitch-Drops-Sentinel/releases/tag/v4.4.2",
       "platforms": [
         "linux",
         "macos",
