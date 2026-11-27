@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T21:49:42.229685+00:00",
+  "generated_at": "2026-11-27T21:50:37.885858+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -89943,7 +89943,7 @@
       "homepage_url": null,
       "owner": "Aitenry",
       "default_branch": "main",
-      "source_commit_sha": "7a9462fb7a64a6ad3a87145777895c029e3aad91",
+      "source_commit_sha": "efd1e553260883ef7d52053d15b9e87812660dd7",
       "license_text": "MIT License\n\nCopyright (c) 2025 LibreChat\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -89975,10 +89975,10 @@
         "wiki",
         "workbench"
       ],
-      "latest_version": "v0.2.5",
-      "release_url": "https://github.com/Aitenry/ryten-bench/releases/tag/v0.2.5",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aitenry-ryten-bench-v0.2.5",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aitenry-ryten-bench-v0.2.5/THIRD-PARTY-NOTICE-aitenry-ryten-bench.txt",
+      "latest_version": "v0.2.6",
+      "release_url": "https://github.com/Aitenry/ryten-bench/releases/tag/v0.2.6",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aitenry-ryten-bench-v0.2.6",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aitenry-ryten-bench-v0.2.6/THIRD-PARTY-NOTICE-aitenry-ryten-bench.txt",
       "artifacts": [
         {
           "id": "730ba5489e7b5d63f70699148d066fbdf9878d6affd05e8b16675263124b7a72",
@@ -90047,6 +90047,74 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aitenry-ryten-bench-v0.2.5/ryten-bench_0.2.5_amd64.deb",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aitenry-ryten-bench-v0.2.5"
+        },
+        {
+          "id": "507aeabc91ae5fe052fd40c9809e28ff8153ad777c2e918ba5f34491bc5c8b58",
+          "filename": "ryten-bench-0.2.6-setup.exe",
+          "original_filename": "ryten-bench-0.2.6-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.2.6",
+          "size_bytes": 197717330,
+          "sha256": "507aeabc91ae5fe052fd40c9809e28ff8153ad777c2e918ba5f34491bc5c8b58",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aitenry-ryten-bench-v0.2.6/ryten-bench-0.2.6-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aitenry-ryten-bench-v0.2.6"
+        },
+        {
+          "id": "214db9f1da7bef9e21c34cdda587c5809b84b351ee4ee97eed90113a9606fa3e",
+          "filename": "ryten-bench-0.2.6.AppImage",
+          "original_filename": "ryten-bench-0.2.6.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": null,
+          "version": "v0.2.6",
+          "size_bytes": 239019808,
+          "sha256": "214db9f1da7bef9e21c34cdda587c5809b84b351ee4ee97eed90113a9606fa3e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aitenry-ryten-bench-v0.2.6/ryten-bench-0.2.6.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aitenry-ryten-bench-v0.2.6"
+        },
+        {
+          "id": "5e573d7315a43f0aa9754ca96d21d360169745ed8e8a2936689a65e9f2fac94d",
+          "filename": "ryten-bench-0.2.6.dmg",
+          "original_filename": "ryten-bench-0.2.6.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": null,
+          "version": "v0.2.6",
+          "size_bytes": 242286265,
+          "sha256": "5e573d7315a43f0aa9754ca96d21d360169745ed8e8a2936689a65e9f2fac94d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aitenry-ryten-bench-v0.2.6/ryten-bench-0.2.6.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aitenry-ryten-bench-v0.2.6"
+        },
+        {
+          "id": "cc584aba20be78075144680cdfd2fee56d797dcb4e8f75b048c601f23658ea1f",
+          "filename": "ryten-bench_0.2.6_amd64.deb",
+          "original_filename": "ryten-bench_0.2.6_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.2.6",
+          "size_bytes": 187664808,
+          "sha256": "cc584aba20be78075144680cdfd2fee56d797dcb4e8f75b048c601f23658ea1f",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-aitenry-ryten-bench-v0.2.6/ryten-bench_0.2.6_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-aitenry-ryten-bench-v0.2.6"
         }
       ],
       "platforms": [
