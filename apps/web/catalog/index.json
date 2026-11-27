@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T20:13:26.348207+00:00",
+  "generated_at": "2026-11-27T20:14:12.586115+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -34267,7 +34267,7 @@
       "homepage_url": null,
       "owner": "flulwh",
       "default_branch": "main",
-      "source_commit_sha": "f172cb9b6a9265066f7e46499f0505b4f752a76d",
+      "source_commit_sha": "1f82c8b4be5664fb8a2d0984fce71550715feaec",
       "license_text": "MIT License\n\nCopyright (c) 2026 Folio contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -34296,10 +34296,10 @@
         "vite",
         "windows"
       ],
-      "latest_version": "v2.18.0",
-      "release_url": "https://github.com/flulwh/folio/releases/tag/v2.18.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-flulwh-folio-v2.18.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-flulwh-folio-v2.18.0/THIRD-PARTY-NOTICE-flulwh-folio.txt",
+      "latest_version": "v2.18.1",
+      "release_url": "https://github.com/flulwh/folio/releases/tag/v2.18.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-flulwh-folio-v2.18.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-flulwh-folio-v2.18.1/THIRD-PARTY-NOTICE-flulwh-folio.txt",
       "artifacts": [
         {
           "id": "f54a6130dc4c81592ce66e5da476253d0411c05a08feec2196283c62d4946f68",
@@ -34334,6 +34334,40 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-flulwh-folio-v2.18.0/Folio-Setup-2.18.0.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-flulwh-folio-v2.18.0"
+        },
+        {
+          "id": "f86188b6c97b2abb8e54e131bbcdfb30696dde4c4a5b4670a590c48f01ec1eea",
+          "filename": "Folio-Portable-2.18.1.exe",
+          "original_filename": "Folio-Portable-2.18.1.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v2.18.1",
+          "size_bytes": 130173633,
+          "sha256": "f86188b6c97b2abb8e54e131bbcdfb30696dde4c4a5b4670a590c48f01ec1eea",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-flulwh-folio-v2.18.1/Folio-Portable-2.18.1.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-flulwh-folio-v2.18.1"
+        },
+        {
+          "id": "ce25c2745d9dff0694f27f2f9115196148af7eb55aeda501b694ac92901441e3",
+          "filename": "Folio-Setup-2.18.1.exe",
+          "original_filename": "Folio-Setup-2.18.1.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v2.18.1",
+          "size_bytes": 130432235,
+          "sha256": "ce25c2745d9dff0694f27f2f9115196148af7eb55aeda501b694ac92901441e3",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-flulwh-folio-v2.18.1/Folio-Setup-2.18.1.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-flulwh-folio-v2.18.1"
         }
       ],
       "platforms": [
