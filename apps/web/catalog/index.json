@@ -79021,6 +79021,14 @@
           ],
           "requested_at": "2026-11-26T21:50:26.461136+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
+        },
+        {
+          "git_ref": "22a5f55bf61850ff45a0260752215bacc5e4ca45",
+          "targets": [
+            "macos"
+          ],
+          "requested_at": "2026-11-27T13:53:04.109417+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ]
     },
