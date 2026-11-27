@@ -80989,6 +80989,14 @@
           ],
           "requested_at": "2026-11-27T13:53:04.109417+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
+        },
+        {
+          "git_ref": "7f81be6c1a87b876de388675b0b8ca5eb6d4d356",
+          "targets": [
+            "macos"
+          ],
+          "requested_at": "2026-11-27T21:39:52.687258+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ]
     },
