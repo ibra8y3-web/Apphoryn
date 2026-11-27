@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T14:35:51.441839+00:00",
+  "generated_at": "2026-11-27T14:36:38.729694+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -87046,7 +87046,7 @@
       "icon_url": "https://raw.githubusercontent.com/LingyunStudio/RustMusic/main/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/LingyunStudio/RustMusic",
       "github_repo_id": "1366434441",
-      "source_updated_at": "2026-11-27T03:34:09Z",
+      "source_updated_at": "2026-11-27T12:18:34Z",
       "homepage_url": null,
       "owner": "LingyunStudio",
       "default_branch": "main",
