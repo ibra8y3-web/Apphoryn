@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T16:38:53.191579+00:00",
+  "generated_at": "2026-11-27T16:39:14.790906+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -25952,7 +25952,7 @@
       "homepage_url": "https://drop.stacktao.cn/",
       "owner": "StackTao",
       "default_branch": "main",
-      "source_commit_sha": "479361d2a3eb0d5cdcb4833d3789f30344049626",
+      "source_commit_sha": "9ead7f1f1e950e77d3da764a532892002d14b3bc",
       "license_text": "MIT License\n\nCopyright (c) 2026 StackTao\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -25973,8 +25973,8 @@
         "rust",
         "self-hosted"
       ],
-      "latest_version": "v0.1.8",
-      "release_url": "https://github.com/StackTao/DropDrawer/releases/tag/v0.1.8",
+      "latest_version": "v0.1.10",
+      "release_url": "https://github.com/StackTao/DropDrawer/releases/tag/v0.1.10",
       "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-stacktao-dropdrawer-v0.1.8",
       "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-stacktao-dropdrawer-v0.1.8/THIRD-PARTY-NOTICE-stacktao-dropdrawer.txt",
       "artifacts": [
