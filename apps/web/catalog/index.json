@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T23:48:05.497347+00:00",
+  "generated_at": "2026-11-27T23:48:37.452319+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -35028,6 +35028,56 @@
         "macos",
         "windows"
       ]
+    },
+    {
+      "id": "itswilliam-san-flux",
+      "slug": "itswilliam-san-flux",
+      "artifacts": [],
+      "name": "Flux",
+      "summary": "An independent, cross-platform desktop application designed to bridge CAD and BIM ecosystems for advanced municipal sewer network management.",
+      "description": "An independent, cross-platform desktop application designed to bridge CAD and BIM ecosystems for advanced municipal sewer network management.",
+      "translations": {
+        "en": {
+          "summary": "An independent, cross-platform desktop application designed to bridge CAD and BIM ecosystems for advanced municipal sewer network management.",
+          "description": "An independent, cross-platform desktop application designed to bridge CAD and BIM ecosystems for advanced municipal sewer network management."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/itsWilliam-San/Flux/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/itsWilliam-San/Flux",
+      "github_repo_id": "1437551086",
+      "source_updated_at": "2026-11-23T18:50:35Z",
+      "homepage_url": null,
+      "owner": "itsWilliam-San",
+      "default_branch": "main",
+      "source_commit_sha": "9248dbd5f0fc2a0652595fcafa03b30eb408ce4a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 William Souza Santos\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "network",
+      "topics": [
+        "automation",
+        "cross-platform",
+        "desktop-app",
+        "engineering-software",
+        "plugin-architecture",
+        "python",
+        "react",
+        "rust",
+        "tauri",
+        "typescript"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "karos555-focusforceplus",
