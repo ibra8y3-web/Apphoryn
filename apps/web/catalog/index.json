@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T14:53:32.878970+00:00",
+  "generated_at": "2026-11-27T14:54:02.533629+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -35057,10 +35057,10 @@
         "steam-api",
         "video-games"
       ],
-      "latest_version": "v0.31.0",
-      "release_url": "https://github.com/cristian-tentella/gamepalate/releases/tag/v0.31.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-cristian-tentella-gamepalate-v0.31.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-cristian-tentella-gamepalate-v0.31.0/THIRD-PARTY-NOTICE-cristian-tentella-gamepalate.txt",
+      "latest_version": "v0.32.0",
+      "release_url": "https://github.com/cristian-tentella/gamepalate/releases/tag/v0.32.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-cristian-tentella-gamepalate-v0.32.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-cristian-tentella-gamepalate-v0.32.0/THIRD-PARTY-NOTICE-cristian-tentella-gamepalate.txt",
       "artifacts": [
         {
           "id": "331bfaf800618c4ef72f50ff471c23cfde41fe6b61abf9374870c6a00e490f17",
@@ -35112,6 +35112,57 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-cristian-tentella-gamepalate-v0.31.0/gamepalate.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-cristian-tentella-gamepalate-v0.31.0"
+        },
+        {
+          "id": "4d4a41927c66ed42b855dd21f78d8825accc20a2cc694ceda066d346fa9048c9",
+          "filename": "gamepalate-cli.exe",
+          "original_filename": "gamepalate-cli.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.32.0",
+          "size_bytes": 15277568,
+          "sha256": "4d4a41927c66ed42b855dd21f78d8825accc20a2cc694ceda066d346fa9048c9",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-cristian-tentella-gamepalate-v0.32.0/gamepalate-cli.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-cristian-tentella-gamepalate-v0.32.0"
+        },
+        {
+          "id": "524eac89ebee3d67f231e4f3bc3e063a955d1417c562d5d5c6bf42d849081efd",
+          "filename": "gamepalate-setup.exe",
+          "original_filename": "gamepalate-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.32.0",
+          "size_bytes": 16686773,
+          "sha256": "524eac89ebee3d67f231e4f3bc3e063a955d1417c562d5d5c6bf42d849081efd",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-cristian-tentella-gamepalate-v0.32.0/gamepalate-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-cristian-tentella-gamepalate-v0.32.0"
+        },
+        {
+          "id": "5ed5f6dfe3b391013d7370d1799452972f173d89095c16d9967141f18ff3c2c2",
+          "filename": "gamepalate.exe",
+          "original_filename": "gamepalate.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.32.0",
+          "size_bytes": 35650048,
+          "sha256": "5ed5f6dfe3b391013d7370d1799452972f173d89095c16d9967141f18ff3c2c2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-cristian-tentella-gamepalate-v0.32.0/gamepalate.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-cristian-tentella-gamepalate-v0.32.0"
         }
       ],
       "platforms": [
