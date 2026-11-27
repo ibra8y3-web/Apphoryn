@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T07:00:10.605799+00:00",
+  "generated_at": "2026-11-27T07:00:37.095730+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -47133,17 +47133,19 @@
         }
       ],
       "name": "kiki",
-      "summary": "Kiki is an open-source, local-first multi-model AI agent workbench with desktop, terminal, and web interfaces for dispatching subagents across Claude, GPT, Gemini, and Kimi.",
-      "description": "Kiki is an open-source, local-first AI agent workbench. A lead session can split a task among subagents using different models or vendors, including Claude, GPT, Gemini, Kimi, and compatible services. It provides a desktop GUI, terminal UI (kiki), and browser mode (kiki web), with shared sessions and local storage for work files, history, and configuration. Users can define agents as Markdown files, set permissions, queue messages, inspect transcripts, track usage and cost, and extend behavior with recipes, plugins, personas, rooms, memory, scheduled prompts, and optional task boards. Desktop builds and standalone CLI/TUI assets are listed in GitHub Releases, and npm packages kiki-agent and kiki-agent-lite install the CLI/TUI. The project is MIT licensed.",
+      "summary": "Open-source multi-model AI agent workbench (Desktop GUI, TUI & Web) — dispatch subagents across Claude, GPT, Gemini & Kimi, bridge WeChat/QQ, and run locally.",
+      "description": "Open-source multi-model AI agent workbench (Desktop GUI, TUI & Web) — dispatch subagents across Claude, GPT, Gemini & Kimi, bridge WeChat/QQ, and run locally.",
       "translations": {
-        "en": "Kiki is an open-source, local-first multi-model AI agent workbench with desktop, terminal, and web interfaces for dispatching subagents across Claude, GPT, Gemini, and Kimi.",
-        "ar": "Kiki هو مساحة عمل مفتوحة المصدر ومحلية أولاً ومتعددة النماذج لوكلاء الذكاء الاصطناعي، بواجهات سطح مكتب وطرفية وويب، لتوزيع المهام الفرعية بين Claude وGPT وGemini وKimi."
+        "en": {
+          "summary": "Open-source multi-model AI agent workbench (Desktop GUI, TUI & Web) — dispatch subagents across Claude, GPT, Gemini & Kimi, bridge WeChat/QQ, and run locally.",
+          "description": "Open-source multi-model AI agent workbench (Desktop GUI, TUI & Web) — dispatch subagents across Claude, GPT, Gemini & Kimi, bridge WeChat/QQ, and run locally."
+        }
       },
       "description_translations": {
         "en": "Kiki is an open-source, local-first AI agent workbench. A lead session can split a task among subagents using different models or vendors, including Claude, GPT, Gemini, Kimi, and compatible services. It provides a desktop GUI, terminal UI (kiki), and browser mode (kiki web), with shared sessions and local storage for work files, history, and configuration. Users can define agents as Markdown files, set permissions, queue messages, inspect transcripts, track usage and cost, and extend behavior with recipes, plugins, personas, rooms, memory, scheduled prompts, and optional task boards. Desktop builds and standalone CLI/TUI assets are listed in GitHub Releases, and npm packages kiki-agent and kiki-agent-lite install the CLI/TUI. The project is MIT licensed.",
         "ar": "Kiki مساحة عمل مفتوحة المصدر ومحلية أولاً لوكلاء الذكاء الاصطناعي. يمكن لجلسة رئيسية تقسيم مهمة إلى وكلاء فرعيين يستخدمون نماذج أو مزودين مختلفين، بما في ذلك Claude وGPT وGemini وKimi والخدمات المتوافقة. يوفر واجهة سطح مكتب، وواجهة طرفية (kiki)، ووضع متصفح (kiki web)، مع جلسات مشتركة وتخزين محلي لملفات العمل والسجل والإعدادات. يمكن للمستخدمين تعريف الوكلاء كملفات Markdown، وضبط الأذونات، وإرسال الرسائل في طابور، وفحص المحادثات، وتتبع الاستخدام والتكلفة، وتوسيع السلوك عبر الوصفات والإضافات والشخصيات والغرف والذاكرة والمطالبات المجدولة ولوحات المهام الاختيارية. تتوفر إصدارات سطح المكتب وملفات CLI/TUI المستقلة في GitHub Releases، وتحزم npm كiki-agent وkiki-agent-lite تثبت CLI/TUI. المشروع مرخص بموجب MIT."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/X-T-E-R/kiki/kiki/apps/kiki-desktop/icons/icon.png",
@@ -47153,14 +47155,14 @@
       "homepage_url": "https://x-t-e-r.github.io/kiki/",
       "owner": "X-T-E-R",
       "default_branch": "kiki",
-      "source_commit_sha": "f556d2a71ad1b49baf9f38724d78a00307433cb8",
+      "source_commit_sha": "74d7f411b0ff1c7505118cbb7a51b4260c51f761",
       "license_text": "MIT License\n\nCopyright (c) 2026 Moonshot AI\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
       "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "Evidence shows a standalone end-user application with desktop, terminal, and web interfaces, documented release builds, and npm installation.",
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
       "category": "developer",
       "topics": [
         "agent-workbench",
