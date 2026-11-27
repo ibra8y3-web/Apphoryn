@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T16:41:30.462031+00:00",
+  "generated_at": "2026-11-27T16:41:55.574511+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -18654,10 +18654,10 @@
         "wallpaper",
         "windows"
       ],
-      "latest_version": "v0.33.1",
-      "release_url": "https://github.com/yam333/Clairlune/releases/tag/v0.33.1",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yam333-clairlune-v0.33.1",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yam333-clairlune-v0.33.1/THIRD-PARTY-NOTICE-yam333-clairlune.txt",
+      "latest_version": "v0.35.1",
+      "release_url": "https://github.com/yam333/Clairlune/releases/tag/v0.35.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yam333-clairlune-v0.35.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yam333-clairlune-v0.35.1/THIRD-PARTY-NOTICE-yam333-clairlune.txt",
       "artifacts": [
         {
           "id": "cc8bcab843dfc475a29fd070e61ba5dcd33ae5d78a64e95dd0898aae9446a051",
@@ -18726,6 +18726,23 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yam333-clairlune-v0.33.1/clairlune_0.33.1_x64-setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yam333-clairlune-v0.33.1"
+        },
+        {
+          "id": "fedea5ea63aedae3cd4740b205197f29e0e6985939467f2fd43b2740e2d0d42b",
+          "filename": "Clairlune_0.35.1_aarch64.dmg",
+          "original_filename": "Clairlune_0.35.1_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.35.1",
+          "size_bytes": 8864760,
+          "sha256": "fedea5ea63aedae3cd4740b205197f29e0e6985939467f2fd43b2740e2d0d42b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yam333-clairlune-v0.35.1/Clairlune_0.35.1_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yam333-clairlune-v0.35.1"
         }
       ],
       "platforms": [
