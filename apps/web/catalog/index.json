@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T21:47:37.062142+00:00",
+  "generated_at": "2026-11-27T21:47:50.170116+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -39258,7 +39258,7 @@
       "icon_url": "https://raw.githubusercontent.com/jankammerath/gophie/master/res/icon.png",
       "repository_url": "https://github.com/jankammerath/gophie",
       "github_repo_id": "224045786",
-      "source_updated_at": "2026-11-23T12:39:11Z",
+      "source_updated_at": "2026-11-27T15:30:37Z",
       "homepage_url": "http://gophie.org",
       "owner": "jankammerath",
       "default_branch": "master",
