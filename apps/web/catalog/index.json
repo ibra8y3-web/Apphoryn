@@ -34515,7 +34515,17 @@
       "latest_version": "v0.4.0",
       "release_url": "https://github.com/TuxoJlumoH/fleetglass/releases/tag/v0.4.0",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "38cc684c38194bd690f44b3a36e3fbf2bfd1a67d",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-27T23:48:14.620751+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "fleetifydev-fleetify",
