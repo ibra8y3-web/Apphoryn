@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T15:17:22.820038+00:00",
+  "generated_at": "2026-11-27T15:17:47.888992+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -94839,11 +94839,11 @@
       "icon_url": "https://raw.githubusercontent.com/shrenixcodes/sonora/main/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/shrenixcodes/sonora",
       "github_repo_id": "1467596608",
-      "source_updated_at": "2026-11-25T17:03:14Z",
+      "source_updated_at": "2026-11-27T15:15:02Z",
       "homepage_url": null,
       "owner": "shrenixcodes",
       "default_branch": "main",
-      "source_commit_sha": "0ee9b3e593653387025f49e752d8981a1dd829d1",
+      "source_commit_sha": "f655691886146402f0b55e2e6fc6650e5a18ebf8",
       "license_text": "MIT License\n\nCopyright (c) 2026 Sonora contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -94867,10 +94867,10 @@
         "windows",
         "youtube-music"
       ],
-      "latest_version": "v0.7.20",
-      "release_url": "https://github.com/shrenixcodes/sonora/releases/tag/v0.7.20",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shrenixcodes-sonora-v0.7.20",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shrenixcodes-sonora-v0.7.20/THIRD-PARTY-NOTICE-shrenixcodes-sonora.txt",
+      "latest_version": "v0.7.53",
+      "release_url": "https://github.com/shrenixcodes/sonora/releases/tag/v0.7.53",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shrenixcodes-sonora-v0.7.53",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shrenixcodes-sonora-v0.7.53/THIRD-PARTY-NOTICE-shrenixcodes-sonora.txt",
       "artifacts": [
         {
           "id": "305b326a7330e0c6e87a5820e134806a9b521bc5e5022af31ff355c281784d3b",
@@ -94888,6 +94888,23 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shrenixcodes-sonora-v0.7.20/Sonora_0.7.20_x64-setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shrenixcodes-sonora-v0.7.20"
+        },
+        {
+          "id": "21fce340d2955cfa347570899c18bd76e652344767957499e71946563b784204",
+          "filename": "Sonora_0.7.53_x64-setup.exe",
+          "original_filename": "Sonora_0.7.53_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.7.53",
+          "size_bytes": 7496844,
+          "sha256": "21fce340d2955cfa347570899c18bd76e652344767957499e71946563b784204",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-shrenixcodes-sonora-v0.7.53/Sonora_0.7.53_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-shrenixcodes-sonora-v0.7.53"
         }
       ],
       "platforms": [
