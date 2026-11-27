@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T23:40:37.867077+00:00",
+  "generated_at": "2026-11-27T23:41:07.006247+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -117467,6 +117467,55 @@
       "platforms": [
         "macos"
       ]
+    },
+    {
+      "id": "rosmengheang-zli",
+      "slug": "rosmengheang-zli",
+      "artifacts": [],
+      "name": "ZLI",
+      "summary": "Desktop workspace for AI coding agents — Git worktrees, terminals, and review in one place.",
+      "description": "Desktop workspace for AI coding agents — Git worktrees, terminals, and review in one place.",
+      "translations": {
+        "en": {
+          "summary": "Desktop workspace for AI coding agents — Git worktrees, terminals, and review in one place.",
+          "description": "Desktop workspace for AI coding agents — Git worktrees, terminals, and review in one place."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/RosMengHeang/ZLI/main/v2/apps/mobile/assets/icon.png",
+      "repository_url": "https://github.com/RosMengHeang/ZLI",
+      "github_repo_id": "1382339190",
+      "source_updated_at": "2026-11-12T10:08:44Z",
+      "homepage_url": "https://zli.taxzy.dev",
+      "owner": "RosMengHeang",
+      "default_branch": "main",
+      "source_commit_sha": "dbdd0755124bcb7578abbb50ed818bbd0b99fe5c",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Ros MengHeang\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "code-review",
+        "coding-agents",
+        "desktop-app",
+        "developer-tools",
+        "electron",
+        "git-worktree",
+        "react",
+        "terminal",
+        "typescript"
+      ],
+      "latest_version": "v0.1.17",
+      "release_url": "https://github.com/RosMengHeang/ZLI/releases/tag/v0.1.17",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "eyupio-zoomies",
