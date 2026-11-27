@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T23:29:32.592442+00:00",
+  "generated_at": "2026-11-27T23:29:55.471436+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -38811,11 +38811,11 @@
       "icon_url": "https://raw.githubusercontent.com/shadijhade/glint/master/crates/glint/msix/icon.png",
       "repository_url": "https://github.com/shadijhade/glint",
       "github_repo_id": "1101881427",
-      "source_updated_at": "2026-11-24T12:31:35Z",
+      "source_updated_at": "2026-11-27T13:38:35Z",
       "homepage_url": "https://glint.rafd.tech/",
       "owner": "shadijhade",
       "default_branch": "master",
-      "source_commit_sha": "31d531722454c35b0af32da878df29f8d10e27d7",
+      "source_commit_sha": "1122fbe13324a5fcc722b0f58c5b015e94fe8989",
       "license_text": "MIT License\n\nCopyright (c) 2025-2026 Shadi Sadi\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
