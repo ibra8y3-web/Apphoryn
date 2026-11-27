@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T21:19:52.204153+00:00",
+  "generated_at": "2026-11-27T21:20:19.560469+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -98865,6 +98865,129 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "avaneesh-inamdar-stream-tube-desktop",
+      "slug": "avaneesh-inamdar-stream-tube-desktop",
+      "name": "Stream-Tube-Desktop",
+      "summary": "Native YouTube client for Windows in Rust, with SponsorBlock, DeArrow and Return YouTube Dislike built in",
+      "description": "Native YouTube client for Windows in Rust, with SponsorBlock, DeArrow and Return YouTube Dislike built in",
+      "translations": {
+        "en": {
+          "summary": "Native YouTube client for Windows in Rust, with SponsorBlock, DeArrow and Return YouTube Dislike built in",
+          "description": "Native YouTube client for Windows in Rust, with SponsorBlock, DeArrow and Return YouTube Dislike built in"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Avaneesh-Inamdar/Stream-Tube-Desktop/main/assets/logo.png",
+      "repository_url": "https://github.com/Avaneesh-Inamdar/Stream-Tube-Desktop",
+      "github_repo_id": "1467880545",
+      "source_updated_at": "2026-11-27T21:14:53Z",
+      "homepage_url": null,
+      "owner": "Avaneesh-Inamdar",
+      "default_branch": "main",
+      "source_commit_sha": "7da65e55ae5a6d4c56b1df4df5e0ec57c65ba69e",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Avaneesh Inamdar\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "dearrow",
+        "desktop-app",
+        "gpui",
+        "mpv",
+        "rust",
+        "sponsorblock",
+        "windows",
+        "youtube",
+        "youtube-client"
+      ],
+      "latest_version": "v1.0.0",
+      "release_url": "https://github.com/Avaneesh-Inamdar/Stream-Tube-Desktop/releases/tag/v1.0.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-avaneesh-inamdar-stream-tube-desktop-v1.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-avaneesh-inamdar-stream-tube-desktop-v1.0.0/THIRD-PARTY-NOTICE-avaneesh-inamdar-stream-tube-desktop.txt",
+      "artifacts": [
+        {
+          "id": "3c2e5f9a9f6b8986af8074d2c0cb3a89cdcad2f9aa4adf798fd0ab2ec9ca01c2",
+          "filename": "StreamTube-1.0.0-setup.exe",
+          "original_filename": "StreamTube-1.0.0-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.0.0",
+          "size_bytes": 45613363,
+          "sha256": "3c2e5f9a9f6b8986af8074d2c0cb3a89cdcad2f9aa4adf798fd0ab2ec9ca01c2",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-avaneesh-inamdar-stream-tube-desktop-v1.0.0/StreamTube-1.0.0-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-avaneesh-inamdar-stream-tube-desktop-v1.0.0"
+        },
+        {
+          "id": "f16c92260042bd8c444e82ca8f84a90f2ac7aa664f05f62b471c1a1faa17a72b",
+          "filename": "StreamTube-1.0.0-x86_64.AppImage",
+          "original_filename": "StreamTube-1.0.0-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v1.0.0",
+          "size_bytes": 40073720,
+          "sha256": "f16c92260042bd8c444e82ca8f84a90f2ac7aa664f05f62b471c1a1faa17a72b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-avaneesh-inamdar-stream-tube-desktop-v1.0.0/StreamTube-1.0.0-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-avaneesh-inamdar-stream-tube-desktop-v1.0.0"
+        },
+        {
+          "id": "88c40df0ace09004cc9fe378afa8b4c7d449f1857ee43cf9165510d39f8fa389",
+          "filename": "streamtube-1.0.0.x86_64.rpm",
+          "original_filename": "streamtube-1.0.0.x86_64.rpm",
+          "platform": "linux",
+          "package_type": "RPM package",
+          "architecture": "x86_64",
+          "version": "v1.0.0",
+          "size_bytes": 22577019,
+          "sha256": "88c40df0ace09004cc9fe378afa8b4c7d449f1857ee43cf9165510d39f8fa389",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-avaneesh-inamdar-stream-tube-desktop-v1.0.0/streamtube-1.0.0.x86_64.rpm",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-avaneesh-inamdar-stream-tube-desktop-v1.0.0"
+        },
+        {
+          "id": "7cc726d6d465221ae87cccb4596e1d7b9ac369fd268ced6473013e48c466a133",
+          "filename": "streamtube_1.0.0_amd64.deb",
+          "original_filename": "streamtube_1.0.0_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v1.0.0",
+          "size_bytes": 22587116,
+          "sha256": "7cc726d6d465221ae87cccb4596e1d7b9ac369fd268ced6473013e48c466a133",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-avaneesh-inamdar-stream-tube-desktop-v1.0.0/streamtube_1.0.0_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-avaneesh-inamdar-stream-tube-desktop-v1.0.0"
+        }
+      ],
+      "platforms": [
+        "linux",
+        "windows"
       ]
     },
     {
