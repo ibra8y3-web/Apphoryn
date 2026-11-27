@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T03:48:52.856289+00:00",
+  "generated_at": "2026-11-27T03:49:44.943782+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -3172,11 +3172,11 @@
       "icon_url": "https://raw.githubusercontent.com/poco-ai/Agentero/main/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/poco-ai/Agentero",
       "github_repo_id": "1291896819",
-      "source_updated_at": "2026-11-26T20:13:50Z",
+      "source_updated_at": "2026-11-27T02:52:31Z",
       "homepage_url": "https://agentero.app",
       "owner": "poco-ai",
       "default_branch": "main",
-      "source_commit_sha": "3e2750fa890721d154cc8807f4e4e8ebedc8e447",
+      "source_commit_sha": "dcd3eb92c5741a0a6ece1ad3f70d10983cacd973",
       "license_text": "MIT License\n\nCopyright (c) 2026 poco-ai\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
