@@ -94510,6 +94510,14 @@
           ],
           "requested_at": "2026-11-26T20:55:43.763435+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
+        },
+        {
+          "git_ref": "875f1851129eebb14cdb78c955ee503ae6edc95e",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-27T21:00:42.050349+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ]
     },
