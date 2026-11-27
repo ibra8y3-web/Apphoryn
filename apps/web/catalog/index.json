@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T13:26:17.067933+00:00",
+  "generated_at": "2026-11-27T13:27:18.013206+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -60882,12 +60882,12 @@
       "id": "yourbossdonpely-musecligui",
       "slug": "yourbossdonpely-musecligui",
       "name": "musecodeicon",
-      "summary": "MuseCodeIcon by Don PELY — free, MIT-licensed desktop app for Meta's Muse Code CLI. More features than any other Muse GUI: scheduled prompts, skill routing, MCP manager, review pass, rollback, task modes + 20 more. Gold on black; Windows, m",
-      "description": "MuseCodeIcon by Don PELY — free, MIT-licensed desktop app for Meta's Muse Code CLI. More features than any other Muse GUI: scheduled prompts, skill routing, MCP manager, review pass, rollback, task modes + 20 more. Gold on black; Windows, macOS, Linux. Unofficial.",
+      "summary": "MuseCodeIcon by Don PELY — free, MIT-licensed desktop app for Meta's Muse Code CLI. More features than any other Muse GUI: scheduled prompts, skill routing, MCP manager, review pass, rollback, task modes, queue editing, icon colors + 20 mor",
+      "description": "MuseCodeIcon by Don PELY — free, MIT-licensed desktop app for Meta's Muse Code CLI. More features than any other Muse GUI: scheduled prompts, skill routing, MCP manager, review pass, rollback, task modes, queue editing, icon colors + 20 more. Gold on black; Windows, macOS, Linux. Unofficial.",
       "translations": {
         "en": {
-          "summary": "MuseCodeIcon by Don PELY — free, MIT-licensed desktop app for Meta's Muse Code CLI. More features than any other Muse GUI: scheduled prompts, skill routing, MCP manager, review pass, rollback, task modes + 20 more. Gold on black; Windows, m",
-          "description": "MuseCodeIcon by Don PELY — free, MIT-licensed desktop app for Meta's Muse Code CLI. More features than any other Muse GUI: scheduled prompts, skill routing, MCP manager, review pass, rollback, task modes + 20 more. Gold on black; Windows, macOS, Linux. Unofficial."
+          "summary": "MuseCodeIcon by Don PELY — free, MIT-licensed desktop app for Meta's Muse Code CLI. More features than any other Muse GUI: scheduled prompts, skill routing, MCP manager, review pass, rollback, task modes, queue editing, icon colors + 20 mor",
+          "description": "MuseCodeIcon by Don PELY — free, MIT-licensed desktop app for Meta's Muse Code CLI. More features than any other Muse GUI: scheduled prompts, skill routing, MCP manager, review pass, rollback, task modes, queue editing, icon colors + 20 more. Gold on black; Windows, macOS, Linux. Unofficial."
         }
       },
       "description_translations": {},
@@ -60897,11 +60897,11 @@
       "icon_url": "https://raw.githubusercontent.com/yourbossdonpely/musecligui/main/bridge-gui/assets/logo.png",
       "repository_url": "https://github.com/yourbossdonpely/musecligui",
       "github_repo_id": "1465938137",
-      "source_updated_at": "2026-11-27T03:59:48Z",
+      "source_updated_at": "2026-11-27T04:45:05Z",
       "homepage_url": "https://github.com/yourbossdonpely/musecligui/releases/latest",
       "owner": "yourbossdonpely",
       "default_branch": "main",
-      "source_commit_sha": "503f454a89dd582e0ab82d0f35a1a1d396041303",
+      "source_commit_sha": "08469040e3e997b2a5800912305911dd8570b7f3",
       "license_text": "MIT License\n\nCopyright (c) 2026 yourbossdonpely\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -60929,10 +60929,10 @@
         "tauri",
         "typescript"
       ],
-      "latest_version": "v3.0.1",
-      "release_url": "https://github.com/yourbossdonpely/musecodeicon/releases/tag/v3.0.1",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yourbossdonpely-musecligui-v3.0.1",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yourbossdonpely-musecligui-v3.0.1/THIRD-PARTY-NOTICE-yourbossdonpely-musecligui.txt",
+      "latest_version": "v3.1.0",
+      "release_url": "https://github.com/yourbossdonpely/musecodeicon/releases/tag/v3.1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yourbossdonpely-musecligui-v3.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yourbossdonpely-musecligui-v3.1.0/THIRD-PARTY-NOTICE-yourbossdonpely-musecligui.txt",
       "artifacts": [
         {
           "id": "b9e56dac70f48c7dd31f2b31bd0d9255bd3a321e1f284009ee8debe796052565",
@@ -61273,6 +61273,91 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yourbossdonpely-musecligui-v3.0.1/MuseCodeIcon_3.0.1_x64-setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yourbossdonpely-musecligui-v3.0.1"
+        },
+        {
+          "id": "3be2a81c197dc47b5213fa95161ec63d4b1c8e54071c968d17ed0db7aeac9a5f",
+          "filename": "MuseCodeIcon-3.1.0-1.x86_64.rpm",
+          "original_filename": "MuseCodeIcon-3.1.0-1.x86_64.rpm",
+          "platform": "linux",
+          "package_type": "RPM package",
+          "architecture": "x86_64",
+          "version": "v3.1.0",
+          "size_bytes": 56302102,
+          "sha256": "3be2a81c197dc47b5213fa95161ec63d4b1c8e54071c968d17ed0db7aeac9a5f",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yourbossdonpely-musecligui-v3.1.0/MuseCodeIcon-3.1.0-1.x86_64.rpm",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yourbossdonpely-musecligui-v3.1.0"
+        },
+        {
+          "id": "6f6552c78df2b8ab0e48584e958dee042a2228f6d5de343fe6c0af9bc91d2578",
+          "filename": "MuseCodeIcon_3.1.0_amd64.AppImage",
+          "original_filename": "MuseCodeIcon_3.1.0_amd64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v3.1.0",
+          "size_bytes": 129042936,
+          "sha256": "6f6552c78df2b8ab0e48584e958dee042a2228f6d5de343fe6c0af9bc91d2578",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yourbossdonpely-musecligui-v3.1.0/MuseCodeIcon_3.1.0_amd64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yourbossdonpely-musecligui-v3.1.0"
+        },
+        {
+          "id": "67baa8de2bc1634b15ca3e0547455263ce82ddd2e43d32c354982d0780cc7238",
+          "filename": "MuseCodeIcon_3.1.0_amd64.deb",
+          "original_filename": "MuseCodeIcon_3.1.0_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v3.1.0",
+          "size_bytes": 56333690,
+          "sha256": "67baa8de2bc1634b15ca3e0547455263ce82ddd2e43d32c354982d0780cc7238",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yourbossdonpely-musecligui-v3.1.0/MuseCodeIcon_3.1.0_amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yourbossdonpely-musecligui-v3.1.0"
+        },
+        {
+          "id": "919d05b84b3026f1e1dbbde4da0798274d428390f02997fedf97279fef01030a",
+          "filename": "MuseCodeIcon_3.1.0_universal.dmg",
+          "original_filename": "MuseCodeIcon_3.1.0_universal.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "universal",
+          "version": "v3.1.0",
+          "size_bytes": 91286506,
+          "sha256": "919d05b84b3026f1e1dbbde4da0798274d428390f02997fedf97279fef01030a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yourbossdonpely-musecligui-v3.1.0/MuseCodeIcon_3.1.0_universal.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yourbossdonpely-musecligui-v3.1.0"
+        },
+        {
+          "id": "4aeb4974f420ba8fddad0e74472a98d1594c90a63824ff6aafac8224297ccac7",
+          "filename": "MuseCodeIcon_3.1.0_x64-setup.exe",
+          "original_filename": "MuseCodeIcon_3.1.0_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v3.1.0",
+          "size_bytes": 29677016,
+          "sha256": "4aeb4974f420ba8fddad0e74472a98d1594c90a63824ff6aafac8224297ccac7",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-yourbossdonpely-musecligui-v3.1.0/MuseCodeIcon_3.1.0_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-yourbossdonpely-musecligui-v3.1.0"
         }
       ],
       "platforms": [
