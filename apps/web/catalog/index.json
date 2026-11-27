@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T13:42:42.786072+00:00",
+  "generated_at": "2026-11-27T13:43:37.887106+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -60634,7 +60634,7 @@
       "icon_url": "https://raw.githubusercontent.com/HarnessMD/munder-difflin/main/build/icon.png",
       "repository_url": "https://github.com/HarnessMD/munder-difflin",
       "github_repo_id": "1255237198",
-      "source_updated_at": "2026-11-27T04:12:45Z",
+      "source_updated_at": "2026-11-27T13:25:26Z",
       "homepage_url": "https://munderdiffl.in",
       "owner": "HarnessMD",
       "default_branch": "main",
