@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T13:06:19.482104+00:00",
+  "generated_at": "2026-11-27T13:07:10.306041+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -9759,11 +9759,11 @@
       "icon_url": "https://raw.githubusercontent.com/zhouxiaoka/autoclip/main/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/zhouxiaoka/autoclip",
       "github_repo_id": "1015815983",
-      "source_updated_at": "2026-11-27T03:51:58Z",
+      "source_updated_at": "2026-11-27T13:06:18Z",
       "homepage_url": "https://zhouxiaoka.github.io/autoclip_intro/",
       "owner": "zhouxiaoka",
       "default_branch": "main",
-      "source_commit_sha": "559f01900aed62ca8bc9244d7bd7092ab29bd82e",
+      "source_commit_sha": "d840e67d2ce43b18c7a31e238bf18e105fe4e69a",
       "license_text": "MIT License\n\nCopyright (c) 2024 AutoClip Team\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -9795,10 +9795,10 @@
         "xiaohongshu",
         "youtube-shorts"
       ],
-      "latest_version": "v1.6.1",
-      "release_url": "https://github.com/zhouxiaoka/autoclip/releases/tag/v1.6.1",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zhouxiaoka-autoclip-v1.6.1",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zhouxiaoka-autoclip-v1.6.1/THIRD-PARTY-NOTICE-zhouxiaoka-autoclip.txt",
+      "latest_version": "v1.6.2",
+      "release_url": "https://github.com/zhouxiaoka/autoclip/releases/tag/v1.6.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zhouxiaoka-autoclip-v1.6.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zhouxiaoka-autoclip-v1.6.2/THIRD-PARTY-NOTICE-zhouxiaoka-autoclip.txt",
       "artifacts": [
         {
           "id": "ba7205426133eb4bd6557e70cc096e9afcca62a174843be789783389c45b3262",
@@ -9833,6 +9833,40 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zhouxiaoka-autoclip-v1.6.1/AutoClip.Desktop_1.6.1_x64-setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zhouxiaoka-autoclip-v1.6.1"
+        },
+        {
+          "id": "6a1929cb0b6f571ea085e235662c86178f77f16a062ece7487d388d58527871d",
+          "filename": "AutoClip.Desktop_1.6.2_aarch64.dmg",
+          "original_filename": "AutoClip.Desktop_1.6.2_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v1.6.2",
+          "size_bytes": 347562949,
+          "sha256": "6a1929cb0b6f571ea085e235662c86178f77f16a062ece7487d388d58527871d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zhouxiaoka-autoclip-v1.6.2/AutoClip.Desktop_1.6.2_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zhouxiaoka-autoclip-v1.6.2"
+        },
+        {
+          "id": "09428444c35db48a042ad79b097013a40865971f0ea3d9254e29fad521e0e814",
+          "filename": "AutoClip.Desktop_1.6.2_x64-setup.exe",
+          "original_filename": "AutoClip.Desktop_1.6.2_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.6.2",
+          "size_bytes": 208464290,
+          "sha256": "09428444c35db48a042ad79b097013a40865971f0ea3d9254e29fad521e0e814",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-zhouxiaoka-autoclip-v1.6.2/AutoClip.Desktop_1.6.2_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-zhouxiaoka-autoclip-v1.6.2"
         }
       ],
       "platforms": [
