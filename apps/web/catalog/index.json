@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T20:36:04.413440+00:00",
+  "generated_at": "2026-11-27T20:36:27.180365+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -79198,7 +79198,7 @@
       "homepage_url": "https://github.com/T-Chen-CN/pi-workbench/releases/latest",
       "owner": "T-Chen-CN",
       "default_branch": "main",
-      "source_commit_sha": "3db093c87e2e32eceac406bcf94de54d06b2cd89",
+      "source_commit_sha": "2384230f1409ef4ee833a94416c80e7949a1c3b7",
       "license_text": "MIT License\n\nCopyright (c) 2026 Pi Workbench Team\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
