@@ -39657,7 +39657,19 @@
       "latest_version": "v0.22.0",
       "release_url": "https://github.com/tthheusalmeida/homelab/releases/tag/v0.22.0",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "0da6cc4f353b94904ab5270a8c4969f040e9168e",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-27T00:16:21.522673+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "leon-ning-san-homurareader",
