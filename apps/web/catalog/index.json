@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T15:56:20.899191+00:00",
+  "generated_at": "2026-11-27T15:56:44.385095+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -113375,7 +113375,7 @@
       "icon_url": "https://raw.githubusercontent.com/lingcang728/ZeppBridge/main/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/lingcang728/ZeppBridge",
       "github_repo_id": "1332643174",
-      "source_updated_at": "2026-11-26T21:55:35Z",
+      "source_updated_at": "2026-11-27T12:52:03Z",
       "homepage_url": "https://zeppbridge.com",
       "owner": "lingcang728",
       "default_branch": "main",
