@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T21:46:56.049652+00:00",
+  "generated_at": "2026-11-27T21:47:17.016929+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -61794,7 +61794,7 @@
       "icon_url": "https://raw.githubusercontent.com/eiaao/mousetroke/main/crates/mousetroke-settings/icons/icon.png",
       "repository_url": "https://github.com/eiaao/mousetroke",
       "github_repo_id": "1424078752",
-      "source_updated_at": "2026-11-25T07:04:25Z",
+      "source_updated_at": "2026-11-27T18:25:35Z",
       "homepage_url": "https://mousetroke.com/",
       "owner": "eiaao",
       "default_branch": "main",
