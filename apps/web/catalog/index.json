@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T04:45:27.745628+00:00",
+  "generated_at": "2026-11-27T04:45:47.580779+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -51250,7 +51250,7 @@
       "icon_url": "https://raw.githubusercontent.com/marcellosso/localhost/main/apps/desktop/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/marcellosso/localhost",
       "github_repo_id": "1430200928",
-      "source_updated_at": "2026-11-21T20:26:48Z",
+      "source_updated_at": "2026-11-27T04:01:27Z",
       "homepage_url": "https://www.getlocalhost.app",
       "owner": "marcellosso",
       "default_branch": "main",
