@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T03:17:23.527153+00:00",
+  "generated_at": "2026-11-27T03:18:07.896817+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -91011,7 +91011,7 @@
       "homepage_url": "https://specwithcode.com",
       "owner": "anton-abyzov",
       "default_branch": "main",
-      "source_commit_sha": "5ddc104e8bf07eefcb677cf2005aadf1d3c65850",
+      "source_commit_sha": "c8701bd9e688d64377fe220d255c9b6a309ac981",
       "license_text": "MIT License\n\nCopyright (c) 2026 Anton Abyzov\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -91043,10 +91043,10 @@
         "orchestration",
         "spec-driven-development"
       ],
-      "latest_version": "v1.0.445",
-      "release_url": "https://github.com/anton-abyzov/specwithcode/releases/tag/v1.0.445",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-anton-abyzov-specwithcode-v1.0.445",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-anton-abyzov-specwithcode-v1.0.445/THIRD-PARTY-NOTICE-anton-abyzov-specwithcode.txt",
+      "latest_version": "v1.0.446",
+      "release_url": "https://github.com/anton-abyzov/specwithcode/releases/tag/v1.0.446",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-anton-abyzov-specwithcode-v1.0.446",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-anton-abyzov-specwithcode-v1.0.446/THIRD-PARTY-NOTICE-anton-abyzov-specwithcode.txt",
       "artifacts": [
         {
           "id": "ea4899182fff3c7b76259331366193436d3726814d809865a8b3e7ae9fdd5aa4",
@@ -91353,6 +91353,23 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-anton-abyzov-specwithcode-v1.0.445/SpecWithCode-1.0.445-x86_64.AppImage",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-anton-abyzov-specwithcode-v1.0.445"
+        },
+        {
+          "id": "d038cb44a9ec7afb5249d3d665aaaea5b53e538ff9e39b3a391853035efebaa9",
+          "filename": "SpecWithCode-1.0.446-arm64.dmg",
+          "original_filename": "SpecWithCode-1.0.446-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v1.0.446",
+          "size_bytes": 183831310,
+          "sha256": "d038cb44a9ec7afb5249d3d665aaaea5b53e538ff9e39b3a391853035efebaa9",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-anton-abyzov-specwithcode-v1.0.446/SpecWithCode-1.0.446-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-anton-abyzov-specwithcode-v1.0.446"
         }
       ],
       "platforms": [
