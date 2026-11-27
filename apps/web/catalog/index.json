@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T12:05:11.313270+00:00",
+  "generated_at": "2026-11-27T12:05:40.572464+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -26037,7 +26037,7 @@
       "homepage_url": "https://ducatapp.com",
       "owner": "solomontaiwo",
       "default_branch": "main",
-      "source_commit_sha": "dfe7166caf24cfedcf5a1456a1d08b07a999e56b",
+      "source_commit_sha": "9dffa82e6776578922330d77817b4cd58e147d0c",
       "license_text": "MIT License\n\nCopyright (c) 2026 Solomon Taiwo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -26060,10 +26060,10 @@
         "tauri",
         "windows"
       ],
-      "latest_version": "v4.0.57",
-      "release_url": "https://github.com/solomontaiwo/ducat/releases/tag/v4.0.57",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-solomontaiwo-ducat-v4.0.57",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-solomontaiwo-ducat-v4.0.57/THIRD-PARTY-NOTICE-solomontaiwo-ducat.txt",
+      "latest_version": "v4.0.63",
+      "release_url": "https://github.com/solomontaiwo/ducat/releases/tag/v4.0.63",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-solomontaiwo-ducat-v4.0.63",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-solomontaiwo-ducat-v4.0.63/THIRD-PARTY-NOTICE-solomontaiwo-ducat.txt",
       "artifacts": [
         {
           "id": "04719a0fe37f21c48b3ceb35e58c11c637126652f9ae2014fe964711d449af68",
@@ -26285,6 +26285,57 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-solomontaiwo-ducat-v4.0.57/Ducat-4.0.57-windows-x64-setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-solomontaiwo-ducat-v4.0.57"
+        },
+        {
+          "id": "b5d0e2296bc532363828d5f81fd36148a08fa2343f82a78e4d18115e5976eb66",
+          "filename": "Ducat-4.0.63-macos-arm64.dmg",
+          "original_filename": "Ducat-4.0.63-macos-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v4.0.63",
+          "size_bytes": 5756361,
+          "sha256": "b5d0e2296bc532363828d5f81fd36148a08fa2343f82a78e4d18115e5976eb66",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-solomontaiwo-ducat-v4.0.63/Ducat-4.0.63-macos-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-solomontaiwo-ducat-v4.0.63"
+        },
+        {
+          "id": "9f212783bae8df763c63c2dd742621b3e857a6c708f84b5c127107475294cc55",
+          "filename": "Ducat-4.0.63-windows-aarch64-setup.exe",
+          "original_filename": "Ducat-4.0.63-windows-aarch64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "arm64",
+          "version": "v4.0.63",
+          "size_bytes": 3833585,
+          "sha256": "9f212783bae8df763c63c2dd742621b3e857a6c708f84b5c127107475294cc55",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-solomontaiwo-ducat-v4.0.63/Ducat-4.0.63-windows-aarch64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-solomontaiwo-ducat-v4.0.63"
+        },
+        {
+          "id": "e48d6297404f8e1f5fd5a900274c4c5514b09e397a168d2282088a5c324225ed",
+          "filename": "Ducat-4.0.63-windows-x64-setup.exe",
+          "original_filename": "Ducat-4.0.63-windows-x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v4.0.63",
+          "size_bytes": 4219833,
+          "sha256": "e48d6297404f8e1f5fd5a900274c4c5514b09e397a168d2282088a5c324225ed",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-solomontaiwo-ducat-v4.0.63/Ducat-4.0.63-windows-x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-solomontaiwo-ducat-v4.0.63"
         }
       ],
       "platforms": [
