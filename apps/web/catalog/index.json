@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T07:01:04.748283+00:00",
+  "generated_at": "2026-11-27T07:01:20.375304+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -61183,17 +61183,19 @@
       "id": "projectgloria-mutatio",
       "slug": "projectgloria-mutatio",
       "name": "Mutatio",
-      "summary": "Mutatio is a lightweight Rust daemon for Windows 10/11 that customizes taskbar appearance with presets, smooth transitions, a tray flyout, and CLI control.",
-      "description": "Mutatio is a Windows 10/11 x86_64 taskbar appearance daemon written in Rust. It runs as a single-instance background tray app with per-monitor taskbar detection, five appearance presets, custom tinting, smooth transitions, and a native dark flyout UI. It provides CLI control and Named Pipe IPC, and on Windows 11 it uses an embedded ExplorerTAP.dll bridge to drive ITaskbarAppearanceService, with Win32 composition/DWM fallbacks on Windows 10 or when injection is unavailable. The repository includes installation instructions, configuration details, and a supported source build path using Rust 1.85+, Windows SDK, and cargo build --release, with optional Inno Setup installer packaging.",
+      "summary": "Windows 11 & 10 taskbar appearance daemon in Rust with smooth transitions, tray flyout UI, CLI control, and sub-15 MB RAM.",
+      "description": "Windows 11 & 10 taskbar appearance daemon in Rust with smooth transitions, tray flyout UI, CLI control, and sub-15 MB RAM.",
       "translations": {
-        "en": "Mutatio is a lightweight Rust daemon for Windows 10/11 that customizes taskbar appearance with presets, smooth transitions, a tray flyout, and CLI control.",
-        "ar": "Mutatio هو برنامج خفيف مكتوب بلغة Rust لواجهة Windows 10/11 لتخصيص مظهر شريط المهام بإعدادات مسبقة وانتقالات سلسة وواجهة منبثقة في صينية النظام وتحكم عبر سطر الأوامر."
+        "en": {
+          "summary": "Windows 11 & 10 taskbar appearance daemon in Rust with smooth transitions, tray flyout UI, CLI control, and sub-15 MB RAM.",
+          "description": "Windows 11 & 10 taskbar appearance daemon in Rust with smooth transitions, tray flyout UI, CLI control, and sub-15 MB RAM."
+        }
       },
       "description_translations": {
         "en": "Mutatio is a Windows 10/11 x86_64 taskbar appearance daemon written in Rust. It runs as a single-instance background tray app with per-monitor taskbar detection, five appearance presets, custom tinting, smooth transitions, and a native dark flyout UI. It provides CLI control and Named Pipe IPC, and on Windows 11 it uses an embedded ExplorerTAP.dll bridge to drive ITaskbarAppearanceService, with Win32 composition/DWM fallbacks on Windows 10 or when injection is unavailable. The repository includes installation instructions, configuration details, and a supported source build path using Rust 1.85+, Windows SDK, and cargo build --release, with optional Inno Setup installer packaging.",
         "ar": "Mutatio هو برنامج خلفية لـ Windows 10/11 بنية x86_64 مكتوب بلغة Rust لتخصيص مظهر شريط المهام. يعمل كتطبيق خلفية مستقل بواجهة صينية النظام، ويكتشف حالة شريط المهام لكل شاشة، ويوفر خمسة إعدادات مسبقة وتلوينًا مخصصًا وانتقالات سلسة وواجهة منبثقة داكنة. يدعم التحكم عبر سطر الأوامر وIPC عبر الأنابيب المسماة، ويستخدم على Windows 11 ملف ExplorerTAP.dll المضمن للتحكم في ITaskbarAppearanceService، مع خيارات احتياطية باستخدام SetWindowCompositionAttribute وDWM على Windows 10 أو عند تعذر الحقن. يتضمن المستودع تعليمات التثبيت وإعدادات التكوين ومسار بناء مدعوم من المصدر باستخدام Rust 1.85+ وWindows SDK والأمر cargo build --release، مع تغليف اختياري للمثبت باستخدام Inno Setup."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/projectGloria/Mutatio/main/docs/assets/icon.png",
@@ -61207,10 +61209,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 Mutatio Contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
-      "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "Standalone Windows end-user application with tray UI, CLI, installer, and documented Rust build path.",
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
       "project_status": "installable",
       "category": "productivity",
       "topics": [
