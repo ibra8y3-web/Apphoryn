@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:05:23.489595+00:00",
+  "generated_at": "2026-11-27T00:05:59.909360+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -62610,18 +62610,19 @@
       "slug": "moreih29-nexus-code",
       "artifacts": [],
       "name": "nexus-code",
-      "summary": "Multi-workspace VSCode-style code editor for macOS — Monaco editor + integrated terminal in one window, with SSH remote workspaces.",
-      "description": "Multi-workspace VSCode-style code editor for macOS — Monaco editor + integrated terminal in one window, with SSH remote workspaces.",
+      "summary": "NexusCode is a multi-workspace desktop code editor with Monaco, integrated terminal, Git, SSH remote workspaces, and agent sessions.",
+      "description": "NexusCode is a desktop application for developers that combines a Monaco-based editor, integrated terminal, Git source control, and an in-app browser in one window. It supports multiple workspaces, including local folders and SSH hosts, and provides an agent view for running multiple Claude Code and Codex sessions side by side. Tasks can create separate branches and Git worktrees. The app also includes notes, voice input, meeting transcription, remote access between signed-in computers, and a nexus CLI inside the terminal. Installers are provided for macOS on Apple Silicon, Windows x64 via Microsoft Store, and Linux x64/arm64 as .deb or AppImage. A self-build guide is available. NexusCode is MIT licensed.",
       "translations": {
-        "en": {
-          "summary": "Multi-workspace VSCode-style code editor for macOS — Monaco editor + integrated terminal in one window, with SSH remote workspaces.",
-          "description": "Multi-workspace VSCode-style code editor for macOS — Monaco editor + integrated terminal in one window, with SSH remote workspaces."
-        }
+        "en": "NexusCode is a multi-workspace desktop code editor with Monaco, integrated terminal, Git, SSH remote workspaces, and agent sessions.",
+        "ar": "NexusCode تطبيق سطح مكتب لتحرير الأكواد يدعم مساحات عمل متعددة، ومحرر Monaco، وطرفية مدمجة، وGit، ومساحات عمل بعيدة عبر SSH، وجلسات وكلاء."
       },
-      "description_translations": {},
-      "translation_status": "pending",
-      "ai_provider": null,
-      "ai_model": null,
+      "description_translations": {
+        "en": "NexusCode is a desktop application for developers that combines a Monaco-based editor, integrated terminal, Git source control, and an in-app browser in one window. It supports multiple workspaces, including local folders and SSH hosts, and provides an agent view for running multiple Claude Code and Codex sessions side by side. Tasks can create separate branches and Git worktrees. The app also includes notes, voice input, meeting transcription, remote access between signed-in computers, and a nexus CLI inside the terminal. Installers are provided for macOS on Apple Silicon, Windows x64 via Microsoft Store, and Linux x64/arm64 as .deb or AppImage. A self-build guide is available. NexusCode is MIT licensed.",
+        "ar": "NexusCode تطبيق سطح مكتب للمطورين. يضم محرر Monaco، وطرفية مدمجة، وتحكم المصدر Git، ومتصفحًا داخل التطبيق، كل ذلك في نافذة واحدة. يدعم مساحات عمل متعددة، بما في ذلك المجلدات المحلية والمضيفات عبر SSH، ويوفر عرضًا للوكلاء لتشغيل جلسات Claude Code وCodex متعددة جنبًا إلى جنب. يمكن للمهام إنشاء فروع وأشجار عمل Git منفصلة. يتضمن التطبيق أيضًا ملاحظات، وإدخالًا صوتيًا، ونسخًا للاجتماعات، والوصول عن بُعد بين الأجهزة المسجلة الدخول، وأداة سطر أوامر باسم nexus داخل الطرفية. تتوفر مثبتات لـ macOS على Apple Silicon، وWindows x64 عبر Microsoft Store، وLinux x64/arm64 بصيغتي .deb وAppImage. يوجد دليل للبناء الذاتي. التطبيق مرخص بموجب MIT."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/moreih29/nexus-code/main/src/renderer/assets/icons/material/favicon.svg",
       "repository_url": "https://github.com/moreih29/nexus-code",
       "github_repo_id": "1192635219",
@@ -62629,14 +62630,14 @@
       "homepage_url": null,
       "owner": "moreih29",
       "default_branch": "main",
-      "source_commit_sha": "330ba8c7d08f9e6abaa0a7ddaedc07ba90120dda",
+      "source_commit_sha": "9bf299d3bef0fec08c299de8275ffae12224e49a",
       "license_text": "MIT License\n\nCopyright (c) 2026 moreih29\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "developer_tool",
+      "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "heuristic",
-      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "classification_source": "ai",
+      "classification_reason": "Standalone desktop application with documented installers and a self-build guide; it is not a library or hosted service.",
       "category": "developer",
       "topics": [
         "code-editor",
@@ -62653,8 +62654,8 @@
         "typescript",
         "xterm"
       ],
-      "latest_version": "v0.45.0",
-      "release_url": "https://github.com/moreih29/nexus-code/releases/tag/v0.45.0",
+      "latest_version": "v0.46.2",
+      "release_url": "https://github.com/moreih29/nexus-code/releases/tag/v0.46.2",
       "platforms": [],
       "project_status": "source_available",
       "build_attempts": [
