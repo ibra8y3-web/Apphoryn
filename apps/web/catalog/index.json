@@ -54239,7 +54239,19 @@
       "latest_version": "2026.11.27",
       "release_url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.11.27",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "a3a2aad72ed705edae00e8fa921176ab171db39e",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-27T23:49:01.985884+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "cholletflorentin-local-ia-runner",
