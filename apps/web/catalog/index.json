@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T23:48:37.452319+00:00",
+  "generated_at": "2026-11-27T23:48:50.717297+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -54183,6 +54183,63 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "netease-youdao-lobsterai",
+      "slug": "netease-youdao-lobsterai",
+      "artifacts": [],
+      "name": "LobsterAI",
+      "summary": "Open-source, desktop-grade AI agent that gets real work done — data analysis, slides, docs, video & web research. Built on OpenClaw; runs tools on your real desktop and takes commands from your phone via WeChat, Feishu, DingTalk & Telegram.",
+      "description": "Open-source, desktop-grade AI agent that gets real work done — data analysis, slides, docs, video & web research. Built on OpenClaw; runs tools on your real desktop and takes commands from your phone via WeChat, Feishu, DingTalk & Telegram.",
+      "translations": {
+        "en": {
+          "summary": "Open-source, desktop-grade AI agent that gets real work done — data analysis, slides, docs, video & web research. Built on OpenClaw; runs tools on your real desktop and takes commands from your phone via WeChat, Feishu, DingTalk & Telegram.",
+          "description": "Open-source, desktop-grade AI agent that gets real work done — data analysis, slides, docs, video & web research. Built on OpenClaw; runs tools on your real desktop and takes commands from your phone via WeChat, Feishu, DingTalk & Telegram."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/netease-youdao/LobsterAI/main/public/logo.png",
+      "repository_url": "https://github.com/netease-youdao/LobsterAI",
+      "github_repo_id": "1156137396",
+      "source_updated_at": "2026-11-27T21:30:23Z",
+      "homepage_url": "https://lobsterai.youdao.com",
+      "owner": "netease-youdao",
+      "default_branch": "main",
+      "source_commit_sha": "a3a2aad72ed705edae00e8fa921176ab171db39e",
+      "license_text": "MIT License\n\nCopyright (c) 2026 NetEase Youdao\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "agent",
+        "ai-agent",
+        "ai-assistant",
+        "automation",
+        "autonomous-agents",
+        "chatbot",
+        "copilot",
+        "cross-platform",
+        "desktop-app",
+        "electron",
+        "llm",
+        "mcp",
+        "office-automation",
+        "openclaw",
+        "productivity",
+        "react",
+        "tyepscript"
+      ],
+      "latest_version": "2026.11.27",
+      "release_url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.11.27",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "cholletflorentin-local-ia-runner",
