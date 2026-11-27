@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T21:36:44.066011+00:00",
+  "generated_at": "2026-11-27T21:37:13.451771+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -62101,11 +62101,11 @@
       "icon_url": "https://raw.githubusercontent.com/HarnessMD/munder-difflin/main/build/icon.png",
       "repository_url": "https://github.com/HarnessMD/munder-difflin",
       "github_repo_id": "1255237198",
-      "source_updated_at": "2026-11-27T13:25:26Z",
+      "source_updated_at": "2026-11-27T21:29:48Z",
       "homepage_url": "https://munderdiffl.in",
       "owner": "HarnessMD",
       "default_branch": "main",
-      "source_commit_sha": "0c2ebf0a08afa93b734445c51a79cc7dd26fea95",
+      "source_commit_sha": "e0570ef859ffd553f96ae1f952fccfba7847a56b",
       "license_text": "MIT License\n\nCopyright (c) 2026 Chaitanya Giri\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
