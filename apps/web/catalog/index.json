@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T13:42:16.160109+00:00",
+  "generated_at": "2026-11-27T13:42:42.786072+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -82195,7 +82195,7 @@
       "homepage_url": "https://3347567186.github.io/QDisk/",
       "owner": "3347567186",
       "default_branch": "main",
-      "source_commit_sha": "c3641fc6a2dd19525e95dde76861a9710393c824",
+      "source_commit_sha": "3588e6ea5a9de633d834e8e316019c26494d1970",
       "license_text": "MIT License\n\nCopyright (c) 2026 TidyAssistant Contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -82227,10 +82227,10 @@
         "windows-utility",
         "zip"
       ],
-      "latest_version": "v1.47.4",
-      "release_url": "https://github.com/3347567186/QDisk/releases/tag/v1.47.4",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-3347567186-qdisk-v1.47.4",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-3347567186-qdisk-v1.47.4/THIRD-PARTY-NOTICE-3347567186-qdisk.txt",
+      "latest_version": "v1.49.0",
+      "release_url": "https://github.com/Bireo/QDisk/releases/tag/v1.49.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-3347567186-qdisk-v1.49.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-3347567186-qdisk-v1.49.0/THIRD-PARTY-NOTICE-3347567186-qdisk.txt",
       "artifacts": [
         {
           "id": "bd5ef6d8132b2323cd0d38e9072fdc1d1d3f4d11f10881947586692e2d22b415",
@@ -82265,6 +82265,23 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-3347567186-qdisk-v1.47.4/QDisk_1.47.4_x64-setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-3347567186-qdisk-v1.47.4"
+        },
+        {
+          "id": "78241020952e5189c2a19b52f858d39745e95f92cbf824c9810bed817d6b0c4e",
+          "filename": "QDisk_1.49.0_x64-setup.exe",
+          "original_filename": "QDisk_1.49.0_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v1.49.0",
+          "size_bytes": 23473691,
+          "sha256": "78241020952e5189c2a19b52f858d39745e95f92cbf824c9810bed817d6b0c4e",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-3347567186-qdisk-v1.49.0/QDisk_1.49.0_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-3347567186-qdisk-v1.49.0"
         }
       ],
       "platforms": [
