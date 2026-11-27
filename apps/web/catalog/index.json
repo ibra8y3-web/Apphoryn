@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T05:05:09.995404+00:00",
+  "generated_at": "2026-11-27T05:05:47.101081+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -63649,7 +63649,7 @@
       "homepage_url": null,
       "owner": "roma1231jjj-cpu",
       "default_branch": "main",
-      "source_commit_sha": "032ad8844671c1bc5147f828f8483fc4c95ac307",
+      "source_commit_sha": "9a08c66770e17dfb114cd0cd402ea4fe2ae6f272",
       "license_text": "MIT License\n\nCopyright (c) 2026 Nexus × АутSquad\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -63677,10 +63677,10 @@
         "russian-law",
         "typescript"
       ],
-      "latest_version": "v1.0.6",
-      "release_url": "https://github.com/roma1231jjj-cpu/nexus-lawyer/releases/tag/v1.0.6",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-roma1231jjj-cpu-nexus-lawyer-v1.0.6",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-roma1231jjj-cpu-nexus-lawyer-v1.0.6/THIRD-PARTY-NOTICE-roma1231jjj-cpu-nexus-lawyer.txt",
+      "latest_version": "v1.0.7",
+      "release_url": "https://github.com/roma1231jjj-cpu/nexus-lawyer/releases/tag/v1.0.7",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-roma1231jjj-cpu-nexus-lawyer-v1.0.7",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-roma1231jjj-cpu-nexus-lawyer-v1.0.7/THIRD-PARTY-NOTICE-roma1231jjj-cpu-nexus-lawyer.txt",
       "artifacts": [
         {
           "id": "c038f00b5d10b29e8ed97ac9f57bfdd8f0bde81f80385e64d43805ac64f7f9a5",
@@ -63749,6 +63749,40 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-roma1231jjj-cpu-nexus-lawyer-v1.0.6/nexus-lawyer-setup-1.0.6.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-roma1231jjj-cpu-nexus-lawyer-v1.0.6"
+        },
+        {
+          "id": "99403a1120d359cc4bdf2cd2cd4577607aadceca7afa7954dcf8b3abb3b1a11a",
+          "filename": "nexus-lawyer-1.0.7-portable.exe",
+          "original_filename": "nexus-lawyer-1.0.7-portable.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.0.7",
+          "size_bytes": 74844544,
+          "sha256": "99403a1120d359cc4bdf2cd2cd4577607aadceca7afa7954dcf8b3abb3b1a11a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-roma1231jjj-cpu-nexus-lawyer-v1.0.7/nexus-lawyer-1.0.7-portable.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-roma1231jjj-cpu-nexus-lawyer-v1.0.7"
+        },
+        {
+          "id": "c52a554faeb4aa7abac11c8b5ad495f5aceea68959b26c44de744a507703624f",
+          "filename": "nexus-lawyer-setup-1.0.7.exe",
+          "original_filename": "nexus-lawyer-setup-1.0.7.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v1.0.7",
+          "size_bytes": 82270549,
+          "sha256": "c52a554faeb4aa7abac11c8b5ad495f5aceea68959b26c44de744a507703624f",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-roma1231jjj-cpu-nexus-lawyer-v1.0.7/nexus-lawyer-setup-1.0.7.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-roma1231jjj-cpu-nexus-lawyer-v1.0.7"
         }
       ],
       "platforms": [
