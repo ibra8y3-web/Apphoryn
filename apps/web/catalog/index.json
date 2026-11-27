@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T07:02:01.681562+00:00",
+  "generated_at": "2026-11-27T07:02:34.221799+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -72890,17 +72890,19 @@
       "slug": "getoxide-oxide",
       "artifacts": [],
       "name": "oxide",
-      "summary": "Free, open-source desktop terminal app for GitHub Projects with multiple terminals, GitHub issues and pull requests, file browsing, and a built-in code editor.",
-      "description": "Oxide is a free, open-source desktop terminal app that organizes work around GitHub Projects. It lets you open a project folder, create multiple terminals, and keep each terminal’s scrollback, working directory, and running process while switching. Command blocks group commands, output, and exit status. GitHub integration provides issues and pull request workflows through the GitHub CLI, plus file browsing and a built-in Monaco editor with language servers for Rust, TypeScript/JavaScript, Python, and C/C++. Oxide is pre-release software built with Rust and Tauri 2, with installers for macOS on Apple Silicon, Windows x64/arm64, and Linux x64/arm64. It does not interpret terminal commands; command-line tools, including agent CLIs, can be run as ordinary shell commands.",
+      "summary": "Oxide is a free, open-source desktop app for agentic coding that drives Claude Code, Codex and Antigravity CLI in one window and shows what each change touched and what was actually checked, so you can merge with confidence.",
+      "description": "Oxide is a free, open-source desktop app for agentic coding that drives Claude Code, Codex and Antigravity CLI in one window and shows what each change touched and what was actually checked, so you can merge with confidence.",
       "translations": {
-        "en": "Free, open-source desktop terminal app for GitHub Projects with multiple terminals, GitHub issues and pull requests, file browsing, and a built-in code editor.",
-        "ar": "تطبيق طرفية مكتبي مجاني ومفتوح المصدر لمشاريع GitHub، مع طرفيات متعددة وطلبات سحب ومشكلات ومحرر مدمج."
+        "en": {
+          "summary": "Oxide is a free, open-source desktop app for agentic coding that drives Claude Code, Codex and Antigravity CLI in one window and shows what each change touched and what was actually checked, so you can merge with confidence.",
+          "description": "Oxide is a free, open-source desktop app for agentic coding that drives Claude Code, Codex and Antigravity CLI in one window and shows what each change touched and what was actually checked, so you can merge with confidence."
+        }
       },
       "description_translations": {
         "en": "Oxide is a free, open-source desktop terminal app that organizes work around GitHub Projects. It lets you open a project folder, create multiple terminals, and keep each terminal’s scrollback, working directory, and running process while switching. Command blocks group commands, output, and exit status. GitHub integration provides issues and pull request workflows through the GitHub CLI, plus file browsing and a built-in Monaco editor with language servers for Rust, TypeScript/JavaScript, Python, and C/C++. Oxide is pre-release software built with Rust and Tauri 2, with installers for macOS on Apple Silicon, Windows x64/arm64, and Linux x64/arm64. It does not interpret terminal commands; command-line tools, including agent CLIs, can be run as ordinary shell commands.",
         "ar": "Oxide تطبيق طرفية مكتبي مجاني ومفتوح المصدر ينظم العمل حول مشاريع GitHub. يتيح فتح مجلد مشروع وإنشاء طرفيات متعددة، مع الاحتفاظ لكل طرفية بسجل التمرير ومجلد العمل والعملية الجارية عند التبديل. تجمع كتل الأوامر الأمر والمخرجات وحالة الخروج. يوفر التكامل مع GitHub سير عمل المشكلات وطلبات السحب عبر GitHub CLI، إضافة إلى تصفح الملفات ومحرر Monaco مدمج مع خوادم لغات لـ Rust وTypeScript/JavaScript وPython وC/C++. Oxide برنامج إصدار تجريبي مبني بـ Rust وTauri 2، ويتوفر بملفات تثبيت لـ macOS على Apple Silicon وWindows x64/arm64 وLinux x64/arm64. لا يفسر التطبيق أوامر الطرفية؛ يمكن تشغيل أدوات سطر الأوامر، بما في ذلك وكلاء البرمجة، كأوامر shell عادية."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/getoxide/oxide/main/crates/oxide-app/icons/icon.png",
@@ -72916,8 +72918,8 @@
       "license_eligible": true,
       "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "Standalone end-user desktop application with documented installers and a build-from-source path; Rust/Tauri project with CI evidence.",
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
       "category": "developer",
       "topics": [
         "agentic-coding",
