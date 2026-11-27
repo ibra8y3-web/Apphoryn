@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T07:02:50.226300+00:00",
+  "generated_at": "2026-11-27T07:03:18.956923+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -37420,23 +37420,25 @@
       "slug": "goat-si-goat",
       "artifacts": [],
       "name": "goat",
-      "summary": "GOAT is a cross-machine control surface for coding agents like Claude Code, Codex, and Cursor, with desktop, web, mobile, CLI, fleet, memory, and MCP orchestration.",
-      "description": "GOAT is a fork of T3 Code that provides one control surface for coding agents such as Claude Code, Codex, Cursor, and other providers. It runs a server on each machine, forming an environment that stores projects, threads, provider sign-ins, and memory. Users can steer agents from a desktop app, browser, or phone; agents can work across SSH hosts, linked GOAT servers, WSL distros, and cloud machines. Features include Fleet for monitoring running and waiting threads, shared memory, a GOAT MCP server with goat_* tools, computer-use controls, cloud providers, Slack and iMessage integration, and a standalone desktop app with the goat command. It supports macOS, Windows, and Linux, with install scripts and releases in goat-si/goat-releases.",
+      "summary": "GOAT: one control surface for Claude Code, Codex, Cursor and more, across your machines. Fork of T3 Code.",
+      "description": "GOAT: one control surface for Claude Code, Codex, Cursor and more, across your machines. Fork of T3 Code.",
       "translations": {
-        "en": "GOAT is a cross-machine control surface for coding agents like Claude Code, Codex, and Cursor, with desktop, web, mobile, CLI, fleet, memory, and MCP orchestration.",
-        "ar": "GOAT هو سطح تحكم موحد عبر أجهزتك لوكلاء البرمجة مثل Claude Code وCodex وCursor، مع تطبيق سطح مكتب وواجهة ويب وهاتف وسطر أوامر، وإدارة Fleet وذاكرة وMCP."
+        "en": {
+          "summary": "GOAT: one control surface for Claude Code, Codex, Cursor and more, across your machines. Fork of T3 Code.",
+          "description": "GOAT: one control surface for Claude Code, Codex, Cursor and more, across your machines. Fork of T3 Code."
+        }
       },
       "description_translations": {
         "en": "GOAT is a fork of T3 Code that provides one control surface for coding agents such as Claude Code, Codex, Cursor, and other providers. It runs a server on each machine, forming an environment that stores projects, threads, provider sign-ins, and memory. Users can steer agents from a desktop app, browser, or phone; agents can work across SSH hosts, linked GOAT servers, WSL distros, and cloud machines. Features include Fleet for monitoring running and waiting threads, shared memory, a GOAT MCP server with goat_* tools, computer-use controls, cloud providers, Slack and iMessage integration, and a standalone desktop app with the goat command. It supports macOS, Windows, and Linux, with install scripts and releases in goat-si/goat-releases.",
         "ar": "GOAT هو نسخة متفرعة من T3 Code توفر سطح تحكم واحدًا لوكلاء البرمجة مثل Claude Code وCodex وCursor وغيرهم من المزودين. يشغل خادمًا على كل جهاز، مكونًا بيئة تخزن المشاريع والسلاسل وتسجيلات الدخول للمزودين والذاكرة. يمكن للمستخدمين توجيه الوكلاء من تطبيق سطح المكتب أو المتصفح أو الهاتف؛ ويمكن للوكلاء العمل عبر مضيفات SSH وخوادم GOAT المرتبطة وتوزيعات WSL والآلات السحابية. تتضمن الميزات Fleet لمراقبة السلاسل الجارية أو المنتظرة، وذاكرة مشتركة، وخادم GOAT MCP بأدوات goat_*، وتحكمًا في استخدام الكمبيوتر، ومزودين سحابيين، وتكاملًا مع Slack وiMessage، وتطبيق سطح مكتب مستقلًا مع الأمر goat. يدعم macOS وWindows وLinux، مع سكربتات تثبيت وإصدارات في goat-si/goat-releases."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/goat-si/goat/dev/assets/prod/logo.svg",
       "repository_url": "https://github.com/goat-si/goat",
       "github_repo_id": "1413248431",
-      "source_updated_at": "2026-11-26T22:00:51Z",
+      "source_updated_at": "2026-11-27T03:20:16Z",
       "homepage_url": "https://trygoat.ai",
       "owner": "goat-si",
       "default_branch": "dev",
@@ -37444,10 +37446,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 T3 Tools Inc.\nCopyright (c) 2026 goat-si contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "developer_tool",
+      "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "Standalone developer tool with desktop, web, and CLI interfaces; README documents installers, releases, and a Vite+ development build path.",
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
       "category": "developer",
       "topics": [
         "ai-agents",
