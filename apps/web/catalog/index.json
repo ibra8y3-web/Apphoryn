@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:16:10.849845+00:00",
+  "generated_at": "2026-11-27T00:21:32.808565+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -77360,6 +77360,55 @@
         "macos",
         "windows"
       ]
+    },
+    {
+      "id": "rycbstudio-pml-2",
+      "slug": "rycbstudio-pml-2",
+      "artifacts": [],
+      "name": "PML-2",
+      "summary": "PML-2 (MEFrpLauncherX) is a cross-platform Avalonia desktop GUI launcher for ME Frp, with traffic monitoring, captcha recognition, terminal, themes, and plugins.",
+      "description": "PML-2, also called MEFrpLauncherX, is a cross-platform graphical launcher for ME Frp built with Avalonia UI and .NET. The README states support for Windows, Linux, and macOS and lists features such as a Fluent Design interface, captcha recognition, real-time traffic monitoring, Frp proxy startup/management, port scanning, terminal console integration, notifications, theme/background customization, and plugins. The repository includes build and run instructions using dotnet restore, build, run, and publish for win-x64, linux-x64, and osx-x64. Some functionality depends on proprietary closed-source libraries, RYCB.PML2.MEFrpCaptchaLib and SecretLib, which are not provided in the repository and must be supplied separately for a complete build.",
+      "translations": {
+        "en": "PML-2 (MEFrpLauncherX) is a cross-platform Avalonia desktop GUI launcher for ME Frp, with traffic monitoring, captcha recognition, terminal, themes, and plugins.",
+        "ar": "PML-2 (MEFrpLauncherX) هو مشغّل رسومي متعدد المنصات لـ ME Frp مبني على Avalonia، مع مراقبة الحركة والتعرف على رمز التحقق والطرفية والمظاهر والإضافات."
+      },
+      "description_translations": {
+        "en": "PML-2, also called MEFrpLauncherX, is a cross-platform graphical launcher for ME Frp built with Avalonia UI and .NET. The README states support for Windows, Linux, and macOS and lists features such as a Fluent Design interface, captcha recognition, real-time traffic monitoring, Frp proxy startup/management, port scanning, terminal console integration, notifications, theme/background customization, and plugins. The repository includes build and run instructions using dotnet restore, build, run, and publish for win-x64, linux-x64, and osx-x64. Some functionality depends on proprietary closed-source libraries, RYCB.PML2.MEFrpCaptchaLib and SecretLib, which are not provided in the repository and must be supplied separately for a complete build.",
+        "ar": "PML-2، المعروف أيضًا باسم MEFrpLauncherX، هو مشغّل رسومي متعدد المنصات لـ ME Frp تم تطويره باستخدام Avalonia UI و.NET. يذكر README دعم Windows وLinux وmacOS، ويشمل ميزات مثل واجهة Fluent Design، والتعرف على رمز التحقق، ومراقبة حركة المرور في الوقت الفعلي، وبدء وإدارة وكيل Frp، وفحص المنافذ، ودمج طرفية، ونظام إشعارات، وتخصيص المظهر والخلفية، وإضافات. يوفر المستودع تعليمات البناء والتشغيل باستخدام dotnet restore وbuild وrun وpublish لـ win-x64 وlinux-x64 وosx-x64. تعتمد بعض الوظائف على مكتبات مغلقة المصدر، RYCB.PML2.MEFrpCaptchaLib وSecretLib، غير مرفقة في المستودع ويجب توفيرها بشكل منفصل لبناء كامل."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://raw.githubusercontent.com/RYCBStudio/PML-2/main/MEFrpLauncherX/Assets/logo.png",
+      "repository_url": "https://github.com/RYCBStudio/PML-2",
+      "github_repo_id": "1157628882",
+      "source_updated_at": "2026-11-07T06:38:59Z",
+      "homepage_url": "https://www.rycb.tech/pml-2",
+      "owner": "RYCBStudio",
+      "default_branch": "main",
+      "source_commit_sha": "9fb7efbacd476ae34c036e478180c6aebe3519e4",
+      "license_text": "MIT License\n\nCopyright (c) 2026 RYCB Studio\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": false,
+      "classification_source": "ai",
+      "classification_reason": "The repository describes a standalone cross-platform desktop application, but a complete source build requires proprietary closed-source libraries that are not included, so automatic source-build attempts are not recommended.",
+      "category": "other",
+      "topics": [
+        "avalonia",
+        "avalonia11",
+        "cross-platform",
+        "csharp",
+        "desktop-app",
+        "dotnet",
+        "frp",
+        "mefrp"
+      ],
+      "latest_version": "v26.5.0",
+      "release_url": "https://github.com/RYCBStudio/PML-2/releases/tag/v26.5.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "orewatokyo-pocket-theater",
