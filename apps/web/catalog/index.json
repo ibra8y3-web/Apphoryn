@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:22:06.926435+00:00",
+  "generated_at": "2026-11-27T00:23:01.651326+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -4330,6 +4330,54 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "higale-anas-agent",
+      "slug": "higale-anas-agent",
+      "artifacts": [],
+      "name": "anas-agent",
+      "summary": "Local desktop AI agent for project-based work: multi-model chat, tools, skills, MCP servers, subagents, plugins, and local data storage. Electron app for Windows and macOS, MIT licensed.",
+      "description": "Anas is a local desktop AI agent for project-based work, built with Electron and distributed for Windows and macOS. Each project has its own working directory, context, and capabilities, and conversations, configuration, and sessions are stored locally in ~/.anas (overridable with --data-dir). It connects to OpenAI-compatible and Anthropic-compatible model providers with streaming replies and context compression; you supply your own API address and key, since no credentials are bundled. Features include file, image, network, memory, and command tools; MCP servers, custom toolkits, and Skills; per-subagent models and tools; text, image, and voice input/output; offline PDF/DOCX/PPTX-to-Markdown conversion with image export; plugins that add sidebar pages, windows, tools, skills, and prompts; tool-execution permission controls; and backup/restore. Since 5.0 execution and session storage use a native implementation (LangChain, LangGraph, and Deep Agents were removed), and 5.2.0 introduced a new session database (v3) that does not migrate v1/v2 conversations. Source builds use Node.js 24 with npm ci and npm run dev; MIT licensed.",
+      "translations": {
+        "en": "Local desktop AI agent for project-based work: multi-model chat, tools, skills, MCP servers, subagents, plugins, and local data storage. Electron app for Windows and macOS, MIT licensed.",
+        "ar": "مساعد ذكاء اصطناعي محلي على سطح المكتب لإدارة المشاريع، يتيح نماذج وأدوات ومهارات وخوادم MCP ووكلاء فرعيين متعددين، مع تخزين محلي للبيانات. تطبيق Electron لويندوز وماك بترخيص MIT."
+      },
+      "description_translations": {
+        "en": "Anas is a local desktop AI agent for project-based work, built with Electron and distributed for Windows and macOS. Each project has its own working directory, context, and capabilities, and conversations, configuration, and sessions are stored locally in ~/.anas (overridable with --data-dir). It connects to OpenAI-compatible and Anthropic-compatible model providers with streaming replies and context compression; you supply your own API address and key, since no credentials are bundled. Features include file, image, network, memory, and command tools; MCP servers, custom toolkits, and Skills; per-subagent models and tools; text, image, and voice input/output; offline PDF/DOCX/PPTX-to-Markdown conversion with image export; plugins that add sidebar pages, windows, tools, skills, and prompts; tool-execution permission controls; and backup/restore. Since 5.0 execution and session storage use a native implementation (LangChain, LangGraph, and Deep Agents were removed), and 5.2.0 introduced a new session database (v3) that does not migrate v1/v2 conversations. Source builds use Node.js 24 with npm ci and npm run dev; MIT licensed.",
+        "ar": "Anas مساعد ذكاء اصطناعي محلي على سطح المكتب مخصص للعمل القائم على المشاريع، وهو مبني باستخدام Electron ويُوزَّع كحزم تثبيت لويندوز وماك. لكل مشروع دليل عمل وسياق وقدرات خاصة به، وتُخزَّن المحادثات والإعدادات والجلسات محليًا في ~/.anas (يمكن تغييره عبر --data-dir). يتصل بمزوّدي نماذج متوافقين مع OpenAI وAnthropic مع ردود متدفقة وضغط للسياق؛ وأنت من يوفّر عنوان API والمفتاح، إذ لا يتضمن التطبيق أي بيانات اعتماد. تشمل الميزات أدوات الملفات والصور والشبكة والذاكرة والأوامر، وخوادم MCP وحزم الأدوات المخصصة وSkills، ونماذج وأدوات مستقلة لكل وكيل فرعي، وإدخال وإخراج نصي وصوري وصوتي، وتحويل PDF وDOCX وPPTX إلى Markdown دون اتصال مع تصدير الصور، وإضافات تضيف صفحات جانبية ونوافذ وأدوات ومهارات وتوجيهات، وضوابط صلاحيات تنفيذ الأدوات، والنسخ الاحتياطي والاستعادة. منذ الإصدار 5.0 أصبح التنفيذ وتخزين الجلسات تنفيذًا أصليًا (أُزيلت LangChain وLangGraph وDeep Agents)، وأدخل الإصدار 5.2.0 قاعدة بيانات جلسات جديدة (v3) لا ترحّل محادثات v1/v2. يُبنى المصدر باستخدام Node.js 24 مع npm ci وnpm run dev، والترخيص MIT."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "icon_url": "https://avatars.githubusercontent.com/u/11787704?v=4",
+      "repository_url": "https://github.com/higale/anas-agent",
+      "github_repo_id": "1387716988",
+      "source_updated_at": "2026-11-11T16:35:00Z",
+      "homepage_url": null,
+      "owner": "higale",
+      "default_branch": "main",
+      "source_commit_sha": "33dae3c83137c08c8fc8f3e15ada5d914abec4f1",
+      "license_text": "MIT License\n\nCopyright (c) 2026 gale\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "The README describes a standalone end-user desktop application (Electron; Windows Anas.exe and macOS DMG downloads from GitHub Releases) with a documented source build path (Node.js 24, npm ci, npm run dev) and packaging guidance in CONTRIBUTING.md, so build_recommended is true. The 'network' category and the LangChain/LangGraph/Deep Agents topics are not treated as evidence of the current archite",
+      "category": "network",
+      "topics": [
+        "ai-agent",
+        "deepagents",
+        "desktop-app",
+        "electron",
+        "langchain",
+        "langgraph",
+        "mcp"
+      ],
+      "latest_version": "v5.2.28",
+      "release_url": "https://github.com/higale/anas-agent/releases/tag/v5.2.28",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "home-assistant-android",
