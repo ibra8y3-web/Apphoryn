@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T20:38:55.765451+00:00",
+  "generated_at": "2026-11-27T20:39:10.631862+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -99420,7 +99420,7 @@
       "icon_url": "https://raw.githubusercontent.com/qusielh/svu-sessions-launcher/main/docs/images/old-launcher.png",
       "repository_url": "https://github.com/qusielh/svu-sessions-launcher",
       "github_repo_id": "1451452219",
-      "source_updated_at": "2026-11-26T18:21:13Z",
+      "source_updated_at": "2026-11-27T20:29:14Z",
       "homepage_url": null,
       "owner": "qusielh",
       "default_branch": "main",
