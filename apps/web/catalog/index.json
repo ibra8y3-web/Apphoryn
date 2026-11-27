@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T00:52:38.314591+00:00",
+  "generated_at": "2026-11-27T00:52:59.846100+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -100157,7 +100157,7 @@
         "macos",
         "windows"
       ],
-      "project_status": "source_available",
+      "project_status": "installable",
       "build_attempts": [
         {
           "git_ref": "35c665a02a09c948de357732f687ae2a90f7921b",
