@@ -68173,6 +68173,18 @@
       ],
       "platforms": [
         "android"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "57cc630a0ac09858cf453acd64810122d2a141f3",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-27T00:01:21.352827+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
       ]
     },
     {
