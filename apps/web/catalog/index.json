@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T04:51:41.852776+00:00",
+  "generated_at": "2026-11-28T04:52:11.231344+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -84781,7 +84781,7 @@
       "homepage_url": null,
       "owner": "KadenHD",
       "default_branch": "main",
-      "source_commit_sha": "bec8a575757483de8d39252e96078f5d496c21e2",
+      "source_commit_sha": "a7113ec103a3277dc4cde091a43c28df1e358fb7",
       "license_text": "MIT License\n\nCopyright (c) 2026 Pokémon Orre Randomizer contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -84804,10 +84804,10 @@
         "rust",
         "windows"
       ],
-      "latest_version": "v2.1.6",
-      "release_url": "https://github.com/KadenHD/pokemon-orre-randomizer/releases/tag/v2.1.6",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kadenhd-pokemon-orre-randomizer-v2.1.6",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kadenhd-pokemon-orre-randomizer-v2.1.6/THIRD-PARTY-NOTICE-kadenhd-pokemon-orre-randomizer.txt",
+      "latest_version": "v2.1.7",
+      "release_url": "https://github.com/KadenHD/pokemon-orre-randomizer/releases/tag/v2.1.7",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kadenhd-pokemon-orre-randomizer-v2.1.7",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kadenhd-pokemon-orre-randomizer-v2.1.7/THIRD-PARTY-NOTICE-kadenhd-pokemon-orre-randomizer.txt",
       "artifacts": [
         {
           "id": "bfef41a556c86626d5cbb5741b3be19ac887e38193652822ef285ab414c66bcf",
@@ -84859,6 +84859,23 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kadenhd-pokemon-orre-randomizer-v2.1.6/pokemon-orre-randomizer-2.1.6-windows-x64-setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kadenhd-pokemon-orre-randomizer-v2.1.6"
+        },
+        {
+          "id": "350a7543de7e701216b61487c37d36faed2c471e2acb81a9e59a8d53f2b72c59",
+          "filename": "pokemon-orre-randomizer-2.1.7-windows-x64-setup.exe",
+          "original_filename": "pokemon-orre-randomizer-2.1.7-windows-x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v2.1.7",
+          "size_bytes": 324395370,
+          "sha256": "350a7543de7e701216b61487c37d36faed2c471e2acb81a9e59a8d53f2b72c59",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-kadenhd-pokemon-orre-randomizer-v2.1.7/pokemon-orre-randomizer-2.1.7-windows-x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-kadenhd-pokemon-orre-randomizer-v2.1.7"
         }
       ],
       "platforms": [
