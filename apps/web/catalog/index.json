@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:22:25.151743+00:00",
+  "generated_at": "2026-11-28T03:22:42.610416+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -31113,6 +31113,96 @@
       ],
       "platforms": [
         "android"
+      ]
+    },
+    {
+      "id": "cayleb-james2008-ergon",
+      "slug": "cayleb-james2008-ergon",
+      "name": "ergon",
+      "summary": "Single-binary Rust + React company workforce agent platform with sandboxed tools, SHA-256 receipt chains, Claude & OpenAI protocol support, and replay-gated self-improvement.",
+      "description": "Single-binary Rust + React company workforce agent platform with sandboxed tools, SHA-256 receipt chains, Claude & OpenAI protocol support, and replay-gated self-improvement.",
+      "translations": {
+        "en": {
+          "summary": "Single-binary Rust + React company workforce agent platform with sandboxed tools, SHA-256 receipt chains, Claude & OpenAI protocol support, and replay-gated self-improvement.",
+          "description": "Single-binary Rust + React company workforce agent platform with sandboxed tools, SHA-256 receipt chains, Claude & OpenAI protocol support, and replay-gated self-improvement."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/cayleb-james2008/ergon/main/docs/brand/ergon-logo-dark.svg",
+      "repository_url": "https://github.com/cayleb-james2008/ergon",
+      "github_repo_id": "1462435015",
+      "source_updated_at": "2026-11-28T00:06:11Z",
+      "homepage_url": "https://cayleb-james2008.github.io/ergon/",
+      "owner": "cayleb-james2008",
+      "default_branch": "main",
+      "source_commit_sha": "bd2f2005e0884c12ba0f7d68c3be8860d5769a45",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Cayleb Alvarez-James\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "other",
+      "topics": [
+        "ai-agents",
+        "audit-trail",
+        "autonomous-agents",
+        "desktop-app",
+        "local-first",
+        "personal-agent",
+        "react",
+        "rust",
+        "single-binary",
+        "typescript",
+        "workflows"
+      ],
+      "latest_version": "v0.42.1",
+      "release_url": "https://github.com/cayleb-james2008/ergon/releases/tag/v0.42.1",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-cayleb-james2008-ergon-v0.42.1",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-cayleb-james2008-ergon-v0.42.1/THIRD-PARTY-NOTICE-cayleb-james2008-ergon.txt",
+      "artifacts": [
+        {
+          "id": "320a999977b867281414da805f72e64d6f9a591f6fbf6611e37ef385037287bf",
+          "filename": "ergon-0.42.1-x86_64.msi",
+          "original_filename": "ergon-0.42.1-x86_64.msi",
+          "platform": "windows",
+          "package_type": "Windows installer",
+          "architecture": "x86_64",
+          "version": "v0.42.1",
+          "size_bytes": 4755456,
+          "sha256": "320a999977b867281414da805f72e64d6f9a591f6fbf6611e37ef385037287bf",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-cayleb-james2008-ergon-v0.42.1/ergon-0.42.1-x86_64.msi",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-cayleb-james2008-ergon-v0.42.1"
+        },
+        {
+          "id": "175e948f9e626e274a2e23286bad98b4a606c54461551bdca273cd47f63bfe4b",
+          "filename": "ergon-x86_64-pc-windows-msvc.exe",
+          "original_filename": "ergon-x86_64-pc-windows-msvc.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.42.1",
+          "size_bytes": 13747712,
+          "sha256": "175e948f9e626e274a2e23286bad98b4a606c54461551bdca273cd47f63bfe4b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-cayleb-james2008-ergon-v0.42.1/ergon-x86_64-pc-windows-msvc.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-cayleb-james2008-ergon-v0.42.1"
+        }
+      ],
+      "platforms": [
+        "windows"
       ]
     },
     {
