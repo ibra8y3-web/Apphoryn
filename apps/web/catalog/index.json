@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:08:12.423756+00:00",
+  "generated_at": "2026-11-28T11:08:30.184354+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -24918,17 +24918,19 @@
       "id": "jaypsmall-demonitalk",
       "slug": "jaypsmall-demonitalk",
       "name": "DemoniTalk",
-      "summary": "DemoniTalk is an Android voice assistant and automation engine with root access, AccessibilityService automation, floating overlay, and AI/LLM integration.",
-      "description": "DemoniTalk is an Android voice assistant and automation engine written in Kotlin. According to the README, it combines root access, Android AccessibilityService automation, and local AI/LLM integration to execute shell scripts, touch macros, and system actions via voice or a floating overlay. Features include custom voice triggers, continuous and push-to-talk capture, UI node interaction, process control, gesture and keyevent injection, and a dark interface with dictionary import/export. The project lists APK downloads and Android Studio, Kotlin, and Android SDK requirements. The source is proprietary; all rights reserved.",
+      "summary": "😈 DemoniTalk Apk 🎙️ Asistente de voz avanzado y motor de automatización para Android con acceso root. Activadores de voz personalizados, automatización del sistema y superposición interactiva.",
+      "description": "😈 DemoniTalk Apk 🎙️ Asistente de voz avanzado y motor de automatización para Android con acceso root. Activadores de voz personalizados, automatización del sistema y superposición interactiva.",
       "translations": {
-        "en": "DemoniTalk is an Android voice assistant and automation engine with root access, AccessibilityService automation, floating overlay, and AI/LLM integration.",
-        "ar": "DemoniTalk مساعد صوتي ومحرك أتمتة لنظام أندرويد، مع صلاحيات root وأتمتة AccessibilityService وواجهة عائمة وتكامل ذكاء اصطناعي/نماذج لغوية."
+        "en": {
+          "summary": "😈 DemoniTalk Apk 🎙️ Asistente de voz avanzado y motor de automatización para Android con acceso root. Activadores de voz personalizados, automatización del sistema y superposición interactiva.",
+          "description": "😈 DemoniTalk Apk 🎙️ Asistente de voz avanzado y motor de automatización para Android con acceso root. Activadores de voz personalizados, automatización del sistema y superposición interactiva."
+        }
       },
       "description_translations": {
         "en": "DemoniTalk is an Android voice assistant and automation engine written in Kotlin. According to the README, it combines root access, Android AccessibilityService automation, and local AI/LLM integration to execute shell scripts, touch macros, and system actions via voice or a floating overlay. Features include custom voice triggers, continuous and push-to-talk capture, UI node interaction, process control, gesture and keyevent injection, and a dark interface with dictionary import/export. The project lists APK downloads and Android Studio, Kotlin, and Android SDK requirements. The source is proprietary; all rights reserved.",
         "ar": "DemoniTalk تطبيق أندرويد للمساعد الصوتي والأتمتة مكتوب بلغة Kotlin. ووفقًا لملف README، يجمع بين صلاحيات root، وأتمتة Android AccessibilityService، وتكامل الذكاء الاصطناعي/نماذج اللغة المحلية لتنفيذ أوامر shell وماكروات اللمس وإجراءات النظام عبر الصوت أو واجهة عائمة. تشمل الميزات مشغلات صوتية مخصصة، وأوضاع التقاط مستمر وPush-to-Talk، والتفاعل مع عقد واجهة المستخدم، والتحكم في العمليات، وحقن الإيماءات وأحداث المفاتيح، وواجهة داكنة مع استيراد/تصدير القواميس. يذكر المشروع روابط تنزيل APK ومتطلبات Android Studio وKotlin وAndroid SDK. المصدر مملوك والحقوق محفوظة."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "particle-ai/particle-1:free",
       "icon_url": "https://raw.githubusercontent.com/Jaypsmall/DemoniTalk/master-v2.0.2/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
@@ -24942,10 +24944,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 Architect_D4d\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
-      "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "Standalone Android app in Kotlin with root, accessibility, and overlay features; README lists Android Studio, Kotlin, and Android SDK requirements plus APK releases, indicating a supported app build path.",
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
       "project_status": "installable",
       "category": "other",
       "topics": [
