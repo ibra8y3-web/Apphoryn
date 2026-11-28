@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:00:56.680738+00:00",
+  "generated_at": "2026-11-28T11:01:11.838465+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -79983,17 +79983,19 @@
       "id": "avithegod2010-peek",
       "slug": "avithegod2010-peek",
       "name": "peek",
-      "summary": "Peek is an unofficial offline-first Android app for browsing public Instagram profiles, with local follows, cached posts, downloads, and optional session access for private accounts.",
-      "description": "Peek is a Kotlin/Jetpack Compose Android application described as a quiet, offline-first viewer for public Instagram profiles. It supports local follow lists, name and handle search, profile and post browsing, a home feed, reels, bookmarks, collections, offline downloads, and a library of cached content. The UI uses Material You dynamic color and includes tablet and foldable layouts. An optional Instagram web session can be connected for private accounts the user already follows; the README says passwords are not stored and session cookies are encrypted with Android Keystore. The project also documents encrypted private vaults, panic mode, backups, export tools, background sync, and a release APK. It is an unofficial client, and public browsing requires no account.",
+      "summary": "A quiet offline-first viewer for public Instagram profiles. Kotlin, Compose, Material You.",
+      "description": "A quiet offline-first viewer for public Instagram profiles. Kotlin, Compose, Material You.",
       "translations": {
-        "en": "Peek is an unofficial offline-first Android app for browsing public Instagram profiles, with local follows, cached posts, downloads, and optional session access for private accounts.",
-        "ar": "‏Peek تطبيق أندرويد غير رسمي صُمم للعمل دون اتصال أولاً لتصفح ملفات إنستغرام العامة، مع متابعة محلية ومنشورات مخزنة وتنزيلات ووصول اختياري للجلسة إلى الحسابات الخاصة."
+        "en": {
+          "summary": "A quiet offline-first viewer for public Instagram profiles. Kotlin, Compose, Material You.",
+          "description": "A quiet offline-first viewer for public Instagram profiles. Kotlin, Compose, Material You."
+        }
       },
       "description_translations": {
         "en": "Peek is a Kotlin/Jetpack Compose Android application described as a quiet, offline-first viewer for public Instagram profiles. It supports local follow lists, name and handle search, profile and post browsing, a home feed, reels, bookmarks, collections, offline downloads, and a library of cached content. The UI uses Material You dynamic color and includes tablet and foldable layouts. An optional Instagram web session can be connected for private accounts the user already follows; the README says passwords are not stored and session cookies are encrypted with Android Keystore. The project also documents encrypted private vaults, panic mode, backups, export tools, background sync, and a release APK. It is an unofficial client, and public browsing requires no account.",
         "ar": "‏Peek تطبيق أندرويد مكتوب بلغة Kotlin وباستخدام Jetpack Compose، ويوصَف بأنه عارض هادئ يعمل دون اتصال أولاً لملفات إنستغرام العامة. يدعم قوائم متابعة محلية، والبحث بالاسم أو المعرّف، وتصفح الملفات والمنشورات، وخلاصة رئيسية، وريلز، وإشارات مرجعية، ومجموعات، وتنزيلات دون اتصال، ومكتبة محتوى مخزّن. تستخدم الواجهة ألوان Material You الديناميكية وتتضمن تخطيطات للأجهزة اللوحية والقابلة للطي. يمكن ربط جلسة ويب اختيارية لإنستغرام للحسابات الخاصة التي يتابعها المستخدم بالفعل؛ ويذكر الملف التعريفي أن كلمات المرور لا تُخزَّن وأن ملفات تعريف ارتباط الجلسة مشفرة باستخدام Android Keystore. يوثّق المشروع أيضاً خزائن خاصة مشفرة، ووضع الذعر، والنسخ الاحتياطي، وأدوات التصدير، والمزامنة في الخلفية، وملف APK للإصدار. وهو عميل غير رسمي، ولا يتطلب التصفح العام وجود حساب."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "particle-ai/particle-1:free",
       "icon_url": "https://avatars.githubusercontent.com/u/258314859?v=4",
@@ -80009,8 +80011,8 @@
       "license_eligible": true,
       "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "Standalone Android end-user application built with Kotlin and Jetpack Compose; the README provides a release APK and CI/testing evidence, indicating a supported Android build path.",
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
       "project_status": "installable",
       "category": "other",
       "topics": [
