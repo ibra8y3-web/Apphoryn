@@ -23142,7 +23142,19 @@
       "latest_version": "v0.1.13",
       "release_url": "https://github.com/fertile-org/coppice/releases/tag/v0.1.13",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "8821e7efe2ca4f8f57cb7ae255c0b6465141beb5",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-28T14:03:29.967291+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "coreply-coreply",
