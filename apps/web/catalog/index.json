@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T04:45:29.334487+00:00",
+  "generated_at": "2026-11-28T04:46:02.751264+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -76637,11 +76637,11 @@
       "icon_url": "https://raw.githubusercontent.com/RandyNorthrup/ost/main/desktop/assets/logo.png",
       "repository_url": "https://github.com/RandyNorthrup/ost",
       "github_repo_id": "1446101935",
-      "source_updated_at": "2026-11-26T09:40:23Z",
+      "source_updated_at": "2026-11-28T02:06:34Z",
       "homepage_url": "https://github.com/RandyNorthrup/ost/wiki",
       "owner": "RandyNorthrup",
       "default_branch": "main",
-      "source_commit_sha": "cf9010bacfd2b5522e22cb2ed61d8d8e3040cf50",
+      "source_commit_sha": "b87f967cf13730760a9d9ff5f1740afdfa30eb5c",
       "license_text": "MIT License\n\nCopyright (c) 2026\nCopyright (c) 2026 Randy Northrup\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
