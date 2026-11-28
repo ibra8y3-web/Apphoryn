@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:22:11.792479+00:00",
+  "generated_at": "2026-11-28T03:22:25.151743+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -102408,7 +102408,7 @@
       "icon_url": "https://raw.githubusercontent.com/ryckakas/swarmed/main/crates/app/icons/icon.png",
       "repository_url": "https://github.com/ryckakas/swarmed",
       "github_repo_id": "1463972304",
-      "source_updated_at": "2026-11-23T11:39:04Z",
+      "source_updated_at": "2026-11-27T23:01:39Z",
       "homepage_url": "https://swarmed.kauneckas.dev",
       "owner": "ryckakas",
       "default_branch": "main",
