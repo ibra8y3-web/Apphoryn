@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:00:15.179033+00:00",
+  "generated_at": "2026-11-28T03:00:36.609347+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -114415,15 +114415,15 @@
       "slug": "hafij-bge-work-suite",
       "artifacts": [],
       "name": "work-suite",
-      "summary": "WorkSuite is a free, open-source Android office suite with Writer, Slides, and Sheets for offline document, presentation, and spreadsheet editing.",
-      "description": "WorkSuite is a free, open-source office suite for Android that combines Writer, Slides, and Sheets in one app. It is designed for phones and tablets and works fully offline; the app has no network permission. Writer opens and saves Word .docx, OpenDocument .odt, .rtf, .txt, Markdown, and HTML files. Slides opens PowerPoint .pptx files and .ppsx slide shows. Sheets opens Excel .xlsx workbooks and .csv files. All three apps can export PDF. The interface includes touch gestures, stylus input, light and dark themes, and Android file picker integration. The project is written in Rust with egui on Android NativeActivity and provides a build script for debug or release APKs. It requires Android 8 or later on 64-bit ARM devices. The README describes WorkSuite as a preview that has been tested more on a computer than on phones, with known limits such as limited on-screen keyboard support for composed scripts, no cross-app copy/paste, and no printing.",
+      "summary": "WorkSuite is a free, open-source office suite for Android combining Writer, Slides and Sheets in one fully offline app. Written in Rust; opens and saves DOCX, PPTX, XLSX and more.",
+      "description": "WorkSuite is a free, open-source office suite for Android that brings three apps together: Writer for documents, Slides for presentations, and Sheets for spreadsheets. It runs fully offline and requests no network permission. Writer opens and saves Word (.docx), OpenDocument text (.odt), .rtf, .txt, Markdown and HTML; Slides handles PowerPoint (.pptx) and also opens .ppsx; Sheets works with Excel (.xlsx) and .csv. All three export PDF. The interface is built for phones and tablets with touch and stylus support, light and dark themes, and Android's own file picker. Written in Rust using egui on Android's NativeActivity, it requires Android 8 or later on 64-bit ARM. WorkSuite is currently a preview and is dual-licensed under MIT or Apache-2.0. It is an independent project, not affiliated with Microsoft.",
       "translations": {
-        "en": "WorkSuite is a free, open-source Android office suite with Writer, Slides, and Sheets for offline document, presentation, and spreadsheet editing.",
-        "ar": "WorkSuite هو مجموعة مكتبية مجانية ومفتوحة المصدر لنظام أندرويد تضم Writer وSlides وSheets لتحرير المستندات والعروض التقديمية وجداول البيانات دون اتصال."
+        "en": "WorkSuite is a free, open-source office suite for Android combining Writer, Slides and Sheets in one fully offline app. Written in Rust; opens and saves DOCX, PPTX, XLSX and more.",
+        "ar": "WorkSuite مجموعة مكتبية مجانية ومفتوحة المصدر لنظام أندرويد تجمع Writer وSlides وSheets في تطبيق واحد يعمل دون اتصال بالإنترنت. مكتوبة بلغة Rust وتفتح وتحفظ ملفات DOCX وPPTX وXLSX وغيرها."
       },
       "description_translations": {
-        "en": "WorkSuite is a free, open-source office suite for Android that combines Writer, Slides, and Sheets in one app. It is designed for phones and tablets and works fully offline; the app has no network permission. Writer opens and saves Word .docx, OpenDocument .odt, .rtf, .txt, Markdown, and HTML files. Slides opens PowerPoint .pptx files and .ppsx slide shows. Sheets opens Excel .xlsx workbooks and .csv files. All three apps can export PDF. The interface includes touch gestures, stylus input, light and dark themes, and Android file picker integration. The project is written in Rust with egui on Android NativeActivity and provides a build script for debug or release APKs. It requires Android 8 or later on 64-bit ARM devices. The README describes WorkSuite as a preview that has been tested more on a computer than on phones, with known limits such as limited on-screen keyboard support for composed scripts, no cross-app copy/paste, and no printing.",
-        "ar": "WorkSuite مجموعة مكتبية مجانية ومفتوحة المصدر لنظام أندرويد تجمع Writer وSlides وSheets في تطبيق واحد. وهي مصممة للهواتف والأجهزة اللوحية وتعمل دون اتصال بالكامل؛ إذ لا يملك التطبيق أي أذونات شبكة. يفتح Writer ويحفظ ملفات Word .docx وOpenDocument .odt و.rtf و.txt وMarkdown وHTML. يفتح Slides ملفات PowerPoint .pptx وعروض الشرائح .ppsx. يفتح Sheets مصنفات Excel .xlsx وملفات .csv. ويمكن للتطبيقات الثلاثة تصدير PDF. تتضمن الواجهة إيماءات اللمس وإدخال القلم ومظهرًا فاتحًا وداكنًا وتكاملًا مع منتقي الملفات في أندرويد. المشروع مكتوب بلغة Rust باستخدام egui على Android NativeActivity، ويوفر سكربت البناء لإنشاء ملفات APK للتصحيح أو الإصدار. ويتطلب Android 8 أو أحدث على جهاز ARM 64-bit. يصف README WorkSuite بأنه معاينة اختُبرت أكثر على الحاسوب من الهواتف، مع حدود معروفة مثل دعم محدود للوحة المفاتيح على الشاشة للغات المركبة، وعدم النسخ واللصق بين التطبيقات، وعدم الطباعة."
+        "en": "WorkSuite is a free, open-source office suite for Android that brings three apps together: Writer for documents, Slides for presentations, and Sheets for spreadsheets. It runs fully offline and requests no network permission. Writer opens and saves Word (.docx), OpenDocument text (.odt), .rtf, .txt, Markdown and HTML; Slides handles PowerPoint (.pptx) and also opens .ppsx; Sheets works with Excel (.xlsx) and .csv. All three export PDF. The interface is built for phones and tablets with touch and stylus support, light and dark themes, and Android's own file picker. Written in Rust using egui on Android's NativeActivity, it requires Android 8 or later on 64-bit ARM. WorkSuite is currently a preview and is dual-licensed under MIT or Apache-2.0. It is an independent project, not affiliated with Microsoft.",
+        "ar": "WorkSuite مجموعة مكتبية مجانية ومفتوحة المصدر لنظام أندرويد تضم ثلاثة تطبيقات: Writer للمستندات، وSlides للعروض التقديمية، وSheets لجداول البيانات. تعمل دون اتصال بالإنترنت ولا تطلب أي إذن للوصول إلى الشبكة. يفتح Writer ويحفظ ملفات Word (.docx) وOpenDocument النصية (.odt) و.rtf و.txt وMarkdown وHTML؛ ويتعامل Slides مع ملفات PowerPoint (.pptx) ويفتح أيضاً .ppsx؛ ويعمل Sheets مع ملفات Excel (.xlsx) و.csv. ويمكن للتطبيقات الثلاثة تصدير PDF. صُممت الواجهة للهواتف والأجهزة اللوحية بدعم اللمس والقلم، مع مظهرين فاتح وداكن، وباستخدام منتقي الملفات الخاص بأندرويد. مكتوبة بلغة Rust باستخدام egui على NativeActivity في أندرويد، وتتطلب أندرويد 8 أو أحدث على جهاز بمعمارية ARM 64 بت. WorkSuite حالياً نسخة معاينة، ومرخّصة بموجب MIT أو Apache-2.0. وهي مشروع مستقل غير تابع لشركة Microsoft."
       },
       "translation_status": "complete",
       "ai_provider": "openrouter",
@@ -114431,7 +114431,7 @@
       "icon_url": "https://raw.githubusercontent.com/Hafij-BGE/work-suite/claude/epic-mendel-wwoifc/docs/images/worksuite/icon.svg",
       "repository_url": "https://github.com/Hafij-BGE/work-suite",
       "github_repo_id": "1424605713",
-      "source_updated_at": "2026-11-10T09:37:28Z",
+      "source_updated_at": "2026-11-26T11:18:59Z",
       "homepage_url": "https://github.com/Hafij-BGE/work-suite/releases",
       "owner": "Hafij-BGE",
       "default_branch": "claude/epic-mendel-wwoifc",
@@ -114442,7 +114442,7 @@
       "project_kind": "application",
       "build_recommended": true,
       "classification_source": "ai",
-      "classification_reason": "Standalone end-user Android application with documented source build path via packaging/android/build.sh.",
+      "classification_reason": "WorkSuite is a standalone end-user office suite application for Android (Writer, Slides, Sheets), so project_kind is application. The README documents a supported build path via packaging/android/build.sh with a specified toolchain (Rust, Android SDK and NDK r27c, cargo-ndk, JDK 17, Gradle) and a packaging/android/README.md, providing evidence of a supported build path, so build_recommended is tru",
       "category": "developer",
       "topics": [
         "android",
