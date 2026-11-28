@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:53:42.264245+00:00",
+  "generated_at": "2026-11-28T03:53:57.861890+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -90898,7 +90898,7 @@
       "icon_url": "https://avatars.githubusercontent.com/u/193025872?v=4",
       "repository_url": "https://github.com/gelenmedya/rustyfiles",
       "github_repo_id": "1449695486",
-      "source_updated_at": "2026-11-27T21:05:16Z",
+      "source_updated_at": "2026-11-28T03:49:38Z",
       "homepage_url": "https://rustyfiles.com",
       "owner": "gelenmedya",
       "default_branch": "main",
