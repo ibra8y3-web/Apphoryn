@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T14:08:14.311634+00:00",
+  "generated_at": "2026-11-28T14:08:27.733791+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -26266,6 +26266,57 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "masterain98-discord-quest-helper",
+      "slug": "masterain98-discord-quest-helper",
+      "artifacts": [],
+      "name": "discord-quest-helper",
+      "summary": "A cross-platform desktop application to complete Discord Quests automatically - supports video, stream, game and activity quests",
+      "description": "A cross-platform desktop application to complete Discord Quests automatically - supports video, stream, game and activity quests",
+      "translations": {
+        "en": {
+          "summary": "A cross-platform desktop application to complete Discord Quests automatically - supports video, stream, game and activity quests",
+          "description": "A cross-platform desktop application to complete Discord Quests automatically - supports video, stream, game and activity quests"
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/Masterain98/discord-quest-helper/main/public/icons/logo.png",
+      "repository_url": "https://github.com/Masterain98/discord-quest-helper",
+      "github_repo_id": "1118852021",
+      "source_updated_at": "2026-11-27T03:52:27Z",
+      "homepage_url": null,
+      "owner": "Masterain98",
+      "default_branch": "main",
+      "source_commit_sha": "8b41140b61c60a00ec63867c2020e5d292d8749c",
+      "license_text": "MIT License\n\nCopyright (c) 2025 Masterain\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "developer",
+      "topics": [
+        "chrome-developer-protocol",
+        "desktop-app",
+        "discord",
+        "discord-activities",
+        "discord-orbs",
+        "discord-quest",
+        "discord-quest-completer",
+        "discord-rpc",
+        "linux-desktop-app",
+        "macos-app",
+        "windows-app"
+      ],
+      "latest_version": "0.12.1",
+      "release_url": "https://github.com/Masterain98/discord-quest-helper/releases/tag/0.12.1",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "insomdroid-dislauncher",
