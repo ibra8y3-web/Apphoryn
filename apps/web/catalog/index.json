@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:03:25.304331+00:00",
+  "generated_at": "2026-11-28T03:04:46.186510+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -30512,18 +30512,19 @@
       "id": "mayusi-emuhelper",
       "slug": "mayusi-emuhelper",
       "name": "EmuHelper",
-      "summary": "Android download manager for browsing and retrieving files from user-configured HTTP endpoints. Ships with no sources or content.",
-      "description": "Android download manager for browsing and retrieving files from user-configured HTTP endpoints. Ships with no sources or content.",
+      "summary": "EmuHelper is an unofficial Android and Windows download manager for Internet Archive collections, with multi-connection transfers, saved selections, and user-configured endpoints.",
+      "description": "EmuHelper is an independent, unofficial download manager for the Internet Archive, available for Android 10+ and Windows. It lets users browse configured collections, assemble and save selections, and download files using parallel range-segmented connections with mirror fail-over, connection caps, resumable transfers, and per-category folders. It supports Internet Archive sign-in, optional ZIP extraction, download history, network speed testing, source health checks, and a best-effort on-device security scan with quarantine for flagged files. The repository intentionally contains no endpoint catalog; users supply collection URLs via a template before building. Prebuilt Android APK and Windows MSI/portable releases are described, and a supported Gradle build path is documented.",
       "translations": {
-        "en": {
-          "summary": "Android download manager for browsing and retrieving files from user-configured HTTP endpoints. Ships with no sources or content.",
-          "description": "Android download manager for browsing and retrieving files from user-configured HTTP endpoints. Ships with no sources or content."
-        }
+        "en": "EmuHelper is an unofficial Android and Windows download manager for Internet Archive collections, with multi-connection transfers, saved selections, and user-configured endpoints.",
+        "ar": "EmuHelper هو مدير تنزيلات غير رسمي لنظامي Android وWindows لأرشيف الإنترنت، يدعم التنزيل متعدد الاتصالات والقوائم المحفوظة ونقاط النهاية التي يحددها المستخدم."
       },
-      "description_translations": {},
-      "translation_status": "pending",
-      "ai_provider": null,
-      "ai_model": null,
+      "description_translations": {
+        "en": "EmuHelper is an independent, unofficial download manager for the Internet Archive, available for Android 10+ and Windows. It lets users browse configured collections, assemble and save selections, and download files using parallel range-segmented connections with mirror fail-over, connection caps, resumable transfers, and per-category folders. It supports Internet Archive sign-in, optional ZIP extraction, download history, network speed testing, source health checks, and a best-effort on-device security scan with quarantine for flagged files. The repository intentionally contains no endpoint catalog; users supply collection URLs via a template before building. Prebuilt Android APK and Windows MSI/portable releases are described, and a supported Gradle build path is documented.",
+        "ar": "EmuHelper هو مدير تنزيلات مستقل وغير رسمي لـ Internet Archive، متوفر لنظامي Android 10+ وWindows. يتيح للمستخدمين تصفح المجموعات المهيأة، وتجميع اختيارات وحفظها، وتنزيل الملفات باستخدام اتصالات متوازية مقسمة حسب المدى مع تجاوز الفشل إلى المرايا، وحدود للاتصالات، ودعم استئناف التنزيل، ومجلدات مصنفة حسب الفئة. يدعم تسجيل الدخول إلى Internet Archive، واستخراج ملفات ZIP اختياريًا، وسجل التنزيلات، واختبار سرعة الشبكة، وفحص صحة المصدر، وفحص أمان محلي بأفضل جهد مع عزل الملفات المعلّمة. المستودع لا يتضمن فهرس نقاط النهاية عمدًا؛ يوفر المستخدم عناوين URL للمجموعات عبر قالب قبل البناء. تصف الوثائق إصدارات مُعدة مسبقًا بصيغة APK لـ Android وMSI أو تطبيق محمول لـ Windows، ومسار بناء Gradle مدعوم."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/mayusi/EmuHelper/main/docs/logo.png",
       "repository_url": "https://github.com/mayusi/EmuHelper",
       "github_repo_id": "1260845346",
@@ -30535,10 +30536,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 mayusi\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "framework",
-      "build_recommended": false,
-      "classification_source": "heuristic",
-      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "The README describes EmuHelper as a standalone end-user download manager for Android and Windows, with documented release artifacts and a supported Gradle build command.",
       "project_status": "installable",
       "category": "other",
       "topics": [
