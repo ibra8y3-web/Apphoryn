@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:01:24.884946+00:00",
+  "generated_at": "2026-11-28T11:01:36.917682+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -106371,23 +106371,25 @@
       "id": "denissteinhorst-thor-back-button-hero",
       "slug": "denissteinhorst-thor-back-button-hero",
       "name": "thor-back-button-hero",
-      "summary": "Customizable back-button utility for the AYN Thor Android handheld. Remap Back gestures and controller buttons to shortcuts, app switching, screenshots and more. No root needed; free and open source.",
-      "description": "Thor Back Button Hero is a free, open-source Android app that adds customizable shortcuts to the AYN Thor dual-screen gaming handheld. Every Back gesture (single tap, double tap, tap-then-hold, hold) is freely assignable, as are the shoulder buttons (L1/L2/R1/R2), face buttons (A/B/X/Y), Home/Start/Select, D-pad directions and analog stick directions. Available actions include launching apps, an app switcher for the bottom screen, swapping the two screens, screenshots and video recording, macros, gyro control, volume and brightness, media control, controller focus, active-app control, AYN device settings (performance, fan, refresh rate, lighting) and more. Nothing is assigned by default, so the app does nothing until you configure it. No rooting is needed for core features; some advanced actions require AYN's root service. Written in Kotlin.",
+      "summary": "Back Button Hero - a customizable back-button utility for the AYN Thor Android handheld.",
+      "description": "Back Button Hero - a customizable back-button utility for the AYN Thor Android handheld.",
       "translations": {
-        "en": "Customizable back-button utility for the AYN Thor Android handheld. Remap Back gestures and controller buttons to shortcuts, app switching, screenshots and more. No root needed; free and open source.",
-        "ar": "أداة قابلة للتخصيص لزر الرجوع في جهاز AYN Thor المحمول بنظام Android. أعد تعيين إيماءات الرجوع وأزرار التحكم إلى اختصارات وتبديل التطبيقات ولقطات الشاشة وغيرها، دون الحاجة إلى الروت. مجانية ومفتوحة المصدر."
+        "en": {
+          "summary": "Back Button Hero - a customizable back-button utility for the AYN Thor Android handheld.",
+          "description": "Back Button Hero - a customizable back-button utility for the AYN Thor Android handheld."
+        }
       },
       "description_translations": {
         "en": "Thor Back Button Hero is a free, open-source Android app that adds customizable shortcuts to the AYN Thor dual-screen gaming handheld. Every Back gesture (single tap, double tap, tap-then-hold, hold) is freely assignable, as are the shoulder buttons (L1/L2/R1/R2), face buttons (A/B/X/Y), Home/Start/Select, D-pad directions and analog stick directions. Available actions include launching apps, an app switcher for the bottom screen, swapping the two screens, screenshots and video recording, macros, gyro control, volume and brightness, media control, controller focus, active-app control, AYN device settings (performance, fan, refresh rate, lighting) and more. Nothing is assigned by default, so the app does nothing until you configure it. No rooting is needed for core features; some advanced actions require AYN's root service. Written in Kotlin.",
         "ar": "Thor Back Button Hero تطبيق Android مجاني ومفتوح المصدر يضيف اختصارات قابلة للتخصيص إلى جهاز الألعاب المحمول AYN Thor ذي الشاشتين. يمكن تعيين كل إيماءة من إيماءات زر الرجوع (نقرة واحدة، نقرة مزدوجة، نقرة ثم ضغط مطوّل، ضغط مطوّل)، وكذلك أزرار الأكتاف (L1/L2/R1/R2) وأزرار الوجه (A/B/X/Y) ومفاتيح Home/Start/Select واتجاهات لوحة الاتجاهات (D-pad) واتجاهات عصا التحكم. تشمل الإجراءات المتاحة فتح التطبيقات، ومبدّل تطبيقات للشاشة السفلية، وتبديل الشاشتين، ولقطات الشاشة وتسجيل الفيديو، والماكرو، والتحكم بالجيروسكوب، ومستوى الصوت والسطوع، والتحكم بالوسائط، وتركيز التحكم، والتحكم بالتطبيق النشط، وإعدادات جهاز AYN (الأداء، المروحة، معدل التحديث، الإضاءة) وغيرها. لا يتم تعيين أي شيء افتراضيًا، لذا لا يفعل التطبيق شيئًا حتى تقوم بتكوينه. لا تُطلب صلاحيات الروت للميزات الأساسية؛ بينما تتطلب بعض الإجراءات المتقدمة خدمة الروت الخاصة بـ AYN. مكتوب بلغة Kotlin."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/denissteinhorst/thor-back-button-hero/main/site/assets/icon.png",
       "repository_url": "https://github.com/denissteinhorst/thor-back-button-hero",
       "github_repo_id": "1432131409",
-      "source_updated_at": "2026-11-27T23:27:33Z",
+      "source_updated_at": "2026-11-28T04:39:38Z",
       "homepage_url": null,
       "owner": "denissteinhorst",
       "default_branch": "main",
@@ -106395,10 +106397,10 @@
       "license_text": "BSD Zero Clause License\n\nCopyright (c) 2026 Denis Steinhorst\n\nPermission to use, copy, modify, and/or distribute this software for any\npurpose with or without fee is hereby granted.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES\nWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR\nANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES\nWHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN\nACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF\nOR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n",
       "license_spdx": "0BSD",
       "license_eligible": true,
-      "project_kind": "application",
-      "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "Distributed as a standalone end-user Android app written in Kotlin, with CI and published release badges plus a stated minimum SDK indicating a supported build path. It is a user-facing application rather than a library, framework, or developer tool, so build_recommended is set to true.",
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
       "project_status": "installable",
       "category": "system",
       "topics": [
