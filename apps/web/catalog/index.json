@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T04:44:00.586166+00:00",
+  "generated_at": "2026-11-28T04:44:18.392075+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -100172,7 +100172,7 @@
       "icon_url": "https://raw.githubusercontent.com/LargeModGames/spotatui/main/desktop/icons/icon.png",
       "repository_url": "https://github.com/LargeModGames/spotatui",
       "github_repo_id": "1093624725",
-      "source_updated_at": "2026-11-27T06:17:14Z",
+      "source_updated_at": "2026-11-28T00:16:10Z",
       "homepage_url": "https://spotatui.com",
       "owner": "LargeModGames",
       "default_branch": "main",
