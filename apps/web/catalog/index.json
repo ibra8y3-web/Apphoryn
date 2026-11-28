@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:11:32.266477+00:00",
+  "generated_at": "2026-11-28T03:12:51.066674+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -17920,18 +17920,19 @@
       "id": "andyld97-chess-net",
       "slug": "andyld97-chess-net",
       "name": "Chess.NET",
-      "summary": "A mobile/Desktop .NET Chess Game",
-      "description": "A mobile/Desktop .NET Chess Game",
+      "summary": "Chess.NET is a C#/.NET 10 chess game for mobile and desktop, with bots, Stockfish UCI support, online play, puzzles, and extensive chess rules.",
+      "description": "Chess.NET is a modern chess game written in C#/.NET 10. It targets mobile and desktop and includes almost full chess rules, custom bot logic, drag-and-drop pieces, time controls, player/bot settings, and two puzzles. Players can play against bots such as Stockfish or Stupiod, use Stockfish via UCI, or play online against other players when available. The GUI is localized in German and English. Castling, en passant, promotion choice, check, checkmate, stalemate, fifty-move rule, and threefold repetition are implemented, and illegal moves are prevented. Playing against the engine requires stockfish.exe.",
       "translations": {
-        "en": {
-          "summary": "A mobile/Desktop .NET Chess Game",
-          "description": "A mobile/Desktop .NET Chess Game"
-        }
+        "en": "Chess.NET is a C#/.NET 10 chess game for mobile and desktop, with bots, Stockfish UCI support, online play, puzzles, and extensive chess rules.",
+        "ar": "Chess.NET هي لعبة شطرنج بـ C#/.NET 10 للهاتف وسطح المكتب، مع روبوتات وStockfish UCI ولعب عبر الإنترنت وألغاز وقواعد شطرنج شبه كاملة."
       },
-      "description_translations": {},
-      "translation_status": "pending",
-      "ai_provider": null,
-      "ai_model": null,
+      "description_translations": {
+        "en": "Chess.NET is a modern chess game written in C#/.NET 10. It targets mobile and desktop and includes almost full chess rules, custom bot logic, drag-and-drop pieces, time controls, player/bot settings, and two puzzles. Players can play against bots such as Stockfish or Stupiod, use Stockfish via UCI, or play online against other players when available. The GUI is localized in German and English. Castling, en passant, promotion choice, check, checkmate, stalemate, fifty-move rule, and threefold repetition are implemented, and illegal moves are prevented. Playing against the engine requires stockfish.exe.",
+        "ar": "Chess.NET هي لعبة شطرنج حديثة مكتوبة بلغة C#/.NET 10 وتستهدف الهاتف وسطح المكتب. تتضمن قواعد شطرنج شبه كاملة، ومنطق روبوتات مخصصًا، وسحب القطع وإفلاتها، والتحكم في الوقت، وإعدادات اسم اللاعب وتصنيف Elo وإعدادات الروبوت، ولغزين. يمكن اللعب ضد روبوتات مثل Stockfish أو Stupiod، أو استخدام Stockfish عبر UCI، أو اللعب عبر الإنترنت ضد لاعبين آخرين عند توفرهم. الواجهة مترجمة إلى الألمانية والإنجليزية. تم تنفيذ التبييت، والأخذ بالمرور، واختيار الترقية، والكش، والكش مات، والجمود، وقاعدة الخمسين نقلة، والتكرار الثلاثي، مع منع النقلات غير القانونية. يتطلب اللعب ضد المحرك وجود stockfish.exe."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/andyld97/Chess.NET/main/Chess.NET/resources/images/logo.png",
       "repository_url": "https://github.com/andyld97/Chess.NET",
       "github_repo_id": "1135269026",
@@ -17943,10 +17944,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 Code A Software\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "unknown",
-      "build_recommended": false,
-      "classification_source": "heuristic",
-      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Standalone end-user chess application; supplied evidence identifies a C#/.NET 10 mobile/desktop app with MAUI/WPF topics and store distribution, supporting an application build path.",
       "project_status": "installable",
       "category": "games",
       "topics": [
