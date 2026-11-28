@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:07:58.947524+00:00",
+  "generated_at": "2026-11-28T11:08:12.423756+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -59694,17 +59694,19 @@
       "id": "aiixibear-media-control",
       "slug": "aiixibear-media-control",
       "name": "media_control",
-      "summary": "Android Flutter app that hosts a local Web UI and REST/SSE API to inspect and control active media sessions on the phone, with optional password protection.",
-      "description": "This is an Android Flutter application that runs a local HTTP server on the phone. Its browser-based Web UI shows the active media session, including title, artist, album, artwork, progress, and playback state. Users can play, pause, skip tracks, and seek. The app also exposes Home Assistant-style REST endpoints and an SSE event stream, with optional password protection for the Web UI and API. Android notification access is required to discover media sessions. The README documents building with `flutter build apk --release` and testing with `flutter test`. The service uses local-network HTTP without TLS, and the README warns against exposing the port to the internet. The app is primarily in Traditional Chinese.",
+      "summary": "一個Android App。可用WebUI控制手機媒體，也提供API",
+      "description": "一個Android App。可用WebUI控制手機媒體，也提供API",
       "translations": {
-        "en": "Android Flutter app that hosts a local Web UI and REST/SSE API to inspect and control active media sessions on the phone, with optional password protection.",
-        "ar": "تطبيق Android مبني بـFlutter يستضيف واجهة Web UI محلية وواجهة REST/SSE لفحص جلسات الوسائط النشطة على الهاتف والتحكم فيها، مع حماية اختيارية بكلمة مرور."
+        "en": {
+          "summary": "一個Android App。可用WebUI控制手機媒體，也提供API",
+          "description": "一個Android App。可用WebUI控制手機媒體，也提供API"
+        }
       },
       "description_translations": {
         "en": "This is an Android Flutter application that runs a local HTTP server on the phone. Its browser-based Web UI shows the active media session, including title, artist, album, artwork, progress, and playback state. Users can play, pause, skip tracks, and seek. The app also exposes Home Assistant-style REST endpoints and an SSE event stream, with optional password protection for the Web UI and API. Android notification access is required to discover media sessions. The README documents building with `flutter build apk --release` and testing with `flutter test`. The service uses local-network HTTP without TLS, and the README warns against exposing the port to the internet. The app is primarily in Traditional Chinese.",
         "ar": "تطبيق Android مبني بـFlutter يشغّل خادم HTTP محليًا على الهاتف. تعرض واجهة Web UI التي تعمل في المتصفح جلسة الوسائط النشطة، بما في ذلك العنوان والفنان والألبوم وصورة الغلاف والتقدم وحالة التشغيل. ويمكن للمستخدم التشغيل والإيقاف المؤقت وتخطي المقاطع والانتقال إلى موضع محدد. كما يوفر التطبيق نقاط نهاية REST بأسلوب Home Assistant وبث أحداث SSE، مع حماية اختيارية بكلمة مرور لواجهة Web UI وواجهة API. يلزم منح إذن الوصول إلى الإشعارات في Android لاكتشاف جلسات الوسائط. توثّق ملفات README البناء باستخدام `flutter build apk --release` والاختبار باستخدام `flutter test`. تعمل الخدمة عبر HTTP على الشبكة المحلية دون TLS، ويحذّر README من تعريض المنفذ للإنترنت. واجهة التطبيق بالصينية التقليدية بشكل أساسي."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "particle-ai/particle-1:free",
       "icon_url": "https://raw.githubusercontent.com/AiixiBear/media_control/master/assets/images/icon.png",
@@ -59720,8 +59722,8 @@
       "license_eligible": true,
       "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "The repository is a standalone Android Flutter application with documented build commands (`flutter build apk --release`) and an end-user Web UI/API for media control.",
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
       "project_status": "installable",
       "category": "multimedia",
       "topics": [
