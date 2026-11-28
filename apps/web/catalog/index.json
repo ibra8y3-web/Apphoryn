@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T13:29:49.378117+00:00",
+  "generated_at": "2026-11-28T13:30:05.929954+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -47979,10 +47979,10 @@
         "windows",
         "windows-11"
       ],
-      "latest_version": "v0.15.0",
-      "release_url": "https://github.com/pei-jz/jh-editor/releases/tag/v0.15.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pei-jz-jh-editor-v0.15.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pei-jz-jh-editor-v0.15.0/THIRD-PARTY-NOTICE-pei-jz-jh-editor.txt",
+      "latest_version": "v0.16.0",
+      "release_url": "https://github.com/pei-jz/jh-editor/releases/tag/v0.16.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pei-jz-jh-editor-v0.16.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pei-jz-jh-editor-v0.16.0/THIRD-PARTY-NOTICE-pei-jz-jh-editor.txt",
       "artifacts": [
         {
           "id": "1d146eb50eb9bc7d4c72cbc14363c480e93e79d48022ed10a00376c664973b5f",
@@ -48000,6 +48000,23 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pei-jz-jh-editor-v0.15.0/J.H.Editor_0.15.0_x64-setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pei-jz-jh-editor-v0.15.0"
+        },
+        {
+          "id": "214dce3de231a68985e8e86fa272538cc9b0631d5fcf0ec111fbc3abf38a2d73",
+          "filename": "J.H.Editor_0.16.0_x64-setup.exe",
+          "original_filename": "J.H.Editor_0.16.0_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.16.0",
+          "size_bytes": 9739929,
+          "sha256": "214dce3de231a68985e8e86fa272538cc9b0631d5fcf0ec111fbc3abf38a2d73",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pei-jz-jh-editor-v0.16.0/J.H.Editor_0.16.0_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pei-jz-jh-editor-v0.16.0"
         }
       ],
       "platforms": [
