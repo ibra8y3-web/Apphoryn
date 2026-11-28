@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:03:23.011927+00:00",
+  "generated_at": "2026-11-28T11:03:42.027334+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -66774,17 +66774,19 @@
       "id": "krelinnbios-neodblite",
       "slug": "krelinnbios-neodblite",
       "name": "NeoDBLite",
-      "summary": "NeoDBLite is an unofficial Android client for NeoDB and compatible instances, letting users browse, search, and mark books, films, music, and games on the go.",
-      "description": "NeoDBLite is an unofficial Android client for NeoDB and compatible instances, built with Kotlin, Jetpack Compose, and Material3. It lets you browse, search, and mark entries for books, films, music, and games on your phone.\n\nFeatures: instance login by entering a NeoDB domain and authorizing through your browser; discovery browsing of trending content by category with long-press quick marking; cross-category or category-limited search with recent history and inline marks/ratings; detailed entry views with covers, descriptions, tags, external links, ratings, and community content; entry marking with collection status, ratings, short reviews, tags, visibility, and mark dates; a bookshelf filterable by status, category, tag, or keyword with edit, delete, and calendar views; a profile homepage with bookshelf stats and collections; and settings for theme, language, updates, and logout.\n\nRequires Android 7.0 (API 24) or newer. Released under the MIT License. This is an unofficial project unaffiliated with NeoDB or instance operators.",
+      "summary": "面向 NeoDB 与兼容实例的非官方 Android 标记客户端。",
+      "description": "面向 NeoDB 与兼容实例的非官方 Android 标记客户端。",
       "translations": {
-        "en": "NeoDBLite is an unofficial Android client for NeoDB and compatible instances, letting users browse, search, and mark books, films, music, and games on the go.",
-        "ar": "NeoDBLite هو عميل Android غير رسمي لـ NeoDB والأمثلة المتوافقة معه، يتيح للمستخدمين تصفّح الكتب والأفلام والموسيقى والألعاب والبحث عنها ووسمها أثناء التنقّل."
+        "en": {
+          "summary": "面向 NeoDB 与兼容实例的非官方 Android 标记客户端。",
+          "description": "面向 NeoDB 与兼容实例的非官方 Android 标记客户端。"
+        }
       },
       "description_translations": {
         "en": "NeoDBLite is an unofficial Android client for NeoDB and compatible instances, built with Kotlin, Jetpack Compose, and Material3. It lets you browse, search, and mark entries for books, films, music, and games on your phone.\n\nFeatures: instance login by entering a NeoDB domain and authorizing through your browser; discovery browsing of trending content by category with long-press quick marking; cross-category or category-limited search with recent history and inline marks/ratings; detailed entry views with covers, descriptions, tags, external links, ratings, and community content; entry marking with collection status, ratings, short reviews, tags, visibility, and mark dates; a bookshelf filterable by status, category, tag, or keyword with edit, delete, and calendar views; a profile homepage with bookshelf stats and collections; and settings for theme, language, updates, and logout.\n\nRequires Android 7.0 (API 24) or newer. Released under the MIT License. This is an unofficial project unaffiliated with NeoDB or instance operators.",
         "ar": "NeoDBLite هو عميل Android غير رسمي مخصّص لـ NeoDB والأمثلة المتوافقة معه، مبنيّ باستخدام Kotlin وJetpack Compose وMaterial3. يتيح لك تصفّح الكتب والأفلام والموسيقى والألعاب والبحث عنها ووسمها من هاتفك.\n\nالميزات: تسجيل الدخول إلى المثال عبر إدخال نطاق NeoDB وإتمام التفويض من خلال المتصفح؛ تصفّح المحتوى الرائج حسب الفئة مع الوسم السريع بالضغط المطوّل؛ بحث عبر الفئات أو ضمن فئة محددة مع الاحتفاظ بسجلّ البحث الأخير وعرض الوسوم والتقييمات مباشرة؛ عرض تفاصيل الإدخال مع الأغلفة والأوصاف والوسوم والروابط الخارجية والتقييمات ومحتوى المجتمع؛ وسم الإدخالات مع إدارة حالة الجمع والتقييمات والمراجعات القصيرة والوسوم والظهور وتواريخ الوسم؛ رفّ شخصي قابل للتصفية حسب الحالة أو الفئة أو الوسم أو الكلمة المفتاحية مع خيارات التعديل والحذف وعرض التقويم؛ صفحة شخصية تعرض الملف الشخصي وإحصائيات الرفّ والمجموعات؛ وإعدادات لتبديل السمة واللغة والتحقّق من التحديثات وتسجيل الخروج.\n\nيتطلب Android 7.0 (API 24) أو أحدث. مرخّص بموجب رخصة MIT. مشروع غير رسمي وغير تابع لـ NeoDB أو مشغّلي الأمثلة."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/KrelinnBios/NeoDBLite/main/icon/icon.svg",
@@ -66798,10 +66800,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 KrelinnBios\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
-      "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "This is a standalone end-user Android application (Kotlin, Jetpack Compose, Material3) distributed as an APK via GitHub Releases, targeting Android 7.0+ (API 24). It uses standard Android/Gradle tooling (Retrofit, OkHttp), which provides a clear, well-supported build path, so build_recommended is true.",
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
       "project_status": "installable",
       "category": "multimedia",
       "topics": [
