@@ -41193,6 +41193,16 @@
           ],
           "requested_at": "2026-11-28T05:37:45.186503+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
+        },
+        {
+          "git_ref": "916b5ccc1b2b6d4ecd991ab1573172bab8fb1cc4",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-28T13:37:25.228460+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ]
     },
