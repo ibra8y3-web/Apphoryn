@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:45:55.516708+00:00",
+  "generated_at": "2026-11-28T11:46:35.164792+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -25985,7 +25985,7 @@
       "icon_url": "https://raw.githubusercontent.com/Dodaios/Dodaios/main/dodaios/ui/web/frontend/public/m/icon-192.png",
       "repository_url": "https://github.com/Dodaios/Dodaios",
       "github_repo_id": "1255092568",
-      "source_updated_at": "2026-11-26T17:21:38Z",
+      "source_updated_at": "2026-11-28T09:34:01Z",
       "homepage_url": "https://dodaios.ai",
       "owner": "Dodaios",
       "default_branch": "main",
