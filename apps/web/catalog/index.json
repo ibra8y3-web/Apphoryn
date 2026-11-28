@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T13:27:53.959926+00:00",
+  "generated_at": "2026-11-28T13:28:19.729099+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -74767,6 +74767,40 @@
           "signature_status": "not_checked",
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-nicostoe-open-sops-ui-v1.0.0/Open-SOPS-UI_1.0.0_x64_en-US.msi",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-nicostoe-open-sops-ui-v1.0.0"
+        },
+        {
+          "id": "20cc8b52ebfe7c697befee7e15e66867b664eeb13e7f7ee995a8ed5dda8a6a3d",
+          "filename": "Open-SOPS-UI_1.0.0_amd64-with-sops.AppImage",
+          "original_filename": "Open-SOPS-UI_1.0.0_amd64-with-sops.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v1.0.0",
+          "size_bytes": 95660536,
+          "sha256": "20cc8b52ebfe7c697befee7e15e66867b664eeb13e7f7ee995a8ed5dda8a6a3d",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-nicostoe-open-sops-ui-v1.0.0/Open-SOPS-UI_1.0.0_amd64-with-sops.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-nicostoe-open-sops-ui-v1.0.0"
+        },
+        {
+          "id": "5700736a8530e75a872914f94f569ecc17e1b0c97f92656461919cd5d2f311ab",
+          "filename": "Open-SOPS-UI_1.0.0_amd64.AppImage",
+          "original_filename": "Open-SOPS-UI_1.0.0_amd64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v1.0.0",
+          "size_bytes": 81357304,
+          "sha256": "5700736a8530e75a872914f94f569ecc17e1b0c97f92656461919cd5d2f311ab",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-nicostoe-open-sops-ui-v1.0.0/Open-SOPS-UI_1.0.0_amd64.AppImage",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-nicostoe-open-sops-ui-v1.0.0"
         }
       ],
