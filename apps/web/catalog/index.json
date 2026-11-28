@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T14:01:27.691026+00:00",
+  "generated_at": "2026-11-28T14:01:42.042009+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -49677,6 +49677,66 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "fmadore-kalamu",
+      "slug": "fmadore-kalamu",
+      "artifacts": [],
+      "name": "Kalamu",
+      "summary": "Desktop app for researchers on Windows and macOS: read scanned and handwritten documents, transcribe interviews and analyse texts with Gemini, OpenAI, Claude or Mistral, or offline with Whisper. Every result checked against its source.",
+      "description": "Desktop app for researchers on Windows and macOS: read scanned and handwritten documents, transcribe interviews and analyse texts with Gemini, OpenAI, Claude or Mistral, or offline with Whisper. Every result checked against its source.",
+      "translations": {
+        "en": {
+          "summary": "Desktop app for researchers on Windows and macOS: read scanned and handwritten documents, transcribe interviews and analyse texts with Gemini, OpenAI, Claude or Mistral, or offline with Whisper. Every result checked against its source.",
+          "description": "Desktop app for researchers on Windows and macOS: read scanned and handwritten documents, transcribe interviews and analyse texts with Gemini, OpenAI, Claude or Mistral, or offline with Whisper. Every result checked against its source."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/fmadore/Kalamu/main/src-tauri/icons/icon.png",
+      "repository_url": "https://github.com/fmadore/Kalamu",
+      "github_repo_id": "1431091995",
+      "source_updated_at": "2026-11-27T09:20:59Z",
+      "homepage_url": "http://kalamu.frederickmadore.com/",
+      "owner": "fmadore",
+      "default_branch": "main",
+      "source_commit_sha": "2a6dd08b6e7f268a179f64f8f15754a64a2f520a",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Frédérick Madore\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
+      "category": "productivity",
+      "topics": [
+        "african-studies",
+        "arm64",
+        "claude",
+        "desktop-app",
+        "digital-humanities",
+        "gemini",
+        "handwriting-recognition",
+        "htr",
+        "llm",
+        "macos",
+        "mistral",
+        "ocr",
+        "openai",
+        "research-tool",
+        "rust",
+        "speech-to-text",
+        "tauri",
+        "transcription",
+        "whisper",
+        "windows"
+      ],
+      "latest_version": "v1.11.0",
+      "release_url": "https://github.com/fmadore/Kalamu/releases/tag/v1.11.0",
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "hafgit99-kalderashield",
