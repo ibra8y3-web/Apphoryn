@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T13:58:56.987821+00:00",
+  "generated_at": "2026-11-28T13:59:11.100138+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -56072,7 +56072,7 @@
       "icon_url": "https://raw.githubusercontent.com/netease-youdao/LobsterAI/main/public/logo.png",
       "repository_url": "https://github.com/netease-youdao/LobsterAI",
       "github_repo_id": "1156137396",
-      "source_updated_at": "2026-11-27T21:30:23Z",
+      "source_updated_at": "2026-11-28T11:27:59Z",
       "homepage_url": "https://lobsterai.youdao.com",
       "owner": "netease-youdao",
       "default_branch": "main",
