@@ -111660,6 +111660,15 @@
           ],
           "requested_at": "2026-11-27T16:09:35.387099+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
+        },
+        {
+          "git_ref": "e4442d3dae89bd69c88bea68ab9f7ec1e5ee60ab",
+          "targets": [
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-28T13:07:48.382646+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ]
     },
