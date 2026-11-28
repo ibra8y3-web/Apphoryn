@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T02:52:38.069050+00:00",
+  "generated_at": "2026-11-28T02:52:56.453932+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -36445,19 +36445,19 @@
       "slug": "ero-gamer-gallery-next",
       "artifacts": [],
       "name": "Gallery-Next",
-      "summary": "Gallery-Next is an Android photo and video gallery based on Fossify Gallery and Sketch, with editing, privacy controls, themes, and broad format support.",
-      "description": "Gallery-Next is an Android gallery application described as a high-performance, high-quality media viewer based on Fossify Gallery and the Sketch library. It supports photos and videos and lists formats including JPEG, JPEG XL, AVIF, WEBP, PNG, MP4, MKV, RAW, SVG, GIF, and more. The README highlights a basic photo editor with crop, resize, rotate, flip, draw, and filters; EXIF metadata stripping; PIN, pattern, or fingerprint protection for photos, videos, or the app; a recycle bin for recovery; customizable UI themes and function buttons; Material Design with dynamic themes; and offline, privacy-focused use. The project is written with Kotlin and includes Android, Compose Multiplatform, and Material Design 3 topics. It is distributed under GPL-3.0 and credits Sketch under Apache-2.0.",
+      "summary": "Gallery Next is a privacy-focused Android gallery based on Fossify Gallery and Sketch, with photo editing, secure locking, recycle bin, and broad format support.",
+      "description": "Gallery Next is an Android gallery application built on the Fossify Gallery app and the Sketch image library. It provides basic photo editing tools such as crop, resize, rotate, flip, drawing, and filters. The app emphasizes privacy: it can strip EXIF metadata including GPS coordinates and camera details, and it supports PIN, pattern, or fingerprint protection for specific media or the whole app. A built-in recycle bin allows recovery of deleted photos and videos. Users can customize themes and function buttons, and the gallery supports formats including JPEG, JPEG XL, AVIF, WEBP, PNG, MP4, MKV, RAW, SVG, GIF, and videos. It uses Material Design with dynamic themes. The project is distributed under GPL-3.0 and credits the Sketch library under Apache-2.0.",
       "translations": {
-        "en": "Gallery-Next is an Android photo and video gallery based on Fossify Gallery and Sketch, with editing, privacy controls, themes, and broad format support.",
-        "ar": "Gallery-Next هو تطبيق معرض صور وفيديو يعمل على Android، مبني على Fossify Gallery ومكتبة Sketch، ويوفر تحرير الصور والتحكم في الخصوصية والمظاهر ودعمًا واسعًا للصيغ."
+        "en": "Gallery Next is a privacy-focused Android gallery based on Fossify Gallery and Sketch, with photo editing, secure locking, recycle bin, and broad format support.",
+        "ar": "Gallery Next هو معرض صور لنظام أندرويد يركز على الخصوصية، مبني على تطبيق Fossify Gallery ومكتبة Sketch، ويوفر تحرير الصور والقفل الآمن وسلة المحذوفات ودعمًا واسعًا للصيغ."
       },
       "description_translations": {
-        "en": "Gallery-Next is an Android gallery application described as a high-performance, high-quality media viewer based on Fossify Gallery and the Sketch library. It supports photos and videos and lists formats including JPEG, JPEG XL, AVIF, WEBP, PNG, MP4, MKV, RAW, SVG, GIF, and more. The README highlights a basic photo editor with crop, resize, rotate, flip, draw, and filters; EXIF metadata stripping; PIN, pattern, or fingerprint protection for photos, videos, or the app; a recycle bin for recovery; customizable UI themes and function buttons; Material Design with dynamic themes; and offline, privacy-focused use. The project is written with Kotlin and includes Android, Compose Multiplatform, and Material Design 3 topics. It is distributed under GPL-3.0 and credits Sketch under Apache-2.0.",
-        "ar": "Gallery-Next هو تطبيق معرض على Android وُصف بأنه معرض عالي الأداء وعالي الجودة للوسائط، مبني على Fossify Gallery ومكتبة Sketch. يدعم الصور والفيديوهات، ويذكر صيغًا مثل JPEG وJPEG XL وAVIF وWEBP وPNG وMP4 وMKV وRAW وSVG وGIF وغيرها. يبرز ملف README محرر صور أساسيًا يتضمن القص وتغيير الحجم والتدوير والقلب والرسم وتطبيق الفلاتر، وإزالة بيانات EXIF الوصفية، وحماية باستخدام PIN أو نمط أو بصمة الإصبع للصور أو الفيديوهات أو التطبيق، وسلة محذوفات لاستعادة الملفات، وإمكانية تخصيص مظاهر الواجهة وأزرار الوظائف، وتصميم Material مع مظاهر ديناميكية، واستخدام دون اتصال يركز على الخصوصية. المشروع مكتوب بلغة Kotlin ويتضمن موضوعات Android وCompose Multiplatform وMaterial Design 3. يُوزع بموجب GPL-3.0، وينسب مكتبة Sketch إلى Apache-2.0."
+        "en": "Gallery Next is an Android gallery application built on the Fossify Gallery app and the Sketch image library. It provides basic photo editing tools such as crop, resize, rotate, flip, drawing, and filters. The app emphasizes privacy: it can strip EXIF metadata including GPS coordinates and camera details, and it supports PIN, pattern, or fingerprint protection for specific media or the whole app. A built-in recycle bin allows recovery of deleted photos and videos. Users can customize themes and function buttons, and the gallery supports formats including JPEG, JPEG XL, AVIF, WEBP, PNG, MP4, MKV, RAW, SVG, GIF, and videos. It uses Material Design with dynamic themes. The project is distributed under GPL-3.0 and credits the Sketch library under Apache-2.0.",
+        "ar": "Gallery Next هو تطبيق معرض صور لنظام أندرويد مبني على تطبيق Fossify Gallery ومكتبة الصور Sketch. يوفر أدوات أساسية لتحرير الصور مثل الاقتصاص وتغيير الحجم والتدوير والقلب والرسم وتطبيق المرشحات. يركز التطبيق على الخصوصية، إذ يمكنه إزالة بيانات EXIF الوصفية بما في ذلك إحداثيات GPS وتفاصيل الكاميرا، ويدعم الحماية برمز PIN أو النمط أو بصمة الإصبع لوسائط محددة أو للتطبيق بأكمله. وتتيح سلة المحذوفات المدمجة استعادة الصور ومقاطع الفيديو المحذوفة. يمكن للمستخدمين تخصيص السمات وأزرار الوظائف، ويدعم المعرض صيغًا تشمل JPEG وJPEG XL وAVIF وWEBP وPNG وMP4 وMKV وRAW وSVG وGIF ومقاطع الفيديو. ويستخدم تصميم Material Design مع سمات ديناميكية. يُوزَّع المشروع بموجب GPL-3.0، ويُنسب مكتبة Sketch بموجب Apache-2.0."
       },
       "translation_status": "complete",
       "ai_provider": "openrouter",
-      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "ai_model": "particle-ai/particle-1:free",
       "icon_url": "https://raw.githubusercontent.com/Ero-gamer/Gallery-Next/main/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
       "repository_url": "https://github.com/Ero-gamer/Gallery-Next",
       "github_repo_id": "1214603998",
@@ -36472,7 +36472,7 @@
       "project_kind": "application",
       "build_recommended": false,
       "classification_source": "ai",
-      "classification_reason": "The repository describes a standalone Android end-user gallery application, but the supplied evidence does not include explicit build instructions or a supported build path, so automatic source-build is not recommended.",
+      "classification_reason": "Standalone Android gallery application, but the supplied README excerpt does not document a supported build path or build instructions.",
       "category": "developer",
       "topics": [
         "android",
