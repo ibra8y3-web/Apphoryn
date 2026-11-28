@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:31:39.492025+00:00",
+  "generated_at": "2026-11-28T03:31:53.168164+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -11771,7 +11771,7 @@
       "icon_url": "https://raw.githubusercontent.com/battery-hub/battery-hub/main/assets/icon.png",
       "repository_url": "https://github.com/battery-hub/battery-hub",
       "github_repo_id": "1289316835",
-      "source_updated_at": "2026-11-27T17:59:47Z",
+      "source_updated_at": "2026-11-28T02:38:34Z",
       "homepage_url": "https://battery-hub.github.io/battery-hub/",
       "owner": "battery-hub",
       "default_branch": "main",
