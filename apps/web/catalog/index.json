@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:10:08.174712+00:00",
+  "generated_at": "2026-11-28T03:10:36.502994+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -88636,18 +88636,19 @@
       "id": "jaypsmall-resonantia",
       "slug": "jaypsmall-resonantia",
       "name": "Resonantia",
-      "summary": "🌌 Resonantia App viene con el propósito de proporcionar una herramienta interactiva de exploración vibracional y espectro simbólico, relacionando frecuencias sonoras (Hz) con geometría sagrada/armónica, estados de conciencia y perfiles emoc",
-      "description": "🌌 Resonantia App viene con el propósito de proporcionar una herramienta interactiva de exploración vibracional y espectro simbólico, relacionando frecuencias sonoras (Hz) con geometría sagrada/armónica, estados de conciencia y perfiles emocionales/mentales.",
+      "summary": "Resonantia: a native Android app (Kotlin, Jetpack Compose) for interactive vibrational exploration linking sound frequencies to symbolic geometry, consciousness states, and emotional profiles.",
+      "description": "Resonantia is a native Android app built with Kotlin and Jetpack Compose for interactive vibrational exploration and a symbolic spectrum, relating sound frequencies (Hz) to sacred/harmonic geometry, consciousness states, and emotional/mental profiles. Features: an interactive symbolic spectrum with real-time geometric exploration; a canvas-based visual resonance engine simulating harmonics and waves; integrated symbolic zones (Zadkiel, Raphael, Michael, Gabriel, Uriel, Jophiel, Chamuel) with state, quality, blockage, and suggested practice; a dynamic state profile (Clarity, Expression, Protection, Integration); transition paths with target-frequency guidance; smart search by emotion/state terms with ±10 Hz fine-tuning and history; dark/light themes; and session history. Built with Clean Architecture + MVVM, a custom Canvas/DrawScope engine, Android AudioTrack for real-time sound synthesis, Coroutines with StateFlow/SharedFlow, and Hilt/Koin. Requires Android 7.0 (API 24)+, JDK 17+, Android Studio Ladybug+. A prebuilt APK (v1.0.4) is provided. Source is marked all rights reserved.",
       "translations": {
-        "en": {
-          "summary": "🌌 Resonantia App viene con el propósito de proporcionar una herramienta interactiva de exploración vibracional y espectro simbólico, relacionando frecuencias sonoras (Hz) con geometría sagrada/armónica, estados de conciencia y perfiles emoc",
-          "description": "🌌 Resonantia App viene con el propósito de proporcionar una herramienta interactiva de exploración vibracional y espectro simbólico, relacionando frecuencias sonoras (Hz) con geometría sagrada/armónica, estados de conciencia y perfiles emocionales/mentales."
-        }
+        "en": "Resonantia: a native Android app (Kotlin, Jetpack Compose) for interactive vibrational exploration linking sound frequencies to symbolic geometry, consciousness states, and emotional profiles.",
+        "ar": "Resonantia تطبيق أندرويد أصلي (Kotlin وJetpack Compose) للاستكشاف الاهتزازي التفاعلي، يربط الترددات الصوتية بالهندسة الرمزية وحالات الوعي والملامح العاطفية."
       },
-      "description_translations": {},
-      "translation_status": "pending",
-      "ai_provider": null,
-      "ai_model": null,
+      "description_translations": {
+        "en": "Resonantia is a native Android app built with Kotlin and Jetpack Compose for interactive vibrational exploration and a symbolic spectrum, relating sound frequencies (Hz) to sacred/harmonic geometry, consciousness states, and emotional/mental profiles. Features: an interactive symbolic spectrum with real-time geometric exploration; a canvas-based visual resonance engine simulating harmonics and waves; integrated symbolic zones (Zadkiel, Raphael, Michael, Gabriel, Uriel, Jophiel, Chamuel) with state, quality, blockage, and suggested practice; a dynamic state profile (Clarity, Expression, Protection, Integration); transition paths with target-frequency guidance; smart search by emotion/state terms with ±10 Hz fine-tuning and history; dark/light themes; and session history. Built with Clean Architecture + MVVM, a custom Canvas/DrawScope engine, Android AudioTrack for real-time sound synthesis, Coroutines with StateFlow/SharedFlow, and Hilt/Koin. Requires Android 7.0 (API 24)+, JDK 17+, Android Studio Ladybug+. A prebuilt APK (v1.0.4) is provided. Source is marked all rights reserved.",
+        "ar": "Resonantia تطبيق أندرويد أصلي مبني باستخدام Kotlin وJetpack Compose للاستكشاف الاهتزازي التفاعلي عبر طيف رمزي، يربط الترددات الصوتية (Hz) بالهندسة المقدسة/التوافقية وحالات الوعي والملامح العاطفية/الذهنية. الميزات: طيف رمزي تفاعلي مع استكشاف هندسي في الزمن الحقيقي؛ محرك رنين بصري قائم على الرسم يحاكي التوافقيات والموجات؛ مناطق رمزية مدمجة (Zadkiel وRaphael وMichael وGabriel وUriel وJophiel وChamuel) مع تفاصيل الحالة والجودة والعوائق والممارسة المقترحة؛ ملف حالة ديناميكي (Clarity وExpression وProtection وIntegration)؛ مسارات انتقالية مع إرشاد التردد المستهدف؛ بحث ذكي حسب مصطلحات المشاعر/الحالات مع ضبط دقيق (±10 Hz) وسجل؛ وضعان داكن/فاتح؛ وسجل للجلسات. مبني باستخدام Clean Architecture + MVVM ومحرك Canvas/DrawScope مخصص وAndroid AudioTrack لتوليد الصوت في الزمن الحقيقي وCoroutines مع StateFlow/SharedFlow وHilt/Koin. يتطلب Android 7.0 (API 24) أو أحدث وJDK 17+ وAndroid Studio Ladybug+. يُوفَّر ملف APK مُسبق البناء (v1.0.4). المصدر مُعلَّم بجميع الحقوق محفوظة."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/Jaypsmall/Resonantia/rama-1/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
       "repository_url": "https://github.com/Jaypsmall/Resonantia",
       "github_repo_id": "1345500139",
@@ -88655,14 +88656,14 @@
       "homepage_url": "https://jaypsmall.github.io/Resonantia/",
       "owner": "Jaypsmall",
       "default_branch": "rama-1",
-      "source_commit_sha": "d94b47ae10fafbd7aa35f369d1296a64218417ac",
+      "source_commit_sha": "6c52542b7888563d3757e1e4c94bf59d7db4118b",
       "license_text": "MIT License\n\nCopyright (c) 2026 Architect_D4d\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "framework",
-      "build_recommended": false,
-      "classification_source": "heuristic",
-      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Evidence describes a standalone native Android end-user application (Kotlin/Jetpack Compose) distributed as an APK, with a documented build path (Android Studio Ladybug+, JDK 17+, Android 7.0/API 24+), so it is classified as an application and build_recommended is true. Note: the repository marks the source as all rights reserved / private property, which may affect redistribution despite the avai",
       "project_status": "installable",
       "category": "other",
       "topics": [
