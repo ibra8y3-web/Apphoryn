@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T13:21:05.338553+00:00",
+  "generated_at": "2026-11-28T13:21:32.141185+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -27632,7 +27632,7 @@
       "homepage_url": "https://drop.stacktao.cn/",
       "owner": "StackTao",
       "default_branch": "main",
-      "source_commit_sha": "9ead7f1f1e950e77d3da764a532892002d14b3bc",
+      "source_commit_sha": "468ee1d85c4caee8483d9e77a992fece19b41a71",
       "license_text": "MIT License\n\nCopyright (c) 2026 StackTao\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -27653,10 +27653,10 @@
         "rust",
         "self-hosted"
       ],
-      "latest_version": "v0.1.10",
-      "release_url": "https://github.com/StackTao/DropDrawer/releases/tag/v0.1.10",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-stacktao-dropdrawer-v0.1.8",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-stacktao-dropdrawer-v0.1.8/THIRD-PARTY-NOTICE-stacktao-dropdrawer.txt",
+      "latest_version": "v0.1.11",
+      "release_url": "https://github.com/StackTao/DropDrawer/releases/tag/v0.1.11",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-stacktao-dropdrawer-v0.1.11",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-stacktao-dropdrawer-v0.1.11/THIRD-PARTY-NOTICE-stacktao-dropdrawer.txt",
       "artifacts": [
         {
           "id": "dc7b5fd24ae98ff2ada71b78b80b959593962a0d057ea82817ca9e25ad19aae3",
@@ -27776,6 +27776,74 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-stacktao-dropdrawer-v0.1.8/DropDrawer-Windows-x64-Setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-stacktao-dropdrawer-v0.1.8"
+        },
+        {
+          "id": "1f27d6fd4378e76d7346b413ea5820473fc8db32c0641975a7e7e4225e1e0046",
+          "filename": "DropDrawer-Android-arm64.apk",
+          "original_filename": "DropDrawer-Android-arm64.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v0.1.11",
+          "size_bytes": 45429824,
+          "sha256": "1f27d6fd4378e76d7346b413ea5820473fc8db32c0641975a7e7e4225e1e0046",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "eb000a99410b97c73103ed135406b096470120333b0ebbb4e10be1fc5b08f040",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-stacktao-dropdrawer-v0.1.11/DropDrawer-Android-arm64.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-stacktao-dropdrawer-v0.1.11"
+        },
+        {
+          "id": "918cea5a0bbe92fe72099bb4ba60ec09de0106df213bfbf6e14618fd9d200939",
+          "filename": "DropDrawer-Android-universal.apk",
+          "original_filename": "DropDrawer-Android-universal.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "universal",
+          "version": "v0.1.11",
+          "size_bytes": 78132123,
+          "sha256": "918cea5a0bbe92fe72099bb4ba60ec09de0106df213bfbf6e14618fd9d200939",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "eb000a99410b97c73103ed135406b096470120333b0ebbb4e10be1fc5b08f040",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-stacktao-dropdrawer-v0.1.11/DropDrawer-Android-universal.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-stacktao-dropdrawer-v0.1.11"
+        },
+        {
+          "id": "3d5416de577e1b23c03ff0aa00ae61aa62e755d0ce7ef712e68633bcde8cee54",
+          "filename": "DropDrawer-macOS-arm64.dmg",
+          "original_filename": "DropDrawer-macOS-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.1.11",
+          "size_bytes": 23707165,
+          "sha256": "3d5416de577e1b23c03ff0aa00ae61aa62e755d0ce7ef712e68633bcde8cee54",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-stacktao-dropdrawer-v0.1.11/DropDrawer-macOS-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-stacktao-dropdrawer-v0.1.11"
+        },
+        {
+          "id": "77df396dbfacf9584320cbec19ffefd83d523a38caf0e9dc625bb7f8b2bf1343",
+          "filename": "DropDrawer-Windows-x64-Setup.exe",
+          "original_filename": "DropDrawer-Windows-x64-Setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.1.11",
+          "size_bytes": 18097041,
+          "sha256": "77df396dbfacf9584320cbec19ffefd83d523a38caf0e9dc625bb7f8b2bf1343",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-stacktao-dropdrawer-v0.1.11/DropDrawer-Windows-x64-Setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-stacktao-dropdrawer-v0.1.11"
         }
       ],
       "platforms": [
