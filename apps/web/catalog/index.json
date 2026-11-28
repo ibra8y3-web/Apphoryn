@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T12:07:24.747065+00:00",
+  "generated_at": "2026-11-28T12:07:35.677158+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -118278,7 +118278,7 @@
       "icon_url": "https://raw.githubusercontent.com/qier222/YesPlayMusic/main/assets/app_icon.png",
       "repository_url": "https://github.com/qier222/YesPlayMusic",
       "github_repo_id": "302603001",
-      "source_updated_at": "2026-11-28T04:11:18Z",
+      "source_updated_at": "2026-11-28T10:38:25Z",
       "homepage_url": "https://yesplaymusic.0xtangerine.com",
       "owner": "qier222",
       "default_branch": "main",
