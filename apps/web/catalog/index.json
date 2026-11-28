@@ -92186,7 +92186,17 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "1df8753eca49b910b187dad16c2c6fa179468344",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-28T02:54:01.145540+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "duartebarbosadev-scrolless",
