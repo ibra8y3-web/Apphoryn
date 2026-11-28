@@ -62704,7 +62704,17 @@
       "latest_version": "v1.7.11",
       "release_url": "https://github.com/yuxino/Mimi/releases/tag/v1.7.11",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "0b0573cc20f84afe8c5e9a089e30b4ff27ef7c98",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-28T14:02:07.616212+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "mindflock-mindflock",
