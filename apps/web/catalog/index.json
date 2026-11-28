@@ -99702,6 +99702,14 @@
           ],
           "requested_at": "2026-11-27T12:17:57.867139+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
+        },
+        {
+          "git_ref": "8cfb49ef0af5bcb408b2e4ecfc0423090c400115",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-28T03:35:41.229431+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ]
     },
