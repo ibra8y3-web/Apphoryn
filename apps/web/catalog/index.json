@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T04:23:41.338257+00:00",
+  "generated_at": "2026-11-28T04:24:17.443041+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -17470,11 +17470,11 @@
       "icon_url": "https://raw.githubusercontent.com/pandacover/chat-v2/main/assets/logo.png",
       "repository_url": "https://github.com/pandacover/chat-v2",
       "github_repo_id": "1421114065",
-      "source_updated_at": "2026-11-23T18:24:39Z",
+      "source_updated_at": "2026-11-27T14:30:17Z",
       "homepage_url": "https://github.com/pandacover/chat-v2/releases",
       "owner": "pandacover",
       "default_branch": "main",
-      "source_commit_sha": "1a41ef4841c98f2ccce1b557a90903b06e0b928d",
+      "source_commit_sha": "7d08f99abfa1ec9f5f4bf1f6fa73e7a7e8c60af8",
       "license_text": "MIT License\n\nCopyright (c) 2026 pandacover\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -17500,10 +17500,10 @@
         "svelte",
         "typescript"
       ],
-      "latest_version": "v0.1.43",
-      "release_url": "https://github.com/pandacover/chat-v2/releases/tag/v0.1.43",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pandacover-chat-v2-v0.1.43",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pandacover-chat-v2-v0.1.43/THIRD-PARTY-NOTICE-pandacover-chat-v2.txt",
+      "latest_version": "v0.1.45",
+      "release_url": "https://github.com/pandacover/chat-v2/releases/tag/v0.1.45",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pandacover-chat-v2-v0.1.45",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pandacover-chat-v2-v0.1.45/THIRD-PARTY-NOTICE-pandacover-chat-v2.txt",
       "artifacts": [
         {
           "id": "3e1fe7f004f02652a367048d092a52c9f94f69ca07ef11c26c153e877da7edd5",
@@ -17538,6 +17538,40 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pandacover-chat-v2-v0.1.43/chat-v2-0.1.43-setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pandacover-chat-v2-v0.1.43"
+        },
+        {
+          "id": "6ff7641eb5530fa96471963fe7140c6a62a2dba37911f0a523df2ba511cd1262",
+          "filename": "chat-v2-0.1.45-arm64.dmg",
+          "original_filename": "chat-v2-0.1.45-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.1.45",
+          "size_bytes": 281117872,
+          "sha256": "6ff7641eb5530fa96471963fe7140c6a62a2dba37911f0a523df2ba511cd1262",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pandacover-chat-v2-v0.1.45/chat-v2-0.1.45-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pandacover-chat-v2-v0.1.45"
+        },
+        {
+          "id": "2e232553356a7d6ed1e78617dc65e371a90b520a4d458132357695c01705e2be",
+          "filename": "chat-v2-0.1.45-setup.exe",
+          "original_filename": "chat-v2-0.1.45-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.1.45",
+          "size_bytes": 236981980,
+          "sha256": "2e232553356a7d6ed1e78617dc65e371a90b520a4d458132357695c01705e2be",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-pandacover-chat-v2-v0.1.45/chat-v2-0.1.45-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-pandacover-chat-v2-v0.1.45"
         }
       ],
       "platforms": [
