@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T13:28:58.718957+00:00",
+  "generated_at": "2026-11-28T13:29:49.378117+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -24401,19 +24401,39 @@
     {
       "id": "miskatul-anwar-dbflow",
       "slug": "miskatul-anwar-dbflow",
-      "artifacts": [],
+      "artifacts": [
+        {
+          "id": "140e3de57f0443619858c67cc6052a199c25a38bf87a4a025115ec09c7885dfa",
+          "filename": "DBFlow_7.0.0_android_arm64.apk",
+          "original_filename": "DBFlow_7.0.0_android_arm64.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": "arm64",
+          "version": "v7.0.0",
+          "size_bytes": 39021973,
+          "sha256": "140e3de57f0443619858c67cc6052a199c25a38bf87a4a025115ec09c7885dfa",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "4d33fdbe8cab697e958a5a2904e93b0b756d4aaa1953324b306a855a523a5ac8",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-miskatul-anwar-dbflow-v7.0.0/DBFlow_7.0.0_android_arm64.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-miskatul-anwar-dbflow-v7.0.0"
+        }
+      ],
       "name": "dbflow",
-      "summary": "DBFlow is a free, open-source local-first desktop app that converts CSV and spreadsheet files into normalized relational schemas, Mermaid ERDs, SQL DDL, and reports.",
-      "description": "DBFlow is a free, open-source desktop application for Windows, macOS, and Linux (with an Android APK) that turns raw CSV and spreadsheet files into a verified relational database design. It cleans and profiles data, mines functional and multivalued dependencies, discovers keys and foreign keys, and normalizes to 1NF, 2NF, 3NF, BCNF, or 4NF. Every decomposition is checked for lossless join and dependency preservation. Outputs include Mermaid/Graphviz ER diagrams, SQL DDL for PostgreSQL, MySQL, SQLite, or standard SQL, normalized CSV data, INSERT scripts, and Markdown/PDF reports. The app is local-first and makes no network requests; small AI models ship inside the installer. Built with Tauri 2, Rust, React, and TypeScript, with source build instructions using Bun and Rust.",
+      "summary": "Local-first desktop app to convert raw CSVs into normalized relational database schemas (1NF/2NF/3NF), Mermaid ERDs, and SQL DDL — powered by Tauri 2, Rust & local AI.",
+      "description": "Local-first desktop app to convert raw CSVs into normalized relational database schemas (1NF/2NF/3NF), Mermaid ERDs, and SQL DDL — powered by Tauri 2, Rust & local AI.",
       "translations": {
-        "en": "DBFlow is a free, open-source local-first desktop app that converts CSV and spreadsheet files into normalized relational schemas, Mermaid ERDs, SQL DDL, and reports.",
-        "ar": "DBFlow تطبيق سطح مكتب حر ومفتوح المصدر يعمل محلياً لتحويل ملفات CSV والجداول إلى مخططات علائقية مُطبّعة، ومخططات ERD بصيغة Mermaid، وأوامر SQL DDL، وتقارير."
+        "en": {
+          "summary": "Local-first desktop app to convert raw CSVs into normalized relational database schemas (1NF/2NF/3NF), Mermaid ERDs, and SQL DDL — powered by Tauri 2, Rust & local AI.",
+          "description": "Local-first desktop app to convert raw CSVs into normalized relational database schemas (1NF/2NF/3NF), Mermaid ERDs, and SQL DDL — powered by Tauri 2, Rust & local AI."
+        }
       },
       "description_translations": {
         "en": "DBFlow is a free, open-source desktop application for Windows, macOS, and Linux (with an Android APK) that turns raw CSV and spreadsheet files into a verified relational database design. It cleans and profiles data, mines functional and multivalued dependencies, discovers keys and foreign keys, and normalizes to 1NF, 2NF, 3NF, BCNF, or 4NF. Every decomposition is checked for lossless join and dependency preservation. Outputs include Mermaid/Graphviz ER diagrams, SQL DDL for PostgreSQL, MySQL, SQLite, or standard SQL, normalized CSV data, INSERT scripts, and Markdown/PDF reports. The app is local-first and makes no network requests; small AI models ship inside the installer. Built with Tauri 2, Rust, React, and TypeScript, with source build instructions using Bun and Rust.",
         "ar": "DBFlow تطبيق سطح مكتب حر ومفتوح المصدر لنظامي التشغيل Windows وmacOS وLinux (مع حزمة APK لنظام Android) يحوّل ملفات CSV والجداول الخام إلى تصميم قاعدة بيانات علائقية مُتحقَّق منه. ينظّف البيانات ويحلّلها، ويستخرج التبعيات الوظيفية ومتعددة القيم، ويكتشف المفاتيح والمفاتيح الأجنبية، ويطبّع المخطط إلى 1NF أو 2NF أو 3NF أو BCNF أو 4NF. ويُتحقّق من كل تفكيك عبر اختبار الربط غير الفاقد والحفاظ على التبعيات. تشمل المخرجات مخططات ERD بصيغة Mermaid/Graphviz، وأوامر SQL DDL لـ PostgreSQL أو MySQL أو SQLite أو SQL القياسي، وبيانات CSV مُطبّعة، وسكربتات INSERT، وتقارير Markdown/PDF. يعمل التطبيق محلياً ولا يجري طلبات شبكة، وتُشحن نماذج AI صغيرة داخل المثبّت. بُني باستخدام Tauri 2 وRust وReact وTypeScript، مع تعليمات بناء من المصدر باستخدام Bun وRust."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "particle-ai/particle-1:free",
       "icon_url": "https://raw.githubusercontent.com/miskatul-anwar/dbflow/main/src-tauri/icons/icon.png",
@@ -24427,10 +24447,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2025 Miskatul Anwar\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
-      "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "Standalone end-user desktop application with documented Tauri/Rust/Bun build path and release artifacts.",
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
       "category": "other",
       "topics": [
         "3nf",
@@ -24456,8 +24476,10 @@
       ],
       "latest_version": "v7.0.0",
       "release_url": "https://github.com/miskatul-anwar/dbflow/releases/tag/v7.0.0",
-      "platforms": [],
-      "project_status": "source_available",
+      "platforms": [
+        "android"
+      ],
+      "project_status": "installable",
       "build_attempts": [
         {
           "git_ref": "29f9bcc62b1d90f75e5a1381ed7413e7c5ecbb7e",
@@ -24467,7 +24489,9 @@
           "requested_at": "2026-11-27T00:04:51.135571+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
         }
-      ]
+      ],
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-miskatul-anwar-dbflow-v7.0.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-miskatul-anwar-dbflow-v7.0.0/THIRD-PARTY-NOTICE-miskatul-anwar-dbflow.txt"
     },
     {
       "id": "deliciousdiamond-deepexplorer-delicious",
