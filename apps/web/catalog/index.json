@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T05:26:27.673374+00:00",
+  "generated_at": "2026-11-28T05:27:05.283646+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -15099,6 +15099,23 @@
           "signature_status": "not_checked",
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bulutbelge-bulutbelge-v0.1.3/BulutBelge_0.1.3_x64_en-US.msi",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bulutbelge-bulutbelge-v0.1.3"
+        },
+        {
+          "id": "60fcfddd77a1ff913b3979fdd7b580378be7df30940e8b7c6a779ab81c107e1b",
+          "filename": "BulutBelge_0.1.3_amd64.deb",
+          "original_filename": "BulutBelge_0.1.3_amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "v0.1.3",
+          "size_bytes": 147386294,
+          "sha256": "60fcfddd77a1ff913b3979fdd7b580378be7df30940e8b7c6a779ab81c107e1b",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-bulutbelge-bulutbelge-v0.1.3/BulutBelge_0.1.3_amd64.deb",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-bulutbelge-bulutbelge-v0.1.3"
         }
       ],
