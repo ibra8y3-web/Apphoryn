@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:02:18.570303+00:00",
+  "generated_at": "2026-11-28T11:02:30.412745+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -76753,17 +76753,19 @@
       "id": "yamato3010-orbit",
       "slug": "yamato3010-orbit",
       "name": "Orbit",
-      "summary": "Unofficial Android app for VRChat to see where friends are, grouped by instance, search and bookmark worlds, manage status presets, and view activity.",
-      "description": "Orbit is an unofficial Android app for VRChat, built with Kotlin and Jetpack Compose. It shows friends' online status and current location, groups friends by instance, searches for worlds and bookmarks them on the device, shows in-app notifications and sends invites or invite requests, changes your status with saved presets, and tracks friends' status and location changes in an activity feed. First launch offers VRChat login or a demo with sample data. The app connects directly to the VRChat API over HTTPS. According to the developer, passwords and 2FA codes are not stored, and the session cookie is encrypted with an Android Keystore key and deleted on logout. Favorites, bookmarks and activity history stay on the device after logout. Status and notifications refresh while the app is open. Requires Android 7.0+. Prebuilt APKs are on GitHub Releases, and the app can check for updates in Settings. Build with JDK 25 and Android SDK 37 using ./gradlew :app:assembleDebug. The developer notes that real-account login and API communication are unverified. MIT licensed.",
+      "summary": "Orbit is an unofficial Android app that lets you check where your VRChat friends are and discover interesting worlds.",
+      "description": "Orbit is an unofficial Android app that lets you check where your VRChat friends are and discover interesting worlds.",
       "translations": {
-        "en": "Unofficial Android app for VRChat to see where friends are, grouped by instance, search and bookmark worlds, manage status presets, and view activity.",
-        "ar": "تطبيق أندرويد غير رسمي لـ VRChat لمعرفة مكان الأصدقاء وتجميعهم حسب النسخة، والبحث عن العوالم وحفظها، وإدارة الحالة، وعرض النشاط."
+        "en": {
+          "summary": "Orbit is an unofficial Android app that lets you check where your VRChat friends are and discover interesting worlds.",
+          "description": "Orbit is an unofficial Android app that lets you check where your VRChat friends are and discover interesting worlds."
+        }
       },
       "description_translations": {
         "en": "Orbit is an unofficial Android app for VRChat, built with Kotlin and Jetpack Compose. It shows friends' online status and current location, groups friends by instance, searches for worlds and bookmarks them on the device, shows in-app notifications and sends invites or invite requests, changes your status with saved presets, and tracks friends' status and location changes in an activity feed. First launch offers VRChat login or a demo with sample data. The app connects directly to the VRChat API over HTTPS. According to the developer, passwords and 2FA codes are not stored, and the session cookie is encrypted with an Android Keystore key and deleted on logout. Favorites, bookmarks and activity history stay on the device after logout. Status and notifications refresh while the app is open. Requires Android 7.0+. Prebuilt APKs are on GitHub Releases, and the app can check for updates in Settings. Build with JDK 25 and Android SDK 37 using ./gradlew :app:assembleDebug. The developer notes that real-account login and API communication are unverified. MIT licensed.",
         "ar": "Orbit تطبيق أندرويد غير رسمي لـ VRChat، مبني باستخدام Kotlin وJetpack Compose. يعرض حالة الأصدقاء على الإنترنت وموقعهم الحالي، ويجمعهم حسب النسخة (instance)، ويتيح البحث عن العوالم وحفظها على الجهاز، وعرض الإشعارات داخل التطبيق وإرسال الدعوات وطلبات الدعوة، وتغيير حالتك باستخدام إعدادات محفوظة مسبقًا، وتتبع تغيرات حالة الأصدقاء وموقعهم عبر سجل النشاط. يوفر التشغيل الأول خيار تسجيل الدخول إلى VRChat أو وضعًا تجريبيًا ببيانات نموذجية. يتصل التطبيق مباشرةً بواجهة VRChat API عبر HTTPS. وفقًا للمطور، لا يتم تخزين كلمات المرور ورموز التحقق بخطوتين، ويُخزَّن ملف تعريف الارتباط للجلسة مشفّرًا بمفتاح من Android Keystore ويُحذف عند تسجيل الخروج. تبقى المفضلة والعوالم المحفوظة وسجل النشاط على الجهاز بعد تسجيل الخروج. يتم تحديث الحالة والإشعارات ما دام التطبيق مفتوحًا. يتطلب أندرويد 7.0 أو أحدث. تتوفر ملفات APK جاهزة على GitHub Releases، ويمكن للتطبيق التحقق من التحديثات من الإعدادات. للبناء، يلزم توفير JDK 25 وAndroid SDK 37 وتشغيل الأمر ./gradlew :app:assembleDebug. يذكر المطور أن تسجيل الدخول بالحساب الحقيقي والتواصل مع الواجهة البرمجية غير مُتحقَّق منهما. الترخيص MIT."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/yamato3010/Orbit/main/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
@@ -76777,10 +76779,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 yamato3010\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
-      "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "Standalone end-user Android app (Kotlin/Jetpack Compose) distributed as an APK via GitHub Releases. The README documents a build path (JDK 25, Android SDK 37, ./gradlew :app:assembleDebug, APK output path). The note that real-account API login is unverified does not affect buildability.",
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
       "project_status": "installable",
       "category": "other",
       "topics": [
