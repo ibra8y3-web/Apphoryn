@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:04:16.924082+00:00",
+  "generated_at": "2026-11-28T11:04:34.645534+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -79246,17 +79246,19 @@
       "id": "jksalcedo-passvault",
       "slug": "jksalcedo-passvault",
       "name": "PassVault",
-      "summary": "PassVault is a secure, lightweight, offline Android password manager with AES-256 encryption, biometric login, password generation, and encrypted import/export.",
-      "description": "PassVault is a standalone Android password manager built with Kotlin. It stores credentials locally and is designed to work completely offline, using AES-256 encryption and Argon2 for file encryption. Features include PIN authentication, biometric fingerprint login, add/view/edit/delete passwords, an in-app password generator, password strength scoring, categories/labels, custom field templates, encrypted import/export and automatic backups, plus import from KeePass CSV/KDBX and Bitwarden JSON. It uses a Material Design interface and requires Android 8.0 or higher. The README states it does not request internet permissions; biometric permission is used for fingerprint authentication.",
+      "summary": "A secure, lightweight, & offline password manager for Android",
+      "description": "A secure, lightweight, & offline password manager for Android",
       "translations": {
-        "en": "PassVault is a secure, lightweight, offline Android password manager with AES-256 encryption, biometric login, password generation, and encrypted import/export.",
-        "ar": "PassVault مدير كلمات مرور آمن وخفيف ويعمل دون اتصال بالإنترنت لأندرويد، مع تشفير AES-256 وتسجيل دخول بيومتري ومولّد كلمات مرور واستيراد/تصدير مشفّر."
+        "en": {
+          "summary": "A secure, lightweight, & offline password manager for Android",
+          "description": "A secure, lightweight, & offline password manager for Android"
+        }
       },
       "description_translations": {
         "en": "PassVault is a standalone Android password manager built with Kotlin. It stores credentials locally and is designed to work completely offline, using AES-256 encryption and Argon2 for file encryption. Features include PIN authentication, biometric fingerprint login, add/view/edit/delete passwords, an in-app password generator, password strength scoring, categories/labels, custom field templates, encrypted import/export and automatic backups, plus import from KeePass CSV/KDBX and Bitwarden JSON. It uses a Material Design interface and requires Android 8.0 or higher. The README states it does not request internet permissions; biometric permission is used for fingerprint authentication.",
         "ar": "PassVault تطبيق مستقل لإدارة كلمات المرور على أندرويد، مبني بلغة Kotlin. يخزّن بيانات الاعتماد محليًا ويصمم ليعمل دون اتصال بالإنترنت بالكامل، باستخدام تشفير AES-256 وArgon2 لتشفير الملفات. تشمل الميزات مصادقة برمز PIN، وتسجيل دخول بيومتري بالبصمة، وإضافة كلمات المرور وعرضها وتعديلها وحذفها، ومولّد كلمات مرور داخل التطبيق، وتقييم قوة كلمات المرور، وفئات/تصنيفات، وقوالب حقول مخصصة، واستيراد/تصدير مشفّر ونسخ احتياطي تلقائي مشفّر، إضافة إلى الاستيراد من KeePass CSV/KDBX وBitwarden JSON. يستخدم واجهة Material Design ويتطلب Android 8.0 أو أحدث. يذكر README أنه لا يطلب أذونات إنترنت، وأن إذن البصمة يُستخدم للمصادقة البيومترية."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "particle-ai/particle-1:free",
       "icon_url": "https://raw.githubusercontent.com/jksalcedo/PassVault/master/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
@@ -79266,14 +79268,14 @@
       "homepage_url": null,
       "owner": "jksalcedo",
       "default_branch": "master",
-      "source_commit_sha": "1b4cf795845822fb2b6c441a7c7205ef0563c275",
+      "source_commit_sha": "c298a9585620b917f6a82ab300478491cb2a402f",
       "license_text": "MIT License\n\nCopyright (c) 2025 Jaressen Kyle Salcedo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
+      "project_kind": "unknown",
       "build_recommended": false,
-      "classification_source": "ai",
-      "classification_reason": "Standalone Android end-user password manager; the README identifies a Kotlin/Android app and platform requirements, but the supplied excerpt does not document a concrete build command or supported build path, so automatic source build is not recommended.",
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
       "project_status": "installable",
       "category": "security",
       "topics": [
