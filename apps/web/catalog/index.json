@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:53:00.236627+00:00",
+  "generated_at": "2026-11-28T03:53:28.231602+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -3739,7 +3739,7 @@
       "icon_url": "https://raw.githubusercontent.com/poco-ai/Agentero/main/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/poco-ai/Agentero",
       "github_repo_id": "1291896819",
-      "source_updated_at": "2026-11-27T17:35:45Z",
+      "source_updated_at": "2026-11-28T01:29:58Z",
       "homepage_url": "https://agentero.app",
       "owner": "poco-ai",
       "default_branch": "main",
