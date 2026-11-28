@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:14:01.913090+00:00",
+  "generated_at": "2026-11-28T03:14:32.678136+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -5720,6 +5720,67 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "mjk22071998-android-expense-tracker",
+      "slug": "mjk22071998-android-expense-tracker",
+      "artifacts": [],
+      "name": "Android-Expense-Tracker",
+      "summary": "Offline-first Android expense tracker built with Kotlin, Jetpack Compose, Room, Hilt, and Clean Architecture, featuring analytics, category management, and PDF export.",
+      "description": "This repository contains a standalone Android personal finance application for tracking income and expenses offline. The README documents a Kotlin codebase using Jetpack Compose and Material 3 for the UI, Room as the local database, Hilt for dependency injection, and Clean Architecture with MVVM. Features include transaction management, running balance tracking, category management, search and filtering, visual analytics, theme switching, and PDF statement export with sharing. The project includes a Gradle build setup with version catalogs and an app module organized into data, domain, presentation, and dependency-injection layers.",
+      "translations": {
+        "en": "Offline-first Android expense tracker built with Kotlin, Jetpack Compose, Room, Hilt, and Clean Architecture, featuring analytics, category management, and PDF export.",
+        "ar": "متتبع مصروفات أندرويد يعمل دون اتصال، مبني بلغة Kotlin وJetpack Compose وRoom وHilt وClean Architecture، مع تحليلات وإدارة فئات وتصدير PDF."
+      },
+      "description_translations": {
+        "en": "This repository contains a standalone Android personal finance application for tracking income and expenses offline. The README documents a Kotlin codebase using Jetpack Compose and Material 3 for the UI, Room as the local database, Hilt for dependency injection, and Clean Architecture with MVVM. Features include transaction management, running balance tracking, category management, search and filtering, visual analytics, theme switching, and PDF statement export with sharing. The project includes a Gradle build setup with version catalogs and an app module organized into data, domain, presentation, and dependency-injection layers.",
+        "ar": "يحتوي هذا المستودع على تطبيق أندرويد مستقل لإدارة المصروفات الشخصية وتتبع الدخل والمصروفات دون اتصال بالإنترنت. توثّق ملفات README قاعدة شيفرة بلغة Kotlin تستخدم Jetpack Compose وMaterial 3 لواجهة المستخدم، وRoom قاعدة بيانات محلية، وHilt لحقن التبعيات، وClean Architecture مع MVVM. تشمل الميزات إدارة المعاملات وتتبع الرصيد الجاري وإدارة الفئات والبحث والتصفية والتحليلات المرئية وتبديل السمة وتصدير كشوف PDF ومشاركتها. يتضمن المشروع إعداد بناء Gradle مع كتالوجات إصدارات ووحدة تطبيق منظمة إلى طبقات البيانات والنطاق والعرض وحقن التبعيات."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "particle-ai/particle-1:free",
+      "icon_url": "https://raw.githubusercontent.com/mjk22071998/Android-Expense-Tracker/master/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "repository_url": "https://github.com/mjk22071998/Android-Expense-Tracker",
+      "github_repo_id": "1245781885",
+      "source_updated_at": "2026-11-10T21:35:50Z",
+      "homepage_url": null,
+      "owner": "mjk22071998",
+      "default_branch": "master",
+      "source_commit_sha": "5a87ce80450ae9d16f2d56ed078d6bc9b5c3981f",
+      "license_text": "BSD 3-Clause License\n\nCopyright (c) 2026, Muhammad Junaid Khalid\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+      "license_spdx": "BSD-3-Clause",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Standalone Android application with documented Gradle/Kotlin build setup and end-user expense tracking features.",
+      "category": "other",
+      "topics": [
+        "android",
+        "android-app",
+        "clean-architecture",
+        "clean-code",
+        "expense-management",
+        "expense-manager",
+        "expense-tracker",
+        "expense-tracker-app",
+        "expense-tracking",
+        "hacktoberfest",
+        "hilt",
+        "jetpack-compose",
+        "kotlin",
+        "material3",
+        "mvvm",
+        "mvvm-android",
+        "mvvm-architecture",
+        "mvvm-framework",
+        "mvvm-pattern",
+        "room-database"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "parryqiu-android-imessage-relay",
