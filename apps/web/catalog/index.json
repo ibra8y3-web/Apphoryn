@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:55:31.172478+00:00",
+  "generated_at": "2026-11-28T11:55:59.618994+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -27133,7 +27133,7 @@
       "homepage_url": null,
       "owner": "fatihdogmus",
       "default_branch": "main",
-      "source_commit_sha": "969375be7e2fde1e48c6f8ed0eac580f3ca3615c",
+      "source_commit_sha": "d3e3de45045b2ce0c89a2e17ea4c9acd9141ca1d",
       "license_text": "MIT License\n\nCopyright (c) 2026 Muhammed Fatih Doğmuş\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -27155,10 +27155,10 @@
         "ssh",
         "windows"
       ],
-      "latest_version": "0.2.0",
-      "release_url": "https://github.com/fatihdogmus/dromon/releases/tag/0.2.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fatihdogmus-dromon-0.2.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fatihdogmus-dromon-0.2.0/THIRD-PARTY-NOTICE-fatihdogmus-dromon.txt",
+      "latest_version": "0.3.0",
+      "release_url": "https://github.com/fatihdogmus/dromon/releases/tag/0.3.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fatihdogmus-dromon-0.3.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fatihdogmus-dromon-0.3.0/THIRD-PARTY-NOTICE-fatihdogmus-dromon.txt",
       "artifacts": [
         {
           "id": "646711b7c1dedcb3e567916dbb909f2c1cb55a678de3a9f5b58d6aeffa205a27",
@@ -27261,6 +27261,57 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fatihdogmus-dromon-0.2.0/Dromon-0.2.0-windows-x64.msi",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fatihdogmus-dromon-0.2.0"
+        },
+        {
+          "id": "f543ddbde9f043c685b4b1295c3f6c538242677185371c3c39bec8ddbf4b0d44",
+          "filename": "Dromon-0.3.0-linux-x64.deb",
+          "original_filename": "Dromon-0.3.0-linux-x64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "0.3.0",
+          "size_bytes": 15548764,
+          "sha256": "f543ddbde9f043c685b4b1295c3f6c538242677185371c3c39bec8ddbf4b0d44",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fatihdogmus-dromon-0.3.0/Dromon-0.3.0-linux-x64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fatihdogmus-dromon-0.3.0"
+        },
+        {
+          "id": "b7f013bdc8d6ea845a93a200efeafad559e44151722fbc1f039b3be16358c3ad",
+          "filename": "Dromon-0.3.0-macos-universal.dmg",
+          "original_filename": "Dromon-0.3.0-macos-universal.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "universal",
+          "version": "0.3.0",
+          "size_bytes": 37364834,
+          "sha256": "b7f013bdc8d6ea845a93a200efeafad559e44151722fbc1f039b3be16358c3ad",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fatihdogmus-dromon-0.3.0/Dromon-0.3.0-macos-universal.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fatihdogmus-dromon-0.3.0"
+        },
+        {
+          "id": "e4400e3313172cd24f20bb820c4fada1727f84a67429ffc7b826366c7dadeaef",
+          "filename": "Dromon-0.3.0-windows-x64.msi",
+          "original_filename": "Dromon-0.3.0-windows-x64.msi",
+          "platform": "windows",
+          "package_type": "Windows installer",
+          "architecture": "x86_64",
+          "version": "0.3.0",
+          "size_bytes": 12902400,
+          "sha256": "e4400e3313172cd24f20bb820c4fada1727f84a67429ffc7b826366c7dadeaef",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fatihdogmus-dromon-0.3.0/Dromon-0.3.0-windows-x64.msi",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fatihdogmus-dromon-0.3.0"
         }
       ],
       "platforms": [
