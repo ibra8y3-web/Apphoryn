@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T13:43:22.581770+00:00",
+  "generated_at": "2026-11-28T13:47:21.709873+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -113324,7 +113324,7 @@
       "icon_url": "https://raw.githubusercontent.com/livrasand/Updainium/master/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/livrasand/Updainium",
       "github_repo_id": "1402282400",
-      "source_updated_at": "2026-11-27T15:58:09Z",
+      "source_updated_at": "2026-11-28T08:04:42Z",
       "homepage_url": null,
       "owner": "livrasand",
       "default_branch": "master",
