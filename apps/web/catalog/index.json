@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T14:08:58.723277+00:00",
+  "generated_at": "2026-11-28T14:55:20.841226+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -23155,7 +23155,44 @@
     {
       "id": "fertile-org-coppice",
       "slug": "fertile-org-coppice",
-      "artifacts": [],
+      "artifacts": [
+        {
+          "id": "d55bcca6d0be7e2b52889d72023317b0e826b287a2a8ee9c9fe7e3bbcc09d415",
+          "filename": "linux-Coppice-0.1.0-linux-amd64.deb",
+          "original_filename": "Coppice-0.1.0-linux-amd64.deb",
+          "platform": "linux",
+          "package_type": "Debian package",
+          "architecture": "x86_64",
+          "version": "8821e7efe2ca4f8f57cb7ae255c0b6465141beb5",
+          "size_bytes": 89236480,
+          "sha256": "d55bcca6d0be7e2b52889d72023317b0e826b287a2a8ee9c9fe7e3bbcc09d415",
+          "upstream_digest_verified": false,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fertile-org-coppice-build-8821e7efe2ca4f8f57cb7ae255c0b6465141beb5/linux-Coppice-0.1.0-linux-amd64.deb",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fertile-org-coppice-build-8821e7efe2ca4f8f57cb7ae255c0b6465141beb5",
+          "build_ref": "8821e7efe2ca4f8f57cb7ae255c0b6465141beb5"
+        },
+        {
+          "id": "42b8f57efd254d8b119030871453b50694cd9d21db79e5736d077e23ae86beef",
+          "filename": "macos-Coppice-0.1.0-mac-arm64.dmg",
+          "original_filename": "Coppice-0.1.0-mac-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "8821e7efe2ca4f8f57cb7ae255c0b6465141beb5",
+          "size_bytes": 106410278,
+          "sha256": "42b8f57efd254d8b119030871453b50694cd9d21db79e5736d077e23ae86beef",
+          "upstream_digest_verified": false,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fertile-org-coppice-build-8821e7efe2ca4f8f57cb7ae255c0b6465141beb5/macos-Coppice-0.1.0-mac-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-fertile-org-coppice-build-8821e7efe2ca4f8f57cb7ae255c0b6465141beb5",
+          "build_ref": "8821e7efe2ca4f8f57cb7ae255c0b6465141beb5"
+        }
+      ],
       "name": "coppice",
       "summary": "Local desktop app for multi-agent coding with Claude Code, Codex, Cursor, and more.",
       "description": "Local desktop app for multi-agent coding with Claude Code, Codex, Cursor, and more.",
@@ -23201,7 +23238,10 @@
       ],
       "latest_version": "v0.1.13",
       "release_url": "https://github.com/fertile-org/coppice/releases/tag/v0.1.13",
-      "platforms": [],
+      "platforms": [
+        "linux",
+        "macos"
+      ],
       "project_status": "source_available",
       "build_attempts": [
         {
@@ -23214,6 +23254,10 @@
           "requested_at": "2026-11-28T14:03:29.967291+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
         }
+      ],
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-fertile-org-coppice-build-8821e7efe2ca4f8f57cb7ae255c0b6465141beb5/THIRD-PARTY-NOTICE-fertile-org-coppice.txt",
+      "build_refs": [
+        "8821e7efe2ca4f8f57cb7ae255c0b6465141beb5"
       ]
     },
     {
