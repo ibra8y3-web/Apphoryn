@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T02:50:20.412588+00:00",
+  "generated_at": "2026-11-28T02:50:41.515503+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -62384,19 +62384,17 @@
       "id": "vu4ll-monedsa",
       "slug": "vu4ll-monedsa",
       "name": "monedsa",
-      "summary": "Monedsa is a simple and user-friendly mobile app for tracking your income and expenses on Android devices, helping you manage your finances easily and securely.",
-      "description": "Monedsa is a simple and user-friendly mobile app for tracking your income and expenses on Android devices, helping you manage your finances easily and securely.",
+      "summary": "Monedsa is an Android income and expense tracker with categories, multi-currency support, reports, themes, and a React Native/Node.js stack.",
+      "description": "Monedsa is a mobile application for tracking income and expenses on Android. The repository includes a React Native frontend and a Node.js/Express backend using MongoDB, JWT authentication, and Argon2 password hashing. Features include adding, editing, and deleting transactions, custom color-coded categories, balance calculation, filtering and sorting, multi-language support (English, Turkish, Dutch), multiple currencies, and dark/light themes. The README documents build and run steps for the Android app and backend. It also warns that the Monedsa server will shut down on 20 December 2026 and describes Monedsa 2.0 as a fully offline version with optional Google Drive backup; users are advised to export data from 1.6 before the shutdown.",
       "translations": {
-        "en": {
-          "summary": "Monedsa is a simple and user-friendly mobile app for tracking your income and expenses on Android devices, helping you manage your finances easily and securely.",
-          "description": "Monedsa is a simple and user-friendly mobile app for tracking your income and expenses on Android devices, helping you manage your finances easily and securely."
-        }
+        "en": "Monedsa is an Android income and expense tracker with categories, multi-currency support, reports, themes, and a React Native/Node.js stack.",
+        "ar": "Monedsa تطبيق أندرويد لتتبع الدخل والمصروفات، مع فئات متعددة العملات وتقارير وسمات، مبني بـ React Native وNode.js."
       },
       "description_translations": {
-        "en": "Monedsa is a mobile income and expense tracker for Android. The React Native app lets users add, edit, and delete transactions, organize them with custom color-coded categories, view balances and reports, filter and sort history, and switch between English, Turkish, and Dutch with multiple currency support. It includes light and dark themes. The repository also contains a Node.js/Express backend using MongoDB/Mongoose, JWT authentication, Argon2 password hashing, and REST API routes for auth, transactions, categories, and profiles. Build instructions require Node.js 18+, React Native CLI, Android Studio, and MongoDB; the Android app is run with npm run android. The README warns that the Monedsa server will shut down on 20 December 2026 and that Monedsa 2.0 is a fully offline version with optional Google Drive backup; users should export data from 1.6 before the shutdown. Licensed under GPL3.",
-        "ar": "Monedsa تطبيق جوال لتتبع الدخل والمصروفات على Android. يتيح تطبيق React Native للمستخدمين إضافة المعاملات وتعديلها وحذفها، وتنظيمها بفئات مخصصة مرمزة بالألوان، وعرض الأرصدة والتقارير، وتصفية السجل وفرزه، والتبديل بين الإنجليزية والتركية والهولندية مع دعم عملات متعددة. يتضمن سمات فاتحة وداكنة. يحتوي المستودع أيضًا على خادم Node.js/Express يستخدم MongoDB/Mongoose ومصادقة JWT وتجزئة كلمات المرور بـ Argon2 ومسارات REST API للمصادقة والمعاملات والفئات والملفات الشخصية. تتطلب تعليمات البناء Node.js 18+ وReact Native CLI وAndroid Studio وMongoDB؛ ويُشغّل تطبيق Android بالأمر npm run android. يحذر README من إيقاف خادم Monedsa في 20 ديسمبر 2026، وأن Monedsa 2.0 نسخة تعمل دون اتصال بالكامل مع نسخ احتياطي اختياري إلى Google Drive؛ وينبغي للمستخدمين تصدير بياناتهم من 1.6 قبل الإيقاف. الترخيص GPL3."
+        "en": "Monedsa is a mobile application for tracking income and expenses on Android. The repository includes a React Native frontend and a Node.js/Express backend using MongoDB, JWT authentication, and Argon2 password hashing. Features include adding, editing, and deleting transactions, custom color-coded categories, balance calculation, filtering and sorting, multi-language support (English, Turkish, Dutch), multiple currencies, and dark/light themes. The README documents build and run steps for the Android app and backend. It also warns that the Monedsa server will shut down on 20 December 2026 and describes Monedsa 2.0 as a fully offline version with optional Google Drive backup; users are advised to export data from 1.6 before the shutdown.",
+        "ar": "Monedsa تطبيق جوال لتتبع الدخل والمصروفات على أجهزة أندرويد. يتضمن المستودع واجهة أمامية مبنية بـ React Native وخادمًا خلفيًا يستخدم Node.js وExpress وMongoDB، مع مصادقة JWT وتجزئة كلمات المرور عبر Argon2. تشمل الميزات إضافة المعاملات وتعديلها وحذفها، وفئات مخصصة بألوان، وحساب الرصيد، والتصفية والفرز، ودعم عدة لغات (الإنجليزية والتركية والهولندية)، وعملات متعددة، وسمات داكنة وفاتحة. توثق ملفات README خطوات البناء والتشغيل لتطبيق أندرويد والخادم. تحذر أيضًا من إيقاف خادم Monedsa في 20 ديسمبر 2026، وتصف Monedsa 2.0 كإصدار يعمل دون اتصال بالكامل مع نسخ احتياطي اختياري إلى Google Drive؛ ويُنصح المستخدمون بتصدير بياناتهم من الإصدار 1.6 قبل الإيقاف."
       },
-      "translation_status": "pending",
+      "translation_status": "complete",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/Vu4ll/monedsa/main/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
@@ -62412,8 +62410,8 @@
       "license_eligible": true,
       "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "heuristic",
-      "classification_reason": "Standalone application indicated by repository evidence.",
+      "classification_source": "ai",
+      "classification_reason": "End-user Android application with documented React Native/Android build and run instructions, plus backend setup instructions.",
       "project_status": "installable",
       "category": "other",
       "topics": [
