@@ -78725,7 +78725,19 @@
       "latest_version": "v0.14.16",
       "release_url": "https://github.com/ordewell/ordewell/releases/tag/v0.14.16",
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "9c3797871ae36cfd04a355c09cac9354fcb1daf1",
+          "targets": [
+            "linux",
+            "macos",
+            "windows"
+          ],
+          "requested_at": "2026-11-28T14:00:53.532247+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "randynorthrup-ost",
