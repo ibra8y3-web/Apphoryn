@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T02:58:14.475537+00:00",
+  "generated_at": "2026-11-28T02:58:40.126422+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -111488,21 +111488,19 @@
       "id": "username-1234567-voice-note-ai-tutor",
       "slug": "username-1234567-voice-note-ai-tutor",
       "name": "voice-note-ai-tutor",
-      "summary": "随堂录 · 课堂录音 + 拍照标记，课后让 AI 逐张讲解。Android/Kotlin/Compose, local-first, DeepSeek streaming, markdown & LaTeX.",
-      "description": "随堂录 · 课堂录音 + 拍照标记，课后让 AI 逐张讲解。Android/Kotlin/Compose, local-first, DeepSeek streaming, markdown & LaTeX.",
+      "summary": "随堂录 is an Android 10+ Kotlin/Compose lecture-recording app with photo markers and AI explanations via DeepSeek or OpenAI-compatible endpoints; local-first storage and Markdown/LaTeX rendering.",
+      "description": "随堂录 is a standalone Android app for recording lectures and attaching photo markers at key moments. It records via a foreground service (AAC 48 kHz stereo), can pause on calls or audio-focus loss, supports course-schedule naming and reminders, and lets users take photos or add time-only markers with notes. After class, each marker can receive an AI explanation and follow-up conversation through a user-configured DeepSeek or OpenAI-compatible /chat/completions endpoint. Markers can be merged, regenerated with retained history, or compiled into an outline, glossary, and self-test questions. Responses render offline with markdown-it and KaTeX, including formulas and tables. Data is stored locally with Room; the app also includes search, trash, zip backup/import, and an embedded DeepSeek chat demo. The UI is currently Chinese-only, AI features require cloud access and an API key, and backups are unencrypted and include the API key. Build with ./gradlew assembleRelease; Android 10+.",
       "translations": {
-        "en": {
-          "summary": "随堂录 · 课堂录音 + 拍照标记，课后让 AI 逐张讲解。Android/Kotlin/Compose, local-first, DeepSeek streaming, markdown & LaTeX.",
-          "description": "随堂录 · 课堂录音 + 拍照标记，课后让 AI 逐张讲解。Android/Kotlin/Compose, local-first, DeepSeek streaming, markdown & LaTeX."
-        }
+        "en": "随堂录 is an Android 10+ Kotlin/Compose lecture-recording app with photo markers and AI explanations via DeepSeek or OpenAI-compatible endpoints; local-first storage and Markdown/LaTeX rendering.",
+        "ar": "‏随堂录 تطبيق أندرويد 10+ مكتوب بـ Kotlin/Compose لتسجيل المحاضرات مع علامات صور وشرح بالذكاء الاصطناعي عبر DeepSeek أو نقاط نهاية متوافقة مع OpenAI؛ تخزين محلي أولاً وعرض Markdown/LaTeX."
       },
       "description_translations": {
-        "en": "随堂录 (voice-note-ai-tutor) is an Android 10+ Kotlin/Jetpack Compose app for students. It records lectures in the background, lets users mark moments with photos or time-only notes, and after class sends selected images and context to an OpenAI-compatible AI endpoint, defaulting to DeepSeek, for per-photo explanations, follow-up questions, merged explanations, and lecture outlines. It supports local storage of recordings and photos, Room database migrations, ExoPlayer playback, CameraX capture, offline Markdown/KaTeX rendering, backup/import/export with SHA-256 checks, and a built-in chat demo. An API key is required for AI explanations; explanations depend on a cloud model and are unavailable offline. The interface is currently Chinese. MIT licensed.",
-        "ar": "随堂录 (voice-note-ai-tutor) هو تطبيق أندرويد 10+ مبني بـ Kotlin وJetpack Compose للطلاب. يسجل المحاضرات في الخلفية، ويتيح وضع علامات بصور أو ملاحظات زمنية، ثم يرسل الصور المختارة والسياق إلى خدمة ذكاء اصطناعي متوافقة مع OpenAI، افتراضيًا DeepSeek، للحصول على شرح لكل صورة وأسئلة متابعة وخطوط عريضة للمحاضرة. يدعم التخزين المحلي للتسجيلات والصور، وقاعدة Room، والتشغيل عبر ExoPlayer، والتقاط الكاميرا، وعرض Markdown وKaTeX دون اتصال، والنسخ الاحتياطي والاستيراد والتصدير. يلزم مفتاح API للشرح، وتعتمد الشروح على نموذج سحابي وغير متاحة دون اتصال. الواجهة حاليًا بالصينية. الترخيص MIT."
+        "en": "随堂录 is a standalone Android app for recording lectures and attaching photo markers at key moments. It records via a foreground service (AAC 48 kHz stereo), can pause on calls or audio-focus loss, supports course-schedule naming and reminders, and lets users take photos or add time-only markers with notes. After class, each marker can receive an AI explanation and follow-up conversation through a user-configured DeepSeek or OpenAI-compatible /chat/completions endpoint. Markers can be merged, regenerated with retained history, or compiled into an outline, glossary, and self-test questions. Responses render offline with markdown-it and KaTeX, including formulas and tables. Data is stored locally with Room; the app also includes search, trash, zip backup/import, and an embedded DeepSeek chat demo. The UI is currently Chinese-only, AI features require cloud access and an API key, and backups are unencrypted and include the API key. Build with ./gradlew assembleRelease; Android 10+.",
+        "ar": "‏随堂录 تطبيق أندرويد مستقل لتسجيل المحاضرات وإرفاق علامات صور في اللحظات المهمة. يسجل عبر خدمة في الواجهة (AAC 48 kHz ستيريو)، ويتوقف عند المكالمات أو فقدان تركيز الصوت، ويدعم تسمية التسجيلات حسب الجدول الدراسي والتذكيرات، ويتيح التقاط صور أو إضافة علامات زمنية مع ملاحظات. بعد الحصة يمكن لكل علامة أن تحصل على شرح بالذكاء الاصطناعي ومحادثة متابعة عبر نقطة نهاية DeepSeek أو أي نقطة نهاية /chat/completions متوافقة مع OpenAI يضبطها المستخدم. يمكن دمج العلامات أو إعادة توليدها مع الاحتفاظ بالسجل أو تجميعها في مخطط نقاط ومصطلحات وأسئلة اختبار ذاتي. تُعرض الردود دون اتصال باستخدام markdown-it وKaTeX، بما في ذلك المعادلات والجداول. تُخزَّن البيانات محليًا باستخدام Room؛ ويتضمن التطبيق البحث وسلة المهملات ونسخًا احتياطيًا zip واستيرادًا وعرضًا مدمجًا لتجربة DeepSeek للدردشة. الواجهة بالصينية فقط حاليًا، وتتطلب ميزات الذكاء الاصطناعي اتصالًا سحابيًا ومفتاح API، والنسخ الاحتياطي غير مشفر ويضم مفتاح API. ابنِ باستخدام ./gradlew assembleRelease؛ Android 10+."
       },
-      "translation_status": "pending",
+      "translation_status": "complete",
       "ai_provider": "openrouter",
-      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "ai_model": "particle-ai/particle-1:free",
       "icon_url": "https://avatars.githubusercontent.com/u/221795699?v=4",
       "repository_url": "https://github.com/username-1234567/voice-note-ai-tutor",
       "github_repo_id": "1413371087",
@@ -111514,10 +111512,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 username-1234567\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "unknown",
-      "build_recommended": false,
-      "classification_source": "heuristic",
-      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Evidence shows a standalone Android application with Kotlin/Compose source and a documented Gradle release build command, so source-build recommendation is appropriate.",
       "project_status": "installable",
       "category": "ai",
       "topics": [
