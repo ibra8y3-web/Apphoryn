@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:50:26.457928+00:00",
+  "generated_at": "2026-11-28T03:50:59.403083+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -68743,7 +68743,7 @@
       "icon_url": "https://raw.githubusercontent.com/aqm857886159/Nomi/main/build/icon.png",
       "repository_url": "https://github.com/aqm857886159/Nomi",
       "github_repo_id": "1228890794",
-      "source_updated_at": "2026-11-27T15:12:11Z",
+      "source_updated_at": "2026-11-28T00:03:50Z",
       "homepage_url": "https://nomiaqm.com",
       "owner": "aqm857886159",
       "default_branch": "main",
