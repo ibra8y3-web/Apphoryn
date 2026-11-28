@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:10:43.955040+00:00",
+  "generated_at": "2026-11-28T11:14:30.283420+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -78190,7 +78190,7 @@
       "icon_url": "https://raw.githubusercontent.com/ndenissov/pam_bio/main/android/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
       "repository_url": "https://github.com/ndenissov/pam_bio",
       "github_repo_id": "1359135910",
-      "source_updated_at": "2026-11-25T17:04:35Z",
+      "source_updated_at": "2026-11-28T06:14:36Z",
       "homepage_url": "https://pam.dep.ovh",
       "owner": "ndenissov",
       "default_branch": "main",
