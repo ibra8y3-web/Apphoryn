@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T02:45:30.743347+00:00",
+  "generated_at": "2026-11-28T02:46:07.140822+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -104992,36 +104992,34 @@
       "id": "denissteinhorst-thor-back-button-hero",
       "slug": "denissteinhorst-thor-back-button-hero",
       "name": "thor-back-button-hero",
-      "summary": "Back Button Hero - a customizable back-button utility for the AYN Thor Android handheld.",
-      "description": "Back Button Hero - a customizable back-button utility for the AYN Thor Android handheld.",
+      "summary": "Customizable back-button utility for the AYN Thor Android handheld. Remap Back gestures and controller buttons to shortcuts, app switching, screenshots and more. No root needed; free and open source.",
+      "description": "Thor Back Button Hero is a free, open-source Android app that adds customizable shortcuts to the AYN Thor dual-screen gaming handheld. Every Back gesture (single tap, double tap, tap-then-hold, hold) is freely assignable, as are the shoulder buttons (L1/L2/R1/R2), face buttons (A/B/X/Y), Home/Start/Select, D-pad directions and analog stick directions. Available actions include launching apps, an app switcher for the bottom screen, swapping the two screens, screenshots and video recording, macros, gyro control, volume and brightness, media control, controller focus, active-app control, AYN device settings (performance, fan, refresh rate, lighting) and more. Nothing is assigned by default, so the app does nothing until you configure it. No rooting is needed for core features; some advanced actions require AYN's root service. Written in Kotlin.",
       "translations": {
-        "en": {
-          "summary": "Back Button Hero - a customizable back-button utility for the AYN Thor Android handheld.",
-          "description": "Back Button Hero - a customizable back-button utility for the AYN Thor Android handheld."
-        }
+        "en": "Customizable back-button utility for the AYN Thor Android handheld. Remap Back gestures and controller buttons to shortcuts, app switching, screenshots and more. No root needed; free and open source.",
+        "ar": "أداة قابلة للتخصيص لزر الرجوع في جهاز AYN Thor المحمول بنظام Android. أعد تعيين إيماءات الرجوع وأزرار التحكم إلى اختصارات وتبديل التطبيقات ولقطات الشاشة وغيرها، دون الحاجة إلى الروت. مجانية ومفتوحة المصدر."
       },
       "description_translations": {
-        "en": "Back Button Hero is a free and open-source Android app for the AYN Thor handheld. It lets users assign single tap, double tap, tap-then-hold, and hold gestures on the Back button, plus shortcuts on shoulder buttons, face buttons, D-pad, and stick directions. Actions include app switching, launching apps, screenshots, video recording, macros, gyro control, volume and brightness, media control, controller focus, app management, power menu, status overlay, and AYN hardware controls. It uses an accessibility service and AYN's existing root service for some controller-level functions; the device itself does not need rooting. Settings are optional, and unassigned gestures do nothing. The project is written in Kotlin and provides CI and release links.",
-        "ar": "Back Button Hero تطبيق أندرويد مجاني ومفتوح المصدر لجهاز AYN Thor المحمول. يتيح للمستخدمين تعيين إيماءات النقر المفرد والنقر المزدوج والنقر ثم الاستمرار والاستمرار على زر الرجوع، بالإضافة إلى اختصارات على أزرار الكتف وأزرار الوجه وأزرار الاتجاهات واتجاهات العصا. تشمل الإجراءات تبديل التطبيقات وفتح التطبيقات ولقطات الشاشة وتسجيل الفيديو والماكرو والتحكم بالجيروسكوب ومستوى الصوت والسطوع والتحكم بالوسائط وتركيز وحدة التحكم وإدارة التطبيقات وقائمة الطاقة وطبقة الحالة وعناصر التحكم في عتاد AYN. يستخدم التطبيق خدمة إمكانية الوصول وخدمة root الموجودة في AYN لبعض وظائف وحدة التحكم؛ ولا يلزم عمل روت للجهاز. الإعدادات اختيارية، والإيماءات غير المعينة لا تفعل شيئًا. المشروع مكتوب بلغة Kotlin ويتضمن روابط التكامل المستمر والإصدارات."
+        "en": "Thor Back Button Hero is a free, open-source Android app that adds customizable shortcuts to the AYN Thor dual-screen gaming handheld. Every Back gesture (single tap, double tap, tap-then-hold, hold) is freely assignable, as are the shoulder buttons (L1/L2/R1/R2), face buttons (A/B/X/Y), Home/Start/Select, D-pad directions and analog stick directions. Available actions include launching apps, an app switcher for the bottom screen, swapping the two screens, screenshots and video recording, macros, gyro control, volume and brightness, media control, controller focus, active-app control, AYN device settings (performance, fan, refresh rate, lighting) and more. Nothing is assigned by default, so the app does nothing until you configure it. No rooting is needed for core features; some advanced actions require AYN's root service. Written in Kotlin.",
+        "ar": "Thor Back Button Hero تطبيق Android مجاني ومفتوح المصدر يضيف اختصارات قابلة للتخصيص إلى جهاز الألعاب المحمول AYN Thor ذي الشاشتين. يمكن تعيين كل إيماءة من إيماءات زر الرجوع (نقرة واحدة، نقرة مزدوجة، نقرة ثم ضغط مطوّل، ضغط مطوّل)، وكذلك أزرار الأكتاف (L1/L2/R1/R2) وأزرار الوجه (A/B/X/Y) ومفاتيح Home/Start/Select واتجاهات لوحة الاتجاهات (D-pad) واتجاهات عصا التحكم. تشمل الإجراءات المتاحة فتح التطبيقات، ومبدّل تطبيقات للشاشة السفلية، وتبديل الشاشتين، ولقطات الشاشة وتسجيل الفيديو، والماكرو، والتحكم بالجيروسكوب، ومستوى الصوت والسطوع، والتحكم بالوسائط، وتركيز التحكم، والتحكم بالتطبيق النشط، وإعدادات جهاز AYN (الأداء، المروحة، معدل التحديث، الإضاءة) وغيرها. لا يتم تعيين أي شيء افتراضيًا، لذا لا يفعل التطبيق شيئًا حتى تقوم بتكوينه. لا تُطلب صلاحيات الروت للميزات الأساسية؛ بينما تتطلب بعض الإجراءات المتقدمة خدمة الروت الخاصة بـ AYN. مكتوب بلغة Kotlin."
       },
-      "translation_status": "pending",
+      "translation_status": "complete",
       "ai_provider": "openrouter",
-      "ai_model": "particle-ai/particle-1:free",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/denissteinhorst/thor-back-button-hero/main/site/assets/icon.png",
       "repository_url": "https://github.com/denissteinhorst/thor-back-button-hero",
       "github_repo_id": "1432131409",
-      "source_updated_at": "2026-11-27T10:33:10Z",
+      "source_updated_at": "2026-11-27T23:27:33Z",
       "homepage_url": null,
       "owner": "denissteinhorst",
       "default_branch": "main",
-      "source_commit_sha": "fcb1207c74f77f59d038404e074b2b6f737a14e2",
+      "source_commit_sha": "ca109a66222d703a5e58ce1975d24dbfed534b30",
       "license_text": "BSD Zero Clause License\n\nCopyright (c) 2026 Denis Steinhorst\n\nPermission to use, copy, modify, and/or distribute this software for any\npurpose with or without fee is hereby granted.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES\nWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR\nANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES\nWHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN\nACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF\nOR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n",
       "license_spdx": "0BSD",
       "license_eligible": true,
-      "project_kind": "library",
-      "build_recommended": false,
-      "classification_source": "heuristic",
-      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Distributed as a standalone end-user Android app written in Kotlin, with CI and published release badges plus a stated minimum SDK indicating a supported build path. It is a user-facing application rather than a library, framework, or developer tool, so build_recommended is set to true.",
       "project_status": "installable",
       "category": "system",
       "topics": [
@@ -105040,10 +105038,10 @@
         "quality-of-life",
         "shoulder-buttons"
       ],
-      "latest_version": "v2.0.0",
-      "release_url": "https://github.com/denissteinhorst/thor-back-button-hero/releases/tag/v2.0.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-denissteinhorst-thor-back-button-hero-v2.0.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-denissteinhorst-thor-back-button-hero-v2.0.0/THIRD-PARTY-NOTICE-denissteinhorst-thor-back-button-hero.txt",
+      "latest_version": "v2.1.0",
+      "release_url": "https://github.com/denissteinhorst/thor-back-button-hero/releases/tag/v2.1.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-denissteinhorst-thor-back-button-hero-v2.1.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-denissteinhorst-thor-back-button-hero-v2.1.0/THIRD-PARTY-NOTICE-denissteinhorst-thor-back-button-hero.txt",
       "artifacts": [
         {
           "id": "10d6be899097cd1218dbb3215f47deaf8059eaf9065095fe8c3843a8c417b479",
@@ -105061,6 +105059,23 @@
           "signer_certificate_sha256": "7f8ab05139a406a3d50ba6267c60228b90935f4c02f854c26d69cf1b275df3ee",
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-denissteinhorst-thor-back-button-hero-v2.0.0/thor-back-button-hero-v2.0.0.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-denissteinhorst-thor-back-button-hero-v2.0.0"
+        },
+        {
+          "id": "00c5112d7a94558c5b763bfa174f950235a8b707eea652fae49ce92e6f22a700",
+          "filename": "thor-back-button-hero-v2.1.0.apk",
+          "original_filename": "thor-back-button-hero-v2.1.0.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v2.1.0",
+          "size_bytes": 4388604,
+          "sha256": "00c5112d7a94558c5b763bfa174f950235a8b707eea652fae49ce92e6f22a700",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "7f8ab05139a406a3d50ba6267c60228b90935f4c02f854c26d69cf1b275df3ee",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-denissteinhorst-thor-back-button-hero-v2.1.0/thor-back-button-hero-v2.1.0.apk",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-denissteinhorst-thor-back-button-hero-v2.1.0"
         }
       ],
       "platforms": [
