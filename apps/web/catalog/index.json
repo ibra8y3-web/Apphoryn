@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:10:36.502994+00:00",
+  "generated_at": "2026-11-28T03:11:04.575281+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -2031,18 +2031,19 @@
       "id": "aether-aiagent-aether",
       "slug": "aether-aiagent-aether",
       "name": "aether",
-      "summary": "Aether — open-source AI agent for Android (Kotlin, Jetpack Compose). Local LLM chat app with bash, file and MCP tools, subagents, offline Alpine/Proot runtime, Termux and Shizuku support. Signed APK releases. ИИ-агент на телефон: нейросеть ",
-      "description": "Aether — open-source AI agent for Android (Kotlin, Jetpack Compose). Local LLM chat app with bash, file and MCP tools, subagents, offline Alpine/Proot runtime, Termux and Shizuku support. Signed APK releases. ИИ-агент на телефон: нейросеть на Android с инструментами.",
+      "summary": "Aether is an open-source Android AI agent and chat app built with Kotlin and Jetpack Compose, offering local LLM chat, coding tools, shell access, MCP, subagents, and signed APK releases.",
+      "description": "Aether is a native Android application written in Kotlin with Jetpack Compose. It provides an AI coding agent and chat assistant that can run on a phone without a PC or root. The app includes file editing, shell commands, Git, browser control, subagents, MCP servers, plugins, local GGUF models, and multiple model providers. It supports Termux, Shizuku, Wireless ADB, optional root, and an offline Alpine/Proot runtime. The README states that the app can be installed from Google Play or GitHub Releases, or built from source, and the repository includes a debug build workflow and signed APK releases.",
       "translations": {
-        "en": {
-          "summary": "Aether — open-source AI agent for Android (Kotlin, Jetpack Compose). Local LLM chat app with bash, file and MCP tools, subagents, offline Alpine/Proot runtime, Termux and Shizuku support. Signed APK releases. ИИ-агент на телефон: нейросеть ",
-          "description": "Aether — open-source AI agent for Android (Kotlin, Jetpack Compose). Local LLM chat app with bash, file and MCP tools, subagents, offline Alpine/Proot runtime, Termux and Shizuku support. Signed APK releases. ИИ-агент на телефон: нейросеть на Android с инструментами."
-        }
+        "en": "Aether is an open-source Android AI agent and chat app built with Kotlin and Jetpack Compose, offering local LLM chat, coding tools, shell access, MCP, subagents, and signed APK releases.",
+        "ar": "Aether هو وكيل ذكاء اصطناعي مفتوح المصدر على Android وتطبيق محادثة مبني باستخدام Kotlin وJetpack Compose، ويوفر محادثة محلية مع نماذج LLM وأدوات برمجة ووصولًا إلى الصدفة وMCP ووكلاء فرعيين وإصدارات APK موقعة."
       },
-      "description_translations": {},
-      "translation_status": "pending",
-      "ai_provider": null,
-      "ai_model": null,
+      "description_translations": {
+        "en": "Aether is a native Android application written in Kotlin with Jetpack Compose. It provides an AI coding agent and chat assistant that can run on a phone without a PC or root. The app includes file editing, shell commands, Git, browser control, subagents, MCP servers, plugins, local GGUF models, and multiple model providers. It supports Termux, Shizuku, Wireless ADB, optional root, and an offline Alpine/Proot runtime. The README states that the app can be installed from Google Play or GitHub Releases, or built from source, and the repository includes a debug build workflow and signed APK releases.",
+        "ar": "Aether هو تطبيق Android أصلي مكتوب باستخدام Kotlin وJetpack Compose. يوفر وكيل برمجة بالذكاء الاصطناعي ومساعد محادثة يعملان على الهاتف دون الحاجة إلى حاسوب أو صلاحيات root. يتضمن التطبيق تحرير الملفات وأوامر الصدفة وGit والتحكم في المتصفح ووكلاء فرعيين وخوادم MCP والملحقات ونماذج GGUF محلية ومزودي نماذج متعددين. يدعم Termux وShizuku وWireless ADB وroot الاختياري وبيئة Alpine/Proot غير متصلة بالإنترنت. يذكر README أنه يمكن تثبيت التطبيق من Google Play أو GitHub Releases أو بناؤه من المصدر، ويتضمن المستودع سير عمل لبناء Debug وإصدارات APK موقعة."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/aether-aiagent/aether/main/.github/assets/icon.png",
       "repository_url": "https://github.com/aether-aiagent/aether",
       "github_repo_id": "1464339831",
@@ -2054,10 +2055,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 Sanuu7\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "developer_tool",
+      "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "heuristic",
-      "classification_reason": "Executable developer tool indicated by repository evidence.",
+      "classification_source": "ai",
+      "classification_reason": "Standalone Android end-user application with evidence of a supported build path: the README says it can be installed from Google Play or GitHub Releases or built from source, and the repository includes a debug build workflow and signed APK releases.",
       "project_status": "installable",
       "category": "ai",
       "topics": [
