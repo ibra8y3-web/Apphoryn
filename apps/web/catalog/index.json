@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T02:51:46.553150+00:00",
+  "generated_at": "2026-11-28T02:52:10.469907+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -69377,15 +69377,15 @@
       "slug": "gaferneira-notificapp",
       "artifacts": [],
       "name": "notificapp",
-      "summary": "Notificapp is an open-source Android app that applies user-defined rules to dismiss, snooze, alert on, or extract structured data from notifications, entirely on-device.",
-      "description": "Notificapp is a pre-release Android application for controlling notifications through user-defined rules. Users select apps to monitor, create conditions from sample notifications, and choose actions such as dismiss, snooze, alarm, flash, read aloud, reply, or webhook delivery. It can also extract fields like amounts, tracking numbers, and dates into a local structured dataset with CSV/JSON export. The project states that captured notifications and extracted data remain on-device, with no cloud, accounts, analytics, or telemetry; webhook delivery is opt-in per rule. It is GPL-3.0 licensed and built with Kotlin, Jetpack Compose, Hilt, and Room. The README documents building from source with Android Studio and JDK 17 using ./gradlew assembleDebug, and notes F-Droid distribution as planned.",
+      "summary": "Notificapp is an Android app for automating notifications with rules that dismiss, snooze, alert, or extract structured data on-device. GPL-3.0; build from source.",
+      "description": "Notificapp is a standalone Android application for taking control of notifications. Users select which apps to monitor, create rules with match conditions and actions such as dismiss, snooze, alarm, flash, read aloud, or send reply (beta), and extract fields like amounts, tracking numbers, and dates into a local structured dataset. It supports an inbox with search and filters, a rule editor with templates, webhooks with a retry queue, rule sharing and backtesting, an insights dashboard, CSV/JSON export, encrypted backup/restore, and a Quick Settings tile to pause monitoring. The project states that processing is 100% on-device with no cloud, accounts, or telemetry; webhook delivery is opt-in and per-rule. It is written in Kotlin with Jetpack Compose, Hilt, Room, and related Android libraries. The README lists version 1.0 features and says distribution is through F-Droid, with Play Store deferred. Build from source using Android Studio, JDK 17+, and ./gradlew assembleDebug. Licensed GPL-3.0.",
       "translations": {
-        "en": "Notificapp is an open-source Android app that applies user-defined rules to dismiss, snooze, alert on, or extract structured data from notifications, entirely on-device.",
-        "ar": "Notificapp تطبيق أندرويد مفتوح المصدر يطبّق قواعد يحددها المستخدم لرفض الإشعارات أو تأجيلها أو التنبيه لها أو استخراج بيانات منظمة منها، وذلك على الجهاز بالكامل."
+        "en": "Notificapp is an Android app for automating notifications with rules that dismiss, snooze, alert, or extract structured data on-device. GPL-3.0; build from source.",
+        "ar": "Notificapp تطبيق أندرويد لأتمتة الإشعارات عبر قواعد تُغلق الإشعارات أو تؤجلها أو تنبّه أو تستخرج بيانات منظّمة على الجهاز. رخصة GPL-3.0؛ يُبنى من المصدر."
       },
       "description_translations": {
-        "en": "Notificapp is a pre-release Android application for controlling notifications through user-defined rules. Users select apps to monitor, create conditions from sample notifications, and choose actions such as dismiss, snooze, alarm, flash, read aloud, reply, or webhook delivery. It can also extract fields like amounts, tracking numbers, and dates into a local structured dataset with CSV/JSON export. The project states that captured notifications and extracted data remain on-device, with no cloud, accounts, analytics, or telemetry; webhook delivery is opt-in per rule. It is GPL-3.0 licensed and built with Kotlin, Jetpack Compose, Hilt, and Room. The README documents building from source with Android Studio and JDK 17 using ./gradlew assembleDebug, and notes F-Droid distribution as planned.",
-        "ar": "Notificapp تطبيق أندرويد في مرحلة ما قبل الإصدار للتحكم في الإشعارات عبر قواعد يحددها المستخدم. يختار المستخدم التطبيقات المراقبة، وينشئ شروطًا من إشعارات نموذجية، ثم يحدد إجراءات مثل الرفض أو التأجيل أو المنبه أو الوميض أو القراءة بصوت عالٍ أو الرد أو إرسال Webhook. ويمكنه أيضًا استخراج حقول مثل المبالغ وأرقام التتبع والتواريخ إلى مجموعة بيانات منظمة محلية قابلة للتصدير بصيغتي CSV وJSON. يذكر المشروع أن الإشعارات الملتقطة والبيانات المستخرجة تبقى على الجهاز، دون سحابة أو حسابات أو تحليلات أو قياسات عن بُعد؛ وإرسال Webhook اختياري لكل قاعدة. المشروع مرخّص بموجب GPL-3.0 ومبني باستخدام Kotlin وJetpack Compose وHilt وRoom. توثّق README البناء من المصدر باستخدام Android Studio وJDK 17 عبر ./gradlew assembleDebug، وتشير إلى أن التوزيع عبر F-Droid مخطط له."
+        "en": "Notificapp is a standalone Android application for taking control of notifications. Users select which apps to monitor, create rules with match conditions and actions such as dismiss, snooze, alarm, flash, read aloud, or send reply (beta), and extract fields like amounts, tracking numbers, and dates into a local structured dataset. It supports an inbox with search and filters, a rule editor with templates, webhooks with a retry queue, rule sharing and backtesting, an insights dashboard, CSV/JSON export, encrypted backup/restore, and a Quick Settings tile to pause monitoring. The project states that processing is 100% on-device with no cloud, accounts, or telemetry; webhook delivery is opt-in and per-rule. It is written in Kotlin with Jetpack Compose, Hilt, Room, and related Android libraries. The README lists version 1.0 features and says distribution is through F-Droid, with Play Store deferred. Build from source using Android Studio, JDK 17+, and ./gradlew assembleDebug. Licensed GPL-3.0.",
+        "ar": "Notificapp تطبيق أندرويد مستقل للتحكم في الإشعارات. يختار المستخدم التطبيقات التي يريد مراقبتها، وينشئ قواعد بشروط مطابقة وإجراءات مثل الإغلاق أو التأجيل أو المنبّه أو الوميض أو القراءة بصوت عالٍ أو إرسال رد (تجريبي)، ويستخرج حقولًا مثل المبالغ وأرقام التتبع والتواريخ إلى مجموعة بيانات محلية منظّمة. يدعم صندوق وارد مع البحث والتصفية، ومحرر قواعد بقوالب، وWebhooks مع قائمة إعادة محاولة، ومشاركة القواعد والاختبار الرجعي، ولوحة رؤى، وتصدير CSV/JSON، ونسخًا احتياطيًا مشفّرًا واستعادة، وبلاطة إعدادات سريعة لإيقاف المراقبة. يذكر المشروع أن المعالجة تتم بالكامل على الجهاز دون سحابة أو حسابات أو تحليلات أو قياس عن بُعد؛ وإرسال Webhooks اختياري ولكل قاعدة. مكتوب بلغة Kotlin مع Jetpack Compose وHilt وRoom ومكتبات أندرويد ذات صلة. تسرد الوثيقة ميزات الإصدار 1.0 وتقول إن التوزيع عبر F-Droid مع تأجيل متجر Play. يُبنى من المصدر باستخدام Android Studio وJDK 17+ و./gradlew assembleDebug. الرخصة GPL-3.0."
       },
       "translation_status": "complete",
       "ai_provider": "openrouter",
@@ -69404,7 +69404,7 @@
       "project_kind": "application",
       "build_recommended": true,
       "classification_source": "ai",
-      "classification_reason": "Standalone Android end-user application with a documented Gradle build path (./gradlew assembleDebug) and Android Studio/JDK requirements.",
+      "classification_reason": "Standalone Android end-user application with a documented Gradle build path (./gradlew assembleDebug) and Android Studio/JDK 17+ requirements, so build_recommended is true.",
       "category": "developer",
       "topics": [
         "android-app",
