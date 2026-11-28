@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T02:53:51.443502+00:00",
+  "generated_at": "2026-11-28T02:54:25.545021+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -186,19 +186,19 @@
       "slug": "2fast-team-2fast",
       "artifacts": [],
       "name": "2fast",
-      "summary": "2fast is a free, open-source TOTP authenticator for Windows 10+, with encrypted local storage and optional WebDAV sync. Android, iOS, Linux, and macOS are under development.",
-      "description": "2fast (Two Factor Authenticator Supporting TOTP) is a free, open-source two-factor authenticator that uses the TOTP algorithm (RFC 6238). It stores all account data in a single encrypted file, using AES with a password-based key derived by PBKDF2, and can keep data locally or synchronize via a WebDAV server such as ownCloud or Nextcloud. It requires no account, registration, login, or internet connection except for WebDAV use. The app is released for Windows 10+ as a UWP .NET native application and can be installed from Microsoft Store, winget, or Chocolatey. Versions for Android, iOS, Linux, and macOS using the Uno platform are under development. The project is free for desktop OS and notes that mobile OS use requires a fee. The repository includes build instructions using Visual Studio 2026, mobile .NET development, Uno platform, and a .slnx solution.",
+      "summary": "2fast is an open-source TOTP two-factor authenticator for Windows 10+ with encrypted local storage and WebDAV sync; Android, iOS, Linux, and macOS versions are in development.",
+      "description": "2fast (Two Factor Authenticator Supporting TOTP) is an open-source two-factor authentication application. It stores account data in a single encrypted file using AES with a password-based key derived via PBKDF2, supports backup and restore, and allows sharing that file. It can synchronize via a WebDAV server such as ownCloud or Nextcloud. The app uses the TOTP algorithm (RFC 6238) and works with accounts from services such as Google, Microsoft, Facebook, and PayPal. The released app targets Windows 10+ (UWP .NET native); Android, iOS, Linux, and macOS versions are under development with the Uno Platform. The repository provides Visual Studio build instructions and prerequisites. It is licensed under GNU GPLv3.",
       "translations": {
-        "en": "2fast is a free, open-source TOTP authenticator for Windows 10+, with encrypted local storage and optional WebDAV sync. Android, iOS, Linux, and macOS are under development.",
-        "ar": "2fast هو تطبيق مجاني ومفتوح المصدر للمصادقة الثنائية باستخدام TOTP على Windows 10+، مع تخزين مشفر محلي ومزامنة اختيارية عبر WebDAV. نسخ Android وiOS وLinux وmacOS قيد التطوير."
+        "en": "2fast is an open-source TOTP two-factor authenticator for Windows 10+ with encrypted local storage and WebDAV sync; Android, iOS, Linux, and macOS versions are in development.",
+        "ar": "‏2fast تطبيق مفتوح المصدر للمصادقة الثنائية بتقنية TOTP لنظام Windows 10+، يخزّن البيانات محليًا في ملف مشفّر ويدعم المزامنة عبر WebDAV؛ وتجري حاليًا تطوير إصدارات Android وiOS وLinux وmacOS."
       },
       "description_translations": {
-        "en": "2fast (Two Factor Authenticator Supporting TOTP) is a free, open-source two-factor authenticator that uses the TOTP algorithm (RFC 6238). It stores all account data in a single encrypted file, using AES with a password-based key derived by PBKDF2, and can keep data locally or synchronize via a WebDAV server such as ownCloud or Nextcloud. It requires no account, registration, login, or internet connection except for WebDAV use. The app is released for Windows 10+ as a UWP .NET native application and can be installed from Microsoft Store, winget, or Chocolatey. Versions for Android, iOS, Linux, and macOS using the Uno platform are under development. The project is free for desktop OS and notes that mobile OS use requires a fee. The repository includes build instructions using Visual Studio 2026, mobile .NET development, Uno platform, and a .slnx solution.",
-        "ar": "2fast (Two Factor Authenticator Supporting TOTP) هو تطبيق مصادقة ثنائية مجاني ومفتوح المصدر يستخدم خوارزمية TOTP (RFC 6238). يخزن جميع بيانات الحسابات في ملف مشفر واحد باستخدام AES مع مفتاح مشتق من كلمة مرور عبر PBKDF2، ويمكنه إبقاء البيانات محليًا أو مزامنتها عبر خادم WebDAV مثل ownCloud أو Nextcloud. لا يتطلب التطبيق حسابًا أو تسجيلًا أو تسجيل دخول، ولا يحتاج إلى اتصال بالإنترنت باستثناء استخدام WebDAV. التطبيق متاح على Windows 10+ كتطبيق UWP أصلي باستخدام .NET، ويمكن تثبيته من Microsoft Store أو winget أو Chocolatey. إصدارات Android وiOS وLinux وmacOS باستخدام Uno platform قيد التطوير. المشروع مجاني لأنظمة سطح المكتب، ويشير إلى أن استخدام أنظمة الجوال يتطلب رسومًا. يتضمن المستودع تعليمات البناء باستخدام Visual Studio 2026 وتطوير .NET للجوال وUno platform وملف .slnx."
+        "en": "2fast (Two Factor Authenticator Supporting TOTP) is an open-source two-factor authentication application. It stores account data in a single encrypted file using AES with a password-based key derived via PBKDF2, supports backup and restore, and allows sharing that file. It can synchronize via a WebDAV server such as ownCloud or Nextcloud. The app uses the TOTP algorithm (RFC 6238) and works with accounts from services such as Google, Microsoft, Facebook, and PayPal. The released app targets Windows 10+ (UWP .NET native); Android, iOS, Linux, and macOS versions are under development with the Uno Platform. The repository provides Visual Studio build instructions and prerequisites. It is licensed under GNU GPLv3.",
+        "ar": "‏2fast (اختصار Two Factor Authenticator Supporting TOTP) تطبيق مفتوح المصدر للمصادقة الثنائية. يخزّن بيانات الحسابات في ملف واحد مشفّر باستخدام AES بمفتاح مشتق من كلمة مرور عبر PBKDF2، ويدعم النسخ الاحتياطي والاستعادة ومشاركة الملف. يمكنه المزامنة عبر خادم WebDAV مثل ownCloud أو Nextcloud. يستخدم خوارزمية TOTP وفق RFC 6238 ويعمل مع حسابات خدمات مثل Google وMicrosoft وFacebook وPayPal. الإصدار المنشور يستهدف Windows 10+ (UWP .NET native)، بينما إصدارات Android وiOS وLinux وmacOS قيد التطوير باستخدام Uno Platform. يتضمن المستودع تعليمات ومتطلبات البناء عبر Visual Studio، وهو مرخّص بموجب GNU GPLv3."
       },
       "translation_status": "complete",
       "ai_provider": "openrouter",
-      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "ai_model": "particle-ai/particle-1:free",
       "icon_url": "https://raw.githubusercontent.com/2fast-team/2fast/master/src/Project2FA.Uno/Platforms/Android/Resources/mipmap-hdpi/icon.png",
       "repository_url": "https://github.com/2fast-team/2fast",
       "github_repo_id": "258649062",
@@ -213,7 +213,7 @@
       "project_kind": "application",
       "build_recommended": true,
       "classification_source": "ai",
-      "classification_reason": "Standalone end-user authenticator application with a released Windows 10+ build and documented Visual Studio/Uno build path.",
+      "classification_reason": "Standalone end-user TOTP authenticator application; the README documents Visual Studio build prerequisites and steps.",
       "category": "security",
       "topics": [
         "android-app",
