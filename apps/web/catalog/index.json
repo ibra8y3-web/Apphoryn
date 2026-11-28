@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T05:06:16.351272+00:00",
+  "generated_at": "2026-11-28T05:06:30.491607+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -117303,7 +117303,7 @@
       "icon_url": "https://avatars.githubusercontent.com/u/40636507?v=4",
       "repository_url": "https://github.com/leemysw/yovoice",
       "github_repo_id": "1371687666",
-      "source_updated_at": "2026-11-27T14:42:09Z",
+      "source_updated_at": "2026-11-28T04:37:58Z",
       "homepage_url": "https://yovoice.leemysw.com",
       "owner": "leemysw",
       "default_branch": "main",
