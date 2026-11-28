@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T02:54:25.545021+00:00",
+  "generated_at": "2026-11-28T02:58:14.475537+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -51221,19 +51221,19 @@
       "slug": "kanzick-kozu",
       "artifacts": [],
       "name": "Kozu",
-      "summary": "Kozu is an Android music player for osu! built with Kotlin and Jetpack Compose, offering beatmap discovery, playback, downloads, playlists, and osu!mania charts.",
-      "description": "Kozu is an independent Android app for listening to osu! music without launching the game. It supports searching the osu! beatmap catalogue, browsing ranked, loved, trending, new, and spotlight maps, and playing full songs through enabled public mirrors or preview-only audio. It includes background playback, queue management, shuffle, repeat, autoplay, crossfade, an equalizer, presets, and loudness controls. Users can keep liked songs, playlists, downloads, history, and listening trends, download songs for offline use, and play local osu!mania charts with scores and personal bests. Kozu can import .osz archives or folders, read an osu!lazer library, convert collections to playlists, and export beatmaps. It offers themes, artwork-adaptive colors, layout customization, English and Vietnamese interfaces, optional osu! sign-in, and selective backups that exclude credentials. The app targets Android 9+ and is built with Kotlin, Jetpack Compose, and Material 3. Source builds use Android Studio, JDK 17+, and Gradle tasks such as ./gradlew assembleDebug. Kozu does not host beatmaps, audio, or artwork; availability depends on external providers.",
+      "summary": "Kozu is an Android music player for osu! built with Kotlin and Jetpack Compose, offering catalogue browsing, playback, library tools, and osu!mania support.",
+      "description": "Kozu is a standalone Android application for listening to osu! music without launching the game. It supports searching the osu! beatmap catalogue, browsing ranked, loved, and trending maps, background playback, queues, shuffle/repeat/autoplay, crossfade, equalizer, downloads, playlists, history, and optional osu! profile integration. It also includes local osu!mania chart play, .osz import/export, osu!lazer library integration, themes, and English/Vietnamese UI. The README documents Android 9+ support, APK release variants, and a Gradle build path using Android Studio and JDK 17. Kozu is an independent fan project under GPL-3.0 and does not host beatmaps, audio, or artwork.",
       "translations": {
-        "en": "Kozu is an Android music player for osu! built with Kotlin and Jetpack Compose, offering beatmap discovery, playback, downloads, playlists, and osu!mania charts.",
-        "ar": "كوزو هو مشغل موسيقى Android مخصص لـ osu!، مبني باستخدام Kotlin وJetpack Compose، ويوفر اكتشاف بيت ماب osu!، والتشغيل، والتنزيل، وقوائم التشغيل، ومخططات osu!mania."
+        "en": "Kozu is an Android music player for osu! built with Kotlin and Jetpack Compose, offering catalogue browsing, playback, library tools, and osu!mania support.",
+        "ar": "Kozu مشغّل موسيقى لنظام Android مخصّص لـ osu!، مبني بلغة Kotlin وJetpack Compose، ويتيح تصفّح الكتالوج والتشغيل وأدوات المكتبة ودعم osu!mania."
       },
       "description_translations": {
-        "en": "Kozu is an independent Android app for listening to osu! music without launching the game. It supports searching the osu! beatmap catalogue, browsing ranked, loved, trending, new, and spotlight maps, and playing full songs through enabled public mirrors or preview-only audio. It includes background playback, queue management, shuffle, repeat, autoplay, crossfade, an equalizer, presets, and loudness controls. Users can keep liked songs, playlists, downloads, history, and listening trends, download songs for offline use, and play local osu!mania charts with scores and personal bests. Kozu can import .osz archives or folders, read an osu!lazer library, convert collections to playlists, and export beatmaps. It offers themes, artwork-adaptive colors, layout customization, English and Vietnamese interfaces, optional osu! sign-in, and selective backups that exclude credentials. The app targets Android 9+ and is built with Kotlin, Jetpack Compose, and Material 3. Source builds use Android Studio, JDK 17+, and Gradle tasks such as ./gradlew assembleDebug. Kozu does not host beatmaps, audio, or artwork; availability depends on external providers.",
-        "ar": "كوزو تطبيق Android مستقل للاستماع إلى موسيقى osu! دون تشغيل اللعبة. يدعم البحث في كتالوج بيت ماب osu!، وتصفح الخرائط المصنفة والمفضلة والرائجة والجديدة والمميزة، وتشغيل الأغاني الكاملة عبر مصادر المرايا العامة المفعّلة أو تشغيل المعاينات فقط. يتضمن التشغيل في الخلفية، وإدارة قائمة الانتظار، والعشوائي، والتكرار، والتشغيل التلقائي، والمزج المتقاطع، ومعادل الصوت، والإعدادات المسبقة، والتحكم في مستوى الصوت. يمكن للمستخدمين الاحتفاظ بالأغاني المفضلة، وقوائم التشغيل، والتنزيلات، والسجل، واتجاهات الاستماع، وتنزيل الأغاني للاستخدام دون اتصال، وتشغيل مخططات osu!mania المحلية مع النتائج وأفضل الأرقام الشخصية. يستطيع كوزو استيراد ملفات .osz أو مجلدات، وقراءة مكتبة osu!lazer، وتحويل المجموعات إلى قوائم تشغيل، وتصدير البيت ماب. يوفر سمات، وألوانًا متكيفة مع العمل الفني، وتخصيص التخطيط، وواجهتي الإنجليزية والفيتنامية، وتسجيل دخول اختياريًا إلى osu!، ونسخًا احتياطية انتقائية تستبعد بيانات الاعتماد. يستهدف التطبيق Android 9+، ومبني باستخدام Kotlin وJetpack Compose وMaterial 3. تستخدم عمليات البناء من المصدر Android Studio وJDK 17+ ومهام Gradle مثل ./gradlew assembleDebug. لا يستضيف كوزو البيت ماب أو الصوت أو العمل الفني؛ ويعتمد التوفر على مزودي الخدمة الخارجيين."
+        "en": "Kozu is a standalone Android application for listening to osu! music without launching the game. It supports searching the osu! beatmap catalogue, browsing ranked, loved, and trending maps, background playback, queues, shuffle/repeat/autoplay, crossfade, equalizer, downloads, playlists, history, and optional osu! profile integration. It also includes local osu!mania chart play, .osz import/export, osu!lazer library integration, themes, and English/Vietnamese UI. The README documents Android 9+ support, APK release variants, and a Gradle build path using Android Studio and JDK 17. Kozu is an independent fan project under GPL-3.0 and does not host beatmaps, audio, or artwork.",
+        "ar": "Kozu تطبيق Android مستقل للاستماع إلى موسيقى osu! دون تشغيل اللعبة. يدعم البحث في كتالوج خرائط osu!، وتصفّح الخرائط المصنّفة والمحبوبة والرائجة، والتشغيل في الخلفية، وقوائم الانتظار، والخلط والتكرار والتشغيل التلقائي، والانتقال التدريجي بين المقاطع، ومعادل الصوت، والتنزيلات، وقوائم التشغيل، والسجل، والتكامل الاختياري مع ملف osu! الشخصي. يتضمّن أيضًا تشغيل خرائط osu!mania المحلية، واستيراد/تصدير ملفات .osz، والتكامل مع مكتبة osu!lazer، والسمات، وواجهة بالإنجليزية والفيتنامية. توثّق الوثيقة دعم Android 9+، وإصدارات APK، ومسار بناء Gradle باستخدام Android Studio وJDK 17. Kozu مشروع من إنشاء المعجبين ومستقل بموجب GPL-3.0، ولا يستضيف الخرائط أو الصوت أو الأعمال الفنية."
       },
       "translation_status": "complete",
       "ai_provider": "openrouter",
-      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "ai_model": "particle-ai/particle-1:free",
       "icon_url": "https://raw.githubusercontent.com/kanzick/Kozu/main/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
       "repository_url": "https://github.com/kanzick/Kozu",
       "github_repo_id": "1403413673",
@@ -51248,7 +51248,7 @@
       "project_kind": "application",
       "build_recommended": true,
       "classification_source": "ai",
-      "classification_reason": "The repository describes a standalone Android end-user application with release APKs and a documented Gradle build path using Android Studio and JDK 17+.",
+      "classification_reason": "Standalone Android end-user music player with a documented Gradle build path (./gradlew assembleDebug) and Android Studio/JDK 17 requirements.",
       "category": "multimedia",
       "topics": [
         "android-app",
