@@ -5780,7 +5780,17 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "5a87ce80450ae9d16f2d56ed078d6bc9b5c3981f",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-28T03:14:43.340150+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "parryqiu-android-imessage-relay",
