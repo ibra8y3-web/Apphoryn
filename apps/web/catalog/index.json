@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T13:36:54.375984+00:00",
+  "generated_at": "2026-11-28T13:37:14.024680+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -41104,11 +41104,11 @@
       "icon_url": "https://raw.githubusercontent.com/goat-si/goat/dev/assets/prod/logo.svg",
       "repository_url": "https://github.com/goat-si/goat",
       "github_repo_id": "1413248431",
-      "source_updated_at": "2026-11-27T03:20:16Z",
+      "source_updated_at": "2026-11-28T09:28:08Z",
       "homepage_url": "https://trygoat.ai",
       "owner": "goat-si",
       "default_branch": "dev",
-      "source_commit_sha": "dde5013274450010c1af2163b5efe026c27b5d96",
+      "source_commit_sha": "916b5ccc1b2b6d4ecd991ab1573172bab8fb1cc4",
       "license_text": "MIT License\n\nCopyright (c) 2026 T3 Tools Inc.\nCopyright (c) 2026 goat-si contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -41129,8 +41129,8 @@
         "remote-development",
         "t3code"
       ],
-      "latest_version": "v0.1.15",
-      "release_url": "https://github.com/goat-si/goat/releases/tag/v0.1.15",
+      "latest_version": "v0.1.16",
+      "release_url": "https://github.com/goat-si/goat/releases/tag/v0.1.16",
       "platforms": [],
       "project_status": "source_available",
       "build_attempts": [
