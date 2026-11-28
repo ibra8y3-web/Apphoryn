@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T05:54:20.174712+00:00",
+  "generated_at": "2026-11-28T05:54:30.774311+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -1507,7 +1507,7 @@
       "icon_url": "https://avatars.githubusercontent.com/u/122807475?v=4",
       "repository_url": "https://github.com/JSleim/adb-file-explorer",
       "github_repo_id": "1083626850",
-      "source_updated_at": "2026-11-27T19:38:52Z",
+      "source_updated_at": "2026-11-28T04:15:35Z",
       "homepage_url": null,
       "owner": "JSleim",
       "default_branch": "main",
