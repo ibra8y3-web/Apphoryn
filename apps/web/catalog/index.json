@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:02:43.018446+00:00",
+  "generated_at": "2026-11-28T11:02:58.857683+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -35816,23 +35816,25 @@
       "id": "flulwh-folio",
       "slug": "flulwh-folio",
       "name": "folio",
-      "summary": "Folio is a minimalist immersive ebook reader with an Electron + React desktop app and a native Kotlin/Compose Android client, syncing reading progress over LAN.",
-      "description": "Folio is a minimalist, immersive ebook reader built with Electron + React for the desktop (Windows 10/11 x64) and a native Kotlin + Compose client for Android (8.0+). The bookshelf is the home screen, with restrained typography, a clean interface, and toolbars that fade on scroll. It imports local .txt/.md (with encoding detection), .epub (via foliate-js), .pdf (via pdf.js), and .cbz/.zip comics. The reader offers virtual scrolling, regex chapter detection, a table of contents, bookmarks/highlights/notes anchored to paragraphs, full-book search, paragraph-anchored progress saving, auto-scroll, adjustable typography, custom and bundled open-source Chinese fonts, and themes. A zero-dependency LAN panel lets phones read via browser, while the Android client caches books offline and syncs progress and marks bidirectionally (newest updatedAt wins). Optional Legado book sources enable cloud reading; Folio hosts no servers. Data stays local. MIT licensed.",
+      "summary": "极简沉浸式电子书阅读器：Electron + React 桌面端 + Kotlin/Compose Android 客户端，局域网同步阅读进度与痕迹",
+      "description": "极简沉浸式电子书阅读器：Electron + React 桌面端 + Kotlin/Compose Android 客户端，局域网同步阅读进度与痕迹",
       "translations": {
-        "en": "Folio is a minimalist immersive ebook reader with an Electron + React desktop app and a native Kotlin/Compose Android client, syncing reading progress over LAN.",
-        "ar": "Folio قارئ كتب إلكترونية بسيط وغامر، مبني بـ Electron وReact لسطح المكتب وبعميل Kotlin/Compose أصلي لأندرويد، مع مزامنة تقدّم القراءة عبر الشبكة المحلية."
+        "en": {
+          "summary": "极简沉浸式电子书阅读器：Electron + React 桌面端 + Kotlin/Compose Android 客户端，局域网同步阅读进度与痕迹",
+          "description": "极简沉浸式电子书阅读器：Electron + React 桌面端 + Kotlin/Compose Android 客户端，局域网同步阅读进度与痕迹"
+        }
       },
       "description_translations": {
         "en": "Folio is a minimalist, immersive ebook reader built with Electron + React for the desktop (Windows 10/11 x64) and a native Kotlin + Compose client for Android (8.0+). The bookshelf is the home screen, with restrained typography, a clean interface, and toolbars that fade on scroll. It imports local .txt/.md (with encoding detection), .epub (via foliate-js), .pdf (via pdf.js), and .cbz/.zip comics. The reader offers virtual scrolling, regex chapter detection, a table of contents, bookmarks/highlights/notes anchored to paragraphs, full-book search, paragraph-anchored progress saving, auto-scroll, adjustable typography, custom and bundled open-source Chinese fonts, and themes. A zero-dependency LAN panel lets phones read via browser, while the Android client caches books offline and syncs progress and marks bidirectionally (newest updatedAt wins). Optional Legado book sources enable cloud reading; Folio hosts no servers. Data stays local. MIT licensed.",
         "ar": "Folio قارئ كتب إلكترونية بسيط وتفاعلي، مبني باستخدام Electron وReact لتطبيق سطح المكتب (Windows 10/11 x64) وبعميل أصلي مكتوب بـ Kotlin وCompose لأندرويد (8.0+). رفّ الكتب هو الشاشة الرئيسية، مع تنسيق طباعي هادئ وواجهة نظيفة وأشرطة أدوات تتلاشى عند التمرير. يستورد الملفات المحلية بصيغ ‎.txt و‎.md (مع كشف الترميز)، و‎.epub (عبر foliate-js)، و‎.pdf (عبر pdf.js)، والقصص المصوّرة ‎.cbz و‎.zip. يوفّر القارئ تمريرًا افتراضيًا، وتعرّف الفصول بقواعد منتظمة، وفهرس محتويات، وعلامات مرجعية وتظليلات وملاحظات مثبّتة على الفقرات، وبحثًا في كامل الكتاب، وحفظًا للتقدّم مرتبطًا بالفقرات، وتمريرًا تلقائيًا، وتنسيقًا طباعيًا قابلًا للتعديل، وخطوطًا صينية مخصّصة ومُضمّنة مفتوحة المصدر، وسِمات. تتيح لوحة شبكة محلية بلا أي اعتماديات قراءة الكتب من الهاتف عبر المتصفح، بينما يخزّن عميل أندرويد الكتب دون اتصال ويزامن التقدّم والعلامات بشكل ثنائي الاتجاه (الأحدث updatedAt هو الفائز). تتيح مصادر كتب Legado الاختيارية القراءة السحابية؛ ولا يستضيف Folio أي خوادم. تبقى البيانات محلية. الترخيص MIT."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/flulwh/folio/main/build/icon.png",
       "repository_url": "https://github.com/flulwh/folio",
       "github_repo_id": "1456178504",
-      "source_updated_at": "2026-11-15T18:25:19Z",
+      "source_updated_at": "2026-11-28T05:48:25Z",
       "homepage_url": null,
       "owner": "flulwh",
       "default_branch": "main",
@@ -35840,10 +35842,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 Folio contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
-      "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "This is a standalone end-user ebook reader distributed as Windows installer/portable/zip builds and an Android APK, built with Electron + React and Kotlin/Compose. The README documents a supported build path (npm run build for Windows artifacts and ./gradlew assembleDebug for the Android APK), so automatic source-build is recommended.",
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
       "project_status": "installable",
       "category": "other",
       "topics": [
