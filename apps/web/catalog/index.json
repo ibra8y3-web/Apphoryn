@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:47:33.457857+00:00",
+  "generated_at": "2026-11-28T11:47:49.195382+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -92067,11 +92067,11 @@
       "icon_url": "https://avatars.githubusercontent.com/u/193025872?v=4",
       "repository_url": "https://github.com/gelenmedya/rustyfiles",
       "github_repo_id": "1449695486",
-      "source_updated_at": "2026-11-28T03:49:38Z",
+      "source_updated_at": "2026-11-28T10:41:07Z",
       "homepage_url": "https://rustyfiles.com",
       "owner": "gelenmedya",
       "default_branch": "main",
-      "source_commit_sha": "7886d9d5df1011e3c0a579cb7e20bff681d8467b",
+      "source_commit_sha": "c8aa206151203e90e6c0c3bc3657829cc12c96c1",
       "license_text": "MIT License\n\nCopyright (c) 2026 Özer Güzel (gelenmedya)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
