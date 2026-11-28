@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:04:46.186510+00:00",
+  "generated_at": "2026-11-28T03:08:33.223042+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -47501,18 +47501,19 @@
       "id": "sj14apps-jsonlist",
       "slug": "sj14apps-jsonlist",
       "name": "JsonList",
-      "summary": "Material You Android app for previewing JSON from a file or URL in a user-friendly list format",
-      "description": "Material You Android app for previewing JSON from a file or URL in a user-friendly list format",
+      "summary": "Material You Android app for previewing JSON from a file or URL in a user-friendly list, with split raw/list view and dynamic color support.",
+      "description": "JsonList is a Material You Android application for previewing JSON from a file or URL in a user-friendly list format. It offers a split view that shows the raw JSON string alongside the list representation, including landscape support, and dynamic color support that adapts to Material Design preferences. The README links to Google Play, F-Droid, IzzyOnDroid, and the latest APK releases. A desktop app is described as coming soon. The repository topics identify it as an Android app and JSON viewer.",
       "translations": {
-        "en": {
-          "summary": "Material You Android app for previewing JSON from a file or URL in a user-friendly list format",
-          "description": "Material You Android app for previewing JSON from a file or URL in a user-friendly list format"
-        }
+        "en": "Material You Android app for previewing JSON from a file or URL in a user-friendly list, with split raw/list view and dynamic color support.",
+        "ar": "تطبيق أندرويد بواجهة Material You لمعاينة JSON من ملف أو رابط URL في قائمة سهلة الاستخدام، مع عرض مقسّم للنص الخام والقائمة ودعم الألوان الديناميكية."
       },
-      "description_translations": {},
-      "translation_status": "pending",
-      "ai_provider": null,
-      "ai_model": null,
+      "description_translations": {
+        "en": "JsonList is a Material You Android application for previewing JSON from a file or URL in a user-friendly list format. It offers a split view that shows the raw JSON string alongside the list representation, including landscape support, and dynamic color support that adapts to Material Design preferences. The README links to Google Play, F-Droid, IzzyOnDroid, and the latest APK releases. A desktop app is described as coming soon. The repository topics identify it as an Android app and JSON viewer.",
+        "ar": "JsonList تطبيق أندرويد بواجهة Material You لمعاينة JSON من ملف أو رابط URL في تنسيق قائمة سهل الاستخدام. يوفّر عرضًا مقسّمًا يعرض سلسلة JSON الخام إلى جانب تمثيل القائمة، بما في ذلك دعم الوضع الأفقي، ودعمًا للألوان الديناميكية التي تتكيّف مع تفضيلات Material Design. تشير ملفات README إلى روابط Google Play وF-Droid وIzzyOnDroid وأحدث إصدارات APK. ويُوصف تطبيق سطح المكتب بأنه قادم قريبًا. وتصنّف موضوعات المستودع التطبيق كتطبيق أندرويد وعارض JSON."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "particle-ai/particle-1:free",
       "icon_url": "https://raw.githubusercontent.com/SJ14Apps/JsonList/master/app/src/main/res/mipmap-hdpi/ic_launcher.png",
       "repository_url": "https://github.com/SJ14Apps/JsonList",
       "github_repo_id": "507594462",
@@ -47525,9 +47526,9 @@
       "license_spdx": "MIT",
       "license_eligible": true,
       "project_kind": "application",
-      "build_recommended": true,
-      "classification_source": "heuristic",
-      "classification_reason": "Standalone application indicated by repository evidence.",
+      "build_recommended": false,
+      "classification_source": "ai",
+      "classification_reason": "Standalone Android end-user application for JSON preview; README provides distribution links and APK releases but no explicit source build instructions.",
       "project_status": "installable",
       "category": "developer",
       "topics": [
