@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:27:52.283795+00:00",
+  "generated_at": "2026-11-28T11:28:06.211803+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -57940,7 +57940,7 @@
       "icon_url": "https://raw.githubusercontent.com/flectar/mail/main/platform/ohos/shell/AppScope/resources/base/media/app_icon.png",
       "repository_url": "https://github.com/flectar/mail",
       "github_repo_id": "1355349898",
-      "source_updated_at": "2026-11-28T01:10:34Z",
+      "source_updated_at": "2026-11-28T10:01:20Z",
       "homepage_url": "http://flectar.com/mail/",
       "owner": "flectar",
       "default_branch": "main",
