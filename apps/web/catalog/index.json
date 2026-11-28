@@ -59465,7 +59465,17 @@
       "latest_version": null,
       "release_url": null,
       "platforms": [],
-      "project_status": "source_available"
+      "project_status": "source_available",
+      "build_attempts": [
+        {
+          "git_ref": "21069a08b92075d661ceef527814d59df5e71d3b",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-28T03:14:11.420239+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
+      ]
     },
     {
       "id": "meilox-meilox",
