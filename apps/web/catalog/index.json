@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T13:30:24.179091+00:00",
+  "generated_at": "2026-11-28T13:30:53.455859+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -43393,7 +43393,7 @@
       "icon_url": "https://raw.githubusercontent.com/hatchlight/hatchlight/main/apps/desktop/src-tauri/icons/icon.png",
       "repository_url": "https://github.com/hatchlight/hatchlight",
       "github_repo_id": "1460790620",
-      "source_updated_at": "2026-11-28T04:36:01Z",
+      "source_updated_at": "2026-11-28T11:04:29Z",
       "homepage_url": "https://hatchlight.app/",
       "owner": "hatchlight",
       "default_branch": "main",
@@ -43430,8 +43430,8 @@
       ],
       "latest_version": "v0.7.0",
       "release_url": "https://github.com/hatchlight/hatchlight/releases/tag/v0.7.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hatchlight-hatchlight-v0.5.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hatchlight-hatchlight-v0.5.0/THIRD-PARTY-NOTICE-hatchlight-hatchlight.txt",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hatchlight-hatchlight-v0.7.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hatchlight-hatchlight-v0.7.0/THIRD-PARTY-NOTICE-hatchlight-hatchlight.txt",
       "artifacts": [
         {
           "id": "87960c213f8a4f8b1f4f27bc69e32fe665c1915582ced68cdb912557095d6447",
@@ -43551,6 +43551,40 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hatchlight-hatchlight-v0.5.0/Hatchlight_0.5.0_x64_en-US.msi",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hatchlight-hatchlight-v0.5.0"
+        },
+        {
+          "id": "8ea0d30cf37367440f9fea4a0c0bf5873f4070159197792654189f7628fa0bd6",
+          "filename": "Hatchlight-0.7.0-1.x86_64.rpm",
+          "original_filename": "Hatchlight-0.7.0-1.x86_64.rpm",
+          "platform": "linux",
+          "package_type": "RPM package",
+          "architecture": "x86_64",
+          "version": "v0.7.0",
+          "size_bytes": 59879385,
+          "sha256": "8ea0d30cf37367440f9fea4a0c0bf5873f4070159197792654189f7628fa0bd6",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hatchlight-hatchlight-v0.7.0/Hatchlight-0.7.0-1.x86_64.rpm",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hatchlight-hatchlight-v0.7.0"
+        },
+        {
+          "id": "e9290fb536fc25c6edd73774763ecf13847d3582bfa3639a452d175246b763ac",
+          "filename": "Hatchlight_0.7.0_aarch64.dmg",
+          "original_filename": "Hatchlight_0.7.0_aarch64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.7.0",
+          "size_bytes": 47464797,
+          "sha256": "e9290fb536fc25c6edd73774763ecf13847d3582bfa3639a452d175246b763ac",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-hatchlight-hatchlight-v0.7.0/Hatchlight_0.7.0_aarch64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-hatchlight-hatchlight-v0.7.0"
         }
       ],
       "platforms": [
