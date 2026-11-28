@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:31:53.168164+00:00",
+  "generated_at": "2026-11-28T03:32:39.226819+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -94925,7 +94925,7 @@
       "homepage_url": null,
       "owner": "milesroxas",
       "default_branch": "main",
-      "source_commit_sha": "aa3bd7d523c8951077eb1035b9529360ed790e5e",
+      "source_commit_sha": "843dfb3ffb49d439b392713771657abadb50737a",
       "license_text": "MIT License\n\nCopyright (c) 2026 Miles Roxas\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -94945,10 +94945,10 @@
         "llm-evaluation",
         "typescript"
       ],
-      "latest_version": "v0.20.3",
-      "release_url": "https://github.com/milesroxas/skill-studio/releases/tag/v0.20.3",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-milesroxas-skill-studio-v0.20.3",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-milesroxas-skill-studio-v0.20.3/THIRD-PARTY-NOTICE-milesroxas-skill-studio.txt",
+      "latest_version": "v0.21.0",
+      "release_url": "https://github.com/milesroxas/skill-studio/releases/tag/v0.21.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-milesroxas-skill-studio-v0.21.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-milesroxas-skill-studio-v0.21.0/THIRD-PARTY-NOTICE-milesroxas-skill-studio.txt",
       "artifacts": [
         {
           "id": "401c45b82cded2e75930fca8fad6f42b9fa9f667560384afac684a67dd938781",
@@ -95017,6 +95017,74 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-milesroxas-skill-studio-v0.20.3/skill-studio-win-x64.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-milesroxas-skill-studio-v0.20.3"
+        },
+        {
+          "id": "e52513e2069fc8f0eb90e8637d41cb23bcd75b38f65167056d09ce501ec929a9",
+          "filename": "skill-studio-linux-x86_64.AppImage",
+          "original_filename": "skill-studio-linux-x86_64.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": "x86_64",
+          "version": "v0.21.0",
+          "size_bytes": 132403733,
+          "sha256": "e52513e2069fc8f0eb90e8637d41cb23bcd75b38f65167056d09ce501ec929a9",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-milesroxas-skill-studio-v0.21.0/skill-studio-linux-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-milesroxas-skill-studio-v0.21.0"
+        },
+        {
+          "id": "f1a7d074a19b4c42c2848664d42684bb2bda3adc15aada6ae871b25ccc2bba43",
+          "filename": "skill-studio-mac-arm64.dmg",
+          "original_filename": "skill-studio-mac-arm64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "arm64",
+          "version": "v0.21.0",
+          "size_bytes": 126502716,
+          "sha256": "f1a7d074a19b4c42c2848664d42684bb2bda3adc15aada6ae871b25ccc2bba43",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-milesroxas-skill-studio-v0.21.0/skill-studio-mac-arm64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-milesroxas-skill-studio-v0.21.0"
+        },
+        {
+          "id": "9c284bddd3badfbca124fe8575aaa0d6b4912b75a0df57eb1f5e740631a70ca5",
+          "filename": "skill-studio-mac-x64.dmg",
+          "original_filename": "skill-studio-mac-x64.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "x86_64",
+          "version": "v0.21.0",
+          "size_bytes": 133708651,
+          "sha256": "9c284bddd3badfbca124fe8575aaa0d6b4912b75a0df57eb1f5e740631a70ca5",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-milesroxas-skill-studio-v0.21.0/skill-studio-mac-x64.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-milesroxas-skill-studio-v0.21.0"
+        },
+        {
+          "id": "f9c43da5d2c5abe95b4c8e936add850a5fc762719067f00869a72b767f069fb1",
+          "filename": "skill-studio-win-x64.exe",
+          "original_filename": "skill-studio-win-x64.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.21.0",
+          "size_bytes": 125924836,
+          "sha256": "f9c43da5d2c5abe95b4c8e936add850a5fc762719067f00869a72b767f069fb1",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-milesroxas-skill-studio-v0.21.0/skill-studio-win-x64.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-milesroxas-skill-studio-v0.21.0"
         }
       ],
       "platforms": [
