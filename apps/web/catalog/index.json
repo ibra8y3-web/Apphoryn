@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T13:20:31.747955+00:00",
+  "generated_at": "2026-11-28T13:20:51.404865+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -80882,6 +80882,23 @@
           "signature_status": "not_checked",
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-colgecen-pchome-v0.9.4/PCHome-v0.9.4-x86_64.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-colgecen-pchome-v0.9.4"
+        },
+        {
+          "id": "b4d97fc3b47422c89446ba42dd1927dc3d1dba876bf6e4fae18a0b73082631b1",
+          "filename": "PCHome-mobile-v0.9.4.apk",
+          "original_filename": "PCHome-mobile-v0.9.4.apk",
+          "platform": "android",
+          "package_type": "Android package",
+          "architecture": null,
+          "version": "v0.9.4",
+          "size_bytes": 55266581,
+          "sha256": "b4d97fc3b47422c89446ba42dd1927dc3d1dba876bf6e4fae18a0b73082631b1",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "verified",
+          "signer_certificate_sha256": "3626acb90d745814119140ec1ccdebf0ebc595b783fefa30531da4d3a8b7097a",
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-colgecen-pchome-v0.9.4/PCHome-mobile-v0.9.4.apk",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-colgecen-pchome-v0.9.4"
         }
       ],
