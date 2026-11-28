@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:09:37.933982+00:00",
+  "generated_at": "2026-11-28T11:09:49.684221+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -75359,17 +75359,19 @@
       "id": "leepresident-openfxpedia",
       "slug": "leepresident-openfxpedia",
       "name": "openfxpedia",
-      "summary": "OpenFXpedia is a Flutter currency converter and searchable fiat-currency encyclopedia for Windows, Linux, and Android, with live rates, history, charts, and offline caching.",
-      "description": "OpenFXpedia is a lightweight Flutter application that combines a real-time currency converter with a searchable encyclopedia of fiat currencies. It targets Windows, Linux desktop, and Android. Features include live exchange rates with local cache and offline support, date-based historical conversion, rate charts, a multi-currency calculator, side-by-side currency comparison, favorites, quick swap, and an offline currency map. Encyclopedia entries provide names, symbols, regions, descriptions, flags, major/minor units, and denominations. Users can search by name, code, or ISO 4217 numeric code, select themes and languages, and choose the exchange-rate API source. The README documents Flutter prerequisites, quickstart commands, and build scripts for Windows, Linux, and Android releases. Linux support is listed for x86_64 Ubuntu 22.04, 24.04, and 26.04 LTS and Debian 13 stable. The app uses HTTPS requests to exchange-rate and currency-catalog providers and stores cached data locally.",
+      "summary": "Real-time currency converter with encyclopedia for global currencies",
+      "description": "Real-time currency converter with encyclopedia for global currencies",
       "translations": {
-        "en": "OpenFXpedia is a Flutter currency converter and searchable fiat-currency encyclopedia for Windows, Linux, and Android, with live rates, history, charts, and offline caching.",
-        "ar": "OpenFXpedia هو تطبيق Flutter لتحويل العملات وموسوعة قابلة للبحث عن العملات النقدية، لأنظمة Windows وLinux وAndroid، مع أسعار مباشرة وسجل ورسوم بيانية وتخزين دون اتصال."
+        "en": {
+          "summary": "Real-time currency converter with encyclopedia for global currencies",
+          "description": "Real-time currency converter with encyclopedia for global currencies"
+        }
       },
       "description_translations": {
         "en": "OpenFXpedia is a lightweight Flutter application that combines a real-time currency converter with a searchable encyclopedia of fiat currencies. It targets Windows, Linux desktop, and Android. Features include live exchange rates with local cache and offline support, date-based historical conversion, rate charts, a multi-currency calculator, side-by-side currency comparison, favorites, quick swap, and an offline currency map. Encyclopedia entries provide names, symbols, regions, descriptions, flags, major/minor units, and denominations. Users can search by name, code, or ISO 4217 numeric code, select themes and languages, and choose the exchange-rate API source. The README documents Flutter prerequisites, quickstart commands, and build scripts for Windows, Linux, and Android releases. Linux support is listed for x86_64 Ubuntu 22.04, 24.04, and 26.04 LTS and Debian 13 stable. The app uses HTTPS requests to exchange-rate and currency-catalog providers and stores cached data locally.",
         "ar": "OpenFXpedia تطبيق Flutter خفيف يجمع بين محول عملات فوري وموسوعة قابلة للبحث عن العملات النقدية. يستهدف Windows وLinux المكتبي وAndroid. يتضمن تحويلاً بأسعار صرف مباشرة مع تخزين محلي ودعم دون اتصال، وتحويلاً حسب التاريخ بأسعار تاريخية، ورسوماً بيانية لأسعار الصرف، وحاسبة عملات متعددة، ومقارنة جنباً إلى جنب بين عملات مختارة، ومفضلة، وتبديل سريع، وخريطة عملات دون اتصال. تقدم مدخلات الموسوعة الأسماء والرموز والمناطق والأوصاف والأعلام والوحدات الرئيسية والفرعية والفئات النقدية. يمكن للمستخدمين البحث بالاسم أو الرمز أو الرمز الرقمي حسب ISO 4217، واختيار السمة واللغة، وتحديد مصدر واجهة أسعار الصرف. توثق ملفات README متطلبات Flutter وأوامر البدء السريع ونصوص البناء لإصدارات Windows وLinux وAndroid. دعم Linux مدرج لـ x86_64 على Ubuntu 22.04 و24.04 و26.04 LTS وDebian 13 stable. يستخدم التطبيق طلبات HTTPS إلى مزودي أسعار الصرف وكتالوج العملات، ويخزن البيانات المؤقتة محلياً."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/LeePresident/openfxpedia/master/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
@@ -75383,10 +75385,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 LeePresident\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "application",
-      "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "The repository describes a standalone Flutter end-user application with documented prerequisites, quickstart commands, and build scripts for Windows, Linux, and Android.",
+      "project_kind": "library",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Reusable code/package; not identified as a standalone application.",
       "project_status": "installable",
       "category": "other",
       "topics": [
