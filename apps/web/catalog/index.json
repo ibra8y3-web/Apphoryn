@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T13:30:53.455859+00:00",
+  "generated_at": "2026-11-28T13:31:12.774668+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -11065,7 +11065,7 @@
       "homepage_url": null,
       "owner": "242Neguev",
       "default_branch": "main",
-      "source_commit_sha": "3c74cdf6a9695672d69b50a97539671e2933a9b3",
+      "source_commit_sha": "dab7ad3b0eb16f360be84e1f72df7004044639b1",
       "license_text": "MIT License\n\nCopyright (c) 2026 Eau sèche\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -11084,10 +11084,10 @@
         "tauri",
         "windows"
       ],
-      "latest_version": "v0.7.0",
-      "release_url": "https://github.com/242Neguev/Automat-PDF/releases/tag/v0.7.0",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-242neguev-automat-pdf-v0.7.0",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-242neguev-automat-pdf-v0.7.0/THIRD-PARTY-NOTICE-242neguev-automat-pdf.txt",
+      "latest_version": "v0.8.0",
+      "release_url": "https://github.com/242Neguev/Automat-PDF/releases/tag/v0.8.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-242neguev-automat-pdf-v0.8.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-242neguev-automat-pdf-v0.8.0/THIRD-PARTY-NOTICE-242neguev-automat-pdf.txt",
       "artifacts": [
         {
           "id": "637cdc9ad550943417001d5fdf0ca2d528076d147d07e6ad121117bddc0e994c",
@@ -11122,6 +11122,40 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-242neguev-automat-pdf-v0.7.0/Automat-PDF_0.7.0_x64-setup.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-242neguev-automat-pdf-v0.7.0"
+        },
+        {
+          "id": "33a2214a18278941cfb9267e8b64e450eba1c35b8ff344dce2af9e5957c0cbba",
+          "filename": "Automat-PDF_0.8.0_universal.dmg",
+          "original_filename": "Automat-PDF_0.8.0_universal.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "universal",
+          "version": "v0.8.0",
+          "size_bytes": 14037392,
+          "sha256": "33a2214a18278941cfb9267e8b64e450eba1c35b8ff344dce2af9e5957c0cbba",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-242neguev-automat-pdf-v0.8.0/Automat-PDF_0.8.0_universal.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-242neguev-automat-pdf-v0.8.0"
+        },
+        {
+          "id": "31b37019855395ecf8015b07dae171a84119fdd847e428ea6001df5fbb5e1ccd",
+          "filename": "Automat-PDF_0.8.0_x64-setup.exe",
+          "original_filename": "Automat-PDF_0.8.0_x64-setup.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": "x86_64",
+          "version": "v0.8.0",
+          "size_bytes": 5477270,
+          "sha256": "31b37019855395ecf8015b07dae171a84119fdd847e428ea6001df5fbb5e1ccd",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-242neguev-automat-pdf-v0.8.0/Automat-PDF_0.8.0_x64-setup.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-242neguev-automat-pdf-v0.8.0"
         }
       ],
       "platforms": [
