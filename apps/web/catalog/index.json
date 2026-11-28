@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:11:04.575281+00:00",
+  "generated_at": "2026-11-28T03:11:32.266477+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -47711,18 +47711,19 @@
       "id": "baix-sudo-juzipi-downloader",
       "slug": "baix-sudo-juzipi-downloader",
       "name": "juzipi-downloader",
-      "summary": "桔子皮下载器：支持 56 种下载协议、短视频解析、磁力/种子、资源嗅探与媒体工具箱的 Android 下载应用。",
-      "description": "桔子皮下载器：支持 56 种下载协议、短视频解析、磁力/种子、资源嗅探与媒体工具箱的 Android 下载应用。",
+      "summary": "Android 8.0+ downloader and media toolbox app: multi-protocol downloads, short-video parsing, magnet/torrent, web resource sniffing, and local media tools.",
+      "description": "Juzipi Downloader (桔子皮下载器) is a free Android 8.0+ (API 26) application written in Kotlin/Java with a Material You interface. It combines multi-protocol downloading (HTTP/HTTPS, direct links, m3u8/HLS, images, audio), short-video parsing for platforms such as Douyin, Kuaishou, bilibili, YouTube, TikTok, Instagram and X/Twitter, batch homepage parsing, web page media sniffing, and magnet/torrent downloads with pause/resume and progress display. A built-in media toolbox handles video compression, audio extraction, video-to-GIF, GIF splitting, MD5 modification, image processing and wallpaper/avatar downloads. Tasks and settings are stored locally; no account is required. The repository ships a prebuilt APK plus an apktool-format source package; builds use apktool, zipalign and apksigner, and native .so libraries must be extracted from the APK's lib/arm64-v8a/ folder. Docs and original content are MIT licensed; the project is stated to be for learning and research only.",
       "translations": {
-        "en": {
-          "summary": "桔子皮下载器：支持 56 种下载协议、短视频解析、磁力/种子、资源嗅探与媒体工具箱的 Android 下载应用。",
-          "description": "桔子皮下载器：支持 56 种下载协议、短视频解析、磁力/种子、资源嗅探与媒体工具箱的 Android 下载应用。"
-        }
+        "en": "Android 8.0+ downloader and media toolbox app: multi-protocol downloads, short-video parsing, magnet/torrent, web resource sniffing, and local media tools.",
+        "ar": "تطبيق أندرويد 8.0+ للتنزيل والأدوات الإعلامية: تنزيلات متعددة البروتوكولات، وتحليل مقاطع الفيديو القصيرة، وروابط المغناطيس/التورنت، وشمّ موارد الويب، وأدوات وسائط محلية."
       },
-      "description_translations": {},
-      "translation_status": "pending",
-      "ai_provider": null,
-      "ai_model": null,
+      "description_translations": {
+        "en": "Juzipi Downloader (桔子皮下载器) is a free Android 8.0+ (API 26) application written in Kotlin/Java with a Material You interface. It combines multi-protocol downloading (HTTP/HTTPS, direct links, m3u8/HLS, images, audio), short-video parsing for platforms such as Douyin, Kuaishou, bilibili, YouTube, TikTok, Instagram and X/Twitter, batch homepage parsing, web page media sniffing, and magnet/torrent downloads with pause/resume and progress display. A built-in media toolbox handles video compression, audio extraction, video-to-GIF, GIF splitting, MD5 modification, image processing and wallpaper/avatar downloads. Tasks and settings are stored locally; no account is required. The repository ships a prebuilt APK plus an apktool-format source package; builds use apktool, zipalign and apksigner, and native .so libraries must be extracted from the APK's lib/arm64-v8a/ folder. Docs and original content are MIT licensed; the project is stated to be for learning and research only.",
+        "ar": "«جوزيبي داونلودر» (桔子皮下载器) تطبيق مجاني يعمل على أندرويد 8.0+ (API 26)، مكتوب بلغة Kotlin/Java بواجهة Material You. يجمع بين التنزيل متعدد البروتوكولات (HTTP/HTTPS، والروابط المباشرة، وm3u8/HLS، والصور، والصوت)، وتحليل مقاطع الفيديو القصيرة من منصات مثل Douyin وKuaishou وbilibili وYouTube وTikTok وInstagram وX/Twitter، والتحليل الجماعي للصفحات الرئيسية، وشمّ موارد الوسائط في صفحات الويب، وتنزيل روابط المغناطيس وملفات التورنت مع الإيقاف والاستئناف وعرض التقدم. ويتضمن صندوق أدوات إعلامياً مدمجاً لضغط الفيديو، واستخراج الصوت، وتحويل الفيديو إلى GIF، وتقسيم GIF، وتعديل MD5، ومعالجة الصور، وتنزيل الخلفيات والصور الرمزية. تُحفظ المهام والإعدادات محلياً، ولا يلزم إنشاء حساب. يوفر المستودع ملف APK جاهزاً وحزمة مصدرية بصيغة apktool؛ ويتم البناء باستخدام apktool وzipalign وapksigner، مع ضرورة استخراج مكتبات .so الأصلية من مجلد lib/arm64-v8a/ داخل ملف APK. الوثائق والمحتوى الأصلي مرخصان بموجب MIT، والمشروع مخصص للتعلم والبحث فقط."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/BaiX-sudo/juzipi-downloader/main/docs/icon.png",
       "repository_url": "https://github.com/BaiX-sudo/juzipi-downloader",
       "github_repo_id": "1466536863",
@@ -47734,10 +47735,10 @@
       "license_text": "MIT License\n\nCopyright (c) 2026 桔子皮下载器 Contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
-      "project_kind": "library",
-      "build_recommended": false,
-      "classification_source": "heuristic",
-      "classification_reason": "Reusable code/package; not identified as a standalone application.",
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "Classified as an application: the README, topics and screenshots describe a standalone end-user Android app (APK, Android 8.0+, Kotlin/Java, Material You) rather than a library or developer tool, despite the repository's 'developer' category label. build_recommended is true because it is a standalone end-user application with a documented build path: an apktool-format source package (release/juzip",
       "project_status": "installable",
       "category": "developer",
       "topics": [
