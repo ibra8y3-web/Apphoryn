@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:20:23.046018+00:00",
+  "generated_at": "2026-11-28T03:20:36.984929+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -71394,7 +71394,7 @@
       "icon_url": "https://raw.githubusercontent.com/krishna3163/OmniShizuku/main/manager/src/main/res/mipmap-hdpi/ic_launcher.webp",
       "repository_url": "https://github.com/krishna3163/OmniShizuku",
       "github_repo_id": "1432261568",
-      "source_updated_at": "2026-11-27T11:06:36Z",
+      "source_updated_at": "2026-11-27T22:54:47Z",
       "homepage_url": "https://github.com/krishna3163/OmniShizuku/releases",
       "owner": "krishna3163",
       "default_branch": "main",
