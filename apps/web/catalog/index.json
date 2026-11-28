@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T02:53:22.759338+00:00",
+  "generated_at": "2026-11-28T02:53:51.443502+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -92132,19 +92132,19 @@
       "slug": "dugmaclean-scrivo",
       "artifacts": [],
       "name": "scrivo",
-      "summary": "Scrivo is a self-hosted, Whisper-powered voice dictation system for Android and Windows, with a Python server and local or OpenAI-compatible writing models.",
-      "description": "Scrivo is an independent, open-source alternative to Wispr Flow. It runs a self-hosted Python server that uses local Whisper models through faster-whisper to recognize speech, then sends recognized text to a chosen OpenAI-compatible writing model for cleanup, punctuation, and spoken corrections. Android 11+ provides a floating bubble that inserts text into the focused field or copies it to the clipboard. The Windows client uses Ctrl+Windows or Ctrl+Alt+Space and types finished text at the cursor. Users can configure primary and backup recognition and writing models, keep recordings for retries, and share a custom dictionary. Local models keep words on the user's computers; cloud models require an explicit privacy notice. The server requires an access token and should be reached over HTTPS. Build paths are documented for the Android app with Gradle and for the Python server and Windows client.",
+      "summary": "Scrivo is a free, open-source, self-hosted Whisper-powered voice dictation app for Android and Windows, with a Python server and optional local or cloud writing models.",
+      "description": "Scrivo is a self-hosted voice dictation system: a Python server (tested on Linux, Python 3.11+) recognizes speech with local Whisper models via faster-whisper and can tidy text with any OpenAI-compatible chat endpoint, local by default. The Android 11+ app provides a floating bubble for dictation into the focused text box or clipboard; the Windows client uses Ctrl+Windows or Ctrl+Alt+Space. Users can configure primary and backup recognition/writing models, and cloud writing models require a privacy notice. Recordings remain on the server. The project includes build instructions for the Android app with Gradle/JDK 17 and for the Windows client using Python's standard library. Licensed MIT.",
       "translations": {
-        "en": "Scrivo is a self-hosted, Whisper-powered voice dictation system for Android and Windows, with a Python server and local or OpenAI-compatible writing models.",
-        "ar": "Scrivo نظام إملاء صوتي مستضاف ذاتيًا يعتمد على Whisper، مع خادم Python ونماذج كتابة محلية أو متوافقة مع OpenAI."
+        "en": "Scrivo is a free, open-source, self-hosted Whisper-powered voice dictation app for Android and Windows, with a Python server and optional local or cloud writing models.",
+        "ar": "Scrivo تطبيق إملاء صوتي مجاني ومفتوح المصدر يستضيفه المستخدم بنفسه، ويعمل بتقنية Whisper على Android وWindows، مع خادم Python ونماذج كتابة محلية أو سحابية اختيارية."
       },
       "description_translations": {
-        "en": "Scrivo is an independent, open-source alternative to Wispr Flow. It runs a self-hosted Python server that uses local Whisper models through faster-whisper to recognize speech, then sends recognized text to a chosen OpenAI-compatible writing model for cleanup, punctuation, and spoken corrections. Android 11+ provides a floating bubble that inserts text into the focused field or copies it to the clipboard. The Windows client uses Ctrl+Windows or Ctrl+Alt+Space and types finished text at the cursor. Users can configure primary and backup recognition and writing models, keep recordings for retries, and share a custom dictionary. Local models keep words on the user's computers; cloud models require an explicit privacy notice. The server requires an access token and should be reached over HTTPS. Build paths are documented for the Android app with Gradle and for the Python server and Windows client.",
-        "ar": "Scrivo بديل مستقل مفتوح المصدر لـ Wispr Flow. يعمل خادم Python مستضاف ذاتيًا يستخدم نماذج Whisper المحلية عبر faster-whisper للتعرف على الكلام، ثم يرسل النص المتعرف عليه إلى نموذج كتابة متوافق مع OpenAI تختاره لتنظيف النص وعلامات الترقيم والتصحيحات المنطوقة. يوفر Android 11+ فقاعة عائمة تُدرج النص في الحقل النشط أو تنسخه إلى الحافظة. يستخدم عميل Windows Ctrl+Windows أو Ctrl+Alt+Space ويكتب النص النهائي عند المؤشر. يمكن للمستخدمين ضبط نماذج التعرف والكتابة الأساسية والاحتياطية، والاحتفاظ بالتسجيلات لإعادة المحاولة، ومشاركة قاموس مخصص. النماذج المحلية تُبقي الكلمات على أجهزة المستخدم؛ وتتطلب النماذج السحابية إشعار خصوصية صريحًا. يتطلب الخادم رمز وصول ويجب الوصول إليه عبر HTTPS. توجد مسارات بناء موثقة لتطبيق Android باستخدام Gradle ولخادم Python وعميل Windows."
+        "en": "Scrivo is a self-hosted voice dictation system: a Python server (tested on Linux, Python 3.11+) recognizes speech with local Whisper models via faster-whisper and can tidy text with any OpenAI-compatible chat endpoint, local by default. The Android 11+ app provides a floating bubble for dictation into the focused text box or clipboard; the Windows client uses Ctrl+Windows or Ctrl+Alt+Space. Users can configure primary and backup recognition/writing models, and cloud writing models require a privacy notice. Recordings remain on the server. The project includes build instructions for the Android app with Gradle/JDK 17 and for the Windows client using Python's standard library. Licensed MIT.",
+        "ar": "Scrivo نظام إملاء صوتي ذاتي الاستضافة: خادم Python (مُختبر على Linux، Python 3.11 أو أحدث) يتعرف على الكلام باستخدام نماذج Whisper المحلية عبر faster-whisper، ويمكنه تنقيح النص عبر أي نقطة نهاية محادثة متوافقة مع OpenAI، محلية افتراضياً. يوفر تطبيق Android 11+ فقاعة عائمة للإملاء في مربع النص النشط أو الحافظة؛ ويستخدم عميل Windows Ctrl+Windows أو Ctrl+Alt+Space. يمكن للمستخدمين إعداد نماذج تعرف وكتابة أساسية واحتياطية، وتتطلب نماذج الكتابة السحابية إشعار خصوصية. تبقى التسجيلات على الخادم. يتضمن المشروع تعليمات بناء تطبيق Android باستخدام Gradle/JDK 17 وعميل Windows باستخدام مكتبة Python القياسية. مرخص بموجب MIT."
       },
       "translation_status": "complete",
       "ai_provider": "openrouter",
-      "ai_model": "baidu/ernie-5.5-flash-preview:free",
+      "ai_model": "particle-ai/particle-1:free",
       "icon_url": "https://avatars.githubusercontent.com/u/152089526?v=4",
       "repository_url": "https://github.com/dugmaclean/scrivo",
       "github_repo_id": "1466145275",
@@ -92157,9 +92157,9 @@
       "license_spdx": "MIT",
       "license_eligible": true,
       "project_kind": "application",
-      "build_recommended": false,
+      "build_recommended": true,
       "classification_source": "ai",
-      "classification_reason": "The repository describes an end-user voice dictation application with Android and Windows clients, but it is a multi-component self-hosted system requiring a Python server, so it is not treated as a standalone automatic build target.",
+      "classification_reason": "The README documents a standalone end-user dictation application with Android and Windows clients plus a self-hosted Python server, and provides supported build/install paths (Gradle/JDK 17 for Android, Python standard library for Windows).",
       "category": "security",
       "topics": [
         "ai-dictation",
