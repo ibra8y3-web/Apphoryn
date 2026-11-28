@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:13:33.096744+00:00",
+  "generated_at": "2026-11-28T03:14:01.913090+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -59405,6 +59405,67 @@
       "platforms": [
         "android"
       ]
+    },
+    {
+      "id": "valentinaschiavon99-megyejatek",
+      "slug": "valentinaschiavon99-megyejatek",
+      "artifacts": [],
+      "name": "megyejatek",
+      "summary": "Offline Android quiz about Hungary’s 19 counties and Budapest, with five scored map modes, a study mode, and optional Firebase accounts and leaderboard.",
+      "description": "Megyejáték is a standalone Android quiz app written in Kotlin with Jetpack Compose and Material 3. Players find Hungary’s 19 counties and Budapest, county seats, neighbours, and towns over 10,000 people on a blind map. It offers five scored modes with timer, streak multiplier, lives, hint, give-up, and time bonus, plus a free Áttekintés study mode. Map borders come from OpenStreetMap and bundled place data covers 139 towns. The game works offline; accounts and a global leaderboard use Firebase and are optional at build time. It supports Hungarian and English, portrait and landscape, and includes settings, records, and update checks. Build with Android Studio or JDK 17+ and Android SDK platform 37 using Gradle; APK releases are also provided.",
+      "translations": {
+        "en": "Offline Android quiz about Hungary’s 19 counties and Budapest, with five scored map modes, a study mode, and optional Firebase accounts and leaderboard.",
+        "ar": "اختبار أندرويد دون اتصال حول مقاطعات المجر الـ19 وبودابست، بخمسة أنماط لعب مُقيّمة على الخريطة، ونمط دراسة، وحسابات ولوحة صدارة اختيارية عبر Firebase."
+      },
+      "description_translations": {
+        "en": "Megyejáték is a standalone Android quiz app written in Kotlin with Jetpack Compose and Material 3. Players find Hungary’s 19 counties and Budapest, county seats, neighbours, and towns over 10,000 people on a blind map. It offers five scored modes with timer, streak multiplier, lives, hint, give-up, and time bonus, plus a free Áttekintés study mode. Map borders come from OpenStreetMap and bundled place data covers 139 towns. The game works offline; accounts and a global leaderboard use Firebase and are optional at build time. It supports Hungarian and English, portrait and landscape, and includes settings, records, and update checks. Build with Android Studio or JDK 17+ and Android SDK platform 37 using Gradle; APK releases are also provided.",
+        "ar": "Megyejáték تطبيق اختبار مستقل لنظام أندرويد مكتوب بلغة Kotlin باستخدام Jetpack Compose وMaterial 3. يحدد اللاعبون مقاطعات المجر الـ19 وبودابست، وعواصم المقاطعات، والمقاطعات المجاورة، والبلدات التي يزيد عدد سكانها على 10,000 نسمة على خريطة عمياء. يقدم خمسة أنماط لعب مُقيّمة مع مؤقت ومضاعف للتتابع وأرواح وتلميح واستسلام ومكافأة وقت، إضافة إلى نمط دراسة مجاني باسم Áttekintés. تأتي حدود الخريطة من OpenStreetMap، وتغطي بيانات الأماكن المضمّنة 139 بلدة. تعمل اللعبة دون اتصال؛ أما الحسابات ولوحة الصدارة العالمية فتستخدم Firebase وهي اختيارية عند البناء. يدعم التطبيق المجرية والإنجليزية والوضعين العمودي والأفقي، ويتضمن الإعدادات والسجلات وفحص التحديثات. يمكن بناؤه باستخدام Android Studio أو JDK 17+ وAndroid SDK platform 37 عبر Gradle، وتتوفر إصدارات APK أيضًا."
+      },
+      "translation_status": "complete",
+      "ai_provider": "openrouter",
+      "ai_model": "particle-ai/particle-1:free",
+      "icon_url": "https://avatars.githubusercontent.com/u/201286250?v=4",
+      "repository_url": "https://github.com/valentinaschiavon99/megyejatek",
+      "github_repo_id": "1464726345",
+      "source_updated_at": "2026-11-19T23:28:59Z",
+      "homepage_url": null,
+      "owner": "valentinaschiavon99",
+      "default_branch": "main",
+      "source_commit_sha": "21069a08b92075d661ceef527814d59df5e71d3b",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Valentina Schiavon\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "application",
+      "build_recommended": true,
+      "classification_source": "ai",
+      "classification_reason": "The repository describes a standalone Android quiz application with end-user gameplay and a documented Gradle/Android Studio build path, so it is classified as an application and source builds are recommended.",
+      "category": "games",
+      "topics": [
+        "android",
+        "android-app",
+        "blind-map",
+        "education",
+        "educational-game",
+        "geography",
+        "geography-game",
+        "geojson",
+        "hilt",
+        "hungary",
+        "jetpack-compose",
+        "kotlin",
+        "magyarorszag",
+        "map",
+        "material3",
+        "offline-first",
+        "open-data",
+        "openstreetmap",
+        "quiz",
+        "quiz-game"
+      ],
+      "latest_version": null,
+      "release_url": null,
+      "platforms": [],
+      "project_status": "source_available"
     },
     {
       "id": "meilox-meilox",
