@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T02:46:32.230249+00:00",
+  "generated_at": "2026-11-28T02:47:29.813728+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -39647,19 +39647,17 @@
       "id": "eggplants-godlo",
       "slug": "eggplants-godlo",
       "name": "godlo",
-      "summary": "A downloader using yt-dlp / gallery-dl / getjmanga for Android",
-      "description": "A downloader using yt-dlp / gallery-dl / getjmanga for Android",
+      "summary": "Godlo is an Android app that runs yt-dlp, gallery-dl and getjmanga on-device to download videos, audio, images and manga, with a built-in library, reader and media players.",
+      "description": "Godlo is an Android app that runs yt-dlp, gallery-dl and getjmanga directly on your device. Paste a URL or share one from a browser or other app; Godlo detects which tools can handle it and whether it is video, audio or images, then queues the download and runs it in the background with a progress notification.\n\nDownloads: yt-dlp for video (selectable quality) or audio (selectable format) and whole playlists; gallery-dl for images from supported sites; getjmanga for manga episodes (including next/previous) with optional CBZ output. Works can be saved for patrol, which fetches new episodes later.\n\nLibrary: image, audio and video tabs list everything in the save directories, grouped by site then by title, user or playlist, including files added or deleted by other apps.\n\nReader: right-to-left, left-to-right or vertical, single pages or two-page spreads. Players: audio with background playback and video with picture-in-picture.\n\nTool updates: update yt-dlp, gallery-dl and getjmanga in-app without a new APK. English and Japanese UI, light and dark themes, dynamic color. MIT licensed.",
       "translations": {
-        "en": {
-          "summary": "A downloader using yt-dlp / gallery-dl / getjmanga for Android",
-          "description": "A downloader using yt-dlp / gallery-dl / getjmanga for Android"
-        }
+        "en": "Godlo is an Android app that runs yt-dlp, gallery-dl and getjmanga on-device to download videos, audio, images and manga, with a built-in library, reader and media players.",
+        "ar": "جودلو تطبيق أندرويد يشغّل yt-dlp وgallery-dl وgetjmanga على الجهاز لتنزيل الفيديو والصوت والصور والمانغا، مع مكتبة وقارئ ومشغّلات وسائط مدمجة."
       },
       "description_translations": {
-        "en": "Godlo is an Android application that runs yt-dlp, gallery-dl, and getjmanga on the device. Users can paste or share a URL, and the app detects supported tools and media type, then queues downloads in the background with progress notifications. It supports video and audio downloads with selectable quality or format, playlists, image downloads, and manga episodes with optional CBZ output and patrol for new episodes. The library groups saved images, audio, and video by site and title, user, or playlist. It includes a reader with multiple reading directions and page layouts, an audio player with background playback, and a video player with picture-in-picture. The app can update yt-dlp, gallery-dl, and getjmanga without a new APK. It provides English and Japanese UI, light and dark themes, and dynamic color. Build instructions use mise tasks.",
-        "ar": "Godlo هو تطبيق Android يعمل على الجهاز باستخدام yt-dlp وgallery-dl وgetjmanga. يمكن للمستخدمين لصق رابط أو مشاركته، ويكتشف التطبيق الأدوات المدعومة ونوع الوسائط، ثم يضع التنزيلات في قائمة الانتظار ويعمل عليها في الخلفية مع إشعارات التقدم. يدعم تنزيلات الفيديو والصوت مع اختيار الجودة أو الصيغة، وقوائم التشغيل، وتنزيلات الصور، وحلقات المانجا مع إخراج CBZ اختياري وميزة patrol لجلب الحلقات الجديدة. تُجمع المكتبة الصور والصوت والفيديو المحفوظة حسب الموقع ثم العنوان أو المستخدم أو قائمة التشغيل. يتضمن قارئًا بترتيبات قراءة متعددة وتخطيطات صفحات، ومشغل صوت يعمل في الخلفية، ومشغل فيديو مع صورة داخل صورة. يمكن للتطبيق تحديث yt-dlp وgallery-dl وgetjmanga دون APK جديد. يوفر واجهة إنجليزية ويابانية، وسمات فاتحة وداكنة، وألوان ديناميكية. تستخدم تعليمات البناء مهام mise."
+        "en": "Godlo is an Android app that runs yt-dlp, gallery-dl and getjmanga directly on your device. Paste a URL or share one from a browser or other app; Godlo detects which tools can handle it and whether it is video, audio or images, then queues the download and runs it in the background with a progress notification.\n\nDownloads: yt-dlp for video (selectable quality) or audio (selectable format) and whole playlists; gallery-dl for images from supported sites; getjmanga for manga episodes (including next/previous) with optional CBZ output. Works can be saved for patrol, which fetches new episodes later.\n\nLibrary: image, audio and video tabs list everything in the save directories, grouped by site then by title, user or playlist, including files added or deleted by other apps.\n\nReader: right-to-left, left-to-right or vertical, single pages or two-page spreads. Players: audio with background playback and video with picture-in-picture.\n\nTool updates: update yt-dlp, gallery-dl and getjmanga in-app without a new APK. English and Japanese UI, light and dark themes, dynamic color. MIT licensed.",
+        "ar": "جودلو تطبيق أندرويد يشغّل yt-dlp وgallery-dl وgetjmanga مباشرةً على جهازك. ألصق رابطًا أو شاركه من متصفح أو تطبيق آخر؛ فيكتشف جودلو الأدوات القادرة على التعامل معه وما إذا كان فيديو أو صوتًا أو صورًا، ثم يضع التنزيل في قائمة الانتظار ويشغّله في الخلفية مع إشعار بالتقدّم.\n\nالتنزيلات: yt-dlp للفيديو (بجودة قابلة للاختيار) أو الصوت (بصيغة قابلة للاختيار) وقوائم التشغيل كاملة؛ وgallery-dl للصور من المواقع المدعومة؛ وgetjmanga لحلقات المانغا (بما فيها التالية والسابقة) مع إخراج CBZ اختياري. يمكن حفظ الأعمال من أجل patrol، الذي يجلب الحلقات الجديدة لاحقًا.\n\nالمكتبة: تعرض تبويبات الصور والصوت والفيديو كل ما في مجلدات الحفظ، مجمّعة حسب الموقع ثم حسب العنوان أو المستخدم أو قائمة التشغيل، بما في ذلك الملفات التي تضيفها أو تحذفها التطبيقات الأخرى.\n\nالقارئ: من اليمين إلى اليسار أو من اليسار إلى اليمين أو عموديًا، بصفحات مفردة أو صفحتين متجاورتين. المشغّلات: صوت مع التشغيل في الخلفية وفيديو مع صورة داخل صورة.\n\nتحديثات الأدوات: حدّث yt-dlp وgallery-dl وgetjmanga داخل التطبيق دون حزمة APK جديدة. واجهة بالإنجليزية واليابانية، وسمات فاتحة وداكنة، وألوان ديناميكية. الترخيص MIT."
       },
-      "translation_status": "pending",
+      "translation_status": "complete",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/eggplants/godlo/master/fastlane/metadata/android/en-US/images/icon.png",
@@ -39675,8 +39673,8 @@
       "license_eligible": true,
       "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "heuristic",
-      "classification_reason": "Standalone application indicated by repository evidence.",
+      "classification_source": "ai",
+      "classification_reason": "The repository describes Godlo, a standalone Android end-user application with documented features (downloads, library, reader, players) and a supported build path via mise (mise run build, mise run build:release) plus CI/release workflows, so it is classified as an application with build_recommended set to true.",
       "project_status": "installable",
       "category": "other",
       "topics": [
