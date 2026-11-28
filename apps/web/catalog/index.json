@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:18:50.523226+00:00",
+  "generated_at": "2026-11-28T11:19:31.387695+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -82175,7 +82175,7 @@
       "homepage_url": "https://github.com/T-Chen-CN/pi-workbench/releases/latest",
       "owner": "T-Chen-CN",
       "default_branch": "main",
-      "source_commit_sha": "55bdd9e9c780b72cfe51ba1293c40d3da3f76aea",
+      "source_commit_sha": "f2bb66d7fc0b95aaca98dbf9e46aa02551ccae9a",
       "license_text": "MIT License\n\nCopyright (c) 2026 Pi Workbench Team\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -82199,10 +82199,10 @@
         "react",
         "typescript"
       ],
-      "latest_version": "v0.11.2",
-      "release_url": "https://github.com/T-Chen-CN/pi-workbench/releases/tag/v0.11.2",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-t-chen-cn-pi-workbench-v0.11.2",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-t-chen-cn-pi-workbench-v0.11.2/THIRD-PARTY-NOTICE-t-chen-cn-pi-workbench.txt",
+      "latest_version": "v0.12.2",
+      "release_url": "https://github.com/T-Chen-CN/pi-workbench/releases/tag/v0.12.2",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-t-chen-cn-pi-workbench-v0.12.2",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-t-chen-cn-pi-workbench-v0.12.2/THIRD-PARTY-NOTICE-t-chen-cn-pi-workbench.txt",
       "artifacts": [
         {
           "id": "f4b5a6d9604df2ea939d2ace4ab13abc5664fdda4a6280b1ef7e4e5d461c0baf",
@@ -82305,6 +82305,57 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-t-chen-cn-pi-workbench-v0.11.2/Pi-Workbench-Setup-0.11.2.exe",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-t-chen-cn-pi-workbench-v0.11.2"
+        },
+        {
+          "id": "1ceade9880da538e1c13c6d21bdd7cc6c7e481e8b8989e24ae0eda6316265063",
+          "filename": "Pi-Workbench-0.12.2-universal.dmg",
+          "original_filename": "Pi-Workbench-0.12.2-universal.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "universal",
+          "version": "v0.12.2",
+          "size_bytes": 295361181,
+          "sha256": "1ceade9880da538e1c13c6d21bdd7cc6c7e481e8b8989e24ae0eda6316265063",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-t-chen-cn-pi-workbench-v0.12.2/Pi-Workbench-0.12.2-universal.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-t-chen-cn-pi-workbench-v0.12.2"
+        },
+        {
+          "id": "60a18c9d56270ebcbf8c1191248be9d6a4e2910946167fec4f0eae6e7fc81141",
+          "filename": "Pi-Workbench-0.12.2.AppImage",
+          "original_filename": "Pi-Workbench-0.12.2.AppImage",
+          "platform": "linux",
+          "package_type": "Linux AppImage",
+          "architecture": null,
+          "version": "v0.12.2",
+          "size_bytes": 205579544,
+          "sha256": "60a18c9d56270ebcbf8c1191248be9d6a4e2910946167fec4f0eae6e7fc81141",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-t-chen-cn-pi-workbench-v0.12.2/Pi-Workbench-0.12.2.AppImage",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-t-chen-cn-pi-workbench-v0.12.2"
+        },
+        {
+          "id": "1b7aef05a154d46dd166ad8fdc36aea598c81f6a258afe22b0c3d708a3c8db1c",
+          "filename": "Pi-Workbench-Setup-0.12.2.exe",
+          "original_filename": "Pi-Workbench-Setup-0.12.2.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.12.2",
+          "size_bytes": 167584060,
+          "sha256": "1b7aef05a154d46dd166ad8fdc36aea598c81f6a258afe22b0c3d708a3c8db1c",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-t-chen-cn-pi-workbench-v0.12.2/Pi-Workbench-Setup-0.12.2.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-t-chen-cn-pi-workbench-v0.12.2"
         }
       ],
       "platforms": [
