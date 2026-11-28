@@ -8869,6 +8869,14 @@
           ],
           "requested_at": "2026-11-28T05:02:03.098962+00:00",
           "adapter_revision": "74b07567f3769f7ce1b7"
+        },
+        {
+          "git_ref": "2ed4a1ef8c45263d3290a8c1deebcde6971c7705",
+          "targets": [
+            "android"
+          ],
+          "requested_at": "2026-11-28T12:49:38.320572+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
         }
       ]
     },
