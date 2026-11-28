@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T13:59:53.176518+00:00",
+  "generated_at": "2026-11-28T14:00:14.554838+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -33061,6 +33061,78 @@
       "platforms": [
         "linux",
         "macos",
+        "windows"
+      ]
+    },
+    {
+      "id": "burntcookiedough-eve-windows-dictation",
+      "slug": "burntcookiedough-eve-windows-dictation",
+      "name": "eve-windows-dictation",
+      "summary": "Local-first Windows dictation with packaged offline ASR, lifecycle hardening, and privacy-bounded diagnostics.",
+      "description": "Local-first Windows dictation with packaged offline ASR, lifecycle hardening, and privacy-bounded diagnostics.",
+      "translations": {
+        "en": {
+          "summary": "Local-first Windows dictation with packaged offline ASR, lifecycle hardening, and privacy-bounded diagnostics.",
+          "description": "Local-first Windows dictation with packaged offline ASR, lifecycle hardening, and privacy-bounded diagnostics."
+        }
+      },
+      "description_translations": {},
+      "translation_status": "pending",
+      "ai_provider": null,
+      "ai_model": null,
+      "icon_url": "https://raw.githubusercontent.com/burntcookiedough/eve-windows-dictation/trunk/site/assets/icon.png",
+      "repository_url": "https://github.com/burntcookiedough/eve-windows-dictation",
+      "github_repo_id": "1284992996",
+      "source_updated_at": "2026-11-26T17:36:20Z",
+      "homepage_url": "https://burntcookiedough.github.io/eve-windows-dictation/",
+      "owner": "burntcookiedough",
+      "default_branch": "trunk",
+      "source_commit_sha": "fccd2125f8625e67c6ed9fec69deb410d3c147a8",
+      "license_text": "MIT License\n\nCopyright (c) 2026 Raik Rohde\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "license_spdx": "MIT",
+      "license_eligible": true,
+      "project_kind": "unknown",
+      "build_recommended": false,
+      "classification_source": "heuristic",
+      "classification_reason": "Insufficient evidence to classify this repository as an installable application.",
+      "project_status": "installable",
+      "category": "security",
+      "topics": [
+        "cuda",
+        "desktop-app",
+        "dictation",
+        "electron",
+        "faster-whisper",
+        "local-first",
+        "python",
+        "speech-to-text",
+        "svelte",
+        "windows"
+      ],
+      "latest_version": "v0.7.0",
+      "release_url": "https://github.com/burntcookiedough/eve-windows-dictation/releases/tag/v0.7.0",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-burntcookiedough-eve-windows-dictation-v0.7.0",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-burntcookiedough-eve-windows-dictation-v0.7.0/THIRD-PARTY-NOTICE-burntcookiedough-eve-windows-dictation.txt",
+      "artifacts": [
+        {
+          "id": "e27646c15be0563c45e35b34b157105af2a61424ef1bff6cf8a9c72f8a763e4a",
+          "filename": "Eve.Web.Setup.0.7.0.exe",
+          "original_filename": "Eve.Web.Setup.0.7.0.exe",
+          "platform": "windows",
+          "package_type": "Windows executable",
+          "architecture": null,
+          "version": "v0.7.0",
+          "size_bytes": 654555,
+          "sha256": "e27646c15be0563c45e35b34b157105af2a61424ef1bff6cf8a9c72f8a763e4a",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-burntcookiedough-eve-windows-dictation-v0.7.0/Eve.Web.Setup.0.7.0.exe",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-burntcookiedough-eve-windows-dictation-v0.7.0"
+        }
+      ],
+      "platforms": [
         "windows"
       ]
     },
