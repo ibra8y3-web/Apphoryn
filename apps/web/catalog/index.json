@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:00:36.609347+00:00",
+  "generated_at": "2026-11-28T03:01:50.008105+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -29920,7 +29920,7 @@
         "en": "Emberglass is an unofficial Android app for USB-C thermal cameras built on the InfiRay Tiny1-C module (256×192, 25 fps), including the InfiRay P2 Pro and Topdon TC001. It reads the camera's full radiometric data, renders it on the GPU with OpenGL ES, and provides measurement tools for building diagnostics, electrical inspection and long-term monitoring. Features include eight palettes, detail-enhanced contrast, up to six measurement areas, emissivity and temperature corrections, dew-point and mold-risk overlays (EN ISO 13788), the fRsi temperature factor, NETA MTS severity ratings, radiometric TIFF and CSV export, and a LAN web interface with WebSocket, MJPEG and snapshot endpoints. The web interface has no authentication by default; a PIN can be set in settings. The APK is about 230 KB, written in plain Java and OpenGL ES with a small amount of C using Linux usbfs; no vendor SDK or Google services are required. Build with ./build.sh using the Android SDK (platform 35, NDK) and JDK 17 or newer; Gradle is not used. MIT licensed. Unofficial software, use at your own risk.",
         "ar": "Emberglass تطبيق أندرويد غير رسمي لكاميرات التصوير الحراري USB-C المبنية على وحدة InfiRay Tiny1-C (256×192، 25 إطارًا في الثانية)، بما في ذلك InfiRay P2 Pro وTopdon TC001. يقرأ البيانات الإشعاعية الكاملة من الكاميرا ويعرضها على وحدة معالجة الرسوميات باستخدام OpenGL ES، ويوفّر أدوات قياس لتشخيص المباني والفحص الكهربائي والمراقبة طويلة الأمد. تشمل الميزات ثماني لوحات ألوان وتباينًا معزّزًا للتفاصيل وحتى ست مناطق قياس وتصحيحات الانبعاثية ودرجة الحرارة وطبقات فوق نقطة الندى وخطر العفن (EN ISO 13788) ومعامل درجة الحرارة fRsi وتصنيفات الخطورة وفق NETA MTS وتصدير TIFF إشعاعي وCSV وواجهة ويب عبر الشبكة المحلية مع WebSocket وMJPEG ولقطات شاشة. لا تتضمن واجهة الويب مصادقة افتراضيًا؛ ويمكن ضبط رمز PIN من الإعدادات. حجم ملف APK نحو 230 كيلوبايت، ومكتوب بلغة Java وOpenGL ES مع قدر قليل من لغة C يستخدم Linux usbfs؛ ولا يتطلب حزمة SDK من الشركة المصنّعة أو خدمات Google. يُبنى باستخدام ./build.sh مع Android SDK (platform 35 وNDK) وJDK 17 أو أحدث؛ ولا يُستخدم Gradle. الترخيص MIT. برنامج غير رسمي يُستخدم على مسؤوليتك الخاصة."
       },
-      "translation_status": "pending",
+      "translation_status": "english_only",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/MadeinTaly/emberglass/main/fastlane/metadata/android/en-US/images/icon.png",
