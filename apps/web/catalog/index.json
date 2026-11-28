@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:17:01.657098+00:00",
+  "generated_at": "2026-11-28T11:17:19.549288+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -103691,7 +103691,7 @@
       "homepage_url": "https://swarmed.kauneckas.dev",
       "owner": "ryckakas",
       "default_branch": "main",
-      "source_commit_sha": "1945a646a17be19cb88420b0a68cd9ebc98d94cb",
+      "source_commit_sha": "08ce9dffbf8ca8b75aa0f308327e170ecfbf093b",
       "license_text": "MIT License\n\nCopyright (c) 2026 Ricardas Kauneckas\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "license_spdx": "MIT",
       "license_eligible": true,
@@ -103723,10 +103723,10 @@
         "rust",
         "tauri"
       ],
-      "latest_version": "v0.4.11",
-      "release_url": "https://github.com/ryckakas/swarmed/releases/tag/v0.4.11",
-      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ryckakas-swarmed-v0.4.11",
-      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ryckakas-swarmed-v0.4.11/THIRD-PARTY-NOTICE-ryckakas-swarmed.txt",
+      "latest_version": "v0.4.12",
+      "release_url": "https://github.com/ryckakas/swarmed/releases/tag/v0.4.12",
+      "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ryckakas-swarmed-v0.4.12",
+      "license_notice_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ryckakas-swarmed-v0.4.12/THIRD-PARTY-NOTICE-ryckakas-swarmed.txt",
       "artifacts": [
         {
           "id": "40c0b9115593b755974baba6435e2caaa171947db3657a353cb2ce9ff49c5804",
@@ -103795,6 +103795,23 @@
           "signer_certificate_sha256": null,
           "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ryckakas-swarmed-v0.4.11/Swarmed-0.4.11-macos-universal.dmg",
           "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ryckakas-swarmed-v0.4.11"
+        },
+        {
+          "id": "fad2e6b9983138d5f8620333f9c882f84ba596a1f5464786793157b545898b74",
+          "filename": "Swarmed-0.4.12-macos-universal.dmg",
+          "original_filename": "Swarmed-0.4.12-macos-universal.dmg",
+          "platform": "macos",
+          "package_type": "macOS disk image",
+          "architecture": "universal",
+          "version": "v0.4.12",
+          "size_bytes": 30658347,
+          "sha256": "fad2e6b9983138d5f8620333f9c882f84ba596a1f5464786793157b545898b74",
+          "upstream_digest_verified": true,
+          "validation_status": "validated",
+          "signature_status": "not_checked",
+          "signer_certificate_sha256": null,
+          "download_url": "https://github.com/ibra8y3-web/Apphoryn/releases/download/apphoryn-ryckakas-swarmed-v0.4.12/Swarmed-0.4.12-macos-universal.dmg",
+          "mirror_release_url": "https://github.com/ibra8y3-web/Apphoryn/releases/tag/apphoryn-ryckakas-swarmed-v0.4.12"
         }
       ],
       "platforms": [
