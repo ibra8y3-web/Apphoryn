@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T11:01:11.838465+00:00",
+  "generated_at": "2026-11-28T11:01:24.884946+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -79570,17 +79570,19 @@
       "slug": "alsaeeddev-payrelay-woo-autoverify",
       "artifacts": [],
       "name": "payrelay-woo-autoverify",
-      "summary": "A WooCommerce plugin plus companion Android app that auto-verify manual JazzCash, Easypaisa and bank-transfer payments by matching customer Transaction IDs with relayed payment SMS.",
-      "description": "PayRelay WooCommerce SMS Auto-Verify automates confirmation of manual mobile-wallet and bank-transfer payments in WooCommerce. It has two parts: a WordPress plugin (Manual Payment Auto-Verify) that adds a manual payment gateway and verification queue, and a companion Android app (PayRelay) that forwards the merchant's payment SMS to the store. The plugin matches the customer's Transaction ID against the relayed SMS by amount, provider and time window, in either arrival order, moving matching orders to Processing and flagging mismatches for review. Requests are HMAC-SHA256 signed and replay-protected. It supports Classic and Block checkout, QR device pairing, an audit log, automatic claim expiry, and GDPR export/eraser tooling; raw SMS text is never stored. The offline-first app has an encrypted outbox, sender allowlist, biometric lock and privacy controls. Requirements: WordPress 6.0+, WooCommerce 8.0+, PHP 7.4+ with libsodium or OpenSSL AES-256-GCM, HTTPS, and an Android phone. The app builds from source in Android Studio (Kotlin, Compose) and ships as an APK. License GPL-2.0-or-later.",
+      "summary": "Auto-verify manual JazzCash, Easypaisa & bank payments in WooCommerce. A WordPress plugin matches customer Transaction IDs with payment SMS relayed by a companion Android app (PayRelay) over HMAC-signed, replay-protected REST. PHP + Kotlin.",
+      "description": "Auto-verify manual JazzCash, Easypaisa & bank payments in WooCommerce. A WordPress plugin matches customer Transaction IDs with payment SMS relayed by a companion Android app (PayRelay) over HMAC-signed, replay-protected REST. PHP + Kotlin. Privacy-first, works with any SMS order, no SMS gateway fees.",
       "translations": {
-        "en": "A WooCommerce plugin plus companion Android app that auto-verify manual JazzCash, Easypaisa and bank-transfer payments by matching customer Transaction IDs with relayed payment SMS.",
-        "ar": "إضافة WooCommerce مع تطبيق Android مرافق يتحققان آليًا من مدفوعات JazzCash وEasypaisa والتحويلات البنكية اليدوية بمطابقة معرّف معاملة العميل مع رسالة الدفع المُرحّلة."
+        "en": {
+          "summary": "Auto-verify manual JazzCash, Easypaisa & bank payments in WooCommerce. A WordPress plugin matches customer Transaction IDs with payment SMS relayed by a companion Android app (PayRelay) over HMAC-signed, replay-protected REST. PHP + Kotlin.",
+          "description": "Auto-verify manual JazzCash, Easypaisa & bank payments in WooCommerce. A WordPress plugin matches customer Transaction IDs with payment SMS relayed by a companion Android app (PayRelay) over HMAC-signed, replay-protected REST. PHP + Kotlin. Privacy-first, works with any SMS order, no SMS gateway fees."
+        }
       },
       "description_translations": {
         "en": "PayRelay WooCommerce SMS Auto-Verify automates confirmation of manual mobile-wallet and bank-transfer payments in WooCommerce. It has two parts: a WordPress plugin (Manual Payment Auto-Verify) that adds a manual payment gateway and verification queue, and a companion Android app (PayRelay) that forwards the merchant's payment SMS to the store. The plugin matches the customer's Transaction ID against the relayed SMS by amount, provider and time window, in either arrival order, moving matching orders to Processing and flagging mismatches for review. Requests are HMAC-SHA256 signed and replay-protected. It supports Classic and Block checkout, QR device pairing, an audit log, automatic claim expiry, and GDPR export/eraser tooling; raw SMS text is never stored. The offline-first app has an encrypted outbox, sender allowlist, biometric lock and privacy controls. Requirements: WordPress 6.0+, WooCommerce 8.0+, PHP 7.4+ with libsodium or OpenSSL AES-256-GCM, HTTPS, and an Android phone. The app builds from source in Android Studio (Kotlin, Compose) and ships as an APK. License GPL-2.0-or-later.",
         "ar": "يؤتمت PayRelay WooCommerce SMS Auto-Verify تأكيد المدفوعات اليدوية عبر المحافظ الجوّالة والتحويلات البنكية في WooCommerce. يتكوّن من جزأين: إضافة ووردبريس (Manual Payment Auto-Verify) تضيف بوابة دفع يدويًا وقائمة تحقّق، وتطبيق Android مرافق (PayRelay) يرحّل رسائل الدفع القصيرة التي يستقبلها هاتف التاجر إلى المتجر. تطابق الإضافة معرّف المعاملة الذي يقدمه العميل مع الرسالة المُرحّلة وفق المبلغ ومزوّد الخدمة والنافذة الزمنية، وبأي ترتيب لوصولهما، فتنقل الطلبات المطابقة إلى قيد المعالجة وتُعلّم غير المطابقة للمراجعة. الطلبات موقّعة بـ HMAC-SHA256 ومحمية من إعادة التشغيل. تدعم الإضافة الدفع الكلاسيكي ودفع الكتل، واقتران الأجهزة عبر رمز QR، وسجل تدقيق، وانتهاء صلاحية تلقائيًا، وأدوات تصدير وحذف للبيانات وفق GDPR؛ ولا يُخزَّن نص الرسالة الخام. يتميّز التطبيق بالعمل دون اتصال مع صندوق خارجي مشفّر وقائمة مُرسِلي مسموح لهم وقفل حيوي وضوابط خصوصية. المتطلبات: WordPress 6.0 فأحدث، وWooCommerce 8.0 فأحدث، وPHP 7.4 فأحدث مع libsodium أو OpenSSL AES-256-GCM، وHTTPS، وهاتف Android. يُبنى التطبيق من المصدر في Android Studio (Kotlin وCompose) ويُوزَّع كملف APK. الترخيص GPL-2.0-or-later."
       },
-      "translation_status": "complete",
+      "translation_status": "pending",
       "ai_provider": "openrouter",
       "ai_model": "baidu/ernie-5.5-flash-preview:free",
       "icon_url": "https://raw.githubusercontent.com/alsaeeddev/payrelay-woo-autoverify/main/android-app/PayRelay/app/src/main/res/mipmap-hdpi/ic_launcher.png",
@@ -79596,8 +79598,8 @@
       "license_eligible": true,
       "project_kind": "application",
       "build_recommended": true,
-      "classification_source": "ai",
-      "classification_reason": "This is a functional end-user product for merchants: a WordPress/WooCommerce plugin plus a companion Android app that together auto-verify manual payments. It is not a library, framework, hosted service, or documentation. build_recommended is true because it is a standalone end-user application with a documented, supported build path: the Android app builds from source via Gradle/Android Studio (w",
+      "classification_source": "heuristic",
+      "classification_reason": "Standalone application indicated by repository evidence.",
       "category": "security",
       "topics": [
         "android-app",
