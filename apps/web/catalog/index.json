@@ -17985,6 +17985,17 @@
       ],
       "platforms": [
         "windows"
+      ],
+      "build_attempts": [
+        {
+          "git_ref": "7f2b332b0a40aed1f0f7905d254b0c41a10a069d",
+          "targets": [
+            "linux",
+            "macos"
+          ],
+          "requested_at": "2026-11-28T03:13:01.254405+00:00",
+          "adapter_revision": "74b07567f3769f7ce1b7"
+        }
       ]
     },
     {
