@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-28T03:59:37.449171+00:00",
+  "generated_at": "2026-11-28T04:00:02.083860+00:00",
   "apps": [
     {
       "id": "tiledesk-github",
@@ -95525,7 +95525,7 @@
       "icon_url": "https://raw.githubusercontent.com/skwir-org/skwir/main/vendor/zed/crates/gpui/examples/image/app-icon.png",
       "repository_url": "https://github.com/skwir-org/skwir",
       "github_repo_id": "1411859970",
-      "source_updated_at": "2026-11-27T16:26:27Z",
+      "source_updated_at": "2026-11-28T01:30:16Z",
       "homepage_url": "https://skwir.org",
       "owner": "skwir-org",
       "default_branch": "main",
